@@ -6,7 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/lehrplan/ontology/> .
 
-<https://w3id.org/lehrplan/ontology> rdf:type owl:Ontology .
+<https://w3id.org/lehrplan/ontology> rdf:type owl:Ontology ;
+                                      owl:imports <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/schulfaecher.ttl> .
 
 #################################################################
 #    Classes
@@ -15,6 +16,222 @@
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              rdfs:label "Schulfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000002
+:LP_00000002 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000001 ;
+             rdfs:label "MINT-Fach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000003
+:LP_00000003 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000002 ;
+             rdfs:label "Naturwissenschaftsfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000004
+:LP_00000004 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000001 ;
+             rdfs:label "Fremdsprachfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000005
+:LP_00000005 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000001 ;
+             rdfs:label "Gesellschaftswissenschaftsfach"@de .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/kim/schulfaecher/s1000
+<http://w3id.org/kim/schulfaecher/s1000> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1001
+<http://w3id.org/kim/schulfaecher/s1001> rdf:type :LP_00000003 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1002
+<http://w3id.org/kim/schulfaecher/s1002> rdf:type :LP_00000003 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1003
+<http://w3id.org/kim/schulfaecher/s1003> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1004
+<http://w3id.org/kim/schulfaecher/s1004> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1005
+<http://w3id.org/kim/schulfaecher/s1005> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1006
+<http://w3id.org/kim/schulfaecher/s1006> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1007
+<http://w3id.org/kim/schulfaecher/s1007> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1008
+<http://w3id.org/kim/schulfaecher/s1008> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1009
+<http://w3id.org/kim/schulfaecher/s1009> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1010
+<http://w3id.org/kim/schulfaecher/s1010> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1011
+<http://w3id.org/kim/schulfaecher/s1011> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1012
+<http://w3id.org/kim/schulfaecher/s1012> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1013
+<http://w3id.org/kim/schulfaecher/s1013> rdf:type :LP_00000002 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1014
+<http://w3id.org/kim/schulfaecher/s1014> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1015
+<http://w3id.org/kim/schulfaecher/s1015> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1016
+<http://w3id.org/kim/schulfaecher/s1016> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1017
+<http://w3id.org/kim/schulfaecher/s1017> rdf:type :LP_00000002 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1019
+<http://w3id.org/kim/schulfaecher/s1019> rdf:type :LP_00000002 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1020
+<http://w3id.org/kim/schulfaecher/s1020> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1021
+<http://w3id.org/kim/schulfaecher/s1021> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1022
+<http://w3id.org/kim/schulfaecher/s1022> rdf:type :LP_00000003 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1023
+<http://w3id.org/kim/schulfaecher/s1023> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1024
+<http://w3id.org/kim/schulfaecher/s1024> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1025
+<http://w3id.org/kim/schulfaecher/s1025> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1026
+<http://w3id.org/kim/schulfaecher/s1026> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1027
+<http://w3id.org/kim/schulfaecher/s1027> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1028
+<http://w3id.org/kim/schulfaecher/s1028> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1029
+<http://w3id.org/kim/schulfaecher/s1029> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1030
+<http://w3id.org/kim/schulfaecher/s1030> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1031
+<http://w3id.org/kim/schulfaecher/s1031> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1032
+<http://w3id.org/kim/schulfaecher/s1032> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1033
+<http://w3id.org/kim/schulfaecher/s1033> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1034
+<http://w3id.org/kim/schulfaecher/s1034> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1035
+<http://w3id.org/kim/schulfaecher/s1035> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1036
+<http://w3id.org/kim/schulfaecher/s1036> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1037
+<http://w3id.org/kim/schulfaecher/s1037> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1038
+<http://w3id.org/kim/schulfaecher/s1038> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1039
+<http://w3id.org/kim/schulfaecher/s1039> rdf:type :LP_00000004 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1040
+<http://w3id.org/kim/schulfaecher/s1040> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1041
+<http://w3id.org/kim/schulfaecher/s1041> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1042
+<http://w3id.org/kim/schulfaecher/s1042> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1043
+<http://w3id.org/kim/schulfaecher/s1043> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1044
+<http://w3id.org/kim/schulfaecher/s1044> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1045
+<http://w3id.org/kim/schulfaecher/s1045> rdf:type :LP_00000005 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1046
+<http://w3id.org/kim/schulfaecher/s1046> rdf:type :LP_00000001 .
+
+
+###  http://w3id.org/kim/schulfaecher/s1047
+<http://w3id.org/kim/schulfaecher/s1047> rdf:type :LP_00000001 .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

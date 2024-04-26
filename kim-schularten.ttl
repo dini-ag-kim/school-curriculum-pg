@@ -1,0 +1,168 @@
+@base <https://w3id.org/kim/schularten/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eduLevel: <http://w3id.org/openeduhub/vocabs/educationalLevel/> .
+@prefix isced97: <https://w3id.org/kim/isced-1997/> .
+@prefix isced2011: <https://w3id.org/kim/isced-2011/> .
+@prefix eduLevel: <http://w3id.org/kim/educationalLevel/> .
+@prefix oehEduLevel: <http://w3id.org/openeduhub/vocabs/educationalLevel/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<> a skos:ConceptScheme, owl:Ontology ;
+    dct:title "Schularten"@de;
+    dct:description "Eine Wertelliste für Schularten im deutschen Schulsystem. Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."@de;
+    dct:publisher <https://wiki.dnb.de/display/DINIAGKIM/Curricula-Gruppe> ;
+    dct:created "2021-04-22"^^xsd:date;
+    dct:modified "2022-05-24"^^xsd:date;
+    dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    vann:preferredNamespaceUri "https://w3id.org/kim/schularten/" ;
+    vann:preferredNamespacePrefix "school";
+    skos:hasTopConcept <s02>, <s03>, <s04>, <s05>, <s06>, <s07>, <s08>, <s09>, <s10>, <s11>, <s12>, <s13> , <s14>, <s15>, <s16> .
+
+<s02> a skos:Concept ;
+    skos:prefLabel "Grundschule"@de ;
+    skos:closeMatch isced97:level1 ;
+    skos:closeMatch isced2011:level1 ;
+    skos:closeMatch eduLevel:level_1 ;
+    skos:narrowMatch oehEduLevel:1 ;
+    skos:narrowMatch oehEduLevel:2 ;
+    skos:narrowMatch oehEduLevel:3 ;
+    skos:narrowMatch oehEduLevel:4 ;
+    skos:topConceptOf <> .
+
+<s03> a skos:Concept ;
+    skos:prefLabel "Hauptschule"@de ;
+    skos:altLabel "Mittelschule"@de ;
+    skos:altLabel "Mittelstufenschule"@de ;
+    skos:closeMatch isced97:level2 ;
+    skos:closeMatch isced2011:level2 ;
+    skos:closeMatch eduLevel:level_2 ;
+    skos:narrowMatch oehEduLevel:5 ;
+    skos:narrowMatch oehEduLevel:6 ;
+    skos:narrowMatch oehEduLevel:7 ;
+    skos:narrowMatch oehEduLevel:8 ;
+    skos:narrowMatch oehEduLevel:9 ;
+    skos:narrowMatch oehEduLevel:10 ;
+    skos:topConceptOf <> .
+
+<s04> a skos:Concept ;
+    skos:prefLabel "Realschule"@de ;
+    skos:closeMatch isced97:level2 ;
+    skos:closeMatch isced2011:level2 ;
+    skos:closeMatch eduLevel:level_2 ;
+    skos:narrowMatch oehEduLevel:5 ;
+    skos:narrowMatch oehEduLevel:6 ;
+    skos:narrowMatch oehEduLevel:7 ;
+    skos:narrowMatch oehEduLevel:8 ;
+    skos:narrowMatch oehEduLevel:9 ;
+    skos:narrowMatch oehEduLevel:10 ;
+    skos:topConceptOf <> .
+
+<s10> a skos:Concept ;
+    skos:prefLabel "Sekundarschule"@de ;
+    skos:closeMatch isced97:level2 ;
+    skos:closeMatch isced2011:level2 ;
+    skos:closeMatch eduLevel:level_2 ;
+    skos:narrowMatch oehEduLevel:5 ;
+    skos:narrowMatch oehEduLevel:6 ;
+    skos:narrowMatch oehEduLevel:7 ;
+    skos:narrowMatch oehEduLevel:8 ;
+    skos:narrowMatch oehEduLevel:9 ;
+    skos:narrowMatch oehEduLevel:10 ;
+    skos:topConceptOf <> .
+
+<s05> a skos:Concept ;
+    skos:prefLabel "Gesamtschule"@de ;
+    skos:closeMatch isced97:level2 ;
+    skos:closeMatch isced2011:level2 ;
+    skos:closeMatch eduLevel:level_2 ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:narrowMatch oehEduLevel:5 ;
+    skos:narrowMatch oehEduLevel:6 ;
+    skos:narrowMatch oehEduLevel:7 ;
+    skos:narrowMatch oehEduLevel:8 ;
+    skos:narrowMatch oehEduLevel:9 ;
+    skos:narrowMatch oehEduLevel:10 ;
+    skos:narrowMatch oehEduLevel:11 ;
+    skos:narrowMatch oehEduLevel:12 ;
+    skos:narrowMatch oehEduLevel:13 ;
+    skos:topConceptOf <> .
+
+<s08> a skos:Concept ;
+    skos:prefLabel "Gymnasium"@de ;
+    skos:closeMatch isced97:level2 ;
+    skos:closeMatch isced2011:level2 ;
+    skos:closeMatch eduLevel:level_2 ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:narrowMatch oehEduLevel:5 ;
+    skos:narrowMatch oehEduLevel:6 ;
+    skos:narrowMatch oehEduLevel:7 ;
+    skos:narrowMatch oehEduLevel:8 ;
+    skos:narrowMatch oehEduLevel:9 ;
+    skos:narrowMatch oehEduLevel:10 ;
+    skos:narrowMatch oehEduLevel:11 ;
+    skos:narrowMatch oehEduLevel:12 ;
+    skos:narrowMatch oehEduLevel:13 ;
+    skos:topConceptOf <> .
+
+<s06> a skos:Concept ;
+    skos:prefLabel "Förderschule"@de ;
+    skos:topConceptOf <> .
+
+<s07> a skos:Concept ;
+    skos:prefLabel "Oberschule"@de ;
+    skos:topConceptOf <> .
+
+<s09> a skos:Concept ;
+    skos:prefLabel "Gemeinschaftsschule"@de ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:topConceptOf <> .
+
+<s11> a skos:Concept ;
+    skos:prefLabel "Berufsfachschule"@de ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:topConceptOf <> .
+
+<s12> a skos:Concept ;
+    skos:prefLabel "Berufsschule"@de ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:topConceptOf <> .
+
+<s13> a skos:Concept ;
+    skos:prefLabel "Fachoberschule"@de ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:topConceptOf <> .
+
+<s14> a skos:Concept ;
+    skos:prefLabel "Berufliches Gymnasium"@de ;
+    skos:altLabel "Fachgymnasium"@de ;
+    skos:closeMatch isced97:level3 ;
+    skos:closeMatch isced2011:level3 ;
+    skos:closeMatch eduLevel:level_3 ;
+    skos:topConceptOf <> .
+
+<s15> a skos:Concept ;
+    skos:prefLabel "Privat- und Ersatzschule"@de ;
+    skos:altLabel "Privatschule"@de ;
+    skos:altLabel "Ersatzschule"@de ;
+    skos:altLabel "Freie Schule"@de ;
+    skos:topConceptOf <> .
+
+<s16> a skos:Concept ;
+    skos:prefLabel "Abendgymnasium"@de ;
+    skos:altLabel "Kolleg"@de ;
+    skos:topConceptOf <> .

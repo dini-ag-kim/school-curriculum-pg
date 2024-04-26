@@ -20,8 +20,27 @@
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "Schulform"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/schularten#Primarbereich
+:Primarbereich rdf:type owl:Class ;
+               rdfs:subClassOf :Schulstufen .
+
+
 ###  https://w3id.org/lehrplan/ontology/schularten#Schulabschluss
 :Schulabschluss rdf:type owl:Class .
+
+
+###  https://w3id.org/lehrplan/ontology/schularten#Schulstufen
+:Schulstufen rdf:type owl:Class .
+
+
+###  https://w3id.org/lehrplan/ontology/schularten#Sekundarbereich_I
+:Sekundarbereich_I rdf:type owl:Class ;
+                   rdfs:subClassOf :Schulstufen .
+
+
+###  https://w3id.org/lehrplan/ontology/schularten#Sekundarbereich_II
+:Sekundarbereich_II rdf:type owl:Class ;
+                    rdfs:subClassOf :Schulstufen .
 
 
 #################################################################
@@ -54,47 +73,58 @@
 
 ###  https://w3id.org/kim/schularten/s02
 <https://w3id.org/kim/schularten/s02> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Primarbereich .
 
 
 ###  https://w3id.org/kim/schularten/s03
 <https://w3id.org/kim/schularten/s03> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s04
 <https://w3id.org/kim/schularten/s04> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s05
 <https://w3id.org/kim/schularten/s05> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s06
 <https://w3id.org/kim/schularten/s06> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Primarbereich ,
+                                               :Sekundarbereich_II .
 
 
 ###  https://w3id.org/kim/schularten/s07
 <https://w3id.org/kim/schularten/s07> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s08
 <https://w3id.org/kim/schularten/s08> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I ,
+                                               :Sekundarbereich_II .
 
 
 ###  https://w3id.org/kim/schularten/s09
 <https://w3id.org/kim/schularten/s09> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s10
 <https://w3id.org/kim/schularten/s10> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s11
@@ -109,17 +139,20 @@
 
 ###  https://w3id.org/kim/schularten/s13
 <https://w3id.org/kim/schularten/s13> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s14
 <https://w3id.org/kim/schularten/s14> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_II .
 
 
 ###  https://w3id.org/kim/schularten/s15
 <https://w3id.org/kim/schularten/s15> rdf:type owl:NamedIndividual ,
-                                               <https://w3id.org/lehrplan/ontology/LP_10000001> .
+                                               <https://w3id.org/lehrplan/ontology/LP_10000001> ,
+                                               :Sekundarbereich_I .
 
 
 ###  https://w3id.org/kim/schularten/s16

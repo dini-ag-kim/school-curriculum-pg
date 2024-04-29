@@ -7,8 +7,8 @@
 @base <https://w3id.org/lehrplan/ontology/schularten/> .
 
 <https://w3id.org/lehrplan/ontology/schularten> rdf:type owl:Ontology ;
-                                                 owl:imports <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schularten.ttl> ,
-                                                             <https://w3id.org/kim/schulabschluesse/> .
+                                                 owl:imports <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schulabschluesse.ttl> ,
+                                                             <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schularten.ttl> .
 
 #################################################################
 #    Classes
@@ -20,25 +20,25 @@
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "Schulform"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/schularten#Primarbereich
+###  https://w3id.org/lehrplan/ontology/schularten/Primarbereich
 :Primarbereich rdf:type owl:Class ;
                rdfs:subClassOf :Schulstufen .
 
 
-###  https://w3id.org/lehrplan/ontology/schularten#Schulabschluss
+###  https://w3id.org/lehrplan/ontology/schularten/Schulabschluss
 :Schulabschluss rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology/schularten#Schulstufen
+###  https://w3id.org/lehrplan/ontology/schularten/Schulstufen
 :Schulstufen rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology/schularten#Sekundarbereich_I
+###  https://w3id.org/lehrplan/ontology/schularten/Sekundarbereich_I
 :Sekundarbereich_I rdf:type owl:Class ;
                    rdfs:subClassOf :Schulstufen .
 
 
-###  https://w3id.org/lehrplan/ontology/schularten#Sekundarbereich_II
+###  https://w3id.org/lehrplan/ontology/schularten/Sekundarbereich_II
 :Sekundarbereich_II rdf:type owl:Class ;
                     rdfs:subClassOf :Schulstufen .
 
@@ -48,27 +48,33 @@
 #################################################################
 
 ###  https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a
-<https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :Schulabschluss .
 
 
 ###  https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4
-<https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :Schulabschluss .
 
 
 ###  https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a
-<https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :Schulabschluss .
 
 
 ###  https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0
-<https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :Schulabschluss .
 
 
 ###  https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a
-<https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :Schulabschluss .
 
 
 ###  https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d
-<https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                      :Schulabschluss .
 
 
 ###  https://w3id.org/kim/schularten/s02

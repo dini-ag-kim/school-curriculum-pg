@@ -50,6 +50,12 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000003
 :LP_00000003 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( <http://w3id.org/kim/schulfaecher/s1001>
+                                               <http://w3id.org/kim/schulfaecher/s1002>
+                                               <http://w3id.org/kim/schulfaecher/s1022>
+                                             )
+                                 ] ;
              rdfs:subClassOf :LP_00000002 ;
              rdfs:label "Naturwissenschaftsfach"@de .
 
@@ -99,69 +105,51 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000040
 :LP_00000040 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_30000031
+                                               :LP_30000043
+                                               :LP_30000044
+                                               :LP_30000045
+                                               :LP_30000046
+                                               :LP_30000047
+                                               :LP_30000048
+                                               :LP_30000049
+                                               :LP_30000050
+                                               :LP_30000051
+                                               :LP_30000052
+                                               :LP_30000053
+                                               :LP_30000054
+                                               :LP_30000055
+                                               :LP_30000056
+                                               :LP_30000057
+                                             )
+                                 ] ;
              rdfs:label "Bundesland"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000041
 :LP_00000041 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000026 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_20000001
-                                                                                                           :LP_20000002
-                                                                                                           :LP_20000003
-                                                                                                           :LP_20000004
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000029 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_30000031
-                                                                                                           :LP_30000043
-                                                                                                           :LP_30000044
-                                                                                                           :LP_30000045
-                                                                                                           :LP_30000046
-                                                                                                           :LP_30000047
-                                                                                                           :LP_30000049
-                                                                                                           :LP_30000050
-                                                                                                           :LP_30000051
-                                                                                                           :LP_30000052
-                                                                                                           :LP_30000053
-                                                                                                           :LP_30000054
-                                                                                                           :LP_30000055
-                                                                                                           :LP_30000056
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000026 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_20000001
-                                                                                                           :LP_20000002
-                                                                                                           :LP_20000003
-                                                                                                           :LP_20000004
-                                                                                                           :LP_20000005
-                                                                                                           :LP_20000006
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000029 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_30000048
-                                                                                                           :LP_30000057
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                               )
+             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom :LP_00000047
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000054
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom :LP_00000055
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000053
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000020 ;
              rdfs:label "Primarbereich"@de .
@@ -169,64 +157,27 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000042
 :LP_00000042 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000026 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_20000005
-                                                                                                           :LP_20000006
-                                                                                                           :LP_20000007
-                                                                                                           :LP_20000008
-                                                                                                           :LP_20000009
-                                                                                                           :LP_20000010
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000029 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_30000031
-                                                                                                           :LP_30000043
-                                                                                                           :LP_30000044
-                                                                                                           :LP_30000045
-                                                                                                           :LP_30000046
-                                                                                                           :LP_30000047
-                                                                                                           :LP_30000049
-                                                                                                           :LP_30000050
-                                                                                                           :LP_30000051
-                                                                                                           :LP_30000052
-                                                                                                           :LP_30000053
-                                                                                                           :LP_30000054
-                                                                                                           :LP_30000055
-                                                                                                           :LP_30000056
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000026 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_20000007
-                                                                                                           :LP_20000008
-                                                                                                           :LP_20000009
-                                                                                                           :LP_20000010
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :LP_00000029 ;
-                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                               owl:oneOf ( :LP_30000048
-                                                                                                           :LP_30000057
-                                                                                                         )
-                                                                                             ]
-                                                                        ]
-                                                                      ) ;
-                                                   rdf:type owl:Class
-                                                 ]
-                                               )
+             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom :LP_00000048
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000054
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom :LP_00000056
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000053
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000020 ;
              rdfs:label "Sekundarbereich I"@de .
@@ -236,12 +187,7 @@
 :LP_00000043 rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Restriction ;
                                    owl:onProperty :LP_00000026 ;
-                                   owl:someValuesFrom [ rdf:type owl:Class ;
-                                                        owl:oneOf ( :LP_20000011
-                                                                    :LP_20000012
-                                                                    :LP_20000013
-                                                                  )
-                                                      ]
+                                   owl:someValuesFrom :LP_00000057
                                  ] ;
              rdfs:subClassOf :LP_00000020 ;
              rdfs:label "Sekundarbereich II"@de .
@@ -258,20 +204,180 @@
              rdfs:label "Bildungsgang"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000046
+:LP_00000046 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000044
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom :LP_00000048
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000044 ;
+             rdfs:label "Realschule"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000047
+:LP_00000047 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000001
+                                               :LP_20000002
+                                               :LP_20000003
+                                               :LP_20000004
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000009 ;
+             rdfs:label "Jahrgangsstufe 1-4"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000048
+:LP_00000048 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000005
+                                               :LP_20000006
+                                               :LP_20000007
+                                               :LP_20000008
+                                               :LP_20000009
+                                               :LP_20000010
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000009 ;
+             rdfs:label "Jahrgangsstufe 5-10"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000049
+:LP_00000049 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000011
+                                               :LP_20000012
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000009 ;
+             rdfs:label "Jahrgangstufe 11-12"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000051
+:LP_00000051 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000044
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom :LP_00000047
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:allValuesFrom :LP_00000047
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000044 ;
+             rdfs:label "Grundschule"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000052
+:LP_00000052 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000051
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                               owl:oneOf ( :LP_20000005
+                                                                                           :LP_20000006
+                                                                                         )
+                                                                             ]
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000053
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000051 ;
+             rdfs:label "GrundschuleBB"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000053
+:LP_00000053 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_30000048
+                                               :LP_30000057
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000040 ;
+             owl:disjointWith :LP_00000054 ;
+             rdfs:label "Berlin-Brandenburg"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000054
+:LP_00000054 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_30000031
+                                               :LP_30000043
+                                               :LP_30000044
+                                               :LP_30000045
+                                               :LP_30000046
+                                               :LP_30000047
+                                               :LP_30000049
+                                               :LP_30000050
+                                               :LP_30000051
+                                               :LP_30000052
+                                               :LP_30000053
+                                               :LP_30000054
+                                               :LP_30000055
+                                               :LP_30000056
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000040 ;
+             rdfs:label "Ohne-Berlin-Brandenburg"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000055
+:LP_00000055 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000001
+                                               :LP_20000002
+                                               :LP_20000003
+                                               :LP_20000004
+                                               :LP_20000005
+                                               :LP_20000006
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000009 ;
+             rdfs:label "Jahrgangsstufe 1-6"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000056
+:LP_00000056 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000007
+                                               :LP_20000008
+                                               :LP_20000009
+                                               :LP_20000010
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000009 ;
+             rdfs:label "Jahrgangsstufe 7-10"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000057
+:LP_00000057 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000011
+                                               :LP_20000012
+                                               :LP_20000013
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000009 ;
+             rdfs:label "Jahrgangsstufe 11-13"@de .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
 ###  http://w3id.org/kim/schulfaecher/s1000
 <http://w3id.org/kim/schulfaecher/s1000> rdf:type :LP_00000004 .
-
-
-###  http://w3id.org/kim/schulfaecher/s1001
-<http://w3id.org/kim/schulfaecher/s1001> rdf:type :LP_00000003 .
-
-
-###  http://w3id.org/kim/schulfaecher/s1002
-<http://w3id.org/kim/schulfaecher/s1002> rdf:type :LP_00000003 .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1003
@@ -344,10 +450,6 @@
 
 ###  http://w3id.org/kim/schulfaecher/s1021
 <http://w3id.org/kim/schulfaecher/s1021> rdf:type :LP_00000001 .
-
-
-###  http://w3id.org/kim/schulfaecher/s1022
-<http://w3id.org/kim/schulfaecher/s1022> rdf:type :LP_00000003 .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1023
@@ -492,7 +594,8 @@
 
 ###  https://w3id.org/kim/schularten/s04
 <https://w3id.org/kim/schularten/s04> rdf:type owl:NamedIndividual ,
-                                               :LP_00000044 .
+                                               :LP_00000044 ,
+                                               :LP_00000046 .
 
 
 ###  https://w3id.org/kim/schularten/s05
@@ -582,6 +685,12 @@
              rdfs:label "test hessen kl 4"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000050
+:LP_00000050 rdf:type owl:NamedIndividual ;
+             :LP_00000026 :LP_20000008 ;
+             rdfs:label "test realschule"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_20000001
 :LP_20000001 rdf:type owl:NamedIndividual ,
                       :LP_00000009 ;
@@ -661,99 +770,96 @@
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000031
-:LP_30000031 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000031 rdf:type owl:NamedIndividual ;
              rdfs:label "Thüringen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000043
-:LP_30000043 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000043 rdf:type owl:NamedIndividual ;
              rdfs:label "Niedersachsen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000044
-:LP_30000044 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000044 rdf:type owl:NamedIndividual ;
              rdfs:label "Nordrhein-Westfalen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000045
-:LP_30000045 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000045 rdf:type owl:NamedIndividual ;
              rdfs:label "Hamburg"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000046
-:LP_30000046 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000046 rdf:type owl:NamedIndividual ;
              rdfs:label "Rheinland-Pfalz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000047
-:LP_30000047 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000047 rdf:type owl:NamedIndividual ;
              rdfs:label "Sachsen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000048
-:LP_30000048 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000048 rdf:type owl:NamedIndividual ;
              rdfs:label "Berlin"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000049
-:LP_30000049 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000049 rdf:type owl:NamedIndividual ;
              rdfs:label "Baden-Württemberg"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000050
-:LP_30000050 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000050 rdf:type owl:NamedIndividual ;
              rdfs:label "Hessen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000051
-:LP_30000051 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000051 rdf:type owl:NamedIndividual ;
              rdfs:label "Bayern"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000052
-:LP_30000052 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000052 rdf:type owl:NamedIndividual ;
              rdfs:label "Mecklenburg-Vorpommern"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000053
-:LP_30000053 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000053 rdf:type owl:NamedIndividual ;
              rdfs:label "Sachsen-Anhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000054
-:LP_30000054 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000054 rdf:type owl:NamedIndividual ;
              rdfs:label "Schleswig-Holstein"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000055
-:LP_30000055 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000055 rdf:type owl:NamedIndividual ;
              rdfs:label "Saarland"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000056
-:LP_30000056 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000056 rdf:type owl:NamedIndividual ;
              rdfs:label "Bremen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000057
-:LP_30000057 rdf:type owl:NamedIndividual ,
-                      :LP_00000040 ;
+:LP_30000057 rdf:type owl:NamedIndividual ;
              rdfs:label "Brandenburg"@de .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://w3id.org/kim/schulfaecher/> rdfs:label "KIM Schulfächer Schema"@de .
+
+
+<https://w3id.org/kim/schulabschluesse/> rdfs:label "KIM Schulabschlüsse Schema"@de .
+
+
+<https://w3id.org/kim/schularten/> rdfs:label "KIM Schularten Schema"@de .
 
 
 #################################################################

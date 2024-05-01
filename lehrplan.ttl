@@ -548,6 +548,10 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000074
 :LP_00000074 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :LP_00000026 ;
+                                   owl:someValuesFrom :LP_00000057
+                                 ] ;
              rdfs:subClassOf :LP_00000066 ;
              rdfs:label "Gymnasium"@de .
 

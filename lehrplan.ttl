@@ -93,7 +93,8 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000019
 :LP_00000019 rdf:type owl:Class ;
-             rdfs:label "Schulabschluss"@de .
+             rdfs:label "Schulabschluss"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsgang"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000020
@@ -189,11 +190,6 @@
 :LP_00000044 rdf:type owl:Class ;
              rdfs:label "Schulart"@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Schulform"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000045
-:LP_00000045 rdf:type owl:Class ;
-             rdfs:label "Bildungsgang"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000047
@@ -592,25 +588,28 @@
 :LP_00000076 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000019 ;
              rdfs:label "Abitur"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Abitur ist ein Schulabschluss ....   der zur allgemeinen Hoschulreife führt."@de .
+             <http://www.w3.org/2004/02/skos/core#definition> "Abitur ist ein Schulabschluss ....   der zur allgemeinen Hochschulreife führt."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000077
 :LP_00000077 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000019 ;
-             rdfs:label "Fachabitur"@de .
+             rdfs:label "Fachabitur"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Fachhochschulreife"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000078
 :LP_00000078 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000019 ;
-             rdfs:label "Mittlerer Schulabschluss"@de .
+             rdfs:label "Mittlerer Schulabschluss"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Realschulabschluss"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000079
 :LP_00000079 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000019 ;
-             rdfs:label "Erster Schulabschluss"@de .
+             rdfs:label "Erster Schulabschluss"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Qualifizierender Hauptschulabschluss"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000080
@@ -721,19 +720,16 @@
                                                           owl:someValuesFrom :LP_00000048
                                                         ]
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                               owl:oneOf ( :LP_30000052
-                                                                                         )
-                                                                             ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
                                                           owl:someValuesFrom :LP_00000078
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
                                                           owl:someValuesFrom :LP_00000079
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000052
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -777,19 +773,16 @@
                                                           owl:someValuesFrom :LP_00000048
                                                         ]
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                               owl:oneOf ( :LP_30000031
-                                                                                         )
-                                                                             ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
                                                           owl:someValuesFrom :LP_00000078
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
                                                           owl:someValuesFrom :LP_00000079
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000031
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -805,19 +798,16 @@
                                                           owl:someValuesFrom :LP_00000048
                                                         ]
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                               owl:oneOf ( :LP_30000046
-                                                                                         )
-                                                                             ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
                                                           owl:someValuesFrom :LP_00000078
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
                                                           owl:someValuesFrom :LP_00000079
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000046
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -875,7 +865,7 @@
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000090
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000026 ;
-                                                          owl:someValuesFrom :LP_00000100
+                                                          owl:someValuesFrom :LP_00000048
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000058 ;
@@ -1035,7 +1025,7 @@
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000090
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000026 ;
-                                                          owl:someValuesFrom :LP_00000100
+                                                          owl:someValuesFrom :LP_00000048
                                                         ]
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000029 ;

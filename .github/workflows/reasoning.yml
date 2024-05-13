@@ -16,3 +16,7 @@ jobs:
            curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
            java -jar robot.jar reason --reasoner hermit --input main/lehrplan.ttl --output reasoned.ttl
 
+    - uses: mikeal/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH_NAME: '' #optional defaults to master

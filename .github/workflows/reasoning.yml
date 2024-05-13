@@ -1,0 +1,18 @@
+name: Reasoning
+on:
+  push:
+    branches:
+    - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: main
+        path: main
+    - name: Reasoning
+      run: |
+           curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
+           java -jar robot.jar reason --reasoner hermit --input main/lehrplan.ttl --output reasoned.ttl
+

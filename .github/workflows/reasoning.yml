@@ -10,11 +10,10 @@ jobs:
     - uses: actions/checkout@v3
       with:
         ref: main
-        path: main
     - name: Reasoning
       run: |
            curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
-           java -jar robot.jar reason --reasoner hermit --input main/lehrplan.ttl --output reasoned.ttl
+           java -jar robot.jar reason --reasoner hermit --input lehrplan.ttl --output reasoned.ttl
 
     - uses: mikeal/publish-to-github-action@master
       env:

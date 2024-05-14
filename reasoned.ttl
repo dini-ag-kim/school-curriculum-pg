@@ -575,12 +575,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000079
 <https://w3id.org/lehrplan/ontology/LP_00000079> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                     [ rdf:type owl:Class ;
-                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000271>
-                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000272>
-                                                                                 )
-                                                                     ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000019> ;
                                                  rdfs:label "Erster Abschluss"@de .
 
@@ -615,8 +609,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                    <https://w3id.org/lehrplan/ontology/LP_00000136>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000048>
@@ -1194,8 +1187,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                        owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000149>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000049>
@@ -1268,7 +1260,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Grundschule (BA)"@de .
+                                                 rdfs:label "Grundschule (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000159
@@ -1338,7 +1330,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Allgemeine Hochschulreife (HA)"@de .
+                                                 rdfs:label "Allgemeine Hochschulreife (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000164
@@ -1420,7 +1412,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Mittelschule Sek I (BA)"@de .
+                                                 rdfs:label "Mittelschule Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000167
@@ -1464,7 +1456,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Allgemeine Hochschulreife (BA)"@de .
+                                                 rdfs:label "Allgemeine Hochschulreife (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000170
@@ -1516,7 +1508,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Allgemeine Hochschulreife (SA)"@de .
+                                                 rdfs:label "Allgemeine Hochschulreife (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000174
@@ -1533,7 +1525,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Allgemeine Hochschulreife (BR)"@de .
+                                                 rdfs:label "Allgemeine Hochschulreife (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000175
@@ -1555,8 +1547,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000176
 <https://w3id.org/lehrplan/ontology/LP_00000176> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000031>
@@ -1569,8 +1560,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000177
 <https://w3id.org/lehrplan/ontology/LP_00000177> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000043>
@@ -1583,8 +1573,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000178
 <https://w3id.org/lehrplan/ontology/LP_00000178> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000044>
@@ -1597,6 +1586,11 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000179
 <https://w3id.org/lehrplan/ontology/LP_00000179> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000271>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000272>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
@@ -1605,18 +1599,16 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Erster Schulabschluss (HA)"@de .
+                                                 rdfs:label "Erster Schulabschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000180
 <https://w3id.org/lehrplan/ontology/LP_00000180> rdf:type owl:Class ;
                                                  owl:equivalentClass [ rdf:type owl:Class ;
-                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000281>
-                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000282>
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000282>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000046>
@@ -1629,8 +1621,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000181
 <https://w3id.org/lehrplan/ontology/LP_00000181> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
@@ -1643,8 +1634,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000182
 <https://w3id.org/lehrplan/ontology/LP_00000182> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000050>
@@ -1662,8 +1652,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                    <https://w3id.org/lehrplan/ontology/LP_00000153>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
@@ -1671,13 +1660,12 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Erster Schulabschluss (BA)"@de .
+                                                 rdfs:label "Erster Schulabschluss (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000184
 <https://w3id.org/lehrplan/ontology/LP_00000184> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000052>
@@ -1690,8 +1678,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000185
 <https://w3id.org/lehrplan/ontology/LP_00000185> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000053>
@@ -1704,8 +1691,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000186
 <https://w3id.org/lehrplan/ontology/LP_00000186> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000054>
@@ -1718,8 +1704,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000187
 <https://w3id.org/lehrplan/ontology/LP_00000187> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
@@ -1727,7 +1712,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Erster Schulabschluss (SA)"@de .
+                                                 rdfs:label "Erster Schulabschluss (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000188
@@ -1737,8 +1722,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                    <https://w3id.org/lehrplan/ontology/LP_00000247>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000056>
@@ -1746,7 +1730,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Erster Schulabschluss (BR)"@de .
+                                                 rdfs:label "Erster Schulabschluss (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000189
@@ -1756,8 +1740,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                    <https://w3id.org/lehrplan/ontology/LP_00000232>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000057>
@@ -1812,7 +1795,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Realschule Sek I (BA)"@de .
+                                                 rdfs:label "Realschule Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000191
@@ -1859,7 +1842,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium Sek I (BA)"@de .
+                                                 rdfs:label "Gymnasium Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000194
@@ -1882,7 +1865,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium G8 Einführung Sek I (BA)"@de .
+                                                 rdfs:label "Gymnasium G8 Einführung Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000195
@@ -1913,7 +1896,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium G8 Sek II (BA)"@de .
+                                                 rdfs:label "Gymnasium G8 Sek II (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000196
@@ -1944,7 +1927,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium G9 Sek II (BA)"@de .
+                                                 rdfs:label "Gymnasium G9 Sek II (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000197
@@ -1989,7 +1972,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Wirtschaftsschule 5-stufig Sek I (BA)"@de .
+                                                 rdfs:label "Wirtschaftsschule 5-stufig Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000199
@@ -2024,7 +2007,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Wirtschaftsschule 4-stufig Sek I (BA)"@de .
+                                                 rdfs:label "Wirtschaftsschule 4-stufig Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000200
@@ -2080,11 +2063,15 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Mittlerer Abschluss (HA)"@de .
+                                                 rdfs:label "Mittlerer Abschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000204
 <https://w3id.org/lehrplan/ontology/LP_00000204> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000281>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000078>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
@@ -2139,7 +2126,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Mittlerer Abschluss (BA)"@de .
+                                                 rdfs:label "Mittlerer Abschluss (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000208
@@ -2191,7 +2178,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Mittlerer Abschluss (SA)"@de .
+                                                 rdfs:label "Mittlerer Abschluss (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000212
@@ -2208,7 +2195,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Mittlerer Abschluss (BR)"@de .
+                                                 rdfs:label "Mittlerer Abschluss (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000213
@@ -2257,7 +2244,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Wirtschaftsschule 3-stufig Sek I (BA)"@de .
+                                                 rdfs:label "Wirtschaftsschule 3-stufig Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000215
@@ -2285,7 +2272,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Wirtschaftsschule 2-stufig Sek I (BA)"@de .
+                                                 rdfs:label "Wirtschaftsschule 2-stufig Sek I (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000216
@@ -3076,7 +3063,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Grundschule (BR)"@de .
+                                                 rdfs:label "Grundschule (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000251
@@ -3134,7 +3121,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Werkschule Sek I (BR)"@de .
+                                                 rdfs:label "Werkschule Sek I (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000253
@@ -3181,7 +3168,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Oberschule Sek I (BR)"@de .
+                                                 rdfs:label "Oberschule Sek I (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000254
@@ -3204,7 +3191,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Oberschule G8 Einführung Sek I (BR)"@de .
+                                                 rdfs:label "Oberschule G8 Einführung Sek I (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000255
@@ -3251,7 +3238,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium Sek I (BR)"@de .
+                                                 rdfs:label "Gymnasium Sek I (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000256
@@ -3274,7 +3261,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium G8 Einführung Sek I (BR)"@de .
+                                                 rdfs:label "Gymnasium G8 Einführung Sek I (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000257
@@ -3301,7 +3288,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium Sek II (BR)"@de .
+                                                 rdfs:label "Gymnasium Sek II (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000258
@@ -3332,7 +3319,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Oberschule G9 Sek II (BR)"@de .
+                                                 rdfs:label "Oberschule G9 Sek II (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000259
@@ -3363,7 +3350,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Oberschule G8 Sek II (BR)"@de .
+                                                 rdfs:label "Oberschule G8 Sek II (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000260
@@ -3456,7 +3443,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Grundschule (HA)"@de .
+                                                 rdfs:label "Grundschule (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000274
@@ -3512,7 +3499,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Stadtteilschule Sek I (HA)"@de .
+                                                 rdfs:label "Stadtteilschule Sek I (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000276
@@ -3562,7 +3549,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium Sek I (HA)"@de .
+                                                 rdfs:label "Gymnasium Sek I (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000277
@@ -3592,7 +3579,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Stadtteilschule Sek II (HA)"@de .
+                                                 rdfs:label "Stadtteilschule Sek II (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000278
@@ -3618,7 +3605,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gymnasium Sek II (HA)"@de .
+                                                 rdfs:label "Gymnasium Sek II (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000279
@@ -3920,7 +3907,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Realschule plus (RP)"@de .
+                                                 rdfs:label "Realschule plus Sek I (RP)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000291
@@ -4894,10 +4881,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Berufsbildungsreife (BE)"@de .
 
 
@@ -4906,10 +4891,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BE)"@de .
 
 
@@ -4938,10 +4921,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000144> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000144> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Hauptschulabschluss (BW)"@de .
 
 
@@ -4960,11 +4941,9 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000183> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Qualifizierender Abschluss der Mittelschule (BA)"@de .
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
+                                                 rdfs:label "Qualifizierender Abschluss der Mittelschule (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000153
@@ -4972,11 +4951,9 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000183> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Erfolgreicher Abschluss der Mittelschule (BA)"@de .
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
+                                                 rdfs:label "Erfolgreicher Abschluss der Mittelschule (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000154
@@ -4986,7 +4963,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Mittlerer Schulabschluss der Mittelschule (BA)"@de .
+                                                 rdfs:label "Mittlerer Schulabschluss der Mittelschule (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000155
@@ -4996,7 +4973,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Mittlerer Schulabschluss der Realschule (BA)"@de .
+                                                 rdfs:label "Mittlerer Schulabschluss der Realschule (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000156
@@ -5006,7 +4983,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Mittlerer Schulabschluss der Wirtschaftsschule (BA)"@de .
+                                                 rdfs:label "Mittlerer Schulabschluss der Wirtschaftsschule (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000157
@@ -5016,7 +4993,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000169> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Allgemeinbildender Schulabschluss (BA)"@de .
+                                                 rdfs:label "Allgemeinbildender Schulabschluss (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000192
@@ -5026,7 +5003,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
-                                                 rdfs:label "Mittlerer Schulabschluss Gymnasium (BA)"@de .
+                                                 rdfs:label "Mittlerer Schulabschluss Gymnasium (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000193
@@ -5041,10 +5018,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000189> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Berufsbildungsreife (BB)"@de .
 
 
@@ -5053,10 +5028,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000189> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BB)"@de .
 
 
@@ -5097,7 +5070,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000174> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
-                                                 rdfs:label "Allgemeinbildender Schulabschluss (BR)"@de .
+                                                 rdfs:label "Allgemeinbildender Schulabschluss (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000246
@@ -5105,11 +5078,9 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000188> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000056> ;
-                                                 rdfs:label "Erweiterte Berufsbildungsreife (BR)"@de .
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
+                                                 rdfs:label "Erweiterte Berufsbildungsreife (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000247
@@ -5117,11 +5088,9 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000188> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000056> ;
-                                                 rdfs:label "Berufsbildungsreife (BR)"@de .
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
+                                                 rdfs:label "Berufsbildungsreife (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000248
@@ -5131,7 +5100,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000212> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
-                                                 rdfs:label "Mittlerer Schulabschluss (BR)"@de .
+                                                 rdfs:label "Mittlerer Schulabschluss (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000266
@@ -5155,7 +5124,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000163> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
-                                                 rdfs:label "Allgemeinbildender Schulabschluss (HA)"@de .
+                                                 rdfs:label "Allgemeinbildender Schulabschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000270
@@ -5165,7 +5134,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000203> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
-                                                 rdfs:label "Mittlerer Abschluss (HA)"@de .
+                                                 rdfs:label "Mittlerer Abschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000271
@@ -5175,7 +5144,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000179> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
-                                                 rdfs:label "Erster allgemeinbildender Schulabschluss (HA)"@de .
+                                                 rdfs:label "Erster allgemeinbildender Schulabschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000272
@@ -5185,7 +5154,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000179> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
-                                                 rdfs:label "Erweiterter erste allgemeinbildender Schulabschluss (HA)"@de .
+                                                 rdfs:label "Erweiterter erste allgemeinbildender Schulabschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000280
@@ -5202,11 +5171,9 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 <https://w3id.org/lehrplan/ontology/LP_00000281> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000180> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000046> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000078> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000204> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000046> ;
                                                  rdfs:label "Qualifizierter Sekundarabschluss I (RP)"@de .
 
 
@@ -5215,10 +5182,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000179> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000180> ;
-                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ,
-                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000046> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000046> ;
                                                  rdfs:label "Berufsreife (RP)"@de .
 
 
@@ -5318,7 +5283,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Thüringen"@de .
+                                                 rdfs:label "Thüringen"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "TH" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000043
@@ -5326,7 +5292,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Niedersachsen"@de .
+                                                 rdfs:label "Niedersachsen"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "NI" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000044
@@ -5334,7 +5301,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Nordrhein-Westfalen"@de .
+                                                 rdfs:label "Nordrhein-Westfalen"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "NW" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000045
@@ -5342,7 +5310,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Hamburg"@de .
+                                                 rdfs:label "Hamburg"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "HH" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000046
@@ -5350,7 +5319,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Rheinland-Pfalz"@de .
+                                                 rdfs:label "Rheinland-Pfalz"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "RP" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000047
@@ -5358,7 +5328,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Sachsen"@de .
+                                                 rdfs:label "Sachsen"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "SN" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000048
@@ -5366,7 +5337,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000053> ;
-                                                 rdfs:label "Berlin"@de .
+                                                 rdfs:label "Berlin"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "BE" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000049
@@ -5374,7 +5346,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Baden-Württemberg"@de .
+                                                 rdfs:label "Baden-Württemberg"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "BW" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000050
@@ -5382,7 +5355,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Hessen"@de .
+                                                 rdfs:label "Hessen"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "HE" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000051
@@ -5390,7 +5364,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Bayern"@de .
+                                                 rdfs:label "Bayern"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "BY" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000052
@@ -5398,7 +5373,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Mecklenburg-Vorpommern"@de .
+                                                 rdfs:label "Mecklenburg-Vorpommern"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "MV" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000053
@@ -5406,7 +5382,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Sachsen-Anhalt"@de .
+                                                 rdfs:label "Sachsen-Anhalt"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "ST" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000054
@@ -5414,7 +5391,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Schleswig-Holstein"@de .
+                                                 rdfs:label "Schleswig-Holstein"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "SH" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000055
@@ -5422,7 +5400,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Saarland"@de .
+                                                 rdfs:label "Saarland"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "SL" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000056
@@ -5430,7 +5409,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000054> ;
-                                                 rdfs:label "Bremen"@de .
+                                                 rdfs:label "Bremen"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "HB" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_30000057
@@ -5438,7 +5418,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000040> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000053> ;
-                                                 rdfs:label "Brandenburg"@de .
+                                                 rdfs:label "Brandenburg"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "BB" .
 
 
 #################################################################

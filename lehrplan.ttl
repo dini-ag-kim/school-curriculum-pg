@@ -13,6 +13,20 @@
                                                   <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schulfaecher.ttl> .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+rdfs:label rdf:type owl:DatatypeProperty .
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf rdfs:label .
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf rdfs:label .
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -3270,46 +3284,8 @@
 
 
 ###  https://w3id.org/kim/schularten/s16
-<https://w3id.org/kim/schularten/s16> rdf:type owl:NamedIndividual .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000027
-:LP_00000027 rdf:type owl:NamedIndividual ;
-             :LP_00000026 :LP_20000006 ;
-             :LP_00000029 :LP_30000050 ;
-             rdfs:label "test hessen kl.6"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000033
-:LP_00000033 rdf:type owl:NamedIndividual ;
-             :LP_00000026 :LP_20000005 ;
-             :LP_00000029 :LP_30000048 ;
-             rdfs:label "test berlin kl.5"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000034
-:LP_00000034 rdf:type owl:NamedIndividual ;
-             :LP_00000026 :LP_20000005 ;
-             rdfs:label "test kl. 5"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000036
-:LP_00000036 rdf:type owl:NamedIndividual ;
-             :LP_00000026 :LP_20000004 ;
-             :LP_00000029 :LP_30000050 ;
-             rdfs:label "test hessen kl 4"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000050
-:LP_00000050 rdf:type owl:NamedIndividual ;
-             :LP_00000026 :LP_20000008 ;
-             rdfs:label "test kl 8"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000101
-:LP_00000101 rdf:type owl:NamedIndividual ;
-             :LP_00000029 :LP_30000051 ;
-             rdfs:label "test schule in bayern"@de .
+<https://w3id.org/kim/schularten/s16> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "Abendgymnasium"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000131

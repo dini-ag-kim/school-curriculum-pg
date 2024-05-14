@@ -16,10 +16,9 @@ jobs:
            java -jar robot.jar merge --include-annotations true --input lehrplan.ttl query --update .github/workflows/update.sparql reason --reasoner hermit --axiom-generators "SubClass EquivalentClass DisjointClasses DataPropertyCharacteristic EquivalentDataProperties SubDataProperty ClassAssertion PropertyAssertion EquivalentObjectProperty InverseObjectProperties ObjectPropertyCharacteristic SubObjectProperty ObjectPropertyRange ObjectPropertyDomain"  --include-indirect true remove --term owl:topObjectProperty reduce --output reasoned.ttl
            rm robot.jar
            git add reasoned.ttl
-    - uses: mikeal/publish-to-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH_NAME: 'main-reasoned' #optional defaults to master
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        branch: main-reasoned
 
     - name: Invoke ping
       uses: distributhor/workflow-webhook@v3

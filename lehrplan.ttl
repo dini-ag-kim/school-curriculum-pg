@@ -3022,6 +3022,30 @@
              rdfs:label "Kompetenz Annotation"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000264
+:LP_00000264 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000043
+                                                        [ rdf:type owl:Class ;
+                                                          owl:unionOf ( :LP_00000112
+                                                                        :LP_00000121
+                                                                        :LP_00000122
+                                                                        :LP_00000238
+                                                                        :LP_00000240
+                                                                      )
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000043 ;
+             rdfs:label "Gymnasiale Oberstufe"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000265
+:LP_00000265 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000129 ;
+             rdfs:label "Fach Niveau"@de .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -3435,6 +3459,18 @@
 :LP_00000248 rdf:type owl:NamedIndividual ,
                       :LP_00000212 ;
              rdfs:label "Mittlerer Schulabschluss (BR)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000266
+:LP_00000266 rdf:type owl:NamedIndividual ,
+                      :LP_00000265 ;
+             rdfs:label "Leistungsfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000267
+:LP_00000267 rdf:type owl:NamedIndividual ,
+                      :LP_00000265 ;
+             rdfs:label "Grundfach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000001

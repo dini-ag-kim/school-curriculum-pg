@@ -151,7 +151,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000126> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000127> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000128> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000130> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000138> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000139> ,
@@ -318,7 +317,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000019
 <https://w3id.org/lehrplan/ontology/LP_00000019> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                 rdfs:subClassOf owl:Thing ;
                                                  rdfs:label "Schulabschluss"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsgang"@de .
 
@@ -1058,15 +1057,9 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Schnellerner ab Klasse 5"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000129
-<https://w3id.org/lehrplan/ontology/LP_00000129> rdf:type owl:Class ;
-                                                 rdfs:subClassOf owl:Thing ;
-                                                 rdfs:label "Qualifikation"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000130
 <https://w3id.org/lehrplan/ontology/LP_00000130> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                 rdfs:subClassOf owl:Thing ;
                                                  rdfs:label "Lerner Niveau"@de .
 
 
@@ -3334,19 +3327,19 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 <https://w3id.org/lehrplan/ontology/LP_00000261> rdf:type owl:Class ;
                                                  rdfs:subClassOf owl:Thing ;
-                                                 rdfs:label "Lehrplan Annotation"@de .
+                                                 rdfs:label "Lehrplan Element"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
 <https://w3id.org/lehrplan/ontology/LP_00000262> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "Kompetenzbereich Annotation"@de .
+                                                 rdfs:label "Kompetenzbereich"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
 <https://w3id.org/lehrplan/ontology/LP_00000263> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "Kompetenz Annotation"@de .
+                                                 rdfs:label "Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000264
@@ -3370,7 +3363,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 <https://w3id.org/lehrplan/ontology/LP_00000265> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                 rdfs:subClassOf owl:Thing ;
                                                  rdfs:label "Fach Niveau"@de .
 
 
@@ -4314,7 +4307,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000131
 <https://w3id.org/lehrplan/ontology/LP_00000131> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000130> ;
                                                  rdfs:label "Schnellerner (BE)"@de .
 
@@ -4324,8 +4316,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000109> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000109> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BE)"@de .
 
@@ -4335,8 +4326,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Berufsbildungsreife (BE)"@de .
 
@@ -4346,8 +4336,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000106> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BE)"@de .
 
@@ -4357,8 +4346,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000105> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000105> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Mittlerer Schulabschluss (BE)"@de .
 
@@ -4368,7 +4356,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000146> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BW)"@de .
@@ -4379,7 +4366,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000144> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Hauptschulabschluss (BW)"@de .
@@ -4390,7 +4376,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000145> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Mittlerer Bildungsabschluss (BW)"@de .
@@ -4401,7 +4386,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000183> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Qualifizierender Abschluss der Mittelschule (BA)"@de .
@@ -4412,7 +4396,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000183> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Erfolgreicher Abschluss der Mittelschule (BA)"@de .
@@ -4423,7 +4406,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss der Mittelschule (BA)"@de .
@@ -4434,7 +4416,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss der Realschule (BA)"@de .
@@ -4445,7 +4426,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss der Wirtschaftsschule (BA)"@de .
@@ -4456,7 +4436,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000169> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BA)"@de .
@@ -4467,7 +4446,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss Gymnasium (BA)"@de .
@@ -4476,7 +4454,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000193
 <https://w3id.org/lehrplan/ontology/LP_00000193> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000130> ;
                                                  rdfs:label "G8 Lerner Niveau"@de .
 
@@ -4486,7 +4463,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000189> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Berufsbildungsreife (BB)"@de .
@@ -4497,7 +4473,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000189> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BB)"@de .
@@ -4508,7 +4483,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000213> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Fachoberschulreife (BB)"@de .
@@ -4519,7 +4493,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000213> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Berechtigung zum Besuch der gymnasialen Oberstufe (BB)"@de .
@@ -4530,7 +4503,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000175> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BB)"@de .
@@ -4541,7 +4513,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000174> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BR)"@de .
@@ -4552,7 +4523,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000188> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BR)"@de .
@@ -4563,7 +4533,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000188> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Berufsbildungsreife (BR)"@de .
@@ -4574,7 +4543,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000212> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Mittlerer Schulabschluss (BR)"@de .
@@ -4583,7 +4551,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000266
 <https://w3id.org/lehrplan/ontology/LP_00000266> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ;
                                                  rdfs:label "Leistungsfach"@de .
 
@@ -4591,7 +4558,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000267
 <https://w3id.org/lehrplan/ontology/LP_00000267> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000129> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ;
                                                  rdfs:label "Grundfach"@de .
 

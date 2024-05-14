@@ -1999,7 +1999,7 @@
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "BA Schularten"@de .
+             rdfs:label "BY Schularten"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000217
@@ -3020,7 +3020,7 @@
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "BR Schularten"@de .
+             rdfs:label "HB Schularten"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
@@ -3552,6 +3552,20 @@
 :LP_00000292 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000111 ;
              rdfs:label "Integrierte Gesamtschule"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000293
+:LP_00000293 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000045
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000117 ;
+             rdfs:label "HH Schularten"@de .
 
 
 #################################################################

@@ -112,6 +112,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000006> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000007> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000009> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000020> ,
@@ -288,16 +290,14 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 <https://w3id.org/lehrplan/ontology/LP_00000001> rdf:type owl:Class ;
-                                                 rdfs:subClassOf owl:Thing ;
-                                                 rdfs:label "Schulfach"@de .
+                                                 rdfs:subClassOf owl:Thing .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000002
 <https://w3id.org/lehrplan/ontology/LP_00000002> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
                                                  owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000004> ,
-                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                                 rdfs:label "MINT-Fach"@de .
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000003
@@ -309,23 +309,198 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                                  )
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000002> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000041> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000114>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000001>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000002>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000004>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000004> ,
                                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                                 rdfs:label "Naturwissenschaftsfach"@de .
+                                                 rdfs:label "Grundschule (SL)"@de ,
+                                                            "Naturwissenschaftsfach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000004
 <https://w3id.org/lehrplan/ontology/LP_00000004> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000112>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000001>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000002>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                                 rdfs:label "Fremdsprachfach"@de .
+                                                 rdfs:label "Fremdsprachfach"@de ,
+                                                            "Gemeinschaftsschule Sek I (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000005
 <https://w3id.org/lehrplan/ontology/LP_00000005> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                                 rdfs:label "Gesellschaftswissenschaftsfach"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000264> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000112>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000011>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000012>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000013>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000000>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Gemeinschatsschule Sek II (SL)"@de ,
+                                                            "Gesellschaftswissenschaftsfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000006
+<https://w3id.org/lehrplan/ontology/LP_00000006> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000122>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000001>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000002>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Gymnasium Sek I (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000007
+<https://w3id.org/lehrplan/ontology/LP_00000007> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000264> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000122>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000011>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000012>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000013>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000000>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Gymnasium Sek II (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000009
@@ -1501,6 +1676,10 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000173
 <https://w3id.org/lehrplan/ontology/LP_00000173> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000000>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000076>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
@@ -1705,6 +1884,10 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000187
 <https://w3id.org/lehrplan/ontology/LP_00000187> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000001>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
@@ -2171,6 +2354,10 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000211
 <https://w3id.org/lehrplan/ontology/LP_00000211> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000002>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000078>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
@@ -3958,7 +4145,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Alt-Griechisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20003> ;
@@ -3973,7 +4175,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000003> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000041> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000114> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000004> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s02> ;
                                          rdfs:label "Biologie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/080> ;
@@ -3988,7 +4201,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000003> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000041> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000114> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000004> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s02> ;
                                          rdfs:label "Chemie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/100> ;
@@ -4001,7 +4225,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Chinesisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Chinesisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4039,7 +4278,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Deutsch als Zweitsprache"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "DaZ"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005> ,
@@ -4055,7 +4309,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Englisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501> ,
@@ -4084,7 +4353,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Französisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502> ,
@@ -4098,7 +4382,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Geografie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Erdkunde"@de ,
                                                                                         "Geographie"@de ;
@@ -4113,7 +4408,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Geschichte"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20002> ;
@@ -4153,7 +4459,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Italienisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503> ,
@@ -4181,7 +4502,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Latein"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20005> ;
@@ -4254,7 +4590,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000003> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000041> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000114> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000004> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s02> ;
                                          rdfs:label "Physik"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/460> ;
@@ -4267,7 +4614,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Politik"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Politische Bildung"@de ,
                                                                                         "Sozialkunde"@de ;
@@ -4325,7 +4683,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Russisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507> ,
@@ -4339,7 +4712,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Sachunterricht"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Heimatunterricht"@de ,
                                                                                         "Sachkunde"@de ;
@@ -4354,7 +4738,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Sexualerziehung"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/560> ;
@@ -4367,7 +4762,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Spanisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508> ,
@@ -4394,7 +4804,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Türkisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504> ,
@@ -4408,7 +4833,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Wirtschaftskunde"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/700> ;
@@ -4421,7 +4857,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Hebräisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Hebräisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4432,7 +4883,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Japanisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Japanisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4443,7 +4909,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Neugriechisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neugriechisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4454,7 +4935,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Polnisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Polnisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4465,7 +4961,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Portugiesisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Portugiesisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4476,7 +4987,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Sorbisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Wendisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Sorbisch"@de ;
@@ -4508,7 +5034,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Gesellschaftswissenschaften"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Gesellschaftswissenschaften"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -4539,7 +5076,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000264> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000011> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000012> ,
+                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000013> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000000> ;
+                                         <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s09> ;
                                          rdfs:label "Erziehungswissenschaften"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Pädagogik"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Erziehungswissenschaften"@de ;
@@ -4877,6 +5425,34 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                       <http://www.w3.org/2004/02/skos/core#altLabel> "Kolleg"@de ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Abendgymnasium"@de ;
                                       <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/kim/schularten/> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000000
+<https://w3id.org/lehrplan/ontology/LP_00000000> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000019> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000076> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000173> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
+                                                 rdfs:label "Allgemeinbildender Schulabschluss (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000001
+<https://w3id.org/lehrplan/ontology/LP_00000001> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000019> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000079> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000187> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000002
+<https://w3id.org/lehrplan/ontology/LP_00000002> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000019> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000078> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000211> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000131
@@ -5440,6 +6016,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000053> ;
                                                  rdfs:label "Brandenburg"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "BB" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/lehrplan/ontology/LP_00000001> rdfs:label "Hauptschulabschluss (SL)"@de ,
+                                                            "Schulfach"@de .
+
+
+<https://w3id.org/lehrplan/ontology/LP_00000002> rdfs:label "MINT-Fach"@de ,
+                                                            "Mittlerer Bildungsabschluss (SL)"@de .
 
 
 #################################################################

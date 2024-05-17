@@ -4308,6 +4308,62 @@
              rdfs:label "Operator"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000332
+:LP_00000332 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000261 ;
+             rdfs:label "Lerninhalt"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000333
+:LP_00000333 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000332 ;
+             rdfs:label "Grundwissen"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000334
+:LP_00000334 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000332 ;
+             rdfs:label "Wissensbestand"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000335
+:LP_00000335 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000332 ;
+             rdfs:label "Unterrichtsinhalt"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000336
+:LP_00000336 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000263 ;
+             rdfs:label "Fachbezogene Kompetenz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000337
+:LP_00000337 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000263 ;
+             rdfs:label "Lernbereichsbezogene Kompetenz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000338
+:LP_00000338 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000261 ;
+             rdfs:label "Anforderungs Niveau"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Progressionsstufe" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000339
+:LP_00000339 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( <http://w3id.org/kim/schulfaecher/s1010>
+                                               <http://w3id.org/kim/schulfaecher/s1011>
+                                               :LP_00000340
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000001 ;
+             rdfs:comment "RP" ;
+             rdfs:label "Gemeinschaftskunde"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 :LP_00002003 rdf:type owl:Class ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
@@ -5718,6 +5774,12 @@
 :LP_00000315 rdf:type owl:NamedIndividual ,
                       :LP_00000200 ;
              rdfs:label "Realschulabschluss (TH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000340
+:LP_00000340 rdf:type owl:NamedIndividual ,
+                      :LP_00000005 ;
+             rdfs:label "Sozialkunde"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

@@ -302,6 +302,14 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000329> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000330> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000331> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000332> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000333> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000334> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000335> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000336> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000337> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000338> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000339> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -350,7 +358,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 <https://w3id.org/lehrplan/ontology/LP_00000002> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
                                                  owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000004> ,
-                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                                  rdfs:label "MINT-Fach"@de .
 
 
@@ -365,14 +374,16 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                                  <https://w3id.org/lehrplan/ontology/LP_00000039> ;
                                                  owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000004> ,
-                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                                  rdfs:label "Naturwissenschaftsfach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000004
 <https://w3id.org/lehrplan/ontology/LP_00000004> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                                 owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                 owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                                  rdfs:label "Fremdsprachfach"@de .
 
 
@@ -4766,6 +4777,62 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                  rdfs:label "Operator"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000332
+<https://w3id.org/lehrplan/ontology/LP_00000332> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Lerninhalt"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000333
+<https://w3id.org/lehrplan/ontology/LP_00000333> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
+                                                 rdfs:label "Grundwissen"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000334
+<https://w3id.org/lehrplan/ontology/LP_00000334> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
+                                                 rdfs:label "Wissensbestand"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000335
+<https://w3id.org/lehrplan/ontology/LP_00000335> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
+                                                 rdfs:label "Unterrichtsinhalt"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000336
+<https://w3id.org/lehrplan/ontology/LP_00000336> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
+                                                 rdfs:label "Fachbezogene Kompetenz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000337
+<https://w3id.org/lehrplan/ontology/LP_00000337> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
+                                                 rdfs:label "Lernbereichsbezogene Kompetenz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000338
+<https://w3id.org/lehrplan/ontology/LP_00000338> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Anforderungs Niveau"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Progressionsstufe" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000339
+<https://w3id.org/lehrplan/ontology/LP_00000339> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <http://w3id.org/kim/schulfaecher/s1010>
+                                                                                   <http://w3id.org/kim/schulfaecher/s1011>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000340>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                 rdfs:comment "RP" ;
+                                                 rdfs:label "Gemeinschaftskunde"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 <https://w3id.org/lehrplan/ontology/LP_00002003> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000042> ,
@@ -5872,7 +5939,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                          rdfs:label "Geografie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Erdkunde"@de ,
                                                                                         "Geographie"@de ;
@@ -5887,7 +5955,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   owl:Thing ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
-                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ;
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                          rdfs:label "Geschichte"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20002> ;
@@ -7049,6 +7118,15 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000200> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ;
                                                  rdfs:label "Realschulabschluss (TH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000340
+<https://w3id.org/lehrplan/ontology/LP_00000340> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000339> ;
+                                                 rdfs:label "Sozialkunde"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

@@ -4359,9 +4359,23 @@
                                                :LP_00000340
                                              )
                                  ] ;
-             rdfs:subClassOf :LP_00000001 ;
+             rdfs:subClassOf :LP_00000005 ;
              rdfs:comment "RP" ;
              rdfs:label "Gemeinschaftskunde"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000341
+:LP_00000341 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000058 ;
+                                                          owl:someValuesFrom :LP_00000076
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000020 ;
+             rdfs:label "Gymnasiale Oberstufe"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

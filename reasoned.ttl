@@ -319,6 +319,13 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000351> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000352> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000353> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000354> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000355> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000356> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000357> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000358> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000359> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000360> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -4982,12 +4989,12 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000342
 <https://w3id.org/lehrplan/ontology/LP_00000342> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "RP Element"@de .
+                                                 rdfs:label "Element (RP)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000345
 <https://w3id.org/lehrplan/ontology/LP_00000345> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000328> ;
                                                  rdfs:label "Teilthema (RP)"@de .
 
 
@@ -5006,7 +5013,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000349
 <https://w3id.org/lehrplan/ontology/LP_00000349> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "Allgemeine Elemente"@de .
+                                                 rdfs:label "Allgemeines Element"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000350
@@ -5023,7 +5030,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000352
 <https://w3id.org/lehrplan/ontology/LP_00000352> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000345> ;
                                                  rdfs:label "Unterteilthema (RP)"@de .
 
 
@@ -5031,6 +5038,48 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 <https://w3id.org/lehrplan/ontology/LP_00000353> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
                                                  rdfs:label "Lehrplan Fragment (RP)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000354
+<https://w3id.org/lehrplan/ontology/LP_00000354> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Element (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000355
+<https://w3id.org/lehrplan/ontology/LP_00000355> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:label "Competence Area (BE)"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000356
+<https://w3id.org/lehrplan/ontology/LP_00000356> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:label "Competence (BE)"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000357
+<https://w3id.org/lehrplan/ontology/LP_00000357> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:label "Topic Area (BE)"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000358
+<https://w3id.org/lehrplan/ontology/LP_00000358> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:label "Topic (BE)"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000359
+<https://w3id.org/lehrplan/ontology/LP_00000359> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:label "Learning Content (BE)"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000360
+<https://w3id.org/lehrplan/ontology/LP_00000360> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:label "Niveaustufe (BE)"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

@@ -4122,13 +4122,29 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000291
 <https://w3id.org/lehrplan/ontology/LP_00000291> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000111> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000167> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000111>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000141> ;
+                                                                                          owl:hasValue <https://w3id.org/kim/schularten/s04>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Realschule plus"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000292
 <https://w3id.org/lehrplan/ontology/LP_00000292> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000111> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000240> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000111>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000141> ;
+                                                                                          owl:hasValue <https://w3id.org/kim/schularten/s05>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Integrierte Gesamtschule"@de .
 
 
@@ -6879,7 +6895,15 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002012
 <https://w3id.org/lehrplan/ontology/LP_00002012> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000111> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000240> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000111>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000141> ;
+                                                                                          owl:hasValue <https://w3id.org/kim/schularten/s05>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Kooperative Gesamtschule"@de .
 
 

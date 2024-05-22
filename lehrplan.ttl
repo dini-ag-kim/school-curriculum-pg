@@ -334,10 +334,6 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000078
 :LP_00000078 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002035
-                                             )
-                                 ] ;
              rdfs:subClassOf :LP_00000019 ;
              rdfs:label "Mittlerer Abschluss"@de .
 
@@ -1172,6 +1168,10 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000170
 :LP_00000170 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_00000361
+                                             )
+                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000029 ;
@@ -1397,6 +1397,10 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000184
 :LP_00000184 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_00000362
+                                             )
+                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000079
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000029 ;
@@ -1870,6 +1874,10 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000208
 :LP_00000208 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_00000363
+                                             )
+                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000078
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000029 ;
@@ -1896,6 +1904,10 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000210
 :LP_00000210 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_00002035
+                                             )
+                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000078
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000029 ;
@@ -4468,6 +4480,233 @@
              rdfs:label "Niveaustufe (BE)"@en .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000364
+:LP_00000364 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000001
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000002
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000003
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000004
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Grundschule (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000365
+:LP_00000365 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000111 ;
+             rdfs:label "Orientierungsstufe"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000366
+:LP_00000366 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000365
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000005
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000006
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Schulartunabhängige Orientierungsstufe (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000367
+:LP_00000367 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000111 ;
+             rdfs:label "Regionale Schule"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000368
+:LP_00000368 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000367
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000007
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000008
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000009
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000010
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Regionale Schule Sek I (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000369
+:LP_00000369 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000007
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000008
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000009
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000010
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000362
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000363
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kooperative Gesamtschule Sek I (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000370
+:LP_00000370 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000007
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000008
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000009
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000010
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000362
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000363
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Integrierte Gesamtschule Sek I (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000371
+:LP_00000371 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000007
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000008
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000009
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000010
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000362
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000363
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Gymnasium Sek I (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000372
+:LP_00000372 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000011
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:hasValue :LP_20000012
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000052
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000361
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Gymnasium Sek II (MV)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 :LP_00002003 rdf:type owl:Class ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
@@ -6111,6 +6350,24 @@
 :LP_00000340 rdf:type owl:NamedIndividual ,
                       :LP_00000005 ;
              rdfs:label "Sozialkunde"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000361
+:LP_00000361 rdf:type owl:NamedIndividual ,
+                      :LP_00000170 ;
+             rdfs:label "Allgemeinbildender Schulabschluss (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000362
+:LP_00000362 rdf:type owl:NamedIndividual ,
+                      :LP_00000184 ;
+             rdfs:label "Berufsreife (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000363
+:LP_00000363 rdf:type owl:NamedIndividual ,
+                      :LP_00000208 ;
+             rdfs:label "Mittlere Reife (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

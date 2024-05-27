@@ -13,6 +13,26 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
 
@@ -31,6 +51,10 @@
 
 ###  http://www.w3.org/2004/02/skos/core#exactMatch
 <http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#narrowMatch
@@ -105,6 +129,80 @@
                                                  rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000438> ;
                                                  rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000111> ;
                                                  rdfs:label "für_schulart"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000452
+<https://w3id.org/lehrplan/ontology/LP_00000452> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:label "has parent competence area"@en ,
+                                                            "has übergeordnetes Kompetenzfeld (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000453
+<https://w3id.org/lehrplan/ontology/LP_00000453> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:label "has standard"@en ,
+                                                            "hat Standard (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000454
+<https://w3id.org/lehrplan/ontology/LP_00000454> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "has competence area"@en ,
+                                                            "hat Kompetenzfeld (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000455
+<https://w3id.org/lehrplan/ontology/LP_00000455> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000451> ;
+                                                 rdfs:label "has exercise"@en ,
+                                                            "hat Übung (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000456
+<https://w3id.org/lehrplan/ontology/LP_00000456> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000445> ;
+                                                 rdfs:label "has content"@en ,
+                                                            "hat Inhalt (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000457
+<https://w3id.org/lehrplan/ontology/LP_00000457> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000447> ;
+                                                 rdfs:label "has competence"@en ,
+                                                            "hat Kompetenz (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000458
+<https://w3id.org/lehrplan/ontology/LP_00000458> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000446> ;
+                                                 rdfs:label "has material"@en ,
+                                                            "hat Material (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000460
+<https://w3id.org/lehrplan/ontology/LP_00000460> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "hat_position"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000462
+<https://w3id.org/lehrplan/ontology/LP_00000462> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "BE properties"@de .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/lehrplan/ontology/LP_00000463
+<https://w3id.org/lehrplan/ontology/LP_00000463> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                 rdfs:label "uri"@de .
 
 
 #################################################################
@@ -326,13 +424,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000351> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000352> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000353> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000354> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000355> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000356> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000357> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000358> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000359> ,
-                             <https://w3id.org/lehrplan/ontology/LP_00000360> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000364> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000365> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000366> ,
@@ -382,6 +473,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000438> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000442> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000444> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000445> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000446> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000447> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000448> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000449> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000450> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000451> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000459> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -4948,30 +5051,25 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000332
 <https://w3id.org/lehrplan/ontology/LP_00000332> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000358> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000354> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
                                                  rdfs:label "MEM-Lerninhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000333
 <https://w3id.org/lehrplan/ontology/LP_00000333> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000358> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
                                                  rdfs:label "Grundwissen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000334
 <https://w3id.org/lehrplan/ontology/LP_00000334> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000358> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
                                                  rdfs:label "Wissensbestand"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000335
 <https://w3id.org/lehrplan/ontology/LP_00000335> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000358> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
                                                  rdfs:label "Unterrichtsinhalt"@de .
 
 
@@ -5076,50 +5174,6 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 <https://w3id.org/lehrplan/ontology/LP_00000353> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
                                                  rdfs:label "Lehrplan Fragment (RP)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000354
-<https://w3id.org/lehrplan/ontology/LP_00000354> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "Element (BE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000355
-<https://w3id.org/lehrplan/ontology/LP_00000355> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Competence Area (BE)"@en .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000356
-<https://w3id.org/lehrplan/ontology/LP_00000356> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Competence (BE)"@en .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000357
-<https://w3id.org/lehrplan/ontology/LP_00000357> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Topic Area (BE)"@en .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000358
-<https://w3id.org/lehrplan/ontology/LP_00000358> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Inhalt (BE)"@de ,
-                                                            "Topic (BE)"@en .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000359
-<https://w3id.org/lehrplan/ontology/LP_00000359> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Learning Content (BE)"@en .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000360
-<https://w3id.org/lehrplan/ontology/LP_00000360> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Niveaustufe (BE)"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000364
@@ -6672,6 +6726,111 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 <https://w3id.org/lehrplan/ontology/LP_00000438> rdf:type owl:Class ;
                                                  rdfs:subClassOf owl:Thing ;
                                                  rdfs:label "Lehrplan"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000441
+<https://w3id.org/lehrplan/ontology/LP_00000441> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Element (BE/BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000442
+<https://w3id.org/lehrplan/ontology/LP_00000442> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Kompetenz (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000443
+<https://w3id.org/lehrplan/ontology/LP_00000443> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Niveau (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000444
+<https://w3id.org/lehrplan/ontology/LP_00000444> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Lehrplan (BE)"@de ,
+                                                            "curriculum"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsplan"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
+                                                                                                  "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000445
+<https://w3id.org/lehrplan/ontology/LP_00000445> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Lerninhalt (BE)"@de ,
+                                                            "learning content"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
+                                                                                                  "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000446
+<https://w3id.org/lehrplan/ontology/LP_00000446> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Lernmaterial (BE)"@de ,
+                                                            "learning material"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen."@de ,
+                                                                                                  "Some concrete means (e.g in form of documents) to acquire particular competences."@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000447
+<https://w3id.org/lehrplan/ontology/LP_00000447> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:comment """Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. 
+Instances of this class provide text that describes a particular competence (e.g. \"reading\")."""@en ,
+                                                              "operationalisierbar und meßbar"@de ;
+                                                 rdfs:label "Standard (BE)"@de ,
+                                                            "competence"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000448
+<https://w3id.org/lehrplan/ontology/LP_00000448> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Thema (BE)"@de ,
+                                                            "topic"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A concrete topic of school teaching that can be taught through particular learning content."@en ,
+                                                                                                  "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000449
+<https://w3id.org/lehrplan/ontology/LP_00000449> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Themenfeld (BE)"@de ,
+                                                            "topic area"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A topic area includes one or more topics that are subject of teaching."@en ,
+                                                                                                  "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000450
+<https://w3id.org/lehrplan/ontology/LP_00000450> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Zusatzmaterial (BE)"@de ,
+                                                            "additional material"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Documents which refer to additional resources to learn with."@en ,
+                                                                                                  "Dokumente, die auf zusätzliche Ressourcen zum Lernen verweisen."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000451
+<https://w3id.org/lehrplan/ontology/LP_00000451> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "exercise"@en ,
+                                                            "Übung (BE)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A concrete action that helps to learn a skill."@en ,
+                                                                                                  "Eine konkrete Maßnahme, die dazu beiträgt, eine Kompetenz zu erlernen."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000459
+<https://w3id.org/lehrplan/ontology/LP_00000459> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:label "Kompetenzbereich (BE)"@de ,
+                                                            "competence area"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A competence area is a competence item, which groups specific competences together."@en ,
+                                                                                                  "Ein Kompetenzbereich ist zu verstehen als ein Kompetenzelement, das bestimmte Kompetenzen zu einer Gruppe zusammenfasst."@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "dealing with expertise"@en ,
+                                                                                               "problem solving"@en ,
+                                                                                               "reading competencies"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

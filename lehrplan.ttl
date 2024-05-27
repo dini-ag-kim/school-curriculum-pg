@@ -3113,6 +3113,7 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
 :LP_00000263 rdf:type owl:Class ;
+             owl:equivalentClass :LP_00000428 ;
              rdfs:subClassOf :LP_00000349 ;
              rdfs:label "Kompetenz"@de .
 
@@ -4370,6 +4371,7 @@
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000332
 :LP_00000332 rdf:type owl:Class ;
+             owl:equivalentClass :LP_00000358 ;
              rdfs:subClassOf :LP_00000349 ;
              rdfs:label "Lerninhalt"@de .
 
@@ -4519,7 +4521,8 @@
 ###  https://w3id.org/lehrplan/ontology/LP_00000358
 :LP_00000358 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000354 ;
-             rdfs:label "Topic (BE)"@en .
+             rdfs:label "Inhalt (BE)"@de ,
+                        "Topic (BE)"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000359
@@ -5935,6 +5938,47 @@
                                rdf:type owl:Class
                              ] ;
              rdfs:label "Integrierte Gesamtschule Sek II (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000426
+:LP_00000426 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000261 ;
+             rdfs:label "Element (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000427
+:LP_00000427 rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_20000001
+                                               :LP_20000002
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000426 ;
+             rdfs:label "Ende Jahrgangsstufe 2 (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000428
+:LP_00000428 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000426 ;
+             rdfs:label "Inhalt (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000431
+:LP_00000431 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000342 ;
+             rdfs:label "Kompetenz Bereich (RP)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000432
+:LP_00000432 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000342 ;
+             rdfs:label "Kompetenz (RP)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000433
+:LP_00000433 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000342 ;
+             rdfs:label "Lehrplan (RP)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

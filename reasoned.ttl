@@ -372,6 +372,8 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000431> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000432> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000433> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -6646,6 +6648,18 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                  rdfs:label "Lehrplan (RP)"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000434
+<https://w3id.org/lehrplan/ontology/LP_00000434> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Element (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000435
+<https://w3id.org/lehrplan/ontology/LP_00000435> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:label "Fach Niveau (BY)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 <https://w3id.org/lehrplan/ontology/LP_00002003> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000042> ,
@@ -9040,9 +9054,15 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000266
 <https://w3id.org/lehrplan/ontology/LP_00000266> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000435> ;
+                                                 owl:sameAs <https://w3id.org/lehrplan/ontology/LP_00000436> ;
                                                  rdfs:label "Leistungsfach"@de .
 
+
+###  https://w3id.org/lehrplan/ontology/LP_00000436
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000267
 <https://w3id.org/lehrplan/ontology/LP_00000267> rdf:type owl:NamedIndividual ,
@@ -9369,6 +9389,16 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000209> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000053> ;
                                                  rdfs:label "Erweiterter Realschulabschluss (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000436
+<https://w3id.org/lehrplan/ontology/LP_00000436> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000435> ;
+                                                 rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

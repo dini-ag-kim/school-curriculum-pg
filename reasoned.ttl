@@ -100,6 +100,13 @@
                                                  rdfs:label "hat_kim_schulart"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000440
+<https://w3id.org/lehrplan/ontology/LP_00000440> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000438> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000111> ;
+                                                 rdfs:label "für_schulart"@de .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -374,6 +381,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000433> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000438> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -3603,7 +3611,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
 <https://w3id.org/lehrplan/ontology/LP_00000262> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
-                                                 rdfs:label "Kompetenzbereich"@de .
+                                                 rdfs:label "MEM-Kompetenzbereich"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
@@ -4943,7 +4951,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                  owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000358> ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
                                                                  <https://w3id.org/lehrplan/ontology/LP_00000354> ;
-                                                 rdfs:label "Lerninhalt"@de .
+                                                 rdfs:label "MEM-Lerninhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000333
@@ -6658,6 +6666,12 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 <https://w3id.org/lehrplan/ontology/LP_00000435> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ;
                                                  rdfs:label "Fach Niveau (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000438
+<https://w3id.org/lehrplan/ontology/LP_00000438> rdf:type owl:Class ;
+                                                 rdfs:subClassOf owl:Thing ;
+                                                 rdfs:label "Lehrplan"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

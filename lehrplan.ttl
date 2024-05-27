@@ -58,6 +58,13 @@
              rdfs:label "hat_kim_schulart"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000440
+:LP_00000440 rdf:type owl:ObjectProperty ;
+             rdfs:domain :LP_00000438 ;
+             rdfs:range :LP_00000111 ;
+             rdfs:label "für_schulart"@de .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -3108,7 +3115,7 @@
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
 :LP_00000262 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000349 ;
-             rdfs:label "Kompetenzbereich"@de .
+             rdfs:label "MEM-Kompetenzbereich"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
@@ -4373,7 +4380,7 @@
 :LP_00000332 rdf:type owl:Class ;
              owl:equivalentClass :LP_00000358 ;
              rdfs:subClassOf :LP_00000349 ;
-             rdfs:label "Lerninhalt"@de .
+             rdfs:label "MEM-Lerninhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000333
@@ -5991,6 +5998,11 @@
 :LP_00000435 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000434 ;
              rdfs:label "Fach Niveau (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000438
+:LP_00000438 rdf:type owl:Class ;
+             rdfs:label "Lehrplan"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
@@ -7755,6 +7767,15 @@
 :LP_00000436 rdf:type owl:NamedIndividual ,
                       :LP_00000435 ;
              rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000439
+:LP_00000439 rdf:type owl:NamedIndividual ;
+             :LP_00000026 :LP_20000007 ,
+                          :LP_20000008 ;
+             :LP_00000029 :LP_30000046 ;
+             :LP_00000440 <https://w3id.org/kim/schularten/s08> ;
+             rdfs:label "Deutsch Klasse 7-8 GYM"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

@@ -5981,6 +5981,18 @@
              rdfs:label "Lehrplan (RP)"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000434
+:LP_00000434 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000261 ;
+             rdfs:label "Element (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000435
+:LP_00000435 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000434 ;
+             rdfs:label "Fach Niveau (BY)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 :LP_00002003 rdf:type owl:Class ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
@@ -7534,8 +7546,11 @@
 ###  https://w3id.org/lehrplan/ontology/LP_00000266
 :LP_00000266 rdf:type owl:NamedIndividual ,
                       :LP_00000265 ;
+             owl:sameAs :LP_00000436 ;
              rdfs:label "Leistungsfach"@de .
 
+
+###  https://w3id.org/lehrplan/ontology/LP_00000436
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000267
 :LP_00000267 rdf:type owl:NamedIndividual ,
@@ -7734,6 +7749,12 @@
 :LP_00000406 rdf:type owl:NamedIndividual ,
                       :LP_00000209 ;
              rdfs:label "Erweiterter Realschulabschluss (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000436
+:LP_00000436 rdf:type owl:NamedIndividual ,
+                      :LP_00000435 ;
+             rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

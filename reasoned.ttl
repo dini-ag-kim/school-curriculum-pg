@@ -3719,9 +3719,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
 <https://w3id.org/lehrplan/ontology/LP_00000263> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000428> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000426> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
                                                  rdfs:label "Kompetenz"@de .
 
 
@@ -5075,15 +5073,13 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000336
 <https://w3id.org/lehrplan/ontology/LP_00000336> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000428> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
                                                  rdfs:label "Fachbezogene Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000337
 <https://w3id.org/lehrplan/ontology/LP_00000337> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000428> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
                                                  rdfs:label "Lernbereichsbezogene Kompetenz"@de .
 
 
@@ -6687,8 +6683,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000428
 <https://w3id.org/lehrplan/ontology/LP_00000428> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000426> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000426> ;
                                                  rdfs:label "Inhalt (HH)"@de .
 
 
@@ -6737,13 +6732,41 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000442
 <https://w3id.org/lehrplan/ontology/LP_00000442> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
-                                                 rdfs:label "Kompetenz (BE)"@de .
+                                                 rdfs:comment "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en ;
+                                                 rdfs:label "Kompetenz (BE)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> """Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. 
+Instances of this class provide text that describes a particular competence (e.g. \"reading\")."""@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000443
 <https://w3id.org/lehrplan/ontology/LP_00000443> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
-                                                 rdfs:label "Niveau (BE)"@de .
+                                                 rdfs:comment "Berlin/Brandenburg grouping of educational levels in stages A-G."@en ,
+                                                              "Unterteilung der Jahrgangsstufen in Niveaustufen A-G in Berlin/Brandenburg Lehrplänen."@de ;
+                                                 rdfs:label "Niveau (BE)"@de ,
+                                                            "bb educational grade"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> """Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an
+weiterführenden Schulen mit den Jahrgangsstufen 5 und 6 gilt:
+
+* Schulanfangsphase = Niveaustufen A, B, in Teilen C
+* Jahrgangsstufen 3 – 4 = Niveaustufe C, in Teilen D
+* Jahrgangsstufe 5 = Niveaustufen C – D
+* Jahrgangsstufe 6 = Niveaustufe D, in Teilen E
+
+Schülerinnen und Schüler mit dem sonderpädagogischen Förderbedarf Lernen
+werden auf folgenden Niveaustufen unterrichtet:
+* Jahrgangsstufe 3 = Niveaustufe B, in Teilen C
+* Jahrgangsstufen 4 – 6 = Niveaustufe C
+* Jahrgangsstufen 7 – 8 = Niveaustufe D
+* Jahrgangsstufen 9 – 10 = Niveaustufen D – E
+
+Für die Integrierte Sekundarschule gilt:
+grundlegendes Niveau:
+* Jahrgangsstufen 7 – 8 = Niveaustufen D – E, in Teilen F
+* Jahrgangsstufen 9 – 10 = Niveaustufe F, in Teilen G
+* erweitertes Niveau:
+* Jahrgangsstufen 7 – 8 = Niveaustufe E, in Teilen F
+* Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000444
@@ -9572,6 +9595,69 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ;
                                                  rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000464
+<https://w3id.org/lehrplan/ontology/LP_00000464> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe A (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000465
+<https://w3id.org/lehrplan/ontology/LP_00000465> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe B (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000466
+<https://w3id.org/lehrplan/ontology/LP_00000466> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe C (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000467
+<https://w3id.org/lehrplan/ontology/LP_00000467> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe D (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000468
+<https://w3id.org/lehrplan/ontology/LP_00000468> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe E (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000469
+<https://w3id.org/lehrplan/ontology/LP_00000469> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe F (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000470
+<https://w3id.org/lehrplan/ontology/LP_00000470> rdf:type owl:NamedIndividual ,
+                                                          owl:Thing ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 rdfs:label "Niveaustufe G (BB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

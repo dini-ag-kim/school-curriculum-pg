@@ -186,8 +186,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000460
-<https://w3id.org/lehrplan/ontology/LP_00000460> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "hat_position"@de .
+<https://w3id.org/lehrplan/ontology/LP_00000460> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000462
@@ -198,6 +197,12 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://w3id.org/lehrplan/ontology/LP_00000460
+<https://w3id.org/lehrplan/ontology/LP_00000460> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                 rdfs:range xsd:int .
+
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000463
 <https://w3id.org/lehrplan/ontology/LP_00000463> rdf:type owl:DatatypeProperty ;
@@ -9999,6 +10004,13 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00000053> ;
                                                  rdfs:label "Brandenburg"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "BB" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/lehrplan/ontology/LP_00000460> rdfs:label "hat_position"@de .
 
 
 #################################################################

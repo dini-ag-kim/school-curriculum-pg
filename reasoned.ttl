@@ -8198,7 +8198,14 @@ Instances of this class provide text that describes a particular competence (e.g
 <https://w3id.org/lehrplan/ontology/LP_00002047> rdf:type owl:Class ;
                                                  owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002104> ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000434>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "'Teillernbereich' (BY)"@de .
 
 

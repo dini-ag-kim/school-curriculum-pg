@@ -3226,7 +3226,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
 :LP_00000262 rdf:type owl:Class ;
-             owl:equivalentClass :LP_00002046 ;
              rdfs:subClassOf :LP_00000349 ;
              rdfs:label "MEM-Kompetenzbereich"@de .
 
@@ -6061,7 +6060,14 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000434
 :LP_00000434 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000261 ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000051
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:label "Element (BY)"@de .
 
 
@@ -6200,8 +6206,7 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000459
 :LP_00000459 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000441 ;
-             rdfs:label "Kompetenzbereich (BE)"@de ,
-                        "competence area"@en ;
+             rdfs:label "Kompetenzbereich (BE)"@de ;
              <http://www.w3.org/2004/02/skos/core#definition> "A competence area is a competence item, which groups specific competences together."@en ,
                                                               "Ein Kompetenzbereich ist zu verstehen als ein Kompetenzelement, das bestimmte Kompetenzen zu einer Gruppe zusammenfasst."@de ;
              <http://www.w3.org/2004/02/skos/core#example> "dealing with expertise"@en ,
@@ -7388,14 +7393,20 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002046
 :LP_00002046 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000434 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000262
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000029 ;
+                                                      owl:hasValue :LP_30000051
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lernbereich (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002047
 :LP_00002047 rdf:type owl:Class ;
-             owl:equivalentClass :LP_00002104 ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002104
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000029 ;
                                                       owl:hasValue :LP_30000051

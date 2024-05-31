@@ -6168,6 +6168,14 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000442
 :LP_00000442 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000496
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000441 ;
              rdfs:comment "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en ;
              rdfs:label "Kompetenz (BE)"@de ;
@@ -6208,7 +6216,26 @@ grundlegendes Niveau:
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000444
 :LP_00000444 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000441 ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000438
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000008 ;
+                                                          owl:someValuesFrom :LP_00000441
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000008 ;
+                                                          owl:allValuesFrom :LP_00000441
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000048
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000057
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:label "Lehrplan (BE)"@de ,
                         "curriculum"@en ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsplan"@de ;
@@ -6218,6 +6245,14 @@ grundlegendes Niveau:
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000445
 :LP_00000445 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000480
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000441 ;
              rdfs:label "Lerninhalt (BE)"@de ,
                         "learning content"@en ;
@@ -6227,7 +6262,14 @@ grundlegendes Niveau:
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000446
 :LP_00000446 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000441 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000441
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000481
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lernmaterial (BE)"@de ,
                         "learning material"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen."@de ,
@@ -6236,6 +6278,14 @@ grundlegendes Niveau:
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000447
 :LP_00000447 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000479
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000441 ;
              rdfs:comment """Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. 
 Instances of this class provide text that describes a particular competence (e.g. \"reading\")."""@en ,
@@ -6247,6 +6297,14 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000448
 :LP_00000448 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000498
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000441 ;
              rdfs:label "Thema (BE)"@de ,
                         "topic"@en ;
@@ -6256,6 +6314,14 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000449
 :LP_00000449 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000497
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000441 ;
              rdfs:label "Themenfeld (BE)"@de ,
                         "topic area"@en ;
@@ -6265,7 +6331,14 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000450
 :LP_00000450 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000441 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000441
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000481
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Zusatzmaterial (BE)"@de ,
                         "additional material"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "Documents which refer to additional resources to learn with."@en ,
@@ -6283,6 +6356,14 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000459
 :LP_00000459 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000494
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000441 ;
              rdfs:label "Kompetenzbereich (BE)"@de ;
              <http://www.w3.org/2004/02/skos/core#definition> "A competence area is a competence item, which groups specific competences together."@en ,
@@ -6731,10 +6812,6 @@ Instances of this class provide text that describes a particular competence (e.g
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
-                                 ] ,
-                                 [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00000267
-                                             )
                                  ] ;
              rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Grundkurs"@de .
@@ -7958,20 +8035,16 @@ Instances of this class provide text that describes a particular competence (e.g
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "'Teillernbereich' (BY)"@de .
+             rdfs:label "Teillernbereich (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002048
 :LP_00002048 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kompetenzerwartungen und Inhalte (BY)"@de .
+             rdfs:subClassOf :LP_00000434 ;
+             rdfs:label "Kompetenzerwartungen und Inhalte (BY)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> """TODO: Funktion zuordnen
+
+Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibung oder eine strukturelle \"Angabe\" ist. Kapitel, Überschriften, etc. sind typischerweise strukturelle Angaben."""@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002049

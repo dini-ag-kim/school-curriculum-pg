@@ -553,6 +553,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000529> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000530> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000531> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000536> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -3855,6 +3856,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element, dass eine Kompetenz beschreibt."@de ;
                                                  rdfs:label "MEM-Kompetenz"@de .
 
 
@@ -3869,6 +3871,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Lehrplan Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de ;
                                                  rdfs:label "MEM-Fachniveau"@de .
 
 
@@ -7257,7 +7260,7 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000504
 <https://w3id.org/lehrplan/ontology/LP_00000504> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000499> ;
-                                                 rdfs:label "Lernbereichsbezug"@de .
+                                                 rdfs:label "Lernbereichsbezugsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000505
@@ -7630,6 +7633,12 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000265> ;
                                                  rdfs:label "MEM-Leistungskurs"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000536
+<https://w3id.org/lehrplan/ontology/LP_00000536> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Element (Bista)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

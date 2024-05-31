@@ -6132,7 +6132,14 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000433
 :LP_00000433 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000342 ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000438
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000046
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:label "Lehrplan (RP)"@de .
 
 
@@ -6164,6 +6171,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000438
 :LP_00000438 rdf:type owl:Class ;
+             rdfs:comment "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
+                          "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de ;
              rdfs:label "Lehrplan"@de .
 
 
@@ -6255,10 +6264,7 @@ grundlegendes Niveau:
                                    rdf:type owl:Class
                                  ] ;
              rdfs:label "Lehrplan (BE)"@de ,
-                        "curriculum"@en ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsplan"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
-                                                              "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de .
+                        "curriculum"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000445
@@ -8746,10 +8752,6 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4
 <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
-
-
-###  https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a
-<https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> rdf:type <http://www.w3.org/2004/02/skos/core#Concept> .
 
 
 ###  https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0

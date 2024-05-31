@@ -198,6 +198,21 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                  rdfs:label "hat Level (BE)"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000483
+<https://w3id.org/lehrplan/ontology/LP_00000483> rdf:type owl:ObjectProperty ;
+                                                 owl:equivalentProperty [ owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00000495>
+                                                                        ] ;
+                                                 owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00000495> ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000478> ;
+                                                 rdfs:label "hat_funktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000495
+<https://w3id.org/lehrplan/ontology/LP_00000495> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000478> ;
+                                                 rdfs:label "ist_funktion_von"@de .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -495,6 +510,22 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000450> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000451> ,
                              <https://w3id.org/lehrplan/ontology/LP_00000459> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000476> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000477> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000478> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000479> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000480> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000481> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000482> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000493> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000494> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000496> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000497> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000498> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000499> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000500> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000501> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000502> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002003> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002004> ,
                              <https://w3id.org/lehrplan/ontology/LP_00002005> ,
@@ -3774,30 +3805,19 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
 <https://w3id.org/lehrplan/ontology/LP_00000262> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002046> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
                                                  rdfs:label "MEM-Kompetenzbereich"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
 <https://w3id.org/lehrplan/ontology/LP_00000263> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002048> ,
-                                                                     <https://w3id.org/lehrplan/ontology/LP_00002049> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
                                                  rdfs:label "MEM-Kompetenz"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002048
-<https://w3id.org/lehrplan/ontology/LP_00002048> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002049> .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002049
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 <https://w3id.org/lehrplan/ontology/LP_00000265> rdf:type owl:Class ;
-                                                 rdfs:subClassOf owl:Thing ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:label "Fach Niveau"@de .
 
 
@@ -5121,52 +5141,43 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000332
 <https://w3id.org/lehrplan/ontology/LP_00000332> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002050> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
                                                  rdfs:label "MEM-Lerninhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000333
 <https://w3id.org/lehrplan/ontology/LP_00000333> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002050> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
                                                  rdfs:label "Grundwissen"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000334
 <https://w3id.org/lehrplan/ontology/LP_00000334> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002050> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
                                                  rdfs:label "Wissensbestand"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000335
 <https://w3id.org/lehrplan/ontology/LP_00000335> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002050> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ;
                                                  rdfs:label "Unterrichtsinhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000336
 <https://w3id.org/lehrplan/ontology/LP_00000336> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002048> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002049> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
                                                  rdfs:label "Fachbezogene Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000337
 <https://w3id.org/lehrplan/ontology/LP_00000337> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002048> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00002049> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
                                                  rdfs:label "Lernbereichsbezogene Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000338
 <https://w3id.org/lehrplan/ontology/LP_00000338> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:label "Anforderungs Niveau"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "Progressionsstufe" .
 
@@ -5201,7 +5212,15 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000342
 <https://w3id.org/lehrplan/ontology/LP_00000342> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000046>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (RP)"@de .
 
 
@@ -5226,7 +5245,7 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 ###  https://w3id.org/lehrplan/ontology/LP_00000349
 <https://w3id.org/lehrplan/ontology/LP_00000349> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "Element (allgemein)"@de .
+                                                 rdfs:label "Element (MEM)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000350
@@ -6746,7 +6765,15 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000426
 <https://w3id.org/lehrplan/ontology/LP_00000426> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000045>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (HH)"@de .
 
 
@@ -6788,14 +6815,35 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000434
 <https://w3id.org/lehrplan/ontology/LP_00000434> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000435
 <https://w3id.org/lehrplan/ontology/LP_00000435> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ;
-                                                 rdfs:label "'Fach Niveau' (BY)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002067>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002068>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000438
@@ -6806,7 +6854,19 @@ owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000441
 <https://w3id.org/lehrplan/ontology/LP_00000441> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000048>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000057>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (BE/BB)"@de .
 
 
@@ -6928,13 +6988,121 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000459
 <https://w3id.org/lehrplan/ontology/LP_00000459> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
-                                                 rdfs:label "Kompetenzbereich (BE)"@de ,
-                                                            "competence area"@en ;
+                                                 rdfs:label "Kompetenzbereich (BE)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "A competence area is a competence item, which groups specific competences together."@en ,
                                                                                                   "Ein Kompetenzbereich ist zu verstehen als ein Kompetenzelement, das bestimmte Kompetenzen zu einer Gruppe zusammenfasst."@de ;
                                                  <http://www.w3.org/2004/02/skos/core#example> "dealing with expertise"@en ,
                                                                                                "problem solving"@en ,
                                                                                                "reading competencies"@en .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000476
+<https://w3id.org/lehrplan/ontology/LP_00000476> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Fachlehrplan"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000477
+<https://w3id.org/lehrplan/ontology/LP_00000477> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:label "Lehrplan Element Nach Bundesland"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000478
+<https://w3id.org/lehrplan/ontology/LP_00000478> rdf:type owl:Class ;
+                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000495> ;
+                                                                   owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                 ] ;
+                                                 rdfs:label "Lehrplan Element Funktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000479
+<https://w3id.org/lehrplan/ontology/LP_00000479> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000493> ;
+                                                 rdfs:comment "Ein Lehrplanelement, das diese Funktion inne hat, beschreibt Kompetenzen, die SuS haben können oder eine Ausführung in der die Kompetenz angewandt wird."@de ;
+                                                 rdfs:label "Kompetenzbeschreibungsfunktion"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement das die Funktion inne hat das beschreibt z.B. \"Die SuS sollen Kompexen Zahlen addieren können\" oder \"über Konflikte sprechen\". Üblicherweise beginnt die Beschreibung mit \"Die SuS sollen .... \". Die Beschreibungen enthalten üblicherweise Operatoren."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000480
+<https://w3id.org/lehrplan/ontology/LP_00000480> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000493> ;
+                                                 rdfs:comment "Ein Lehrplanelement, das diese Funktion inne hat, beschreibt Inhalte, die im Unterricht vermittelt werden. Es beschreibt konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen."@de ;
+                                                 rdfs:label "Inhaltsbeschreibungsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000481
+<https://w3id.org/lehrplan/ontology/LP_00000481> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000493> ;
+                                                 rdfs:comment "Ein Lehrplanelement, das diese Funktion inne hat, beschreibt Materialien, die im Unterricht verwendet werden können."@de ;
+                                                 rdfs:label "Materialbeschreibungsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000482
+<https://w3id.org/lehrplan/ontology/LP_00000482> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000478> ;
+                                                 rdfs:label "Strukturierungsfunktion"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Lehrplanelemente, die diese Funktion inne haben, strukturieren die Lehrpläne."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000493
+<https://w3id.org/lehrplan/ontology/LP_00000493> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000478> ;
+                                                 rdfs:label "Beschreibungsfunktion"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Lehrplanelemente, die diese Funktion inne haben, beschreiben Teile des Lehrplans."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000494
+<https://w3id.org/lehrplan/ontology/LP_00000494> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000482> ;
+                                                 rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de ;
+                                                 rdfs:label "Kompetenzbereichsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000496
+<https://w3id.org/lehrplan/ontology/LP_00000496> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000482> ;
+                                                 rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de ;
+                                                 rdfs:label "Teilkompetenzbereichsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000497
+<https://w3id.org/lehrplan/ontology/LP_00000497> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000482> ;
+                                                 rdfs:label "Themenfeldfunktion"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000498
+<https://w3id.org/lehrplan/ontology/LP_00000498> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000482> ;
+                                                 rdfs:label "Themafunktion"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000499
+<https://w3id.org/lehrplan/ontology/LP_00000499> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000478> ;
+                                                 rdfs:label "Bezugsfunktionen"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000500
+<https://w3id.org/lehrplan/ontology/LP_00000500> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000499> ;
+                                                 rdfs:label "Prozessbezugsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000501
+<https://w3id.org/lehrplan/ontology/LP_00000501> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000499> ;
+                                                 rdfs:label "Inhaltsbezugsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000502
+<https://w3id.org/lehrplan/ontology/LP_00000502> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000499> ;
+                                                 rdfs:label "Fachbezugsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
@@ -8171,7 +8339,15 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002043
 <https://w3id.org/lehrplan/ontology/LP_00002043> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000476>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Fachlehrplan (BY)"@de .
 
 
@@ -8189,16 +8365,22 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002046
 <https://w3id.org/lehrplan/ontology/LP_00002046> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000262>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Lernbereich (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002047
 <https://w3id.org/lehrplan/ontology/LP_00002047> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002104> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000434>
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002104>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                           owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
@@ -8211,28 +8393,50 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002048
 <https://w3id.org/lehrplan/ontology/LP_00002048> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Kompetenzerwartungen und Inhalte (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002049
 <https://w3id.org/lehrplan/ontology/LP_00002049> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000051>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Kompetenzerwartungen (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002050
 <https://w3id.org/lehrplan/ontology/LP_00002050> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002043> ;
                                                  rdfs:label "Inhalte zu den Kompetenzen (BY)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002051
 <https://w3id.org/lehrplan/ontology/LP_00002051> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000049>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (BW)"@de .
 
 
@@ -8310,116 +8514,354 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002064
 <https://w3id.org/lehrplan/ontology/LP_00002064> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
-                                                 rdfs:label "'Fach Niveau' (BW)"@de .
+                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002069> ,
+                                                                     [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002065>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002066>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000049>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002069
+<https://w3id.org/lehrplan/ontology/LP_00002069> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002072> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002072
+<https://w3id.org/lehrplan/ontology/LP_00002072> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002077> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002077
+<https://w3id.org/lehrplan/ontology/LP_00002077> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002081> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002081
+<https://w3id.org/lehrplan/ontology/LP_00002081> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002086> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002086
+<https://w3id.org/lehrplan/ontology/LP_00002086> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002094> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002094
+<https://w3id.org/lehrplan/ontology/LP_00002094> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002098> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002098
+
+###  https://w3id.org/lehrplan/ontology/LP_00002069
 <https://w3id.org/lehrplan/ontology/LP_00002069> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
-                                                 rdfs:label "'Fach Niveau' (BE)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002070>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002071>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000048>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000057>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (BE/BB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002072
 <https://w3id.org/lehrplan/ontology/LP_00002072> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000426> ;
-                                                 rdfs:label "'Fach Niveau' (HH)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002074>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002075>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ;
+                                                 rdfs:label "Fach Niveau (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002076
 <https://w3id.org/lehrplan/ontology/LP_00002076> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000050>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002077
 <https://w3id.org/lehrplan/ontology/LP_00002077> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002076> ;
-                                                 rdfs:label "'Fach Niveau' (HE)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002078>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002079>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000050>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002080
 <https://w3id.org/lehrplan/ontology/LP_00002080> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000052>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002081
 <https://w3id.org/lehrplan/ontology/LP_00002081> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
-                                                 rdfs:label "'Fach Niveau' (MV)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002082>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002083>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ;
+                                                 rdfs:label "Fach Niveau (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002085
 <https://w3id.org/lehrplan/ontology/LP_00002085> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000044>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (NW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002086
 <https://w3id.org/lehrplan/ontology/LP_00002086> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002085> ;
-                                                 rdfs:label "'Fach Niveau' (NW)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002087>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002088>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ;
+                                                 rdfs:label "Fach Niveau (NW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002089
 <https://w3id.org/lehrplan/ontology/LP_00002089> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (SN)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002090
 <https://w3id.org/lehrplan/ontology/LP_00002090> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002089> ;
-                                                 rdfs:label "'Fach Niveau' (SN)"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002089> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (SN)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002093
 <https://w3id.org/lehrplan/ontology/LP_00002093> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000053>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (ST)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002094
 <https://w3id.org/lehrplan/ontology/LP_00002094> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002093> ;
-                                                 rdfs:label "'Fach Niveau' (ST)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002095>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002096>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000053>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (ST)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002097
 <https://w3id.org/lehrplan/ontology/LP_00002097> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000031>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (TH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002098
 <https://w3id.org/lehrplan/ontology/LP_00002098> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002097> ;
-                                                 rdfs:label "'Fach Niveau' (TH)"@de .
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00002099>
+                                                                                   <https://w3id.org/lehrplan/ontology/LP_00002100>
+                                                                                 )
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000031>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Fach Niveau (TH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002101
 <https://w3id.org/lehrplan/ontology/LP_00002101> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000043>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (NI)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002102
 <https://w3id.org/lehrplan/ontology/LP_00002102> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000055>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002103
 <https://w3id.org/lehrplan/ontology/LP_00002103> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000054>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000477> ;
                                                  rdfs:label "Element (SH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002104
 <https://w3id.org/lehrplan/ontology/LP_00002104> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000349> ;
                                                  rdfs:label "MEM-Teilkompetenzbereich"@de .
 
 
@@ -9699,19 +10141,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -9729,6 +10169,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                             <https://w3id.org/lehrplan/ontology/LP_00002092> ,
                                                             <https://w3id.org/lehrplan/ontology/LP_00002096> ,
                                                             <https://w3id.org/lehrplan/ontology/LP_00002100> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Leistungsfach"@de .
 
 
@@ -9757,19 +10205,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -9787,6 +10233,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                             <https://w3id.org/lehrplan/ontology/LP_00002091> ,
                                                             <https://w3id.org/lehrplan/ontology/LP_00002095> ,
                                                             <https://w3id.org/lehrplan/ontology/LP_00002099> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundfach"@de .
 
 
@@ -10135,19 +10589,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10155,6 +10607,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de .
 
 
@@ -10163,7 +10623,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe A (BB)"@de .
 
 
@@ -10172,7 +10635,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe B (BB)"@de .
 
 
@@ -10181,7 +10647,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe C (BB)"@de .
 
 
@@ -10190,7 +10659,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe D (BB)"@de .
 
 
@@ -10199,7 +10671,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe E (BB)"@de .
 
 
@@ -10208,7 +10683,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe F (BB)"@de .
 
 
@@ -10217,7 +10695,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe G (BB)"@de .
 
 
@@ -10326,19 +10807,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10346,6 +10825,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Leistungsfach (BW)"@de .
 
 
@@ -10354,19 +10841,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10374,6 +10859,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Basisfach (BW)"@de .
 
 
@@ -10382,19 +10875,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10402,6 +10893,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundlegendes Anforderungsniveau (BY)"@de .
 
 
@@ -10409,8 +10908,26 @@ Instances of this class provide text that describes a particular competence (e.g
 <https://w3id.org/lehrplan/ontology/LP_00002068> rdf:type owl:NamedIndividual ,
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000435> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002069> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002072> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002077> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002081> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002086> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002089> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002094> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Vertiefungskurs"@de .
 
 
@@ -10419,19 +10936,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10439,6 +10954,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundkursfach (BE)"@de .
 
 
@@ -10447,19 +10970,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10467,6 +10988,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Leistungskursfach (BE)"@de .
 
 
@@ -10475,19 +11004,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10495,6 +11022,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erhöhtes Anforderungsniveau (HH)"@de .
 
 
@@ -10503,19 +11038,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10523,6 +11056,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundlegendes Anforderungsniveau (HH)"@de .
 
 
@@ -10531,19 +11072,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10551,6 +11090,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundlegendes Anforderungsniveau (HE)"@de .
 
 
@@ -10559,19 +11106,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10579,6 +11124,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erhöhtes Anforderungsniveau (HE)"@de .
 
 
@@ -10587,19 +11140,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10607,6 +11158,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundkurs (MV)"@de .
 
 
@@ -10615,19 +11174,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10635,6 +11192,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Leistungskurs (MV)"@de .
 
 
@@ -10643,19 +11208,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10663,6 +11226,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundkurs (NW)"@de .
 
 
@@ -10671,19 +11242,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10691,6 +11260,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Leistungskurs (NW)"@de .
 
 
@@ -10699,19 +11276,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10719,6 +11294,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundkurs (SN)"@de .
 
 
@@ -10727,19 +11310,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10747,6 +11328,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Leistungskurs (SN)"@de .
 
 
@@ -10755,19 +11344,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10775,6 +11362,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundlegendes Anforderungsniveau (ST)"@de .
 
 
@@ -10783,19 +11378,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10803,6 +11396,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erhöhtes Anfoderungsniveau (ST)"@de .
 
 
@@ -10811,19 +11412,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10831,6 +11430,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Grundlegendes Anforderungsniveau (TH)"@de .
 
 
@@ -10839,19 +11446,17 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           owl:Thing ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002051> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002064> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002069> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002072> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002077> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002080> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002081> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00002085> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002086> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002089> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002090> ,
@@ -10859,6 +11464,14 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00002094> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002097> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00002098> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000047> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000049> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000050> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000051> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000053> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erhöhtes Anforderungsniveau (TH)"@de .
 
 
@@ -10878,7 +11491,9 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000426> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000427> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000427> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Jahrgangsstufe 1"@de .
 
 
@@ -10888,7 +11503,9 @@ Instances of this class provide text that describes a particular competence (e.g
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000426> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000427> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000427> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000477> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Jahrgangsstufe 2"@de .
 
 

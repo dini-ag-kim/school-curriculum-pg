@@ -45,6 +45,19 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://edu.yovisto.com/resource/lp/rp/LP_00000537
+<https://edu.yovisto.com/resource/lp/rp/LP_00000537> rdf:type owl:ObjectProperty ;
+                                                     rdfs:range [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :LP_00000001
+                                                                                :LP_00000540
+                                                                              )
+                                                                ] ;
+                                                     owl:propertyChainAxiom ( <https://edu.yovisto.com/resource/lp/rp/LP_00000537>
+                                                                              <https://edu.yovisto.com/resource/lp/rp/LP_00000537>
+                                                                            ) ;
+                                                     rdfs:label "hat_schulfach"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00000008
 :LP_00000008 rdf:type owl:ObjectProperty ;
              rdfs:label "hat_teil"@de .
@@ -53,6 +66,9 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000026
 :LP_00000026 rdf:type owl:ObjectProperty ;
              rdfs:range :LP_00000009 ;
+             owl:propertyChainAxiom ( :LP_00000440
+                                      :LP_00000026
+                                    ) ;
              rdfs:label "hat_jahrgangsstufe"@de .
 
 
@@ -6841,6 +6857,45 @@ Instances of this class provide text that describes a particular competence (e.g
 :LP_00000536 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000261 ;
              rdfs:label "Element (Bista)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000540
+:LP_00000540 rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://edu.yovisto.com/resource/lp/rp/LP_00000537> ;
+                               owl:someValuesFrom :LP_00000001
+                             ] ;
+             rdfs:label "Schulfach Rolle"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000541
+:LP_00000541 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000540 ;
+             rdfs:label "Erste Fremdsprache"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000542
+:LP_00000542 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000540 ;
+             rdfs:label "Zweite Fremdsprache"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000543
+:LP_00000543 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000540 ;
+             rdfs:label "Dritte Fremdsprache"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000544
+:LP_00000544 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000540 ;
+             rdfs:label "Pflichtfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000545
+:LP_00000545 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000540 ;
+             rdfs:label "Wahlpflichtfach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

@@ -86,7 +86,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  https://edu.yovisto.com/resource/lp/rp/LP_00000537
-<https://edu.yovisto.com/resource/lp/rp/LP_00000537> rdf:type owl:ObjectProperty ;
+<https://edu.yovisto.com/resource/lp/rp/LP_00000537> rdf:type owl:ObjectProperty ,
+                                                              owl:TransitiveProperty ;
                                                      rdfs:range [ rdf:type owl:Class ;
                                                                   owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000001>
                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000540>
@@ -216,6 +217,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000483
 <https://w3id.org/lehrplan/ontology/LP_00000483> rdf:type owl:ObjectProperty ;
+                                                 owl:equivalentProperty [ owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00000495>
+                                                                        ] ;
                                                  owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00000495> ;
                                                  rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000478> ;
                                                  rdfs:label "hat_funktion"@de .
@@ -223,6 +226,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000495
 <https://w3id.org/lehrplan/ontology/LP_00000495> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000478> ;
                                                  rdfs:label "ist_funktion_von"@de .
 
 
@@ -232,18 +236,432 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000460
 <https://w3id.org/lehrplan/ontology/LP_00000460> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf owl:topDataProperty ;
                                                  rdfs:range xsd:int ;
                                                  rdfs:label "hat_position"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000463
 <https://w3id.org/lehrplan/ontology/LP_00000463> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf owl:topDataProperty ;
                                                  rdfs:label "uri"@de .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2002/07/owl#Nothing
+owl:Nothing owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
+                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000001> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000002> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000003> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000009> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000019> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000039> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000040> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000041> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000042> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000043> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000053> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000054> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000076> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000077> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000078> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000079> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000081> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000105> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000106> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000109> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000112> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000113> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000114> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000115> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000117> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000118> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000119> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000120> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000121> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000122> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000123> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000124> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000125> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000126> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000127> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000128> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000130> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000138> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000139> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000140> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000144> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000145> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000146> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000158> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000159> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000160> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000161> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000162> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000163> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000164> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000165> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000166> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000167> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000168> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000169> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000170> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000171> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000172> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000173> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000174> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000175> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000176> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000177> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000178> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000179> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000180> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000181> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000182> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000183> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000184> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000185> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000186> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000187> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000188> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000189> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000190> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000191> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000194> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000195> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000196> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000197> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000198> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000199> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000200> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000201> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000202> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000203> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000204> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000205> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000206> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000207> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000208> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000209> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000210> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000211> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000212> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000213> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000214> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000215> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000216> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000217> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000218> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000219> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000220> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000221> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000222> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000223> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000224> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000225> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000226> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000227> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000228> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000229> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000230> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000236> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000237> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000238> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000239> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000240> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000241> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000242> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000243> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000244> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000250> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000251> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000252> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000253> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000254> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000255> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000256> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000257> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000258> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000259> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000260> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000263> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000265> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000268> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000273> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000274> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000275> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000276> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000277> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000278> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000279> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000283> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000284> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000285> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000286> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000287> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000288> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000289> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000290> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000291> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000292> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000293> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000295> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000296> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000297> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000298> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000299> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000303> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000304> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000305> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000306> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000307> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000308> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000309> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000310> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000311> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000316> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000317> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000318> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000319> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000320> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000321> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000322> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000324> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000325> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000326> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000327> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000328> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000329> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000330> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000331> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000332> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000333> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000334> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000335> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000336> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000337> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000338> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000339> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000341> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000342> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000345> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000346> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000347> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000350> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000351> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000352> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000353> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000364> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000365> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000366> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000367> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000368> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000369> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000370> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000371> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000372> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000378> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000379> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000380> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000381> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000382> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000383> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000384> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000385> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000386> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000387> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000388> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000393> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000394> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000395> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000396> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000397> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000398> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000399> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000400> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000401> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000407> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000408> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000409> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000410> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000411> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000412> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000413> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000414> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000415> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000416> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000417> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000426> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000427> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000428> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000431> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000432> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000433> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000434> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000435> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000438> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000442> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000443> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000444> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000445> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000446> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000447> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000448> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000449> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000450> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000451> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000459> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000476> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000478> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000479> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000480> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000481> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000482> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000493> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000494> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000496> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000497> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000498> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000499> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000500> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000501> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000502> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000503> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000504> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000505> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000506> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000507> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000508> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000509> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000510> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000511> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000512> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000513> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000514> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000515> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000516> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000517> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000518> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000519> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000520> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000521> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000522> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000523> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000524> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000525> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000526> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000527> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000528> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000529> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000530> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000531> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000536> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000540> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000541> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000542> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000543> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000544> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00000545> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002003> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002004> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002005> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002006> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002007> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002008> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002009> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002010> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002011> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002012> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002013> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002014> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002015> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002016> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002017> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002018> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002019> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002024> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002025> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002026> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002027> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002028> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002029> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002030> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002031> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002032> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002036> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002037> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002038> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002039> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002040> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002041> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002042> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002043> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002044> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002045> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002046> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002047> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002048> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002049> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002050> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002051> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002052> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002053> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002054> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002055> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002056> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002057> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002058> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002059> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002060> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002061> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002062> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002063> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002064> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002069> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002072> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002076> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002077> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002080> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002081> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002085> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002086> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002089> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002090> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002093> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002094> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002097> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002098> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002101> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002102> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002103> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002104> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002105> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002106> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002107> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002110> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002111> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002112> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002113> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002114> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002115> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002116> ,
+                             <https://w3id.org/lehrplan/ontology/LP_00002117> .
+
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
@@ -261,6 +679,9 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000002
 <https://w3id.org/lehrplan/ontology/LP_00000002> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
+                                                 owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                                  rdfs:label "MINT-Fach"@de .
 
 
@@ -272,13 +693,19 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                                    <http://w3id.org/kim/schulfaecher/s1022>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000002> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000002> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000039> ;
+                                                 owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000004> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                                  rdfs:label "Naturwissenschaftsfach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000004
 <https://w3id.org/lehrplan/ontology/LP_00000004> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
+                                                 owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000005> ,
+                                                                  <https://w3id.org/lehrplan/ontology/LP_00000339> ;
                                                  rdfs:label "Fremdsprachfach"@de .
 
 
@@ -316,7 +743,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                                    <http://w3id.org/kim/schulfaecher/s1022>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000001> ;
+                                                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000001> ;
                                                  rdfs:label "BistaFach"@de .
 
 
@@ -6438,7 +6866,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                                    <https://w3id.org/lehrplan/ontology/LP_20000002>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000426> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000009> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000426> ;
                                                  rdfs:label "Ende Jahrgangsstufe 2 (HH)"@de .
 
 
@@ -6462,7 +6891,15 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000433
 <https://w3id.org/lehrplan/ontology/LP_00000433> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000046>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
                                                  rdfs:label "Lehrplan (RP)"@de .
 
 
@@ -6496,6 +6933,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000438
 <https://w3id.org/lehrplan/ontology/LP_00000438> rdf:type owl:Class ;
+                                                 rdfs:comment "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
+                                                              "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de ;
                                                  rdfs:label "Lehrplan"@de .
 
 
@@ -6588,11 +7027,9 @@ grundlegendes Niveau:
                                                                                           ) ;
                                                                        rdf:type owl:Class
                                                                      ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
                                                  rdfs:label "Lehrplan (BE)"@de ,
-                                                            "curriculum"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsplan"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
-                                                                                                  "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de .
+                                                            "curriculum"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000445
@@ -9904,6 +10341,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000109> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BE)"@de .
 
 
@@ -9912,6 +10350,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000106> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Berufsbildungsreife (BE)"@de .
 
 
@@ -9920,6 +10359,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000106> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BE)"@de .
 
 
@@ -9928,6 +10368,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000105> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ;
                                                  rdfs:label "Mittlerer Schulabschluss (BE)"@de .
 
 
@@ -9936,6 +10377,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000146> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BW)"@de .
 
 
@@ -9944,6 +10386,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000144> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Hauptschulabschluss (BW)"@de .
 
 
@@ -9952,6 +10395,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000145> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000049> ;
                                                  rdfs:label "Mittlerer Bildungsabschluss (BW)"@de .
 
 
@@ -9960,6 +10404,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000183> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Qualifizierender Abschluss der Mittelschule (BY)"@de .
 
 
@@ -9968,6 +10413,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000183> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Erfolgreicher Abschluss der Mittelschule (BY)"@de .
 
 
@@ -9976,6 +10422,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss der Mittelschule (BY)"@de .
 
 
@@ -9984,6 +10431,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss der Realschule (BY)"@de .
 
 
@@ -9992,6 +10440,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss der Wirtschaftsschule (BY)"@de .
 
 
@@ -10000,6 +10449,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000169> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BY)"@de .
 
 
@@ -10008,6 +10458,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000207> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Mittlerer Schulabschluss Gymnasium (BY)"@de .
 
 
@@ -10022,6 +10473,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000189> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Berufsbildungsreife (BB)"@de .
 
 
@@ -10030,6 +10482,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000189> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (BB)"@de .
 
 
@@ -10038,6 +10491,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000213> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Fachoberschulreife (BB)"@de .
 
 
@@ -10046,6 +10500,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000213> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Berechtigung zum Besuch der gymnasialen Oberstufe (BB)"@de .
 
 
@@ -10054,6 +10509,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000175> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (BB)"@de .
 
 
@@ -10062,6 +10518,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000174> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (HB)"@de .
 
 
@@ -10070,6 +10527,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000188> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Erweiterte Berufsbildungsreife (HB)"@de .
 
 
@@ -10078,6 +10536,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000188> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Berufsbildungsreife (HB)"@de .
 
 
@@ -10086,13 +10545,15 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000212> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
                                                  rdfs:label "Mittlerer Schulabschluss (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000266
 <https://w3id.org/lehrplan/ontology/LP_00000266> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000531> ;
                                                  rdfs:label "Leistungsfach"@de .
 
 
@@ -10108,6 +10569,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000163> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (HH)"@de .
 
 
@@ -10116,6 +10578,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000203> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Mittlerer Abschluss (HH)"@de .
 
 
@@ -10124,6 +10587,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000179> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Erster allgemeinbildender Schulabschluss (HH)"@de .
 
 
@@ -10132,6 +10596,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000179> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Erweiterter erste allgemeinbildender Schulabschluss (HH)"@de .
 
 
@@ -10140,6 +10605,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000164> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000046> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (RP)"@de .
 
 
@@ -10148,6 +10614,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000204> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000046> ;
                                                  rdfs:label "Qualifizierter Sekundarabschluss I (RP)"@de .
 
 
@@ -10156,6 +10623,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000180> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000046> ;
                                                  rdfs:label "Berufsreife (RP)"@de .
 
 
@@ -10164,6 +10632,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000173> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (SL)"@de .
 
 
@@ -10172,6 +10641,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000187> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
                                                  rdfs:label "Hauptschulabschluss (SL)"@de .
 
 
@@ -10180,6 +10650,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000211> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000055> ;
                                                  rdfs:label "Mittlerer Bildungsabschluss (SL)"@de .
 
 
@@ -10188,6 +10659,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000160> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (TH)"@de .
 
 
@@ -10196,6 +10668,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000176> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ;
                                                  rdfs:label "Hauptschulabschluss (TH)"@de .
 
 
@@ -10204,6 +10677,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000176> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ;
                                                  rdfs:label "Qualifizierender Hauptschulabschluss (TH)"@de .
 
 
@@ -10212,6 +10686,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000200> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000031> ;
                                                  rdfs:label "Realschulabschluss (TH)"@de .
 
 
@@ -10228,6 +10703,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000170> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000052> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (MV)"@de .
 
 
@@ -10236,6 +10712,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000184> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000052> ;
                                                  rdfs:label "Berufsreife (MV)"@de .
 
 
@@ -10244,6 +10721,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000208> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000052> ;
                                                  rdfs:label "Mittlere Reife (MV)"@de .
 
 
@@ -10252,6 +10730,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000162> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000044> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (NW)"@de .
 
 
@@ -10260,6 +10739,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000178> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000044> ;
                                                  rdfs:label "Erster Schulabschluss (NW)"@de .
 
 
@@ -10268,6 +10748,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000178> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000044> ;
                                                  rdfs:label "Erweiterter Erster Schulabschluss (NW)"@de .
 
 
@@ -10276,6 +10757,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000202> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000044> ;
                                                  rdfs:label "Mittlerer Schulabschluss (NW)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "Fachoberschulreife (FOR)"@de .
 
@@ -10285,6 +10767,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000202> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000044> ;
                                                  rdfs:label "Mittlerer Schulabschluss mit Berechtigung zur gymnasialen Oberstufe (NW)"@de .
 
 
@@ -10293,6 +10776,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000165> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000047> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (SN)"@de .
 
 
@@ -10301,6 +10785,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000181> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000047> ;
                                                  rdfs:label "Hauptschulabschluss (SN)"@de .
 
 
@@ -10309,6 +10794,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000181> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000047> ;
                                                  rdfs:label "Qualifizierender Hauptschulabschluss (SN)"@de .
 
 
@@ -10317,6 +10803,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000205> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000047> ;
                                                  rdfs:label "Realschulabschluss (SN)"@de .
 
 
@@ -10325,6 +10812,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000171> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000053> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (ST)"@de .
 
 
@@ -10333,6 +10821,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000185> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000053> ;
                                                  rdfs:label "Hauptschulabschluss (ST)"@de .
 
 
@@ -10341,6 +10830,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000185> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000053> ;
                                                  rdfs:label "Qualifizierter Hauptschulabschluss (ST)"@de .
 
 
@@ -10349,6 +10839,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000209> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000053> ;
                                                  rdfs:label "Realschulabschluss (ST)"@de .
 
 
@@ -10357,6 +10848,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000209> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000053> ;
                                                  rdfs:label "Erweiterter Realschulabschluss (ST)"@de .
 
 
@@ -10365,6 +10857,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe A (BB)"@de .
 
 
@@ -10373,6 +10867,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe B (BB)"@de .
 
 
@@ -10381,6 +10877,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe C (BB)"@de .
 
 
@@ -10389,6 +10887,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe D (BB)"@de .
 
 
@@ -10397,6 +10897,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe E (BB)"@de .
 
 
@@ -10405,6 +10907,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe F (BB)"@de .
 
 
@@ -10413,6 +10917,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  rdfs:label "Niveaustufe G (BB)"@de .
 
 
@@ -10421,6 +10927,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000168> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000050> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (HE)"@de .
 
 
@@ -10429,6 +10936,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000182> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000050> ;
                                                  rdfs:label "Hauptschulabschluss (HE)"@de .
 
 
@@ -10437,6 +10945,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000206> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000050> ;
                                                  rdfs:label "Realschulabschluss (HE)"@de .
 
 
@@ -10445,6 +10954,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000161> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000043> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (NI)"@de .
 
 
@@ -10453,6 +10963,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000177> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000043> ;
                                                  rdfs:label "Hauptschulabschluss (NI)"@de .
 
 
@@ -10461,6 +10972,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000201> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000043> ;
                                                  rdfs:label "Realschulabschluss (NI)"@de .
 
 
@@ -10469,6 +10981,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000201> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000043> ;
                                                  rdfs:label "Erweiterter Sekundarabschluss I (NI)"@de .
 
 
@@ -10477,6 +10990,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000076> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000172> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000054> ;
                                                  rdfs:label "Allgemeinbildender Schulabschluss (SH)"@de .
 
 
@@ -10485,6 +10999,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000186> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000054> ;
                                                  rdfs:label "Erster allgemeinbildender Schulabschluss (SH)"@de .
 
 
@@ -10493,6 +11008,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000078> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000210> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000054> ;
                                                  rdfs:label "Mittlerer Schulabschluss (SH)"@de .
 
 
@@ -10502,6 +11018,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000434> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000435> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000051> ;
                                                  rdfs:label "Vertiefungskurs"@de .
 
 
@@ -10510,6 +11027,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000019> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000079> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000177> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000043> ;
                                                  rdfs:label "Hauptschulabschluss 10 (NI)"@de .
 
 
@@ -10519,6 +11037,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000427> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Jahrgangsstufe 1"@de .
 
 
@@ -10528,6 +11047,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000426> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000427> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000045> ;
                                                  rdfs:label "Jahrgangsstufe 2"@de .
 
 

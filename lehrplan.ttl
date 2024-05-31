@@ -3265,15 +3265,15 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 :LP_00000265 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000335
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "MEM-Fach Niveau"@de .
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000335
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:label "MEM-Fachniveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000268
@@ -4548,7 +4548,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000335
 :LP_00000335 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000499 ;
+             rdfs:subClassOf :LP_00000478 ;
              rdfs:label "Fachniveaufunktion"@de .
 
 
@@ -6133,11 +6133,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000435
 :LP_00000435 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002067
-                                               :LP_00002068
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -6415,6 +6410,352 @@ Instances of this class provide text that describes a particular competence (e.g
 :LP_00000505 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000261 ;
              rdfs:label "unklar"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000506
+:LP_00000506 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002069
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:label "Grundkursfach (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000507
+:LP_00000507 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002069
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:label "Leistungskursfach (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000508
+:LP_00000508 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000335 ;
+             rdfs:label "Grundkursfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000509
+:LP_00000509 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000335 ;
+             rdfs:label "Leistungskursfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000510
+:LP_00000510 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002064
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002064 ;
+             rdfs:label "Leistungsfach (BW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000511
+:LP_00000511 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002064
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002064 ;
+             rdfs:label "Basisfach (BW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000512
+:LP_00000512 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000435
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000435 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000513
+:LP_00000513 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000435
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000435 ;
+             rdfs:label "Vertiefungskurs (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000514
+:LP_00000514 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000503 .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000515
+:LP_00000515 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002077
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002077 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000516
+:LP_00000516 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002077
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002077 ;
+             rdfs:label "Erhöhtes Anforderungsniveau (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000517
+:LP_00000517 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002072
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002072 ;
+             rdfs:label "Erhöhtes Anforderungsniveau (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000518
+:LP_00000518 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002072
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002072 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000519
+:LP_00000519 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002081
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002081 ;
+             rdfs:label "Grundkurs (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000520
+:LP_00000520 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002081
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002081 ;
+             rdfs:label "Lesitungskurs (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000521
+:LP_00000521 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002086
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002086 ;
+             rdfs:label "Grundkurs (NW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000522
+:LP_00000522 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002086
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002086 ;
+             rdfs:label "Leistungskurs (NW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000523
+:LP_00000523 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002090
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002090 ;
+             rdfs:label "Grundkurs (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000524
+:LP_00000524 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002090
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002090 ;
+             rdfs:label "Leistungskurs (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000525
+:LP_00000525 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000435
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000435 ;
+             rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Unterschied zu  Vertiefungskurs ?"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000526
+:LP_00000526 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002094
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002094 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000527
+:LP_00000527 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002094
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002094 ;
+             rdfs:label "Erhöhte Anforderungsniveau (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000528
+:LP_00000528 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002098
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002098 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (TH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000529
+:LP_00000529 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00002098
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00002098 ;
+             rdfs:label "Erhöhtes Anforderungsniveau (TH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000530
+:LP_00000530 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000265
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_00000267
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000265 ;
+             rdfs:label "MEM-Grundkurs"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000531
+:LP_00000531 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000265
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ rdf:type owl:Class ;
+                                   owl:oneOf ( :LP_00000266
+                                             )
+                                 ] ;
+             rdfs:subClassOf :LP_00000265 ;
+             rdfs:label "MEM-Leistungskurs"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
@@ -7739,11 +8080,6 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002064
 :LP_00002064 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002065
-                                               :LP_00002066
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002051
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7757,29 +8093,19 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002069
 :LP_00002069 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002070
-                                               :LP_00002071
-                                             )
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000335
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000441
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000335
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
              rdfs:label "Fach Niveau (BE/BB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002072
 :LP_00002072 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002074
-                                               :LP_00002075
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000426
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7806,11 +8132,6 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002077
 :LP_00002077 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002078
-                                               :LP_00002079
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7837,11 +8158,6 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002081
 :LP_00002081 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002082
-                                               :LP_00002083
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7868,11 +8184,6 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002086
 :LP_00002086 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002087
-                                               :LP_00002088
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002085
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7925,11 +8236,6 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002094
 :LP_00002094 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002095
-                                               :LP_00002096
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002093
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7956,11 +8262,6 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002098
 :LP_00002098 rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:oneOf ( :LP_00002099
-                                               :LP_00002100
-                                             )
-                                 ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002097
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -8541,74 +8842,14 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000266
 :LP_00000266 rdf:type owl:NamedIndividual ,
                       :LP_00000265 ;
-             owl:sameAs :LP_00000436 ,
-                        :LP_00002065 ,
-                        :LP_00002071 ,
-                        :LP_00002074 ,
-                        :LP_00002079 ,
-                        :LP_00002083 ,
-                        :LP_00002088 ,
-                        :LP_00002092 ,
-                        :LP_00002096 ,
-                        :LP_00002100 ;
              rdfs:label "Leistungsfach"@de .
 
-
-###  https://w3id.org/lehrplan/ontology/LP_00000436
-
-###  https://w3id.org/lehrplan/ontology/LP_00002065
-
-###  https://w3id.org/lehrplan/ontology/LP_00002071
-
-###  https://w3id.org/lehrplan/ontology/LP_00002074
-
-###  https://w3id.org/lehrplan/ontology/LP_00002079
-
-###  https://w3id.org/lehrplan/ontology/LP_00002083
-
-###  https://w3id.org/lehrplan/ontology/LP_00002088
-
-###  https://w3id.org/lehrplan/ontology/LP_00002092
-
-###  https://w3id.org/lehrplan/ontology/LP_00002096
-
-###  https://w3id.org/lehrplan/ontology/LP_00002100
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000267
 :LP_00000267 rdf:type owl:NamedIndividual ,
                       :LP_00000265 ;
-             owl:sameAs :LP_00002066 ,
-                        :LP_00002067 ,
-                        :LP_00002070 ,
-                        :LP_00002075 ,
-                        :LP_00002078 ,
-                        :LP_00002082 ,
-                        :LP_00002087 ,
-                        :LP_00002091 ,
-                        :LP_00002095 ,
-                        :LP_00002099 ;
              rdfs:label "Grundfach"@de .
 
-
-###  https://w3id.org/lehrplan/ontology/LP_00002066
-
-###  https://w3id.org/lehrplan/ontology/LP_00002067
-
-###  https://w3id.org/lehrplan/ontology/LP_00002070
-
-###  https://w3id.org/lehrplan/ontology/LP_00002075
-
-###  https://w3id.org/lehrplan/ontology/LP_00002078
-
-###  https://w3id.org/lehrplan/ontology/LP_00002082
-
-###  https://w3id.org/lehrplan/ontology/LP_00002087
-
-###  https://w3id.org/lehrplan/ontology/LP_00002091
-
-###  https://w3id.org/lehrplan/ontology/LP_00002095
-
-###  https://w3id.org/lehrplan/ontology/LP_00002099
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000269
 :LP_00000269 rdf:type owl:NamedIndividual ,
@@ -8803,12 +9044,6 @@ Instances of this class provide text that describes a particular competence (e.g
              rdfs:label "Erweiterter Realschulabschluss (ST)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000436
-:LP_00000436 rdf:type owl:NamedIndividual ,
-                      :LP_00000435 ;
-             rdfs:label "Erhöhtes Anforderungsniveau (BY)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000464
 :LP_00000464 rdf:type owl:NamedIndividual ,
                       :LP_00000443 ;
@@ -8911,124 +9146,10 @@ Instances of this class provide text that describes a particular competence (e.g
              rdfs:label "Mittlerer Schulabschluss (SH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002065
-:LP_00002065 rdf:type owl:NamedIndividual ,
-                      :LP_00002064 ;
-             rdfs:label "Leistungsfach (BW)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002066
-:LP_00002066 rdf:type owl:NamedIndividual ,
-                      :LP_00002064 ;
-             rdfs:label "Basisfach (BW)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002067
-:LP_00002067 rdf:type owl:NamedIndividual ,
-                      :LP_00000435 ;
-             rdfs:label "Grundlegendes Anforderungsniveau (BY)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00002068
 :LP_00002068 rdf:type owl:NamedIndividual ,
                       :LP_00000435 ;
              rdfs:label "Vertiefungskurs"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002070
-:LP_00002070 rdf:type owl:NamedIndividual ,
-                      :LP_00002069 ;
-             rdfs:label "Grundkursfach (BE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002071
-:LP_00002071 rdf:type owl:NamedIndividual ,
-                      :LP_00002069 ;
-             rdfs:label "Leistungskursfach (BE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002074
-:LP_00002074 rdf:type owl:NamedIndividual ,
-                      :LP_00002072 ;
-             rdfs:label "Erhöhtes Anforderungsniveau (HH)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002075
-:LP_00002075 rdf:type owl:NamedIndividual ,
-                      :LP_00002072 ;
-             rdfs:label "Grundlegendes Anforderungsniveau (HH)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002078
-:LP_00002078 rdf:type owl:NamedIndividual ,
-                      :LP_00002077 ;
-             rdfs:label "Grundlegendes Anforderungsniveau (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002079
-:LP_00002079 rdf:type owl:NamedIndividual ,
-                      :LP_00002077 ;
-             rdfs:label "Erhöhtes Anforderungsniveau (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002082
-:LP_00002082 rdf:type owl:NamedIndividual ,
-                      :LP_00002081 ;
-             rdfs:label "Grundkurs (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002083
-:LP_00002083 rdf:type owl:NamedIndividual ,
-                      :LP_00002081 ;
-             rdfs:label "Leistungskurs (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002087
-:LP_00002087 rdf:type owl:NamedIndividual ,
-                      :LP_00002086 ;
-             rdfs:label "Grundkurs (NW)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002088
-:LP_00002088 rdf:type owl:NamedIndividual ,
-                      :LP_00002086 ;
-             rdfs:label "Leistungskurs (NW)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002091
-:LP_00002091 rdf:type owl:NamedIndividual ,
-                      :LP_00002090 ;
-             rdfs:label "Grundkurs (SN)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002092
-:LP_00002092 rdf:type owl:NamedIndividual ,
-                      :LP_00002090 ;
-             rdfs:label "Leistungskurs (SN)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002095
-:LP_00002095 rdf:type owl:NamedIndividual ,
-                      :LP_00002094 ;
-             rdfs:label "Grundlegendes Anforderungsniveau (ST)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002096
-:LP_00002096 rdf:type owl:NamedIndividual ,
-                      :LP_00002094 ;
-             rdfs:label "Erhöhtes Anfoderungsniveau (ST)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002099
-:LP_00002099 rdf:type owl:NamedIndividual ,
-                      :LP_00002098 ;
-             rdfs:label "Grundlegendes Anforderungsniveau (TH)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002100
-:LP_00002100 rdf:type owl:NamedIndividual ,
-                      :LP_00002098 ;
-             rdfs:label "Erhöhtes Anforderungsniveau (TH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002109

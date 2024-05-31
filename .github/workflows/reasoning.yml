@@ -13,7 +13,7 @@ jobs:
     - name: Reasoning
       run: |
            curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
-           java -jar robot.jar merge --include-annotations true --input lehrplan.ttl query --update .github/workflows/update.sparql reason --reasoner elk --axiom-generators "SubClass EquivalentClass DisjointClasses DataPropertyCharacteristic EquivalentDataProperties SubDataProperty ClassAssertion PropertyAssertion EquivalentObjectProperty InverseObjectProperties ObjectPropertyCharacteristic SubObjectProperty ObjectPropertyRange ObjectPropertyDomain"  --include-indirect true remove --term owl:topObjectProperty --owl:Thing reduce --output reasoned.ttl
+           java -jar robot.jar merge --include-annotations true --input lehrplan.ttl query --update .github/workflows/update.sparql reason --reasoner elk --axiom-generators "SubClass EquivalentClass DisjointClasses DataPropertyCharacteristic EquivalentDataProperties SubDataProperty ClassAssertion PropertyAssertion EquivalentObjectProperty InverseObjectProperties ObjectPropertyCharacteristic SubObjectProperty ObjectPropertyRange ObjectPropertyDomain"  --include-indirect true remove --term owl:topObjectProperty --term owl:Thing reduce --output reasoned.ttl
            rm robot.jar
     - uses: mikeal/publish-to-github-action@master
       env:

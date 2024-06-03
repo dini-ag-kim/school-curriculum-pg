@@ -93,19 +93,41 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <https://d-nb.info/standards/elementset/gnd#gndIdentifier> rdf:type owl:AnnotationProperty .
 
 
+###  https://lehrplan.yovisto.com/resource/lp/rp/addendum/LP_00000538
+<https://w3id.org/ontology/LP_00000538> rdf:type owl:NamedIndividual ,
+                                                                       <https://w3id.org/lehrplan/ontology/LP_00000283> ;
+                                                              rdfs:label "Grundschule (RP) Instanz"@de .
+
+###  https://w3id.org/lehrplan/ontology/LP_00000283
+<https://w3id.org/lehrplan/ontology/LP_00000283> owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/ontology/LP_00000538>
+                                                                                 )
+                                                                     ] .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000530
+<https://w3id.org/lehrplan/ontology/LP_00000530> owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000267>
+                                                                                 )
+                                                                     ] .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000551
+<https://w3id.org/lehrplan/ontology/LP_00000551> rdf:type owl:Class .
+
+
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://edu.yovisto.com/resource/lp/rp/LP_00000537
-<https://edu.yovisto.com/resource/lp/rp/LP_00000537> rdf:type owl:ObjectProperty ;
+:LP_00000537 rdf:type owl:ObjectProperty ;
                                                      rdfs:range [ rdf:type owl:Class ;
                                                                   owl:unionOf ( :LP_00000001
                                                                                 :LP_00000540
                                                                               )
                                                                 ] ;
-                                                     owl:propertyChainAxiom ( <https://edu.yovisto.com/resource/lp/rp/LP_00000537>
-                                                                              <https://edu.yovisto.com/resource/lp/rp/LP_00000537>
+                                                     owl:propertyChainAxiom ( :LP_00000537
+                                                                              :LP_00000537
                                                                             ) ;
                                                      rdfs:label "hat_schulfach"@de .
 
@@ -6929,7 +6951,7 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000540
 :LP_00000540 rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://edu.yovisto.com/resource/lp/rp/LP_00000537> ;
+                               owl:onProperty :LP_00000537 ;
                                owl:someValuesFrom :LP_00000001
                              ] ;
              rdfs:label "Schulfach Rolle"@de .

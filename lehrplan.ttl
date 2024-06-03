@@ -20,21 +20,6 @@
 ###  http://purl.org/dc/terms/created
 terms:created rdf:type owl:AnnotationProperty .
 
-<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
-
-<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:AnnotationProperty .
-
- <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> rdf:type owl:AnnotationProperty .
-
- <http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
-
- <https://d-nb.info/standards/elementset/gnd#gndIdentifier>  rdf:type owl:AnnotationProperty .
-
- <http://www.w3.org/2004/02/skos/core#related>  rdf:type owl:AnnotationProperty . 
-
-<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type  owl:Class .
-
-
 
 ###  http://purl.org/dc/terms/description
 terms:description rdf:type owl:AnnotationProperty .
@@ -76,12 +61,36 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#narrowMatch
 <http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://d-nb.info/standards/elementset/gnd#broaderTermGeneral
+<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> rdf:type owl:AnnotationProperty .
+
+
+###  https://d-nb.info/standards/elementset/gnd#gndIdentifier
+<https://d-nb.info/standards/elementset/gnd#gndIdentifier> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -255,6 +264,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
@@ -6950,6 +6963,13 @@ Instances of this class provide text that describes a particular competence (e.g
 :LP_00000545 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
              rdfs:label "Wahlpflichtfach"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000551
+:LP_00000551 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000540 ;
+             rdfs:label "Wahlfach"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Fakultatives Fach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003

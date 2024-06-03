@@ -93,20 +93,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://edu.yovisto.com/resource/lp/rp/LP_00000537
-<https://edu.yovisto.com/resource/lp/rp/LP_00000537> rdf:type owl:ObjectProperty ,
-                                                              owl:TransitiveProperty ;
-                                                     rdfs:range [ rdf:type owl:Class ;
-                                                                  owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000001>
-                                                                                <https://w3id.org/lehrplan/ontology/LP_00000540>
-                                                                              )
-                                                                ] ;
-                                                     owl:propertyChainAxiom ( <https://edu.yovisto.com/resource/lp/rp/LP_00000537>
-                                                                              <https://edu.yovisto.com/resource/lp/rp/LP_00000537>
-                                                                            ) ;
-                                                     rdfs:label "hat_schulfach"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000008
 <https://w3id.org/lehrplan/ontology/LP_00000008> rdf:type owl:ObjectProperty ;
                                                  rdfs:label "hat_teil"@de .
@@ -236,6 +222,20 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <https://w3id.org/lehrplan/ontology/LP_00000495> rdf:type owl:ObjectProperty ;
                                                  rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000478> ;
                                                  rdfs:label "ist_funktion_von"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000537
+<https://w3id.org/lehrplan/ontology/LP_00000537> rdf:type owl:ObjectProperty ,
+                                                          owl:TransitiveProperty ;
+                                                 rdfs:range [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000001>
+                                                                            <https://w3id.org/lehrplan/ontology/LP_00000540>
+                                                                          )
+                                                            ] ;
+                                                 owl:propertyChainAxiom ( <https://w3id.org/lehrplan/ontology/LP_00000537>
+                                                                          <https://w3id.org/lehrplan/ontology/LP_00000537>
+                                                                        ) ;
+                                                 rdfs:label "hat_schulfach"@de .
 
 
 #################################################################
@@ -3697,6 +3697,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000283
 <https://w3id.org/lehrplan/ontology/LP_00000283> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/ontology/LP_00000538>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000041> ,
                                                                  <https://w3id.org/lehrplan/ontology/LP_00000279> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000114>
@@ -7219,6 +7223,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                                             ]
                                                                                           ) ;
                                                                        rdf:type owl:Class
+                                                                     ] ,
+                                                                     [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000267>
+                                                                                 )
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000265> ;
                                                  rdfs:label "MEM-Grundkurs"@de .
@@ -7251,7 +7259,7 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000540
 <https://w3id.org/lehrplan/ontology/LP_00000540> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <https://edu.yovisto.com/resource/lp/rp/LP_00000537> ;
+                                                                   owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000537> ;
                                                                    owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000001>
                                                                  ] ;
                                                  rdfs:label "Schulfach Rolle"@de .
@@ -10156,7 +10164,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 ###  https://w3id.org/lehrplan/ontology/LP_00000267
 <https://w3id.org/lehrplan/ontology/LP_00000267> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000265> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000530> ;
                                                  rdfs:label "Grundfach"@de .
 
 
@@ -10846,6 +10855,25 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000053> ;
                                                  rdfs:label "Brandenburg"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "BB" .
+
+
+###  https://w3id.org/ontology/LP_00000538
+<https://w3id.org/ontology/LP_00000538> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000041> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000114> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000117> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000279> ,
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000283> ;
+                                        <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                         <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                         <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                         <https://w3id.org/lehrplan/ontology/LP_20000004> ;
+                                        <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000046> ;
+                                        <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s02> ;
+                                        rdfs:label "Grundschule (RP) Instanz"@de .
 
 
 #################################################################

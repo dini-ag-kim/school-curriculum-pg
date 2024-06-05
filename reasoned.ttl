@@ -849,6 +849,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                                             ]
                                                                                           ) ;
                                                                        rdf:type owl:Class
+                                                                     ] ,
+                                                                     [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000561>
+                                                                                 )
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000111> ;
                                                  rdfs:label "Gymnasium"@de .
@@ -1110,6 +1114,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                                             ]
                                                                                           ) ;
                                                                        rdf:type owl:Class
+                                                                     ] ,
+                                                                     [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000562>
+                                                                                 )
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000111> ;
                                                  rdfs:label "Hauptschule"@de .
@@ -3992,6 +4000,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000291
 <https://w3id.org/lehrplan/ontology/LP_00000291> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                                       owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000563>
+                                                                                 )
+                                                                     ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000167> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000111>
                                                                                         [ rdf:type owl:Restriction ;
@@ -10532,6 +10544,44 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000004> ;
                                                  rdfs:label "Griechisch"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000561
+<https://w3id.org/lehrplan/ontology/LP_00000561> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000122> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s08> ;
+                                                 rdfs:label "Gymnasium Instanz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000562
+<https://w3id.org/lehrplan/ontology/LP_00000562> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000140> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000159> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s03> ;
+                                                 rdfs:label "Hauptschule Instanz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000563
+<https://w3id.org/lehrplan/ontology/LP_00000563> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000111> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000167> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000291> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000141> <https://w3id.org/kim/schularten/s04> ;
+                                                 rdfs:label "Realschule Plus Instanz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000566
+<https://w3id.org/lehrplan/ontology/LP_00000566> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000130> ;
+                                                 rdfs:label "A-Kurs (RP)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000567
+<https://w3id.org/lehrplan/ontology/LP_00000567> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000130> ;
+                                                 rdfs:label "B-Kurs (RP)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

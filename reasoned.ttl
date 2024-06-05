@@ -6484,13 +6484,31 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000431
 <https://w3id.org/lehrplan/ontology/LP_00000431> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000342> ;
                                                  rdfs:label "Kompetenz Bereich (RP)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000432
 <https://w3id.org/lehrplan/ontology/LP_00000432> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000342> ;
                                                  rdfs:label "Kompetenz (RP)"@de .
 
 
@@ -9093,7 +9111,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Alt-Griechisch"@de ;
+                                         rdfs:label "Alt-Griechisch"@de ,
+                                                    "Alt-Griechisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20003> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Alt-Griechisch"@de ;
@@ -9107,7 +9126,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000003> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Biologie"@de ;
+                                         rdfs:label "Biologie"@de ,
+                                                    "Biologie (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/080> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Biologie"@de ;
@@ -9121,7 +9141,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000003> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Chemie"@de ;
+                                         rdfs:label "Chemie"@de ,
+                                                    "Chemie (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/100> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Chemie"@de ;
@@ -9133,7 +9154,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Chinesisch"@de ;
+                                         rdfs:label "Chinesisch"@de ,
+                                                    "Chinesisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Chinesisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9142,7 +9164,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1004> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Darstellendes Spiel"@de ;
+                                         rdfs:label "Darstellendes Spiel"@de ,
+                                                    "Darstellendes Spiel (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Theater"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12002> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/12002> ;
@@ -9155,7 +9178,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Deutsch"@de ;
+                                         rdfs:label "Deutsch"@de ,
+                                                    "Deutsch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/120> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28001> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/120> ;
@@ -9168,7 +9192,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Deutsch als Zweitsprache"@de ;
+                                         rdfs:label "Deutsch als Zweitsprache"@de ,
+                                                    "Deutsch als Zweitsprache (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "DaZ"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28002> ,
@@ -9183,7 +9208,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Englisch"@de ;
+                                         rdfs:label "Englisch"@de ,
+                                                    "Englisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20001> ;
@@ -9195,7 +9221,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1008> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Ethik"@de ;
+                                         rdfs:label "Ethik"@de ,
+                                                    "Ethik (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Werte und Normen"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/160> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28004> ,
@@ -9210,7 +9237,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Französisch"@de ;
+                                         rdfs:label "Französisch"@de ,
+                                                    "Französisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20002> ;
@@ -9224,7 +9252,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000339> ;
-                                         rdfs:label "Geografie"@de ;
+                                         rdfs:label "Geografie"@de ,
+                                                    "Geografie (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Erdkunde"@de ,
                                                                                         "Geographie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/220> ,
@@ -9239,7 +9268,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000339> ;
-                                         rdfs:label "Geschichte"@de ;
+                                         rdfs:label "Geschichte"@de ,
+                                                    "Geschichte (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20002> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Geschichte"@de ;
@@ -9250,7 +9280,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1012> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Gesundheit"@de ;
+                                         rdfs:label "Gesundheit"@de ,
+                                                    "Gesundheit (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Gesundheitserziehung"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/260> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/260> ;
@@ -9263,7 +9294,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ;
-                                         rdfs:label "Informatik"@de ;
+                                         rdfs:label "Informatik"@de ,
+                                                    "Informatik (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Informations- und Kommunikationstechnologie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/320> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/320> ;
@@ -9276,7 +9308,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Italienisch"@de ;
+                                         rdfs:label "Italienisch"@de ,
+                                                    "Italienisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20004> ;
@@ -9288,7 +9321,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1015> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Kunst"@de ;
+                                         rdfs:label "Kunst"@de ,
+                                                    "Kunst (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Bildende Kunst"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/060> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28006> ,
@@ -9302,7 +9336,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Latein"@de ;
+                                         rdfs:label "Latein"@de ,
+                                                    "Latein (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20005> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Latein"@de ;
@@ -9315,7 +9350,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Mathematik"@de ;
+                                         rdfs:label "Mathematik"@de ,
+                                                    "Mathematik (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28007> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/380> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/380> ;
@@ -9328,7 +9364,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ;
-                                         rdfs:label "MINT"@de ;
+                                         rdfs:label "MINT"@de ,
+                                                    "MINT (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Chemie, Physik, Biologie"@de ,
                                                                                         "Naturwissenschaften"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "MINT"@de ;
@@ -9344,7 +9381,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1020> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Musik"@de ;
+                                         rdfs:label "Musik"@de ,
+                                                    "Musik (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28008> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/420> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/420> ;
@@ -9356,7 +9394,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1021> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Philosophie"@de ;
+                                         rdfs:label "Philosophie"@de ,
+                                                    "Philosophie (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/450> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/450> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Philosophie"@de ;
@@ -9370,7 +9409,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <https://w3id.org/lehrplan/ontology/LP_00000002> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000003> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000039> ;
-                                         rdfs:label "Physik"@de ;
+                                         rdfs:label "Physik"@de ,
+                                                    "Physik (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/460> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Physik"@de ;
@@ -9382,7 +9422,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                         rdfs:label "Politik"@de ;
+                                         rdfs:label "Politik"@de ,
+                                                    "Politik (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Politische Bildung"@de ,
                                                                                         "Sozialkunde"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/480> ,
@@ -9395,7 +9436,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1024> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Religionslehre (evangelische)"@de ;
+                                         rdfs:label "Religionslehre (evangelische)"@de ,
+                                                    "Religionslehre (evangelische) (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Evangelischer Religionsunterricht"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520> ,
@@ -9408,7 +9450,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1025> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Religionslehre (islamisch)"@de ;
+                                         rdfs:label "Religionslehre (islamisch)"@de ,
+                                                    "Religionslehre (islamisch) (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Islamischer Religionsunterricht"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520> ,
@@ -9422,7 +9465,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1026> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Religionslehre (katholische)"@de ;
+                                         rdfs:label "Religionslehre (katholische)"@de ,
+                                                    "Religionslehre (katholische) (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Katholischer Religionsunterricht"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520> ,
@@ -9436,7 +9480,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Russisch"@de ;
+                                         rdfs:label "Russisch"@de ,
+                                                    "Russisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20006> ;
@@ -9449,7 +9494,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                         rdfs:label "Sachunterricht"@de ;
+                                         rdfs:label "Sachunterricht"@de ,
+                                                    "Sachunterricht (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Heimatunterricht"@de ,
                                                                                         "Sachkunde"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28010> ,
@@ -9463,7 +9509,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                         rdfs:label "Sexualerziehung"@de ;
+                                         rdfs:label "Sexualerziehung"@de ,
+                                                    "Sexualerziehung (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/560> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Sexualerziehung"@de ;
@@ -9475,7 +9522,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Spanisch"@de ;
+                                         rdfs:label "Spanisch"@de ,
+                                                    "Spanisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20007> ;
@@ -9487,7 +9535,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1031> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Sport"@de ;
+                                         rdfs:label "Sport"@de ,
+                                                    "Sport (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28011> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/600> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/600> ;
@@ -9500,7 +9549,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Türkisch"@de ;
+                                         rdfs:label "Türkisch"@de ,
+                                                    "Türkisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008> ,
                                                                                           <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/20008> ;
@@ -9513,7 +9563,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                         rdfs:label "Wirtschaftskunde"@de ;
+                                         rdfs:label "Wirtschaftskunde"@de ,
+                                                    "Wirtschaftskunde (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700> ,
                                                                                           <http://w3id.org/openeduhub/vocabs/discipline/700> ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Wirtschaftskunde"@de ;
@@ -9525,7 +9576,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Hebräisch"@de ;
+                                         rdfs:label "Hebräisch"@de ,
+                                                    "Hebräisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Hebräisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9535,7 +9587,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Japanisch"@de ;
+                                         rdfs:label "Japanisch"@de ,
+                                                    "Japanisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Japanisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9545,7 +9598,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Neugriechisch"@de ;
+                                         rdfs:label "Neugriechisch"@de ,
+                                                    "Neugriechisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Neugriechisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9555,7 +9609,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Polnisch"@de ;
+                                         rdfs:label "Polnisch"@de ,
+                                                    "Polnisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Polnisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9565,7 +9620,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Portugiesisch"@de ;
+                                         rdfs:label "Portugiesisch"@de ,
+                                                    "Portugiesisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Portugiesisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9575,7 +9631,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                         rdfs:label "Sorbisch"@de ;
+                                         rdfs:label "Sorbisch"@de ,
+                                                    "Sorbisch (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Wendisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Sorbisch"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -9585,7 +9642,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1040> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Astronomie"@de ;
+                                         rdfs:label "Astronomie"@de ,
+                                                    "Astronomie (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Astronomie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9594,7 +9652,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1041> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Deutsche Gebärdensprache"@de ;
+                                         rdfs:label "Deutsche Gebärdensprache"@de ,
+                                                    "Deutsche Gebärdensprache (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Deutsche Gebärdensprache"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9604,7 +9663,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                         rdfs:label "Gesellschaftswissenschaften"@de ;
+                                         rdfs:label "Gesellschaftswissenschaften"@de ,
+                                                    "Gesellschaftswissenschaften (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Gesellschaftswissenschaften"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9613,7 +9673,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1043> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Psychologie"@de ;
+                                         rdfs:label "Psychologie"@de ,
+                                                    "Psychologie (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychologie"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9622,7 +9683,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1044> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Ernährung"@de ;
+                                         rdfs:label "Ernährung"@de ,
+                                                    "Ernährung (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Ernährung"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9632,7 +9694,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000005> ;
-                                         rdfs:label "Erziehungswissenschaften"@de ;
+                                         rdfs:label "Erziehungswissenschaften"@de ,
+                                                    "Erziehungswissenschaften (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Pädagogik"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Erziehungswissenschaften"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
@@ -9642,7 +9705,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1046> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Medienbildung"@de ;
+                                         rdfs:label "Medienbildung"@de ,
+                                                    "Medienbildung (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Medienbildung"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -9651,7 +9715,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <http://w3id.org/kim/schulfaecher/s1047> rdf:type owl:NamedIndividual ,
                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
                                                   <https://w3id.org/lehrplan/ontology/LP_00000001> ;
-                                         rdfs:label "Hauswirtschaft"@de ;
+                                         rdfs:label "Hauswirtschaft"@de ,
+                                                    "Hauswirtschaft (Schulfach)"@de ;
                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Hauswirtschaft"@de ;
                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://w3id.org/kim/schulfaecher/> .
 
@@ -10312,7 +10377,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000005> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000339> ;
-                                                 rdfs:label "Sozialkunde"@de .
+                                                 rdfs:label "Sozialkunde (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000361
@@ -10543,7 +10608,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <https://w3id.org/lehrplan/ontology/LP_00000560> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000001> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000004> ;
-                                                 rdfs:label "Griechisch"@de .
+                                                 rdfs:label "Griechisch"@de ,
+                                                            "Griechisch (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000561
@@ -10582,6 +10648,11 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 <https://w3id.org/lehrplan/ontology/LP_00000567> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000130> ;
                                                  rdfs:label "B-Kurs (RP)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000568
+<https://w3id.org/lehrplan/ontology/LP_00000568> rdf:type owl:NamedIndividual ;
+                                                 rdfs:label "Deutsche Gebärdensprache (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

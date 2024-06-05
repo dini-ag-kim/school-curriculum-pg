@@ -199,7 +199,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000462
 <https://w3id.org/lehrplan/ontology/LP_00000462> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "BE properties"@de .
+                                                 rdfs:label "BE property"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000474
@@ -253,6 +253,16 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                  rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000572> ;
                                                  rdfs:label "ist_niveau_stufe_von"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000581
+<https://w3id.org/lehrplan/ontology/LP_00000581> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000462> ;
+                                                 owl:propertyChainAxiom ( <https://w3id.org/lehrplan/ontology/LP_00000474>
+                                                                          <https://w3id.org/lehrplan/ontology/LP_00000580>
+                                                                          <https://w3id.org/lehrplan/ontology/LP_00000026>
+                                                                        ) ;
+                                                 rdfs:label "hat_jahrgangsstufe_aus_niveau"@de .
 
 
 #################################################################
@@ -7393,221 +7403,13 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000573
 <https://w3id.org/lehrplan/ontology/LP_00000573> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ rdf:type owl:Class ;
-                                                                       owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000001>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000002>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000464>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000004>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000466>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000465>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000467>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000468>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                   )
-                                                                     ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000020> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
                                                  rdfs:label "BOA"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000574
 <https://w3id.org/lehrplan/ontology/LP_00000574> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ rdf:type owl:Class ;
-                                                                       owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000001>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000002>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000465>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000001>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000464>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000004>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000466>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000467>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000468>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
-                                                                                                            ]
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
-                                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000469>
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
-                                                                                   )
-                                                                     ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000020> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
                                                  rdfs:label "BBR"@de .
 
 
@@ -10838,6 +10640,11 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000583> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000588> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000594> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000601> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000608> ;
                                                  rdfs:label "Niveaustufe A (BB)"@de .
 
 
@@ -10848,6 +10655,11 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000584> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000589> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000595> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000602> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000609> ;
                                                  rdfs:label "Niveaustufe B (BB)"@de .
 
 
@@ -10858,6 +10670,11 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000585> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000590> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000596> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000603> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000610> ;
                                                  rdfs:label "Niveaustufe C (BB)"@de .
 
 
@@ -10868,6 +10685,11 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000586> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000591> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000597> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000604> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000611> ;
                                                  rdfs:label "Niveaustufe D (BB)"@de .
 
 
@@ -10878,6 +10700,11 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000587> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000592> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000598> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000605> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000612> ;
                                                  rdfs:label "Niveaustufe E (BB)"@de .
 
 
@@ -10888,6 +10715,10 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000593> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000599> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000606> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000613> ;
                                                  rdfs:label "Niveaustufe F (BB)"@de .
 
 
@@ -10898,6 +10729,9 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                           <https://w3id.org/lehrplan/ontology/LP_00000443> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000600> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000607> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000614> ;
                                                  rdfs:label "Niveaustufe G (BB)"@de .
 
 
@@ -10950,6 +10784,597 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 ###  https://w3id.org/lehrplan/ontology/LP_00000568
 <https://w3id.org/lehrplan/ontology/LP_00000568> rdf:type owl:NamedIndividual ;
                                                  rdfs:label "Deutsche Gebärdensprache (Schulfach)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000583
+<https://w3id.org/lehrplan/ontology/LP_00000583> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000464> ;
+                                                 rdfs:label "BOA A"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000584
+<https://w3id.org/lehrplan/ontology/LP_00000584> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000465> ;
+                                                 rdfs:label "BOA B"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000585
+<https://w3id.org/lehrplan/ontology/LP_00000585> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000466> ;
+                                                 rdfs:label "BOA C"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000586
+<https://w3id.org/lehrplan/ontology/LP_00000586> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000467> ;
+                                                 rdfs:label "BOA D"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000587
+<https://w3id.org/lehrplan/ontology/LP_00000587> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000468> ;
+                                                 rdfs:label "BOA E"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000588
+<https://w3id.org/lehrplan/ontology/LP_00000588> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000464> ;
+                                                 rdfs:label "BBR A"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000589
+<https://w3id.org/lehrplan/ontology/LP_00000589> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000465> ;
+                                                 rdfs:label "BBR B"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000590
+<https://w3id.org/lehrplan/ontology/LP_00000590> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000466> ;
+                                                 rdfs:label "BBR C"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000591
+<https://w3id.org/lehrplan/ontology/LP_00000591> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000467> ;
+                                                 rdfs:label "BBR D"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000592
+<https://w3id.org/lehrplan/ontology/LP_00000592> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000468> ;
+                                                 rdfs:label "BBR E"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000593
+<https://w3id.org/lehrplan/ontology/LP_00000593> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000469> ;
+                                                 rdfs:label "BBR F"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000594
+<https://w3id.org/lehrplan/ontology/LP_00000594> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000464> ;
+                                                 rdfs:label "EBBR A"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000595
+<https://w3id.org/lehrplan/ontology/LP_00000595> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000465> ;
+                                                 rdfs:label "EBBR B"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000596
+<https://w3id.org/lehrplan/ontology/LP_00000596> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000466> ;
+                                                 rdfs:label "EBBR C"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000597
+<https://w3id.org/lehrplan/ontology/LP_00000597> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000467> ;
+                                                 rdfs:label "EBBR D"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000598
+<https://w3id.org/lehrplan/ontology/LP_00000598> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000468> ;
+                                                 rdfs:label "EBBR E"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000599
+<https://w3id.org/lehrplan/ontology/LP_00000599> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000469> ;
+                                                 rdfs:label "EBBR F"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000600
+<https://w3id.org/lehrplan/ontology/LP_00000600> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000470> ;
+                                                 rdfs:label "EBBR G"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000601
+<https://w3id.org/lehrplan/ontology/LP_00000601> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000464> ;
+                                                 rdfs:label "MSA A"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000602
+<https://w3id.org/lehrplan/ontology/LP_00000602> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000465> ;
+                                                 rdfs:label "MSA B"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000603
+<https://w3id.org/lehrplan/ontology/LP_00000603> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000466> ;
+                                                 rdfs:label "MSA C"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000604
+<https://w3id.org/lehrplan/ontology/LP_00000604> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000467> ;
+                                                 rdfs:label "MSA D"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000605
+<https://w3id.org/lehrplan/ontology/LP_00000605> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000468> ;
+                                                 rdfs:label "MSA E"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000606
+<https://w3id.org/lehrplan/ontology/LP_00000606> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000469> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ;
+                                                 rdfs:label "MSA F"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000607
+<https://w3id.org/lehrplan/ontology/LP_00000607> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000470> ;
+                                                 rdfs:label "MSA G"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000608
+<https://w3id.org/lehrplan/ontology/LP_00000608> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000464> ;
+                                                 rdfs:label "QualiPhase A"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000609
+<https://w3id.org/lehrplan/ontology/LP_00000609> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000465> ;
+                                                 rdfs:label "QualiPhase B"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000610
+<https://w3id.org/lehrplan/ontology/LP_00000610> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000466> ;
+                                                 rdfs:label "QualiPhase C"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000611
+<https://w3id.org/lehrplan/ontology/LP_00000611> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000467> ;
+                                                 rdfs:label "QualiPhase D"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000612
+<https://w3id.org/lehrplan/ontology/LP_00000612> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000061> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000062> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000468> ;
+                                                 rdfs:label "QualiPhase E"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000613
+<https://w3id.org/lehrplan/ontology/LP_00000613> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000469> ;
+                                                 rdfs:label "QualiPhase F"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000614
+<https://w3id.org/lehrplan/ontology/LP_00000614> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000470> ;
+                                                 rdfs:label "QualiPhase G"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000615
+<https://w3id.org/lehrplan/ontology/LP_00000615> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000063> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000572> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000578> <https://w3id.org/lehrplan/ontology/LP_00000616> ;
+                                                 rdfs:label "QualiPhase H"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000616
+<https://w3id.org/lehrplan/ontology/LP_00000616> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000615> ;
+                                                 rdfs:label "Niveaustufe H (BB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000
@@ -11119,7 +11544,13 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000009
 <https://w3id.org/lehrplan/ontology/LP_20000009> rdf:type owl:NamedIndividual ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000009> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000441> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000443> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000606> ;
                                                  rdfs:label "Jahrgangsstufe 9"@de .
 
 

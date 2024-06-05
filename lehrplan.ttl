@@ -4746,6 +4746,14 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000351
 :LP_00000351 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000342
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000480
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:subClassOf :LP_00000342 ;
              rdfs:label "Inhaltsaspekt (RP)"@de .
 

@@ -265,6 +265,12 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                  rdfs:label "hat_jahrgangsstufe_aus_niveau"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000619
+<https://w3id.org/lehrplan/ontology/LP_00000619> rdf:type owl:ObjectProperty ;
+                                                 rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000020> ;
+                                                 rdfs:label "für_schulstufe"@de .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -3464,6 +3470,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 <https://w3id.org/lehrplan/ontology/LP_00000261> rdf:type owl:Class ;
+                                                 rdfs:comment "Lehrplan Elemente sind Informationselemente die in einem Lehrplan zur Beschreibung des Lehrplans verwendet werden. Lehrplan Elemente können Funktionen und Rollen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
                                                  rdfs:label "Lehrplan Element"@de .
 
 
@@ -4941,6 +4948,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Rheinland-Pfalz"@de ;
                                                  rdfs:label "Element (RP)"@de .
 
 
@@ -6497,6 +6505,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Hamburg"@de ;
                                                  rdfs:label "Element (HH)"@de .
 
 
@@ -6573,6 +6582,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Bayern"@de ;
                                                  rdfs:label "Element (BY)"@de .
 
 
@@ -6612,6 +6622,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Berlin und Brandenburg"@de ;
                                                  rdfs:label "Element (BE/BB)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de .
 
@@ -7342,6 +7353,7 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000536
 <https://w3id.org/lehrplan/ontology/LP_00000536> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf die Vorgaben der KMK Bildungsstandards"@de ;
                                                  rdfs:label "Element (Bista)"@de .
 
 
@@ -7393,7 +7405,8 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000571
 <https://w3id.org/lehrplan/ontology/LP_00000571> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000503> .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
+                                                 rdfs:label "Lehrplan (Bista)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000572
@@ -8811,6 +8824,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Baden-Württemberg"@de ;
                                                  rdfs:label "Element (BW)"@de .
 
 
@@ -8940,6 +8954,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Hessen"@de ;
                                                  rdfs:label "Element (HE)"@de .
 
 
@@ -8968,6 +8983,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Mecklenburg-Vorpommern"@de ;
                                                  rdfs:label "Element (MV)"@de .
 
 
@@ -8996,6 +9012,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Nordrhein-Westfalen"@de ;
                                                  rdfs:label "Element (NW)"@de .
 
 
@@ -9024,6 +9041,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Sachsen"@de ;
                                                  rdfs:label "Element (SN)"@de .
 
 
@@ -9052,6 +9070,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Sachsen-Anhalt"@de ;
                                                  rdfs:label "Element (ST)"@de .
 
 
@@ -9080,6 +9099,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Thüringen"@de ;
                                                  rdfs:label "Element (TH)"@de .
 
 
@@ -9108,6 +9128,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Niedersachsen"@de ;
                                                  rdfs:label "Element (NI)"@de .
 
 
@@ -9122,6 +9143,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan des Saarland"@de ;
                                                  rdfs:label "Element (SL)"@de .
 
 
@@ -9136,6 +9158,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Schleswig-Holstein" ;
                                                  rdfs:label "Element (SH)"@de .
 
 
@@ -11647,6 +11670,13 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000615> ;
                                                  rdfs:label "Niveaustufe H (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000618
+<https://w3id.org/lehrplan/ontology/LP_00000618> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000020> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000064> ;
+                                                 rdfs:label "Sekundarbereich I Instanz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000

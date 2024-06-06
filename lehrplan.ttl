@@ -3388,7 +3388,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000268
 :LP_00000268 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
+             rdfs:subClassOf :LP_00000536 ;
              rdfs:label "Leitidee (Bista)"@de .
 
 
@@ -6315,7 +6315,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:label "Element (BE/BB)"@de .
+             rdfs:label "Element (BE/BB)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000442
@@ -7069,37 +7070,98 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000572
 :LP_00000572 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000441 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000441
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:someValuesFrom :LP_00000009
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000578 ;
+                                                      owl:someValuesFrom :LP_00000443
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:comment """Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird.
+Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."""@de ;
              rdfs:label "Abschluss Niveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000573
 :LP_00000573 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000572 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000572
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:someValuesFrom :LP_00000081
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "BOA"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000574
 :LP_00000574 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000572 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000572
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000135
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000231
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "BBR"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000575
 :LP_00000575 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000572 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000572
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000136
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000232
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "EBBR"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000576
 :LP_00000576 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000572 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000572
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000137
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000233
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "MSA"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000577
 :LP_00000577 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000572 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000572
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000058 ;
+                                                      owl:hasValue :LP_00000234
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:comment "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de ;
              rdfs:label "QualiPhase"@de .
 
 

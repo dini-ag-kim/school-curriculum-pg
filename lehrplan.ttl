@@ -6268,6 +6268,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
 :LP_00000433 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000438
                                                         [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000008 ;
+                                                          owl:someValuesFrom :LP_00000342
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000029 ;
                                                           owl:hasValue :LP_30000046
                                                         ]
@@ -6400,8 +6404,7 @@ grundlegendes Niveau:
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:label "Lehrplan (BE)"@de ,
-                        "curriculum"@en .
+             rdfs:label "Lehrplan (BE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000445
@@ -7097,7 +7100,7 @@ Instances of this class provide text that describes a particular competence (e.g
                              ] ;
              rdfs:comment """Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird.
 Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."""@de ;
-             rdfs:label "Abschluss Niveau"@de .
+             rdfs:label "Abschluss Niveau (BE/BB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000573

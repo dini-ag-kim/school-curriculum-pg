@@ -3513,7 +3513,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000268
 <https://w3id.org/lehrplan/ontology/LP_00000268> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000505> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000536> ;
                                                  rdfs:label "Leitidee (Bista)"@de .
 
 
@@ -6612,7 +6612,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:label "Element (BE/BB)"@de .
+                                                 rdfs:label "Element (BE/BB)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000442
@@ -7397,37 +7398,98 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000572
 <https://w3id.org/lehrplan/ontology/LP_00000572> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000441> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000009>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000578> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000443>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:comment """Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird.
+Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."""@de ;
                                                  rdfs:label "Abschluss Niveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000573
 <https://w3id.org/lehrplan/ontology/LP_00000573> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000081>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "BOA"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000574
 <https://w3id.org/lehrplan/ontology/LP_00000574> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000135>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000231>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "BBR"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000575
 <https://w3id.org/lehrplan/ontology/LP_00000575> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000136>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000232>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "EBBR"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000576
 <https://w3id.org/lehrplan/ontology/LP_00000576> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000137>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000233>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "MSA"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000577
 <https://w3id.org/lehrplan/ontology/LP_00000577> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000572> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000234>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:comment "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de ;
                                                  rdfs:label "QualiPhase"@de .
 
 
@@ -11023,6 +11085,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000135> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000231> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/1> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000464> ;
                                                  rdfs:label "BBR A"@de .
@@ -11042,6 +11106,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000135> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000231> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/2> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000465> ;
                                                  rdfs:label "BBR B"@de .
@@ -11061,6 +11127,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000135> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000231> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/3> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000466> ;
                                                  rdfs:label "BBR C"@de .
@@ -11082,6 +11150,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000135> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000231> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/4> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000467> ;
                                                  rdfs:label "BBR D"@de .
@@ -11101,6 +11171,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000009> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000135> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000231> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/5> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000468> ;
                                                  rdfs:label "BBR E"@de .
@@ -11119,6 +11191,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000135> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000231> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/6> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000469> ;
                                                  rdfs:label "BBR F"@de .
@@ -11136,6 +11210,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/1> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000464> ;
                                                  rdfs:label "EBBR A"@de .
@@ -11155,6 +11231,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/2> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000465> ;
                                                  rdfs:label "EBBR B"@de .
@@ -11174,6 +11252,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/3> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000466> ;
                                                  rdfs:label "EBBR C"@de .
@@ -11195,6 +11275,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/4> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000467> ;
                                                  rdfs:label "EBBR D"@de .
@@ -11213,6 +11295,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/5> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000468> ;
                                                  rdfs:label "EBBR E"@de .
@@ -11232,6 +11316,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/6> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000469> ;
                                                  rdfs:label "EBBR F"@de .
@@ -11249,6 +11335,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000136> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000232> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/7> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000470> ;
                                                  rdfs:label "EBBR G"@de .
@@ -11266,6 +11354,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/1> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000464> ;
                                                  rdfs:label "MSA A"@de .
@@ -11284,6 +11374,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/2> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000465> ;
                                                  rdfs:label "MSA B"@de .
@@ -11303,6 +11395,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/3> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000466> ;
                                                  rdfs:label "MSA C"@de .
@@ -11322,6 +11416,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000006> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/4> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000467> ;
                                                  rdfs:label "MSA D"@de .
@@ -11343,6 +11439,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/5> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000468> ;
                                                  rdfs:label "MSA E"@de .
@@ -11360,6 +11458,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/6> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000469> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000009> ;
@@ -11379,6 +11479,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000137> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000233> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/7> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000470> ;
                                                  rdfs:label "MSA G"@de .
@@ -11396,6 +11498,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/1> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000464> ;
                                                  rdfs:label "QualiPhase A"@de .
@@ -11414,6 +11517,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/2> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000465> ;
                                                  rdfs:label "QualiPhase B"@de .
@@ -11433,6 +11537,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/3> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000466> ;
                                                  rdfs:label "QualiPhase C"@de .
@@ -11452,6 +11557,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000006> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/4> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000467> ;
                                                  rdfs:label "QualiPhase D"@de .
@@ -11472,6 +11578,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/5> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000468> ;
                                                  rdfs:label "QualiPhase E"@de .
@@ -11489,6 +11596,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/6> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000469> ;
                                                  rdfs:label "QualiPhase F"@de .
@@ -11506,6 +11614,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/7> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000470> ;
                                                  rdfs:label "QualiPhase G"@de .
@@ -11523,6 +11632,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000058> <https://w3id.org/lehrplan/ontology/LP_00000234> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000578> <https://lehrplan.yovisto.com/resource/lp/bb/level/8> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000616> ;
                                                  rdfs:label "QualiPhase H"@de .

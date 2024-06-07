@@ -6529,7 +6529,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000431
 <https://w3id.org/lehrplan/ontology/LP_00000431> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000622> ,
+                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                               owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
@@ -7507,6 +7508,21 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
                                                                  ] ;
                                                  rdfs:comment "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de ;
                                                  rdfs:label "QualiPhase"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000622
+<https://w3id.org/lehrplan/ontology/LP_00000622> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 rdfs:label "TestBeschreibung"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
@@ -8789,16 +8805,15 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002048
 <https://w3id.org/lehrplan/ontology/LP_00002048> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000434>
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
-                                                                                            ]
-                                                                                          ) ;
-                                                                       rdf:type owl:Class
-                                                                     ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000434> ;
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000434>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Kompetenzerwartungen und Inhalte (BY)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> """TODO: Funktion zuordnen
 
@@ -8807,7 +8822,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002049
 <https://w3id.org/lehrplan/ontology/LP_00002049> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002048> ,
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000434>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -9394,7 +9409,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                    rdf:type owl:Class
                                                                  ] ;
                                                  rdfs:comment "MEM-Teilkompetenzbereich in Deutsch Primar" ;
-                                                 rdfs:label "'Teilaufgabenbereiche' (HB)"@de .
+                                                 rdfs:label "Teilaufgabenbereiche (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002128
@@ -9454,7 +9469,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                    rdf:type owl:Class
                                                                  ] ;
                                                  rdfs:comment "MEM-Teilkompetenzbereich in Deutsch Sek I und Sek II" ;
-                                                 rdfs:label "'Teilthemenbereich' (HB)"@de .
+                                                 rdfs:label "Teilthemenbereich (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002132
@@ -9468,8 +9483,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:comment "MEM-Kompetenz Mathe Sek I und Sek II; Deutsch Sek I und Sek II" ;
-                                                 rdfs:label "'Kompetenzen' (HB)"@de .
+                                                 rdfs:label "Kompetenzen (HB)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "MEM-Kompetenz Mathe Sek I und Sek II; Deutsch Sek I und Sek II" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002133
@@ -9513,8 +9528,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:comment "MEM-Kompetenzbereich in Mathe Sek I und Sek II" ;
-                                                 rdfs:label "'Kompetenzbereich' (HB)"@de .
+                                                 rdfs:label "Kompetenzbereich (HB)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "MEM-Kompetenzbereich in Mathe Sek I und Sek II" .
 
 
 #################################################################

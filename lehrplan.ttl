@@ -7181,6 +7181,20 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
              rdfs:label "QualiPhase"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000622
+:LP_00000622 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000342
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000494
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000342 ;
+             rdfs:label "TestBeschreibung"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 :LP_00002003 rdf:type owl:Class ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
@@ -8386,15 +8400,14 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002048
 :LP_00002048 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000434
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000479
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000434 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Kompetenzerwartungen und Inhalte (BY)"@de ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> """TODO: Funktion zuordnen
 
@@ -8958,7 +8971,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                rdf:type owl:Class
                              ] ;
              rdfs:comment "MEM-Teilkompetenzbereich in Deutsch Primar" ;
-             rdfs:label "'Teilaufgabenbereiche' (HB)"@de .
+             rdfs:label "Teilaufgabenbereiche (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002128
@@ -9014,7 +9027,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                rdf:type owl:Class
                              ] ;
              rdfs:comment "MEM-Teilkompetenzbereich in Deutsch Sek I und Sek II" ;
-             rdfs:label "'Teilthemenbereich' (HB)"@de .
+             rdfs:label "Teilthemenbereich (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002132
@@ -9027,8 +9040,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:comment "MEM-Kompetenz Mathe Sek I und Sek II; Deutsch Sek I und Sek II" ;
-             rdfs:label "'Kompetenzen' (HB)"@de .
+             rdfs:label "Kompetenzen (HB)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "MEM-Kompetenz Mathe Sek I und Sek II; Deutsch Sek I und Sek II" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002133
@@ -9069,8 +9082,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:comment "MEM-Kompetenzbereich in Mathe Sek I und Sek II" ;
-             rdfs:label "'Kompetenzbereich' (HB)"@de .
+             rdfs:label "Kompetenzbereich (HB)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "MEM-Kompetenzbereich in Mathe Sek I und Sek II" .
 
 
 #################################################################

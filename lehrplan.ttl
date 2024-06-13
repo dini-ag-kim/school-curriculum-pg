@@ -300,124 +300,11 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00002136
-:LP_00002136 rdf:type owl:Class ;
+###  https://w3id.org/lehrplan/ontology#LP_00002156
+:LP_00002156 rdf:type owl:Class ;
+             owl:equivalentClass :LP_00002137 ;
              rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Lehrplanfragment (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002137
-:LP_00002137 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Bildungsstandards im Unterricht (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002138
-:LP_00002138 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Konkretisierung der Standards (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002139
-:LP_00002139 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Kompetenzbereich (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002140
-:LP_00002140 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Kompetenzen (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002141
-:LP_00002141 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Anforderungsbereiche (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002142
-:LP_00002142 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Unterrichtsinhalte (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002143
-:LP_00002143 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Themenbereiche (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002144
-:LP_00002144 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Verbindliche Inhalte (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002145
-:LP_00002145 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Hinweise und Anregungen (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002146
-:LP_00002146 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Verknüpfung von Inhalten und Kompetenzen (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002147
-:LP_00002147 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Teilthemenbereich (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002148
-:LP_00002148 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Teilkompetenzbereich (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002149
-:LP_00002149 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Möglichkeiten der Verknüpfung (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002150
-:LP_00002150 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Arbeitsbereich (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002151
-:LP_00002151 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Konkretisierung (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002152
-:LP_00002152 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Abschluss (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002153
-:LP_00002153 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "KMK-Bildungsstandards (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002154
-:LP_00002154 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002118 ;
-             rdfs:label "Teilkompetenzbereich (HB)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002155
-:LP_00002155 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Gegenstandsbereich (MV)"@de .
+             rdfs:label "Abschlussbezogene Standards (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
@@ -3501,7 +3388,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 :LP_00000265 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+             owl:equivalentClass :LP_00002081 ,
+                                 [ owl:intersectionOf ( :LP_00000261
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
                                                           owl:someValuesFrom :LP_00000335
@@ -9204,6 +9092,181 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                              ] ;
              rdfs:label "Kompetenzbereich (HB)"@de ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "MEM-Kompetenzbereich in Mathe Sek I und Sek II" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002136
+:LP_00002136 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Lehrplanfragment (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002137
+:LP_00002137 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Bildungsstandards im Unterricht (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002138
+:LP_00002138 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Konkretisierung der Standards (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002139
+:LP_00002139 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000494
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzbereich (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002140
+:LP_00002140 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzen (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002141
+:LP_00002141 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Anforderungsbereiche (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommen nur in dem Fach Mathematik vor" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002142
+:LP_00002142 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Unterrichtsinhalte (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002143
+:LP_00002143 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Themenbereiche (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Gleichzusetzen mit Arbeitsbereich und Gegenstandsfeld in anderen Fächern." .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002144
+:LP_00002144 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Verbindliche Inhalte (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002145
+:LP_00002145 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Hinweise und Anregungen (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002146
+:LP_00002146 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Verknüpfung von Inhalten und Kompetenzen (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002147
+:LP_00002147 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000498
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Teilthemenbereich (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002148
+:LP_00002148 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000496
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Teilkompetenzbereich (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002149
+:LP_00002149 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Möglichkeiten der Verknüpfung (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002150
+:LP_00002150 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Arbeitsbereich (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommt nur im Fach Deutsch vor. Gleichzusetzen mit Themenbereich und Gegenstandsfeld in anderen Fächern." .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002151
+:LP_00002151 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Konkretisierung (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002152
+:LP_00002152 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Abschluss (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Nur relevant in Sek I Regionalschule und Gesamtschule" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002153
+:LP_00002153 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "KMK-Bildungsstandards (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Bisher nur in Fach Deutsch, Schulstufe Sek II gefunden. Ist gleichzusetzen mit Kompetenzen." .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002154
+:LP_00002154 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002118 ;
+             rdfs:label "Teilkompetenzbereich (HB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002155
+:LP_00002155 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Gegenstandsfeld (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommt nur im Fach Kunst vor. Gleichzusetzen mit Themenbereich und Arbeitsbereich in anderen Fächern." .
 
 
 #################################################################

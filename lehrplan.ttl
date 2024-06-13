@@ -273,6 +273,13 @@ rdfs:label rdf:type owl:AnnotationProperty .
              rdfs:label "für_schulstufe"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00000626
+:LP_00000626 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:label "has_key"@de .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -300,153 +307,9 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00001001
-:LP_00001001 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ;
-             rdfs:label "Lehrplanfragment (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001002
-:LP_00001002 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000497
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Inhaltsfelder (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001003
-:LP_00001003 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000480
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Schwerpunktsetzungen (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001004
-:LP_00001004 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Teilinhaltsfelder (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001005
-:LP_00001005 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000494
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kompetenzbereiche (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001006
-:LP_00001006 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Teilkompetenzbereiche (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001007
-:LP_00001007 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Lernzeitbezogene Kompetenzerwartungen (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001008
-:LP_00001008 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ;
-             rdfs:label "Kursphase (HE)"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "relevant für Sek II" .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001009
-:LP_00001009 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Themen (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001010
-:LP_00001010 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000497
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Themenfelder (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001011
-:LP_00001011 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kompetenzen (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001012
-:LP_00001012 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ;
-             rdfs:label "Bezüge zu den Kompetenzbereichen (HE)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
+             owl:disjointWith :LP_00000261 ;
              rdfs:label "Schulfach"@de .
 
 
@@ -3507,6 +3370,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Kompetenzbereich"@de .
 
 
@@ -3520,14 +3384,14 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:subClassOf :LP_00000265 ;
              rdfs:comment "Lehrplan Element, dass eine Kompetenz beschreibt."@de ;
              rdfs:label "MEM-Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 :LP_00000265 rdf:type owl:Class ;
-             owl:equivalentClass :LP_00002081 ,
-                                 [ owl:intersectionOf ( :LP_00000261
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
                                                           owl:someValuesFrom :LP_00000335
@@ -4803,6 +4667,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Lerninhalt"@de .
 
 
@@ -6372,7 +6237,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                :LP_20000002
                                              )
                                  ] ;
-             rdfs:subClassOf :LP_00000426 ;
+             rdfs:subClassOf :LP_00000009 ;
              rdfs:label "Ende Jahrgangsstufe 2 (HH)"@de .
 
 
@@ -7339,6 +7204,148 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
                                  ] ;
              rdfs:subClassOf :LP_00000342 ;
              rdfs:label "TestBeschreibung"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001001
+:LP_00001001 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ;
+             rdfs:label "Lehrplanfragment (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001002
+:LP_00001002 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Inhaltsfelder (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001003
+:LP_00001003 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ,
+                             [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Schwerpunktsetzungen (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001004
+:LP_00001004 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ,
+                             [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000498
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Teilinhaltsfelder (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001005
+:LP_00001005 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000494
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzbereiche (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001006
+:LP_00001006 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ,
+                             [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000496
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Teilkompetenzbereiche (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001007
+:LP_00001007 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ,
+                             [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Lernzeitbezogene Kompetenzerwartungen (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001008
+:LP_00001008 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ;
+             rdfs:label "Kursphase (HE)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "relevant für Sek II" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001009
+:LP_00001009 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ,
+                             [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000498
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Themen (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001010
+:LP_00001010 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ,
+                             [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Themenfelder (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001011
+:LP_00001011 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzen (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001012
+:LP_00001012 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002076 ;
+             rdfs:label "Bezüge zu den Kompetenzbereichen (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
@@ -8926,6 +8933,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Teilkompetenzbereich"@de .
 
 
@@ -8939,6 +8947,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Thema"@de .
 
 
@@ -9652,56 +9661,71 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/1
 <https://lehrplan.yovisto.com/resource/lp/bb/level/1> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000464 .
+                                                      owl:sameAs :LP_00000464 ;
+                                                      rdfs:label "A" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000464
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/2
 <https://lehrplan.yovisto.com/resource/lp/bb/level/2> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000465 .
+                                                      owl:sameAs :LP_00000465 ;
+                                                      rdfs:label "B" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000465
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/3
 <https://lehrplan.yovisto.com/resource/lp/bb/level/3> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000466 .
+                                                      owl:sameAs :LP_00000466 ;
+                                                      rdfs:label "C" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000466
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/4
 <https://lehrplan.yovisto.com/resource/lp/bb/level/4> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000467 .
+                                                      owl:sameAs :LP_00000467 ;
+                                                      rdfs:label "D" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000467
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/5
 <https://lehrplan.yovisto.com/resource/lp/bb/level/5> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000468 .
+                                                      owl:sameAs :LP_00000468 ;
+                                                      rdfs:label "E" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000468
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/6
 <https://lehrplan.yovisto.com/resource/lp/bb/level/6> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000469 .
+                                                      owl:sameAs :LP_00000469 ;
+                                                      rdfs:label "F" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000469
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/7
 <https://lehrplan.yovisto.com/resource/lp/bb/level/7> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000470 .
+                                                      owl:sameAs :LP_00000470 ;
+                                                      rdfs:label "G" ;
+                                                      <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000470
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/8
 <https://lehrplan.yovisto.com/resource/lp/bb/level/8> rdf:type owl:NamedIndividual ;
-                                                      owl:sameAs :LP_00000616 .
+                                                      owl:sameAs :LP_00000616 ;
+                                                      rdfs:label "H" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000616
@@ -10535,13 +10559,20 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 ###  https://w3id.org/lehrplan/ontology/LP_00000616
 :LP_00000616 rdf:type owl:NamedIndividual ,
                       :LP_00000443 ;
-             rdfs:label "Niveaustufe H (BB)"@de .
+             rdfs:label "Niveaustufe H (BB)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000618
 :LP_00000618 rdf:type owl:NamedIndividual ,
                       :LP_00000064 ;
              rdfs:label "Sekundarbereich I Instanz"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000625
+:LP_00000625 rdf:type owl:NamedIndividual ,
+                      :LP_00000426 ;
+             rdfs:label "lpe1"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002000
@@ -10812,6 +10843,28 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LP_00000001
+                :LP_00000009
+                :LP_00000020
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LP_00000001
+                :LP_00000019
+                :LP_00000040
+                :LP_00000111
+                :LP_00000130
+                :LP_00000261
+                :LP_00000438
+                :LP_00000478
+                :LP_00000540
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :LP_00000002

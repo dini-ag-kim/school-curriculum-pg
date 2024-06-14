@@ -4809,7 +4809,14 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000353
 :LP_00000353 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000342 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000342
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplan Fragment (RP)"@de .
 
 
@@ -6610,8 +6617,9 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000482
 :LP_00000482 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000478 ;
+             rdfs:comment "Lehrplanelemente, die diese Funktion inne haben, strukturieren die Lehrpläne."@de ;
              rdfs:label "Strukturierungsfunktion"@de ;
-             <http://www.w3.org/2004/02/skos/core#example> "Lehrplanelemente, die diese Funktion inne haben, strukturieren die Lehrpläne."@de .
+             <http://www.w3.org/2004/02/skos/core#example> "Überschriften, Kapitel, Themenfelder, Kompetenzbereiche"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000493
@@ -7209,13 +7217,25 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
 ###  https://w3id.org/lehrplan/ontology/LP_00000627
 :LP_00000627 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000482 ;
-             rdfs:comment "Ist eine Stukturierungsfunktion, die eine Lehrplanelement ine haben kann. Sie kann verwendet werden, um sich auf einen bestimmtern Teil des Lehrplans zu beziehen."@de ;
-             rdfs:label "Lehrplanfragmentfunktion"@de .
+             rdfs:comment """Ist eine Stukturierungsfunktion, die ein Lehrplanelement inne haben kann. 
+Ein Lehrplanelement, das diese Funktion inne hat, identifiziert einen Teil des Lehrplan. Die Art des Lehrplanteils muss nicht näher spezifizert sein.
+
+Wenngleich diese Definition auch auf Kompetenzbereiche oder Themenfelder anwendbar ist, ist sie ihnen ausdrücklich nicht gleichzusetzen, über- oder unterzuordnen. 
+Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die anderen Strukturierungsfunktionen spezifiziert werden können."""@de ;
+             rdfs:label "Lehrplanfragmentfunktion"@de ;
+             <http://www.w3.org/2004/02/skos/core#example> "Funktion eines Lehrplanelements, das z.B. ein Kapitel, einen Absatz, oder bestimmte Seiten des Lehrplans identifiziert."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001001
 :LP_00001001 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplanfragment (HE)"@de .
 
 
@@ -8522,7 +8542,14 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002044
 :LP_00002044 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000434 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplan Fragment (BY)"@de .
 
 
@@ -8617,7 +8644,14 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002052
 :LP_00002052 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002051 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002051
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplan Fragment (BW)"@de .
 
 
@@ -8998,7 +9032,14 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002110
 :LP_00002110 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002089 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002089
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplan Fragment (SN)"@de .
 
 
@@ -9086,7 +9127,14 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002122
 :LP_00002122 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002118 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplan Fragment (HB)"@de .
 
 
@@ -9250,7 +9298,14 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002136
 :LP_00002136 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Lehrplanfragment (MV)"@de .
 
 

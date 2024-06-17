@@ -307,6 +307,40 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
+###  https://w3id.org/lehrplan/ontology#LP_00001013
+:LP_00001013 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00001014
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000261 ;
+             rdfs:label "MEM-Hinweis"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001014
+:LP_00001014 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000493 ;
+             rdfs:label "Hinweisbeschreibungsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001015
+:LP_00001015 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000627
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000261 ;
+             rdfs:label "MEM-Lehrplanfragment"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;
@@ -3370,7 +3404,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Kompetenzbereich"@de .
 
 
@@ -3384,21 +3417,13 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000265 ;
              rdfs:comment "Lehrplan Element, dass eine Kompetenz beschreibt."@de ;
              rdfs:label "MEM-Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 :LP_00000265 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000335
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
+             rdfs:subClassOf :LP_00000261 ;
              rdfs:comment "Lehrplan Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Lehrplan Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de ;
              rdfs:label "MEM-Fachniveau"@de .
 
@@ -4667,7 +4692,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Lerninhalt"@de .
 
 
@@ -8974,7 +8998,6 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Teilkompetenzbereich"@de .
 
 
@@ -8988,7 +9011,6 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000265 ;
              rdfs:label "MEM-Thema"@de .
 
 
@@ -9383,7 +9405,14 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002145
 :LP_00002145 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00001014
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Hinweise und Anregungen (MV)"@de .
 
 

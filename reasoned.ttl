@@ -7173,7 +7173,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002081> ;
-                                                 rdfs:label "Lesitungskurs (MV)"@de .
+                                                 rdfs:label "Leistungskurs (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000521
@@ -9754,13 +9754,32 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 ###  https://w3id.org/lehrplan/ontology/LP_00002137
 <https://w3id.org/lehrplan/ontology/LP_00002137> rdf:type owl:Class ;
                                                  owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002156> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Bildungsstandards im Unterricht (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002138
 <https://w3id.org/lehrplan/ontology/LP_00002138> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:comment """Ist ein Lehrplanelement in MV, das als Lehrplanfragment eine Strukturierungsfunktion hat. 
+
+Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht um eine Lerninhaltsbeschreibung handelt, welche Beispiele zur Umsetzung der Kompetenzen liefert.""" ;
                                                  rdfs:label "Konkretisierung der Standards (MV)"@de .
 
 
@@ -9801,7 +9820,15 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002142
 <https://w3id.org/lehrplan/ontology/LP_00002142> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Unterrichtsinhalte (MV)"@de .
 
 
@@ -9822,7 +9849,15 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002144
 <https://w3id.org/lehrplan/ontology/LP_00002144> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Verbindliche Inhalte (MV)"@de .
 
 
@@ -9897,7 +9932,20 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002151
 <https://w3id.org/lehrplan/ontology/LP_00002151> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:comment """Ist ein Lehrplanelement, das in MV nur im Fach Deutsch in der Sek I vorkommt. 
+
+Hat die Funktion einer Lerninhaltsbeschreibung, liefert Beispiele zur Umsetzung der zuvor beschriebenen Kompetenzen.
+
+Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich hierbei nicht um ein Lehrplanfragment handelt, welches eine Strukturierungsfunktion hat.""" ;
                                                  rdfs:label "Konkretisierung (MV)"@de .
 
 
@@ -9910,7 +9958,15 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002153
 <https://w3id.org/lehrplan/ontology/LP_00002153> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "KMK-Bildungsstandards (MV)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Bisher nur in Fach Deutsch, Schulstufe Sek II gefunden. Ist gleichzusetzen mit Kompetenzen." .
 
@@ -9938,7 +9994,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002156
 <https://w3id.org/lehrplan/ontology/LP_00002156> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002080> ;
                                                  rdfs:label "Abschlussbezogene Standards (MV)"@de .
 
 

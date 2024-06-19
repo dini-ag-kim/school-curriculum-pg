@@ -9085,26 +9085,69 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002054
 <https://w3id.org/lehrplan/ontology/LP_00002054> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
-                                                 rdfs:label "Prozessbezogene Kompetenzen (BW)"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Prozessbezogene Kompetenzen (BW)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Strukturierungselement" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002055
 <https://w3id.org/lehrplan/ontology/LP_00002055> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
-                                                 rdfs:label "Standards für inhaltsbezogene Kompetenzen (BW)"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Standards für inhaltsbezogene Kompetenzen (BW)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Strukturierungselement" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002056
 <https://w3id.org/lehrplan/ontology/LP_00002056> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000500>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Prozessbezogener Kompetenzbereich (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002057
 <https://w3id.org/lehrplan/ontology/LP_00002057> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
-                                                 rdfs:label "Prozessbezogene Kompetenz' (BW)"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000500>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Prozessbezogene Kompetenz (BW)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Kompetenzberschreibungselement" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002058
@@ -9115,31 +9158,91 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002059
 <https://w3id.org/lehrplan/ontology/LP_00002059> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Inhaltsbezogener Kompetenzbereich (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002060
 <https://w3id.org/lehrplan/ontology/LP_00002060> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Denkanstöße (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002061
 <https://w3id.org/lehrplan/ontology/LP_00002061> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Teilkompetenzen (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002062
 <https://w3id.org/lehrplan/ontology/LP_00002062> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002104> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000496>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Inhaltsbezogener Teilkompetenzbereich (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002063
 <https://w3id.org/lehrplan/ontology/LP_00002063> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Leitidee (BW)"@de .
 
 
@@ -9647,8 +9750,17 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002125
 <https://w3id.org/lehrplan/ontology/LP_00002125> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002118> ;
-                                                 rdfs:label "Standards (HB)"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002118>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Standards (HB)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Strukturierungselement" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002126
@@ -9959,7 +10071,7 @@ Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht u
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Verknüpfung von Inhalten und Kompetenzen (MV)"@de .
+                                                 rdfs:label "Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002147
@@ -10060,7 +10172,15 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002154
 <https://w3id.org/lehrplan/ontology/LP_00002154> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002118> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002104> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002118>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000496>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:label "Teilkompetenzbereich (HB)"@de .
 
 
@@ -10086,30 +10206,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                  rdfs:label "Abschlussbezogene Standards (MV)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002157
-<https://w3id.org/lehrplan/ontology/LP_00002157> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                                 <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
-                                                                                        ]
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Kompetenzen zu den Inhalten (MV)"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "ist untergliedert zu Verknüpfungen von Inhalten und Kompetenzbereichen" .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00002158
 <https://w3id.org/lehrplan/ontology/LP_00002158> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000482> ;
-                                                 rdfs:label "Verknüpfungsfunktion"@de .
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000493> ;
+                                                 rdfs:label "Verknüpfungsbeschreibungsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002159
@@ -10160,7 +10260,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 ###  https://w3id.org/lehrplan/ontology/LP_00002163
 <https://w3id.org/lehrplan/ontology/LP_00002163> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
-                                                 rdfs:label "Beispiel für Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
+                                                 rdfs:label "Beispiel Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002164
@@ -10179,6 +10279,25 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
                                                  rdfs:label "Lehrplan (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002166
+<https://w3id.org/lehrplan/ontology/LP_00002166> rdf:type owl:Class ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002167>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "MEM-Beispiel"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002167
+<https://w3id.org/lehrplan/ontology/LP_00002167> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000493> ;
+                                                 rdfs:label "Beispielbeschreibungsfunktion"@de .
 
 
 #################################################################

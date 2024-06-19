@@ -307,73 +307,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00002157
-:LP_00002157 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000480
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kompetenzen zu den Inhalten (MV)"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "ist untergliedert zu Verknüpfungen von Inhalten und Kompetenzbereichen" .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002158
-:LP_00002158 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000482 ;
-             rdfs:label "Verknüpfungsfunktion"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002159
-:LP_00002159 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00002158
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "MEM-Verknüpfung"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002160
-:LP_00002160 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00002161
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "MEM-Erläuterung"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002161
-:LP_00002161 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000493 ;
-             rdfs:label "Erläuterungsbeschreibungsfunktion"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002162
-:LP_00002162 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00002161
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Erläuterung (MV)"@de .
+###  https://w3id.org/lehrplan/ontology#LP_00002163
+:LP_00002163 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Beispiel für Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
@@ -9577,6 +9514,14 @@ Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht u
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00002158
                                                     ]
                                                   ) ;
@@ -9605,10 +9550,15 @@ Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht u
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000496
                                                     ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Teilkompetenzbereich (MV)"@de .
+             rdfs:label "Teilkompetenzbereich (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Hat Funktion Themenfeldbereich in Primarstufe, Trennung hier zwischen Kompetenzen und lerninhalten nicht klar." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002149
@@ -9694,6 +9644,75 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 :LP_00002156 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00002080 ;
              rdfs:label "Abschlussbezogene Standards (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002157
+:LP_00002157 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzen zu den Inhalten (MV)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "ist untergliedert zu Verknüpfungen von Inhalten und Kompetenzbereichen" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002158
+:LP_00002158 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000482 ;
+             rdfs:label "Verknüpfungsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002159
+:LP_00002159 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00002158
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "MEM-Verknüpfung"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002160
+:LP_00002160 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00002161
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "MEM-Erläuterung"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002161
+:LP_00002161 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000493 ;
+             rdfs:label "Erläuterungsbeschreibungsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002162
+:LP_00002162 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00002161
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Erläuterung (MV)"@de .
 
 
 #################################################################

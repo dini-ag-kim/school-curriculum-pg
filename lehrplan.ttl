@@ -307,10 +307,22 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00002163
-:LP_00002163 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002080 ;
-             rdfs:label "Beispiel für Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
+###  https://w3id.org/lehrplan/ontology#LP_00002164
+:LP_00002164 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000438
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000008 ;
+                                                          owl:someValuesFrom :LP_00002080
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000052
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000438 ;
+             rdfs:label "Lehrplan (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
@@ -9540,7 +9552,7 @@ Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht u
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Teilthemenbereich (MV)"@de .
+             rdfs:label "Thema (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002148
@@ -9713,6 +9725,12 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "Erläuterung (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002163
+:LP_00002163 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002080 ;
+             rdfs:label "Beispiel für Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
 
 
 #################################################################

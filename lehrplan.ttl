@@ -307,43 +307,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00002164
-:LP_00002164 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000438
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000008 ;
-                                                          owl:someValuesFrom :LP_00002080
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000052
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000438 ;
-             rdfs:label "Lehrplan (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002166
-:LP_00002166 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00002167
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "MEM-Beispiel"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00002167
-:LP_00002167 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000493 ;
-             rdfs:label "Beispielbeschreibungsfunktion"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;
@@ -9815,13 +9778,15 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "MEM-Erläuterung"@de .
+             rdfs:label "MEM-Erläuterung"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "was ist der Unterschied zu Hinweis?" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002161
 :LP_00002161 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000493 ;
-             rdfs:label "Erläuterungsbeschreibungsfunktion"@de .
+             rdfs:label "Erläuterungsbeschreibungsfunktion"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "was  ist der Unterschied zu Hinweis?" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002162
@@ -9841,6 +9806,43 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 :LP_00002163 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00002080 ;
              rdfs:label "Beispiel Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002164
+:LP_00002164 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000438
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000008 ;
+                                                          owl:someValuesFrom :LP_00002080
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000052
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00000438 ;
+             rdfs:label "Lehrplan (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002166
+:LP_00002166 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00002167
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "MEM-Beispiel"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002167
+:LP_00002167 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000493 ;
+             rdfs:label "Beispielbeschreibungsfunktion"@de .
 
 
 #################################################################

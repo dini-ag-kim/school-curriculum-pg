@@ -97,11 +97,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/lehrplan/ontology#LP_00002168
-:LP_00002168 rdf:type owl:ObjectProperty ;
-             rdfs:label "ist_teil_von"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000008
 :LP_00000008 rdf:type owl:ObjectProperty ;
              rdfs:label "hat_teil"@de .
@@ -285,6 +280,11 @@ rdfs:label rdf:type owl:AnnotationProperty .
              rdfs:label "has_key"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00002168
+:LP_00002168 rdf:type owl:ObjectProperty ;
+             rdfs:label "ist_teil_von"@de .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -310,6 +310,32 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002169
+:LP_00002169 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Bildungsstandards (HE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002170
+:LP_00002170 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Lerninhalte (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
@@ -7334,7 +7360,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Themen (HE)"@de .
+             rdfs:label "Themenfelder (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001010
@@ -7348,25 +7374,19 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Themenfelder (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00001011
-:LP_00001011 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kompetenzen (HE)"@de .
+             rdfs:label "Übergeordnete Themenfelder (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001012
 :LP_00001012 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00002158
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:label "Bezüge zu den Kompetenzbereichen (HE)"@de .
 
 

@@ -338,6 +338,12 @@ rdfs:label rdf:type owl:AnnotationProperty .
              rdfs:label "Lerninhalte (HE)"@de .
 
 
+###  https://w3id.org/lehrplan/ontology#LP_00002171
+:LP_00002171 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000499 ;
+             rdfs:label "Domänenbezugsfunktion"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;
@@ -3420,7 +3426,18 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 :LP_00000265 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000261 ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000508
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000509
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
              rdfs:comment "Lehrplan Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Lehrplan Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de ;
              rdfs:label "MEM-Fachniveau"@de .
 

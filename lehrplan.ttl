@@ -3388,6 +3388,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:comment "Strukturierendes Lehrplanelement, dem kein anderer Kompetenzbereich übergeordnet ist und Kompetenzen untergeordnet sind." ;
              rdfs:label "MEM-Kompetenzbereich"@de .
 
 
@@ -3401,7 +3402,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:comment "Lehrplan Element, dass eine Kompetenz beschreibt."@de ;
+             rdfs:comment "Lehrplanelement, das eine Kompetenz beschreibt. Die kleinste Einheit der Beschreibung einer Fähigkeit die SuS haben sollen oder ihrer Ausführung. Enthält einen Operatoren."@de ;
              rdfs:label "MEM-Kompetenz"@de .
 
 
@@ -4668,7 +4669,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000330
 :LP_00000330 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Kompetenz Niveau"@de .
+             rdfs:label "Kompetenz Niveau"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Brauchen wir glaub ich nicht." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000331
@@ -4687,6 +4689,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:comment "Lehrplanelement, das einen Lerninhalt beschreibt. Die kleinste Einheit, die konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen beschreibt. Kann einer Kompetenz zugeordnet sein, kann aber auch alleine stehen." ;
              rdfs:label "MEM-Lerninhalt"@de .
 
 
@@ -4699,7 +4702,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000334
 :LP_00000334 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Wissensbestand"@de .
+             rdfs:label "Wissensbestand"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Entspricht in irgendweinem Bundesland unserem MEM-Lerninhalt, glaube ich." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000335
@@ -4738,7 +4742,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 :LP_00000338 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000505 ;
              rdfs:label "Anforderungs Niveau"@de ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "Progressionsstufe" .
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Progressionsstufe" ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Ist dasselbe wie Fachniveau. Hierbei geht es entweder um Grund- und Leistungskurs in Sek II oder in Sek I bei Schularten mit mehreren Abschlussmöglichkeiten um die verschiedenen abschlussbezogenen Anforderungsniveaus." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000339
@@ -7399,7 +7404,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000261 ;
-             rdfs:comment "Anwendungsvorschlag oder Vertiefungsvorschlag oder Spezifikation zu einem Lerninhalt."@de ;
+             rdfs:comment "Beispiel, Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de ;
              rdfs:label "MEM-Hinweis"@de .
 
 
@@ -9123,6 +9128,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:comment "Strukturierendes Lehrplanelement, das einem Kompetenzbereich untergeordnet ist und  Kompetenzen übergeordnet ist. Kann auch anderen Teilkompetenzbereichen über- oder untergeordnet sein." ;
              rdfs:label "MEM-Teilkompetenzbereich"@de .
 
 
@@ -9136,6 +9142,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:comment "Strukturierendes Lehrplanelement, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ;
              rdfs:label "MEM-Thema"@de .
 
 
@@ -9149,6 +9156,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:comment "Strukturierendes Lehrplanelement, dem kein anderes Thema übergeordnet ist. Beschreibt ein Thema für einen Bereich." ;
              rdfs:label "MEM-Themenfeld"@de .
 
 
@@ -9863,7 +9871,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "MEM-Beispiel"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas." .
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002167

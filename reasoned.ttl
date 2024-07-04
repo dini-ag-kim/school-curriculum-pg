@@ -3517,10 +3517,28 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
 <https://w3id.org/lehrplan/ontology/LP_00000265> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000530> ;
+                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000508>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000509>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
                                                  rdfs:comment "Lehrplan Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Lehrplan Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de ;
                                                  rdfs:label "MEM-Fachniveau"@de .
 
+
+###  https://w3id.org/lehrplan/ontology/LP_00000530
+<https://w3id.org/lehrplan/ontology/LP_00000530> owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00000531> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00000531
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000268
 <https://w3id.org/lehrplan/ontology/LP_00000268> rdf:type owl:Class ;
@@ -7322,7 +7340,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                        owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000267>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000265> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:label "MEM-Grundkurs"@de .
 
 
@@ -7340,7 +7358,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                        owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_00000266>
                                                                                  )
                                                                      ] ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000265> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:label "MEM-Leistungskurs"@de .
 
 
@@ -10328,6 +10346,12 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                  rdfs:label "Lerninhalte (HE)"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00002171
+<https://w3id.org/lehrplan/ontology/LP_00002171> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000499> ;
+                                                 rdfs:label "Domänenbezugsfunktion"@de .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -11610,6 +11634,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 <https://w3id.org/lehrplan/ontology/LP_00000266> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000530> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000531> ;
                                                  rdfs:label "Leistungsfach"@de .
 
@@ -11618,7 +11643,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 <https://w3id.org/lehrplan/ontology/LP_00000267> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000265> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000530> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000530> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000531> ;
                                                  rdfs:label "Grundfach"@de .
 
 

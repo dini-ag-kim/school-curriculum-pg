@@ -312,18 +312,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00001000
-:LP_00001000 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000438 ;
-             rdfs:label "Lehrplan (NW)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001001
-:LP_00001001 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000438 ;
-             rdfs:label "Lehrplan (ST)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;
@@ -436,7 +424,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000062 ;
-             rdfs:label "Primarbereich oBB"@de .
+             rdfs:label "Primarbereich oBE/BB"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000042
@@ -540,7 +528,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000062 ;
-             rdfs:label "Primarbereich BB"@de .
+             rdfs:label "Primarbereich BE/BB"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000062
@@ -7249,9 +7237,16 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
              <http://www.w3.org/2004/02/skos/core#example> "Funktion eines Lehrplanelements, das z.B. ein Kapitel, einen Absatz, oder bestimmte Seiten des Lehrplans identifiziert."@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_00001000
+:LP_00001000 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000438 ;
+             rdfs:label "Lehrplan (NW)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00001001
 :LP_00001001 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf :LP_00000438 ,
+                             [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000627
@@ -7259,7 +7254,8 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Lehrplanfragment (HE)"@de .
+             rdfs:label "Lehrplan (ST)"@de ,
+                        "Lehrplanfragment (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001002

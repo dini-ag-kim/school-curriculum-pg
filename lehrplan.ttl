@@ -312,141 +312,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00001002
-:LP_00001002 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000026 ;
-                                                      owl:hasValue :LP_20000001
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000026 ;
-                                                      owl:hasValue :LP_20000002
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000026 ;
-                                                      owl:hasValue :LP_20000003
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000026 ;
-                                                      owl:hasValue :LP_20000004
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000029 ;
-                                                      owl:hasValue :LP_30000047
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:comment "Schulart in Sachsen die den Primarbereich und Sekundarbereich I, also die Jahrgangsstufen von 1-10, umfasst." ;
-             rdfs:label "Oberschule+ Primar (SN)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001003
-:LP_00001003 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Erwartete Kompetenz (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001004
-:LP_00001004 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kernkompetenz (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001005
-:LP_00001005 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kompetenzbereich (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001006
-:LP_00001006 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000627
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Lehrplanfragment (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001007
-:LP_00001007 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Kerninhalt (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001008
-:LP_00001008 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000480
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Lerninhalt (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001009
-:LP_00001009 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000480
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Ergänzender Hinweis (NI)"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "genaue Klärung ob Beispiel o Hinweis (Deutsch Primar Lehrplan)" .
-
-
-###  https://w3id.org/lehrplan/ontology#LP_00001010
-:LP_00001010 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000497
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Lernbereich (NI)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;
@@ -7371,7 +7236,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001001
 :LP_00001001 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000438 ,
+             rdfs:subClassOf :LP_00002076 ,
                              [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -7380,8 +7245,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Lehrplan (ST)"@de ,
-                        "Lehrplanfragment (HE)"@de .
+             rdfs:label "Lehrplanfragment (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001002
@@ -7399,16 +7263,15 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001003
 :LP_00001003 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000480
+                                                      owl:someValuesFrom :LP_00000479
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Schwerpunktsetzungen (HE)"@de .
+             rdfs:label "Erwartete Kompetenz (NI)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001004
@@ -7435,48 +7298,25 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Kompetenzbereiche (HE)"@de .
+             rdfs:label "Kompetenzbereich (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001006
 :LP_00001006 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000627
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Teilkompetenzbereiche (HE)"@de .
+             rdfs:label "Lehrplanfragment (NI)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001007
 :LP_00001007 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000479
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:label "Lernzeitbezogene Kompetenzerwartungen (HE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00001008
-:LP_00001008 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ;
-             rdfs:label "Kursphase (HE)"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "relevant für Sek II" .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00001009
-:LP_00001009 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000498
@@ -7484,7 +7324,35 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Themenfelder (HE)"@de .
+             rdfs:label "Kerninhalt (NI)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001008
+:LP_00001008 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Lerninhalt (NI)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "relevant für Sek II" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00001009
+:LP_00001009 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Ergänzender Hinweis (NI)"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "genaue Klärung ob Beispiel o Hinweis (Deutsch Primar Lehrplan)" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001010

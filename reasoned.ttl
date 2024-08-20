@@ -5051,7 +5051,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Lehrplan Fragment (RP)"@de .
+                                                 rdfs:label "Lehrplanfragment (RP)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000364
@@ -7003,7 +7003,7 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000505
 <https://w3id.org/lehrplan/ontology/LP_00000505> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000111> ;
                                                  rdfs:label "unklar"@de .
 
 
@@ -9104,43 +9104,13 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Lehrplan Fragment (BW)"@de .
+                                                 rdfs:label "Lehrplanfragment (BW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002053
 <https://w3id.org/lehrplan/ontology/LP_00002053> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002051> ;
                                                  rdfs:label "Fach (BW)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002054
-<https://w3id.org/lehrplan/ontology/LP_00002054> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Prozessbezogene Kompetenzen (BW)"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Strukturierungselement" .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002055
-<https://w3id.org/lehrplan/ontology/LP_00002055> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002051>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Standards für inhaltsbezogene Kompetenzen (BW)"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Strukturierungselement" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002056
@@ -9918,17 +9888,9 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002134
 <https://w3id.org/lehrplan/ontology/LP_00002134> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000332> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002118>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002118> ;
                                                  rdfs:label "Kommentar (HB)"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "MEM-Lerninhalt in Mathe Sek II" .
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "In Mathe Sek II" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002135
@@ -10642,6 +10604,157 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                    rdf:type owl:Class
                                                                  ] ;
                                                  rdfs:label "Inhaltlicher Schwerpunkt (NW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002193
+<https://w3id.org/lehrplan/ontology/LP_00002193> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002118>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Sachgebiet (HB)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathe Sek II" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002194
+<https://w3id.org/lehrplan/ontology/LP_00002194> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002104> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000496>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Teilkompetenzbereich (RP)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002195
+<https://w3id.org/lehrplan/ontology/LP_00002195> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000351> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Inhalte zum Erwerb der Kompetenzen (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathematik Primar" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002196
+<https://w3id.org/lehrplan/ontology/LP_00002196> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000431> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000622> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000501>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Leitidee (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "nur in Mathematik (s. Bistas)" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002197
+<https://w3id.org/lehrplan/ontology/LP_00002197> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000351> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Inhalte (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathematik Sek I" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002198
+<https://w3id.org/lehrplan/ontology/LP_00002198> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00001014>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Hinweise und Vernetzung (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathematik Sek I" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002199
+<https://w3id.org/lehrplan/ontology/LP_00002199> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000431> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00000622> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Themen (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathematik Sek II" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002200
+<https://w3id.org/lehrplan/ontology/LP_00002200> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000432> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Ziele / Inhalte (Sach- und Methodenkompetenz) (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathematik Sek II" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002201
+<https://w3id.org/lehrplan/ontology/LP_00002201> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000342> ;
+                                                 rdfs:label "Hinweise zur Unterrichtsgestaltung und Methodenkompetenz (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Mathematik Sek II. Frage ob MEM-Lerninhalt oder MEM-Hinweis?" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002202
+<https://w3id.org/lehrplan/ontology/LP_00002202> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002104> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000496>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Kernbereich (RP)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "in Deutsch Sek I" .
 
 
 #################################################################

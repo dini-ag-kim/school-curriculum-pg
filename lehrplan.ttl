@@ -452,6 +452,32 @@ rdfs:label rdf:type owl:AnnotationProperty .
              <http://www.w3.org/2004/02/skos/core#editorialNote> "in Deutsch Sek I" .
 
 
+###  https://w3id.org/lehrplan/ontology#LP_00002203
+:LP_00002203 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000494
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzbereich (NI)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002204
+:LP_00002204 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000496
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Teilkompetenzbereich (NI)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;

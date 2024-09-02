@@ -315,7 +315,9 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;
-             rdfs:label "Schulfach"@de .
+             rdfs:comment "In der Bildungsinstitution Schule ist Fach der Ausdruck für die thematische Gliederung dessen, was jeweils unter Bildung verstanden wird."@de ;
+             rdfs:label "Schulfach"@de ;
+             rdfs:seeAlso <https://de.wikipedia.org/wiki/Unterrichtsfach> .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000002
@@ -350,7 +352,9 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000009
 :LP_00000009 rdf:type owl:Class ;
-             rdfs:label "Jahrgangsstufe"@de .
+             rdfs:comment "Eine Jahrgangsstufe, auch Klassenstufe, in Österreich und der Schweiz Schulstufe, bezeichnet die Gesamtheit der Klassen oder Kurse, die im selben Jahr eingeschult wurden oder demselben Lernabschnitt zugehörig sind."@de ;
+             rdfs:label "Jahrgangsstufe"@de ;
+             rdfs:seeAlso <https://de.wikipedia.org/wiki/Jahrgangsstufe> .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000019
@@ -401,6 +405,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                :LP_30000057
                                              )
                                  ] ;
+             rdfs:comment "Klasse der Bezeichnungen der deutschen Bundesländer, deren Kultusministerien für die Lehrpläne zuständig ist."@de ;
              rdfs:label "Bundesland"@de .
 
 
@@ -9264,7 +9269,14 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002118
 :LP_00002118 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000261 ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:hasValue :LP_30000056
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
              rdfs:label "Element (HB)"@de .
 
 

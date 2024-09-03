@@ -4668,25 +4668,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
              rdfs:label "Thema (RP)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000329
-:LP_00000329 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000503 ;
-             rdfs:comment "test" .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000330
-:LP_00000330 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Kompetenz Niveau"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Brauchen wir glaub ich nicht." .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000331
-:LP_00000331 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Operator"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000332
 :LP_00000332 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
@@ -4699,19 +4680,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                  ] ;
              rdfs:comment "Lehrplanelement, das einen Lerninhalt beschreibt. Die kleinste Einheit, die konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen beschreibt. Kann einer Kompetenz zugeordnet sein, kann aber auch alleine stehen." ;
              rdfs:label "MEM-Lerninhalt"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000333
-:LP_00000333 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Grundwissen"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000334
-:LP_00000334 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Wissensbestand"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Entspricht in irgendweinem Bundesland unserem MEM-Lerninhalt, glaube ich." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000335
@@ -4744,14 +4712,6 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                rdf:type owl:Class
                              ] ;
              rdfs:label "Lernbereichsbezogene Kompetenz"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000338
-:LP_00000338 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Anforderungs Niveau"@de ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "Progressionsstufe" ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Ist dasselbe wie Fachniveau. Hierbei geht es entweder um Grund- und Leistungskurs in Sek II oder in Sek I bei Schularten mit mehreren Abschlussmöglichkeiten um die verschiedenen abschlussbezogenen Anforderungsniveaus." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000339
@@ -6592,12 +6552,6 @@ Instances of this class provide text that describes a particular competence (e.g
                                                            "reading competencies"@en .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000476
-:LP_00000476 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000505 ;
-             rdfs:label "Fachlehrplan"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000478
 :LP_00000478 rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -6696,21 +6650,10 @@ Instances of this class provide text that describes a particular competence (e.g
              rdfs:label "Fachbezugsfunktion"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000503
-:LP_00000503 rdf:type owl:Class ;
-             rdfs:label "free IRIs to reuse"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000504
 :LP_00000504 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000499 ;
              rdfs:label "Lernbereichsbezugsfunktion"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000505
-:LP_00000505 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000111 ;
-             rdfs:label "unklar"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000506
@@ -6805,11 +6748,6 @@ Instances of this class provide text that describes a particular competence (e.g
                                  ] ;
              rdfs:subClassOf :LP_00000435 ;
              rdfs:label "Vertiefungskurs (BY)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000514
-:LP_00000514 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000503 .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000515
@@ -7133,8 +7071,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:comment """Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird.
-Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."""@de ;
+             rdfs:comment "Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de ;
              rdfs:label "Abschluss Niveau (BE/BB)"@de .
 
 
@@ -7148,6 +7085,7 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
+             rdfs:comment "Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt."@de ;
              rdfs:label "BOA"@de .
 
 
@@ -7165,6 +7103,7 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
+             rdfs:comment "Abschluss Niveau, das zur Berufsbildungsreife befähigt."@de ;
              rdfs:label "BBR"@de .
 
 
@@ -7182,6 +7121,7 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
+             rdfs:comment "Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt"@de ;
              rdfs:label "EBBR"@de .
 
 
@@ -7199,6 +7139,7 @@ Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalte
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
+             rdfs:comment "Abschluss Niveau, das zum mittlereren Schulabschluss befähigt."@de ;
              rdfs:label "MSA"@de .
 
 

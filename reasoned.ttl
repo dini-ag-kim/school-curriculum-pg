@@ -6726,6 +6726,7 @@ grundlegendes Niveau:
                                                                  <https://w3id.org/lehrplan/ontology/LP_00000441> ;
                                                  rdfs:label "Lerninhalt (BE)"@de ,
                                                             "learning content"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Inhalt (BE)" ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
                                                                                                   "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de .
 
@@ -6785,6 +6786,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                               "operationalisierbar und meßbar"@de ;
                                                  rdfs:label "Standard (BE)"@de ,
                                                             "competence"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Abschlussorientierter Standard (BE)" ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en .
 
 
@@ -6820,6 +6822,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                  <https://w3id.org/lehrplan/ontology/LP_00002106> ;
                                                  rdfs:label "Themenfeld (BE)"@de ,
                                                             "topic area"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "Themenbereich (BE)" ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "A topic area includes one or more topics that are subject of teaching."@en ,
                                                                                                   "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de .
 
@@ -9896,38 +9899,6 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
                                                  rdfs:label "Lehrplanfragment (MV)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002137
-<https://w3id.org/lehrplan/ontology/LP_00002137> rdf:type owl:Class ;
-                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_00002156> ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Bildungsstandards im Unterricht (MV)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002138
-<https://w3id.org/lehrplan/ontology/LP_00002138> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:comment """Ist ein Lehrplanelement in MV, das als Lehrplanfragment eine Strukturierungsfunktion hat. 
-
-Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht um eine Lerninhaltsbeschreibung handelt, welche Beispiele zur Umsetzung der Kompetenzen liefert.""" ;
-                                                 rdfs:label "Konkretisierung der Standards (MV)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00002139
 <https://w3id.org/lehrplan/ontology/LP_00002139> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000262> ,
@@ -9961,20 +9932,6 @@ Grenzt sich zu \"Konkretisierung (MV)\" dadurch ab, dass es sich hierbei nicht u
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002080> ;
                                                  rdfs:label "Anforderungsbereich (MV)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommen nur in dem Fach Mathematik vor" .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002142
-<https://w3id.org/lehrplan/ontology/LP_00002142> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Unterrichtsinhalte (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002143
@@ -10140,20 +10097,6 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                  ] ;
                                                  rdfs:label "Gegenstandsfeld (MV)"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommt nur im Fach Kunst vor. Gleichzusetzen mit Themenbereich und Arbeitsbereich in anderen Fächern." .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002156
-<https://w3id.org/lehrplan/ontology/LP_00002156> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
-                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Abschlussbezogene Standards (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002158
@@ -10948,6 +10891,63 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                    rdf:type owl:Class
                                                                  ] ;
                                                  rdfs:label "Kompetenz (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002223
+<https://w3id.org/lehrplan/ontology/LP_00002223> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001015> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Lehrplanfragment (BE/BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002224
+<https://w3id.org/lehrplan/ontology/LP_00002224> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000459> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Leitidee (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002225
+<https://w3id.org/lehrplan/ontology/LP_00002225> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000447> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Eingangsvoraussetzung (BE/BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002226
+<https://w3id.org/lehrplan/ontology/LP_00002226> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000445> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                                 rdfs:label "Gegenstand (BE/BB)"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommt bisher nur in Deutsch Sek II vor." .
 
 
 #################################################################

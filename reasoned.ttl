@@ -244,7 +244,26 @@ rdfs:label rdf:type owl:AnnotationProperty .
                                                  owl:propertyChainAxiom ( <https://w3id.org/lehrplan/ontology/LP_00000537>
                                                                           <https://w3id.org/lehrplan/ontology/LP_00000537>
                                                                         ) ;
-                                                 rdfs:label "hat_schulfach"@de .
+                                                 rdfs:comment "Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem \"Bezug\" (z.B. Zweite-Fremdsprache) zuzuordnen."@de ;
+                                                 rdfs:label "hat_schulfach"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> """Gegeben sind:
+
+:sf_1 a :Schulfach .
+:sf_1 sameAs ex:Englisch .
+
+Bspl 1: Lehrplanelement :lpe_1 bezieht sich auf Schulfach Englisch
+
+:lpe_1 :hat_schulfach :sf_1 .
+
+Bspl 2: Lehrplanelement :lpe_1 bezieht sich auf Schulfach Englisch als Zweite-Fremdsprache
+
+:lpe_2 :hat_schulfach :bezug_1 .
+:bezug_1 :hat_schulfach :sf_1 .
+:bezug_1 a :Zweite_Fremdsprache .
+
+Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das folgende Tripel automatisch ergänzt:
+
+:lpe_2 :hat_schulfach :sf_1 ."""@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000578
@@ -7333,8 +7352,10 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                    owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000537> ;
                                                                    owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000001>
                                                                  ] ;
-                                                 rdfs:label "Schulfach Rolle"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Ermöglicht den Bezug auf ein Schulfach in einen oder mehreren bestimmten Kontexten."@de .
+                                                 rdfs:comment "Ermöglicht den Bezug auf ein Schulfach in einen oder mehreren bestimmten Kontexten."@de ;
+                                                 rdfs:label "Schulfach Bezug"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Die Bezeichnung Rolle war nicht günstig gewählt, da sie mit bfo:role verwechselt werden kann."@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#example> "vgl. property https://w3id.org/lehrplan/ontology/LP_00000537" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000541

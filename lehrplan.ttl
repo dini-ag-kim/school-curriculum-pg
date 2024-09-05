@@ -370,6 +370,19 @@ rdfs:label rdf:type owl:AnnotationProperty .
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Kommt bisher nur in Deutsch Sek II vor." .
 
 
+###  https://w3id.org/lehrplan/ontology#LP_00002227
+:LP_00002227 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000441
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00001014
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Unterrichtsanregung (BE/BB)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
              owl:disjointWith :LP_00000261 ;

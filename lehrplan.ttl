@@ -252,11 +252,11 @@ rdfs:label rdf:type owl:AnnotationProperty .
 :sf_1 a :Schulfach .
 :sf_1 sameAs ex:Englisch .
 
-Bspl 1: Lehrplanelement :lpe_1 bezieht sich auf Schulfach Englisch
+Bspl 1: \"Lehrplanelement :lpe_1 bezieht sich auf Schulfach Englisch\"
 
 :lpe_1 :hat_schulfach :sf_1 .
 
-Bspl 2: Lehrplanelement :lpe_1 bezieht sich auf Schulfach Englisch als Zweite-Fremdsprache
+Bspl 2: \"Lehrplanelement :lpe_1 bezieht sich auf Schulfach Englisch als Zweite-Fremdsprache\"
 
 :lpe_2 :hat_schulfach :bezug_1 .
 :bezug_1 :hat_schulfach :sf_1 .
@@ -564,7 +564,9 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 ###  https://w3id.org/lehrplan/ontology/LP_00000062
 :LP_00000062 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000020 ;
-             rdfs:label "Primarbereich"@de .
+             rdfs:comment "Schulstufe der Grundschule. Mit dem Beginn der Schulpflicht treten die Schülerinnen und Schüler in die gemeinsame Grundschule ein, die von der ersten bis zur vierten, in Berlin und Brandenburg bis zur sechsten Jahrgangsstufe reicht."@de ;
+             rdfs:label "Primarbereich"@de ;
+             rdfs:seeAlso <https://www.kmk.org/themen/allgemeinbildende-schulen/bildungswege-und-abschluesse/primarbereich.html> .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000063
@@ -4762,8 +4764,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000020 ;
-             rdfs:comment "Ist die Oberstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie umfasst die Sekundarstufe II. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt." ;
-             rdfs:label "Gymnasiale Oberstufe"@de .
+             rdfs:comment "Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie umfasst die Sekundarstufe II. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)" ;
+             rdfs:label "Gymnasiale Oberstufe"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> """Was genau heisst \"sie umfasst\" die Sek II?
+
+sollten wir nicht auch das folgende Axiom mit hinzufügen?
+
+hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangsstufe 13'})"""@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000342
@@ -7038,44 +7045,51 @@ Instances of this class provide text that describes a particular competence (e.g
                                owl:someValuesFrom :LP_00000001
                              ] ;
              rdfs:comment "Ermöglicht den Bezug auf ein Schulfach in einen oder mehreren bestimmten Kontexten."@de ;
-             rdfs:label "Schulfach Bezug"@de ;
+             rdfs:label "Schulfachbezug"@de ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Die Bezeichnung Rolle war nicht günstig gewählt, da sie mit bfo:role verwechselt werden kann."@de ;
-             <http://www.w3.org/2004/02/skos/core#example> "vgl. property https://w3id.org/lehrplan/ontology/LP_00000537" .
+             <http://www.w3.org/2004/02/skos/core#example> "siehe Property https://w3id.org/lehrplan/ontology/LP_00000537" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000541
 :LP_00000541 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
+             rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als erste Fremdsprache gemeint ist."@de ;
              rdfs:label "Erste Fremdsprache"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000542
 :LP_00000542 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
-             rdfs:label "Zweite Fremdsprache"@de .
+             rdfs:label "Zweite Fremdsprache"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000543
 :LP_00000543 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
+             rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als dritte Fremdsprache gemeint ist."@de ;
              rdfs:label "Dritte Fremdsprache"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000544
 :LP_00000544 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
+             rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als Pflichtfach gemeint ist."@de ;
              rdfs:label "Pflichtfach"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000545
 :LP_00000545 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
-             rdfs:label "Wahlpflichtfach"@de .
+             rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlpflicht gemeint ist."@de ;
+             rdfs:label "Wahlpflichtfach"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Ggf. könnte auf Wahlfach und Pflichfach geschlossen werden. Dies ist aktuell nicht implementiert."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000551
 :LP_00000551 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000540 ;
+             rdfs:comment "Schulfachbezug, der ausdrückt, dass ein Schulfach als Wahlfach/fakultatives Fach gemeint ist."@de ;
              rdfs:label "Wahlfach"@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Fakultatives Fach"@de .
 

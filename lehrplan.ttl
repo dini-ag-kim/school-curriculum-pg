@@ -336,9 +336,48 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
 
 
-###  https://w3id.org/lehrplan/ontology#LP_00002228
-:LP_00002228 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+###  https://w3id.org/lehrplan/ontology#LP_00002229
+:LP_00002229 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000627
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Lehrplanfragment (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002230
+:LP_00002230 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000494
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Leitidee (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002231
+:LP_00002231 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000496
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Teilkompetenzbereich (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002232
+:LP_00002232 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000479
@@ -346,7 +385,144 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Lernzeitbezogene Kompetenzerwartung (HE)"@de .
+             rdfs:label "Kompetenz (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002233
+:LP_00002233 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Zur Umsetzung (SL)"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Hinweise zur Umsetzung (SL)" .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002234
+:LP_00002234 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000494
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Themenfelder (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002235
+:LP_00002235 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000480
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Verbindliches Fachwissen (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002236
+:LP_00002236 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00001014
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Hinweise (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002237
+:LP_00002237 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000498
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Thema (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002238
+:LP_00002238 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Verbindliche Kompetenzschwerpunkte (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002239
+:LP_00002239 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00001014
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Vorschläge und Hinweise (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002240
+:LP_00002240 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002102 ;
+             rdfs:label "Basisbegriffe (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002241
+:LP_00002241 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000497
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Lernbereich (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002242
+:LP_00002242 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00001014
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Vorschläge (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00002243
+:LP_00002243 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000494
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Kompetenzbereich (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
@@ -10498,6 +10674,19 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "Unterrichtsanregung (BE/BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_00002228
+:LP_00002228 rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :LP_00000483 ;
+                                                      owl:someValuesFrom :LP_00000479
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "Lernzeitbezogene Kompetenzerwartung (HE)"@de .
 
 
 #################################################################

@@ -331,6 +331,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 #    Classes
 #################################################################
 
+###  http://purl.obolibrary.org/obo/LP_0000802
+<http://purl.obolibrary.org/obo/LP_0000802> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                            rdfs:comment "Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung. Bei manchen Gegenständen kann der dritte Bereich eine gestalterische Aufgabe beinhalten."@de ;
+                                            rdfs:label "MEM-Anforderungsbereich"@de ;
+                                            <http://www.w3.org/2004/02/skos/core#editorialNote> "https://de.wikipedia.org/wiki/Operator_(Bildungswesen)" .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
@@ -4933,28 +4941,32 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000336
 <https://w3id.org/lehrplan/ontology/LP_00000336> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000502>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Fachbezogene Kompetenz"@de .
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000502>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
+                                                 rdfs:label "Fachbezogene Kompetenz"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Bezieht sich auf ein bestimmtes Fach" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000337
 <https://w3id.org/lehrplan/ontology/LP_00000337> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000504>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
-                                                 rdfs:label "Lernbereichsbezogene Kompetenz"@de .
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000504>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000263> ;
+                                                 rdfs:label "Fach- und Lernbereichsübergreifende Kompetenz"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Bezüglich mehrere Fächer bzw. eines Fachverbund"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000339
@@ -11229,6 +11241,45 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://purl.obolibrary.org/obo/LP_0000800
+<http://purl.obolibrary.org/obo/LP_0000800> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000263> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000337> ;
+                                            <https://w3id.org/lehrplan/ontology/LP_00000483> <http://purl.obolibrary.org/obo/LP_0000801> ;
+                                            rdfs:label "meineKompetenz_1"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000801
+<http://purl.obolibrary.org/obo/LP_0000801> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000478> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000499> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000504> ;
+                                            <https://w3id.org/lehrplan/ontology/LP_00000495> <http://purl.obolibrary.org/obo/LP_0000800> ;
+                                            rdfs:label "LernbereichsübergreifendeFunktion_1"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000803
+<http://purl.obolibrary.org/obo/LP_0000803> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.obolibrary.org/obo/LP_0000802> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                            rdfs:label "Anforderungsbereich 1: Reproduktion"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000804
+<http://purl.obolibrary.org/obo/LP_0000804> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.obolibrary.org/obo/LP_0000802> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                            rdfs:label "Anforderungsbereich 2: Reorganisation und Transfer"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000805
+<http://purl.obolibrary.org/obo/LP_0000805> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.obolibrary.org/obo/LP_0000802> ,
+                                                     <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                            rdfs:label "Anforderungsbereich 3: Reflexion und Problemlösung"@de .
+
 
 ###  http://w3id.org/kim/schulfaecher/
 <http://w3id.org/kim/schulfaecher/> rdf:type owl:NamedIndividual ,

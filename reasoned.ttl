@@ -339,6 +339,67 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "https://de.wikipedia.org/wiki/Operator_(Bildungswesen)" .
 
 
+###  http://purl.obolibrary.org/obo/LP_0000806
+<http://purl.obolibrary.org/obo/LP_0000806> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002051>
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                         owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000049>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
+                                            rdfs:label "Lehrplan (BW)"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000807
+<http://purl.obolibrary.org/obo/LP_0000807> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                         owl:allValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                         owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000057>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
+                                            rdfs:label "Lehrplan (BB)"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000808
+<http://purl.obolibrary.org/obo/LP_0000808> rdf:type owl:Class ;
+                                            rdfs:label "Organisation"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000809
+<http://purl.obolibrary.org/obo/LP_0000809> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000808> ;
+                                            rdfs:label "Schule"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000810
+<http://purl.obolibrary.org/obo/LP_0000810> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000808> ;
+                                            rdfs:label "Schulklasse"@de .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
@@ -6620,6 +6681,10 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
                                                                                               owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000342>
                                                                                             ]
                                                                                             [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:allValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000342>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                               owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000046>
                                                                                             ]
@@ -6660,6 +6725,7 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000438
 <https://w3id.org/lehrplan/ontology/LP_00000438> rdf:type owl:Class ;
+                                                 owl:disjointWith <https://w3id.org/lehrplan/ontology/LP_00000571> ;
                                                  rdfs:comment "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
                                                               "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de ;
                                                  rdfs:label "Lehrplan"@de .
@@ -6748,10 +6814,6 @@ grundlegendes Niveau:
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                               owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000048>
-                                                                                            ]
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
-                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000057>
                                                                                             ]
                                                                                           ) ;
                                                                        rdf:type owl:Class
@@ -7433,8 +7495,10 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000571
 <https://w3id.org/lehrplan/ontology/LP_00000571> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
-                                                 rdfs:label "Lehrplan (Bista)"@de .
+                                                 rdfs:comment "Bildungsstandard ist eine Spezifikation von fachlichen und fachübergreifenden Basisqualifikationen, die für die weitere schulische und berufliche Ausbildung von Bedeutung sind und die anschlussfähiges Lernen ermöglicht. Bildungsstandards ermöglichen den Schulen, ihren Unterricht an Standards zu orientieren."@de ;
+                                                 rdfs:label "KMK Bildungsstandard"@de ;
+                                                 rdfs:seeAlso <https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Konzeption-Entwicklung.pdf> ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "bitte Defintion verbessern" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000572
@@ -7566,6 +7630,22 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001000
 <https://w3id.org/lehrplan/ontology/LP_00001000> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002085>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:allValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002085>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000044>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
                                                  rdfs:label "Lehrplan (NW)"@de .
 
@@ -10231,6 +10311,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                               owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002080>
                                                                                             ]
                                                                                             [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:allValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
                                                                                               owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000052>
                                                                                             ]
@@ -10441,18 +10525,23 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002184
 <https://w3id.org/lehrplan/ontology/LP_00002184> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002076>
-                                                                                        ]
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
-                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000050>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002076>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:allValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002076>
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000050>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000438> ;
                                                  rdfs:label "Lehrplan (HE)"@de .
 
 
@@ -11242,21 +11331,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 #    Individuals
 #################################################################
 
-###  http://purl.obolibrary.org/obo/LP_0000800
-<http://purl.obolibrary.org/obo/LP_0000800> rdf:type owl:NamedIndividual ,
-                                                     <https://w3id.org/lehrplan/ontology/LP_00000261> ,
-                                                     <https://w3id.org/lehrplan/ontology/LP_00000263> ,
-                                                     <https://w3id.org/lehrplan/ontology/LP_00000337> ;
-                                            <https://w3id.org/lehrplan/ontology/LP_00000483> <http://purl.obolibrary.org/obo/LP_0000801> ;
-                                            rdfs:label "meineKompetenz_1"@de .
-
-
 ###  http://purl.obolibrary.org/obo/LP_0000801
 <http://purl.obolibrary.org/obo/LP_0000801> rdf:type owl:NamedIndividual ,
                                                      <https://w3id.org/lehrplan/ontology/LP_00000478> ,
                                                      <https://w3id.org/lehrplan/ontology/LP_00000499> ,
                                                      <https://w3id.org/lehrplan/ontology/LP_00000504> ;
-                                            <https://w3id.org/lehrplan/ontology/LP_00000495> <http://purl.obolibrary.org/obo/LP_0000800> ;
                                             rdfs:label "LernbereichsübergreifendeFunktion_1"@de .
 
 

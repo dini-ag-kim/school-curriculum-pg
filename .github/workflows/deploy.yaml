@@ -16,7 +16,7 @@ jobs:
       run: |
            wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
            mkdir public 
-           java -jar widoco.jar -ontFile lehrplan.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang de-en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           java -jar widoco.jar -ontFile main/lehrplan.ttl -outFolder public -htaccess -uniteSections -includeAnnotationProperties -lang de-en  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/index-de.html public/index.html
            
     - name: Deploy to GitHub Pages

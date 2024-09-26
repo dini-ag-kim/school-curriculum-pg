@@ -414,7 +414,7 @@ Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anford
     Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
 
 Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."""@de ;
-                                            rdfs:label "Bildungsgang"@de ;
+                                            rdfs:label "Bildungsgangabschnitt"@de ;
                                             rdfs:seeAlso <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926> ,
                                                          <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf> .
 
@@ -455,7 +455,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  http://purl.obolibrary.org/obo/LP_0000815
 <http://purl.obolibrary.org/obo/LP_0000815> rdf:type owl:Class ;
-                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty :LP_00000058 ;
                                                                                          owl:someValuesFrom :LP_00000076
@@ -463,11 +463,16 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000811> ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
                                             rdfs:comment "Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen."@de ,
                                                          "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en ;
                                             rdfs:label "Gymnasialer Bildungsgang"@de ,
                                                        "Gymnasium Track"@en .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000816
+<http://purl.obolibrary.org/obo/LP_0000816> rdf:type owl:Class ;
+                                            rdfs:label "Bildungsgang"@de .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept

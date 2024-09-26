@@ -3684,9 +3684,8 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 :LP_00000261 rdf:type owl:Class ;
-             rdfs:comment "Lehrplan Elemente sind Informationselemente die in einem Lehrplan zur Beschreibung des Lehrplans verwendet werden. Lehrplan Elemente können Funktionen und Rollen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
+             rdfs:comment "Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibun verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
              rdfs:label "Curriculares Element"@de ;
-             
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Evtl. andere Bezeichung finden, da diese Elemente auch den Bildungsstandards zugeordnet werden sollen." .
 
 
@@ -6976,7 +6975,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                owl:onProperty :LP_00000495 ;
                                owl:someValuesFrom :LP_00000261
                              ] ;
-             rdfs:label "Curricularer Zweck"@de .
+             rdfs:label "Curriculare Funktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000479
@@ -7781,7 +7780,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                    rdf:type owl:Class
                                  ] ;
              rdfs:subClassOf :LP_00000261 ;
-             rdfs:comment "Beispiel, Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de ;
+             rdfs:comment "Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de ;
              rdfs:label "MEM-Hinweis"@de .
 
 
@@ -10258,7 +10257,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "MEM-Beispiel"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Beispiel hat inhaltlichen Bezug im gegensatz zum Hinweis."@de ,
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Beispiel hat konkreten inhaltlichen Bezug im Gegensatz zum Hinweis."@de ,
                                                                  "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
 
 

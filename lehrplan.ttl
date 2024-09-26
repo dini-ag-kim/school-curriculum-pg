@@ -782,7 +782,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000081
 :LP_00000081 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000019 ;
+             rdfs:subClassOf :LP_00000078 ;
              rdfs:label "Förderschulabschluss"@de .
 
 
@@ -3698,7 +3698,8 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, dem kein anderer Kompetenzbereich übergeordnet ist und Kompetenzen untergeordnet sind." ;
+             rdfs:comment "Strukturierendes Lehrplanelement, das einem Kompetenzbereich untergeordnet ist und  Kompetenzen übergeordnet ist. Kann auch anderen Teilkompetenzbereichen über- oder untergeordnet sein." ,
+                          "Strukturierendes Lehrplanelement, dem kein anderer Kompetenzbereich übergeordnet ist und Kompetenzen untergeordnet sind." ;
              rdfs:label "MEM-Kompetenzbereich"@de .
 
 
@@ -6749,7 +6750,7 @@ equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulre
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000496
+                                                          owl:someValuesFrom :LP_00000494
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -7017,15 +7018,9 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000494
 :LP_00000494 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000482 ;
-             rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de ;
+             rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de ,
+                          "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de ;
              rdfs:label "Kompetenzbereichsfunktion"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000496
-:LP_00000496 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000482 ;
-             rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de ;
-             rdfs:label "Teilkompetenzbereichsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000497
@@ -9148,7 +9143,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9328,7 +9323,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002051
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -9600,20 +9595,6 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
              rdfs:label "Element (SH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002104
-:LP_00002104 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000496
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, das einem Kompetenzbereich untergeordnet ist und  Kompetenzen übergeordnet ist. Kann auch anderen Teilkompetenzbereichen über- oder untergeordnet sein." ;
-             rdfs:label "MEM-Teilkompetenzbereich"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00002105
 :LP_00002105 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
@@ -9881,7 +9862,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10099,7 +10080,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10174,7 +10155,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10295,7 +10276,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "MEM-Beispiel"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Beispiel hat inhaltlichen Bezug im gegensatz zum Hinweis."@de ,
+                                                                 "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002167
@@ -10380,7 +10362,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002093
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10439,10 +10421,6 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000494
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10536,7 +10514,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002085
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10593,7 +10571,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000342
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10701,7 +10679,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000342
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10728,7 +10706,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10741,7 +10719,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10850,7 +10828,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000426
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -11061,7 +11039,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class

@@ -352,7 +352,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 <http://purl.obolibrary.org/obo/LP_0000802> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                             rdfs:comment "Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung. Bei manchen Gegenständen kann der dritte Bereich eine gestalterische Aufgabe beinhalten."@de ;
-                                            rdfs:label "MEM-Anforderungsbereich"@de ;
+                                            rdfs:label "CE-Anforderungsbereich"@de ;
                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "https://de.wikipedia.org/wiki/Operator_(Bildungswesen)" .
 
 
@@ -3820,7 +3820,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:comment "Strukturierendes Lehrplanelement, das einem Kompetenzbereich untergeordnet ist und  Kompetenzen übergeordnet ist. Kann auch anderen Teilkompetenzbereichen über- oder untergeordnet sein." ,
                                                               "Strukturierendes Lehrplanelement, dem kein anderer Kompetenzbereich übergeordnet ist und Kompetenzen untergeordnet sind." ;
-                                                 rdfs:label "MEM-Kompetenzbereich"@de .
+                                                 rdfs:label "CE-Kompetenzbereich"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000263
@@ -3834,10 +3834,10 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:comment """Lehrplanelement, das eine Kompetenz beschreibt. Die kleinste Einheit der Beschreibung einer Fähigkeit die SuS haben sollen oder ihrer Ausführung. Enthält einen Operatoren.
+                                                 rdfs:comment """Element, das eine Kompetenz beschreibt. Die kleinste Einheit der Beschreibung einer Fähigkeit die SuS haben sollen oder ihrer Ausführung. Enthält einen Operatoren.
 
 Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so existiert eine Kompetenz (bfo:disposition) y, die ein Schüler s (bfo:material entity) inne hat. y konkretisiert dann x (ro:concretizes)."""@de ;
-                                                 rdfs:label "MEM-Kompetenzspezifikation"@de .
+                                                 rdfs:label "CE-Kompetenzspezifikation"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000265
@@ -3855,8 +3855,8 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:comment "Lehrplan Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Lehrplan Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de ;
-                                                 rdfs:label "MEM-Fachniveau"@de .
+                                                 rdfs:comment "Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Lehrplan Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de ;
+                                                 rdfs:label "CE-Fachniveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000530
@@ -5142,8 +5142,8 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:comment "Lehrplanelement, das einen Lerninhalt beschreibt. Die kleinste Einheit, die konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen beschreibt. Kann einer Kompetenz zugeordnet sein, kann aber auch alleine stehen." ;
-                                                 rdfs:label "MEM-Lerninhalt"@de .
+                                                 rdfs:comment "Element, das einen Lerninhalt beschreibt. Die kleinste Einheit, die konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen beschreibt. Kann einer Kompetenz zugeordnet sein, kann aber auch alleine stehen." ;
+                                                 rdfs:label "CE-Lerninhalt"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000335
@@ -8094,7 +8094,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:comment "Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de ;
-                                                 rdfs:label "MEM-Hinweis"@de .
+                                                 rdfs:label "CE-Hinweis"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001014
@@ -8114,8 +8114,8 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:comment "Lehrplanelement, das zur Strukturierung und zur Abgrenzung eines “Kontexts” innerhalb von einem Lehrplans dient. Mit jedem Lehrplanfragment beginnt ein neuer Kontext. Meistens handelt es sich hierbei um Überschriften." ;
-                                                 rdfs:label "MEM-Lehrplanfragment"@de .
+                                                 rdfs:comment "Element, das zur Strukturierung und zur Abgrenzung eines “Kontexts” innerhalb von einem Lehrplans dient. Mit jedem Lehrplanfragment beginnt ein neuer Kontext. Meistens handelt es sich hierbei um Überschriften." ;
+                                                 rdfs:label "CE-Lehrplanfragment"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
@@ -10007,9 +10007,9 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
-                                                 rdfs:comment "Strukturierendes Lehrplanelement, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ,
+                                                 rdfs:comment "Strukturierendes Element, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ,
                                                               "Strukturierendes Lehrplanelement, dem kein anderes Thema übergeordnet ist. Beschreibt ein Thema für einen Bereich." ;
-                                                 rdfs:label "MEM-Themenfeld"@de .
+                                                 rdfs:label "CE-Themenfeld"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002107
@@ -10617,8 +10617,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:comment "Lehrplanelement, das einen Lerninhalt oder ein Thema mit einem Kompetenzbereich verknüpft bzw. einen Bezug zwischen beiden herstellt." ;
-                                                 rdfs:label "MEM-Verknüpfung"@de .
+                                                 rdfs:comment "Element, das einen Lerninhalt oder ein Thema mit einem Kompetenzbereich verknüpft bzw. einen Bezug zwischen beiden herstellt." ;
+                                                 rdfs:label "CE-Verknüpfung"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002160
@@ -10631,8 +10631,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:comment "Lehrplanelement, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Prosatext."@de ;
-                                                 rdfs:label "MEM-Erläuterung" .
+                                                 rdfs:comment "Element, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Prosatext."@de ;
+                                                 rdfs:label "CE-Erläuterung" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002161
@@ -10700,7 +10700,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "MEM-Beispiel"@de ;
+                                                 rdfs:label "CE-Beispiel"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Beispiel hat konkreten inhaltlichen Bezug im Gegensatz zum Hinweis."@de ,
                                                                                                      "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
 

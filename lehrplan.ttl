@@ -3685,7 +3685,8 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 :LP_00000261 rdf:type owl:Class ;
              rdfs:comment "Lehrplan Elemente sind Informationselemente die in einem Lehrplan zur Beschreibung des Lehrplans verwendet werden. Lehrplan Elemente können Funktionen und Rollen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
-             rdfs:label "Lehrplan Element"@de .
+             rdfs:label "Lehrplan Element"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Evtl. andere Bezeichung finden, da diese Elemente auch den Bildungsstandards zugeordnet werden sollen." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
@@ -6895,7 +6896,7 @@ Instances of this class provide text that describes a particular competence (e.g
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000498
+                                                          owl:someValuesFrom :LP_00000497
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -7027,14 +7028,8 @@ Instances of this class provide text that describes a particular competence (e.g
 :LP_00000497 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000482 ;
              rdfs:label "Themenfeldfunktion"@de ;
-             <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000498
-:LP_00000498 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000482 ;
-             rdfs:label "Themafunktion"@de ;
-             <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de .
+             <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de ,
+                                                           "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000499
@@ -7672,7 +7667,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                              [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -7711,7 +7706,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9595,20 +9590,6 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
              rdfs:label "Element (SH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002105
-:LP_00002105 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000498
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ;
-             rdfs:label "MEM-Thema"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00002106
 :LP_00002106 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
@@ -9619,7 +9600,8 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, dem kein anderes Thema übergeordnet ist. Beschreibt ein Thema für einen Bereich." ;
+             rdfs:comment "Strukturierendes Lehrplanelement, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ,
+                          "Strukturierendes Lehrplanelement, dem kein anderes Thema übergeordnet ist. Beschreibt ein Thema für einen Bereich." ;
              rdfs:label "MEM-Themenfeld"@de .
 
 
@@ -9918,7 +9900,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10067,7 +10049,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10771,7 +10753,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10878,10 +10860,6 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000497
                                                     ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
-                                                    ]
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
@@ -10893,7 +10871,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000426
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -11118,7 +11096,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class

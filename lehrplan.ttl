@@ -404,24 +404,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  http://purl.obolibrary.org/obo/LP_0000811
 <http://purl.obolibrary.org/obo/LP_0000811> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
                                             owl:disjointWith :LP_00000040 ;
-                                            rdfs:comment """Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
-
-Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
-
-    Im gymnasialen Bildungsgang zielt der Abschluss auf das Abitur.
-    er Realschulbildungsgang führt zur Mittleren Reife.
-    Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
-
-Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."""@de ;
-                                            rdfs:label "Bildungsgangabschnitt"@de ;
-                                            rdfs:seeAlso <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926> ,
-                                                         <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf> .
+                                            rdfs:label "Bildungsgangabschnitt"@de .
 
 
 ###  http://purl.obolibrary.org/obo/LP_0000813
 <http://purl.obolibrary.org/obo/LP_0000813> rdf:type owl:Class ;
-                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty :LP_00000058 ;
                                                                                          owl:someValuesFrom :LP_00000079
@@ -429,7 +419,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000811> ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
                                             rdfs:comment "Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de ;
                                             rdfs:label "Hauptschulbildungsgang"@de ,
                                                        "Hauptschule Track"@en ,
@@ -438,7 +428,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  http://purl.obolibrary.org/obo/LP_0000814
 <http://purl.obolibrary.org/obo/LP_0000814> rdf:type owl:Class ;
-                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty :LP_00000058 ;
                                                                                          owl:someValuesFrom :LP_00000078
@@ -446,7 +436,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000811> ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
                                             rdfs:comment "Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de ,
                                                          "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en ;
                                             rdfs:label "Realschulbildungsgang"@de ,
@@ -472,7 +462,18 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  http://purl.obolibrary.org/obo/LP_0000816
 <http://purl.obolibrary.org/obo/LP_0000816> rdf:type owl:Class ;
-                                            rdfs:label "Bildungsgang"@de .
+                                            rdfs:comment """Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
+
+Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
+
+    Im gymnasialen Bildungsgang zielt der Abschluss auf das Abitur.
+    er Realschulbildungsgang führt zur Mittleren Reife.
+    Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
+
+Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."""@de ;
+                                            rdfs:label "Bildungsgang"@de ;
+                                            rdfs:seeAlso <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926> ,
+                                                         <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -485,7 +486,6 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
-             owl:disjointWith :LP_00000261 ;
              rdfs:comment "In der Bildungsinstitution Schule ist Fach der Ausdruck für die thematische Gliederung dessen, was jeweils unter Bildung verstanden wird."@de ,
                           "In the educational institution of school, subject is the term for the thematic structure of what is understood by education."@en ;
              rdfs:label "Schulfach"@de ,
@@ -3685,7 +3685,8 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 :LP_00000261 rdf:type owl:Class ;
              rdfs:comment "Lehrplan Elemente sind Informationselemente die in einem Lehrplan zur Beschreibung des Lehrplans verwendet werden. Lehrplan Elemente können Funktionen und Rollen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
-             rdfs:label "Lehrplan Element"@de ;
+             rdfs:label "Curriculares Element"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> <Curriculare Elemente> ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Evtl. andere Bezeichung finden, da diese Elemente auch den Bildungsstandards zugeordnet werden sollen." .
 
 
@@ -6721,7 +6722,6 @@ equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulre
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000438
 :LP_00000438 rdf:type owl:Class ;
-             owl:disjointWith :LP_00000571 ;
              rdfs:comment "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
                           "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de ;
              rdfs:label "Lehrplan"@de .
@@ -6976,7 +6976,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                owl:onProperty :LP_00000495 ;
                                owl:someValuesFrom :LP_00000261
                              ] ;
-             rdfs:label "Lehrplan Element Funktion"@de .
+             rdfs:label "Curricularer Zweck"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000479
@@ -12613,6 +12613,14 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/LP_0000813>
+                <http://purl.obolibrary.org/obo/LP_0000814>
+                <http://purl.obolibrary.org/obo/LP_0000815>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :LP_00000001

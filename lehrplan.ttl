@@ -102,6 +102,13 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/LP_0000812
+<http://purl.obolibrary.org/obo/LP_0000812> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdfs:range :LP_00000111 ;
+                                            rdfs:label "für_schulart"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_00000008
 :LP_00000008 rdf:type owl:ObjectProperty ;
              rdfs:label "hat_teil"@de .
@@ -150,8 +157,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000440
 :LP_00000440 rdf:type owl:ObjectProperty ;
              rdfs:domain :LP_00000438 ;
-             rdfs:range :LP_00000111 ;
-             rdfs:label "für_schulart"@de .
+             rdfs:range <http://purl.obolibrary.org/obo/LP_0000811> ;
+             rdfs:label "für_bildungsgang"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000452
@@ -393,6 +400,79 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 <http://purl.obolibrary.org/obo/LP_0000810> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000808> ;
                                             rdfs:label "Schulklasse"@de .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000811
+<http://purl.obolibrary.org/obo/LP_0000811> rdf:type owl:Class ;
+                                            owl:disjointWith :LP_00000040 ;
+                                            rdfs:comment """Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
+
+Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
+
+    Im gymnasialen Bildungsgang zielt der Abschluss auf das Abitur.
+    er Realschulbildungsgang führt zur Mittleren Reife.
+    Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
+
+Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."""@de ;
+                                            rdfs:label "Bildungsgangabschnitt"@de ;
+                                            rdfs:seeAlso <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926> ,
+                                                         <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf> .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000813
+<http://purl.obolibrary.org/obo/LP_0000813> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :LP_00000058 ;
+                                                                                         owl:someValuesFrom :LP_00000079
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000811> ;
+                                            rdfs:comment "Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de ;
+                                            rdfs:label "Hauptschulbildungsgang"@de ,
+                                                       "Hauptschule Track"@en ,
+                                                       "The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance."@en .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000814
+<http://purl.obolibrary.org/obo/LP_0000814> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :LP_00000058 ;
+                                                                                         owl:someValuesFrom :LP_00000078
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000811> ;
+                                            rdfs:comment "Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de ,
+                                                         "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en ;
+                                            rdfs:label "Realschulbildungsgang"@de ,
+                                                       "Realschule Track"@en .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000815
+<http://purl.obolibrary.org/obo/LP_0000815> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :LP_00000058 ;
+                                                                                         owl:someValuesFrom :LP_00000076
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
+                                            rdfs:comment "Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen."@de ,
+                                                         "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en ;
+                                            rdfs:label "Gymnasialer Bildungsgang"@de ,
+                                                       "Gymnasium Track"@en .
+
+
+###  http://purl.obolibrary.org/obo/LP_0000816
+<http://purl.obolibrary.org/obo/LP_0000816> rdf:type owl:Class ;
+                                            rdfs:label "Bildungsgang"@de .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -702,7 +782,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000081
 :LP_00000081 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000019 ;
+             rdfs:subClassOf :LP_00000078 ;
              rdfs:label "Förderschulabschluss"@de .
 
 
@@ -775,13 +855,18 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
+             rdfs:subClassOf :LP_00000111 ;
              rdfs:comment "Schulart, die schulstufenübergreifend ist. Sie umfasst die Jahrgangsstufen 1-10 oder 13, je nach angestrebtem Abschluss. Je nach Bundesland kann die Schulart auch erst beginnend ab Sekundarstufe I sein." ;
              rdfs:label "Gemeinschaftsschule"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000113
 :LP_00000113 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -833,7 +918,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000115
 :LP_00000115 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -868,29 +957,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
              rdfs:label "Grundschule (BE)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000117
-:LP_00000117 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000111 ;
-             rdfs:label "Schulart Nach Bundesland"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000118
-:LP_00000118 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000048
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "BE Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000119
 :LP_00000119 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -931,7 +1004,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000120
 :LP_00000120 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000121
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000121
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -1006,7 +1083,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000123
 :LP_00000123 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -1047,7 +1128,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000124
 :LP_00000124 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -1076,7 +1161,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000125
 :LP_00000125 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000121
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000121
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -1105,7 +1194,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000126
 :LP_00000126 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000121
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000121
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -1135,7 +1228,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000127
 :LP_00000127 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -1160,7 +1257,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000128
 :LP_00000128 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -1189,23 +1290,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
              rdfs:label "Lerner Niveau"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000138
-:LP_00000138 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000049
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "BW Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000139
 :LP_00000139 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -1304,7 +1395,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000158
 :LP_00000158 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -1450,7 +1545,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000166
 :LP_00000166 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000159
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000159
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -1896,7 +1995,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000190
 :LP_00000190 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000167
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000167
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -1941,7 +2044,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000191
 :LP_00000191 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -1986,7 +2093,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000194
 :LP_00000194 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -2007,7 +2118,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000195
 :LP_00000195 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -2036,7 +2151,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000196
 :LP_00000196 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -2072,7 +2191,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000198
 :LP_00000198 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000197
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000197
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000006
@@ -2109,7 +2232,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000199
 :LP_00000199 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000197
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000197
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -2387,7 +2514,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000214
 :LP_00000214 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000197
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000197
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000008
@@ -2416,7 +2547,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000215
 :LP_00000215 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000197
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000197
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -2439,23 +2574,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
              rdfs:label "Wirtschaftsschule 2-stufig Sek I (BY)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000216
-:LP_00000216 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000051
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "BY Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000217
 :LP_00000217 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000218
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000218
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -2507,7 +2632,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000219
 :LP_00000219 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000167
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000167
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -2552,7 +2681,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000220
 :LP_00000220 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -2589,7 +2722,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000221
 :LP_00000221 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -2630,7 +2767,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000222
 :LP_00000222 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -2668,7 +2809,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000223
 :LP_00000223 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -2713,7 +2858,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000224
 :LP_00000224 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -2734,7 +2883,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000225
 :LP_00000225 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -2763,7 +2916,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000226
 :LP_00000226 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -2792,7 +2949,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000227
 :LP_00000227 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -2821,7 +2982,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000228
 :LP_00000228 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -2850,7 +3015,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000229
 :LP_00000229 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000008
@@ -2875,7 +3044,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000230
 :LP_00000230 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -2902,23 +3075,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
              rdfs:label "Aufbaugymnasium 7-10 Sek I (BW)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000236
-:LP_00000236 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000057
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "BB Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000237
 :LP_00000237 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -2970,7 +3133,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000239
 :LP_00000239 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -3030,7 +3197,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000241
 :LP_00000241 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000240
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000240
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -3075,7 +3246,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000242
 :LP_00000242 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -3116,7 +3291,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000243
 :LP_00000243 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3141,7 +3320,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000244
 :LP_00000244 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000240
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000240
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3166,7 +3349,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000250
 :LP_00000250 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -3201,7 +3388,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000252
 :LP_00000252 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000251
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000251
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3250,7 +3441,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000253
 :LP_00000253 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3295,7 +3490,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000254
 :LP_00000254 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -3316,7 +3515,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000255
 :LP_00000255 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3361,7 +3564,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000256
 :LP_00000256 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -3382,7 +3589,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000257
 :LP_00000257 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3407,7 +3618,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000258
 :LP_00000258 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3436,7 +3651,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000259
 :LP_00000259 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3463,24 +3682,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
              rdfs:label "Oberschule G8 Sek II (HB)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000260
-:LP_00000260 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000056
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "HB Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 :LP_00000261 rdf:type owl:Class ;
              rdfs:comment "Lehrplan Elemente sind Informationselemente die in einem Lehrplan zur Beschreibung des Lehrplans verwendet werden. Lehrplan Elemente können Funktionen und Rollen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
-             rdfs:label "Lehrplan Element"@de .
+             rdfs:label "Lehrplan Element"@de ;
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Evtl. andere Bezeichung finden, da diese Elemente auch den Bildungsstandards zugeordnet werden sollen." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
@@ -3493,7 +3699,8 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, dem kein anderer Kompetenzbereich übergeordnet ist und Kompetenzen untergeordnet sind." ;
+             rdfs:comment "Strukturierendes Lehrplanelement, das einem Kompetenzbereich untergeordnet ist und  Kompetenzen übergeordnet ist. Kann auch anderen Teilkompetenzbereichen über- oder untergeordnet sein." ,
+                          "Strukturierendes Lehrplanelement, dem kein anderer Kompetenzbereich übergeordnet ist und Kompetenzen untergeordnet sind." ;
              rdfs:label "MEM-Kompetenzbereich"@de .
 
 
@@ -3539,7 +3746,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000273
 :LP_00000273 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -3575,7 +3786,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000275
 :LP_00000275 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000274
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000274
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3624,7 +3839,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000276
 :LP_00000276 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3673,7 +3892,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000277
 :LP_00000277 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000274
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000274
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3702,7 +3925,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000278
 :LP_00000278 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3725,27 +3952,17 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
              rdfs:label "Gymnasium Sek II (HH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000279
-:LP_00000279 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000046
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "RP Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000283
 :LP_00000283 rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Class ;
                                    owl:oneOf ( <https://w3id.org/ontology/LP_00000538>
                                              )
                                  ] ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -3774,7 +3991,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000284
 :LP_00000284 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -3795,7 +4016,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000285
 :LP_00000285 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3824,7 +4049,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000286
 :LP_00000286 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3853,7 +4082,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000287
 :LP_00000287 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3898,7 +4131,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000288
 :LP_00000288 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -3943,7 +4180,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000289
 :LP_00000289 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -3972,7 +4213,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000290
 :LP_00000290 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000291
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000291
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4047,93 +4292,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
              rdfs:label "Integrierte Gesamtschule"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000293
-:LP_00000293 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000045
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "HH Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000295
-:LP_00000295 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000055
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "SL Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000296
-:LP_00000296 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000050
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "HE Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000297
-:LP_00000297 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000052
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "MV Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000298
-:LP_00000298 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000043
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "NI Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000299
-:LP_00000299 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000054
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "SH Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000303
 :LP_00000303 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -4162,7 +4327,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000304
 :LP_00000304 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4207,7 +4376,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000305
 :LP_00000305 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -4236,7 +4409,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000306
 :LP_00000306 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4281,7 +4458,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000307
 :LP_00000307 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -4312,65 +4493,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
              rdfs:label "Gymnasium Sek II (SL)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00000308
-:LP_00000308 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000044
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "NW Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000309
-:LP_00000309 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000047
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "SN Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000310
-:LP_00000310 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000053
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "ST Schularten"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000311
-:LP_00000311 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:hasValue :LP_30000031
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00000117 ;
-             rdfs:label "TH Schularten"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00000316
 :LP_00000316 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -4399,7 +4528,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000317
 :LP_00000317 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4448,7 +4581,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000318
 :LP_00000318 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000319
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000319
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4504,7 +4641,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000320
 :LP_00000320 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4553,7 +4694,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000321
 :LP_00000321 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4602,7 +4747,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000322
 :LP_00000322 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4651,7 +4800,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000324
 :LP_00000324 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -4680,7 +4833,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000325
 :LP_00000325 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -4709,7 +4866,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000326
 :LP_00000326 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -4738,7 +4899,11 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000327
 :LP_00000327 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -4834,14 +4999,6 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000341
 :LP_00000341 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000111
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000058 ;
-                                                          owl:someValuesFrom :LP_00000076
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
              rdfs:subClassOf :LP_00000020 ;
              rdfs:comment "Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie umfasst die Sekundarstufe II. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)" ;
              rdfs:label "Gymnasiale Oberstufe"@de ;
@@ -4849,7 +5006,10 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
 sollten wir nicht auch das folgende Axiom mit hinzufügen?
 
-hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangsstufe 13'})"""@de .
+hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangsstufe 13'})"""@de ,
+                                                                 """Axiom entfernt: 
+
+equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulreife')""" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000342
@@ -4925,7 +5085,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000364
 :LP_00000364 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -4961,7 +5125,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000366
 :LP_00000366 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000365
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000365
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -4989,7 +5157,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000368
 :LP_00000368 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000367
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000367
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -5018,7 +5190,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000369
 :LP_00000369 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -5055,7 +5231,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000370
 :LP_00000370 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -5092,7 +5272,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000371
 :LP_00000371 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000007
@@ -5129,7 +5313,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000372
 :LP_00000372 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -5154,7 +5342,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000378
 :LP_00000378 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -5183,7 +5375,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000379
 :LP_00000379 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000140
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5236,7 +5432,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000380
 :LP_00000380 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000167
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000167
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5289,7 +5489,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000381
 :LP_00000381 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000382
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000382
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5349,7 +5553,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000383
 :LP_00000383 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000240
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000240
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5402,7 +5610,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000384
 :LP_00000384 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5455,7 +5667,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000385
 :LP_00000385 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -5476,7 +5692,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000386
 :LP_00000386 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -5505,7 +5725,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000387
 :LP_00000387 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -5534,7 +5758,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000388
 :LP_00000388 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000240
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000240
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -5563,7 +5791,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000393
 :LP_00000393 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -5592,7 +5824,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000394
 :LP_00000394 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -5621,7 +5857,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000395
 :LP_00000395 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5670,7 +5910,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000396
 :LP_00000396 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5719,7 +5963,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000397
 :LP_00000397 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5769,7 +6017,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000398
 :LP_00000398 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5818,7 +6070,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000399
 :LP_00000399 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -5843,7 +6099,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000400
 :LP_00000400 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -5868,7 +6128,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000407
 :LP_00000407 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -5897,7 +6161,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000408
 :LP_00000408 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000382
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000382
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -5950,7 +6218,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000409
 :LP_00000409 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -6003,7 +6275,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000410
 :LP_00000410 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -6056,7 +6332,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000411
 :LP_00000411 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -6109,7 +6389,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000412
 :LP_00000412 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -6162,7 +6446,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000413
 :LP_00000413 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -6187,7 +6475,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000414
 :LP_00000414 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -6216,7 +6508,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000415
 :LP_00000415 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -6245,7 +6541,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000416
 :LP_00000416 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -6274,7 +6574,11 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000417
 :LP_00000417 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -6447,7 +6751,7 @@ hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangs
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000496
+                                                          owl:someValuesFrom :LP_00000494
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -6592,7 +6896,7 @@ Instances of this class provide text that describes a particular competence (e.g
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000441
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000498
+                                                          owl:someValuesFrom :LP_00000497
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -6715,29 +7019,17 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000494
 :LP_00000494 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000482 ;
-             rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de ;
+             rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de ,
+                          "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de ;
              rdfs:label "Kompetenzbereichsfunktion"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000496
-:LP_00000496 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000482 ;
-             rdfs:comment "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de ;
-             rdfs:label "Teilkompetenzbereichsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000497
 :LP_00000497 rdf:type owl:Class ;
              rdfs:subClassOf :LP_00000482 ;
              rdfs:label "Themenfeldfunktion"@de ;
-             <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00000498
-:LP_00000498 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000482 ;
-             rdfs:label "Themafunktion"@de ;
-             <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de .
+             <http://www.w3.org/2004/02/skos/core#example> "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de ,
+                                                           "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000499
@@ -7177,7 +7469,7 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000571
 :LP_00000571 rdf:type owl:Class ;
              rdfs:comment "Bildungsstandard ist eine Spezifikation von fachlichen und fachübergreifenden Basisqualifikationen, die für die weitere schulische und berufliche Ausbildung von Bedeutung sind und die anschlussfähiges Lernen ermöglicht. Bildungsstandards ermöglichen den Schulen, ihren Unterricht an Standards zu orientieren."@de ;
-             rdfs:label "KMK Bildungsstandard"@de ;
+             rdfs:label "Bildungsstandard (KMK)"@de ;
              rdfs:seeAlso <https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Konzeption-Entwicklung.pdf> ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "bitte Defintion verbessern" .
 
@@ -7375,7 +7667,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                              [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -7414,7 +7706,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -7516,7 +7808,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002003
 :LP_00002003 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000140
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7553,7 +7849,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002004
 :LP_00002004 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000140
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7597,7 +7897,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002006
 :LP_00002006 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002005
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002005
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7642,7 +7946,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002007
 :LP_00002007 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -7678,7 +7986,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002009
 :LP_00002009 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002008
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002008
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7723,7 +8035,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002010
 :LP_00002010 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000167
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000167
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7764,7 +8080,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002011
 :LP_00002011 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7823,7 +8143,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002013
 :LP_00002013 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7868,7 +8192,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002014
 :LP_00002014 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -7909,7 +8237,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002015
 :LP_00002015 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -7930,7 +8262,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002016
 :LP_00002016 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -7959,7 +8295,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002017
 :LP_00002017 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -7988,7 +8328,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002018
 :LP_00002018 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000240
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000240
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8017,7 +8361,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002019
 :LP_00002019 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -8046,7 +8394,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002024
 :LP_00002024 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000140
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000140
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8099,7 +8451,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002025
 :LP_00002025 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000167
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000167
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8152,7 +8508,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002026
 :LP_00002026 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000238
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000238
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8205,7 +8565,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002027
 :LP_00002027 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8258,7 +8622,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002028
 :LP_00002028 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8311,7 +8679,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002029
 :LP_00002029 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8364,7 +8736,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002030
 :LP_00002030 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8393,7 +8769,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002031
 :LP_00002031 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002012
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00002012
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8422,7 +8802,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002032
 :LP_00002032 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000292
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000292
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8451,7 +8835,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002036
 :LP_00002036 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000114
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000114
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000001
@@ -8480,7 +8868,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002037
 :LP_00002037 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8525,7 +8917,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002038
 :LP_00002038 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000005
@@ -8570,7 +8966,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002039
 :LP_00002039 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000112
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000112
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8599,7 +8999,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002040
 :LP_00002040 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000010
@@ -8620,7 +9024,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002041
 :LP_00002041 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8649,7 +9057,11 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002042
 :LP_00002042 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000122
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000122
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -8726,7 +9138,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000434
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -8906,7 +9318,7 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002051
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
@@ -9178,34 +9590,6 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
              rdfs:label "Element (SH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_00002104
-:LP_00002104 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000496
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, das einem Kompetenzbereich untergeordnet ist und  Kompetenzen übergeordnet ist. Kann auch anderen Teilkompetenzbereichen über- oder untergeordnet sein." ;
-             rdfs:label "MEM-Teilkompetenzbereich"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00002105
-:LP_00002105 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000498
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ;
-             rdfs:label "MEM-Thema"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_00002106
 :LP_00002106 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
@@ -9216,13 +9600,18 @@ Um die richtige Funktion zu wählen muss überlegt werden, ob es eine Beschreibu
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:comment "Strukturierendes Lehrplanelement, dem kein anderes Thema übergeordnet ist. Beschreibt ein Thema für einen Bereich." ;
+             rdfs:comment "Strukturierendes Lehrplanelement, das einem Themenfeld untergeordnet ist und Lerninhalten übergeordnet ist. Kann auch anderen Themen über- oder untergeordnet sein. " ,
+                          "Strukturierendes Lehrplanelement, dem kein anderes Thema übergeordnet ist. Beschreibt ein Thema für einen Bereich." ;
              rdfs:label "MEM-Themenfeld"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002107
 :LP_00002107 rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :LP_00000240
+             rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                      owl:someValuesFrom :LP_00000240
+                                                    ]
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000026 ;
                                                       owl:hasValue :LP_20000011
@@ -9455,7 +9844,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9511,7 +9900,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9660,7 +10049,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9673,7 +10062,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002080
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9748,7 +10137,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002118
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -9869,7 +10258,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "MEM-Beispiel"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Beispiel hat inhaltlichen Bezug im gegensatz zum Hinweis."@de ,
+                                                                 "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002167
@@ -9954,7 +10344,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002093
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10013,10 +10403,6 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000494
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10110,7 +10496,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002085
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10167,7 +10553,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000342
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10275,7 +10661,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000342
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10302,7 +10688,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10315,7 +10701,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10367,7 +10753,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10424,7 +10810,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000426
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10474,10 +10860,6 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000497
                                                     ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
-                                                    ]
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
@@ -10489,7 +10871,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000426
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10635,7 +11017,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000496
+                                                      owl:someValuesFrom :LP_00000494
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -10714,7 +11096,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00002102
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000498
+                                                      owl:someValuesFrom :LP_00000497
                                                     ]
                                                   ) ;
                                rdf:type owl:Class

@@ -340,6 +340,18 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                            <https://w3id.org/lehrplan/ontology/LP_0000831>
                                                                          )
                                                            ] ;
+                                                rdfs:label "hat_bildungsgangniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000840
+<https://w3id.org/lehrplan/ontology/LP_0000840> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                           [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                           <https://w3id.org/lehrplan/ontology/LP_0000831>
+                                                                         )
+                                                           ] ;
                                                 rdfs:label "hat_fachniveau"@de .
 
 
@@ -456,6 +468,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                                        ]
                                                                                      ) ;
                                                                   rdf:type owl:Class
+                                                                ] ,
+                                                                [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000833> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000834>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
                                                                 ] ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
                                             rdfs:comment "Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de ;
@@ -473,6 +493,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                                        ]
                                                                                      ) ;
                                                                   rdf:type owl:Class
+                                                                ] ,
+                                                                [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000833> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000832>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
                                                                 ] ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
                                             rdfs:comment "Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de ,
@@ -487,6 +515,19 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000076>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ,
+                                                                [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000833> ;
+                                                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                              owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000530>
+                                                                                                                            <https://w3id.org/lehrplan/ontology/LP_00000531>
+                                                                                                                            <https://w3id.org/lehrplan/ontology/LP_0000835>
+                                                                                                                          )
+                                                                                                            ]
                                                                                        ]
                                                                                      ) ;
                                                                   rdf:type owl:Class
@@ -822,7 +863,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000081
 <https://w3id.org/lehrplan/ontology/LP_00000081> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000078> ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000019> ;
                                                  rdfs:label "Förderschulabschluss"@de .
 
 
@@ -3827,7 +3868,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 <https://w3id.org/lehrplan/ontology/LP_00000261> rdf:type owl:Class ;
                                                  rdfs:comment "Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibung verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
                                                  rdfs:label "Curriculares Element"@de ;
-                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Evtl. andere Bezeichung finden, da diese Elemente auch den Bildungsstandards zugeordnet werden sollen." .
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000262
@@ -7287,7 +7328,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                                                    owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000495> ;
                                                                    owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000261>
                                                                  ] ;
-                                                 rdfs:label "Element Funktionsspezifikation"@de .
+                                                 rdfs:label "Funktionsspezifikation"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000479
@@ -7844,13 +7885,16 @@ Instances of this class provide text that describes a particular competence (e.g
 ###  https://w3id.org/lehrplan/ontology/LP_00000574
 <https://w3id.org/lehrplan/ontology/LP_00000574> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
-                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000135>
-                                                                                        ]
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
-                                                                                          owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000231>
+                                                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                                                 owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000135>
+                                                                                                               ]
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                                                 owl:hasValue <https://w3id.org/lehrplan/ontology/LP_00000231>
+                                                                                                               ]
+                                                                                                             ) ;
+                                                                                          rdf:type owl:Class
                                                                                         ]
                                                                                       ) ;
                                                                    rdf:type owl:Class
@@ -12010,7 +12054,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 <https://w3id.org/lehrplan/ontology/LP_0000837> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000335> ;
                                                 rdfs:label "Gymnasialniveaufunktion"@de ;
-                                                <http://www.w3.org/2004/02/skos/core#editorialNote> "nur für Sek I !!!    für Sek II bitte Grundkurdfunktion und/oder Leistungskursfunktion verwenden"@de .
+                                                <http://www.w3.org/2004/02/skos/core#editorialNote> "nur für Sek I !!!    für Sek II bitte Grundkursfunktion und/oder Leistungskursfunktion verwenden"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000838
@@ -14575,6 +14619,25 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000177> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000043> ;
                                                  rdfs:label "Hauptschulabschluss 10 (NI)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000841
+<https://w3id.org/lehrplan/ontology/LP_0000841> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                <https://w3id.org/lehrplan/ontology/LP_0000840> <https://w3id.org/lehrplan/ontology/LP_0000842> ;
+                                                rdfs:label "ce_1"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000842
+<https://w3id.org/lehrplan/ontology/LP_0000842> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00002118> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00002173> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000831> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000834> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000836> ;
+                                                <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000056> ;
+                                                rdfs:label "ga_1"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000001

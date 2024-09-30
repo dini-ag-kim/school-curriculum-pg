@@ -16,6 +16,7 @@
                                                     <https://orcid.org/0000-0001-7192-7143> ,
                                                     "Almut Steinlein"@de ,
                                                     "Cindy Bloes"@de ,
+                                                    "Johann Bergh"@de ,
                                                     "Laura Junghans"@de ;
                                       terms:description "Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst."@de ,
                                                         "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system."@en ;
@@ -242,7 +243,8 @@ rdfs:label rdf:type owl:AnnotationProperty .
 :LP_00000483 rdf:type owl:ObjectProperty ;
              owl:inverseOf :LP_00000495 ;
              rdfs:range :LP_00000478 ;
-             rdfs:label "hat_funktion"@de .
+             rdfs:label "hat_funktion"@de ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "hat Funktionsspezifikation"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000495
@@ -347,7 +349,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 ###  http://purl.obolibrary.org/obo/LP_0000802
 <http://purl.obolibrary.org/obo/LP_0000802> rdf:type owl:Class ;
                                             rdfs:subClassOf :LP_00000261 ;
-                                            rdfs:comment "Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung. Bei manchen Gegenständen kann der dritte Bereich eine gestalterische Aufgabe beinhalten."@de ;
+                                            rdfs:comment "Umfasst Repräsentationen für die drei Anforderungsbereiche. Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung."@de ;
                                             rdfs:label "CE-Anforderungsbereich"@de ;
                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "https://de.wikipedia.org/wiki/Operator_(Bildungswesen)" .
 
@@ -3693,7 +3695,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 :LP_00000261 rdf:type owl:Class ;
-             rdfs:comment "Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibun verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
+             rdfs:comment "Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibung verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
              rdfs:label "Curriculares Element"@de ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Evtl. andere Bezeichung finden, da diese Elemente auch den Bildungsstandards zugeordnet werden sollen." .
 
@@ -6983,7 +6985,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                owl:onProperty :LP_00000495 ;
                                owl:someValuesFrom :LP_00000261
                              ] ;
-             rdfs:label "Element Funktion"@de .
+             rdfs:label "Element Funktionsspezifikation"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000479
@@ -10195,7 +10197,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:comment "Element, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Prosatext."@de ;
+             rdfs:comment "Element, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Text."@de ;
              rdfs:label "CE-Erläuterung" .
 
 
@@ -10264,7 +10266,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                rdf:type owl:Class
                              ] ;
              rdfs:label "CE-Beispiel"@de ;
-             <http://www.w3.org/2004/02/skos/core#editorialNote> "Beispiel hat konkreten inhaltlichen Bezug im Gegensatz zum Hinweis."@de ,
+             <http://www.w3.org/2004/02/skos/core#editorialNote> "Beschreibung eines Beispiels mit konkretem inhaltlichen Bezug (im Gegensatz zum Hinweis)."@de ,
                                                                  "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
 
 

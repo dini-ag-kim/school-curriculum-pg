@@ -242,6 +242,7 @@ rdfs:label rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/lehrplan/ontology/LP_00000483
 :LP_00000483 rdf:type owl:ObjectProperty ;
              owl:inverseOf :LP_00000495 ;
+             rdfs:domain :LP_00000261 ;
              rdfs:range :LP_00000478 ;
              rdfs:label "hat_funktion"@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "hat Funktionsspezifikation"@de .
@@ -331,7 +332,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 :LP_0000833 rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain <http://purl.obolibrary.org/obo/LP_0000816> ;
-            rdfs:range :LP_0000831 ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :LP_00000265
+                                       :LP_0000831
+                                     )
+                       ] ;
             rdfs:label "hat_fachniveau"@de .
 
 
@@ -3750,16 +3755,7 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000508
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000483 ;
-                                                      owl:someValuesFrom :LP_00000509
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty [ owl:inverseOf :LP_0000833
-                                                                     ] ;
-                                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/LP_0000815>
+                                                      owl:someValuesFrom :LP_00000335
                                                     ]
                                                   ) ;
                                rdf:type owl:Class
@@ -7119,13 +7115,13 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000508
 :LP_00000508 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_0000837 ;
+             rdfs:subClassOf :LP_00000335 ;
              rdfs:label "Grundkursfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000509
 :LP_00000509 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_0000837 ;
+             rdfs:subClassOf :LP_00000335 ;
              rdfs:label "Leistungskursfunktion"@de .
 
 
@@ -7398,7 +7394,7 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000530
 :LP_00000530 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000265
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
                                                           owl:someValuesFrom :LP_00000508
@@ -7416,7 +7412,7 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000531
 :LP_00000531 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000265
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
                                                           owl:someValuesFrom :LP_00000509
@@ -11414,63 +11410,34 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000831
 :LP_0000831 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_00000261 ;
+            rdfs:subClassOf [ owl:intersectionOf ( :LP_00000261
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_00000483 ;
+                                                     owl:someValuesFrom :LP_00000335
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
             rdfs:label "CE-Fachniveau Sek I"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000832
 :LP_0000832 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000831
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :LP_00000483 ;
-                                                     owl:someValuesFrom :LP_0000838
-                                                   ]
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty [ owl:inverseOf :LP_0000833
-                                                                    ] ;
-                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/LP_0000814>
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] ;
+            owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :LP_00000483 ;
+                                                         owl:someValuesFrom :LP_0000838
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :LP_0000831 ;
             rdfs:label "CE-Realschulniveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000834
 :LP_0000834 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0000831 ,
-                            [ owl:intersectionOf ( :LP_00000261
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :LP_00000483 ;
-                                                     owl:someValuesFrom :LP_0000839
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] ;
-            rdfs:label "CE-Hauptschulniveau"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000835
-:LP_0000835 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000831
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :LP_00000483 ;
-                                                     owl:someValuesFrom :LP_0000837
-                                                   ]
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty [ owl:inverseOf :LP_0000833
-                                                                    ] ;
-                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/LP_0000815>
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] ;
-            rdfs:label "CE-Gymnasialniveau"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000836
-:LP_0000836 rdf:type owl:Class ;
-            owl:equivalentClass [ owl:intersectionOf ( :LP_00002173
+            owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty :LP_00000483 ;
                                                          owl:someValuesFrom :LP_0000839
@@ -11478,7 +11445,35 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                      ) ;
                                   rdf:type owl:Class
                                 ] ;
-            rdfs:label "Grundlegendes Anfoderungsniveau (HB)"@de .
+            rdfs:subClassOf :LP_0000831 ;
+            rdfs:label "CE-Hauptschulniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000835
+:LP_0000835 rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :LP_00000483 ;
+                                                         owl:someValuesFrom :LP_0000837
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :LP_0000831 ;
+            rdfs:label "CE-Gymnasialniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000836
+:LP_0000836 rdf:type owl:Class ;
+            rdfs:subClassOf [ owl:intersectionOf ( :LP_00002173
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_00000483 ;
+                                                     owl:someValuesFrom :LP_0000839
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Grundlegendes Anforderungsniveau (HB)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000837

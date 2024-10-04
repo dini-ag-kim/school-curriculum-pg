@@ -120,11 +120,19 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000008
 <https://w3id.org/lehrplan/ontology/LP_00000008> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "hat_teil"@de .
+                                                 owl:equivalentProperty [ owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00002168>
+                                                                        ] ;
+                                                 owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00002168> ;
+                                                 rdfs:comment "should be BFO equivalent to \"has part\"" ;
+                                                 rdfs:label "has_part"@en ,
+                                                            "hat_teil"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000026
 <https://w3id.org/lehrplan/ontology/LP_00000026> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <https://w3id.org/lehrplan/ontology/LP_00000008> ,
+                                                                    [ owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00002168>
+                                                                    ] ;
                                                  rdfs:range <https://w3id.org/lehrplan/ontology/LP_00000009> ;
                                                  owl:propertyChainAxiom ( <https://w3id.org/lehrplan/ontology/LP_00000440>
                                                                           <https://w3id.org/lehrplan/ontology/LP_00000026>
@@ -328,7 +336,8 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002168
 <https://w3id.org/lehrplan/ontology/LP_00002168> rdf:type owl:ObjectProperty ;
-                                                 rdfs:label "ist_teil_von"@de .
+                                                 rdfs:comment "ist_teil_von"@de ;
+                                                 rdfs:label "is_part_of"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000833
@@ -378,14 +387,15 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  http://purl.obolibrary.org/obo/LP_0000802
 <http://purl.obolibrary.org/obo/LP_0000802> rdf:type owl:Class ;
-                                            rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                     owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000829>
-                                                                                   ]
-                                                                                 ) ;
-                                                              rdf:type owl:Class
-                                                            ] ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000829>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                             rdfs:comment "Umfasst Repräsentationen für die drei Anforderungsbereiche. Im deutschen und österreichischen Schulsystem werden die Lernziele meist in drei Anforderungsbereiche aufgeteilt, die ein unterschiedliches Ausmaß von Eigenleistung und komplexem Denken vom Schüler erfordern. Der Anforderungsbereich I umfasst meist eine Reproduktion, Anforderungsbereich II eine Reorganisation (Umgestaltung) sowie einen Transfer (Übertragung, Anwendung) und Anforderungsbereich III Urteilsbildung, Reflexion und Problemlösung."@de ;
                                             rdfs:label "CE-Anforderungsbereich"@de ;
                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "https://de.wikipedia.org/wiki/Operator_(Bildungswesen)" .
@@ -472,7 +482,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                 [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000833> ;
-                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000834>
+                                                                                         owl:hasValue <https://w3id.org/lehrplan/ontology/LP_0000849>
                                                                                        ]
                                                                                      ) ;
                                                                   rdf:type owl:Class
@@ -497,7 +507,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                 [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000816>
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000833> ;
-                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000832>
+                                                                                         owl:hasValue <https://w3id.org/lehrplan/ontology/LP_0000848>
                                                                                        ]
                                                                                      ) ;
                                                                   rdf:type owl:Class
@@ -533,7 +543,9 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                                                   rdf:type owl:Class
                                                                 ] ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000816> ;
-                                            rdfs:comment "Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen."@de ,
+                                            rdfs:comment """Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
+
+Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium erfolgen. Auch in der Sekundarstufe I wird z.B. an Gesamt- oder Gemeinschaftsschulen auf Gymnasialniveau mit dem Ziel der allgemeinen Hochschulreife (Abitur) unterrichtet."""@de ,
                                                          "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en ;
                                             rdfs:label "Gymnasialer Bildungsgang"@de ,
                                                        "Gymnasium Track"@en .
@@ -4619,7 +4631,7 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gemeinschatsschule Sek II (SL)"@de .
+                                                 rdfs:label "Gemeinschaftsschule Sek II (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000306
@@ -7853,7 +7865,16 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000572
 <https://w3id.org/lehrplan/ontology/LP_00000572> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000851>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000844> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
                                                                                           owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000009>
@@ -7924,6 +7945,14 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000576
 <https://w3id.org/lehrplan/ontology/LP_00000576> rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                              owl:hasValue <https://w3id.org/lehrplan/ontology/LP_0000848>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
                                                  rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000572>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
@@ -8224,6 +8253,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                                        rdf:type owl:Class
                                                                      ] ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001011> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_00002159> ,
                                                                  <https://w3id.org/lehrplan/ontology/LP_0000834> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002076>
                                                                                         [ rdf:type owl:Restriction ;
@@ -8239,7 +8269,8 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001013
 <https://w3id.org/lehrplan/ontology/LP_00001013> rdf:type owl:Class ;
-                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                 owl:equivalentClass <https://w3id.org/lehrplan/ontology/LP_0000852> ,
+                                                                     [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
                                                                                             [ rdf:type owl:Restriction ;
                                                                                               owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                               owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00001014>
@@ -9847,7 +9878,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                                 rdfs:label "Gemeinschatsschule Sek II (SH)"@de .
+                                                 rdfs:label "Gemeinschaftsschule Sek II (SH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002040
@@ -10615,6 +10646,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 ###  https://w3id.org/lehrplan/ontology/LP_00002116
 <https://w3id.org/lehrplan/ontology/LP_00002116> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002089>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -10911,7 +10943,8 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002141
 <https://w3id.org/lehrplan/ontology/LP_00002141> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000802> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                           owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000829>
@@ -10955,6 +10988,7 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 ###  https://w3id.org/lehrplan/ontology/LP_00002145
 <https://w3id.org/lehrplan/ontology/LP_00002145> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -10997,7 +11031,8 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002149
 <https://w3id.org/lehrplan/ontology/LP_00002149> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002159> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                           owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002158>
@@ -11096,28 +11131,35 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002159
 <https://w3id.org/lehrplan/ontology/LP_00002159> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002158>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002158>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:comment "Element, das einen Lerninhalt oder ein Thema mit einem Kompetenzbereich verknüpft bzw. einen Bezug zwischen beiden herstellt." ;
-                                                 rdfs:label "CE-Verknüpfung"@de .
+                                                 rdfs:label "CE-Verknüpfung"@de ;
+                                                 <http://www.w3.org/2004/02/skos/core#editorialNote> """hierfür sollte es eigentich keine separate Klasse geben. 
+
+Dies scheint ein Hilfmittel für die Annotation zu sein. 
+
+ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002160
 <https://w3id.org/lehrplan/ontology/LP_00002160> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002161>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002161>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:comment "Element, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Text."@de ;
                                                  rdfs:label "CE-Erläuterung" .
 
@@ -11131,7 +11173,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002162
 <https://w3id.org/lehrplan/ontology/LP_00002162> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002160> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                           owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002161>
@@ -11144,7 +11187,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002163
 <https://w3id.org/lehrplan/ontology/LP_00002163> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00002166> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002080>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                           owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002167>
@@ -11179,14 +11223,15 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002166
 <https://w3id.org/lehrplan/ontology/LP_00002166> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
-                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002167>
-                                                                                        ]
-                                                                                      ) ;
-                                                                   rdf:type owl:Class
-                                                                 ] ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00002167>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
                                                  rdfs:label "CE-Beispiel"@de ;
                                                  <http://www.w3.org/2004/02/skos/core#editorialNote> "Beschreibung eines Beispiels mit konkretem inhaltlichen Bezug (im Gegensatz zum Hinweis)."@de ,
                                                                                                      "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV." .
@@ -11564,6 +11609,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 ###  https://w3id.org/lehrplan/ontology/LP_00002198
 <https://w3id.org/lehrplan/ontology/LP_00002198> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000342>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -11822,7 +11868,8 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002217
 <https://w3id.org/lehrplan/ontology/LP_00002217> rdf:type owl:Class ;
-                                                 rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000426>
+                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/LP_0000802> ,
+                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000426>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
                                                                                           owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000829>
@@ -11953,6 +12000,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 <https://w3id.org/lehrplan/ontology/LP_00002227> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
                                                                  <https://w3id.org/lehrplan/ontology/LP_00002069> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000441>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -12080,6 +12128,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 ###  https://w3id.org/lehrplan/ontology/LP_00002236
 <https://w3id.org/lehrplan/ontology/LP_00002236> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002102>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -12122,6 +12171,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 ###  https://w3id.org/lehrplan/ontology/LP_00002239
 <https://w3id.org/lehrplan/ontology/LP_00002239> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002102>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -12156,6 +12206,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 ###  https://w3id.org/lehrplan/ontology/LP_00002242
 <https://w3id.org/lehrplan/ontology/LP_00002242> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001013> ,
+                                                                 <https://w3id.org/lehrplan/ontology/LP_0000852> ,
                                                                  [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00002102>
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
@@ -12407,6 +12458,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                            ]
                                                                                          ) ;
                                                                       rdf:type owl:Class
+                                                                    ] ,
+                                                                    [ rdf:type owl:Class ;
+                                                                      owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_0000848>
+                                                                                )
                                                                     ] ;
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000831> ;
                                                 rdfs:label "CE-Realschulniveau"@de .
@@ -12421,6 +12476,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                            ]
                                                                                          ) ;
                                                                       rdf:type owl:Class
+                                                                    ] ,
+                                                                    [ rdf:type owl:Class ;
+                                                                      owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_0000849>
+                                                                                )
                                                                     ] ;
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000831> ;
                                                 rdfs:label "CE-Hauptschulniveau"@de .
@@ -12435,8 +12494,13 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                            ]
                                                                                          ) ;
                                                                       rdf:type owl:Class
+                                                                    ] ,
+                                                                    [ rdf:type owl:Class ;
+                                                                      owl:oneOf ( <https://w3id.org/lehrplan/ontology/LP_0000850>
+                                                                                )
                                                                     ] ;
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000831> ;
+                                                rdfs:comment "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de ;
                                                 rdfs:label "CE-Gymnasialniveau"@de .
 
 
@@ -12471,6 +12535,82 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 <https://w3id.org/lehrplan/ontology/LP_0000839> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000335> ;
                                                 rdfs:label "Hauptschulniveaufunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000844
+<https://w3id.org/lehrplan/ontology/LP_0000844> rdf:type owl:Class ;
+                                                owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000009>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                  owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000265>
+                                                                                                                                <https://w3id.org/lehrplan/ontology/LP_0000831>
+                                                                                                                              )
+                                                                                                                ]
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ,
+                                                                    [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000851>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                rdfs:label "CE-Niveauspezifikation"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#example> "Ist ein Informationselement, das die Verbindung herstellt zwischen Lehrplanelementen (z.B. Kompetenzen oder Inhalten) und einem Fachniveau (z.B. Leistungskurs, Hauptschulniveau, etc.) und einer oder mehrerer Jahrgangsstufen."@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000845
+<https://w3id.org/lehrplan/ontology/LP_0000845> rdf:type owl:Class ;
+                                                owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000844>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty [ owl:inverseOf <https://w3id.org/lehrplan/ontology/LP_00000008>
+                                                                                                            ] ;
+                                                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                  owl:unionOf ( <https://w3id.org/lehrplan/ontology/LP_00000263>
+                                                                                                                                <https://w3id.org/lehrplan/ontology/LP_00000332>
+                                                                                                                              )
+                                                                                                                ]
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000261> ;
+                                                rdfs:label "CE-Progressionsstufe"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Die Progresssion ist Teil einer Kompetenz-Spezifikation oder eines Lerninhalts. Sie beschreibt genau den Teil, der je nach Niveau variabel ist. Jede Progessionssstufe hat eine eigene Beziehung zu einer Niveauspezifikation."@de ;
+                                                <http://www.w3.org/2004/02/skos/core#example> "Wenn die Komptenz \"Lesen\" ist, könnten Progressionen sein: \"Worte einzeln lesen\", \"Mit Hilfe (Finger, Stäbchen, Lineal) lesen.\", \"Flüssig lesen\""@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000851
+<https://w3id.org/lehrplan/ontology/LP_0000851> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00000478> ;
+                                                rdfs:label "Niveauspezifikationsfunktion"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000852
+<https://w3id.org/lehrplan/ontology/LP_0000852> rdf:type owl:Class ;
+                                                owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00001014>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_00001011> ,
+                                                                <https://w3id.org/lehrplan/ontology/LP_0000832> ;
+                                                rdfs:label "CE-Hinweis"@de .
 
 
 #################################################################
@@ -13132,6 +13272,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                                        <https://w3id.org/lehrplan/ontology/LP_00000594> ,
                                                                                                        <https://w3id.org/lehrplan/ontology/LP_00000601> ,
                                                                                                        <https://w3id.org/lehrplan/ontology/LP_00000608> ;
+                                                      <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_0000853> ;
                                                       rdfs:label "A" ;
                                                       <http://www.w3.org/2004/02/skos/core#editorialNote> "we should remove these and use the  LP_00* ones." .
 
@@ -14088,6 +14229,7 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000594> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000601> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_00000608> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_0000853> ;
                                                  rdfs:label "Niveaustufe A (BB)"@de .
 
 
@@ -14237,7 +14379,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14255,7 +14400,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14275,7 +14423,13 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ,
@@ -14296,7 +14450,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000008> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000009> ;
@@ -14315,7 +14473,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000573> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14333,7 +14494,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14352,7 +14515,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ;
@@ -14373,7 +14540,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ;
@@ -14396,7 +14567,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000006> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ;
@@ -14417,7 +14592,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000008> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000009> ;
@@ -14438,7 +14617,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000574> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14458,7 +14640,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14477,7 +14661,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ;
@@ -14498,7 +14686,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000003> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ;
@@ -14521,7 +14713,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000005> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000006> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ;
@@ -14542,7 +14738,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000007> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14562,7 +14761,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000008> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000009> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
@@ -14583,7 +14786,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000575> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14602,7 +14807,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14621,7 +14829,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14641,7 +14853,12 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ;
@@ -14662,7 +14879,12 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000004> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000006> ;
@@ -14685,7 +14907,12 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000006> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000008> ;
@@ -14706,7 +14933,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14726,7 +14956,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000576> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_0000848> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000009> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14746,7 +14980,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14764,7 +15000,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000002> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14783,7 +15022,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000004> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000002> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000003> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000004> ;
@@ -14803,7 +15046,11 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000004> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000005> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000006> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000004> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000005> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000006> ;
@@ -14825,7 +15072,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000006> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000006> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_20000007> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
@@ -14844,7 +15094,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000008> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14862,7 +15114,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000009> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000009> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -14880,7 +15134,9 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                           <https://w3id.org/lehrplan/ontology/LP_00000261> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000441> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000572> ,
-                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ;
+                                                          <https://w3id.org/lehrplan/ontology/LP_00000577> ,
+                                                          <https://w3id.org/lehrplan/ontology/LP_0000844> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000010> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
@@ -15017,10 +15273,58 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                  rdfs:label "Hauptschulabschluss 10 (NI)"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000848
+<https://w3id.org/lehrplan/ontology/LP_0000848> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000831> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000832> ;
+                                                <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000601> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000602> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000603> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000604> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000605> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000606> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000607> ;
+                                                rdfs:label "Realschulniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000849
+<https://w3id.org/lehrplan/ontology/LP_0000849> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000831> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000834> ;
+                                                rdfs:label "Hauptschulniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000850
+<https://w3id.org/lehrplan/ontology/LP_0000850> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_00000261> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000831> ,
+                                                         <https://w3id.org/lehrplan/ontology/LP_0000835> ;
+                                                rdfs:label "Gymnasialniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000853
+<https://w3id.org/lehrplan/ontology/LP_0000853> rdf:type owl:NamedIndividual ;
+                                                <https://w3id.org/lehrplan/ontology/LP_00000008> <https://lehrplan.yovisto.com/resource/lp/bb/level/1> ,
+                                                                                                 <https://w3id.org/lehrplan/ontology/LP_00000464> ;
+                                                rdfs:label "kompetenz_1"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_20000001
 <https://w3id.org/lehrplan/ontology/LP_20000001> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000427> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000583> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000588> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000589> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000594> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000595> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000601> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000602> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000608> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000609> ,
+                                                                                                  <https://w3id.org/ontology/LP_00000538> ;
                                                  rdfs:label "Jahrgangsstufe 1"@de .
 
 
@@ -15028,42 +15332,97 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
 <https://w3id.org/lehrplan/ontology/LP_20000002> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000427> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000583> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000584> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000589> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000595> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000602> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000603> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000609> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000610> ,
+                                                                                                  <https://w3id.org/ontology/LP_00000538> ;
                                                  rdfs:label "Jahrgangsstufe 2"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000003
 <https://w3id.org/lehrplan/ontology/LP_20000003> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000584> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000585> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000589> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000590> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000595> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000596> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000603> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000610> ,
+                                                                                                  <https://w3id.org/ontology/LP_00000538> ;
                                                  rdfs:label "Jahrgangsstufe 3"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000004
 <https://w3id.org/lehrplan/ontology/LP_20000004> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000585> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000590> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000596> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000603> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000604> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000610> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000611> ,
+                                                                                                  <https://w3id.org/ontology/LP_00000538> ;
                                                  rdfs:label "Jahrgangsstufe 4"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000005
 <https://w3id.org/lehrplan/ontology/LP_20000005> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000585> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000590> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000591> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000596> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000597> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000604> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000611> ;
                                                  rdfs:label "Jahrgangsstufe 5"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000006
 <https://w3id.org/lehrplan/ontology/LP_20000006> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000585> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000591> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000597> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000604> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000605> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000611> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000612> ;
                                                  rdfs:label "Jahrgangsstufe 6"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000007
 <https://w3id.org/lehrplan/ontology/LP_20000007> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000585> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000586> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000591> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000592> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000597> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000598> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000605> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000612> ;
                                                  rdfs:label "Jahrgangsstufe 7"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000008
 <https://w3id.org/lehrplan/ontology/LP_20000008> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000586> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000592> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000598> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000599> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000605> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000606> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000613> ;
                                                  rdfs:label "Jahrgangsstufe 8"@de .
 
 
@@ -15076,12 +15435,25 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                  <https://w3id.org/lehrplan/ontology/LP_00000029> <https://w3id.org/lehrplan/ontology/LP_30000048> ,
                                                                                                   <https://w3id.org/lehrplan/ontology/LP_30000057> ;
                                                  <https://w3id.org/lehrplan/ontology/LP_00000580> <https://w3id.org/lehrplan/ontology/LP_00000606> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000586> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000587> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000592> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000593> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000599> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000607> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000614> ;
                                                  rdfs:label "Jahrgangsstufe 9"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_20000010
 <https://w3id.org/lehrplan/ontology/LP_20000010> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/lehrplan/ontology/LP_00000009> ;
+                                                 <https://w3id.org/lehrplan/ontology/LP_00002168> <https://w3id.org/lehrplan/ontology/LP_00000587> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000593> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000599> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000600> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000607> ,
+                                                                                                  <https://w3id.org/lehrplan/ontology/LP_00000615> ;
                                                  rdfs:label "Jahrgangsstufe 10"@de .
 
 
@@ -15239,6 +15611,10 @@ Grenzt sich zu \"Konkretisierung der Standards (MV)\" dadurch ab, dass es sich h
                                                  <https://w3id.org/lehrplan/ontology/LP_00000041> ,
                                                  <https://w3id.org/lehrplan/ontology/LP_00000062> ,
                                                  <https://w3id.org/lehrplan/ontology/LP_00000283> ;
+                                        <https://w3id.org/lehrplan/ontology/LP_00000008> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
+                                                                                         <https://w3id.org/lehrplan/ontology/LP_20000002> ,
+                                                                                         <https://w3id.org/lehrplan/ontology/LP_20000003> ,
+                                                                                         <https://w3id.org/lehrplan/ontology/LP_20000004> ;
                                         <https://w3id.org/lehrplan/ontology/LP_00000026> <https://w3id.org/lehrplan/ontology/LP_20000001> ,
                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000002> ,
                                                                                          <https://w3id.org/lehrplan/ontology/LP_20000003> ,

@@ -9,7 +9,8 @@
 
 <https://w3id.org/lehrplan/ontology> rdf:type owl:Ontology ;
                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0> ;
-                                      owl:imports <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schulabschluesse.ttl> ,
+                                      owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> ,
+                                                  <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schulabschluesse.ttl> ,
                                                   <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schularten.ttl> ,
                                                   <https://raw.githubusercontent.com/dini-ag-kim/school-curriculum-pg/main/kim-schulfaecher.ttl> ;
                                       terms:creator <https://orcid.org/0000-0001-6378-2618> ,
@@ -112,6 +113,10 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000051
+<http://purl.obolibrary.org/obo/BFO_0000051> rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.obolibrary.org/obo/LP_0000812
 <http://purl.obolibrary.org/obo/LP_0000812> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf owl:topObjectProperty ;
@@ -121,20 +126,21 @@ rdfs:label rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000008
 :LP_00000008 rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
              owl:inverseOf :LP_00002168 ;
              rdfs:comment "should be BFO equivalent to \"has part\"" ;
-             rdfs:label "has_part"@en ,
-                        "hat_teil"@de .
+             rdfs:label "has_part"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000026
 :LP_00000026 rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :LP_00000008 ;
+             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000059> ;
+             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
              rdfs:range :LP_00000009 ;
              owl:propertyChainAxiom ( :LP_00000440
                                       :LP_00000026
                                     ) ;
-             rdfs:label "hat_jahrgangsstufe"@de .
+             rdfs:label "umfasst_jahrgangsstufe"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000029
@@ -329,7 +335,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_00002168
 :LP_00002168 rdf:type owl:ObjectProperty ;
-             rdfs:comment "ist_teil_von"@de ;
              rdfs:label "is_part_of"@en .
 
 
@@ -354,6 +359,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                                      )
                        ] ;
             rdfs:label "hat_fachniveau"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000855
+:LP_0000855 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+            rdfs:range :LP_00000009 ;
+            rdfs:label "hat_jahrgangsstufe"@de .
 
 
 #################################################################
@@ -434,6 +446,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  http://purl.obolibrary.org/obo/LP_0000808
 <http://purl.obolibrary.org/obo/LP_0000808> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ;
                                             rdfs:label "Organisation"@de .
 
 
@@ -540,6 +553,7 @@ Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium er
 
 ###  http://purl.obolibrary.org/obo/LP_0000816
 <http://purl.obolibrary.org/obo/LP_0000816> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
                                             rdfs:comment """Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
 
 Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
@@ -564,6 +578,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000001
 :LP_00000001 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "In der Bildungsinstitution Schule ist Fach der Ausdruck für die thematische Gliederung dessen, was jeweils unter Bildung verstanden wird."@de ,
                           "In the educational institution of school, subject is the term for the thematic structure of what is understood by education."@en ;
              rdfs:label "Schulfach"@de ,
@@ -603,6 +618,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000009
 :LP_00000009 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "A year group, also known as a class level, or school level in Austria and Switzerland, refers to all the classes or courses that start school in the same year or belong to the same learning stage."@en ,
                           "Eine Jahrgangsstufe, auch Klassenstufe, in Österreich und der Schweiz Schulstufe, bezeichnet die Gesamtheit der Klassen oder Kurse, die im selben Jahr eingeschult wurden oder demselben Lernabschnitt zugehörig sind."@de ,
                           "class level"@en ;
@@ -612,12 +628,14 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000019
 :LP_00000019 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035> ;
              rdfs:label "Schulabschluss"@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Bildungsgang"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000020
 :LP_00000020 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "Spezifiziert eine Unterteilung der Jahrgangsstufen zur Beschreibung von Bildungsgängen und Schularten."@de ;
              rdfs:label "Schulstufe"@de .
 
@@ -659,6 +677,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                :LP_30000057
                                              )
                                  ] ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "Class of the designations of the German federal states whose ministries of education and cultural affairs are responsible for the curricula."@en ,
                           "Klasse der Bezeichnungen der deutschen Bundesländer, deren Kultusministerien für die Lehrpläne zuständig ist."@de ;
              rdfs:label "Bundesland Bezeichnung"@de ,
@@ -668,7 +687,11 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000041
 :LP_00000041 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000054
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_0000855 ;
                                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                owl:oneOf ( :LP_20000001
                                                                                            :LP_20000002
@@ -676,10 +699,6 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                                            :LP_20000004
                                                                                          )
                                                                              ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom :LP_00000054
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -691,7 +710,11 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000042
 :LP_00000042 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom :LP_00000054
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_0000855 ;
                                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                owl:oneOf ( :LP_20000005
                                                                                            :LP_20000006
@@ -701,10 +724,6 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                                            :LP_20000010
                                                                                          )
                                                                              ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom :LP_00000054
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -716,7 +735,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000043
 :LP_00000043 rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty :LP_00000026 ;
+                                   owl:onProperty :LP_0000855 ;
                                    owl:someValuesFrom [ rdf:type owl:Class ;
                                                         owl:oneOf ( :LP_20000011
                                                                     :LP_20000012
@@ -766,7 +785,15 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000061
 :LP_00000061 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                               owl:oneOf ( :LP_30000048
+                                                                                           :LP_30000057
+                                                                                         )
+                                                                             ]
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_0000855 ;
                                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                owl:oneOf ( :LP_20000001
                                                                                            :LP_20000002
@@ -774,14 +801,6 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
                                                                                            :LP_20000004
                                                                                            :LP_20000005
                                                                                            :LP_20000006
-                                                                                         )
-                                                                             ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                               owl:oneOf ( :LP_30000048
-                                                                                           :LP_30000057
                                                                                          )
                                                                              ]
                                                         ]
@@ -803,20 +822,20 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 ###  https://w3id.org/lehrplan/ontology/LP_00000063
 :LP_00000063 rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000026 ;
+                                                          owl:onProperty :LP_00000029 ;
+                                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                               owl:oneOf ( :LP_30000048
+                                                                                           :LP_30000057
+                                                                                         )
+                                                                             ]
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_0000855 ;
                                                           owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                owl:oneOf ( :LP_20000007
                                                                                            :LP_20000008
                                                                                            :LP_20000009
                                                                                            :LP_20000010
-                                                                                         )
-                                                                             ]
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000029 ;
-                                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                               owl:oneOf ( :LP_30000048
-                                                                                           :LP_30000057
                                                                                          )
                                                                              ]
                                                         ]
@@ -918,6 +937,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000111
 :LP_00000111 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000034> ;
              rdfs:comment "Beschreibt die Art und Weise wie eine Schule organisiert ist."@de ,
                           "Describes the way a school is organized."@en ;
              rdfs:label "Schulart"@de .
@@ -1365,6 +1385,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000130
 :LP_00000130 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:label "Lerner Niveau"@de .
 
 
@@ -3762,6 +3783,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000261
 :LP_00000261 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibung verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de ;
              rdfs:label "Curriculares Element"@de ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de .
@@ -6795,6 +6817,7 @@ equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulre
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000438
 :LP_00000438 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
                           "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de ;
              rdfs:label "Lehrplan"@de .
@@ -6932,7 +6955,7 @@ grundlegendes Niveau:
                                                                                                       owl:onProperty :LP_00000580 ;
                                                                                                       owl:someValuesFrom [ owl:intersectionOf ( :LP_00000572
                                                                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                                                                  owl:onProperty :LP_00000026 ;
+                                                                                                                                                  owl:onProperty :LP_0000855 ;
                                                                                                                                                   owl:someValuesFrom :LP_00000009
                                                                                                                                                 ]
                                                                                                                                               ) ;
@@ -7045,7 +7068,8 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000478
 :LP_00000478 rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :LP_00000495 ;
                                owl:someValuesFrom :LP_00000261
                              ] ;
@@ -7485,7 +7509,8 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000540
 :LP_00000540 rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :LP_00000537 ;
                                owl:someValuesFrom :LP_00000001
                              ] ;
@@ -7541,6 +7566,7 @@ Instances of this class provide text that describes a particular competence (e.g
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000571
 :LP_00000571 rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
              rdfs:comment "Bildungsstandard ist eine Spezifikation von fachlichen und fachübergreifenden Basisqualifikationen, die für die weitere schulische und berufliche Ausbildung von Bedeutung sind und die anschlussfähiges Lernen ermöglicht. Bildungsstandards ermöglichen den Schulen, ihren Unterricht an Standards zu orientieren."@de ;
              rdfs:label "Bildungsstandard (KMK)"@de ;
              rdfs:seeAlso <https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Konzeption-Entwicklung.pdf> ;
@@ -7559,7 +7585,7 @@ Instances of this class provide text that describes a particular competence (e.g
                                  ] ;
              rdfs:subClassOf [ owl:intersectionOf ( :LP_00000441
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :LP_00000026 ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
                                                       owl:someValuesFrom :LP_00000009
                                                     ]
                                                     [ rdf:type owl:Restriction ;
@@ -12880,306 +12906,306 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
 ###  https://w3id.org/lehrplan/ontology/LP_00000583
 :LP_00000583 rdf:type owl:NamedIndividual ,
                       :LP_00000573 ;
-             :LP_00000026 :LP_20000001 ,
-                          :LP_20000002 ;
              :LP_00000578 :LP_00000464 ;
+             :LP_0000855 :LP_20000001 ,
+                         :LP_20000002 ;
              rdfs:label "BOA A"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000584
 :LP_00000584 rdf:type owl:NamedIndividual ,
                       :LP_00000573 ;
-             :LP_00000026 :LP_20000002 ,
-                          :LP_20000003 ;
              :LP_00000578 :LP_00000465 ;
+             :LP_0000855 :LP_20000002 ,
+                         :LP_20000003 ;
              rdfs:label "BOA B"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000585
 :LP_00000585 rdf:type owl:NamedIndividual ,
                       :LP_00000573 ;
-             :LP_00000026 :LP_20000003 ,
-                          :LP_20000004 ,
-                          :LP_20000005 ,
-                          :LP_20000006 ,
-                          :LP_20000007 ;
              :LP_00000578 :LP_00000466 ;
+             :LP_0000855 :LP_20000003 ,
+                         :LP_20000004 ,
+                         :LP_20000005 ,
+                         :LP_20000006 ,
+                         :LP_20000007 ;
              rdfs:label "BOA C"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000586
 :LP_00000586 rdf:type owl:NamedIndividual ,
                       :LP_00000573 ;
-             :LP_00000026 :LP_20000007 ,
-                          :LP_20000008 ,
-                          :LP_20000009 ;
              :LP_00000578 :LP_00000467 ;
+             :LP_0000855 :LP_20000007 ,
+                         :LP_20000008 ,
+                         :LP_20000009 ;
              rdfs:label "BOA D"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000587
 :LP_00000587 rdf:type owl:NamedIndividual ,
                       :LP_00000573 ;
-             :LP_00000026 :LP_20000009 ,
-                          :LP_20000010 ;
              :LP_00000578 :LP_00000468 ;
+             :LP_0000855 :LP_20000009 ,
+                         :LP_20000010 ;
              rdfs:label "BOA E"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000588
 :LP_00000588 rdf:type owl:NamedIndividual ,
                       :LP_00000574 ;
-             :LP_00000026 :LP_20000001 ;
              :LP_00000578 :LP_00000464 ;
+             :LP_0000855 :LP_20000001 ;
              rdfs:label "BBR A"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000589
 :LP_00000589 rdf:type owl:NamedIndividual ,
                       :LP_00000574 ;
-             :LP_00000026 :LP_20000001 ,
-                          :LP_20000002 ,
-                          :LP_20000003 ;
              :LP_00000578 :LP_00000465 ;
+             :LP_0000855 :LP_20000001 ,
+                         :LP_20000002 ,
+                         :LP_20000003 ;
              rdfs:label "BBR B"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000590
 :LP_00000590 rdf:type owl:NamedIndividual ,
                       :LP_00000574 ;
-             :LP_00000026 :LP_20000003 ,
-                          :LP_20000004 ,
-                          :LP_20000005 ;
              :LP_00000578 :LP_00000466 ;
+             :LP_0000855 :LP_20000003 ,
+                         :LP_20000004 ,
+                         :LP_20000005 ;
              rdfs:label "BBR C"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000591
 :LP_00000591 rdf:type owl:NamedIndividual ,
                       :LP_00000574 ;
-             :LP_00000026 :LP_20000005 ,
-                          :LP_20000006 ,
-                          :LP_20000007 ;
              :LP_00000578 :LP_00000467 ;
+             :LP_0000855 :LP_20000005 ,
+                         :LP_20000006 ,
+                         :LP_20000007 ;
              rdfs:label "BBR D"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000592
 :LP_00000592 rdf:type owl:NamedIndividual ,
                       :LP_00000574 ;
-             :LP_00000026 :LP_20000007 ,
-                          :LP_20000008 ,
-                          :LP_20000009 ;
              :LP_00000578 :LP_00000468 ;
+             :LP_0000855 :LP_20000007 ,
+                         :LP_20000008 ,
+                         :LP_20000009 ;
              rdfs:label "BBR E"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000593
 :LP_00000593 rdf:type owl:NamedIndividual ,
                       :LP_00000574 ;
-             :LP_00000026 :LP_20000009 ,
-                          :LP_20000010 ;
              :LP_00000578 :LP_00000469 ;
+             :LP_0000855 :LP_20000009 ,
+                         :LP_20000010 ;
              rdfs:label "BBR F"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000594
 :LP_00000594 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000001 ;
              :LP_00000578 :LP_00000464 ;
+             :LP_0000855 :LP_20000001 ;
              rdfs:label "EBBR A"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000595
 :LP_00000595 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000001 ,
-                          :LP_20000002 ,
-                          :LP_20000003 ;
              :LP_00000578 :LP_00000465 ;
+             :LP_0000855 :LP_20000001 ,
+                         :LP_20000002 ,
+                         :LP_20000003 ;
              rdfs:label "EBBR B"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000596
 :LP_00000596 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000003 ,
-                          :LP_20000004 ,
-                          :LP_20000005 ;
              :LP_00000578 :LP_00000466 ;
+             :LP_0000855 :LP_20000003 ,
+                         :LP_20000004 ,
+                         :LP_20000005 ;
              rdfs:label "EBBR C"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000597
 :LP_00000597 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000005 ,
-                          :LP_20000006 ,
-                          :LP_20000007 ;
              :LP_00000578 :LP_00000467 ;
+             :LP_0000855 :LP_20000005 ,
+                         :LP_20000006 ,
+                         :LP_20000007 ;
              rdfs:label "EBBR D"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000598
 :LP_00000598 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000007 ,
-                          :LP_20000008 ;
              :LP_00000578 :LP_00000468 ;
+             :LP_0000855 :LP_20000007 ,
+                         :LP_20000008 ;
              rdfs:label "EBBR E"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000599
 :LP_00000599 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000008 ,
-                          :LP_20000009 ,
-                          :LP_20000010 ;
              :LP_00000578 :LP_00000469 ;
+             :LP_0000855 :LP_20000008 ,
+                         :LP_20000009 ,
+                         :LP_20000010 ;
              rdfs:label "EBBR F"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000600
 :LP_00000600 rdf:type owl:NamedIndividual ,
                       :LP_00000575 ;
-             :LP_00000026 :LP_20000010 ;
              :LP_00000578 :LP_00000470 ;
+             :LP_0000855 :LP_20000010 ;
              rdfs:label "EBBR G"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000601
 :LP_00000601 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000001 ;
              :LP_00000578 :LP_00000464 ;
+             :LP_0000855 :LP_20000001 ;
              rdfs:label "MSA A"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000602
 :LP_00000602 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000001 ,
-                          :LP_20000002 ;
              :LP_00000578 :LP_00000465 ;
+             :LP_0000855 :LP_20000001 ,
+                         :LP_20000002 ;
              rdfs:label "MSA B"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000603
 :LP_00000603 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000002 ,
-                          :LP_20000003 ,
-                          :LP_20000004 ;
              :LP_00000578 :LP_00000466 ;
+             :LP_0000855 :LP_20000002 ,
+                         :LP_20000003 ,
+                         :LP_20000004 ;
              rdfs:label "MSA C"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000604
 :LP_00000604 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000004 ,
-                          :LP_20000005 ,
-                          :LP_20000006 ;
              :LP_00000578 :LP_00000467 ;
+             :LP_0000855 :LP_20000004 ,
+                         :LP_20000005 ,
+                         :LP_20000006 ;
              rdfs:label "MSA D"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000605
 :LP_00000605 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000006 ,
-                          :LP_20000007 ,
-                          :LP_20000008 ;
              :LP_00000578 :LP_00000468 ;
+             :LP_0000855 :LP_20000006 ,
+                         :LP_20000007 ,
+                         :LP_20000008 ;
              rdfs:label "MSA E"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000606
 :LP_00000606 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000008 ;
              :LP_00000578 :LP_00000469 ,
                           :LP_20000009 ;
+             :LP_0000855 :LP_20000008 ;
              rdfs:label "MSA F"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000607
 :LP_00000607 rdf:type owl:NamedIndividual ,
                       :LP_00000576 ;
-             :LP_00000026 :LP_20000009 ,
-                          :LP_20000010 ;
              :LP_00000578 :LP_00000470 ;
+             :LP_0000855 :LP_20000009 ,
+                         :LP_20000010 ;
              rdfs:label "MSA G"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000608
 :LP_00000608 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000001 ;
              :LP_00000578 :LP_00000464 ;
+             :LP_0000855 :LP_20000001 ;
              rdfs:label "QualiPhase A"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000609
 :LP_00000609 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000001 ,
-                          :LP_20000002 ;
              :LP_00000578 :LP_00000465 ;
+             :LP_0000855 :LP_20000001 ,
+                         :LP_20000002 ;
              rdfs:label "QualiPhase B"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000610
 :LP_00000610 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000002 ,
-                          :LP_20000003 ,
-                          :LP_20000004 ;
              :LP_00000578 :LP_00000466 ;
+             :LP_0000855 :LP_20000002 ,
+                         :LP_20000003 ,
+                         :LP_20000004 ;
              rdfs:label "QualiPhase C"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000611
 :LP_00000611 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000004 ,
-                          :LP_20000005 ,
-                          :LP_20000006 ;
              :LP_00000578 :LP_00000467 ;
+             :LP_0000855 :LP_20000004 ,
+                         :LP_20000005 ,
+                         :LP_20000006 ;
              rdfs:label "QualiPhase D"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000612
 :LP_00000612 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000006 ,
-                          :LP_20000007 ;
              :LP_00000578 :LP_00000468 ;
+             :LP_0000855 :LP_20000006 ,
+                         :LP_20000007 ;
              rdfs:label "QualiPhase E"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000613
 :LP_00000613 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000008 ;
              :LP_00000578 :LP_00000469 ;
+             :LP_0000855 :LP_20000008 ;
              rdfs:label "QualiPhase F"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000614
 :LP_00000614 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000009 ;
              :LP_00000578 :LP_00000470 ;
+             :LP_0000855 :LP_20000009 ;
              rdfs:label "QualiPhase G"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00000615
 :LP_00000615 rdf:type owl:NamedIndividual ,
                       :LP_00000577 ;
-             :LP_00000026 :LP_20000010 ;
              :LP_00000578 :LP_00000616 ;
+             :LP_0000855 :LP_20000010 ;
              rdfs:label "QualiPhase H"@de .
 
 

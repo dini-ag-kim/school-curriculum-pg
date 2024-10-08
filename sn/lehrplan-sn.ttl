@@ -1,0 +1,648 @@
+@prefix : <http://www.semanticweb.org/joerg/ontologies/2024/9/untitled-ontology-506/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/joerg/ontologies/2024/9/untitled-ontology-506/> .
+
+<https://w3id.org/lehrplan/ontology/sn> rdf:type owl:Ontology ;
+                                         owl:imports <https://w3id.org/lehrplan/ontology/1.0.0> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000165
+<https://w3id.org/lehrplan/ontology/sn/LP_00000165> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ rdf:type owl:Class ;
+                                                                          owl:oneOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00000389>
+                                                                                    )
+                                                                        ] ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000076>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Allgemeine Hochschulreife (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000181
+<https://w3id.org/lehrplan/ontology/sn/LP_00000181> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ rdf:type owl:Class ;
+                                                                          owl:oneOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00000390>
+                                                                                      <https://w3id.org/lehrplan/ontology/sn/LP_00000391>
+                                                                                    )
+                                                                        ] ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000079>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Erster Schulabschluss (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000205
+<https://w3id.org/lehrplan/ontology/sn/LP_00000205> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ rdf:type owl:Class ;
+                                                                          owl:oneOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00000392>
+                                                                                    )
+                                                                        ] ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000078>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Mittlerer Abschluss (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000393
+<https://w3id.org/lehrplan/ontology/sn/LP_00000393> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000114>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000001>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000002>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000004>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Grundschule (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000394
+<https://w3id.org/lehrplan/ontology/sn/LP_00000394> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000112>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000001>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000002>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000003>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000004>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Gemeinschaftsschule Primar (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000395
+<https://w3id.org/lehrplan/ontology/sn/LP_00000395> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000112>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000390>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000391>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000392>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Gemeinschaftsschule Sek I (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000396
+<https://w3id.org/lehrplan/ontology/sn/LP_00000396> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000238>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000390>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000391>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000392>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Oberschule Sek I (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000397
+<https://w3id.org/lehrplan/ontology/sn/LP_00000397> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000238>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000390>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000391>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000392>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:comment "Schulart in Sachsen die den Primarbereich und Sekundarbereich I, also die Jahrgangsstufen von 1-10, umfasst. An der Schulart können der Erste sowie der Mittlere Schulabschluss erworben werden." ;
+                                                    rdfs:label "Oberschule+ Sek I (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000398
+<https://w3id.org/lehrplan/ontology/sn/LP_00000398> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000122>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000005>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000006>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000007>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000008>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000009>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000010>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000390>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000391>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000392>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Gymnasium Sek I (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000399
+<https://w3id.org/lehrplan/ontology/sn/LP_00000399> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000112>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000011>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000012>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000389>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Gemeinschaftsschule Sek II (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000400
+<https://w3id.org/lehrplan/ontology/sn/LP_00000400> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/LP_0000811>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/LP_0000812> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000122>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000011>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000026> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_20000012>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000058> ;
+                                                                                             owl:hasValue <https://w3id.org/lehrplan/ontology/sn/LP_00000389>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Gymnasium Sek II (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000523
+<https://w3id.org/lehrplan/ontology/sn/LP_00000523> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002090>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                                 owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000508>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:subClassOf <https://w3id.org/lehrplan/ontology/sn/LP_00002090> ;
+                                                    rdfs:label "Grundkurs (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000524
+<https://w3id.org/lehrplan/ontology/sn/LP_00000524> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002090>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                                 owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000509>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:subClassOf <https://w3id.org/lehrplan/ontology/sn/LP_00002090> ;
+                                                    rdfs:label "Leistungskurs (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00001032
+<https://w3id.org/lehrplan/ontology/sn/LP_00001032> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/lehrplan/ontology/sn/LP_00002089> ;
+                                                    rdfs:label "Fach Niveau Sek I (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00001033
+<https://w3id.org/lehrplan/ontology/sn/LP_00001033> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00001032>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                                 owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000839>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:subClassOf <https://w3id.org/lehrplan/ontology/sn/LP_00001032> ;
+                                                    rdfs:label "Hauptschulbildungsgang (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00001034
+<https://w3id.org/lehrplan/ontology/sn/LP_00001034> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00001032>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                                 owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000838>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:subClassOf <https://w3id.org/lehrplan/ontology/sn/LP_00001032> ;
+                                                    rdfs:label "Realschulbildungsgang (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002089
+<https://w3id.org/lehrplan/ontology/sn/LP_00002089> rdf:type owl:Class ;
+                                                    owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000261>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                                 owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:comment "Lehrplan Element bezogen auf den Lehrplan von Sachsen"@de ;
+                                                    rdfs:label "Element (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002090
+<https://w3id.org/lehrplan/ontology/sn/LP_00002090> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000335>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Fach Niveau Sek II (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002110
+<https://w3id.org/lehrplan/ontology/sn/LP_00002110> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Lehrplan Fragment (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002111
+<https://w3id.org/lehrplan/ontology/sn/LP_00002111> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000627>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Teil Fachlehrplan (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002112
+<https://w3id.org/lehrplan/ontology/sn/LP_00002112> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Ziele (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002113
+<https://w3id.org/lehrplan/ontology/sn/LP_00002113> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000494>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Lernbereich (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002114
+<https://w3id.org/lehrplan/ontology/sn/LP_00002114> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000497>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:label "Wahlbereich (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002115
+<https://w3id.org/lehrplan/ontology/sn/LP_00002115> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000479>
+                                                                                           ]
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00000480>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:comment """\"Lernziele und Lerninhalte sind verbindlich. Sie kennzeichnen grundlegende Anforderungen in den Bereichen Wissenserwerb, Kompetenzentwicklung und Werteorientierung.
+
+Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Lernziele in der Regel unter Verwendung einheitlicher Begriffe. Diese verdeutlichen bei zunehmendem Umfang und steigender Komplexität der Lernanforderungen didaktische Schwerpunktsetzungen für die unterrichtliche Erarbeitung der Lerninhalte.\"""" ;
+                                                    rdfs:label "Lernziele und Lerninhalte (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002116
+<https://w3id.org/lehrplan/ontology/sn/LP_00002116> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000483> ;
+                                                                                             owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_00001014>
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                    rdfs:comment "\"Bemerkungen haben Empfehlungscharakter. Gegenstand der Bemerkungen sind inhaltliche Erläuterungen, Hinweise auf geeignete Lehr- und Lernmethoden und Beispiele für Möglichkeiten einer differenzierten Förderung der Schüler. Sie umfassen Bezüge zu Lernzielen und Lerninhalten des gleichen Faches, zu anderen Fächern und zu den überfachlichen Bildungs- und Erziehungszielen.\"" ;
+                                                    rdfs:label "Bemerkungen (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00002117
+<https://w3id.org/lehrplan/ontology/sn/LP_00002117> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/lehrplan/ontology/sn/LP_00002089> ;
+                                                    rdfs:label "Klassenstufe (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_0000818
+<https://w3id.org/lehrplan/ontology/sn/LP_0000818> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_00000438>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                                owl:someValuesFrom <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000008> ;
+                                                                                                owl:allValuesFrom <https://w3id.org/lehrplan/ontology/sn/LP_00002089>
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://w3id.org/lehrplan/ontology/LP_00000029> ;
+                                                                                                owl:hasValue <https://w3id.org/lehrplan/ontology/LP_30000047>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:label "Lehrplan (SN)"@de .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000389
+<https://w3id.org/lehrplan/ontology/sn/LP_00000389> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/lehrplan/ontology/sn/LP_00000165> ;
+                                                    rdfs:label "Allgemeinbildender Schulabschluss (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000390
+<https://w3id.org/lehrplan/ontology/sn/LP_00000390> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/lehrplan/ontology/sn/LP_00000181> ;
+                                                    rdfs:label "Hauptschulabschluss (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000391
+<https://w3id.org/lehrplan/ontology/sn/LP_00000391> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/lehrplan/ontology/sn/LP_00000181> ;
+                                                    rdfs:label "Qualifizierender Hauptschulabschluss (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/sn/LP_00000392
+<https://w3id.org/lehrplan/ontology/sn/LP_00000392> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/lehrplan/ontology/sn/LP_00000205> ;
+                                                    rdfs:label "Realschulabschluss (SN)"@de .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

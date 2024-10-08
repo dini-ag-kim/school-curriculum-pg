@@ -1,0 +1,36 @@
+## ID Ranges File
+Prefix: idrange: <http://purl.obolibrary.org/obo/uberon/idrange/>
+Prefix: allocatedto: <http://purl.obolibrary.org/obo/IAO_0000597>
+Prefix: iddigits: <http://purl.obolibrary.org/obo/IAO_0000596>
+Prefix: idprefix: <http://purl.obolibrary.org/obo/IAO_0000599>
+Prefix: idsfor: <http://purl.obolibrary.org/obo/IAO_0000598>
+Prefix: comment: <http://www.w3.org/2000/01/rdf-schema#comment>
+
+Ontology: <https://w3id.org/lehrplan/ontology/he/lehrplan-he-idranges.owl>
+
+Annotations:
+    idprefix: "https://w3id.org/lehrplan/ontology/he/LP_",
+    iddigits: 7,
+    idsfor: "LP"
+
+AnnotationProperty: allocatedto:
+
+AnnotationProperty: idprefix:
+
+AnnotationProperty: iddigits: 
+
+AnnotationProperty: idsfor: 
+
+AnnotationProperty: comment: 
+
+Datatype: idrange:1
+    Annotations:
+        allocatedto: "Jörg Waitelonis"
+    EquivalentTo:
+        xsd:integer[> 1 , <= 9999]
+
+Datatype: idrange:2
+    Annotations:
+        allocatedto: "TBD"
+    EquivalentTo:
+        xsd:integer[>  10000 , <= 999999]

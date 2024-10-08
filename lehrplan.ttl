@@ -108,6 +108,148 @@ rdfs:label rdf:type owl:AnnotationProperty .
 <https://d-nb.info/standards/elementset/gnd#gndIdentifier> rdf:type owl:AnnotationProperty .
 
 
+
+
+:LP_00001112 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001011
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_0000839
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001011 ;
+             rdfs:label "KMK Bildungsstandards für den ersten Schulabschluss (MV)"@de .
+
+:LP_00001108 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00000426 ;
+             rdfs:label "Fach Niveau Sek I (HH)"@de .
+
+###  https://w3id.org/lehrplan/ontology#LP_00001007
+:LP_00001107 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001105
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_0000838
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001105 ;
+             rdfs:label "Erweitertes Anforderungsniveau (HB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001006
+:LP_00001106 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001105
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_0000839
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001105 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (HB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001005
+:LP_00001105 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002118 ;
+             rdfs:label "Fach Niveau Sek I (HB)"@de .
+
+
+
+
+
+             ###  https://w3id.org/lehrplan/ontology#LP_00001004
+:LP_00001104 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001101
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_0000839
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001101 ;
+             rdfs:label "G Niveau (BW)"@de .
+
+
+
+
+:LP_00001103 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001101
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_0000838
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001101 ;
+             rdfs:label "M Niveau (BW)"@de .
+
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001001
+:LP_00001101 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002051 ;
+             rdfs:label "Fach Niveau Sek I (BW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001002
+:LP_00001102 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001101
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_0000837
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001101 ;
+             rdfs:label "E Niveau (BW)"@de .
+
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001001
+:LP_00001101 rdf:type owl:Class ;
+             rdfs:subClassOf :LP_00002051 ;
+             rdfs:label "Fach Niveau Sek I (BW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001016
+:LP_00001116 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001015
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000508
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001015 ;
+             rdfs:label "Grundlegendes Anforderungsniveau (NI)"@de .
+
+
+
+
+###  https://w3id.org/lehrplan/ontology#LP_00001017
+:LP_00001117 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001015
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :LP_00000483 ;
+                                                          owl:someValuesFrom :LP_00000509
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :LP_00001015 ;
+             rdfs:label "Erhöhtes Anforderungsniveau (NI)"@de .             
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -7715,9 +7857,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001001
 :LP_00001001 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002051 ,
-                             :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000627
@@ -7725,22 +7865,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Fach Niveau Sek I (BW)"@de ,
-                        "Lehrplanfragment (HE)"@de .
+             rdfs:label "Lehrplanfragment (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001002
 :LP_00001002 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001001
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_0000837
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001001 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000497
@@ -7748,22 +7878,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "E Niveau (BW)"@de ,
-                        "Inhaltsfelder (HE)"@de .
+             rdfs:label "Inhaltsfelder (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001003
 :LP_00001003 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001001
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_0000838
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001001 ,
-                             [ owl:intersectionOf ( :LP_00002101
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000479
@@ -7771,23 +7891,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Erwartete Kompetenz (NI)"@de ,
-                        "M Niveau (BW)"@de .
+             rdfs:label "Erwartete Kompetenz (NI)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001004
 :LP_00001004 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001001
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_0000839
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001001 ,
-                             :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000497
@@ -7795,14 +7904,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "G Niveau (BW)"@de ,
-                        "Teilinhaltsfelder (HE)"@de .
+             rdfs:label "Teilinhaltsfelder (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001005
 :LP_00001005 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002118 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000494
@@ -7810,22 +7917,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Fach Niveau Sek I (HB)"@de ,
-                        "Kompetenzbereich (HE)"@de .
+             rdfs:label "Kompetenzbereich (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001006
 :LP_00001006 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001005
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_0000839
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001005 ,
-                             [ owl:intersectionOf ( :LP_00002101
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000627
@@ -7833,22 +7930,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Grundlegendes Anforderungsniveau (HB)"@de ,
-                        "Lehrplanfragment (NI)"@de .
+             rdfs:label "Lehrplanfragment (NI)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001007
 :LP_00001007 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001005
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_0000838
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001005 ,
-                             [ owl:intersectionOf ( :LP_00002101
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000497
@@ -7856,15 +7943,13 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Erweitertes Anforderungsniveau (HB)"@de ,
-                        "Kerninhalt (NI)"@de ;
+             rdfs:label "Kerninhalt (NI)"@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Kern (NI)" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001008
 :LP_00001008 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00000426 ,
-                             [ owl:intersectionOf ( :LP_00002101
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002101
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000480
@@ -7872,8 +7957,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Fach Niveau Sek I (HH)"@de ,
-                        "Lerninhalt (NI)"@de ;
+             rdfs:label "Lerninhalt (NI)"@de ;
              <http://www.w3.org/2004/02/skos/core#editorialNote> "relevant für Sek II" .
 
 
@@ -7893,8 +7977,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001010
 :LP_00001010 rdf:type owl:Class ;
-             rdfs:subClassOf :LP_00002076 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00000497
@@ -7913,16 +7996,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001012
 :LP_00001012 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001011
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_0000839
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001011 ,
-                             [ owl:intersectionOf ( :LP_00002076
+             rdfs:subClassOf [ owl:intersectionOf ( :LP_00002076
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :LP_00000483 ;
                                                       owl:someValuesFrom :LP_00002158
@@ -7930,21 +8004,12 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-             rdfs:label "Bezüge zu den Kompetenzbereichen (HE)"@de ,
-                        "KMK Bildungsstandards für den ersten Schulabschluss (MV)"@de .
+             rdfs:label "Bezüge zu den Kompetenzbereichen (HE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001013
 :LP_00001013 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00000261
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00001014
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ,
-                                 [ owl:intersectionOf ( :LP_00001011
+             owl:equivalentClass [ owl:intersectionOf ( :LP_00001011
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :LP_00000483 ;
                                                           owl:someValuesFrom :LP_0000838
@@ -7952,11 +8017,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000261 ,
-                             :LP_00001011 ;
-             rdfs:comment "Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de ;
-             rdfs:label "CE-Hinweis"@de ,
-                        "KMK Bildungsstandards für den mittleren Schulabschluss (MV)"@de .
+             rdfs:label "KMK Bildungsstandards für den mittleren Schulabschluss (MV)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001014
@@ -7975,39 +8036,8 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :LP_00000261 ,
-                             :LP_00002101 ;
              rdfs:comment "Element, das zur Strukturierung und zur Abgrenzung eines “Kontexts” innerhalb von einem Lehrplans dient. Mit jedem Lehrplanfragment beginnt ein neuer Kontext. Meistens handelt es sich hierbei um Überschriften." ;
-             rdfs:label "CE-Lehrplanfragment"@de ,
-                        "Fach Niveau Sek II (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00001016
-:LP_00001016 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001015
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000508
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001015 ;
-             rdfs:label "Grundlegendes Anforderungsniveau (NI)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_00001017
-:LP_00001017 rdf:type owl:Class ;
-             owl:equivalentClass [ owl:intersectionOf ( :LP_00001015
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :LP_00000483 ;
-                                                          owl:someValuesFrom :LP_00000509
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf :LP_00001015 ;
-             rdfs:label "Erhöhtes Anforderungsniveau (NI)"@de .
+             rdfs:label "CE-Lehrplanfragment"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_00001018
@@ -12029,6 +12059,7 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                      ) ;
                                   rdf:type owl:Class
                                 ] ;
+            rdfs:comment "Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de ;
             rdfs:label "CE-Hinweis"@de .
 
 

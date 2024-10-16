@@ -12561,7 +12561,9 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                                rdfs:label "Kompetenz (SL)"@de .
+                                                rdfs:label "Kompetenzerwartung (SL)"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Kompetenz (SL)" ,
+                                                                                               "Verbindliche Kompetenzerwartung (SL)" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002233
@@ -12575,22 +12577,28 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                                rdfs:label "Zur Umsetzung (SL)"@de ;
-                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Hinweise zur Umsetzung (SL)" .
+                                                rdfs:label "Hinweis zur Umsetzung (SL)" ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Zur Umsetzung (SL)"@de ,
+                                                                                               "Hinweis und Umsetzungsbeispiel (SL)" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002234
 <https://w3id.org/lehrplan/ontology/LP_0002234> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000262> ,
+                                                                <https://w3id.org/lehrplan/ontology/LP_0002106> ,
                                                                 [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
                                                                                          owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000494>
                                                                                        ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000497>
+                                                                                       ]
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                                rdfs:label "Themenfelder (SL)"@de .
+                                                rdfs:label "Themenfeld (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002235
@@ -12605,20 +12613,6 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                                   rdf:type owl:Class
                                                                 ] ;
                                                 rdfs:label "Verbindliches Fachwissen (SL)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0002236
-<https://w3id.org/lehrplan/ontology/LP_0002236> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000852> ,
-                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
-                                                                                       [ rdf:type owl:Restriction ;
-                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
-                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0001014>
-                                                                                       ]
-                                                                                     ) ;
-                                                                  rdf:type owl:Class
-                                                                ] ;
-                                                rdfs:label "Hinweise (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002237
@@ -12646,7 +12640,7 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                                rdfs:label "Verbindliche Kompetenzschwerpunkte (SL)"@de .
+                                                rdfs:label "Verbindlicher Kompetenzschwerpunkt (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002239
@@ -12660,13 +12654,26 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                                                      ) ;
                                                                   rdf:type owl:Class
                                                                 ] ;
-                                                rdfs:label "Vorschläge und Hinweise (SL)"@de .
+                                                rdfs:label "Vorschlag und Hinweis (SL)"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Hinweis (SL)" ,
+                                                                                               "Vorschlag (SL)" ;
+                                                <http://www.w3.org/2004/02/skos/core#editorialNote> """Kommt vor im Fach Mathematik in der Gemeinschaftsschule und im Gymnasium in der Sek I und Sek II. Und im Fach Deutsch in der Primarstufe, in der Sek I in der Gemeinschaftsschule und in der Sek II in der gymasialen Oberstufe.
+Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: \"Zur Unterrichtsgestaltung\", \"\"Zu Methoden und Arbeitstechniken\", \"Zur Aufgabenstellung\", \"Zu Leistungsfeststellung\".""" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002240
 <https://w3id.org/lehrplan/ontology/LP_0002240> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0002102> ;
-                                                rdfs:label "Basisbegriffe (SL)"@de .
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000332> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000480>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Basisbegriff (SL)"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#editorialNote> "kommt vor im Fach Mathematik im Gymnasium Sek I" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002241
@@ -12681,20 +12688,6 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                                   rdf:type owl:Class
                                                                 ] ;
                                                 rdfs:label "Lernbereich (SL)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0002242
-<https://w3id.org/lehrplan/ontology/LP_0002242> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000852> ,
-                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
-                                                                                       [ rdf:type owl:Restriction ;
-                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
-                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0001014>
-                                                                                       ]
-                                                                                     ) ;
-                                                                  rdf:type owl:Class
-                                                                ] ;
-                                                rdfs:label "Vorschläge (SL)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002243
@@ -12757,6 +12750,99 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.""" .
                                                 rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0010001> ;
                                                 rdfs:comment "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen." ;
                                                 rdfs:label "C2 Annähernd muttersprachliche Kenntnisse"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030001
+<https://w3id.org/lehrplan/ontology/LP_0030001> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000263> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000479>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Kompetenz und Inhalt (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030003
+<https://w3id.org/lehrplan/ontology/LP_0030003> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000332> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000480>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Verbindliche Formen mündlicher Kommunikation (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030004
+<https://w3id.org/lehrplan/ontology/LP_0030004> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000263> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000479>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Verbindliche fachspezifische Fertigkeiten/Fähigkeiten und fachspezifische Methoden (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030005
+<https://w3id.org/lehrplan/ontology/LP_0030005> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0002106> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000497>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Verbindlicher Lerngegenstand (SL)"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Verbindlicher Gegenstand (SL)" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030006
+<https://w3id.org/lehrplan/ontology/LP_0030006> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0002102> ;
+                                                rdfs:label "Literaturhinweis (SL)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030007
+<https://w3id.org/lehrplan/ontology/LP_0030007> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000852> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0001014>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Aufgabenstellung (SL)"@de ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "Aufgabenarten (SL)" ;
+                                                <http://www.w3.org/2004/02/skos/core#editorialNote> "kommt vor im Fach Deutsch Gemeinschaftsschule und Gymnasiale Oberstufe" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030009
+<https://w3id.org/lehrplan/ontology/LP_0030009> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/lehrplan/ontology/LP_0000332> ,
+                                                                [ owl:intersectionOf ( <https://w3id.org/lehrplan/ontology/LP_0002102>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://w3id.org/lehrplan/ontology/LP_0000483> ;
+                                                                                         owl:someValuesFrom <https://w3id.org/lehrplan/ontology/LP_0000480>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "Vorschlag und Hinweis zu Inhalten und Methoden (SL)"@de .
 
 
 #################################################################

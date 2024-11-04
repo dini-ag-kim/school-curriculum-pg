@@ -10,9 +10,8 @@ This ontology is a formal representation that captures the fundamental concepts 
 
 The latest version of the ontology can always be found at:
 
-https://w3id.org/lehrplan/ontology/
+[lp.ttl](lp.ttl)
 
-(note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 

@@ -2,9 +2,7 @@
 ![Build Status](https://github.com/dini-ag-kim/school-curriculum-pg/actions/workflows/qc.yml/badge.svg)
 # Lehrplan Ontology
 
-Description: None
-
-More information can be found at http://obofoundry.org/ontology/lp
+This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system.
 
 ## Versions
 
@@ -12,7 +10,7 @@ More information can be found at http://obofoundry.org/ontology/lp
 
 The latest version of the ontology can always be found at:
 
-https://w3id.org/lehrplan/ontology/lp.owl
+https://w3id.org/lehrplan/ontology/
 
 (note this will not show up until the request has been approved by obofoundry.org)
 

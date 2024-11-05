@@ -6,7 +6,6 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
@@ -14,7 +13,7 @@
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
         <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0"/>
         <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2024-11-04</terms:created>
+        <terms:created>2024-11-05</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -23,6 +22,7 @@
         <terms:creator xml:lang="de">Laura Junghanns</terms:creator>
         <terms:description xml:lang="de">Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst.</terms:description>
         <terms:description xml:lang="en">This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
         <owl:versionInfo>1.0.0</owl:versionInfo>
@@ -81,6 +81,14 @@
     
 
 
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
@@ -118,7 +126,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:altLabel</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -126,7 +135,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:closeMatch</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -134,7 +144,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:definition</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -142,7 +153,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:editorialNote</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -150,7 +162,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:exactMatch</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -166,7 +179,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:narrowMatch</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -174,7 +188,9 @@
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:prefLabel</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
     
 
@@ -182,7 +198,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#related -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:related</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -190,15 +207,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>skos:topConceptOf</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -206,7 +216,8 @@
     <!-- https://d-nb.info/standards/elementset/gnd#broaderTermGeneral -->
 
     <owl:AnnotationProperty rdf:about="https://d-nb.info/standards/elementset/gnd#broaderTermGeneral">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>gnd:broaderTermGeneral</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -214,7 +225,8 @@
     <!-- https://d-nb.info/standards/elementset/gnd#gndIdentifier -->
 
     <owl:AnnotationProperty rdf:about="https://d-nb.info/standards/elementset/gnd#gndIdentifier">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/imports/kim_import.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label>gnd:gndIdentifier</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -2053,7 +2065,7 @@ Die Schulart Realschule gibt es in BW, BY, HE, NI und NW.</rdfs:comment>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Erster Schulabschluss (NW)</rdfs:label>
+        <rdfs:label xml:lang="de">Erster Abschluss (NW)</rdfs:label>
     </owl:Class>
     
 
@@ -8102,7 +8114,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000441"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Lerninhalt (BB)</rdfs:label>
-        <rdfs:label xml:lang="en">learning content</rdfs:label>
+        <rdfs:label xml:lang="en">learning content (BB)</rdfs:label>
         <skos:altLabel>Inhalt (BB)</skos:altLabel>
         <skos:definition xml:lang="en">Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content.</skos:definition>
         <skos:definition xml:lang="de">Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann.</skos:definition>
@@ -8126,7 +8138,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Lernmaterial (BB)</rdfs:label>
-        <rdfs:label xml:lang="en">learning material</rdfs:label>
+        <rdfs:label xml:lang="en">learning material (BB)</rdfs:label>
         <skos:definition xml:lang="de">Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen.</skos:definition>
         <skos:definition xml:lang="en">Some concrete means (e.g. in form of documents) to acquire particular competences.</skos:definition>
     </owl:Class>
@@ -8141,7 +8153,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
         <rdfs:comment xml:lang="de">operationalisierbar und meßbar</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Standard (BB)</rdfs:label>
-        <rdfs:label xml:lang="en">competence</rdfs:label>
+        <rdfs:label xml:lang="en">standard (BB)</rdfs:label>
         <skos:altLabel>Abschlussorientierter Standard (BB)</skos:altLabel>
         <skos:definition xml:lang="en">competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process</skos:definition>
     </owl:Class>
@@ -8165,7 +8177,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Thema (BB)</rdfs:label>
-        <rdfs:label xml:lang="en">topic</rdfs:label>
+        <rdfs:label xml:lang="en">topic (BB)</rdfs:label>
         <skos:definition xml:lang="en">A concrete topic of school teaching that can be taught through particular learning content.</skos:definition>
         <skos:definition xml:lang="de">Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann.</skos:definition>
     </owl:Class>
@@ -8189,7 +8201,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Themenfeld (BB)</rdfs:label>
-        <rdfs:label xml:lang="en">topic area</rdfs:label>
+        <rdfs:label xml:lang="en">topic area (BB)</rdfs:label>
         <skos:altLabel>Themenbereich (BB)</skos:altLabel>
         <skos:definition xml:lang="en">A topic area includes one or more topics that are subject of teaching.</skos:definition>
         <skos:definition xml:lang="de">Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden.</skos:definition>
@@ -8213,7 +8225,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Zusatzmaterial (BB)</rdfs:label>
-        <rdfs:label xml:lang="en">additional material</rdfs:label>
+        <rdfs:label xml:lang="en">additional material (BB)</rdfs:label>
         <skos:definition xml:lang="en">Documents which refer to additional resources to learn with.</skos:definition>
         <skos:definition xml:lang="de">Dokumente, die auf zusätzliche Ressourcen zum Lernen verweisen.</skos:definition>
     </owl:Class>
@@ -8225,7 +8237,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000451">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000441"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="en">exercise</rdfs:label>
+        <rdfs:label xml:lang="en">exercise (BB)</rdfs:label>
         <rdfs:label xml:lang="de">Übung (BB)</rdfs:label>
         <skos:definition xml:lang="en">A concrete action that helps to learn a skill.</skos:definition>
         <skos:definition xml:lang="de">Eine konkrete Maßnahme, die dazu beiträgt, eine Kompetenz zu erlernen.</skos:definition>
@@ -9390,27 +9402,6 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000836 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000836">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000834"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0002173"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000839"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Grundlegendes Anforderungsniveau (HB)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000837 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000837">
@@ -10369,7 +10360,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0001441"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Lerninhalt (BE)</rdfs:label>
-        <rdfs:label xml:lang="en">learning content</rdfs:label>
+        <rdfs:label xml:lang="en">learning content (BE)</rdfs:label>
         <skos:altLabel>Inhalt (BE)</skos:altLabel>
         <skos:definition xml:lang="en">Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content.</skos:definition>
         <skos:definition xml:lang="de">Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann.</skos:definition>
@@ -10393,7 +10384,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Lernmaterial (BE)</rdfs:label>
-        <rdfs:label xml:lang="en">learning material</rdfs:label>
+        <rdfs:label xml:lang="en">learning material (BE)</rdfs:label>
         <skos:definition xml:lang="de">Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen.</skos:definition>
         <skos:definition xml:lang="en">Some concrete means (e.g. in form of documents) to acquire particular competences.</skos:definition>
     </owl:Class>
@@ -10408,7 +10399,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
         <rdfs:comment xml:lang="de">operationalisierbar und meßbar</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Standard (BE)</rdfs:label>
-        <rdfs:label xml:lang="en">competence</rdfs:label>
+        <rdfs:label xml:lang="en">standard (BE)</rdfs:label>
         <skos:altLabel>Abschlussorientierter Standard (BE)</skos:altLabel>
         <skos:definition xml:lang="en">competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process</skos:definition>
     </owl:Class>
@@ -10432,7 +10423,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Thema (BE)</rdfs:label>
-        <rdfs:label xml:lang="en">topic</rdfs:label>
+        <rdfs:label xml:lang="en">topic (BE)</rdfs:label>
         <skos:definition xml:lang="en">A concrete topic of school teaching that can be taught through particular learning content.</skos:definition>
         <skos:definition xml:lang="de">Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann.</skos:definition>
     </owl:Class>
@@ -10456,7 +10447,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Themenfeld (BE)</rdfs:label>
-        <rdfs:label xml:lang="en">topic area</rdfs:label>
+        <rdfs:label xml:lang="en">topic area (BE)</rdfs:label>
         <skos:altLabel>Themenbereich (BE)</skos:altLabel>
         <skos:definition xml:lang="en">A topic area includes one or more topics that are subject of teaching.</skos:definition>
         <skos:definition xml:lang="de">Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden.</skos:definition>
@@ -10480,7 +10471,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Zusatzmaterial (BE)</rdfs:label>
-        <rdfs:label xml:lang="en">additional material</rdfs:label>
+        <rdfs:label xml:lang="en">additional material (BE)</rdfs:label>
         <skos:definition xml:lang="en">Documents which refer to additional resources to learn with.</skos:definition>
         <skos:definition xml:lang="de">Dokumente, die auf zusätzliche Ressourcen zum Lernen verweisen.</skos:definition>
     </owl:Class>
@@ -10492,7 +10483,7 @@ Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0001451">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0001441"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="en">exercise</rdfs:label>
+        <rdfs:label xml:lang="en">exercise (BE)</rdfs:label>
         <rdfs:label xml:lang="de">Übung (BE)</rdfs:label>
         <skos:definition xml:lang="en">A concrete action that helps to learn a skill.</skos:definition>
         <skos:definition xml:lang="de">Eine konkrete Maßnahme, die dazu beiträgt, eine Kompetenz zu erlernen.</skos:definition>
@@ -13863,16 +13854,6 @@ ggf. sollten wir ein Beispiel nochmal genauer besprechen.</skos:editorialNote>
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0002173 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0002173">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002118"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Anforderungsniveau (HB)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0002174 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0002174">
@@ -16174,7 +16155,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000270">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000203"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Mittlerer Abschluss (HH)</rdfs:label>
+        <rdfs:label xml:lang="de">Mittlerer Schulabschluss (HH)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -16607,15 +16588,6 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000130"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">B-Kurs (RP)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000568 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000568">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Deutsche Gebärdensprache (Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 

@@ -14,7 +14,7 @@
                                        owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0> ;
                                        dce:type <http://purl.obolibrary.org/obo/IAO_8000001> ;
                                        dcterms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0, https://w3id.org/lehrplan/ontology" ;
-                                       dcterms:created "2024-11-04" ;
+                                       dcterms:created "2024-11-05" ;
                                        dcterms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                        <https://orcid.org/0000-0001-7192-7143> ,
                                                        "Almut Steinlein"@de ,
@@ -23,6 +23,7 @@
                                                        "Laura Junghanns"@de ;
                                        dcterms:description "Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst."@de ,
                                                            "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system."@en ;
+                                       dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                        dcterms:title "Curriculum Ontology"@en ,
                                                      "Lehrplan Ontologie"@de ;
                                        owl:versionInfo "1.0.0" .
@@ -54,6 +55,11 @@ dcterms:creator rdf:type owl:AnnotationProperty ;
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:AnnotationProperty ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
 
 
 ###  http://purl.org/dc/terms/title
@@ -1783,7 +1789,7 @@ ontology:LP_0000178 rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Erster Schulabschluss (NW)"@de .
+                    rdfs:label "Erster Abschluss (NW)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000179
@@ -7198,7 +7204,7 @@ ontology:LP_0000445 rdf:type owl:Class ;
                                     ontology:LP_0000441 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Lerninhalt (BB)"@de ,
-                               "learning content"@en ;
+                               "learning content (BB)"@en ;
                     skos:altLabel "Inhalt (BB)" ;
                     skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
                                     "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de .
@@ -7216,7 +7222,7 @@ ontology:LP_0000446 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Lernmaterial (BB)"@de ,
-                               "learning material"@en ;
+                               "learning material (BB)"@en ;
                     skos:definition "Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen."@de ,
                                     "Some concrete means (e.g. in form of documents) to acquire particular competences."@en .
 
@@ -7236,7 +7242,7 @@ ontology:LP_0000447 rdf:type owl:Class ;
                     rdfs:comment "operationalisierbar und meßbar"@de ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Standard (BB)"@de ,
-                               "competence"@en ;
+                               "standard (BB)"@en ;
                     skos:altLabel "Abschlussorientierter Standard (BB)" ;
                     skos:definition "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en .
 
@@ -7254,7 +7260,7 @@ ontology:LP_0000448 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Thema (BB)"@de ,
-                               "topic"@en ;
+                               "topic (BB)"@en ;
                     skos:definition "A concrete topic of school teaching that can be taught through particular learning content."@en ,
                                     "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de .
 
@@ -7272,7 +7278,7 @@ ontology:LP_0000449 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Themenfeld (BB)"@de ,
-                               "topic area"@en ;
+                               "topic area (BB)"@en ;
                     skos:altLabel "Themenbereich (BB)" ;
                     skos:definition "A topic area includes one or more topics that are subject of teaching."@en ,
                                     "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de .
@@ -7290,7 +7296,7 @@ ontology:LP_0000450 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Zusatzmaterial (BB)"@de ,
-                               "additional material"@en ;
+                               "additional material (BB)"@en ;
                     skos:definition "Documents which refer to additional resources to learn with."@en ,
                                     "Dokumente, die auf zusätzliche Ressourcen zum Lernen verweisen."@de .
 
@@ -7299,7 +7305,7 @@ ontology:LP_0000450 rdf:type owl:Class ;
 ontology:LP_0000451 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000441 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "exercise"@en ,
+                    rdfs:label "exercise (BB)"@en ,
                                "Übung (BB)"@de ;
                     skos:definition "A concrete action that helps to learn a skill."@en ,
                                     "Eine konkrete Maßnahme, die dazu beiträgt, eine Kompetenz zu erlernen."@de .
@@ -8599,21 +8605,6 @@ ontology:LP_0000835 rdf:type owl:Class ;
                     rdfs:label "CE-Gymnasialniveau"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000836
-ontology:LP_0000836 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000834 ,
-                                    [ owl:intersectionOf ( ontology:LP_0002173
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000483 ;
-                                                             owl:someValuesFrom ontology:LP_0000839
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Grundlegendes Anforderungsniveau (HB)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000837
 ontology:LP_0000837 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000335 ;
@@ -9582,7 +9573,7 @@ ontology:LP_0001445 rdf:type owl:Class ;
                                     ontology:LP_0001441 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Lerninhalt (BE)"@de ,
-                               "learning content"@en ;
+                               "learning content (BE)"@en ;
                     skos:altLabel "Inhalt (BE)" ;
                     skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
                                     "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de .
@@ -9600,7 +9591,7 @@ ontology:LP_0001446 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Lernmaterial (BE)"@de ,
-                               "learning material"@en ;
+                               "learning material (BE)"@en ;
                     skos:definition "Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen."@de ,
                                     "Some concrete means (e.g. in form of documents) to acquire particular competences."@en .
 
@@ -9620,7 +9611,7 @@ ontology:LP_0001447 rdf:type owl:Class ;
                     rdfs:comment "operationalisierbar und meßbar"@de ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Standard (BE)"@de ,
-                               "competence"@en ;
+                               "standard (BE)"@en ;
                     skos:altLabel "Abschlussorientierter Standard (BE)" ;
                     skos:definition "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en .
 
@@ -9638,7 +9629,7 @@ ontology:LP_0001448 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Thema (BE)"@de ,
-                               "topic"@en ;
+                               "topic (BE)"@en ;
                     skos:definition "A concrete topic of school teaching that can be taught through particular learning content."@en ,
                                     "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de .
 
@@ -9656,7 +9647,7 @@ ontology:LP_0001449 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Themenfeld (BE)"@de ,
-                               "topic area"@en ;
+                               "topic area (BE)"@en ;
                     skos:altLabel "Themenbereich (BE)" ;
                     skos:definition "A topic area includes one or more topics that are subject of teaching."@en ,
                                     "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de .
@@ -9674,7 +9665,7 @@ ontology:LP_0001450 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Zusatzmaterial (BE)"@de ,
-                               "additional material"@en ;
+                               "additional material (BE)"@en ;
                     skos:definition "Documents which refer to additional resources to learn with."@en ,
                                     "Dokumente, die auf zusätzliche Ressourcen zum Lernen verweisen."@de .
 
@@ -9683,7 +9674,7 @@ ontology:LP_0001450 rdf:type owl:Class ;
 ontology:LP_0001451 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0001441 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "exercise"@en ,
+                    rdfs:label "exercise (BE)"@en ,
                                "Übung (BE)"@de ;
                     skos:definition "A concrete action that helps to learn a skill."@en ,
                                     "Eine konkrete Maßnahme, die dazu beiträgt, eine Kompetenz zu erlernen."@de .
@@ -12562,13 +12553,6 @@ ontology:LP_0002172 rdf:type owl:Class ;
                     skos:editorialNote "MEM-Lerninhalt, MEM-Hinweis oder MEM-Besipiel???" .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0002173
-ontology:LP_0002173 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0002118 ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Anforderungsniveau (HB)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0002174
 ontology:LP_0002174 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0001015 ,
@@ -14319,7 +14303,7 @@ ontology:LP_0000269 rdf:type owl:NamedIndividual ,
 ontology:LP_0000270 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000203 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Mittlerer Abschluss (HH)"@de .
+                    rdfs:label "Mittlerer Schulabschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000271
@@ -14623,12 +14607,6 @@ ontology:LP_0000567 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000130 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "B-Kurs (RP)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000568
-ontology:LP_0000568 rdf:type owl:NamedIndividual ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Deutsche Gebärdensprache (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000583

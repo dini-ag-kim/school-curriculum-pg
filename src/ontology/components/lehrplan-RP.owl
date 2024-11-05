@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/>)
+Prefix(:=<https://w3id.org/lehrplan/ontology/components/lehrplan-RP.owl/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -56,7 +56,6 @@ Declaration(NamedIndividual(ontology:LP_0000281))
 Declaration(NamedIndividual(ontology:LP_0000282))
 Declaration(NamedIndividual(ontology:LP_0000566))
 Declaration(NamedIndividual(ontology:LP_0000567))
-Declaration(NamedIndividual(<https://w3id.org/ontology/LP_0000538>))
 
 
 
@@ -85,7 +84,6 @@ SubClassOf(ontology:LP_0000204 ObjectIntersectionOf(ontology:LP_0000078 ObjectHa
 # Class: ontology:LP_0000283 (Grundschule (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000283 "Grundschule (RP)"@de)
-EquivalentClasses(ontology:LP_0000283 ObjectOneOf(<https://w3id.org/ontology/LP_0000538>))
 SubClassOf(ontology:LP_0000283 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000114) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000001) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000002) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000003) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000004) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000046)))
 
 # Class: ontology:LP_0000284 (Gymnasium G8 Einführung Sek I (RP))
@@ -310,10 +308,6 @@ ClassAssertion(ontology:LP_0000130 ontology:LP_0000566)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000567 "B-Kurs (RP)"@de)
 ClassAssertion(ontology:LP_0000130 ontology:LP_0000567)
-
-# Individual: <https://w3id.org/ontology/LP_0000538> (<https://w3id.org/ontology/LP_0000538>)
-
-ClassAssertion(ontology:LP_0000283 <https://w3id.org/ontology/LP_0000538>)
 
 
 )

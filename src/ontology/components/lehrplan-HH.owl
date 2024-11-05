@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/>)
+Prefix(:=<https://w3id.org/lehrplan/ontology/components/lehrplan-HH.owl/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -11,140 +11,216 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 Ontology(<https://w3id.org/lehrplan/ontology/components/lehrplan-HH.owl>
 Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
-Declaration(Class(:LP_0000163))
-Declaration(Class(:LP_0000179))
-Declaration(Class(:LP_0000203))
-Declaration(Class(:LP_0000273))
-Declaration(Class(:LP_0000275))
-Declaration(Class(:LP_0000276))
-Declaration(Class(:LP_0000277))
-Declaration(Class(:LP_0000278))
-Declaration(Class(:LP_0000426))
-Declaration(Class(:LP_0000427))
-Declaration(Class(:LP_0000428))
-Declaration(Class(:LP_0000517))
-Declaration(Class(:LP_0000518))
-Declaration(Class(:LP_0000822))
-Declaration(Class(:LP_0001108))
-Declaration(Class(:LP_0002072))
-Declaration(Class(:LP_0002210))
-Declaration(Class(:LP_0002211))
-Declaration(Class(:LP_0002212))
-Declaration(Class(:LP_0002213))
-Declaration(Class(:LP_0002214))
-Declaration(Class(:LP_0002215))
-Declaration(Class(:LP_0002217))
-Declaration(Class(:LP_0002218))
-Declaration(Class(:LP_0002219))
-Declaration(Class(:LP_0002220))
-Declaration(Class(:LP_0002221))
-Declaration(NamedIndividual(:LP_0000269))
-Declaration(NamedIndividual(:LP_0000270))
-Declaration(NamedIndividual(:LP_0000271))
-Declaration(NamedIndividual(:LP_0000272))
-# Class: :LP_0000163 (Allgemeine Hochschulreife (HH))
-AnnotationAssertion(rdfs:label :LP_0000163 "Allgemeine Hochschulreife (HH)"@de)
-EquivalentClasses(:LP_0000163 ObjectOneOf(:LP_0000269))
-SubClassOf(:LP_0000163 ObjectIntersectionOf(:LP_0000076 ObjectHasValue(:LP_0000029 :LP_3000045)))
-# Class: :LP_0000179 (Erster Schulabschluss (HH))
-AnnotationAssertion(rdfs:label :LP_0000179 "Erster Schulabschluss (HH)"@de)
-EquivalentClasses(:LP_0000179 ObjectOneOf(:LP_0000271 :LP_0000272))
-SubClassOf(:LP_0000179 ObjectIntersectionOf(:LP_0000079 ObjectHasValue(:LP_0000029 :LP_3000045)))
-# Class: :LP_0000203 (Mittlerer Abschluss (HH))
-AnnotationAssertion(rdfs:label :LP_0000203 "Mittlerer Abschluss (HH)"@de)
-EquivalentClasses(:LP_0000203 ObjectOneOf(:LP_0000270))
-SubClassOf(:LP_0000203 ObjectIntersectionOf(:LP_0000078 ObjectHasValue(:LP_0000029 :LP_3000045)))
-# Class: :LP_0000273 (Grundschule (HH))
-AnnotationAssertion(rdfs:label :LP_0000273 "Grundschule (HH)"@de)
-SubClassOf(:LP_0000273 ObjectIntersectionOf(:LP_0000811 ObjectSomeValuesFrom(:LP_0000812 :LP_0000114) ObjectHasValue(:LP_0000026 :LP_2000001) ObjectHasValue(:LP_0000026 :LP_2000002) ObjectHasValue(:LP_0000026 :LP_2000003) ObjectHasValue(:LP_0000026 :LP_2000004) ObjectHasValue(:LP_0000029 :LP_3000045)))
-# Class: :LP_0000275 (Stadtteilschule Sek I (HH))
-AnnotationAssertion(rdfs:label :LP_0000275 "Stadtteilschule Sek I (HH)"@de)
-SubClassOf(:LP_0000275 ObjectIntersectionOf(:LP_0000811 ObjectSomeValuesFrom(:LP_0000812 :LP_0000274) ObjectHasValue(:LP_0000026 :LP_2000005) ObjectHasValue(:LP_0000026 :LP_2000006) ObjectHasValue(:LP_0000026 :LP_2000007) ObjectHasValue(:LP_0000026 :LP_2000008) ObjectHasValue(:LP_0000026 :LP_2000009) ObjectHasValue(:LP_0000026 :LP_2000010) ObjectHasValue(:LP_0000029 :LP_3000045) ObjectHasValue(:LP_0000058 :LP_0000270) ObjectHasValue(:LP_0000058 :LP_0000271) ObjectHasValue(:LP_0000058 :LP_0000272)))
-# Class: :LP_0000276 (Gymnasium Sek I (HH))
-AnnotationAssertion(rdfs:label :LP_0000276 "Gymnasium Sek I (HH)"@de)
-SubClassOf(:LP_0000276 ObjectIntersectionOf(:LP_0000811 ObjectSomeValuesFrom(:LP_0000812 :LP_0000122) ObjectHasValue(:LP_0000026 :LP_2000005) ObjectHasValue(:LP_0000026 :LP_2000006) ObjectHasValue(:LP_0000026 :LP_2000007) ObjectHasValue(:LP_0000026 :LP_2000008) ObjectHasValue(:LP_0000026 :LP_2000009) ObjectHasValue(:LP_0000026 :LP_2000010) ObjectHasValue(:LP_0000029 :LP_3000045) ObjectHasValue(:LP_0000058 :LP_0000270) ObjectHasValue(:LP_0000058 :LP_0000271) ObjectHasValue(:LP_0000058 :LP_0000272)))
-# Class: :LP_0000277 (Stadtteilschule Sek II (HH))
-AnnotationAssertion(rdfs:label :LP_0000277 "Stadtteilschule Sek II (HH)"@de)
-SubClassOf(:LP_0000277 ObjectIntersectionOf(:LP_0000811 ObjectSomeValuesFrom(:LP_0000812 :LP_0000274) ObjectHasValue(:LP_0000026 :LP_2000011) ObjectHasValue(:LP_0000026 :LP_2000012) ObjectHasValue(:LP_0000026 :LP_2000013) ObjectHasValue(:LP_0000029 :LP_3000045) ObjectHasValue(:LP_0000058 :LP_0000269)))
-# Class: :LP_0000278 (Gymnasium Sek II (HH))
-AnnotationAssertion(rdfs:label :LP_0000278 "Gymnasium Sek II (HH)"@de)
-SubClassOf(:LP_0000278 ObjectIntersectionOf(:LP_0000811 ObjectSomeValuesFrom(:LP_0000812 :LP_0000122) ObjectHasValue(:LP_0000026 :LP_2000011) ObjectHasValue(:LP_0000026 :LP_2000012) ObjectHasValue(:LP_0000029 :LP_3000045) ObjectHasValue(:LP_0000058 :LP_0000269)))
-# Class: :LP_0000426 (Element (HH))
-AnnotationAssertion(rdfs:comment :LP_0000426 "Lehrplan Element bezogen auf den Lehrplan von Hamburg"@de)
-AnnotationAssertion(rdfs:label :LP_0000426 "Element (HH)"@de)
-EquivalentClasses(:LP_0000426 ObjectIntersectionOf(:LP_0000261 ObjectHasValue(:LP_0000029 :LP_3000045)))
-# Class: :LP_0000427 (Ende Jahrgangsstufe 2 (HH))
-AnnotationAssertion(rdfs:label :LP_0000427 "Ende Jahrgangsstufe 2 (HH)"@de)
-EquivalentClasses(:LP_0000427 ObjectOneOf(:LP_2000001 :LP_2000002))
-SubClassOf(:LP_0000427 :LP_0000009)
-# Class: :LP_0000428 (Inhalt (HH))
-AnnotationAssertion(rdfs:label :LP_0000428 "Inhalt (HH)"@de)
-SubClassOf(:LP_0000428 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000480)))
-# Class: :LP_0000517 (Erhöhtes Anforderungsniveau (HH))
-AnnotationAssertion(rdfs:label :LP_0000517 "Erhöhtes Anforderungsniveau (HH)"@de)
-EquivalentClasses(:LP_0000517 ObjectIntersectionOf(:LP_0002072 ObjectSomeValuesFrom(:LP_0000483 :LP_0000509)))
-SubClassOf(:LP_0000517 :LP_0002072)
-# Class: :LP_0000518 (Grundlegendes Anforderungsniveau (HH))
-AnnotationAssertion(rdfs:label :LP_0000518 "Grundlegendes Anforderungsniveau (HH)"@de)
-EquivalentClasses(:LP_0000518 ObjectIntersectionOf(:LP_0002072 ObjectSomeValuesFrom(:LP_0000483 :LP_0000508)))
-SubClassOf(:LP_0000518 :LP_0002072)
-# Class: :LP_0000822 (Bildungsplan (HH))
-AnnotationAssertion(rdfs:label :LP_0000822 "Bildungsplan (HH)"@de)
-EquivalentClasses(:LP_0000822 ObjectIntersectionOf(:LP_0000438 ObjectSomeValuesFrom(:LP_0000008 :LP_0000426) ObjectAllValuesFrom(:LP_0000008 :LP_0000426) ObjectHasValue(:LP_0000029 :LP_3000045)))
-# Class: :LP_0001108 (Fach Niveau Sek I (HH))
-AnnotationAssertion(rdfs:label :LP_0001108 "Fach Niveau Sek I (HH)"@de)
-SubClassOf(:LP_0001108 :LP_0000426)
-# Class: :LP_0002072 (Fach Niveau Sek II (HH))
-AnnotationAssertion(rdfs:label :LP_0002072 "Fach Niveau Sek II (HH)"@de)
-SubClassOf(:LP_0002072 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000335)))
-# Class: :LP_0002210 (Lehrplanfragment (HH))
-AnnotationAssertion(rdfs:label :LP_0002210 "Lehrplanfragment (HH)"@de)
-SubClassOf(:LP_0002210 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000627)))
-# Class: :LP_0002211 (Leitidee (HH))
-AnnotationAssertion(rdfs:label :LP_0002211 "Leitidee (HH)"@de)
-SubClassOf(:LP_0002211 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000494) ObjectSomeValuesFrom(:LP_0000483 :LP_0000501)))
-# Class: :LP_0002212 (Kompetenzbereich (HH))
-AnnotationAssertion(rdfs:label :LP_0002212 "Kompetenzbereich (HH)"@de)
-SubClassOf(:LP_0002212 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000494)))
-# Class: :LP_0002213 (Teilkompetenzbereich (HH))
-AnnotationAssertion(rdfs:label :LP_0002213 "Teilkompetenzbereich (HH)"@de)
-SubClassOf(:LP_0002213 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000494)))
-# Class: :LP_0002214 (Beobachtungskriterium (HH))
-AnnotationAssertion(rdfs:label :LP_0002214 "Beobachtungskriterium (HH)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002214 "Kommt nur in der Primarstufe für die Jahrgänge 1-2 vor.")
-SubClassOf(:LP_0002214 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000479)))
-# Class: :LP_0002215 (Regelanforderung (HH))
-AnnotationAssertion(rdfs:label :LP_0002215 "Regelanforderung (HH)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0002215 "Anforderungen (HH)")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002215 "Kommt nur in der Primarstufe für die Jahrgänge 3-4 vor.")
-SubClassOf(:LP_0002215 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000479)))
-# Class: :LP_0002217 (Anforderungsbereich (HH))
-AnnotationAssertion(rdfs:label :LP_0002217 "Anforderungsbereich (HH)"@de)
-SubClassOf(:LP_0002217 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000829)))
-# Class: :LP_0002218 (Thema (HH))
-AnnotationAssertion(rdfs:label :LP_0002218 "Thema (HH)"@de)
-SubClassOf(:LP_0002218 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000497)))
-# Class: :LP_0002219 (Modul (HH))
-AnnotationAssertion(rdfs:label :LP_0002219 "Modul (HH)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002219 "In Sek II unter Inhalte.")
-SubClassOf(:LP_0002219 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000497)))
-# Class: :LP_0002220 (Sachgebiet (HH))
-AnnotationAssertion(rdfs:label :LP_0002220 "Sachgebiet (HH)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002220 "Kommt bisher nur in Sek II Mathematik vor.")
-SubClassOf(:LP_0002220 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000497)))
-# Class: :LP_0002221 (Kompetenz (HH))
-AnnotationAssertion(rdfs:label :LP_0002221 "Kompetenz (HH)"@de)
-SubClassOf(:LP_0002221 ObjectIntersectionOf(:LP_0000426 ObjectSomeValuesFrom(:LP_0000483 :LP_0000479)))
-# Individual: :LP_0000269 (Allgemeinbildender Schulabschluss (HH))
-AnnotationAssertion(rdfs:label :LP_0000269 "Allgemeinbildender Schulabschluss (HH)"@de)
-ClassAssertion(:LP_0000163 :LP_0000269)
-# Individual: :LP_0000270 (Mittlerer Abschluss (HH))
-AnnotationAssertion(rdfs:label :LP_0000270 "Mittlerer Abschluss (HH)"@de)
-ClassAssertion(:LP_0000203 :LP_0000270)
-# Individual: :LP_0000271 (Erster allgemeinbildender Schulabschluss (HH))
-AnnotationAssertion(rdfs:label :LP_0000271 "Erster allgemeinbildender Schulabschluss (HH)"@de)
-ClassAssertion(:LP_0000179 :LP_0000271)
-# Individual: :LP_0000272 (Erweiterter erste allgemeinbildender Schulabschluss (HH))
-AnnotationAssertion(rdfs:label :LP_0000272 "Erweiterter erste allgemeinbildender Schulabschluss (HH)"@de)
-ClassAssertion(:LP_0000179 :LP_0000272)
+
+Declaration(Class(ontology:LP_0000163))
+Declaration(Class(ontology:LP_0000179))
+Declaration(Class(ontology:LP_0000203))
+Declaration(Class(ontology:LP_0000273))
+Declaration(Class(ontology:LP_0000275))
+Declaration(Class(ontology:LP_0000276))
+Declaration(Class(ontology:LP_0000277))
+Declaration(Class(ontology:LP_0000278))
+Declaration(Class(ontology:LP_0000426))
+Declaration(Class(ontology:LP_0000427))
+Declaration(Class(ontology:LP_0000428))
+Declaration(Class(ontology:LP_0000517))
+Declaration(Class(ontology:LP_0000518))
+Declaration(Class(ontology:LP_0000822))
+Declaration(Class(ontology:LP_0001108))
+Declaration(Class(ontology:LP_0002072))
+Declaration(Class(ontology:LP_0002210))
+Declaration(Class(ontology:LP_0002211))
+Declaration(Class(ontology:LP_0002212))
+Declaration(Class(ontology:LP_0002213))
+Declaration(Class(ontology:LP_0002214))
+Declaration(Class(ontology:LP_0002215))
+Declaration(Class(ontology:LP_0002217))
+Declaration(Class(ontology:LP_0002218))
+Declaration(Class(ontology:LP_0002219))
+Declaration(Class(ontology:LP_0002220))
+Declaration(Class(ontology:LP_0002221))
+Declaration(NamedIndividual(ontology:LP_0000269))
+Declaration(NamedIndividual(ontology:LP_0000270))
+Declaration(NamedIndividual(ontology:LP_0000271))
+Declaration(NamedIndividual(ontology:LP_0000272))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: ontology:LP_0000163 (Allgemeine Hochschulreife (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000163 "Allgemeine Hochschulreife (HH)"@de)
+EquivalentClasses(ontology:LP_0000163 ObjectOneOf(ontology:LP_0000269))
+SubClassOf(ontology:LP_0000163 ObjectIntersectionOf(ontology:LP_0000076 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
+
+# Class: ontology:LP_0000179 (Erster Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000179 "Erster Schulabschluss (HH)"@de)
+EquivalentClasses(ontology:LP_0000179 ObjectOneOf(ontology:LP_0000271 ontology:LP_0000272))
+SubClassOf(ontology:LP_0000179 ObjectIntersectionOf(ontology:LP_0000079 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
+
+# Class: ontology:LP_0000203 (Mittlerer Abschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000203 "Mittlerer Abschluss (HH)"@de)
+EquivalentClasses(ontology:LP_0000203 ObjectOneOf(ontology:LP_0000270))
+SubClassOf(ontology:LP_0000203 ObjectIntersectionOf(ontology:LP_0000078 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
+
+# Class: ontology:LP_0000273 (Grundschule (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000273 "Grundschule (HH)"@de)
+SubClassOf(ontology:LP_0000273 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000114) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000001) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000002) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000003) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000004) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
+
+# Class: ontology:LP_0000275 (Stadtteilschule Sek I (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000275 "Stadtteilschule Sek I (HH)"@de)
+SubClassOf(ontology:LP_0000275 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000274) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000270) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000271) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000272)))
+
+# Class: ontology:LP_0000276 (Gymnasium Sek I (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000276 "Gymnasium Sek I (HH)"@de)
+SubClassOf(ontology:LP_0000276 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000270) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000271) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000272)))
+
+# Class: ontology:LP_0000277 (Stadtteilschule Sek II (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000277 "Stadtteilschule Sek II (HH)"@de)
+SubClassOf(ontology:LP_0000277 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000274) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000269)))
+
+# Class: ontology:LP_0000278 (Gymnasium Sek II (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000278 "Gymnasium Sek II (HH)"@de)
+SubClassOf(ontology:LP_0000278 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000269)))
+
+# Class: ontology:LP_0000426 (Element (HH))
+
+AnnotationAssertion(rdfs:comment ontology:LP_0000426 "Lehrplan Element bezogen auf den Lehrplan von Hamburg"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000426 "Element (HH)"@de)
+EquivalentClasses(ontology:LP_0000426 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
+
+# Class: ontology:LP_0000427 (Ende Jahrgangsstufe 2 (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000427 "Ende Jahrgangsstufe 2 (HH)"@de)
+EquivalentClasses(ontology:LP_0000427 ObjectOneOf(ontology:LP_2000001 ontology:LP_2000002))
+SubClassOf(ontology:LP_0000427 ontology:LP_0000009)
+
+# Class: ontology:LP_0000428 (Inhalt (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000428 "Inhalt (HH)"@de)
+SubClassOf(ontology:LP_0000428 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0000517 (Erhöhtes Anforderungsniveau (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000517 "Erhöhtes Anforderungsniveau (HH)"@de)
+EquivalentClasses(ontology:LP_0000517 ObjectIntersectionOf(ontology:LP_0002072 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
+SubClassOf(ontology:LP_0000517 ontology:LP_0002072)
+
+# Class: ontology:LP_0000518 (Grundlegendes Anforderungsniveau (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000518 "Grundlegendes Anforderungsniveau (HH)"@de)
+EquivalentClasses(ontology:LP_0000518 ObjectIntersectionOf(ontology:LP_0002072 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
+SubClassOf(ontology:LP_0000518 ontology:LP_0002072)
+
+# Class: ontology:LP_0000822 (Bildungsplan (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000822 "Bildungsplan (HH)"@de)
+EquivalentClasses(ontology:LP_0000822 ObjectIntersectionOf(ontology:LP_0000438 ObjectSomeValuesFrom(ontology:LP_0000008 ontology:LP_0000426) ObjectAllValuesFrom(ontology:LP_0000008 ontology:LP_0000426) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
+
+# Class: ontology:LP_0001108 (Fach Niveau Sek I (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001108 "Fach Niveau Sek I (HH)"@de)
+SubClassOf(ontology:LP_0001108 ontology:LP_0000426)
+
+# Class: ontology:LP_0002072 (Fach Niveau Sek II (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002072 "Fach Niveau Sek II (HH)"@de)
+SubClassOf(ontology:LP_0002072 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000335)))
+
+# Class: ontology:LP_0002210 (Lehrplanfragment (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002210 "Lehrplanfragment (HH)"@de)
+SubClassOf(ontology:LP_0002210 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000627)))
+
+# Class: ontology:LP_0002211 (Leitidee (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002211 "Leitidee (HH)"@de)
+SubClassOf(ontology:LP_0002211 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
+
+# Class: ontology:LP_0002212 (Kompetenzbereich (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002212 "Kompetenzbereich (HH)"@de)
+SubClassOf(ontology:LP_0002212 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+
+# Class: ontology:LP_0002213 (Teilkompetenzbereich (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002213 "Teilkompetenzbereich (HH)"@de)
+SubClassOf(ontology:LP_0002213 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+
+# Class: ontology:LP_0002214 (Beobachtungskriterium (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002214 "Beobachtungskriterium (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002214 "Kommt nur in der Primarstufe für die Jahrgänge 1-2 vor.")
+SubClassOf(ontology:LP_0002214 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0002215 (Regelanforderung (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002215 "Regelanforderung (HH)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0002215 "Anforderungen (HH)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0002215 "Kommt nur in der Primarstufe für die Jahrgänge 3-4 vor.")
+SubClassOf(ontology:LP_0002215 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0002217 (Anforderungsbereich (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002217 "Anforderungsbereich (HH)"@de)
+SubClassOf(ontology:LP_0002217 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000829)))
+
+# Class: ontology:LP_0002218 (Thema (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002218 "Thema (HH)"@de)
+SubClassOf(ontology:LP_0002218 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0002219 (Modul (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002219 "Modul (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002219 "In Sek II unter Inhalte.")
+SubClassOf(ontology:LP_0002219 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0002220 (Sachgebiet (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002220 "Sachgebiet (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002220 "Kommt bisher nur in Sek II Mathematik vor.")
+SubClassOf(ontology:LP_0002220 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0002221 (Kompetenz (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002221 "Kompetenz (HH)"@de)
+SubClassOf(ontology:LP_0002221 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: ontology:LP_0000269 (Allgemeinbildender Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000269 "Allgemeinbildender Schulabschluss (HH)"@de)
+ClassAssertion(ontology:LP_0000163 ontology:LP_0000269)
+
+# Individual: ontology:LP_0000270 (Mittlerer Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000270 "Mittlerer Schulabschluss (HH)"@de)
+ClassAssertion(ontology:LP_0000203 ontology:LP_0000270)
+
+# Individual: ontology:LP_0000271 (Erster allgemeinbildender Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000271 "Erster allgemeinbildender Schulabschluss (HH)"@de)
+ClassAssertion(ontology:LP_0000179 ontology:LP_0000271)
+
+# Individual: ontology:LP_0000272 (Erweiterter erste allgemeinbildender Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000272 "Erweiterter erste allgemeinbildender Schulabschluss (HH)"@de)
+ClassAssertion(ontology:LP_0000179 ontology:LP_0000272)
+
+
 )

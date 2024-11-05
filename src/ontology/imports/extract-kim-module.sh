@@ -20,6 +20,10 @@ java -jar robot.jar remove --term "http://www.w3.org/2004/02/skos/core#Concept" 
 
 # Annotates the output module with a commentary to the origin of the content
 java -jar robot.jar annotate --input kim-extracted.ttl --annotation rdfs:comment "This file contains externally imported content from the KIM vocabularies for Schulfächer, Schulabschlüsse, and Schularten for import into the Lehrplan Ontology (LPO)." --output kim-extracted.ttl
+
+# make skos:prefLabel to rdfs:label
+java -jar robot.jar query --input kim-extracted.ttl --update update-label.sparql --output kim-extracted.ttl
+
 # Annotates each axiom with the ontology IRI, using prov:wasDerivedFrom
 java -jar robot.jar annotate --input kim-extracted.ttl --annotate-derived-from true --annotate-defined-by true --output kim-extracted.ttl
 

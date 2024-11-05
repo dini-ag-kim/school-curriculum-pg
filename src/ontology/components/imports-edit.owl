@@ -9,6 +9,15 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<https://w3id.org/lehrplan/ontology/components/imports-edit.owl>
 Import(<https://w3id.org/lehrplan/ontology/imports/kim_import.owl>)
 
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#prefLabel> (skos:prefLabel)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#prefLabel> "skos:prefLabel")
+SubAnnotationPropertyOf(<http://www.w3.org/2004/02/skos/core#prefLabel> rdfs:label)
+
 
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#altLabel> "skos:altLabel")
@@ -17,7 +26,6 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#definition> 
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#editorialNote> "skos:editorialNote")
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#exactMatch> "skos:exactMatch")
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#narrowMatch> "skos:narrowMatch")
-AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#prefLabel> "skos:prefLabel")
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#related> "skos:related")
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#topConceptOf> "skos:topConceptOf")
 AnnotationAssertion(rdfs:label <http://www.w3.org/ns/prov#wasDerivedFrom> "prov:wasDerivedFrom")

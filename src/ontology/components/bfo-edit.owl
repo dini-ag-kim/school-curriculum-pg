@@ -1,0 +1,184 @@
+Prefix(:=<https://w3id.org/lehrplan/ontology>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://w3id.org/lehrplan/ontology/components/bfo-edit.owl>
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
+Import(<https://w3id.org/lehrplan/ontology/lp/imports/bfo_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/lp/imports/iao_import.owl>)
+
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000024>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (is about)
+
+InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000008> (has_part)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000008> <http://purl.obolibrary.org/obo/BFO_0000176>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000021> (ermöglicht Abschluss)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000021> <http://purl.obolibrary.org/obo/IAO_0000136>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000019>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000024> (described by)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000024> "described by"@en)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000026> (hat_jahrgangsstufe)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000029> (von_bundesland)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000058> (endet mit Abschluss)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000058> <http://purl.obolibrary.org/obo/BFO_0000117>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000132> (hat_lerner_niveau)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000132> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000141> (entspricht_KIM_schulart)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000141> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000440> (für_bildungsgangabschnitt)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000440> <http://purl.obolibrary.org/obo/OBI_0000295>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000483> (hat_funktion)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000483> <http://purl.obolibrary.org/obo/RO_0000053>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000495> (ist_funktion_von)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000495> <http://purl.obolibrary.org/obo/RO_0000052>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000537> (hat_schulfach)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000537> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000578> (hat_niveau_stufe)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000580> (ist_niveau_stufe_von)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000580> <http://purl.obolibrary.org/obo/IAO_0000136>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000812> (für_schulart)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000812> <http://purl.obolibrary.org/obo/BFO_0000055>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000833> (hat_bildungsgangniveau)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000833> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000840> (hat_fachniveau)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000840> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000001> (school subject)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000001> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000006> (Lehrprozess)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000006> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000007> (Learning Process)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000007> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000009> (Jahrgangsstufe)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000009> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000010> (Person)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000010> <http://purl.obolibrary.org/obo/BFO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000011> (Lehrer Rolle)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000011> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000012> (Schüler Rolle)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000012> <http://purl.obolibrary.org/obo/BFO_0000023>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000013> (Kompetenz)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000013> <http://purl.obolibrary.org/obo/BFO_0000016>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000019> (Schulabschluss)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000019> <http://purl.obolibrary.org/obo/BFO_0000035>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000020> (Schulstufe)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000020> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000040> (state designation)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000040> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000111> (Schulart)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000111> <http://purl.obolibrary.org/obo/BFO_0000034>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000130> (Lerner Niveau)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000130> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000261> (Curriculares Element)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000261> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000438> (Lehrplan)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000438> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000443> (Niveaustufe (BE/BB))
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000443> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (Funktionsspezifikation)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000478> <http://purl.obolibrary.org/obo/BFO_0000034>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000540> (Schulfachbezug)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000540> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000571> (Bildungsstandard (KMK))
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000571> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000808> (Organisation)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000808> <http://purl.obolibrary.org/obo/BFO_0000141>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000816> (Bildungsgang)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000816> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+
+)

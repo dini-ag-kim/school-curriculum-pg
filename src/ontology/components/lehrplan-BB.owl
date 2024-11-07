@@ -78,7 +78,6 @@ Declaration(ObjectProperty(ontology:LP_0000029))
 Declaration(ObjectProperty(ontology:LP_0000058))
 Declaration(ObjectProperty(ontology:LP_0000132))
 Declaration(ObjectProperty(ontology:LP_0000483))
-Declaration(ObjectProperty(ontology:LP_0000580))
 Declaration(ObjectProperty(ontology:LP_0000812))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/1>))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/2>))
@@ -298,27 +297,6 @@ EquivalentClasses(ontology:LP_0000506 ObjectIntersectionOf(ontology:LP_0002069 O
 AnnotationAssertion(rdfs:label ontology:LP_0000507 "Leistungskursfach (BB)"@de)
 EquivalentClasses(ontology:LP_0000507 ObjectIntersectionOf(ontology:LP_0002069 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 
-# Class: ontology:LP_0000573 (BOA)
-
-SubClassOf(ontology:LP_0000573 ObjectIntersectionOf(ontology:LP_0000572 ObjectSomeValuesFrom(ontology:LP_0000058 ontology:LP_0000081)))
-
-# Class: ontology:LP_0000574 (BBR)
-
-SubClassOf(ontology:LP_0000574 ObjectIntersectionOf(ontology:LP_0000572 ObjectIntersectionOf(ObjectHasValue(ontology:LP_0000058 ontology:LP_0000135) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000231))))
-
-# Class: ontology:LP_0000575 (EBBR)
-
-SubClassOf(ontology:LP_0000575 ObjectIntersectionOf(ontology:LP_0000572 ObjectHasValue(ontology:LP_0000058 ontology:LP_0000136) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000232)))
-
-# Class: ontology:LP_0000576 (MSA)
-
-EquivalentClasses(ontology:LP_0000576 ObjectIntersectionOf(ontology:LP_0000572 ObjectHasValue(ontology:LP_0000008 ontology:LP_0000848)))
-SubClassOf(ontology:LP_0000576 ObjectIntersectionOf(ontology:LP_0000572 ObjectHasValue(ontology:LP_0000058 ontology:LP_0000137) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000233)))
-
-# Class: ontology:LP_0000577 (QualiPhase)
-
-SubClassOf(ontology:LP_0000577 ObjectIntersectionOf(ontology:LP_0000572 ObjectHasValue(ontology:LP_0000058 ontology:LP_0000234)))
-
 # Class: ontology:LP_0000807 (Rahmenlehrplan (BB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000807 "Rahmenlehrplan (BB)"@de)
@@ -435,7 +413,6 @@ ClassAssertion(ontology:LP_0000175 ontology:LP_0000235)
 # Individual: ontology:LP_0000583 (BOA A)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000583 "BOA A"@de)
-ClassAssertion(ontology:LP_0000573 ontology:LP_0000583)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000583 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000583 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000583 ontology:LP_0000464)
@@ -443,7 +420,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000583 ontology:LP_0000
 # Individual: ontology:LP_0000584 (BOA B)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000584 "BOA B"@de)
-ClassAssertion(ontology:LP_0000573 ontology:LP_0000584)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000584 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000584 ontology:LP_2000003)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000584 ontology:LP_0000465)
@@ -451,7 +427,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000584 ontology:LP_0000
 # Individual: ontology:LP_0000585 (BOA C)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000585 "BOA C"@de)
-ClassAssertion(ontology:LP_0000573 ontology:LP_0000585)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000585 ontology:LP_2000003)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000585 ontology:LP_2000004)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000585 ontology:LP_2000005)
@@ -462,7 +437,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000585 ontology:LP_0000
 # Individual: ontology:LP_0000586 (BOA D)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000586 "BOA D"@de)
-ClassAssertion(ontology:LP_0000573 ontology:LP_0000586)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000586 ontology:LP_2000007)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000586 ontology:LP_2000008)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000586 ontology:LP_2000009)
@@ -471,7 +445,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000586 ontology:LP_0000
 # Individual: ontology:LP_0000587 (BOA E)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000587 "BOA E"@de)
-ClassAssertion(ontology:LP_0000573 ontology:LP_0000587)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000587 ontology:LP_2000009)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000587 ontology:LP_2000010)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000587 ontology:LP_0000468)
@@ -479,14 +452,12 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000587 ontology:LP_0000
 # Individual: ontology:LP_0000588 (BBR A)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000588 "BBR A"@de)
-ClassAssertion(ontology:LP_0000574 ontology:LP_0000588)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000588 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000588 ontology:LP_0000464)
 
 # Individual: ontology:LP_0000589 (BBR B)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000589 "BBR B"@de)
-ClassAssertion(ontology:LP_0000574 ontology:LP_0000589)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000589 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000589 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000589 ontology:LP_2000003)
@@ -495,7 +466,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000589 ontology:LP_0000
 # Individual: ontology:LP_0000590 (BBR C)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000590 "BBR C"@de)
-ClassAssertion(ontology:LP_0000574 ontology:LP_0000590)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000590 ontology:LP_2000003)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000590 ontology:LP_2000004)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000590 ontology:LP_2000005)
@@ -504,7 +474,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000590 ontology:LP_0000
 # Individual: ontology:LP_0000591 (BBR D)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000591 "BBR D"@de)
-ClassAssertion(ontology:LP_0000574 ontology:LP_0000591)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000591 ontology:LP_2000005)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000591 ontology:LP_2000006)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000591 ontology:LP_2000007)
@@ -513,7 +482,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000591 ontology:LP_0000
 # Individual: ontology:LP_0000592 (BBR E)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000592 "BBR E"@de)
-ClassAssertion(ontology:LP_0000574 ontology:LP_0000592)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000592 ontology:LP_2000007)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000592 ontology:LP_2000008)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000592 ontology:LP_2000009)
@@ -522,7 +490,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000592 ontology:LP_0000
 # Individual: ontology:LP_0000593 (BBR F)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000593 "BBR F"@de)
-ClassAssertion(ontology:LP_0000574 ontology:LP_0000593)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000593 ontology:LP_2000009)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000593 ontology:LP_2000010)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000593 ontology:LP_0000469)
@@ -530,14 +497,12 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000593 ontology:LP_0000
 # Individual: ontology:LP_0000594 (EBBR A)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000594 "EBBR A"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000594)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000594 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000594 ontology:LP_0000464)
 
 # Individual: ontology:LP_0000595 (EBBR B)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000595 "EBBR B"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000595)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000595 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000595 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000595 ontology:LP_2000003)
@@ -546,7 +511,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000595 ontology:LP_0000
 # Individual: ontology:LP_0000596 (EBBR C)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000596 "EBBR C"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000596)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000596 ontology:LP_2000003)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000596 ontology:LP_2000004)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000596 ontology:LP_2000005)
@@ -555,7 +519,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000596 ontology:LP_0000
 # Individual: ontology:LP_0000597 (EBBR D)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000597 "EBBR D"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000597)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000597 ontology:LP_2000005)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000597 ontology:LP_2000006)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000597 ontology:LP_2000007)
@@ -564,7 +527,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000597 ontology:LP_0000
 # Individual: ontology:LP_0000598 (EBBR E)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000598 "EBBR E"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000598)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000598 ontology:LP_2000007)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000598 ontology:LP_2000008)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000598 ontology:LP_0000468)
@@ -572,7 +534,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000598 ontology:LP_0000
 # Individual: ontology:LP_0000599 (EBBR F)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000599 "EBBR F"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000599)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000599 ontology:LP_2000008)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000599 ontology:LP_2000009)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000599 ontology:LP_2000010)
@@ -581,21 +542,18 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000599 ontology:LP_0000
 # Individual: ontology:LP_0000600 (EBBR G)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000600 "EBBR G"@de)
-ClassAssertion(ontology:LP_0000575 ontology:LP_0000600)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000600 ontology:LP_2000010)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000600 ontology:LP_0000470)
 
 # Individual: ontology:LP_0000601 (MSA A)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000601 "MSA A"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000601)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000601 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000601 ontology:LP_0000464)
 
 # Individual: ontology:LP_0000602 (MSA B)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000602 "MSA B"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000602)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000602 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000602 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000602 ontology:LP_0000465)
@@ -603,7 +561,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000602 ontology:LP_0000
 # Individual: ontology:LP_0000603 (MSA C)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000603 "MSA C"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000603)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000603 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000603 ontology:LP_2000003)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000603 ontology:LP_2000004)
@@ -612,7 +569,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000603 ontology:LP_0000
 # Individual: ontology:LP_0000604 (MSA D)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000604 "MSA D"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000604)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000604 ontology:LP_2000004)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000604 ontology:LP_2000005)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000604 ontology:LP_2000006)
@@ -621,7 +577,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000604 ontology:LP_0000
 # Individual: ontology:LP_0000605 (MSA E)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000605 "MSA E"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000605)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000605 ontology:LP_2000006)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000605 ontology:LP_2000007)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000605 ontology:LP_2000008)
@@ -630,7 +585,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000605 ontology:LP_0000
 # Individual: ontology:LP_0000606 (MSA F)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000606 "MSA F"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000606)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000606 ontology:LP_2000008)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000606 ontology:LP_0000469)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000606 ontology:LP_2000009)
@@ -638,7 +592,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000606 ontology:LP_2000
 # Individual: ontology:LP_0000607 (MSA G)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000607 "MSA G"@de)
-ClassAssertion(ontology:LP_0000576 ontology:LP_0000607)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000607 ontology:LP_2000009)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000607 ontology:LP_2000010)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000607 ontology:LP_0000470)
@@ -646,14 +599,12 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000607 ontology:LP_0000
 # Individual: ontology:LP_0000608 (QualiPhase A)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000608 "QualiPhase A"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000608)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000608 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000608 ontology:LP_0000464)
 
 # Individual: ontology:LP_0000609 (QualiPhase B)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000609 "QualiPhase B"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000609)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000609 ontology:LP_2000001)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000609 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000609 ontology:LP_0000465)
@@ -661,7 +612,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000609 ontology:LP_0000
 # Individual: ontology:LP_0000610 (QualiPhase C)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000610 "QualiPhase C"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000610)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000610 ontology:LP_2000002)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000610 ontology:LP_2000003)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000610 ontology:LP_2000004)
@@ -670,7 +620,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000610 ontology:LP_0000
 # Individual: ontology:LP_0000611 (QualiPhase D)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000611 "QualiPhase D"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000611)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000611 ontology:LP_2000004)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000611 ontology:LP_2000005)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000611 ontology:LP_2000006)
@@ -679,7 +628,6 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000611 ontology:LP_0000
 # Individual: ontology:LP_0000612 (QualiPhase E)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000612 "QualiPhase E"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000612)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000612 ontology:LP_2000006)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000612 ontology:LP_2000007)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000612 ontology:LP_0000468)
@@ -687,21 +635,18 @@ ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000612 ontology:LP_0000
 # Individual: ontology:LP_0000613 (QualiPhase F)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000613 "QualiPhase F"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000613)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000613 ontology:LP_2000008)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000613 ontology:LP_0000469)
 
 # Individual: ontology:LP_0000614 (QualiPhase G)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000614 "QualiPhase G"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000614)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000614 ontology:LP_2000009)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000614 ontology:LP_0000470)
 
 # Individual: ontology:LP_0000615 (QualiPhase H)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000615 "QualiPhase H"@de)
-ClassAssertion(ontology:LP_0000577 ontology:LP_0000615)
 ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000615 ontology:LP_2000010)
 ObjectPropertyAssertion(ontology:LP_0000578 ontology:LP_0000615 ontology:LP_0000616)
 

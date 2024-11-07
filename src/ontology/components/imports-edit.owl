@@ -7,8 +7,14 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/components/imports-edit.owl>
-Import(<https://w3id.org/lehrplan/ontology/imports/kim_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/lp/imports/kim_import.owl>)
 
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000117>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000132>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000176>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000178>))
 ############################
 #   Annotation Properties
 ############################
@@ -17,6 +23,27 @@ Import(<https://w3id.org/lehrplan/ontology/imports/kim_import.owl>)
 
 AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#prefLabel> "skos:prefLabel")
 SubAnnotationPropertyOf(<http://www.w3.org/2004/02/skos/core#prefLabel> rdfs:label)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000117> (has occurrent part)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/BFO_0000051>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000132> (occurrent part of)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000132> <http://purl.obolibrary.org/obo/BFO_0000050>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000176> (continuant part of)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000176> <http://purl.obolibrary.org/obo/BFO_0000050>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000178> (has continuant part)
+
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/BFO_0000178> <http://purl.obolibrary.org/obo/BFO_0000051>)
 
 
 

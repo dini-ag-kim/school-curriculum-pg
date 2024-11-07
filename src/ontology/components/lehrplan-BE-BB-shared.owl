@@ -24,7 +24,6 @@ Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000008>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000026>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000058>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000483>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000578>))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/1>))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/2>))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/3>))
@@ -94,17 +93,6 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000009>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000010>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
 
-############################
-#   Object Properties
-############################
-
-# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000578> (hat_niveau_stufe)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000578> "hat_niveau_stufe"@de)
-InverseObjectProperties(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000580>)
-ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000572>)
-ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000443>)
-
 
 
 ############################
@@ -123,32 +111,32 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000573> "Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000573> "BOA"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000573> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000081>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000573> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000081>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000574> (BBR)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000574> "Abschluss Niveau, das zur Berufsbildungsreife befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000574> "BBR"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000574> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000135>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000231>))))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000574> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000135>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000231>))))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000575> (EBBR)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000575> "Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000575> "EBBR"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000575> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000136>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000232>))))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000575> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000136>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000232>))))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000576> (MSA)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000576> "Abschluss Niveau, das zum mittlereren Schulabschluss befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000576> "MSA"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0000848>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000137>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000233>))))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000137>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000233>))))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000577> (QualiPhase)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000577> "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000577> "QualiPhase"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000577> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000058> <https://w3id.org/lehrplan/ontology/LP_0000234>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000577> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000234>)))
 
 
 ############################

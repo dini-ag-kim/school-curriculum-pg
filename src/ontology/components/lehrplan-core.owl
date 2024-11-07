@@ -15,7 +15,13 @@ Declaration(Class(:LP_0000002))
 Declaration(Class(:LP_0000003))
 Declaration(Class(:LP_0000004))
 Declaration(Class(:LP_0000005))
+Declaration(Class(:LP_0000006))
+Declaration(Class(:LP_0000007))
 Declaration(Class(:LP_0000009))
+Declaration(Class(:LP_0000010))
+Declaration(Class(:LP_0000011))
+Declaration(Class(:LP_0000012))
+Declaration(Class(:LP_0000013))
 Declaration(Class(:LP_0000019))
 Declaration(Class(:LP_0000020))
 Declaration(Class(:LP_0000039))
@@ -137,23 +143,22 @@ Declaration(Class(:LP_0010005))
 Declaration(Class(:LP_0010006))
 Declaration(Class(:LP_0010007))
 Declaration(ObjectProperty(:LP_0000008))
+Declaration(ObjectProperty(:LP_0000021))
 Declaration(ObjectProperty(:LP_0000026))
 Declaration(ObjectProperty(:LP_0000029))
 Declaration(ObjectProperty(:LP_0000058))
-Declaration(ObjectProperty(:LP_0000060))
 Declaration(ObjectProperty(:LP_0000132))
 Declaration(ObjectProperty(:LP_0000141))
 Declaration(ObjectProperty(:LP_0000440))
 Declaration(ObjectProperty(:LP_0000483))
 Declaration(ObjectProperty(:LP_0000495))
 Declaration(ObjectProperty(:LP_0000537))
+Declaration(ObjectProperty(:LP_0000578))
 Declaration(ObjectProperty(:LP_0000580))
-Declaration(ObjectProperty(:LP_0000619))
 Declaration(ObjectProperty(:LP_0000626))
 Declaration(ObjectProperty(:LP_0000812))
 Declaration(ObjectProperty(:LP_0000833))
 Declaration(ObjectProperty(:LP_0000840))
-Declaration(ObjectProperty(:LP_0002168))
 Declaration(DataProperty(:LP_0000460))
 Declaration(DataProperty(:LP_0000463))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1000>))
@@ -307,12 +312,14 @@ Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#gndId
 AnnotationAssertion(rdfs:comment :LP_0000008 "should be BFO equivalent to \"has part\"")
 AnnotationAssertion(rdfs:label :LP_0000008 "has_part"@en)
 AnnotationAssertion(rdfs:label :LP_0000008 "hat_teil"@de)
-InverseObjectProperties(:LP_0000008 :LP_0002168)
+
+# Object Property: :LP_0000021 (ermöglicht Abschluss)
+
+AnnotationAssertion(rdfs:label :LP_0000021 "ermöglicht Abschluss"@de)
 
 # Object Property: :LP_0000026 (hat_jahrgangsstufe)
 
 AnnotationAssertion(rdfs:label :LP_0000026 "hat_jahrgangsstufe"@de)
-SubObjectPropertyOf(:LP_0000026 :LP_0000008)
 ObjectPropertyRange(:LP_0000026 :LP_0000009)
 
 # Object Property: :LP_0000029 (von_bundesland)
@@ -320,15 +327,10 @@ ObjectPropertyRange(:LP_0000026 :LP_0000009)
 AnnotationAssertion(rdfs:label :LP_0000029 "von_bundesland"@de)
 ObjectPropertyRange(:LP_0000029 :LP_0000040)
 
-# Object Property: :LP_0000058 (ermöglicht_abschluss)
+# Object Property: :LP_0000058 (endet mit Abschluss)
 
-AnnotationAssertion(rdfs:label :LP_0000058 "ermöglicht_abschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000058 "endet mit Abschluss"@de)
 ObjectPropertyRange(:LP_0000058 :LP_0000019)
-
-# Object Property: :LP_0000060 (benötigt_abschluss)
-
-AnnotationAssertion(rdfs:label :LP_0000060 "benötigt_abschluss"@de)
-ObjectPropertyRange(:LP_0000060 :LP_0000019)
 
 # Object Property: :LP_0000132 (hat_lerner_niveau)
 
@@ -380,14 +382,15 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 :lpe_2 :hat_schulfach :sf_1 ."@de)
 ObjectPropertyRange(:LP_0000537 ObjectUnionOf(:LP_0000001 :LP_0000540))
 
+# Object Property: :LP_0000578 (hat_niveau_stufe)
+
+AnnotationAssertion(rdfs:label :LP_0000578 "hat_niveau_stufe"@de)
+InverseObjectProperties(:LP_0000578 :LP_0000580)
+ObjectPropertyRange(:LP_0000578 :LP_0000443)
+
 # Object Property: :LP_0000580 (ist_niveau_stufe_von)
 
 AnnotationAssertion(rdfs:label :LP_0000580 "ist_niveau_stufe_von"@de)
-
-# Object Property: :LP_0000619 (für_schulstufe)
-
-AnnotationAssertion(rdfs:label :LP_0000619 "für_schulstufe"@de)
-ObjectPropertyRange(:LP_0000619 :LP_0000020)
 
 # Object Property: :LP_0000626 (has_key)
 
@@ -410,11 +413,6 @@ ObjectPropertyRange(:LP_0000833 ObjectUnionOf(:LP_0000265 :LP_0000831))
 AnnotationAssertion(rdfs:label :LP_0000840 "hat_fachniveau"@de)
 ObjectPropertyDomain(:LP_0000840 :LP_0000261)
 ObjectPropertyRange(:LP_0000840 ObjectUnionOf(:LP_0000265 :LP_0000831))
-
-# Object Property: :LP_0002168 (is_part_of)
-
-AnnotationAssertion(rdfs:comment :LP_0002168 "ist_teil_von"@de)
-AnnotationAssertion(rdfs:label :LP_0002168 "is_part_of"@en)
 
 
 ############################
@@ -465,6 +463,18 @@ SubClassOf(:LP_0000004 :LP_0000001)
 AnnotationAssertion(rdfs:label :LP_0000005 "Gesellschaftswissenschaftsfach"@de)
 SubClassOf(:LP_0000005 :LP_0000001)
 
+# Class: :LP_0000006 (Lehrprozess)
+
+AnnotationAssertion(rdfs:comment :LP_0000006 "A planned process in which different persons participate in role of teachers or students."@en)
+AnnotationAssertion(rdfs:comment :LP_0000006 "Teaching Process"@en)
+AnnotationAssertion(rdfs:label :LP_0000006 "Lehrprozess"@de)
+
+# Class: :LP_0000007 (Learning Process)
+
+AnnotationAssertion(rdfs:comment :LP_0000007 "A natural process that occurs in a person (bearer). It might be caused by a teaching process."@en)
+AnnotationAssertion(rdfs:label :LP_0000007 "Learning Process"@en)
+AnnotationAssertion(rdfs:label :LP_0000007 "Lernprozess"@de)
+
 # Class: :LP_0000009 (Jahrgangsstufe)
 
 AnnotationAssertion(rdfs:comment :LP_0000009 "A year group, also known as a class level, or school level in Austria and Switzerland, refers to all the classes or courses that start school in the same year or belong to the same learning stage."@en)
@@ -472,6 +482,22 @@ AnnotationAssertion(rdfs:comment :LP_0000009 "Eine Jahrgangsstufe, auch Klassens
 AnnotationAssertion(rdfs:comment :LP_0000009 "class level"@en)
 AnnotationAssertion(rdfs:label :LP_0000009 "Jahrgangsstufe"@de)
 AnnotationAssertion(rdfs:seeAlso :LP_0000009 <https://de.wikipedia.org/wiki/Jahrgangsstufe>)
+
+# Class: :LP_0000010 (Person)
+
+AnnotationAssertion(rdfs:label :LP_0000010 "Person"@de)
+
+# Class: :LP_0000011 (Lehrer Rolle)
+
+AnnotationAssertion(rdfs:label :LP_0000011 "Lehrer Rolle"@de)
+
+# Class: :LP_0000012 (Schüler Rolle)
+
+AnnotationAssertion(rdfs:label :LP_0000012 "Schüler Rolle"@de)
+
+# Class: :LP_0000013 (Kompetenz)
+
+AnnotationAssertion(rdfs:label :LP_0000013 "Kompetenz"@de)
 
 # Class: :LP_0000019 (Schulabschluss)
 
@@ -1610,13 +1636,13 @@ ClassAssertion(:LP_0000835 :LP_0000850)
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (Jahrgangsstufe 1)
+# Individual: :LP_2000001 (class level 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (Jahrgangsstufe 2)
+# Individual: :LP_2000002 (class level 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
@@ -1628,7 +1654,7 @@ AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
 ClassAssertion(:LP_0000009 :LP_2000003)
 
-# Individual: :LP_2000004 (Jahrgangsstufe 4)
+# Individual: :LP_2000004 (class level 4)
 
 AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
@@ -1652,7 +1678,7 @@ AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (Jahrgangsstufe 8)
+# Individual: :LP_2000008 (class level 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
@@ -1772,6 +1798,5 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_3000057 "
 DisjointClasses(:LP_0000001 :LP_0000009 :LP_0000020)
 DisjointClasses(:LP_0000001 :LP_0000019 :LP_0000040 :LP_0000111 :LP_0000130 :LP_0000261 :LP_0000438 :LP_0000478 :LP_0000540)
 DisjointClasses(:LP_0000002 :LP_0000004 :LP_0000005)
-SubObjectPropertyOf(ObjectPropertyChain(:LP_0000440 :LP_0000026) :LP_0000026)
 SubObjectPropertyOf(ObjectPropertyChain(:LP_0000537 :LP_0000537) :LP_0000537)
 )

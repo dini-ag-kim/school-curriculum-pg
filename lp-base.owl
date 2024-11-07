@@ -14,7 +14,7 @@
         <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0, https://w3id.org/lehrplan/ontology</dcterms:bibliographicCitation>
-        <dcterms:created>2024-11-05</dcterms:created>
+        <dcterms:created>2024-11-07</dcterms:created>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <dcterms:creator xml:lang="de">Almut Steinlein</dcterms:creator>
@@ -141,10 +141,66 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000117 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000117">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000176 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000176">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000295 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000295">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000008 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000008">
-        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002168"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
         <rdfs:comment>should be BFO equivalent to &quot;has part&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="en">has_part</rdfs:label>
@@ -153,15 +209,31 @@
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000021 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000021">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">ermöglicht Abschluss</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000024 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000024">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000026 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-        </owl:propertyChainAxiom>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_jahrgangsstufe</rdfs:label>
     </owl:ObjectProperty>
@@ -171,6 +243,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000029 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000029">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000040"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">von_bundesland</rdfs:label>
@@ -181,21 +254,10 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000058 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000058">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">ermöglicht_abschluss</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000060 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000060">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">benötigt_abschluss</rdfs:label>
+        <rdfs:label xml:lang="de">endet mit Abschluss</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -203,7 +265,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000132 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000132">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_lerner_niveau</rdfs:label>
     </owl:ObjectProperty>
@@ -213,8 +275,9 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000141 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000141">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">hat_kim_schulart</rdfs:label>
+        <rdfs:label xml:lang="de">entspricht_KIM_schulart</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -222,6 +285,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000440 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000438"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000811"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
@@ -233,6 +297,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000483 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000483">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000495"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000478"/>
@@ -246,7 +311,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000495 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000495">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">ist_funktion_von</rdfs:label>
     </owl:ObjectProperty>
@@ -256,6 +321,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000537 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000537">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -296,13 +362,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000578 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000580"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000572"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_niveau_stufe</rdfs:label>
-        <rdfs:label xml:lang="de">hat_niveau_stufe (BB)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -310,19 +374,9 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000580 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000580">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">ist_niveau_stufe_von</rdfs:label>
-        <rdfs:label xml:lang="de">ist_niveau_stufe_von (BB)</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000619 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000619">
-        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">für_schulstufe</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -330,7 +384,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000626 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000626">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">has_key</rdfs:label>
@@ -341,7 +394,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000812 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000812">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">für_schulart</rdfs:label>
@@ -352,7 +405,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000833 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000833">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
         <rdfs:range>
             <owl:Class>
@@ -371,6 +424,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000840 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:range>
             <owl:Class>
@@ -382,16 +436,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         </rdfs:range>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_fachniveau</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0002168 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0002168">
-        <rdfs:comment xml:lang="de">ist_teil_von</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="en">is_part_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -437,9 +481,82 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000001 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment xml:lang="de">In der Bildungsinstitution Schule ist Fach der Ausdruck für die thematische Gliederung dessen, was jeweils unter Bildung verstanden wird.</rdfs:comment>
         <rdfs:comment xml:lang="en">In the educational institution of school, subject is the term for the thematic structure of what is understood by education.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
@@ -499,9 +616,34 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:comment xml:lang="en">A planned process in which different persons participate in role of teachers or students.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Teaching Process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Lehrprozess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment xml:lang="en">A natural process that occurs in a person (bearer). It might be caused by a teaching process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">Learning Process</rdfs:label>
+        <rdfs:label xml:lang="de">Lernprozess</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000009 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment xml:lang="en">A year group, also known as a class level, or school level in Austria and Switzerland, refers to all the classes or courses that start school in the same year or belong to the same learning stage.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Jahrgangsstufe, auch Klassenstufe, in Österreich und der Schweiz Schulstufe, bezeichnet die Gesamtheit der Klassen oder Kurse, die im selben Jahr eingeschult wurden oder demselben Lernabschnitt zugehörig sind.</rdfs:comment>
         <rdfs:comment xml:lang="en">class level</rdfs:comment>
@@ -512,9 +654,50 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Lehrer Rolle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Schüler Rolle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Kompetenz</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000019 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Schulabschluss</rdfs:label>
         <skos:altLabel xml:lang="de">Bildungsgang</skos:altLabel>
@@ -525,6 +708,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000020 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:comment xml:lang="de">Spezifiziert eine Unterteilung der Jahrgangsstufen zur Beschreibung von Bildungsgängen und Schularten.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Schulstufe</rdfs:label>
@@ -580,6 +764,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <owl:disjointWith rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000811"/>
         <rdfs:comment xml:lang="en">Class of the designations of the German federal states whose ministries of education and cultural affairs are responsible for the curricula.</rdfs:comment>
         <rdfs:comment xml:lang="de">Klasse der Bezeichnungen der deutschen Bundesländer, deren Kultusministerien für die Lehrpläne zuständig ist.</rdfs:comment>
@@ -1087,6 +1272,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000111 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <rdfs:comment xml:lang="de">Beschreibt die Art und Weise wie eine Schule organisiert ist.</rdfs:comment>
         <rdfs:comment xml:lang="en">Describes the way a school is organized.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
@@ -1491,8 +1677,6 @@ Die Schulart Gymnasium gibt es in allen Bundesländern.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Gemeinschaftsschule Sek II (BE)</rdfs:label>
     </owl:Class>
     
 
@@ -1533,8 +1717,6 @@ Die Schulart Gymnasium gibt es in allen Bundesländern.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Integrierte Sekundarschule Sek II 11-13 (BE)</rdfs:label>
     </owl:Class>
     
 
@@ -1575,9 +1757,6 @@ Die Schulart Gymnasium gibt es in allen Bundesländern.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Integrierte Sekundarschule Sek II 11-12 (BE)</rdfs:label>
-        <skos:editorialNote>Frage: wie unterschiedet siech die integrierte sekundarschule mit 11-12 vopnd er mit 11-13 jahren? sind das die schnelllerner?</skos:editorialNote>
     </owl:Class>
     
 
@@ -1614,8 +1793,6 @@ Die Schulart Gymnasium gibt es in allen Bundesländern.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Gymnasium Sek II (BE)</rdfs:label>
     </owl:Class>
     
 
@@ -1661,6 +1838,7 @@ Die Schulart Gymnasium gibt es in allen Bundesländern.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000130 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000130">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Lerner Niveau</rdfs:label>
     </owl:Class>
@@ -1736,6 +1914,12 @@ Die Schulart Hauptschule gibt es in BW, HE, NI und NW.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Hauptschule</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000140"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000159"/>
+        <skos:editorialNote xml:lang="en">We define the equivalence explicitly. Because ODK requires: &quot;Only equivalent classes that have been asserted are allowed. Inferred equivalencies are forbidden.&quot;</skos:editorialNote>
+    </owl:Axiom>
     
 
 
@@ -1970,7 +2154,7 @@ Die Schulart Hauptschule gibt es in BW, HE, NI und NW.</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000269"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000127"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -4928,6 +5112,7 @@ Die Schulart Gesamtschule gibt es in BB und NW.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000261 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment xml:lang="de">Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibung verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Curriculares Element</rdfs:label>
@@ -5028,6 +5213,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000273 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000273">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000124"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000041"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -5080,6 +5272,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000275 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000275">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000022"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000042"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000813"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000814"/>
@@ -5143,6 +5342,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000276 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000276">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000125"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000042"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000813"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000814"/>
@@ -5206,6 +5412,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000277 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000277">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000023"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
         <rdfs:subClassOf>
@@ -5234,7 +5447,7 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000269"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000127"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -5248,6 +5461,13 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000278 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000278">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000126"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
         <rdfs:subClassOf>
@@ -5272,7 +5492,7 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000269"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000127"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -5286,13 +5506,6 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000283 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000283">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/ontology/LP_0000538"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000041"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -8819,6 +9032,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000438 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000438">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment xml:lang="en">Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="de">Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
@@ -8875,6 +9089,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000443 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Niveaustufe (BE/BB)</rdfs:label>
     </owl:Class>
@@ -9070,6 +9285,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000478 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000478">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000495"/>
@@ -9776,6 +9992,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000540 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000540">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000537"/>
@@ -9862,6 +10079,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
     <!-- https://w3id.org/lehrplan/ontology/LP_0000571 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000571">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:comment xml:lang="de">Bildungsstandard ist eine Spezifikation von fachlichen und fachübergreifenden Basisqualifikationen, die für die weitere schulische und berufliche Ausbildung von Bedeutung sind und die anschlussfähiges Lernen ermöglicht. Bildungsstandards ermöglichen den Schulen, ihren Unterricht an Standards zu orientieren.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Bildungsstandard (KMK)</rdfs:label>
@@ -9906,7 +10124,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                         <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000081"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -9927,16 +10145,16 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
+                        <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                                 <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000135"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                                 <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000231"/>
                             </owl:Restriction>
-                        </owl:intersectionOf>
+                        </owl:unionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
@@ -9955,14 +10173,18 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000136"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000232"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000136"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000232"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -9991,14 +10213,18 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000137"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000233"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000137"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000233"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -10017,7 +10243,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000234"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -10148,6 +10374,7 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000808 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000808">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Organisation</rdfs:label>
     </owl:Class>
@@ -10334,6 +10561,7 @@ Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium er
     <!-- https://w3id.org/lehrplan/ontology/LP_0000816 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:comment xml:lang="de">Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
 
 Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
@@ -18102,6 +18330,58 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000022 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000022">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000275"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Stadtteilschule Sek I (HH)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000023">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000277"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Stadtteilschule Sek II (HH)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000124 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000124">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000273"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000125 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000125">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000276"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000126 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000126">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000278"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000127 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000127">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000163"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000131 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000131">
@@ -18367,16 +18647,6 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000265"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Grundfach</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000269 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000269">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000163"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Allgemeinbildender Schulabschluss (HH)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19468,6 +19738,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 1</rdfs:label>
+        <rdfs:label xml:lang="en">class level 1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19478,6 +19749,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 2</rdfs:label>
+        <rdfs:label xml:lang="en">class level 2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19488,6 +19760,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 3</rdfs:label>
+        <rdfs:label xml:lang="en">class level 3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19498,6 +19771,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 4</rdfs:label>
+        <rdfs:label xml:lang="en">class level 4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19508,6 +19782,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 5</rdfs:label>
+        <rdfs:label xml:lang="en">class level 5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19518,6 +19793,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 6</rdfs:label>
+        <rdfs:label xml:lang="en">class level 6</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19528,6 +19804,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 7</rdfs:label>
+        <rdfs:label xml:lang="en">class level 7</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19538,6 +19815,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 8</rdfs:label>
+        <rdfs:label xml:lang="en">class level 8</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19548,6 +19826,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 9</rdfs:label>
+        <rdfs:label xml:lang="en">class level 9</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19558,6 +19837,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 10</rdfs:label>
+        <rdfs:label>class level 10</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19568,6 +19848,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 11</rdfs:label>
+        <rdfs:label xml:lang="en">class level 11</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19578,6 +19859,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 12</rdfs:label>
+        <rdfs:label xml:lang="en">class level 12</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19588,6 +19870,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 13</rdfs:label>
+        <rdfs:label xml:lang="en">class level 13</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -19752,11 +20035,35 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
     
 
 
-    <!-- https://w3id.org/ontology/LP_0000538 -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/ontology/LP_0000538">
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000124">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-    </owl:NamedIndividual>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Grundschule (HH)</rdfs:label>
+        <rdfs:label xml:lang="de">Gemeinschaftsschule Sek II (BE)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000125">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Gymnasium Sek I (HH)</rdfs:label>
+        <rdfs:label xml:lang="de">Integrierte Sekundarschule Sek II 11-13 (BE)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000126">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Gymnasium Sek II (HH)</rdfs:label>
+        <rdfs:label xml:lang="de">Integrierte Sekundarschule Sek II 11-12 (BE)</rdfs:label>
+        <skos:editorialNote>Frage: wie unterschiedet siech die integrierte sekundarschule mit 11-12 vopnd er mit 11-13 jahren? sind das die schnelllerner?</skos:editorialNote>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000127">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Allgemeinbildender Schulabschluss (HH)</rdfs:label>
+        <rdfs:label xml:lang="de">Gymnasium Sek II (BE)</rdfs:label>
+    </rdf:Description>
     
 
 

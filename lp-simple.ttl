@@ -1,5 +1,7 @@
 @prefix : <https://w3id.org/lehrplan/ontology/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gnd: <https://d-nb.info/standards/elementset/gnd#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,13 +9,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 @prefix ontology: <https://w3id.org/lehrplan/ontology/> .
 @base <https://w3id.org/lehrplan/ontology/> .
 
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
                                        owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0> ;
                                        terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2024-11-05" ;
+                                       terms:created "2024-11-07" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -30,6 +33,253 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://protege.stanford.edu/plugins/owl/protege#defaultLanguage
+protege:defaultLanguage rdf:type owl:AnnotationProperty ;
+                        rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000179
+obo:BFO_0000179 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification."@en ;
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "BFO OWL specification label"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000180
+obo:BFO_0000180 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg" ;
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "BFO CLIF specification label"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "editor preferred term"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "editor preferred term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "example of usage"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "example of usage"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+obo:IAO_0000114 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has curation status"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Bill Bug"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "has curation status"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "definition"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                obo:IAO_0000116 """2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  """@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "definition"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "editor note"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "editor note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000117
+obo:IAO_0000117 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "term editor"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people"@en ;
+                obo:IAO_0000116 "20110707, MC: label update to term editor and definition modified accordingly. See https://github.com/information-artifact-ontology/IAO/issues/115."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "term editor"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "alternative label"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like."@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ,
+                                "OBO Operations committee" ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:comment "Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related)." ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "alternative label"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "definition source"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "Formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en ;
+                obo:IAO_0000117 "PERSON:Daniel Schober"@en ;
+                obo:IAO_0000119 "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w"@en ,
+                                "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "definition source"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000232
+obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000233
+obo:IAO_0000233 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "term tracker item"@en ;
+                obo:IAO_0000112 "the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "An IRI or similar locator for a request or discussion of an ontology term."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                rdfs:comment "The 'tracker item' can associate a tracker with a specific ontology term."@en ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "term tracker item"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000234
+obo:IAO_0000234 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "ontology term requester"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "The name of the person, project, or organization that motivated inclusion of an ontology term by requesting its addition."@en ;
+                obo:IAO_0000117 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg"@en ;
+                rdfs:comment "The 'term requester' can credit the person, organization or project who request the ontology term." ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "ontology term requester"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+obo:IAO_0000412 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "imported from"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "For external terms/classes, the ontology from which the term was imported"@en ;
+                obo:IAO_0000117 "PERSON:Alan Ruttenberg"@en ,
+                                "PERSON:Melanie Courtot"@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "imported from"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000600
+obo:IAO_0000600 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "elucidation"@en ;
+                obo:IAO_0000117 "person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Barry Smith"@en ;
+                obo:IAO_0000600 "Primitive terms in a highest-level ontology such as BFO are terms which are so basic to our understanding of reality that there is no way of defining them in a non-circular fashion. For these, therefore, we can provide only elucidations, supplemented by examples and by axioms"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "elucidation"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000601
+obo:IAO_0000601 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has associated axiom(nl)"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "An axiom associated with a term expressed using natural language"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has associated axiom(nl)"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000602
+obo:IAO_0000602 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has associated axiom(fol)"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "An axiom expressed in first order logic using CLIF syntax"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has associated axiom(fol)"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0010000
+obo:IAO_0010000 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000111 "has axiom id"@en ;
+                obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
+                obo:IAO_0000600 "A URI that is intended to be unique label for an axiom used for tracking change to the ontology. For an axiom expressed in different languages, each expression is given the same URI"@en ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has axiom label"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001900
+obo:RO_0001900 rdf:type owl:AnnotationProperty ;
+               obo:IAO_0000115 "An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context." ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "temporal interpretation"@en .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty ;
+              rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty ;
+          rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty ;
+         rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
+
 
 ###  http://purl.org/dc/terms/bibliographicCitation
 terms:bibliographicCitation rdf:type owl:AnnotationProperty ;
@@ -126,9 +376,7 @@ skos:narrowMatch rdf:type owl:AnnotationProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty ;
-               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-               rdfs:label "skos:prefLabel" ;
-               rdfs:subPropertyOf rdfs:label .
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#related
@@ -159,28 +407,385 @@ gnd:gndIdentifier rdf:type owl:AnnotationProperty ;
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000054
+obo:BFO_0000054 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000055 ;
+                obo:IAO_0000111 "realized in"@en ;
+                obo:IAO_0000112 "this disease is realized in this disease course"@en ,
+                                "this fragility is realized in this shattering"@en ,
+                                "this investigator role is realized in this investigation"@en ;
+                obo:IAO_0000118 "is realized by"@en ,
+                                "realized_in"@en ;
+                obo:IAO_0000600 "[copied from inverse property 'realizes'] to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])"@en ;
+                dc:identifier "206-BFO" ;
+                rdfs:comment "Paraphrase of elucidation: a relation between a realizable entity and a process, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process" ;
+                rdfs:isDefinedBy obo:bfo.owl ;
+                rdfs:label "has realization"@en ,
+                           "realized in"@en ;
+                skos:altLabel "realized in"@en ;
+                skos:definition "b has realization c =Def c realizes b"@en ;
+                skos:example "As for realizes"@en ;
+                skos:prefLabel "has realization"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+obo:BFO_0000055 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000111 "realizes"@en ;
+                obo:IAO_0000112 "this disease course realizes this disease"@en ,
+                                "this investigation realizes this investigator role"@en ,
+                                "this shattering realizes this fragility"@en ;
+                obo:IAO_0000600 "to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])"@en ;
+                dc:identifier "059-BFO" ;
+                rdfs:comment "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process" ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "realizes"@en ;
+                skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en ;
+                skos:prefLabel "realizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000066
+obo:BFO_0000066 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000067 ;
+                obo:IAO_0000111 "occurs in"@en ;
+                obo:IAO_0000115 "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t"@en ;
+                obo:IAO_0000118 "occurs_in"@en ,
+                                "unfolds in"@en ,
+                                "unfolds_in"@en ;
+                dc:identifier "143-BFO" ;
+                rdfs:comment "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant" ;
+                rdfs:isDefinedBy obo:bfo.owl ;
+                rdfs:label "occurs in"@en ;
+                skos:definition "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en ;
+                skos:example "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en ;
+                skos:prefLabel "occurs in"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000067
+obo:BFO_0000067 rdf:type owl:ObjectProperty ;
+                obo:IAO_0000111 "site of"@en ;
+                obo:IAO_0000115 "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t"@en ;
+                rdfs:comment "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant" ;
+                rdfs:isDefinedBy obo:bfo.owl ;
+                rdfs:label "contains process"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+obo:BFO_0000117 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000132 ;
+                rdf:type owl:TransitiveProperty ;
+                dc:identifier "202-BFO" ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "has occurrent part"@en ;
+                skos:definition "b has occurrent part c =Def c occurrent part of b"@en ;
+                skos:example "Mary's life has occurrent part Mary's 5th birthday"@en ;
+                skos:prefLabel "has occurrent part"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+obo:BFO_0000132 rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                dc:identifier "003-BFO" ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "occurrent part of"@en ;
+                skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+                skos:example "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en ;
+                skos:prefLabel "occurrent part of"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+obo:BFO_0000176 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000178 ;
+                dc:identifier "221-BFO" ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "continuant part of"@en ;
+                skos:definition "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en ;
+                skos:example "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+                skos:prefLabel "continuant part of at some time"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+obo:BFO_0000178 rdf:type owl:ObjectProperty ;
+                dc:identifier "271-BFO" ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "has continuant part"@en ;
+                skos:definition "b has continuant part c =Def c continuant part of b"@en ;
+                skos:prefLabel "has continuant part at some time"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                owl:inverseOf ontology:LP_0000024 ;
+                obo:IAO_0000112 "This document is about information artifacts and their representations"@en ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                obo:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
+                obo:IAO_0000117 "person:Alan Ruttenberg"@en ;
+                obo:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "is about"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000293
+obo:OBI_0000293 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                obo:IAO_0000111 "has_specified_input"@en ,
+                                "has_specified_input" ;
+                obo:IAO_0000112 "see is_input_of example_of_usage"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The inverse property of is_specified_input_of"@en ;
+                obo:IAO_0000116 "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
+                                "PERSON: Bjoern Peters" ,
+                                "PERSON: Larry Hunter" ,
+                                "PERSON: Melanie Coutot" ;
+                obo:IAO_0000412 obo:obi.owl ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "has_specified_input"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000295
+obo:OBI_0000295 rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "is_specified_input_of"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000299
+obo:OBI_0000299 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                obo:IAO_0000111 "has_specified_output"@en ,
+                                "has_specified_output" ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The inverse property of is_specified_output_of"@en ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
+                                "PERSON: Bjoern Peters" ,
+                                "PERSON: Larry Hunter" ,
+                                "PERSON: Melanie Courtot" ;
+                obo:IAO_0000412 obo:obi.owl ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "has_specified_output"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000312
+obo:OBI_0000312 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                obo:IAO_0000111 "is_specified_output_of"@en ,
+                                "is_specified_output_of" ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+                obo:IAO_0000117 "Alan Ruttenberg"@en ,
+                                "PERSON:Bjoern Peters" ;
+                obo:IAO_0000412 obo:obi.owl ;
+                rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                rdfs:label "is_specified_output_of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000052
+obo:RO_0000052 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000053 ;
+               rdf:type owl:FunctionalProperty ;
+               obo:IAO_0000111 "inheres in"@en ;
+               obo:IAO_0000112 "this fragility is a characteristic of this vase"@en ,
+                               "this red color is a characteristic of this apple"@en ;
+               obo:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+               obo:IAO_0000118 "inheres_in"@en ;
+               obo:RO_0001900 obo:RO_0001901 ;
+               rdfs:comment "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing." ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "characteristic of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ,
+                        owl:InverseFunctionalProperty ;
+               obo:IAO_0000111 "bearer of"@en ;
+               obo:IAO_0000112 "this apple is bearer of this red color"@en ,
+                               "this vase is bearer of this fragility"@en ;
+               obo:IAO_0000115 "Inverse of characteristic_of"@en ;
+               obo:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+               obo:IAO_0000118 "bearer_of"@en ,
+                               "is bearer of"@en ;
+               obo:RO_0001900 obo:RO_0001901 ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "has characteristic"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000057 ;
+               obo:IAO_0000111 "participates in"@en ;
+               obo:IAO_0000112 "this blood clot participates in this blood coagulation"@en ,
+                               "this input material (or this output material) participates in this process"@en ,
+                               "this investigator participates in this investigation"@en ;
+               obo:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
+               obo:IAO_0000118 "participates_in"@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "participates in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000111 "has participant"@en ;
+               obo:IAO_0000112 "this blood coagulation has participant this blood clot"@en ,
+                               "this investigation has participant this investigator"@en ,
+                               "this process has participant this input material (or this output material)"@en ;
+               obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+               obo:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
+               obo:IAO_0000118 "has_participant"@en ;
+               dc:source "http://www.obofoundry.org/ro/#OBO_REL:has_participant" ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "has participant"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000058
+obo:RO_0000058 rdf:type owl:ObjectProperty ;
+               owl:inverseOf obo:RO_0000059 ;
+               obo:IAO_0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en ,
+                               "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en ;
+               obo:IAO_0000115 "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "is concretized as"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+obo:RO_0000059 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en ,
+                               "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en ;
+               obo:IAO_0000115 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "concretizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000079
+obo:RO_0000079 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000085 ;
+               obo:IAO_0000112 "this catalysis function is a function of this enzyme"@en ;
+               obo:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists."@en ;
+               obo:IAO_0000118 "function_of"@en ,
+                               "is function of"@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "function of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000080
+obo:RO_0000080 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000086 ;
+               obo:IAO_0000112 "this red color is a quality of this apple"@en ;
+               obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A quality inheres in its bearer at all times for which the quality exists."@en ;
+               obo:IAO_0000118 "is quality of"@en ,
+                               "quality_of"@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "quality of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000081
+obo:RO_0000081 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               owl:inverseOf obo:RO_0000087 ;
+               obo:IAO_0000112 "this investigator role is a role of this person"@en ;
+               obo:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
+               obo:IAO_0000118 "is role of"@en ,
+                               "role_of"@en ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "role of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+obo:RO_0000085 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
+               obo:IAO_0000118 "has_function"@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "has function"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this apple has quality this red color"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
+               obo:IAO_0000118 "has_quality"@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "has quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+obo:RO_0000087 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
+               obo:IAO_0000118 "has_role"@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "has role"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+obo:RO_0000091 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               owl:inverseOf obo:RO_0000092 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "has disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000092
+obo:RO_0000092 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000052 ;
+               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
+               rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+               rdfs:label "disposition of"@en .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000008
 ontology:LP_0000008 rdf:type owl:ObjectProperty ;
-                    owl:inverseOf ontology:LP_0002168 ;
+                    rdfs:subPropertyOf obo:BFO_0000176 ;
                     rdfs:comment "should be BFO equivalent to \"has part\"" ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "has_part"@en ,
                                "hat_teil"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000021
+ontology:LP_0000021 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:IAO_0000136 ;
+                    rdfs:range ontology:LP_0000019 ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "ermöglicht Abschluss"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000024
+ontology:LP_0000024 rdf:type owl:ObjectProperty ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "described by"@en .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000026
 ontology:LP_0000026 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf ontology:LP_0000008 ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:range ontology:LP_0000009 ;
-                    owl:propertyChainAxiom ( ontology:LP_0000440
-                                             ontology:LP_0000026
-                                           ) ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "hat_jahrgangsstufe"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000029
 ontology:LP_0000029 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:range ontology:LP_0000040 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "von_bundesland"@de .
@@ -188,32 +793,29 @@ ontology:LP_0000029 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000058
 ontology:LP_0000058 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:BFO_0000117 ;
                     rdfs:range ontology:LP_0000019 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "ermöglicht_abschluss"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000060
-ontology:LP_0000060 rdf:type owl:ObjectProperty ;
-                    rdfs:range ontology:LP_0000019 ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "benötigt_abschluss"@de .
+                    rdfs:label "endet mit Abschluss"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000132
 ontology:LP_0000132 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "hat_lerner_niveau"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000141
 ontology:LP_0000141 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "hat_kim_schulart"@de .
+                    rdfs:label "entspricht_KIM_schulart"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000440
 ontology:LP_0000440 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:OBI_0000295 ;
                     rdfs:domain ontology:LP_0000438 ;
                     rdfs:range ontology:LP_0000811 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
@@ -222,6 +824,7 @@ ontology:LP_0000440 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000483
 ontology:LP_0000483 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:RO_0000053 ;
                     owl:inverseOf ontology:LP_0000495 ;
                     rdfs:domain ontology:LP_0000261 ;
                     rdfs:range ontology:LP_0000478 ;
@@ -232,12 +835,14 @@ ontology:LP_0000483 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000495
 ontology:LP_0000495 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:RO_0000052 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "ist_funktion_von"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000537
 ontology:LP_0000537 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:range [ rdf:type owl:Class ;
                                  owl:unionOf ( ontology:LP_0000001
                                                ontology:LP_0000540
@@ -271,26 +876,18 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000578
 ontology:LP_0000578 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     owl:inverseOf ontology:LP_0000580 ;
-                    rdfs:domain ontology:LP_0000572 ;
                     rdfs:range ontology:LP_0000443 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "hat_niveau_stufe"@de ,
-                               "hat_niveau_stufe (BB)"@de .
+                    rdfs:label "hat_niveau_stufe"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000580
 ontology:LP_0000580 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:IAO_0000136 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "ist_niveau_stufe_von"@de ,
-                               "ist_niveau_stufe_von (BB)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000619
-ontology:LP_0000619 rdf:type owl:ObjectProperty ;
-                    rdfs:range ontology:LP_0000020 ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "für_schulstufe"@de .
+                    rdfs:label "ist_niveau_stufe_von"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000626
@@ -302,6 +899,7 @@ ontology:LP_0000626 rdf:type owl:ObjectProperty ,
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000812
 ontology:LP_0000812 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:BFO_0000055 ;
                     rdfs:range ontology:LP_0000111 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "für_schulart"@de .
@@ -309,6 +907,7 @@ ontology:LP_0000812 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000833
 ontology:LP_0000833 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:domain ontology:LP_0000816 ;
                     rdfs:range [ rdf:type owl:Class ;
                                  owl:unionOf ( ontology:LP_0000265
@@ -321,6 +920,7 @@ ontology:LP_0000833 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000840
 ontology:LP_0000840 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontology:LP_0000024 ;
                     rdfs:domain ontology:LP_0000261 ;
                     rdfs:range [ rdf:type owl:Class ;
                                  owl:unionOf ( ontology:LP_0000265
@@ -329,13 +929,6 @@ ontology:LP_0000840 rdf:type owl:ObjectProperty ;
                                ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "hat_fachniveau"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0002168
-ontology:LP_0002168 rdf:type owl:ObjectProperty ;
-                    rdfs:comment "ist_teil_von"@de ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "is_part_of"@en .
 
 
 #################################################################
@@ -396,6 +989,22 @@ ontology:LP_0000005 rdf:type owl:Class ;
                     rdfs:label "Gesellschaftswissenschaftsfach"@de .
 
 
+###  https://w3id.org/lehrplan/ontology/LP_0000006
+ontology:LP_0000006 rdf:type owl:Class ;
+                    rdfs:comment "A planned process in which different persons participate in role of teachers or students."@en ,
+                                 "Teaching Process"@en ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Lehrprozess"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000007
+ontology:LP_0000007 rdf:type owl:Class ;
+                    rdfs:comment "A natural process that occurs in a person (bearer). It might be caused by a teaching process."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Learning Process"@en ,
+                               "Lernprozess"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000009
 ontology:LP_0000009 rdf:type owl:Class ;
                     rdfs:comment "A year group, also known as a class level, or school level in Austria and Switzerland, refers to all the classes or courses that start school in the same year or belong to the same learning stage."@en ,
@@ -404,6 +1013,30 @@ ontology:LP_0000009 rdf:type owl:Class ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Jahrgangsstufe"@de ;
                     rdfs:seeAlso <https://de.wikipedia.org/wiki/Jahrgangsstufe> .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000010
+ontology:LP_0000010 rdf:type owl:Class ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Person"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000011
+ontology:LP_0000011 rdf:type owl:Class ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Lehrer Rolle"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000012
+ontology:LP_0000012 rdf:type owl:Class ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Schüler Rolle"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000013
+ontology:LP_0000013 rdf:type owl:Class ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Kompetenz"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000019
@@ -931,147 +1564,6 @@ ontology:LP_0000123 rdf:type owl:Class ;
                                     ] ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Gymnasium Sek I (BE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000124
-ontology:LP_0000124 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000043 ,
-                                    ontology:LP_0000815 ,
-                                    [ owl:intersectionOf ( ontology:LP_0000811
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000812 ;
-                                                             owl:someValuesFrom ontology:LP_0000112
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000011
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000012
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000013
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000029 ;
-                                                             owl:hasValue ontology:LP_3000048
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000133
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Gemeinschaftsschule Sek II (BE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000125
-ontology:LP_0000125 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000043 ,
-                                    ontology:LP_0000815 ,
-                                    [ owl:intersectionOf ( ontology:LP_0000811
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000812 ;
-                                                             owl:someValuesFrom ontology:LP_0000121
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000011
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000012
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000013
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000029 ;
-                                                             owl:hasValue ontology:LP_3000048
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000133
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Integrierte Sekundarschule Sek II 11-13 (BE)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000126
-ontology:LP_0000126 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000043 ,
-                                    ontology:LP_0000815 ,
-                                    [ owl:intersectionOf ( ontology:LP_0000811
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000812 ;
-                                                             owl:someValuesFrom ontology:LP_0000121
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000011
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000012
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000029 ;
-                                                             owl:hasValue ontology:LP_3000048
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000133
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000132 ;
-                                                             owl:hasValue ontology:LP_0000131
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Integrierte Sekundarschule Sek II 11-12 (BE)"@de ;
-                    skos:editorialNote "Frage: wie unterschiedet siech die integrierte sekundarschule mit 11-12 vopnd er mit 11-13 jahren? sind das die schnelllerner?" .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000127
-ontology:LP_0000127 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0000043 ,
-                                    ontology:LP_0000815 ,
-                                    [ owl:intersectionOf ( ontology:LP_0000811
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000812 ;
-                                                             owl:someValuesFrom ontology:LP_0000122
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000011
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000012
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000029 ;
-                                                             owl:hasValue ontology:LP_3000048
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000133
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Gymnasium Sek II (BE)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000128
@@ -3659,35 +4151,8 @@ ontology:LP_0000276 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000277
 ontology:LP_0000277 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000043 ,
-                                    ontology:LP_0000815 ,
-                                    [ owl:intersectionOf ( ontology:LP_0000811
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000812 ;
-                                                             owl:someValuesFrom ontology:LP_0000274
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000011
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000012
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000013
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000029 ;
-                                                             owl:hasValue ontology:LP_3000045
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000269
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
+                                    ontology:LP_0000811 ,
+                                    ontology:LP_0000815 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Stadtteilschule Sek II (HH)"@de .
 
@@ -3695,31 +4160,8 @@ ontology:LP_0000277 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000278
 ontology:LP_0000278 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0000043 ,
-                                    ontology:LP_0000815 ,
-                                    [ owl:intersectionOf ( ontology:LP_0000811
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000812 ;
-                                                             owl:someValuesFrom ontology:LP_0000122
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000011
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000026 ;
-                                                             owl:hasValue ontology:LP_2000012
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000029 ;
-                                                             owl:hasValue ontology:LP_3000045
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000269
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
+                                    ontology:LP_0000811 ,
+                                    ontology:LP_0000815 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Gymnasium Sek II (HH)"@de .
 
@@ -7221,7 +7663,7 @@ ontology:LP_0000572 rdf:type owl:Class ;
 ontology:LP_0000573 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000572
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
+                                                             owl:onProperty ontology:LP_0000021 ;
                                                              owl:someValuesFrom ontology:LP_0000081
                                                            ]
                                                          ) ;
@@ -7235,16 +7677,16 @@ ontology:LP_0000573 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000574
 ontology:LP_0000574 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000572
-                                                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty ontology:LP_0000058 ;
-                                                                                    owl:hasValue ontology:LP_0000135
-                                                                                  ]
-                                                                                  [ rdf:type owl:Restriction ;
-                                                                                    owl:onProperty ontology:LP_0000058 ;
-                                                                                    owl:hasValue ontology:LP_0000231
-                                                                                  ]
-                                                                                ) ;
-                                                             rdf:type owl:Class
+                                                           [ rdf:type owl:Class ;
+                                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty ontology:LP_0000021 ;
+                                                                             owl:hasValue ontology:LP_0000135
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty ontology:LP_0000021 ;
+                                                                             owl:hasValue ontology:LP_0000231
+                                                                           ]
+                                                                         )
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -7257,13 +7699,16 @@ ontology:LP_0000574 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000575
 ontology:LP_0000575 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000572
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000136
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000232
+                                                           [ rdf:type owl:Class ;
+                                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty ontology:LP_0000021 ;
+                                                                             owl:hasValue ontology:LP_0000136
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty ontology:LP_0000021 ;
+                                                                             owl:hasValue ontology:LP_0000232
+                                                                           ]
+                                                                         )
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -7276,13 +7721,16 @@ ontology:LP_0000575 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000576
 ontology:LP_0000576 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000572
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000137
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
-                                                             owl:hasValue ontology:LP_0000233
+                                                           [ rdf:type owl:Class ;
+                                                             owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty ontology:LP_0000021 ;
+                                                                             owl:hasValue ontology:LP_0000137
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty ontology:LP_0000021 ;
+                                                                             owl:hasValue ontology:LP_0000233
+                                                                           ]
+                                                                         )
                                                            ]
                                                          ) ;
                                       rdf:type owl:Class
@@ -7296,7 +7744,7 @@ ontology:LP_0000576 rdf:type owl:Class ;
 ontology:LP_0000577 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000572
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty ontology:LP_0000058 ;
+                                                             owl:onProperty ontology:LP_0000021 ;
                                                              owl:hasValue ontology:LP_0000234
                                                            ]
                                                          ) ;
@@ -12517,6 +12965,20 @@ ontology:LP_0030032 rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  https://w3id.org/lehrplan/ontology/LP_0000022
+ontology:LP_0000022 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000275 ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Bildungsgangabschnitt Stadtteilschule Sek I (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000023
+ontology:LP_0000023 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000277 ;
+                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
+                    rdfs:label "Bildungsgangabschnitt Stadtteilschule Sek II (HH)"@de .
+
+
 ###  https://w3id.org/lehrplan/ontology/LP_0000131
 ontology:LP_0000131 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000130 ;
@@ -12703,13 +13165,6 @@ ontology:LP_0000267 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000265 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
                     rdfs:label "Grundfach"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000269
-ontology:LP_0000269 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000163 ;
-                    rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Allgemeinbildender Schulabschluss (HH)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000270
@@ -13506,91 +13961,104 @@ ontology:LP_0002109 rdf:type owl:NamedIndividual ,
 ontology:LP_2000001 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 1"@de .
+                    rdfs:label "Jahrgangsstufe 1"@de ,
+                               "class level 1"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000002
 ontology:LP_2000002 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 2"@de .
+                    rdfs:label "Jahrgangsstufe 2"@de ,
+                               "class level 2"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000003
 ontology:LP_2000003 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 3"@de .
+                    rdfs:label "Jahrgangsstufe 3"@de ,
+                               "class level 3"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000004
 ontology:LP_2000004 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 4"@de .
+                    rdfs:label "Jahrgangsstufe 4"@de ,
+                               "class level 4"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000005
 ontology:LP_2000005 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 5"@de .
+                    rdfs:label "Jahrgangsstufe 5"@de ,
+                               "class level 5"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000006
 ontology:LP_2000006 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 6"@de .
+                    rdfs:label "Jahrgangsstufe 6"@de ,
+                               "class level 6"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000007
 ontology:LP_2000007 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 7"@de .
+                    rdfs:label "Jahrgangsstufe 7"@de ,
+                               "class level 7"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000008
 ontology:LP_2000008 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 8"@de .
+                    rdfs:label "Jahrgangsstufe 8"@de ,
+                               "class level 8"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000009
 ontology:LP_2000009 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 9"@de .
+                    rdfs:label "Jahrgangsstufe 9"@de ,
+                               "class level 9"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000010
 ontology:LP_2000010 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 10"@de .
+                    rdfs:label "Jahrgangsstufe 10"@de ,
+                               "class level 10" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000011
 ontology:LP_2000011 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 11"@de .
+                    rdfs:label "Jahrgangsstufe 11"@de ,
+                               "class level 11"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000012
 ontology:LP_2000012 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 12"@de .
+                    rdfs:label "Jahrgangsstufe 12"@de ,
+                               "class level 12"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000013
 ontology:LP_2000013 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000009 ;
                     rdfs:isDefinedBy <https://w3id.org/lehrplan/ontology/> ;
-                    rdfs:label "Jahrgangsstufe 13"@de .
+                    rdfs:label "Jahrgangsstufe 13"@de ,
+                               "class level 13"@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_3000031

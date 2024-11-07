@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/lehrplan/ontology/"
      xml:base="https://w3id.org/lehrplan/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gnd="https://d-nb.info/standards/elementset/gnd#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,11 +11,12 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
         <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0"/>
         <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2024-11-05</terms:created>
+        <terms:created>2024-11-07</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -38,6 +41,328 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://protege.stanford.edu/plugins/owl/protege#defaultLanguage -->
+
+    <owl:AnnotationProperty rdf:about="http://protege.stanford.edu/plugins/owl/protege#defaultLanguage">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000179 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000179">
+        <obo:IAO_0000115 xml:lang="en">Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification.</obo:IAO_0000115>
+        <obo:IAO_0000232 xml:lang="en">Really of interest to developers only</obo:IAO_0000232>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">BFO OWL specification label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000180 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000180">
+        <obo:IAO_0000115 xml:lang="en">Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2</obo:IAO_0000115>
+        <obo:IAO_0000119>Person:Alan Ruttenberg</obo:IAO_0000119>
+        <obo:IAO_0000232 xml:lang="en">Really of interest to developers only</obo:IAO_0000232>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">BFO CLIF specification label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111">
+        <obo:IAO_0000111 xml:lang="en">editor preferred term</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112">
+        <obo:IAO_0000111 xml:lang="en">example of usage</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A phrase describing how a term should be used and/or a citation to a work which uses it. May also include other kinds of examples that facilitate immediate understanding, such as widely know prototypes or instances of a class, or cases where a relation is said to hold.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">example of usage</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114">
+        <obo:IAO_0000111 xml:lang="en">has curation status</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Bill Bug</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Melanie Courtot</obo:IAO_0000117>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has curation status</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <obo:IAO_0000111 xml:lang="en">definition</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: &apos;Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions&apos;  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can&apos;t be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don&apos;t have definitions of &apos;meaning&apos; or &apos;expression&apos; or &apos;property&apos;. For &apos;reference&apos; in the intended sense I think we use the term &apos;denotation&apos;. For &apos;expression&apos;, I think we you mean symbol, or identifier. For &apos;meaning&apos; it differs for class and property. For class we want documentation that let&apos;s the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let&apos;s the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The &apos;intended reader&apos; part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  </obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116">
+        <obo:IAO_0000111 xml:lang="en">editor note</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obofoundry.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">editor note</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117">
+        <obo:IAO_0000111 xml:lang="en">term editor</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Name of editor entering the term in the file. The term editor is a point of contact for information regarding the term. The term editor may be, but is not always, the author of the definition, which may have been worked upon by several people</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">20110707, MC: label update to term editor and definition modified accordingly. See https://github.com/information-artifact-ontology/IAO/issues/115.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118">
+        <obo:IAO_0000111 xml:lang="en">alternative label</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like.</obo:IAO_0000115>
+        <obo:IAO_0000117>OBO Operations committee</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:comment>Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119">
+        <obo:IAO_0000111 xml:lang="en">definition source</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233">
+        <obo:IAO_0000111 xml:lang="en">term tracker item</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">the URI for an OBI Terms ticket at sourceforge, such as https://sourceforge.net/p/obi/obi-terms/772/</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">An IRI or similar locator for a request or discussion of an ontology term.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">The &apos;tracker item&apos; can associate a tracker with a specific ontology term.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">term tracker item</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000234 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000234">
+        <obo:IAO_0000111 xml:lang="en">ontology term requester</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">The name of the person, project, or organization that motivated inclusion of an ontology term by requesting its addition.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person: Jie Zheng, Chris Stoeckert, Alan Ruttenberg</obo:IAO_0000119>
+        <rdfs:comment>The &apos;term requester&apos; can credit the person, organization or project who request the ontology term.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">ontology term requester</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000412">
+        <obo:IAO_0000111 xml:lang="en">imported from</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">For external terms/classes, the ontology from which the term was imported</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600">
+        <obo:IAO_0000111 xml:lang="en">elucidation</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person:Barry Smith</obo:IAO_0000119>
+        <obo:IAO_0000600 xml:lang="en">Primitive terms in a highest-level ontology such as BFO are terms which are so basic to our understanding of reality that there is no way of defining them in a non-circular fashion. For these, therefore, we can provide only elucidations, supplemented by examples and by axioms</obo:IAO_0000600>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">elucidation</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000601 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000601">
+        <obo:IAO_0000111 xml:lang="en">has associated axiom(nl)</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
+        <obo:IAO_0000600 xml:lang="en">An axiom associated with a term expressed using natural language</obo:IAO_0000600>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">has associated axiom(nl)</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000602 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000602">
+        <obo:IAO_0000111 xml:lang="en">has associated axiom(fol)</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
+        <obo:IAO_0000600 xml:lang="en">An axiom expressed in first order logic using CLIF syntax</obo:IAO_0000600>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">has associated axiom(fol)</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0010000 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0010000">
+        <obo:IAO_0000111 xml:lang="en">has axiom id</obo:IAO_0000111>
+        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
+        <obo:IAO_0000600 xml:lang="en">A URI that is intended to be unique label for an axiom used for tracking change to the ontology. For an axiom expressed in different languages, each expression is given the same URI</obo:IAO_0000600>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">has axiom label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900">
+        <obo:IAO_0000115>An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">temporal interpretation</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -189,8 +514,6 @@
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label>skos:prefLabel</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
     
 
@@ -242,10 +565,436 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+        <obo:IAO_0000111 xml:lang="en">realized in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this disease is realized in this disease course</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this fragility is realized in this shattering</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigator role is realized in this investigation</obo:IAO_0000112>
+        <obo:IAO_0000118 xml:lang="en">is realized by</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">realized_in</obo:IAO_0000118>
+        <obo:IAO_0000600 xml:lang="en">[copied from inverse property &apos;realizes&apos;] to say that b realizes c at t is to assert that there is some material entity d &amp; b is a process which has participant d at t &amp; c is a disposition or role of which d is bearer_of at t&amp; the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])</obo:IAO_0000600>
+        <dc:identifier>206-BFO</dc:identifier>
+        <rdfs:comment>Paraphrase of elucidation: a relation between a realizable entity and a process, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">has realization</rdfs:label>
+        <rdfs:label xml:lang="en">realized in</rdfs:label>
+        <skos:altLabel xml:lang="en">realized in</skos:altLabel>
+        <skos:definition xml:lang="en">b has realization c =Def c realizes b</skos:definition>
+        <skos:example xml:lang="en">As for realizes</skos:example>
+        <skos:prefLabel xml:lang="en">has realization</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
+        <obo:IAO_0000111 xml:lang="en">realizes</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this disease course realizes this disease</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigation realizes this investigator role</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this shattering realizes this fragility</obo:IAO_0000112>
+        <obo:IAO_0000600 xml:lang="en">to say that b realizes c at t is to assert that there is some material entity d &amp; b is a process which has participant d at t &amp; c is a disposition or role of which d is bearer_of at t&amp; the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])</obo:IAO_0000600>
+        <dc:identifier>059-BFO</dc:identifier>
+        <rdfs:comment>Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">realizes</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
+        <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
+        <skos:prefLabel xml:lang="en">realizes</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
+        <obo:IAO_0000111 xml:lang="en">occurs in</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">b occurs_in c =def b is a process and c is a material entity or immaterial entity&amp; there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.&amp; forall(t) if b exists_at t then c exists_at t &amp; there exist spatial regions s and s’ where &amp; b spatially_projects_onto s at t&amp; c is occupies_spatial_region s’ at t&amp; s is a proper_continuant_part_of s’ at t</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">occurs_in</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">unfolds in</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
+        <dc:identifier>143-BFO</dc:identifier>
+        <rdfs:comment>Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">occurs in</rdfs:label>
+        <skos:definition xml:lang="en">b occurs in c =Def b is a process or a process boundary &amp; c is a material entity or site &amp; there exists a spatiotemporal region r &amp; b occupies spatiotemporal region r &amp; for all time t, if b exists at t then c exists at t &amp; there exist spatial regions s and s&apos; where b spatially projects onto s at t &amp; c occupies spatial region s&apos; at t &amp; s is a continuant part of s&apos; at t</skos:definition>
+        <skos:example xml:lang="en">A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank</skos:example>
+        <skos:prefLabel xml:lang="en">occurs in</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000067 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000067">
+        <obo:IAO_0000111 xml:lang="en">site of</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">[copied from inverse property &apos;occurs in&apos;] b occurs_in c =def b is a process and c is a material entity or immaterial entity&amp; there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.&amp; forall(t) if b exists_at t then c exists_at t &amp; there exist spatial regions s and s’ where &amp; b spatially_projects_onto s at t&amp; c is occupies_spatial_region s’ at t&amp; s is a proper_continuant_part_of s’ at t</obo:IAO_0000115>
+        <rdfs:comment>Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">contains process</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000117 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000117">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <dc:identifier>202-BFO</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has occurrent part</rdfs:label>
+        <skos:definition xml:lang="en">b has occurrent part c =Def c occurrent part of b</skos:definition>
+        <skos:example xml:lang="en">Mary&apos;s life has occurrent part Mary&apos;s 5th birthday</skos:example>
+        <skos:prefLabel xml:lang="en">has occurrent part</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000132 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000132">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <dc:identifier>003-BFO</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">occurrent part of</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c</skos:definition>
+        <skos:example xml:lang="en">Mary&apos;s 5th birthday is an occurrent part of Mary&apos;s life; the first set of the tennis match is an occurrent part of the tennis match</skos:example>
+        <skos:prefLabel xml:lang="en">occurrent part of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000176 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000176">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+        <dc:identifier>221-BFO</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">continuant part of</rdfs:label>
+        <skos:definition xml:lang="en">b continuant part of c =Def b and c are continuants &amp; there is some time t such that b and c exist at t &amp; b continuant part of c at t</skos:definition>
+        <skos:example xml:lang="en">Milk teeth continuant part of human; surgically removed tumour continuant part of organism</skos:example>
+        <skos:prefLabel xml:lang="en">continuant part of at some time</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000178 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178">
+        <dc:identifier>271-BFO</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has continuant part</rdfs:label>
+        <skos:definition xml:lang="en">b has continuant part c =Def c continuant part of b</skos:definition>
+        <skos:prefLabel xml:lang="en">has continuant part at some time</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
+        <obo:IAO_0000112 xml:lang="en">This document is about information artifacts and their representations</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of &quot;mentions&quot; relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <obo:IAO_0000111>has_specified_input</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">has_specified_input</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The inverse property of is_specified_input_of</obo:IAO_0000115>
+        <obo:IAO_0000116>8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how &apos;has participant&apos; works.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Melanie Coutot</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has_specified_input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000295 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000295">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">is_specified_input_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000299">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <obo:IAO_0000111>has_specified_output</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">has_specified_output</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The inverse property of is_specified_output_of</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has_specified_output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000312">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <obo:IAO_0000111>is_specified_output_of</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">is_specified_output_of</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
+        <obo:IAO_0000117>PERSON:Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">is_specified_output_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this apple is bearer of this red color</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this vase is bearer of this fragility</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">Inverse of characteristic_of</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <obo:IAO_0000111 xml:lang="en">participates in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this blood clot participates in this blood coagulation</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this input material (or this output material) participates in this process</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigator participates in this investigation</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a continuant and a process, in which the continuant is somehow involved in the process</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">participates_in</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
+        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigation has participant this investigator</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this process has participant this input material (or this output material)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
+        <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000058">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+        <obo:IAO_0000112 xml:lang="en">A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant).</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process).</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">is concretized as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000059">
+        <obo:IAO_0000112 xml:lang="en">A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant).</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process).</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">concretizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000079 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000079">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <obo:IAO_0000112 xml:lang="en">this catalysis function is a function of this enzyme</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">function_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is function of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">function of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <obo:IAO_0000112 xml:lang="en">this red color is a quality of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A quality inheres in its bearer at all times for which the quality exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is quality of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">quality_of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000081 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000081">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+        <obo:IAO_0000112 xml:lang="en">this investigator role is a role of this person</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is role of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">role_of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000085 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000085">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <obo:IAO_0000112 xml:lang="en">this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_function</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <obo:IAO_0000112 xml:lang="en">this person has role this investigator role (more colloquially: this person has this role of investigator)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_role</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000092"/>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">has disposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000092 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000092">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">disposition of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000008 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000008">
-        <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002168"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
         <rdfs:comment>should be BFO equivalent to &quot;has part&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="en">has_part</rdfs:label>
@@ -254,15 +1003,31 @@
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000021 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000021">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">ermöglicht Abschluss</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000024 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000024">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000026 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-        </owl:propertyChainAxiom>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_jahrgangsstufe</rdfs:label>
     </owl:ObjectProperty>
@@ -272,6 +1037,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000029 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000029">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000040"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">von_bundesland</rdfs:label>
@@ -282,19 +1048,10 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000058 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000058">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">ermöglicht_abschluss</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000060 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000060">
-        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000019"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">benötigt_abschluss</rdfs:label>
+        <rdfs:label xml:lang="de">endet mit Abschluss</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -302,6 +1059,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000132 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000132">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_lerner_niveau</rdfs:label>
     </owl:ObjectProperty>
@@ -311,8 +1069,9 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000141 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000141">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">hat_kim_schulart</rdfs:label>
+        <rdfs:label xml:lang="de">entspricht_KIM_schulart</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -320,6 +1079,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000440 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000438"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000811"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
@@ -331,6 +1091,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000483 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000483">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000495"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000478"/>
@@ -344,6 +1105,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000495 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000495">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">ist_funktion_von</rdfs:label>
     </owl:ObjectProperty>
@@ -353,6 +1115,7 @@
     <!-- https://w3id.org/lehrplan/ontology/LP_0000537 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000537">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -393,12 +1156,11 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000578 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000580"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000572"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_niveau_stufe</rdfs:label>
-        <rdfs:label xml:lang="de">hat_niveau_stufe (BB)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -406,19 +1168,9 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000580 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000580">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">ist_niveau_stufe_von</rdfs:label>
-        <rdfs:label xml:lang="de">ist_niveau_stufe_von (BB)</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000619 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000619">
-        <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">für_schulstufe</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -436,6 +1188,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000812 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000812">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">für_schulart</rdfs:label>
@@ -446,6 +1199,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000833 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000833">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
         <rdfs:range>
             <owl:Class>
@@ -464,6 +1218,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000840 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:range>
             <owl:Class>
@@ -475,16 +1230,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         </rdfs:range>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">hat_fachniveau</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0002168 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0002168">
-        <rdfs:comment xml:lang="de">ist_teil_von</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="en">is_part_of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -582,6 +1327,28 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000006 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000006">
+        <rdfs:comment xml:lang="en">A planned process in which different persons participate in role of teachers or students.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Teaching Process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Lehrprozess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000007 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000007">
+        <rdfs:comment xml:lang="en">A natural process that occurs in a person (bearer). It might be caused by a teaching process.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="en">Learning Process</rdfs:label>
+        <rdfs:label xml:lang="de">Lernprozess</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000009 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000009">
@@ -591,6 +1358,42 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://de.wikipedia.org/wiki/Jahrgangsstufe"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000010">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000011 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000011">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Lehrer Rolle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000012">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Schüler Rolle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000013 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000013">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Kompetenz</rdfs:label>
     </owl:Class>
     
 
@@ -1274,171 +2077,6 @@ Die Schulart Gymnasium gibt es in allen Bundesländern.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Gymnasium Sek I (BE)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000124 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000124">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000811"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000112"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000133"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Gemeinschaftsschule Sek II (BE)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000125 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000125">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000811"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000121"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000133"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Integrierte Sekundarschule Sek II 11-13 (BE)</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000126 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000126">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000811"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000121"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000133"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000132"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000131"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Integrierte Sekundarschule Sek II 11-12 (BE)</rdfs:label>
-        <skos:editorialNote>Frage: wie unterschiedet siech die integrierte sekundarschule mit 11-12 vopnd er mit 11-13 jahren? sind das die schnelllerner?</skos:editorialNote>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000127 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000127">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000811"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000122"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000133"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Gymnasium Sek II (BE)</rdfs:label>
     </owl:Class>
     
 
@@ -4615,38 +5253,8 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000277">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000811"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000811"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000274"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000269"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Stadtteilschule Sek II (HH)</rdfs:label>
     </owl:Class>
@@ -4657,34 +5265,8 @@ Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so 
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000278">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000811"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000815"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000811"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000122"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000026"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000269"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Gymnasium Sek II (HH)</rdfs:label>
     </owl:Class>
@@ -8865,7 +9447,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                         <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000081"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -8886,16 +9468,16 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
+                        <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                                 <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000135"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                                 <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000231"/>
                             </owl:Restriction>
-                        </owl:intersectionOf>
+                        </owl:unionOf>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
@@ -8914,14 +9496,18 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000136"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000232"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000136"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000232"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -8939,14 +9525,18 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000137"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000233"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000137"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000233"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -8965,7 +9555,7 @@ Die Schulart Sekundarschule gibt es in NW und ST.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000058"/>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000021"/>
                         <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000234"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -15871,6 +16461,26 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000022 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000022">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000275"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Stadtteilschule Sek I (HH)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000023 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000023">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000277"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
+        <rdfs:label xml:lang="de">Bildungsgangabschnitt Stadtteilschule Sek II (HH)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000131 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000131">
@@ -16136,16 +16746,6 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000265"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Grundfach</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000269 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000269">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000163"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
-        <rdfs:label xml:lang="de">Allgemeinbildender Schulabschluss (HH)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17237,6 +17837,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 1</rdfs:label>
+        <rdfs:label xml:lang="en">class level 1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17247,6 +17848,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 2</rdfs:label>
+        <rdfs:label xml:lang="en">class level 2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17257,6 +17859,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 3</rdfs:label>
+        <rdfs:label xml:lang="en">class level 3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17267,6 +17870,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 4</rdfs:label>
+        <rdfs:label xml:lang="en">class level 4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17277,6 +17881,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 5</rdfs:label>
+        <rdfs:label xml:lang="en">class level 5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17287,6 +17892,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 6</rdfs:label>
+        <rdfs:label xml:lang="en">class level 6</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17297,6 +17903,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 7</rdfs:label>
+        <rdfs:label xml:lang="en">class level 7</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17307,6 +17914,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 8</rdfs:label>
+        <rdfs:label xml:lang="en">class level 8</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17317,6 +17925,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 9</rdfs:label>
+        <rdfs:label xml:lang="en">class level 9</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17327,6 +17936,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 10</rdfs:label>
+        <rdfs:label>class level 10</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17337,6 +17947,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 11</rdfs:label>
+        <rdfs:label xml:lang="en">class level 11</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17347,6 +17958,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 12</rdfs:label>
+        <rdfs:label xml:lang="en">class level 12</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -17357,6 +17969,7 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: &quot;Zur Unter
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/lehrplan/ontology/"/>
         <rdfs:label xml:lang="de">Jahrgangsstufe 13</rdfs:label>
+        <rdfs:label xml:lang="en">class level 13</rdfs:label>
     </owl:NamedIndividual>
     
 

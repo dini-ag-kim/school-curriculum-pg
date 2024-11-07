@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                5bad613b7cd8b2a27ed5e2374c5ff7812512370861e4310a8c7dc2d40d68a57a
+CONFIG_HASH=                f0407dc537b4e6f24e6c36ce996cd5c0d872416e5e0b8a3f008ad18523d6058e
 
 
 # ----------------------------------------
@@ -54,7 +54,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/imports-edit.owl $(COMPONENTSDIR)/lehrplan-core.owl $(COMPONENTSDIR)/lehrplan-BE-BB-shared.owl $(COMPONENTSDIR)/lehrplan-BB.owl $(COMPONENTSDIR)/lehrplan-BW.owl $(COMPONENTSDIR)/lehrplan-HB.owl $(COMPONENTSDIR)/lehrplan-HH.owl $(COMPONENTSDIR)/lehrplan-NI.owl $(COMPONENTSDIR)/lehrplan-RP.owl $(COMPONENTSDIR)/lehrplan-SL.owl $(COMPONENTSDIR)/lehrplan-ST.owl $(COMPONENTSDIR)/lehrplan-BE.owl $(COMPONENTSDIR)/lehrplan-BY.owl $(COMPONENTSDIR)/lehrplan-HE.owl $(COMPONENTSDIR)/lehrplan-MV.owl $(COMPONENTSDIR)/lehrplan-NW.owl $(COMPONENTSDIR)/lehrplan-SH.owl $(COMPONENTSDIR)/lehrplan-SN.owl $(COMPONENTSDIR)/lehrplan-TH.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/imports-edit.owl $(COMPONENTSDIR)/bfo-edit.owl $(COMPONENTSDIR)/lehrplan-core.owl $(COMPONENTSDIR)/lehrplan-BE-BB-shared.owl $(COMPONENTSDIR)/lehrplan-BB.owl $(COMPONENTSDIR)/lehrplan-BW.owl $(COMPONENTSDIR)/lehrplan-HB.owl $(COMPONENTSDIR)/lehrplan-HH.owl $(COMPONENTSDIR)/lehrplan-NI.owl $(COMPONENTSDIR)/lehrplan-RP.owl $(COMPONENTSDIR)/lehrplan-SL.owl $(COMPONENTSDIR)/lehrplan-ST.owl $(COMPONENTSDIR)/lehrplan-BE.owl $(COMPONENTSDIR)/lehrplan-BY.owl $(COMPONENTSDIR)/lehrplan-HE.owl $(COMPONENTSDIR)/lehrplan-MV.owl $(COMPONENTSDIR)/lehrplan-NW.owl $(COMPONENTSDIR)/lehrplan-SH.owl $(COMPONENTSDIR)/lehrplan-SN.owl $(COMPONENTSDIR)/lehrplan-TH.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -427,6 +427,7 @@ no-mirror-recreate-%:
 $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 	test -f $@ || touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%.owl
+
 
 
 

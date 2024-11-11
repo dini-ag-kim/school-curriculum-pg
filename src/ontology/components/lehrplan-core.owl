@@ -143,6 +143,7 @@ Declaration(Class(:LP_0010005))
 Declaration(Class(:LP_0010006))
 Declaration(Class(:LP_0010007))
 Declaration(ObjectProperty(:LP_0000008))
+Declaration(ObjectProperty(:LP_0000015))
 Declaration(ObjectProperty(:LP_0000021))
 Declaration(ObjectProperty(:LP_0000026))
 Declaration(ObjectProperty(:LP_0000029))
@@ -307,11 +308,15 @@ Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#gndId
 #   Object Properties
 ############################
 
-# Object Property: :LP_0000008 (has_part)
+# Object Property: :LP_0000008 (hat_continuant_teil)
 
 AnnotationAssertion(rdfs:comment :LP_0000008 "should be BFO equivalent to \"has part\"")
-AnnotationAssertion(rdfs:label :LP_0000008 "has_part"@en)
-AnnotationAssertion(rdfs:label :LP_0000008 "hat_teil"@de)
+AnnotationAssertion(rdfs:label :LP_0000008 "has_continuant_part"@en)
+AnnotationAssertion(rdfs:label :LP_0000008 "hat_continuant_teil"@de)
+
+# Object Property: :LP_0000015 (hat_occurent_teil)
+
+AnnotationAssertion(rdfs:label :LP_0000015 "hat_occurent_teil"@de)
 
 # Object Property: :LP_0000021 (ermöglicht Abschluss)
 
@@ -1037,7 +1042,7 @@ AnnotationAssertion(rdfs:comment :LP_0000813 "Der Hauptschulbildungsgang bereite
 AnnotationAssertion(rdfs:comment :LP_0000813 "The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance."@en)
 AnnotationAssertion(rdfs:label :LP_0000813 "Hauptschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000813 "Hauptschule Track"@en)
-EquivalentClasses(:LP_0000813 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000058 :LP_0000079)))
+EquivalentClasses(:LP_0000813 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000015 :LP_0000062) ObjectSomeValuesFrom(:LP_0000015 :LP_0000064) ObjectSomeValuesFrom(:LP_0000058 :LP_0000079)))
 EquivalentClasses(:LP_0000813 ObjectIntersectionOf(:LP_0000816 ObjectHasValue(:LP_0000833 :LP_0000849)))
 SubClassOf(:LP_0000813 :LP_0000816)
 
@@ -1047,7 +1052,7 @@ AnnotationAssertion(rdfs:comment :LP_0000814 "Der Realschulbildungsgang vermitte
 AnnotationAssertion(rdfs:comment :LP_0000814 "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en)
 AnnotationAssertion(rdfs:label :LP_0000814 "Realschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000814 "Realschule Track"@en)
-EquivalentClasses(:LP_0000814 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000058 :LP_0000078)))
+EquivalentClasses(:LP_0000814 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000015 :LP_0000062) ObjectSomeValuesFrom(:LP_0000015 :LP_0000064) ObjectSomeValuesFrom(:LP_0000058 :LP_0000078)))
 EquivalentClasses(:LP_0000814 ObjectIntersectionOf(:LP_0000816 ObjectHasValue(:LP_0000833 :LP_0000848)))
 SubClassOf(:LP_0000814 :LP_0000816)
 
@@ -1059,7 +1064,7 @@ Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium er
 AnnotationAssertion(rdfs:comment :LP_0000815 "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
 AnnotationAssertion(rdfs:label :LP_0000815 "Gymnasialer Bildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000815 "Gymnasium Track"@en)
-EquivalentClasses(:LP_0000815 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000058 :LP_0000076)))
+EquivalentClasses(:LP_0000815 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000015 :LP_0000043) ObjectSomeValuesFrom(:LP_0000015 :LP_0000062) ObjectSomeValuesFrom(:LP_0000015 :LP_0000064) ObjectSomeValuesFrom(:LP_0000058 :LP_0000076)))
 EquivalentClasses(:LP_0000815 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000833 ObjectUnionOf(:LP_0000530 :LP_0000531 :LP_0000835))))
 SubClassOf(:LP_0000815 :LP_0000816)
 
@@ -1130,7 +1135,7 @@ SubClassOf(:LP_0000839 :LP_0000335)
 
 AnnotationAssertion(rdfs:label :LP_0000844 "CE-Niveauspezifikation"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000844 "Ist ein Informationselement, das die Verbindung herstellt zwischen Lehrplanelementen (z.B. Kompetenzen oder Inhalten) und einem Fachniveau (z.B. Leistungskurs, Hauptschulniveau, etc.) und einer oder mehrerer Jahrgangsstufen."@de)
-EquivalentClasses(:LP_0000844 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000008 :LP_0000009) ObjectSomeValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000265 :LP_0000831))))
+EquivalentClasses(:LP_0000844 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000265 :LP_0000831)) ObjectSomeValuesFrom(:LP_0000026 :LP_0000009)))
 EquivalentClasses(:LP_0000844 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000851)))
 
 # Class: :LP_0000845 (CE-Progressionsstufe)
@@ -1636,7 +1641,7 @@ ClassAssertion(:LP_0000835 :LP_0000850)
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (class level 1)
+# Individual: :LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
@@ -1648,13 +1653,13 @@ AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (Jahrgangsstufe 3)
+# Individual: :LP_2000003 (class level 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
 ClassAssertion(:LP_0000009 :LP_2000003)
 
-# Individual: :LP_2000004 (class level 4)
+# Individual: :LP_2000004 (Jahrgangsstufe 4)
 
 AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
@@ -1666,7 +1671,7 @@ AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (Jahrgangsstufe 6)
+# Individual: :LP_2000006 (class level 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
@@ -1684,7 +1689,7 @@ AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1702,7 +1707,7 @@ AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
 ClassAssertion(:LP_0000009 :LP_2000011)
 
-# Individual: :LP_2000012 (Jahrgangsstufe 12)
+# Individual: :LP_2000012 (class level 12)
 
 AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)

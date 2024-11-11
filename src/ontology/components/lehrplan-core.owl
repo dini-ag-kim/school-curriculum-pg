@@ -144,6 +144,7 @@ Declaration(Class(:LP_0010006))
 Declaration(Class(:LP_0010007))
 Declaration(ObjectProperty(:LP_0000008))
 Declaration(ObjectProperty(:LP_0000015))
+Declaration(ObjectProperty(:LP_0000017))
 Declaration(ObjectProperty(:LP_0000021))
 Declaration(ObjectProperty(:LP_0000026))
 Declaration(ObjectProperty(:LP_0000029))
@@ -318,6 +319,13 @@ AnnotationAssertion(rdfs:label :LP_0000008 "hat_continuant_teil"@de)
 
 AnnotationAssertion(rdfs:label :LP_0000015 "hat_occurent_teil"@de)
 
+# Object Property: :LP_0000017 (realisiert_lehrplan)
+
+AnnotationAssertion(rdfs:label :LP_0000017 "realisiert_lehrplan"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000017 "subproperty of stato:executes")
+ObjectPropertyDomain(:LP_0000017 ObjectUnionOf(:LP_0000006 :LP_0000811 :LP_0000816))
+ObjectPropertyRange(:LP_0000017 :LP_0000438)
+
 # Object Property: :LP_0000021 (ermöglicht Abschluss)
 
 AnnotationAssertion(rdfs:label :LP_0000021 "ermöglicht Abschluss"@de)
@@ -367,6 +375,7 @@ AnnotationAssertion(rdfs:label :LP_0000495 "ist_funktion_von"@de)
 
 AnnotationAssertion(rdfs:comment :LP_0000537 "Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem \"Bezug\" (z.B. Zweite-Fremdsprache) zuzuordnen."@de)
 AnnotationAssertion(rdfs:label :LP_0000537 "hat_schulfach"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000537 "wird üblicherweise am Lehrplan verwendet; kann ggf. auch an Kompetenzbereichen/Kompetenzspezifikation bzw. Themenbereichen/Themen verwendet werden, z.B. bei Lehrplänene die sich auf mehrere Fächer beziehen")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000537 "Gegeben sind:
 
 :sf_1 a :Schulfach .

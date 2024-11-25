@@ -12,6 +12,7 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 Ontology(<https://w3id.org/lehrplan/ontology/components/lehrplan-HB.owl>
 Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
 
+Declaration(Class(ontology:LP_0000036))
 Declaration(Class(ontology:LP_0000174))
 Declaration(Class(ontology:LP_0000188))
 Declaration(Class(ontology:LP_0000212))
@@ -59,6 +60,12 @@ Declaration(NamedIndividual(ontology:LP_0000248))
 ############################
 #   Classes
 ############################
+
+# Class: ontology:LP_0000036 (Gymnasialniveau Sek I (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000036 "Gymnasialniveau Sek I (HB)"@de)
+EquivalentClasses(ontology:LP_0000036 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
+SubClassOf(ontology:LP_0000036 ontology:LP_0001105)
 
 # Class: ontology:LP_0000174 (Allgemeine Hochschulreife (HB))
 
@@ -132,7 +139,7 @@ EquivalentClasses(ontology:LP_0000821 ObjectIntersectionOf(ontology:LP_0000438 O
 # Class: ontology:LP_0001105 (Fach Niveau Sek I (HB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001105 "Fach Niveau Sek I (HB)"@de)
-SubClassOf(ontology:LP_0001105 ontology:LP_0002118)
+SubClassOf(ontology:LP_0001105 ontology:LP_0000028)
 
 # Class: ontology:LP_0001106 (Grundlegendes Anforderungsniveau (HB))
 
@@ -143,7 +150,7 @@ SubClassOf(ontology:LP_0001106 ontology:LP_0001105)
 # Class: ontology:LP_0001107 (Erweitertes Anforderungsniveau (HB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001107 "Erweitertes Anforderungsniveau (HB)"@de)
-EquivalentClasses(ontology:LP_0001107 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+EquivalentClasses(ontology:LP_0001107 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
 SubClassOf(ontology:LP_0001107 ontology:LP_0001105)
 
 # Class: ontology:LP_0002118 (Element (HB))

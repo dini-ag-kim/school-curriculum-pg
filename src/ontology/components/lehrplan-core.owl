@@ -24,6 +24,7 @@ Declaration(Class(:LP_0000012))
 Declaration(Class(:LP_0000013))
 Declaration(Class(:LP_0000019))
 Declaration(Class(:LP_0000020))
+Declaration(Class(:LP_0000028))
 Declaration(Class(:LP_0000039))
 Declaration(Class(:LP_0000040))
 Declaration(Class(:LP_0000041))
@@ -364,7 +365,6 @@ ObjectPropertyRange(:LP_0000440 :LP_0000811)
 AnnotationAssertion(rdfs:label :LP_0000483 "hat_funktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0000483 "hat Funktionsspezifikation"@de)
 InverseObjectProperties(:LP_0000483 :LP_0000495)
-ObjectPropertyDomain(:LP_0000483 :LP_0000261)
 ObjectPropertyRange(:LP_0000483 :LP_0000478)
 
 # Object Property: :LP_0000495 (ist_funktion_von)
@@ -522,6 +522,11 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0000019 "
 
 AnnotationAssertion(rdfs:comment :LP_0000020 "Spezifiziert eine Unterteilung der Jahrgangsstufen zur Beschreibung von Bildungsgängen und Schularten."@de)
 AnnotationAssertion(rdfs:label :LP_0000020 "Schulstufe"@de)
+
+# Class: :LP_0000028 (Bildungsgangniveau)
+
+AnnotationAssertion(rdfs:label :LP_0000028 "Bildungsgangniveau"@de)
+EquivalentClasses(:LP_0000028 ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(:LP_0000483 :LP_0000335)))
 
 # Class: :LP_0000039 (BistaFach)
 
@@ -852,7 +857,6 @@ AnnotationAssertion(rdfs:label :LP_0000443 "Niveaustufe (BE/BB)"@de)
 # Class: :LP_0000478 (Funktionsspezifikation)
 
 AnnotationAssertion(rdfs:label :LP_0000478 "Funktionsspezifikation"@de)
-SubClassOf(:LP_0000478 ObjectSomeValuesFrom(:LP_0000495 :LP_0000261))
 
 # Class: :LP_0000479 (Kompetenzbeschreibungsfunktion)
 
@@ -1102,27 +1106,27 @@ SubClassOf(:LP_0000829 :LP_0000493)
 AnnotationAssertion(rdfs:label :LP_0000831 "CE-Fachniveau Sek I"@de)
 SubClassOf(:LP_0000831 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000335)))
 
-# Class: :LP_0000832 (CE-Realschulniveau)
+# Class: :LP_0000832 (Realschulniveau)
 
-AnnotationAssertion(rdfs:label :LP_0000832 "CE-Realschulniveau"@de)
-EquivalentClasses(:LP_0000832 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000838)))
+AnnotationAssertion(rdfs:label :LP_0000832 "Realschulniveau"@de)
+EquivalentClasses(:LP_0000832 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000838)))
 EquivalentClasses(:LP_0000832 ObjectOneOf(:LP_0000848))
-SubClassOf(:LP_0000832 :LP_0000831)
+SubClassOf(:LP_0000832 :LP_0000028)
 
-# Class: :LP_0000834 (CE-Hauptschulniveau)
+# Class: :LP_0000834 (Hauptschulniveau)
 
-AnnotationAssertion(rdfs:label :LP_0000834 "CE-Hauptschulniveau"@de)
-EquivalentClasses(:LP_0000834 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000839)))
+AnnotationAssertion(rdfs:label :LP_0000834 "Hauptschulniveau"@de)
+EquivalentClasses(:LP_0000834 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000839)))
 EquivalentClasses(:LP_0000834 ObjectOneOf(:LP_0000849))
-SubClassOf(:LP_0000834 :LP_0000831)
+SubClassOf(:LP_0000834 :LP_0000028)
 
-# Class: :LP_0000835 (CE-Gymnasialniveau)
+# Class: :LP_0000835 (Gymnasialniveau)
 
 AnnotationAssertion(rdfs:comment :LP_0000835 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de)
-AnnotationAssertion(rdfs:label :LP_0000835 "CE-Gymnasialniveau"@de)
-EquivalentClasses(:LP_0000835 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000837)))
+AnnotationAssertion(rdfs:label :LP_0000835 "Gymnasialniveau"@de)
+EquivalentClasses(:LP_0000835 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000837)))
 EquivalentClasses(:LP_0000835 ObjectOneOf(:LP_0000850))
-SubClassOf(:LP_0000835 :LP_0000831)
+SubClassOf(:LP_0000835 :LP_0000028)
 
 # Class: :LP_0000837 (Gymnasialniveaufunktion)
 
@@ -1656,7 +1660,7 @@ AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (class level 2)
+# Individual: :LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
@@ -1674,7 +1678,7 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (Jahrgangsstufe 5)
+# Individual: :LP_2000005 (class level 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
@@ -1686,7 +1690,7 @@ AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (Jahrgangsstufe 7)
+# Individual: :LP_2000007 (class level 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
@@ -1710,7 +1714,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
@@ -1722,7 +1726,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

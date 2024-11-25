@@ -251,9 +251,6 @@ Declaration(NamedIndividual(:LP_0000618))
 Declaration(NamedIndividual(:LP_0000803))
 Declaration(NamedIndividual(:LP_0000804))
 Declaration(NamedIndividual(:LP_0000805))
-Declaration(NamedIndividual(:LP_0000848))
-Declaration(NamedIndividual(:LP_0000849))
-Declaration(NamedIndividual(:LP_0000850))
 Declaration(NamedIndividual(:LP_0002068))
 Declaration(NamedIndividual(:LP_2000001))
 Declaration(NamedIndividual(:LP_2000002))
@@ -526,7 +523,6 @@ AnnotationAssertion(rdfs:label :LP_0000020 "Schulstufe"@de)
 # Class: :LP_0000028 (Bildungsgangniveau)
 
 AnnotationAssertion(rdfs:label :LP_0000028 "Bildungsgangniveau"@de)
-EquivalentClasses(:LP_0000028 ObjectIntersectionOf(owl:Thing ObjectSomeValuesFrom(:LP_0000483 :LP_0000335)))
 
 # Class: :LP_0000039 (BistaFach)
 
@@ -1056,7 +1052,7 @@ AnnotationAssertion(rdfs:comment :LP_0000813 "The Hauptschule track primarily pr
 AnnotationAssertion(rdfs:label :LP_0000813 "Hauptschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000813 "Hauptschule Track"@en)
 EquivalentClasses(:LP_0000813 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000015 :LP_0000062) ObjectSomeValuesFrom(:LP_0000015 :LP_0000064) ObjectSomeValuesFrom(:LP_0000058 :LP_0000079)))
-EquivalentClasses(:LP_0000813 ObjectIntersectionOf(:LP_0000816 ObjectHasValue(:LP_0000833 :LP_0000849)))
+EquivalentClasses(:LP_0000813 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000833 :LP_0000834)))
 SubClassOf(:LP_0000813 :LP_0000816)
 
 # Class: :LP_0000814 (Realschule Track)
@@ -1066,7 +1062,7 @@ AnnotationAssertion(rdfs:comment :LP_0000814 "The Realschule track provides a so
 AnnotationAssertion(rdfs:label :LP_0000814 "Realschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000814 "Realschule Track"@en)
 EquivalentClasses(:LP_0000814 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000015 :LP_0000062) ObjectSomeValuesFrom(:LP_0000015 :LP_0000064) ObjectSomeValuesFrom(:LP_0000058 :LP_0000078)))
-EquivalentClasses(:LP_0000814 ObjectIntersectionOf(:LP_0000816 ObjectHasValue(:LP_0000833 :LP_0000848)))
+EquivalentClasses(:LP_0000814 ObjectIntersectionOf(:LP_0000816 ObjectSomeValuesFrom(:LP_0000833 :LP_0000832)))
 SubClassOf(:LP_0000814 :LP_0000816)
 
 # Class: :LP_0000815 (Gymnasialer Bildungsgang)
@@ -1110,14 +1106,12 @@ SubClassOf(:LP_0000831 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP
 
 AnnotationAssertion(rdfs:label :LP_0000832 "Realschulniveau"@de)
 EquivalentClasses(:LP_0000832 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000838)))
-EquivalentClasses(:LP_0000832 ObjectOneOf(:LP_0000848))
 SubClassOf(:LP_0000832 :LP_0000028)
 
 # Class: :LP_0000834 (Hauptschulniveau)
 
 AnnotationAssertion(rdfs:label :LP_0000834 "Hauptschulniveau"@de)
 EquivalentClasses(:LP_0000834 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000839)))
-EquivalentClasses(:LP_0000834 ObjectOneOf(:LP_0000849))
 SubClassOf(:LP_0000834 :LP_0000028)
 
 # Class: :LP_0000835 (Gymnasialniveau)
@@ -1125,7 +1119,6 @@ SubClassOf(:LP_0000834 :LP_0000028)
 AnnotationAssertion(rdfs:comment :LP_0000835 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de)
 AnnotationAssertion(rdfs:label :LP_0000835 "Gymnasialniveau"@de)
 EquivalentClasses(:LP_0000835 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000837)))
-EquivalentClasses(:LP_0000835 ObjectOneOf(:LP_0000850))
 SubClassOf(:LP_0000835 :LP_0000028)
 
 # Class: :LP_0000837 (Gymnasialniveaufunktion)
@@ -1634,21 +1627,6 @@ ClassAssertion(:LP_0000802 :LP_0000804)
 
 AnnotationAssertion(rdfs:label :LP_0000805 "Anforderungsbereich 3: Reflexion und Problemlösung"@de)
 ClassAssertion(:LP_0000802 :LP_0000805)
-
-# Individual: :LP_0000848 (Realschulniveau)
-
-AnnotationAssertion(rdfs:label :LP_0000848 "Realschulniveau"@de)
-ClassAssertion(:LP_0000832 :LP_0000848)
-
-# Individual: :LP_0000849 (Hauptschulniveau)
-
-AnnotationAssertion(rdfs:label :LP_0000849 "Hauptschulniveau"@de)
-ClassAssertion(:LP_0000834 :LP_0000849)
-
-# Individual: :LP_0000850 (Gymnasialniveau)
-
-AnnotationAssertion(rdfs:label :LP_0000850 "Gymnasialniveau"@de)
-ClassAssertion(:LP_0000835 :LP_0000850)
 
 # Individual: :LP_0002068 (Vertiefungskurs)
 

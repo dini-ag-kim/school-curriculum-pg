@@ -49,6 +49,7 @@ Declaration(Class(ontology:LP_0002064))
 Declaration(Class(ontology:LP_0030001))
 Declaration(Class(ontology:LP_0030002))
 Declaration(Class(ontology:LP_0030003))
+Declaration(Class(ontology:LP_0030004))
 Declaration(NamedIndividual(ontology:LP_0000148))
 Declaration(NamedIndividual(ontology:LP_0000149))
 Declaration(NamedIndividual(ontology:LP_0000150))
@@ -165,10 +166,10 @@ SubClassOf(ontology:LP_0000511 ontology:LP_0002064)
 AnnotationAssertion(rdfs:label ontology:LP_0000806 "Bildungsplan (BW)"@de)
 EquivalentClasses(ontology:LP_0000806 ObjectIntersectionOf(ontology:LP_0000438 ObjectSomeValuesFrom(ontology:LP_0000008 ontology:LP_0002051) ObjectAllValuesFrom(ontology:LP_0000008 ontology:LP_0002051) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
 
-# Class: ontology:LP_0001101 (Fach Niveau Sek I (BW))
+# Class: ontology:LP_0001101 (Bildungsgangniveau (BW))
 
-AnnotationAssertion(rdfs:label ontology:LP_0001101 "Fach Niveau Sek I (BW)"@de)
-SubClassOf(ontology:LP_0001101 ontology:LP_0002051)
+AnnotationAssertion(rdfs:label ontology:LP_0001101 "Bildungsgangniveau (BW)"@de)
+SubClassOf(ontology:LP_0001101 ontology:LP_0000028)
 
 # Class: ontology:LP_0001102 (E Niveau (BW))
 
@@ -254,6 +255,12 @@ SubClassOf(ontology:LP_0030002 ObjectIntersectionOf(ontology:LP_0002051 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030003 "Themen (BW)"@de)
 SubClassOf(ontology:LP_0030003 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
+
+# Class: ontology:LP_0030004 (Gymnasialniveau Sek I (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030004 "Gymnasialniveau Sek I (BW)"@de)
+EquivalentClasses(ontology:LP_0030004 ObjectIntersectionOf(ontology:LP_0001101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
+SubClassOf(ontology:LP_0030004 ontology:LP_0001101)
 
 
 ############################

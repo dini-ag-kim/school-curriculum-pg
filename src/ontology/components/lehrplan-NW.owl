@@ -36,6 +36,12 @@ Declaration(Class(ontology:LP_0002188))
 Declaration(Class(ontology:LP_0002190))
 Declaration(Class(ontology:LP_0002191))
 Declaration(Class(ontology:LP_0002192))
+Declaration(Class(ontology:LP_0030001))
+Declaration(Class(ontology:LP_0030003))
+Declaration(Class(ontology:LP_0030004))
+Declaration(Class(ontology:LP_0030005))
+Declaration(Class(ontology:LP_0030006))
+Declaration(Class(ontology:LP_0030007))
 Declaration(NamedIndividual(ontology:LP_0000373))
 Declaration(NamedIndividual(ontology:LP_0000374))
 Declaration(NamedIndividual(ontology:LP_0000375))
@@ -174,6 +180,41 @@ SubClassOf(ontology:LP_0002191 ObjectIntersectionOf(ontology:LP_0002085 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0002192 "Inhaltlicher Schwerpunkt (NW)"@de)
 SubClassOf(ontology:LP_0002192 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030001 (Bildungsgangniveau (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030001 "Bildungsgangniveau (NW)"@de)
+SubClassOf(ontology:LP_0030001 ontology:LP_0000028)
+
+# Class: ontology:LP_0030003 (Niveau Mittlerer Schulabschluss (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030003 "Niveau Mittlerer Schulabschluss (NW)"@de)
+EquivalentClasses(ontology:LP_0030003 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+SubClassOf(ontology:LP_0030003 ontology:LP_0030001)
+
+# Class: ontology:LP_0030004 (Erweiterungskurs (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030004 "Erweiterungskurs (NW)"@de)
+EquivalentClasses(ontology:LP_0030004 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+SubClassOf(ontology:LP_0030004 ontology:LP_0030001)
+
+# Class: ontology:LP_0030005 (Haupschulniveau (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030005 "Haupschulniveau (NW)"@de)
+EquivalentClasses(ontology:LP_0030005 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
+SubClassOf(ontology:LP_0030005 ontology:LP_0030001)
+
+# Class: ontology:LP_0030006 (Realschulniveau (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030006 "Realschulniveau (NW)"@de)
+EquivalentClasses(ontology:LP_0030006 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+SubClassOf(ontology:LP_0030006 ontology:LP_0030001)
+
+# Class: ontology:LP_0030007 (Gymnasialniveau Sek I (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030007 "Gymnasialniveau Sek I (NW)"@de)
+EquivalentClasses(ontology:LP_0030007 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
+SubClassOf(ontology:LP_0030007 ontology:LP_0030001)
 
 
 ############################

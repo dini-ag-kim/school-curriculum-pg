@@ -40,6 +40,11 @@ Declaration(Class(ontology:LP_0002047))
 Declaration(Class(ontology:LP_0002048))
 Declaration(Class(ontology:LP_0002049))
 Declaration(Class(ontology:LP_0002050))
+Declaration(Class(ontology:LP_0030001))
+Declaration(Class(ontology:LP_0030002))
+Declaration(Class(ontology:LP_0030003))
+Declaration(Class(ontology:LP_0030004))
+Declaration(Class(ontology:LP_0030005))
 Declaration(NamedIndividual(ontology:LP_0000152))
 Declaration(NamedIndividual(ontology:LP_0000153))
 Declaration(NamedIndividual(ontology:LP_0000154))
@@ -203,6 +208,35 @@ SubClassOf(ontology:LP_0002049 ObjectIntersectionOf(ontology:LP_0000434 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0002050 "Inhalte zu den Kompetenzen (BY)"@de)
 SubClassOf(ontology:LP_0002050 ObjectIntersectionOf(ontology:LP_0000434 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030001 (Bildungsgangniveau (BY))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030001 "Bildungsgangniveau (BY)"@de)
+SubClassOf(ontology:LP_0030001 ontology:LP_0000028)
+
+# Class: ontology:LP_0030002 (Regelklasse (BY))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030002 "Regelklasse (BY)"@de)
+EquivalentClasses(ontology:LP_0030002 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
+SubClassOf(ontology:LP_0030002 ontology:LP_0030001)
+
+# Class: ontology:LP_0030003 (Mittlere-Reife-Klasse (BY))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030003 "Mittlere-Reife-Klasse (BY)"@de)
+EquivalentClasses(ontology:LP_0030003 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+SubClassOf(ontology:LP_0030003 ontology:LP_0030001)
+
+# Class: ontology:LP_0030004 (Gymnasialniveau Sek I (BY))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030004 "Gymnasialniveau Sek I (BY)"@de)
+EquivalentClasses(ontology:LP_0030004 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
+SubClassOf(ontology:LP_0030004 ontology:LP_0030001)
+
+# Class: ontology:LP_0030005 (Realschulniveau (BY))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030005 "Realschulniveau (BY)"@de)
+EquivalentClasses(ontology:LP_0030005 ObjectIntersectionOf(ontology:LP_0030001 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+SubClassOf(ontology:LP_0030005 ontology:LP_0030001)
 
 
 ############################

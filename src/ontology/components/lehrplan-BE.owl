@@ -47,6 +47,7 @@ Declaration(Class(ontology:LP_0030003))
 Declaration(Class(ontology:LP_0030004))
 Declaration(Class(ontology:LP_0030005))
 Declaration(Class(ontology:LP_0030006))
+Declaration(NamedIndividual(ontology:LP_0000131))
 Declaration(NamedIndividual(ontology:LP_0000133))
 Declaration(NamedIndividual(ontology:LP_0000135))
 Declaration(NamedIndividual(ontology:LP_0000136))
@@ -114,6 +115,7 @@ SubClassOf(ontology:LP_0000125 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0000126 "Integrierte Sekundarschule Sek II 11-12 (BE)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000126 "Frage: wie unterschiedet siech die integrierte sekundarschule mit 11-12 vopnd er mit 11-13 jahren? sind das die schnelllerner?")
+SubClassOf(ontology:LP_0000126 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000121) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000048) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000133) ObjectHasValue(ontology:LP_0000132 ontology:LP_0000131)))
 
 # Class: ontology:LP_0000127 (Gymnasium Sek II (BE))
 
@@ -124,6 +126,7 @@ SubClassOf(ontology:LP_0000127 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0000128 "Gymnasium Primar (BE)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000128 "Schnellerner ab Klasse 5"@de)
+SubClassOf(ontology:LP_0000128 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000048) ObjectHasValue(ontology:LP_0000132 ontology:LP_0000131)))
 
 # Class: ontology:LP_0001169 (Fach Niveau Sek II (BE))
 
@@ -275,6 +278,11 @@ SubClassOf(ontology:LP_0030006 ObjectIntersectionOf(ontology:LP_0001441 ObjectSo
 ############################
 #   Named Individuals
 ############################
+
+# Individual: ontology:LP_0000131 (Schnellerner (BE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000131 "Schnellerner (BE)"@de)
+ClassAssertion(ontology:LP_0000130 ontology:LP_0000131)
 
 # Individual: ontology:LP_0000133 (Allgemeinbildender Schulabschluss (BE))
 

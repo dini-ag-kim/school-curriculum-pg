@@ -54,6 +54,8 @@ Declaration(Class(ontology:LP_0002202))
 Declaration(NamedIndividual(ontology:LP_0000280))
 Declaration(NamedIndividual(ontology:LP_0000281))
 Declaration(NamedIndividual(ontology:LP_0000282))
+Declaration(NamedIndividual(ontology:LP_0000566))
+Declaration(NamedIndividual(ontology:LP_0000567))
 
 
 
@@ -87,10 +89,12 @@ SubClassOf(ontology:LP_0000283 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 # Class: ontology:LP_0000284 (Gymnasium G8 Einführung Sek I (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000284 "Gymnasium G8 Einführung Sek I (RP)"@de)
+SubClassOf(ontology:LP_0000284 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000046) ObjectHasValue(ontology:LP_0000132 ontology:LP_0000193)))
 
 # Class: ontology:LP_0000285 (Gymnasium G8 Sek II (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000285 "Gymnasium G8 Sek II (RP)"@de)
+SubClassOf(ontology:LP_0000285 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000046) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000280) ObjectHasValue(ontology:LP_0000132 ontology:LP_0000193)))
 
 # Class: ontology:LP_0000286 (Gymnasium G9 Sek II (RP))
 
@@ -294,6 +298,16 @@ ClassAssertion(ontology:LP_0000204 ontology:LP_0000281)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000282 "Berufsreife (RP)"@de)
 ClassAssertion(ontology:LP_0000180 ontology:LP_0000282)
+
+# Individual: ontology:LP_0000566 (A-Kurs (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000566 "A-Kurs (RP)"@de)
+ClassAssertion(ontology:LP_0000130 ontology:LP_0000566)
+
+# Individual: ontology:LP_0000567 (B-Kurs (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000567 "B-Kurs (RP)"@de)
+ClassAssertion(ontology:LP_0000130 ontology:LP_0000567)
 
 
 )

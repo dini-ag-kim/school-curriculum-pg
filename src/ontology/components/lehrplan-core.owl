@@ -33,6 +33,8 @@ Declaration(Class(:LP_0000042))
 Declaration(Class(:LP_0000043))
 Declaration(Class(:LP_0000053))
 Declaration(Class(:LP_0000054))
+Declaration(Class(:LP_0000056))
+Declaration(Class(:LP_0000057))
 Declaration(Class(:LP_0000061))
 Declaration(Class(:LP_0000062))
 Declaration(Class(:LP_0000063))
@@ -565,6 +567,16 @@ AnnotationAssertion(rdfs:label :LP_0000054 "Ohne-Berlin-Brandenburg"@de)
 EquivalentClasses(:LP_0000054 ObjectOneOf(:LP_3000031 :LP_3000043 :LP_3000044 :LP_3000045 :LP_3000046 :LP_3000047 :LP_3000049 :LP_3000050 :LP_3000051 :LP_3000052 :LP_3000053 :LP_3000054 :LP_3000055 :LP_3000056))
 SubClassOf(:LP_0000054 :LP_0000040)
 
+# Class: :LP_0000056 (Einführungsphase)
+
+AnnotationAssertion(rdfs:label :LP_0000056 "Einführungsphase"@de)
+SubClassOf(:LP_0000056 :LP_0000341)
+
+# Class: :LP_0000057 (Qualifikationsphase)
+
+AnnotationAssertion(rdfs:label :LP_0000057 "Qualifikationsphase"@de)
+SubClassOf(:LP_0000057 :LP_0000341)
+
 # Class: :LP_0000061 (Primarbereich BE/BB)
 
 AnnotationAssertion(rdfs:label :LP_0000061 "Primarbereich BE/BB"@de)
@@ -805,12 +817,7 @@ AnnotationAssertion(rdfs:label :LP_0000341 "Gymnasiale Oberstufe"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000341 "Axiom entfernt: 
 
 equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulreife')")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000341 "Was genau heisst \"sie umfasst\" die Sek II?
-
-sollten wir nicht auch das folgende Axiom mit hinzufügen?
-
-hat_jahrgangsstufe some ({'Jahrgangsstufe 11' , 'Jahrgangsstufe 12' , 'Jahrgangsstufe 13'})"@de)
-SubClassOf(:LP_0000341 :LP_0000020)
+SubClassOf(:LP_0000341 :LP_0000043)
 
 # Class: :LP_0000365 (Orientierungsstufe)
 
@@ -1605,7 +1612,7 @@ AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (Jahrgangsstufe 3)
+# Individual: :LP_2000003 (class level 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
@@ -1623,13 +1630,13 @@ AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (Jahrgangsstufe 6)
+# Individual: :LP_2000006 (class level 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (Jahrgangsstufe 7)
+# Individual: :LP_2000007 (class level 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
@@ -1641,7 +1648,7 @@ AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1659,13 +1666,13 @@ AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
 ClassAssertion(:LP_0000009 :LP_2000011)
 
-# Individual: :LP_2000012 (Jahrgangsstufe 12)
+# Individual: :LP_2000012 (class level 12)
 
 AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (class level 13)
+# Individual: :LP_2000013 (Jahrgangsstufe 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

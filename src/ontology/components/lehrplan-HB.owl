@@ -50,6 +50,7 @@ Declaration(Class(ontology:LP_0002135))
 Declaration(Class(ontology:LP_0002154))
 Declaration(Class(ontology:LP_0002172))
 Declaration(Class(ontology:LP_0002193))
+Declaration(Class(ontology:LP_0030038))
 Declaration(NamedIndividual(ontology:LP_0000245))
 Declaration(NamedIndividual(ontology:LP_0000246))
 Declaration(NamedIndividual(ontology:LP_0000247))
@@ -64,8 +65,7 @@ Declaration(NamedIndividual(ontology:LP_0000248))
 # Class: ontology:LP_0000036 (Gymnasialniveau Sek I (HB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000036 "Gymnasialniveau Sek I (HB)"@de)
-EquivalentClasses(ontology:LP_0000036 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
-SubClassOf(ontology:LP_0000036 ontology:LP_0001105)
+SubClassOf(ontology:LP_0000036 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
 
 # Class: ontology:LP_0000174 (Allgemeine Hochschulreife (HB))
 
@@ -144,14 +144,14 @@ SubClassOf(ontology:LP_0001105 ontology:LP_0000028)
 # Class: ontology:LP_0001106 (Grundlegendes Anforderungsniveau (HB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001106 "Grundlegendes Anforderungsniveau (HB)"@de)
-EquivalentClasses(ontology:LP_0001106 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-SubClassOf(ontology:LP_0001106 ontology:LP_0001105)
+AnnotationAssertion(skos:editorialNote ontology:LP_0001106 "gilt für die Jahrgangsstufen 7-9")
+SubClassOf(ontology:LP_0001106 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
 
 # Class: ontology:LP_0001107 (Erweitertes Anforderungsniveau (HB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001107 "Erweitertes Anforderungsniveau (HB)"@de)
-EquivalentClasses(ontology:LP_0001107 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-SubClassOf(ontology:LP_0001107 ontology:LP_0001105)
+AnnotationAssertion(skos:editorialNote ontology:LP_0001107 "gilt für die Jahrgangsstufen 7-10")
+SubClassOf(ontology:LP_0001107 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
 
 # Class: ontology:LP_0002118 (Element (HB))
 
@@ -273,6 +273,12 @@ SubClassOf(ontology:LP_0002172 ontology:LP_0002118)
 AnnotationAssertion(rdfs:label ontology:LP_0002193 "Sachgebiet (HB)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002193 "in Mathe Sek II")
 SubClassOf(ontology:LP_0002193 ObjectIntersectionOf(ontology:LP_0002118 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
+
+# Class: ontology:LP_0030038 (Oberschulniveau (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030038 "Oberschulniveau (HB)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030038 "gilt für die Jahrgangsstufen 5-6")
+SubClassOf(ontology:LP_0030038 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
 
 
 ############################

@@ -24,7 +24,6 @@ Declaration(Class(ontology:LP_0002040))
 Declaration(Class(ontology:LP_0002041))
 Declaration(Class(ontology:LP_0002042))
 Declaration(Class(ontology:LP_0002103))
-Declaration(Class(ontology:LP_0030002))
 Declaration(Class(ontology:LP_0030008))
 Declaration(Class(ontology:LP_0030010))
 Declaration(Class(ontology:LP_0030011))
@@ -40,6 +39,7 @@ Declaration(Class(ontology:LP_0030020))
 Declaration(Class(ontology:LP_0030021))
 Declaration(Class(ontology:LP_0030022))
 Declaration(Class(ontology:LP_0030023))
+Declaration(Class(ontology:LP_0030033))
 Declaration(NamedIndividual(ontology:LP_0002033))
 Declaration(NamedIndividual(ontology:LP_0002034))
 Declaration(NamedIndividual(ontology:LP_0002035))
@@ -113,11 +113,6 @@ SubClassOf(ontology:LP_0002042 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 AnnotationAssertion(rdfs:comment ontology:LP_0002103 "Lehrplan Element bezogen auf den Lehrplan von Schleswig-Holstein")
 AnnotationAssertion(rdfs:label ontology:LP_0002103 "Element (SH)"@de)
 EquivalentClasses(ontology:LP_0002103 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000054)))
-
-# Class: ontology:LP_0030002 (Standard (BW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030002 "Lehrplanfragment (SH)"@de)
-SubClassOf(ontology:LP_0030002 ObjectIntersectionOf(ontology:LP_0002103 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000627)))
 
 # Class: ontology:LP_0030008 (Kompetenzbereich (SH))
 
@@ -194,6 +189,11 @@ SubClassOf(ontology:LP_0030022 ObjectIntersectionOf(ontology:LP_0002103 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030023 "Themenvorschlag (SH)"@de)
 SubClassOf(ontology:LP_0030023 ObjectIntersectionOf(ontology:LP_0002103 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030033 (Lehrplanfragment (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030033 "Lehrplanfragment (SH)"@de)
+SubClassOf(ontology:LP_0030033 ObjectIntersectionOf(ontology:LP_0002103 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000627)))
 
 
 ############################

@@ -42,15 +42,16 @@ Declaration(Class(ontology:LP_0001021))
 Declaration(Class(ontology:LP_0001022))
 Declaration(Class(ontology:LP_0001023))
 Declaration(Class(ontology:LP_0001024))
-Declaration(Class(ontology:LP_0002194))
 Declaration(Class(ontology:LP_0002195))
 Declaration(Class(ontology:LP_0002196))
 Declaration(Class(ontology:LP_0002197))
 Declaration(Class(ontology:LP_0002198))
-Declaration(Class(ontology:LP_0002199))
 Declaration(Class(ontology:LP_0002200))
 Declaration(Class(ontology:LP_0002201))
 Declaration(Class(ontology:LP_0002202))
+Declaration(Class(ontology:LP_0030034))
+Declaration(Class(ontology:LP_0030035))
+Declaration(Class(ontology:LP_0030036))
 Declaration(NamedIndividual(ontology:LP_0000280))
 Declaration(NamedIndividual(ontology:LP_0000281))
 Declaration(NamedIndividual(ontology:LP_0000282))
@@ -122,7 +123,8 @@ SubClassOf(ontology:LP_0000290 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 # Class: ontology:LP_0000328 (Thema (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000328 "Thema (RP)"@de)
-SubClassOf(ontology:LP_0000328 ontology:LP_0000342)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000328 "in Mathematik Sek II")
+SubClassOf(ontology:LP_0000328 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
 
 # Class: ontology:LP_0000342 (Element (RP))
 
@@ -140,9 +142,9 @@ SubClassOf(ontology:LP_0000345 ontology:LP_0000328)
 AnnotationAssertion(rdfs:label ontology:LP_0000346 "Erläuterung (RP)"@de)
 SubClassOf(ontology:LP_0000346 ontology:LP_0000342)
 
-# Class: ontology:LP_0000347 (Fachspezifische Allgemeine Lernziele (RP))
+# Class: ontology:LP_0000347 (Fachspezifisches Allgemeines Lernziel (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0000347 "Fachspezifische Allgemeine Lernziele (RP)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000347 "Fachspezifisches Allgemeines Lernziel (RP)"@de)
 SubClassOf(ontology:LP_0000347 ontology:LP_0000342)
 
 # Class: ontology:LP_0000350 (Lernziel (RP))
@@ -189,10 +191,10 @@ EquivalentClasses(ontology:LP_0000433 ObjectIntersectionOf(ontology:LP_0000438 O
 AnnotationAssertion(rdfs:label ontology:LP_0001018 "Fach Niveau Sek II (RP)"@de)
 SubClassOf(ontology:LP_0001018 ontology:LP_0000342)
 
-# Class: ontology:LP_0001019 (Fach Niveau Sek I (RP))
+# Class: ontology:LP_0001019 (Bildungsgangniveau (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0001019 "Fach Niveau Sek I (RP)"@de)
-SubClassOf(ontology:LP_0001019 ontology:LP_0000342)
+AnnotationAssertion(rdfs:label ontology:LP_0001019 "Bildungsgangniveau (RP)"@de)
+SubClassOf(ontology:LP_0001019 ontology:LP_0000028)
 
 # Class: ontology:LP_0001020 (Grundkurs (RP))
 
@@ -224,11 +226,6 @@ AnnotationAssertion(rdfs:label ontology:LP_0001024 "Erhöhtes Kompetenzniveau (R
 EquivalentClasses(ontology:LP_0001024 ObjectIntersectionOf(ontology:LP_0001019 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
 SubClassOf(ontology:LP_0001024 ontology:LP_0001019)
 
-# Class: ontology:LP_0002194 (Teilkompetenzbereich (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002194 "Teilkompetenzbereich (RP)"@de)
-SubClassOf(ontology:LP_0002194 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
-
 # Class: ontology:LP_0002195 (Inhalte zum Erwerb der Kompetenzen (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002195 "Inhalte zum Erwerb der Kompetenzen (RP)"@de)
@@ -241,23 +238,18 @@ AnnotationAssertion(rdfs:label ontology:LP_0002196 "Leitidee (RP)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002196 "nur in Mathematik (s. Bistas)")
 SubClassOf(ontology:LP_0002196 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
 
-# Class: ontology:LP_0002197 (Inhalte (RP))
+# Class: ontology:LP_0002197 (Inhalt (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002197 "Inhalte (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002197 "in Mathematik Sek I")
-SubClassOf(ontology:LP_0002197 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+AnnotationAssertion(rdfs:label ontology:LP_0002197 "Inhalt (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002197 "in Mathematik Sek I (Lernbeschreibungsfunktion) 
+in Englisch Grundschule (Kompetenzspezifikationsfunktion)")
+SubClassOf(ontology:LP_0002197 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
 # Class: ontology:LP_0002198 (Hinweise und Vernetzung (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002198 "Hinweise und Vernetzung (RP)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002198 "in Mathematik Sek I")
 SubClassOf(ontology:LP_0002198 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
-
-# Class: ontology:LP_0002199 (Themen (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002199 "Themen (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002199 "in Mathematik Sek II")
-SubClassOf(ontology:LP_0002199 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
 
 # Class: ontology:LP_0002200 (Ziele / Inhalte (Sach- und Methodenkompetenz) (RP))
 
@@ -276,6 +268,21 @@ SubClassOf(ontology:LP_0002201 ontology:LP_0000342)
 AnnotationAssertion(rdfs:label ontology:LP_0002202 "Kernbereich (RP)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002202 "in Deutsch Sek I")
 SubClassOf(ontology:LP_0002202 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+
+# Class: ontology:LP_0030034 (Thematischer Leitgedanke (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030034 "Thematischer Leitgedanke (RP)"@de)
+SubClassOf(ontology:LP_0030034 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030035 (Lernbereich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030035 "Lernbereich (RP)"@de)
+SubClassOf(ontology:LP_0030035 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030036 (Fähigkeit (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030036 "Fähigkeit (RP)"@de)
+SubClassOf(ontology:LP_0030036 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
 
 ############################

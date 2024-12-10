@@ -50,9 +50,9 @@ Declaration(Class(ontology:LP_0030001))
 Declaration(Class(ontology:LP_0030002))
 Declaration(Class(ontology:LP_0030003))
 Declaration(Class(ontology:LP_0030049))
+Declaration(NamedIndividual(ontology:LP_0000073))
 Declaration(NamedIndividual(ontology:LP_0000148))
 Declaration(NamedIndividual(ontology:LP_0000149))
-Declaration(NamedIndividual(ontology:LP_0000150))
 
 
 
@@ -63,7 +63,7 @@ Declaration(NamedIndividual(ontology:LP_0000150))
 # Class: ontology:LP_0000139 (Grundschule (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000139 "Grundschule (BW)"@de)
-SubClassOf(ontology:LP_0000139 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000114) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000001) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000002) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000003) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000004) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
+SubClassOf(ontology:LP_0000139 ObjectIntersectionOf(ontology:LP_0000811 ObjectHasValue(ontology:LP_0000026 ontology:LP_2000001) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000002) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000003) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000004) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000114)))
 
 # Class: ontology:LP_0000144 (Erster Schulabschluss (BW))
 
@@ -74,7 +74,6 @@ SubClassOf(ontology:LP_0000144 ObjectIntersectionOf(ontology:LP_0000079 ObjectHa
 # Class: ontology:LP_0000145 (Mittlerer Abschluss (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000145 "Mittlerer Abschluss (BW)"@de)
-EquivalentClasses(ontology:LP_0000145 ObjectOneOf(ontology:LP_0000150))
 SubClassOf(ontology:LP_0000145 ObjectIntersectionOf(ontology:LP_0000078 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
 
 # Class: ontology:LP_0000146 (Allgemeine Hochschulreife (BW))
@@ -86,68 +85,64 @@ SubClassOf(ontology:LP_0000146 ObjectIntersectionOf(ontology:LP_0000076 ObjectHa
 # Class: ontology:LP_0000217 (Werkrealschule Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000217 "Werkrealschule Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000217 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000218) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000149) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000150)))
 
 # Class: ontology:LP_0000219 (Realschule Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000219 "Realschule Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000219 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000167) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000149) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000150)))
 
 # Class: ontology:LP_0000220 (Gemeinschaftsschule G-Niveau Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000220 "Gemeinschaftsschule G-Niveau Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000220 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000112) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000149)))
+EquivalentClasses(ontology:LP_0000220 ObjectIntersectionOf(ontology:LP_0000811 ObjectAllValuesFrom(ontology:LP_0000833 ObjectIntersectionOf(ontology:LP_0000834 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049))) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000112)))
 
 # Class: ontology:LP_0000221 (Gemeinschaftsschule M-Niveau Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000221 "Gemeinschaftsschule M-Niveau Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000221 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000112) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000150)))
 
 # Class: ontology:LP_0000222 (Gemeinschaftsschule E-Niveau Sek I (BW))
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000222 "Gymnasiales Niveau"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000222 "Gemeinschaftsschule E-Niveau Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000222 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000112) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
+SubClassOf(ontology:LP_0000222 ObjectIntersectionOf(ontology:LP_0000811 ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000112)))
 
 # Class: ontology:LP_0000223 (Gymnasium Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000223 "Gymnasium Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000223 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000149) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000150)))
 
 # Class: ontology:LP_0000224 (Gymnasium G8 Einführung Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000224 "Gymnasium G8 Einführung Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000224 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
+SubClassOf(ontology:LP_0000224 ObjectIntersectionOf(ontology:LP_0000811 ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000122)))
 
 # Class: ontology:LP_0000225 (Gymnasium G8 Sek II (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000225 "Gymnasium G8 Sek II (BW)"@de)
-SubClassOf(ontology:LP_0000225 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000148)))
+SubClassOf(ontology:LP_0000225 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000833 ObjectIntersectionOf(ontology:LP_0000835 ObjectHasValue(ontology:LP_0000833 ontology:LP_3000049))) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000122)))
 
 # Class: ontology:LP_0000226 (Gymnasium G9 Sek II (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000226 "Gymnasium G9 Sek II (BW)"@de)
-SubClassOf(ontology:LP_0000226 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000148)))
+SubClassOf(ontology:LP_0000226 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000835) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000122)))
 
 # Class: ontology:LP_0000227 (Gemeinschaftsschule Sek II (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000227 "Gemeinschaftsschule Sek II (BW)"@de)
-SubClassOf(ontology:LP_0000227 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000112) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000148)))
+SubClassOf(ontology:LP_0000227 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000835) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000112)))
 
 # Class: ontology:LP_0000228 (Aufbaugymnasium 11-13 Sek II (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000228 "Aufbaugymnasium 11-13 Sek II (BW)"@de)
-SubClassOf(ontology:LP_0000228 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000148)))
+SubClassOf(ontology:LP_0000228 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000833 ontology:LP_0000835) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000122)))
 
 # Class: ontology:LP_0000229 (Aufbaugymnasium 8-10 Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000229 "Aufbaugymnasium 8-10 Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000229 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
+SubClassOf(ontology:LP_0000229 ObjectIntersectionOf(ontology:LP_0000811 ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000122)))
 
 # Class: ontology:LP_0000230 (Aufbaugymnasium 7-10 Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000230 "Aufbaugymnasium 7-10 Sek I (BW)"@de)
-SubClassOf(ontology:LP_0000230 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
+SubClassOf(ontology:LP_0000230 ObjectIntersectionOf(ontology:LP_0000811 ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000122)))
 
 # Class: ontology:LP_0000510 (Leistungsfach (BW))
 
@@ -169,7 +164,7 @@ EquivalentClasses(ontology:LP_0000806 ObjectIntersectionOf(ontology:LP_0000438 O
 # Class: ontology:LP_0001101 (Bildungsgangniveau (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001101 "Bildungsgangniveau (BW)"@de)
-SubClassOf(ontology:LP_0001101 ontology:LP_0000028)
+EquivalentClasses(ontology:LP_0001101 ObjectIntersectionOf(ontology:LP_0000028 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
 
 # Class: ontology:LP_0001102 (E Niveau (BW))
 
@@ -191,7 +186,7 @@ SubClassOf(ontology:LP_0001104 ontology:LP_0001101)
 # Class: ontology:LP_0002003 (Hauptschule Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002003 "Hauptschule Sek I (BW)"@de)
-SubClassOf(ontology:LP_0002003 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000140) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000149)))
+SubClassOf(ontology:LP_0002003 ObjectIntersectionOf(ontology:LP_0000811 ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049) ObjectHasValue(ontology:LP_0000058 ontology:LP_0000149) ObjectHasValue(ontology:LP_0000812 ontology:LP_0000140)))
 
 # Class: ontology:LP_0002051 (Element (BW))
 
@@ -265,6 +260,11 @@ SubClassOf(ontology:LP_0030049 ObjectIntersectionOf(ontology:LP_0001101 ObjectSo
 #   Named Individuals
 ############################
 
+# Individual: ontology:LP_0000073 (ex1)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000073 "ex1"@de)
+ClassAssertion(ontology:LP_0000811 ontology:LP_0000073)
+
 # Individual: ontology:LP_0000148 (Allgemeinbildender Schulabschluss (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000148 "Allgemeinbildender Schulabschluss (BW)"@de)
@@ -274,11 +274,6 @@ ClassAssertion(ontology:LP_0000146 ontology:LP_0000148)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000149 "Hauptschulabschluss (BW)"@de)
 ClassAssertion(ontology:LP_0000144 ontology:LP_0000149)
-
-# Individual: ontology:LP_0000150 (Mittlerer Bildungsabschluss (BW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000150 "Mittlerer Bildungsabschluss (BW)"@de)
-ClassAssertion(ontology:LP_0000145 ontology:LP_0000150)
 
 
 )

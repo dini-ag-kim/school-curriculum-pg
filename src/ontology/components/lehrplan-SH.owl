@@ -40,6 +40,11 @@ Declaration(Class(ontology:LP_0030021))
 Declaration(Class(ontology:LP_0030022))
 Declaration(Class(ontology:LP_0030023))
 Declaration(Class(ontology:LP_0030033))
+Declaration(Class(ontology:LP_0030091))
+Declaration(Class(ontology:LP_0030092))
+Declaration(Class(ontology:LP_0030093))
+Declaration(Class(ontology:LP_0030094))
+Declaration(Class(ontology:LP_0030095))
 Declaration(NamedIndividual(ontology:LP_0002033))
 Declaration(NamedIndividual(ontology:LP_0002034))
 Declaration(NamedIndividual(ontology:LP_0002035))
@@ -194,6 +199,31 @@ SubClassOf(ontology:LP_0030023 ObjectIntersectionOf(ontology:LP_0002103 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030033 "Lehrplanfragment (SH)"@de)
 SubClassOf(ontology:LP_0030033 ObjectIntersectionOf(ontology:LP_0002103 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000627)))
+
+# Class: ontology:LP_0030091 (Bildungsgangniveau (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030091 "Bildungsgangniveau (SH)"@de)
+SubClassOf(ontology:LP_0030091 ontology:LP_0000028)
+
+# Class: ontology:LP_0030092 (Anforderungen für den Ersten allgemeinbildenden Schulabschluss (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030092 "Anforderungen für den Ersten allgemeinbildenden Schulabschluss (SH)"@de)
+SubClassOf(ontology:LP_0030092 ObjectIntersectionOf(ontology:LP_0030091 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
+
+# Class: ontology:LP_0030093 (Anforderungen für den Mittleren Schulabschluss (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030093 "Anforderungen für den Mittleren Schulabschluss (SH)"@de)
+SubClassOf(ontology:LP_0030093 ObjectIntersectionOf(ontology:LP_0030091 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
+
+# Class: ontology:LP_0030094 (Anforderungen für die Allgemeine Hochschulreife (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030094 "Anforderungen für die Allgemeine Hochschulreife (SH)"@de)
+SubClassOf(ontology:LP_0030094 ObjectIntersectionOf(ontology:LP_0030091 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
+
+# Class: ontology:LP_0030095 (Sekundarstufenniveau (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030095 "Sekundarstufenniveau (SH)"@de)
+SubClassOf(ontology:LP_0030095 ObjectIntersectionOf(ontology:LP_0030091 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000069) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
 
 
 ############################

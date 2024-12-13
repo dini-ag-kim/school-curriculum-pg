@@ -49,6 +49,8 @@ Declaration(Class(ontology:LP_0030061))
 Declaration(Class(ontology:LP_0030062))
 Declaration(Class(ontology:LP_0030063))
 Declaration(Class(ontology:LP_0030064))
+Declaration(Class(ontology:LP_0030074))
+Declaration(Class(ontology:LP_0030075))
 Declaration(NamedIndividual(ontology:LP_0000300))
 Declaration(NamedIndividual(ontology:LP_0000301))
 Declaration(NamedIndividual(ontology:LP_0000302))
@@ -125,28 +127,28 @@ AnnotationAssertion(rdfs:label ontology:LP_0001027 "Leistungskurs (SL)"@de)
 EquivalentClasses(ontology:LP_0001027 ObjectIntersectionOf(ontology:LP_0001025 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 SubClassOf(ontology:LP_0001027 ontology:LP_0001025)
 
-# Class: ontology:LP_0001028 (Fach Niveau Sek I (SL))
+# Class: ontology:LP_0001028 (Bildungsgangniveau (SL))
 
-AnnotationAssertion(rdfs:label ontology:LP_0001028 "Fach Niveau Sek I (SL)"@de)
-SubClassOf(ontology:LP_0001028 ontology:LP_0002102)
+AnnotationAssertion(rdfs:label ontology:LP_0001028 "Bildungsgangniveau (SL)"@de)
+SubClassOf(ontology:LP_0001028 ontology:LP_0000028)
 
 # Class: ontology:LP_0001029 (G Kurs (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001029 "G Kurs (SL)"@de)
-EquivalentClasses(ontology:LP_0001029 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-SubClassOf(ontology:LP_0001029 ontology:LP_0001028)
+AnnotationAssertion(skos:editorialNote ontology:LP_0001029 "gilt für die Jahrgangsstufen 7-10")
+SubClassOf(ontology:LP_0001029 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
 
 # Class: ontology:LP_0001030 (A Kurs (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001030 "A Kurs (SL)"@de)
-EquivalentClasses(ontology:LP_0001030 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000837)))
-SubClassOf(ontology:LP_0001030 ontology:LP_0001028)
+AnnotationAssertion(skos:editorialNote ontology:LP_0001030 "gilt für die Jahrgangsstufen 9-10")
+SubClassOf(ontology:LP_0001030 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
 
 # Class: ontology:LP_0001031 (E Kurs (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001031 "E Kurs (SL)"@de)
-EquivalentClasses(ontology:LP_0001031 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-SubClassOf(ontology:LP_0001031 ontology:LP_0001028)
+AnnotationAssertion(skos:editorialNote ontology:LP_0001031 "gilt für die Jahrgangsstufen 7-10")
+SubClassOf(ontology:LP_0001031 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
 
 # Class: ontology:LP_0002102 (Element (SL))
 
@@ -265,6 +267,17 @@ SubClassOf(ontology:LP_0030063 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030064 "Vorschlag und Hinweis zu Inhalten und Methoden (SL)"@de)
 SubClassOf(ontology:LP_0030064 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030074 (Gymnasialniveau Sek I (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030074 "Gymnasialniveau Sek I (SL)"@de)
+SubClassOf(ontology:LP_0030074 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
+
+# Class: ontology:LP_0030075 (Gemeinschaftschulniveau (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030075 "Gemeinschaftschulniveau (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030075 "gilt für die Jahrgangsstufen 5-6")
+SubClassOf(ontology:LP_0030075 ObjectIntersectionOf(ontology:LP_0001028 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
 
 
 ############################

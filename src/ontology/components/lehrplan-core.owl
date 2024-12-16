@@ -132,6 +132,7 @@ Declaration(ObjectProperty(:LP_0000029))
 Declaration(ObjectProperty(:LP_0000058))
 Declaration(ObjectProperty(:LP_0000071))
 Declaration(ObjectProperty(:LP_0000072))
+Declaration(ObjectProperty(:LP_0000086))
 Declaration(ObjectProperty(:LP_0000141))
 Declaration(ObjectProperty(:LP_0000440))
 Declaration(ObjectProperty(:LP_0000483))
@@ -351,6 +352,12 @@ TransitiveObjectProperty(:LP_0000072)
 ObjectPropertyDomain(:LP_0000072 :LP_0000028)
 ObjectPropertyRange(:LP_0000072 :LP_0000028)
 
+# Object Property: :LP_0000086 (ist_niveau_von)
+
+AnnotationAssertion(rdfs:label :LP_0000086 "ist_niveau_von"@de)
+SubObjectPropertyOf(:LP_0000086 owl:topObjectProperty)
+InverseObjectProperties(:LP_0000086 :LP_0000840)
+
 # Object Property: :LP_0000141 (entspricht_KIM_schulart)
 
 AnnotationAssertion(rdfs:label :LP_0000141 "entspricht_KIM_schulart"@de)
@@ -401,6 +408,7 @@ ObjectPropertyRange(:LP_0000537 ObjectUnionOf(:LP_0000001 :LP_0000540))
 
 AnnotationAssertion(rdfs:label :LP_0000578 "hat_niveau_stufe"@de)
 InverseObjectProperties(:LP_0000578 :LP_0000580)
+ObjectPropertyDomain(:LP_0000578 :LP_0000261)
 ObjectPropertyRange(:LP_0000578 :LP_0000443)
 
 # Object Property: :LP_0000580 (ist_niveau_stufe_von)
@@ -421,11 +429,13 @@ ObjectPropertyRange(:LP_0000812 :LP_0000111)
 
 AnnotationAssertion(rdfs:label :LP_0000833 "hat_bildungsgangniveau"@de)
 ObjectPropertyDomain(:LP_0000833 :LP_0000816)
+ObjectPropertyRange(:LP_0000833 :LP_0000028)
 
-# Object Property: :LP_0000840 (hat_fachniveau)
+# Object Property: :LP_0000840 (hat_niveau)
 
-AnnotationAssertion(rdfs:label :LP_0000840 "hat_fachniveau"@de)
+AnnotationAssertion(rdfs:label :LP_0000840 "hat_niveau"@de)
 ObjectPropertyDomain(:LP_0000840 :LP_0000261)
+ObjectPropertyRange(:LP_0000840 :LP_0000037)
 
 
 ############################
@@ -551,7 +561,7 @@ DisjointClasses(:LP_0000040 :LP_0000811)
 # Class: :LP_0000041 (Primarbereich oBE/BB)
 
 AnnotationAssertion(rdfs:label :LP_0000041 "Primarbereich oBE/BB"@de)
-EquivalentClasses(:LP_0000041 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004)) ObjectSomeValuesFrom(:LP_0000029 :LP_0000054)))
+EquivalentClasses(:LP_0000041 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004)) ObjectAllValuesFrom(:LP_0000029 :LP_0000054)))
 SubClassOf(:LP_0000041 :LP_0000062)
 
 # Class: :LP_0000042 (Sekundarbereich I oBB)
@@ -563,7 +573,7 @@ SubClassOf(:LP_0000042 :LP_0000064)
 # Class: :LP_0000043 (Sekundarbereich II)
 
 AnnotationAssertion(rdfs:label :LP_0000043 "Sekundarbereich II"@de)
-EquivalentClasses(:LP_0000043 ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000011 :LP_2000012 :LP_2000013)))
+EquivalentClasses(:LP_0000043 ObjectAllValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000011 :LP_2000012 :LP_2000013)))
 SubClassOf(:LP_0000043 :LP_0000020)
 
 # Class: :LP_0000053 (Berlin-Brandenburg)
@@ -592,7 +602,7 @@ SubClassOf(:LP_0000057 :LP_0000341)
 # Class: :LP_0000061 (Primarbereich BE/BB)
 
 AnnotationAssertion(rdfs:label :LP_0000061 "Primarbereich BE/BB"@de)
-EquivalentClasses(:LP_0000061 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006)) ObjectSomeValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))))
+EquivalentClasses(:LP_0000061 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006)) ObjectAllValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))))
 SubClassOf(:LP_0000061 :LP_0000062)
 
 # Class: :LP_0000062 (Primarbereich)
@@ -622,8 +632,8 @@ SubClassOf(:LP_0000068 :LP_0000335)
 
 AnnotationAssertion(rdfs:comment :LP_0000069 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de)
 AnnotationAssertion(rdfs:label :LP_0000069 "Gymnasialniveau Sek I"@de)
-EquivalentClasses(:LP_0000069 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000072 :LP_0000832) ObjectSomeValuesFrom(:LP_0000483 :LP_0000068)))
-SubClassOf(:LP_0000069 :LP_0000028)
+EquivalentClasses(:LP_0000069 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000068)))
+SubClassOf(:LP_0000069 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000072 :LP_0000832)))
 
 # Class: :LP_0000076 (Allgemeine Hochschulreife)
 
@@ -736,7 +746,7 @@ AnnotationAssertion(rdfs:label :LP_0000438 "Lehrplan"@de)
 # Class: :LP_0000443 (Niveaustufe (BE/BB))
 
 AnnotationAssertion(rdfs:label :LP_0000443 "Niveaustufe (BE/BB)"@de)
-SubClassOf(:LP_0000443 :LP_0000037)
+SubClassOf(:LP_0000443 :LP_0000261)
 
 # Class: :LP_0000478 (Funktionsspezifikation)
 
@@ -996,7 +1006,7 @@ SubClassOf(:LP_0000834 :LP_0000028)
 
 AnnotationAssertion(rdfs:comment :LP_0000835 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de)
 AnnotationAssertion(rdfs:label :LP_0000835 "Gymnasialniveau Sek II"@de)
-EquivalentClasses(:LP_0000835 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000837)))
+EquivalentClasses(:LP_0000835 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000483 :LP_0000837) ObjectSomeValuesFrom(ObjectInverseOf(:LP_0000833) ObjectIntersectionOf(:LP_0000816 ObjectAllValuesFrom(:LP_0000058 :LP_0000076)))))
 SubClassOf(:LP_0000835 :LP_0000028)
 
 # Class: :LP_0000837 (Gymnasialniveaufunktion Sek II)
@@ -1546,9 +1556,8 @@ ClassAssertion(:LP_0000443 :LP_0000469)
 AnnotationAssertion(rdfs:label :LP_0000470 "Niveaustufe G"@de)
 ClassAssertion(:LP_0000443 :LP_0000470)
 
-# Individual: :LP_0000560 (Griechisch)
+# Individual: :LP_0000560 (Griechisch (Schulfach))
 
-AnnotationAssertion(rdfs:label :LP_0000560 "Griechisch"@de)
 AnnotationAssertion(rdfs:label :LP_0000560 "Griechisch (Schulfach)"@de)
 ClassAssertion(:LP_0000004 :LP_0000560)
 
@@ -1609,13 +1618,13 @@ AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (class level 3)
+# Individual: :LP_2000003 (Jahrgangsstufe 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
 ClassAssertion(:LP_0000009 :LP_2000003)
 
-# Individual: :LP_2000004 (Jahrgangsstufe 4)
+# Individual: :LP_2000004 (class level 4)
 
 AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
@@ -1627,25 +1636,25 @@ AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (class level 6)
+# Individual: :LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (class level 7)
+# Individual: :LP_2000007 (Jahrgangsstufe 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (class level 8)
+# Individual: :LP_2000008 (Jahrgangsstufe 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1657,7 +1666,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
@@ -1669,7 +1678,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)
@@ -1760,4 +1769,5 @@ DisjointClasses(:LP_0000001 :LP_0000006 :LP_0000007 :LP_0000009 :LP_0000010 :LP_
 DisjointClasses(:LP_0000001 :LP_0000009 :LP_0000020)
 DisjointClasses(:LP_0000002 :LP_0000004 :LP_0000005)
 SubObjectPropertyOf(ObjectPropertyChain(:LP_0000537 :LP_0000537) :LP_0000537)
+SubObjectPropertyOf(ObjectPropertyChain(:LP_0000578 :LP_0000840) :LP_0000840)
 )

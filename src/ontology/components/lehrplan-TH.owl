@@ -36,14 +36,13 @@ Declaration(Class(ontology:LP_0002098))
 Declaration(Class(ontology:LP_0030024))
 Declaration(Class(ontology:LP_0030025))
 Declaration(Class(ontology:LP_0030026))
-Declaration(Class(ontology:LP_0030027))
 Declaration(Class(ontology:LP_0030028))
 Declaration(Class(ontology:LP_0030029))
-Declaration(Class(ontology:LP_0030030))
 Declaration(Class(ontology:LP_0030031))
 Declaration(Class(ontology:LP_0030032))
 Declaration(Class(ontology:LP_0030078))
 Declaration(Class(ontology:LP_0030079))
+Declaration(Class(ontology:LP_0030097))
 Declaration(NamedIndividual(ontology:LP_0000312))
 Declaration(NamedIndividual(ontology:LP_0000313))
 Declaration(NamedIndividual(ontology:LP_0000314))
@@ -182,14 +181,7 @@ SubClassOf(ontology:LP_0030025 ObjectIntersectionOf(ontology:LP_0002097 ObjectSo
 # Class: ontology:LP_0030026 (Kompetenz (TH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030026 "Kompetenz (TH)"@de)
-AnnotationAssertion(skos:altLabel ontology:LP_0030026 "Ziel (TH)")
-AnnotationAssertion(skos:altLabel ontology:LP_0030026 "Ziel und Inhalt (TH)")
 SubClassOf(ontology:LP_0030026 ObjectIntersectionOf(ontology:LP_0002097 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
-
-# Class: ontology:LP_0030027 (Teillernbereich (TH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030027 "Teillernbereich (TH)"@de)
-SubClassOf(ontology:LP_0030027 ObjectIntersectionOf(ontology:LP_0002097 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
 
 # Class: ontology:LP_0030028 (Lehrplanfragment (TH))
 
@@ -200,11 +192,6 @@ SubClassOf(ontology:LP_0030028 ObjectIntersectionOf(ontology:LP_0002097 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030029 "Thema (TH)"@de)
 SubClassOf(ontology:LP_0030029 ObjectIntersectionOf(ontology:LP_0002097 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
-
-# Class: ontology:LP_0030030 (Teilkompetenzbereich (TH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030030 "Teilkompetenzbereich (TH)"@de)
-SubClassOf(ontology:LP_0030030 ObjectIntersectionOf(ontology:LP_0002097 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
 
 # Class: ontology:LP_0030031 (Inhalte (TH))
 
@@ -227,6 +214,12 @@ SubClassOf(ontology:LP_0030078 ObjectIntersectionOf(ontology:LP_0001038 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030079 "Hauptschul- und Realschulniveau (TH)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030079 "gilt für die Jahrgangsstufen 5-8")
 SubClassOf(ontology:LP_0030079 ObjectIntersectionOf(ontology:LP_0001038 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
+
+# Class: ontology:LP_0030097 (Ziel (TH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030097 "Ziel (TH)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030097 "Ziel und Inhalt (TH)")
+SubClassOf(ontology:LP_0030097 ObjectIntersectionOf(ontology:LP_0002097 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
 
 ############################

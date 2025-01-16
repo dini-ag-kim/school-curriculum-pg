@@ -32,7 +32,6 @@ Declaration(Class(ontology:LP_0001226))
 Declaration(Class(ontology:LP_0001227))
 Declaration(Class(ontology:LP_0001228))
 Declaration(Class(ontology:LP_0001441))
-Declaration(Class(ontology:LP_0001442))
 Declaration(Class(ontology:LP_0001445))
 Declaration(Class(ontology:LP_0001446))
 Declaration(Class(ontology:LP_0001447))
@@ -165,12 +164,6 @@ AnnotationAssertion(rdfs:label ontology:LP_0001441 "Element (BE)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0001441 "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de)
 EquivalentClasses(ontology:LP_0001441 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000048)))
 
-# Class: ontology:LP_0001442 (Kompetenz (BE))
-
-AnnotationAssertion(rdfs:comment ontology:LP_0001442 "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en)
-AnnotationAssertion(rdfs:label ontology:LP_0001442 "Kompetenz (BE)"@de)
-SubClassOf(ontology:LP_0001442 ontology:LP_0001441)
-
 # Class: ontology:LP_0001445 (learning content (BE))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001445 "Lerninhalt (BE)"@de)
@@ -178,8 +171,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0001445 "learning content (BE)"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_0001445 "Inhalt (BE)")
 AnnotationAssertion(skos:definition ontology:LP_0001445 "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en)
 AnnotationAssertion(skos:definition ontology:LP_0001445 "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de)
-EquivalentClasses(ontology:LP_0001445 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
-SubClassOf(ontology:LP_0001445 ontology:LP_0001441)
+SubClassOf(ontology:LP_0001445 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
 # Class: ontology:LP_0001446 (Lernmaterial (BE))
 
@@ -196,8 +188,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0001447 "Standard (BE)"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0001447 "standard (BE)"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_0001447 "Abschlussorientierter Standard (BE)")
 AnnotationAssertion(skos:definition ontology:LP_0001447 "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en)
-EquivalentClasses(ontology:LP_0001447 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
-SubClassOf(ontology:LP_0001447 ontology:LP_0001441)
+SubClassOf(ontology:LP_0001447 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
 # Class: ontology:LP_0001448 (Thema (BE))
 

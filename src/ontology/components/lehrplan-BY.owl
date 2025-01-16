@@ -34,7 +34,6 @@ Declaration(Class(ontology:LP_0000525))
 Declaration(Class(ontology:LP_0000819))
 Declaration(Class(ontology:LP_0002043))
 Declaration(Class(ontology:LP_0002044))
-Declaration(Class(ontology:LP_0002045))
 Declaration(Class(ontology:LP_0002046))
 Declaration(Class(ontology:LP_0002047))
 Declaration(Class(ontology:LP_0002048))
@@ -177,20 +176,16 @@ SubClassOf(ontology:LP_0002043 ObjectIntersectionOf(ontology:LP_0000434 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002044 "Lehrplanfragment (BY)"@de)
 SubClassOf(ontology:LP_0002044 ObjectIntersectionOf(ontology:LP_0000434 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000627)))
 
-# Class: ontology:LP_0002045 (Jahrgangsstufe (BY))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002045 "Jahrgangsstufe (BY)"@de)
-SubClassOf(ontology:LP_0002045 ontology:LP_0000434)
-
 # Class: ontology:LP_0002046 (Lernbereich (BY))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002046 "Lernbereich (BY)"@de)
-SubClassOf(ontology:LP_0002046 ObjectIntersectionOf(ontology:LP_0000434 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+SubClassOf(ontology:LP_0002046 ObjectIntersectionOf(ontology:LP_0000434 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002047 (Teillernbereich (BY))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002047 "Teillernbereich (BY)"@de)
-SubClassOf(ontology:LP_0002047 ObjectIntersectionOf(ontology:LP_0000434 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+AnnotationAssertion(skos:editorialNote ontology:LP_0002047 "Begriff kommt so nicht im Lehrplan vor.")
+SubClassOf(ontology:LP_0002047 ObjectIntersectionOf(ontology:LP_0000434 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002048 (Kompetenzerwartungen und Inhalte (BY))
 

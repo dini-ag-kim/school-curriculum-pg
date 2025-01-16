@@ -19,10 +19,10 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000575>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000576>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000577>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000851>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001441>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000008>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000026>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000058>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000086>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000483>))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/1>))
 Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/2>))
@@ -80,7 +80,6 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000613>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000614>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000615>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000616>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000848>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000001>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000002>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000003>))
@@ -99,44 +98,42 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNot
 #   Classes
 ############################
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000572> (Abschluss Niveau (BE/BB))
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000572> (Bildungsgangniveau (BB / BE))
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000572> "Abschluss Niveau (BE/BB)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000009>) ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000443>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000851>)))
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000572> "Bildungsgangniveau (BB / BE)"@de)
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000028> ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000443>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000573> (BOA)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000573> "Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000573> "BOA"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000573> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000081>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000572>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000574> (BBR)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000574> "Abschluss Niveau, das zur Berufsbildungsreife befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000574> "BBR"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000574> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000135>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000231>))))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000574> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000839>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000575> (EBBR)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000575> "Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000575> "EBBR"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000575> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000136>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000232>))))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000575> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000839>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000576> (MSA)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000576> "Abschluss Niveau, das zum mittlereren Schulabschluss befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000576> "MSA"@de)
-EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0000848>)))
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectUnionOf(ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000137>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000233>))))
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000838>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000577> (QualiPhase)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000577> "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000577> "QualiPhase"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000577> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000021> <https://w3id.org/lehrplan/ontology/LP_0000234>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000577> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000068>)))
 
 
 ############################
@@ -196,7 +193,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000583> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000583>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_0000464>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000584> (BOA B)
 
@@ -204,7 +201,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000584> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000584>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000585> (BOA C)
 
@@ -215,7 +212,7 @@ ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https:/
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000586> (BOA D)
 
@@ -224,7 +221,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_2000008>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_0000467>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000587> (BOA E)
 
@@ -232,14 +229,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000587> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000587>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_2000009>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000588> (BBR A)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000588> "BBR A"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000588>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000588> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000588> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000588> <https://w3id.org/lehrplan/ontology/LP_0000464>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000589> (BBR B)
 
@@ -248,7 +245,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000590> (BBR C)
 
@@ -257,7 +254,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_2000003>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_2000004>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000591> (BBR D)
 
@@ -266,7 +263,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_0000467>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000592> (BBR E)
 
@@ -275,7 +272,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_2000008>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000593> (BBR F)
 
@@ -283,14 +280,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000593> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000593>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_2000009>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_0000469>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000594> (EBBR A)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000594> "EBBR A"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000594>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000594> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000594> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000594> <https://w3id.org/lehrplan/ontology/LP_0000464>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000595> (EBBR B)
 
@@ -299,7 +296,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000596> (EBBR C)
 
@@ -308,7 +305,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_2000003>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_2000004>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000597> (EBBR D)
 
@@ -317,7 +314,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_0000467>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000598> (EBBR E)
 
@@ -325,7 +322,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000598> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000598>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000599> (EBBR F)
 
@@ -334,21 +331,21 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_2000008>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_2000009>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_0000469>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000600> (EBBR G)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000600> "EBBR G"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000600>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000600> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000600> <https://w3id.org/lehrplan/ontology/LP_0000470>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000600> <https://w3id.org/lehrplan/ontology/LP_0000470>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000601> (MSA A)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000601> "MSA A"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000601>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000601> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000601> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000601> <https://w3id.org/lehrplan/ontology/LP_0000464>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000602> (MSA B)
 
@@ -356,7 +353,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000602> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000602>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000603> (MSA C)
 
@@ -365,7 +362,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_2000003>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000604> (MSA D)
 
@@ -374,7 +371,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_2000004>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_0000467>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000605> (MSA E)
 
@@ -383,15 +380,15 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000606> (MSA F)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000606> "MSA F"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000606>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_0000469>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_2000009>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_2000009>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000607> (MSA G)
 
@@ -399,14 +396,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000607> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000607>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_2000009>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_0000470>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_0000470>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000608> (QualiPhase A)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000608> "QualiPhase A"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000608>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000608> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000608> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000608> <https://w3id.org/lehrplan/ontology/LP_0000464>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000609> (QualiPhase B)
 
@@ -414,7 +411,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000609> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000609>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000610> (QualiPhase C)
 
@@ -423,7 +420,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_2000003>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000611> (QualiPhase D)
 
@@ -432,7 +429,7 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_2000004>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_0000467>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000612> (QualiPhase E)
 
@@ -440,28 +437,28 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000612> "
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000612>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000613> (QualiPhase F)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000613> "QualiPhase F"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000613>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000613> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000613> <https://w3id.org/lehrplan/ontology/LP_0000469>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000613> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000614> (QualiPhase G)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000614> "QualiPhase G"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000614>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000614> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000614> <https://w3id.org/lehrplan/ontology/LP_0000470>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000614> <https://w3id.org/lehrplan/ontology/LP_0000470>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000615> (QualiPhase H)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000615> "QualiPhase H"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000615>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000615> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000578> <https://w3id.org/lehrplan/ontology/LP_0000615> <https://w3id.org/lehrplan/ontology/LP_0000616>)
+ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000615> <https://w3id.org/lehrplan/ontology/LP_0000616>)
 
 
 )

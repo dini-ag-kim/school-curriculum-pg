@@ -26,9 +26,7 @@ Declaration(Class(ontology:LP_0000290))
 Declaration(Class(ontology:LP_0000328))
 Declaration(Class(ontology:LP_0000342))
 Declaration(Class(ontology:LP_0000345))
-Declaration(Class(ontology:LP_0000347))
 Declaration(Class(ontology:LP_0000350))
-Declaration(Class(ontology:LP_0000351))
 Declaration(Class(ontology:LP_0000352))
 Declaration(Class(ontology:LP_0000353))
 Declaration(Class(ontology:LP_0000431))
@@ -48,9 +46,27 @@ Declaration(Class(ontology:LP_0002198))
 Declaration(Class(ontology:LP_0002200))
 Declaration(Class(ontology:LP_0002201))
 Declaration(Class(ontology:LP_0002202))
+Declaration(Class(ontology:LP_0030027))
+Declaration(Class(ontology:LP_0030030))
 Declaration(Class(ontology:LP_0030034))
 Declaration(Class(ontology:LP_0030035))
 Declaration(Class(ontology:LP_0030036))
+Declaration(Class(ontology:LP_0030098))
+Declaration(Class(ontology:LP_0030099))
+Declaration(Class(ontology:LP_0030100))
+Declaration(Class(ontology:LP_0030101))
+Declaration(Class(ontology:LP_0030102))
+Declaration(Class(ontology:LP_0030103))
+Declaration(Class(ontology:LP_0030104))
+Declaration(Class(ontology:LP_0030105))
+Declaration(Class(ontology:LP_0030106))
+Declaration(Class(ontology:LP_0030107))
+Declaration(Class(ontology:LP_0030108))
+Declaration(Class(ontology:LP_0030109))
+Declaration(Class(ontology:LP_0030110))
+Declaration(Class(ontology:LP_0030111))
+Declaration(Class(ontology:LP_0030112))
+Declaration(Class(ontology:LP_0030113))
 Declaration(NamedIndividual(ontology:LP_0000280))
 Declaration(NamedIndividual(ontology:LP_0000281))
 Declaration(NamedIndividual(ontology:LP_0000282))
@@ -122,8 +138,9 @@ SubClassOf(ontology:LP_0000290 ObjectIntersectionOf(ontology:LP_0000811 ObjectHa
 # Class: ontology:LP_0000328 (Thema (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000328 "Thema (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0000328 "in Mathematik Sek II")
-SubClassOf(ontology:LP_0000328 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+AnnotationAssertion(skos:editorialNote ontology:LP_0000328 "kommt in Mathematik Sek II vor.
+s. außerdem Moderne Fremdsprache - Englisch Sek I.")
+SubClassOf(ontology:LP_0000328 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0000342 (Element (RP))
 
@@ -134,27 +151,19 @@ EquivalentClasses(ontology:LP_0000342 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0000345 (Teilthema (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000345 "Teilthema (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000345 "wird nicht so im LP benannt. Löschen?")
 SubClassOf(ontology:LP_0000345 ontology:LP_0000328)
-
-# Class: ontology:LP_0000347 (Fachspezifisches Allgemeines Lernziel (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000347 "Fachspezifisches Allgemeines Lernziel (RP)"@de)
-SubClassOf(ontology:LP_0000347 ontology:LP_0000342)
 
 # Class: ontology:LP_0000350 (Lernziel (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000350 "Lernziel (RP)"@de)
-SubClassOf(ontology:LP_0000350 ontology:LP_0000342)
-
-# Class: ontology:LP_0000351 (Inhaltsaspekt (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000351 "Inhaltsaspekt (RP)"@de)
-EquivalentClasses(ontology:LP_0000351 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
-SubClassOf(ontology:LP_0000351 ontology:LP_0000342)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000350 "kommt in Gemeinschaftskunde Sek II vor")
+SubClassOf(ontology:LP_0000350 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
 # Class: ontology:LP_0000352 (Unterteilthema (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000352 "Unterteilthema (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000352 "wird nicht so im LP benannt. Löschen?")
 SubClassOf(ontology:LP_0000352 ontology:LP_0000345)
 
 # Class: ontology:LP_0000353 (Lehrplanfragment (RP))
@@ -165,14 +174,12 @@ SubClassOf(ontology:LP_0000353 ObjectIntersectionOf(ontology:LP_0000342 ObjectSo
 # Class: ontology:LP_0000431 (Kompetenzbereich (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000431 "Kompetenzbereich (RP)"@de)
-EquivalentClasses(ontology:LP_0000431 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
-SubClassOf(ontology:LP_0000431 ontology:LP_0000342)
+SubClassOf(ontology:LP_0000431 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
 
 # Class: ontology:LP_0000432 (Kompetenz (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000432 "Kompetenz (RP)"@de)
-EquivalentClasses(ontology:LP_0000432 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
-SubClassOf(ontology:LP_0000432 ontology:LP_0000342)
+SubClassOf(ontology:LP_0000432 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
 # Class: ontology:LP_0000433 (Lehrplan (RP))
 
@@ -220,10 +227,10 @@ AnnotationAssertion(rdfs:label ontology:LP_0001024 "Erhöhtes Kompetenzniveau (R
 EquivalentClasses(ontology:LP_0001024 ObjectIntersectionOf(ontology:LP_0001019 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
 SubClassOf(ontology:LP_0001024 ontology:LP_0001019)
 
-# Class: ontology:LP_0002195 (Inhalte zum Erwerb der Kompetenzen (RP))
+# Class: ontology:LP_0002195 (Inhalt zum Erwerb der Kompetenzen (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002195 "Inhalte zum Erwerb der Kompetenzen (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002195 "in Mathematik Primar")
+AnnotationAssertion(rdfs:label ontology:LP_0002195 "Inhalt zum Erwerb der Kompetenzen (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002195 "kommt in Mathematik Primar vor")
 SubClassOf(ontology:LP_0002195 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
 # Class: ontology:LP_0002196 (Leitidee (RP))
@@ -235,48 +242,166 @@ SubClassOf(ontology:LP_0002196 ObjectIntersectionOf(ontology:LP_0000342 ObjectSo
 # Class: ontology:LP_0002197 (Inhalt (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002197 "Inhalt (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002197 "in Mathematik Sek I (Lernbeschreibungsfunktion) 
-in Englisch Grundschule (Kompetenzspezifikationsfunktion)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0002197 "kommt in Mathematik Sek I vor (=Lernbeschreibungsfunktion) 
+kommt in Physik Sek II vor (=Lernbeschreibungsfunktion) 
+
+kommt in Englisch Grundschule vor (=Kompetenzspezifikationsfunktion)
+s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)")
 SubClassOf(ontology:LP_0002197 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
-# Class: ontology:LP_0002198 (Hinweise und Vernetzung (RP))
+# Class: ontology:LP_0002198 (Hinweis und Vernetzung (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002198 "Hinweise und Vernetzung (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002198 "in Mathematik Sek I")
+AnnotationAssertion(rdfs:label ontology:LP_0002198 "Hinweis und Vernetzung (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002198 "kommt in Mathematik Sek I vor")
 SubClassOf(ontology:LP_0002198 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
-# Class: ontology:LP_0002200 (Ziele / Inhalte (Sach- und Methodenkompetenz) (RP))
+# Class: ontology:LP_0002200 (Ziel / Inhalt (Sach- und Methodenkompetenz) (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002200 "Ziele / Inhalte (Sach- und Methodenkompetenz) (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002200 "in Mathematik Sek II")
+AnnotationAssertion(rdfs:label ontology:LP_0002200 "Ziel / Inhalt (Sach- und Methodenkompetenz) (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002200 "kommt in Mathematik Sek II vor")
 SubClassOf(ontology:LP_0002200 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
-# Class: ontology:LP_0002201 (Hinweise zur Unterrichtsgestaltung und Methodenkompetenz (RP))
+# Class: ontology:LP_0002201 (Hinweis zur Unterrichtsgestaltung und Methodenkompetenz (RP))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002201 "Hinweise zur Unterrichtsgestaltung und Methodenkompetenz (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002201 "in Mathematik Sek II. Frage ob MEM-Lerninhalt oder MEM-Hinweis?")
-SubClassOf(ontology:LP_0002201 ontology:LP_0000342)
+AnnotationAssertion(rdfs:label ontology:LP_0002201 "Hinweis zur Unterrichtsgestaltung und Methodenkompetenz (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002201 "kommt in Mathematik Sek II vor")
+SubClassOf(ontology:LP_0002201 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002202 (Kernbereich (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002202 "Kernbereich (RP)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002202 "in Deutsch Sek I")
+AnnotationAssertion(skos:editorialNote ontology:LP_0002202 "kommt in Deutsch Sek I vor")
 SubClassOf(ontology:LP_0002202 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+
+# Class: ontology:LP_0030027 (Erfahrungbereich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030027 "Erfahrungbereich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030027 "kommt vor in Grundschule Sachunterricht")
+SubClassOf(ontology:LP_0030027 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030030 (Themenfeld (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030030 "Themenfeld (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030030 "kommt in Physik Sek I vor")
+SubClassOf(ontology:LP_0030030 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030034 (Thematischer Leitgedanke (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030034 "Thematischer Leitgedanke (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030034 "kommt in Fremdsprache (Englisch) Primar vor")
 SubClassOf(ontology:LP_0030034 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030035 (Lernbereich (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030035 "Lernbereich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030035 "kommt in Englisch Sek II vor")
 SubClassOf(ontology:LP_0030035 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030036 (Fähigkeit (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030036 "Fähigkeit (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030036 "kommt vor in Englisch Sek II")
 SubClassOf(ontology:LP_0030036 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030098 (Lehrplanbaustein (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030098 "Lehrplanbaustein (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030098 "kommt in Physik Sek II vor")
+SubClassOf(ontology:LP_0030098 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030099 (Hinweis zur unterrichtlichen Umsetzung (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030099 "Hinweis zur unterrichtlichen Umsetzung (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030099 "kommt in Physik Sek II vor")
+SubClassOf(ontology:LP_0030099 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030100 (Inhalt und Zusammenhang (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030100 "Inhalt und Zusammenhang (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030100 "Kommt in Naturwissenschaften Orientierungsstufe vor")
+SubClassOf(ontology:LP_0030100 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030101 (Teilkompetenzbereich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030101 "Teilkompetenzbereich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030101 "wird nicht so im LP benannt. Löschen?")
+SubClassOf(ontology:LP_0030101 ontology:LP_0000431)
+
+# Class: ontology:LP_0030102 (Teilteilkompetenzbereich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030102 "Teilteilkompetenzbereich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030102 "wird nicht so im LP benannt. Löschen?")
+SubClassOf(ontology:LP_0030102 ontology:LP_0030101)
+
+# Class: ontology:LP_0030103 (Anwendungsfähiges Wissen (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030103 "Anwendungsfähiges Wissen (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030103 "kommt in Fremdsprache (Englisch) Primar vor")
+SubClassOf(ontology:LP_0030103 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030104 (Teilleitgedanke (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030104 "Teilleitgedanke (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030104 "wird nicht so im LP benannt. Löschen?
+Kommt in Fremdsprache (Englisch) Primar vor.")
+SubClassOf(ontology:LP_0030104 ontology:LP_0030034)
+
+# Class: ontology:LP_0030105 (Teillernbereich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030105 "Teillernbereich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030105 "wird nicht so im LP benannt. Löschen?
+Kommt in Englisch Sek II vor.")
+SubClassOf(ontology:LP_0030105 ontology:LP_0030035)
+
+# Class: ontology:LP_0030106 (Teilteillernbereich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030106 "Teilteillernbereich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030106 "wird nicht so im LP benannt. Löschen?
+Kommt in Englisch Sek II vor.")
+SubClassOf(ontology:LP_0030106 ontology:LP_0030105)
+
+# Class: ontology:LP_0030107 (Teilerfahrungsberich (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030107 "Teilerfahrungsberich (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030107 "wird nicht so im LP benannt. Löschen?
+Kommt in Sachunterricht Primar vor.")
+SubClassOf(ontology:LP_0030107 ontology:LP_0030027)
+
+# Class: ontology:LP_0030108 (Fachbegriff (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030108 "Fachbegriff (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030108 "kommt in Physik Sek I vor")
+SubClassOf(ontology:LP_0030108 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030109 (Entwicklung des Konzepts (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030109 "Entwicklung des Konzepts (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030109 "Was machen wir mit den Basiskonzepten in den Naturwissenschaften? Gleichsetzen mit Kompetenzbereich, Themenfeld oder Lerninhalt? Kommen aus den Bistas.")
+SubClassOf(ontology:LP_0030109 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030110 (Kontext (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030110 "Kontext (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030110 "Kommt vor in Naturwissenschaften Orientierungsstufe.")
+SubClassOf(ontology:LP_0030110 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030111 (Beitrag zur Entwicklung der Basiskonzepte (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030111 "Beitrag zur Entwicklung der Basiskonzepte (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030111 "Was machen wir mit den Basiskonzepten in den Naturwissenschaften? Gleichsetzen mit Kompetenzbereich, Themenfeld oder Lerninhalt? Kommen aus den Bistas.")
+SubClassOf(ontology:LP_0030111 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030112 (Erschließung des Themenfeldes durch Kontextorientierung (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030112 "Erschließung des Themenfeldes durch Kontextorientierung (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030112 "Kommt vor in Physik Sek I.")
+SubClassOf(ontology:LP_0030112 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030113 (Differenzierungsmöglichkeit (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030113 "Differenzierungsmöglichkeit (RP)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030113 "Kommt vor in Physik Sek I.")
+SubClassOf(ontology:LP_0030113 ObjectIntersectionOf(ontology:LP_0000342 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 
 ############################

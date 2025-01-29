@@ -131,7 +131,6 @@ Declaration(ObjectProperty(:LP_0000495))
 Declaration(ObjectProperty(:LP_0000537))
 Declaration(ObjectProperty(:LP_0000578))
 Declaration(ObjectProperty(:LP_0000580))
-Declaration(ObjectProperty(:LP_0000626))
 Declaration(ObjectProperty(:LP_0000812))
 Declaration(ObjectProperty(:LP_0000833))
 Declaration(ObjectProperty(:LP_0000840))
@@ -298,15 +297,13 @@ Declaration(AnnotationProperty(<https://d-nb.info/standards/elementset/gnd#gndId
 #   Object Properties
 ############################
 
-# Object Property: :LP_0000008 (hat_continuant_teil)
+# Object Property: :LP_0000008 (hat Teil)
 
-AnnotationAssertion(rdfs:comment :LP_0000008 "should be BFO equivalent to \"has part\"")
-AnnotationAssertion(rdfs:label :LP_0000008 "has_continuant_part"@en)
-AnnotationAssertion(rdfs:label :LP_0000008 "hat_continuant_teil"@de)
+AnnotationAssertion(rdfs:label :LP_0000008 "hat Teil"@de)
 
-# Object Property: :LP_0000015 (hat_occurent_teil)
+# Object Property: :LP_0000015 (hat Prozessteil)
 
-AnnotationAssertion(rdfs:label :LP_0000015 "hat_occurent_teil"@de)
+AnnotationAssertion(rdfs:label :LP_0000015 "hat Prozessteil"@de)
 
 # Object Property: :LP_0000017 (realisiert_lehrplan)
 
@@ -319,20 +316,19 @@ ObjectPropertyRange(:LP_0000017 :LP_0000438)
 
 AnnotationAssertion(rdfs:label :LP_0000021 "ermöglicht Abschluss"@de)
 
-# Object Property: :LP_0000026 (hat_jahrgangsstufe)
+# Object Property: :LP_0000026 (hat Jahrgangsstufe)
 
-AnnotationAssertion(rdfs:label :LP_0000026 "hat_jahrgangsstufe"@de)
+AnnotationAssertion(rdfs:label :LP_0000026 "hat Jahrgangsstufe"@de)
 ObjectPropertyRange(:LP_0000026 :LP_0000009)
 
-# Object Property: :LP_0000029 (von_bundesland)
+# Object Property: :LP_0000029 (von Bundesland)
 
-AnnotationAssertion(rdfs:label :LP_0000029 "von_bundesland"@de)
+AnnotationAssertion(rdfs:label :LP_0000029 "von Bundesland"@de)
 ObjectPropertyRange(:LP_0000029 :LP_0000040)
 
-# Object Property: :LP_0000047 (hat schulstufe)
+# Object Property: :LP_0000047 (hat Schulstufe)
 
-AnnotationAssertion(rdfs:label :LP_0000047 "hat schulstufe"@de)
-SubObjectPropertyOf(:LP_0000047 owl:topObjectProperty)
+AnnotationAssertion(rdfs:label :LP_0000047 "hat Schulstufe"@de)
 
 # Object Property: :LP_0000058 (endet mit Abschluss)
 
@@ -357,31 +353,31 @@ AnnotationAssertion(rdfs:label :LP_0000086 "ist_niveau_von"@de)
 SubObjectPropertyOf(:LP_0000086 owl:topObjectProperty)
 InverseObjectProperties(:LP_0000086 :LP_0000840)
 
-# Object Property: :LP_0000141 (entspricht_KIM_schulart)
+# Object Property: :LP_0000141 (entspricht KIM Schulart)
 
-AnnotationAssertion(rdfs:label :LP_0000141 "entspricht_KIM_schulart"@de)
+AnnotationAssertion(rdfs:label :LP_0000141 "entspricht KIM Schulart"@de)
 
-# Object Property: :LP_0000440 (für_bildungsgangabschnitt)
+# Object Property: :LP_0000440 (für Bildungsgangabschnitt)
 
-AnnotationAssertion(rdfs:label :LP_0000440 "für_bildungsgangabschnitt"@de)
+AnnotationAssertion(rdfs:label :LP_0000440 "für Bildungsgangabschnitt"@de)
 ObjectPropertyDomain(:LP_0000440 :LP_0000438)
 ObjectPropertyRange(:LP_0000440 :LP_0000811)
 
-# Object Property: :LP_0000483 (hat_funktion)
+# Object Property: :LP_0000483 (hat Funktion)
 
-AnnotationAssertion(rdfs:label :LP_0000483 "hat_funktion"@de)
+AnnotationAssertion(rdfs:label :LP_0000483 "hat Funktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0000483 "hat Funktionsspezifikation"@de)
 InverseObjectProperties(:LP_0000483 :LP_0000495)
 ObjectPropertyRange(:LP_0000483 :LP_0000478)
 
-# Object Property: :LP_0000495 (ist_funktion_von)
+# Object Property: :LP_0000495 (ist Funktion von)
 
-AnnotationAssertion(rdfs:label :LP_0000495 "ist_funktion_von"@de)
+AnnotationAssertion(rdfs:label :LP_0000495 "ist Funktion von"@de)
 
-# Object Property: :LP_0000537 (hat_schulfach)
+# Object Property: :LP_0000537 (hat Schulfach)
 
 AnnotationAssertion(rdfs:comment :LP_0000537 "Wird verwendet, um Etwas einem Fach oder einem Fach mit besonderem \"Bezug\" (z.B. Zweite-Fremdsprache) zuzuordnen."@de)
-AnnotationAssertion(rdfs:label :LP_0000537 "hat_schulfach"@de)
+AnnotationAssertion(rdfs:label :LP_0000537 "hat Schulfach"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000537 "wird üblicherweise am Lehrplan verwendet; kann ggf. auch an Kompetenzbereichen/Kompetenzspezifikation bzw. Themenbereichen/Themen verwendet werden, z.B. bei Lehrplänene die sich auf mehrere Fächer beziehen")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000537 "Gegeben sind:
 
@@ -403,36 +399,31 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 :lpe_2 :hat_schulfach :sf_1 ."@de)
 ObjectPropertyRange(:LP_0000537 ObjectUnionOf(:LP_0000001 :LP_0000540))
 
-# Object Property: :LP_0000578 (hat_niveau_stufe)
+# Object Property: :LP_0000578 (hat Niveaustufe)
 
-AnnotationAssertion(rdfs:label :LP_0000578 "hat_niveau_stufe"@de)
+AnnotationAssertion(rdfs:label :LP_0000578 "hat Niveaustufe"@de)
 InverseObjectProperties(:LP_0000578 :LP_0000580)
 ObjectPropertyDomain(:LP_0000578 :LP_0000261)
 ObjectPropertyRange(:LP_0000578 :LP_0000443)
 
-# Object Property: :LP_0000580 (ist_niveau_stufe_von)
+# Object Property: :LP_0000580 (ist Niveaustufe von)
 
-AnnotationAssertion(rdfs:label :LP_0000580 "ist_niveau_stufe_von"@de)
+AnnotationAssertion(rdfs:label :LP_0000580 "ist Niveaustufe von"@de)
 
-# Object Property: :LP_0000626 (has_key)
+# Object Property: :LP_0000812 (für Schulart)
 
-AnnotationAssertion(rdfs:label :LP_0000626 "has_key"@de)
-FunctionalObjectProperty(:LP_0000626)
-
-# Object Property: :LP_0000812 (für_schulart)
-
-AnnotationAssertion(rdfs:label :LP_0000812 "für_schulart"@de)
+AnnotationAssertion(rdfs:label :LP_0000812 "für Schulart"@de)
 ObjectPropertyRange(:LP_0000812 :LP_0000111)
 
-# Object Property: :LP_0000833 (hat_bildungsgangniveau)
+# Object Property: :LP_0000833 (hat Bildungsgangniveau)
 
-AnnotationAssertion(rdfs:label :LP_0000833 "hat_bildungsgangniveau"@de)
+AnnotationAssertion(rdfs:label :LP_0000833 "hat Bildungsgangniveau"@de)
 ObjectPropertyDomain(:LP_0000833 :LP_0000816)
 ObjectPropertyRange(:LP_0000833 :LP_0000028)
 
-# Object Property: :LP_0000840 (hat_niveau)
+# Object Property: :LP_0000840 (hat Niveau)
 
-AnnotationAssertion(rdfs:label :LP_0000840 "hat_niveau"@de)
+AnnotationAssertion(rdfs:label :LP_0000840 "hat Niveau"@de)
 ObjectPropertyDomain(:LP_0000840 :LP_0000261)
 ObjectPropertyRange(:LP_0000840 :LP_0000037)
 

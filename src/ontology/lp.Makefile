@@ -3,6 +3,17 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+.PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+
+$(IMPORTDIR)/iao_import.owl: $(MIRRORDIR)/iao.owl $(IMPORTDIR)/iao_terms.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/iao_terms.txt --force true --copy-ontology-annotations true --individuals exclude --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+ 		remove --term http://www.w3.org/2002/07/owl#Nothing  --term http://purl.obolibrary.org/obo/PATO_0000001\
+ 		remove --select "RO:*"  \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 CITATION="'Lehrplan Ontology. Version $(VERSION), https://w3id.org/lehrplan/ontology'"
 

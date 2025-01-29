@@ -12,6 +12,7 @@ Import(<https://w3id.org/lehrplan/ontology/lp/imports/bfo_import.owl>)
 Import(<https://w3id.org/lehrplan/ontology/lp/imports/iao_import.owl>)
 
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000024>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000324>))
 
 ############################
 #   Object Properties
@@ -46,6 +47,10 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3i
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000047> (hat schulstufe)
+
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000047> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000058> (endet mit Abschluss)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000058> <http://purl.obolibrary.org/obo/BFO_0000117>)
@@ -53,6 +58,11 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000058> <http://purl
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000141> (entspricht_KIM_schulart)
 
 SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000141> <https://w3id.org/lehrplan/ontology/LP_0000024>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0000324> (Gymnasium Sek II (TH))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000324> "von_schulstufe"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0000324> <https://w3id.org/lehrplan/ontology/LP_0000024>)
 
 # Object Property: <https://w3id.org/lehrplan/ontology/LP_0000440> (für_bildungsgangabschnitt)
 

@@ -25,20 +25,14 @@ Declaration(Class(:LP_0000013))
 Declaration(Class(:LP_0000019))
 Declaration(Class(:LP_0000020))
 Declaration(Class(:LP_0000028))
+Declaration(Class(:LP_0000033))
 Declaration(Class(:LP_0000037))
 Declaration(Class(:LP_0000039))
 Declaration(Class(:LP_0000040))
-Declaration(Class(:LP_0000041))
-Declaration(Class(:LP_0000042))
-Declaration(Class(:LP_0000043))
 Declaration(Class(:LP_0000053))
 Declaration(Class(:LP_0000054))
 Declaration(Class(:LP_0000056))
 Declaration(Class(:LP_0000057))
-Declaration(Class(:LP_0000061))
-Declaration(Class(:LP_0000062))
-Declaration(Class(:LP_0000063))
-Declaration(Class(:LP_0000064))
 Declaration(Class(:LP_0000069))
 Declaration(Class(:LP_0000076))
 Declaration(Class(:LP_0000077))
@@ -125,6 +119,7 @@ Declaration(ObjectProperty(:LP_0000017))
 Declaration(ObjectProperty(:LP_0000021))
 Declaration(ObjectProperty(:LP_0000026))
 Declaration(ObjectProperty(:LP_0000029))
+Declaration(ObjectProperty(:LP_0000047))
 Declaration(ObjectProperty(:LP_0000058))
 Declaration(ObjectProperty(:LP_0000071))
 Declaration(ObjectProperty(:LP_0000072))
@@ -209,6 +204,9 @@ Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s13>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s14>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s15>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s16>))
+Declaration(NamedIndividual(:LP_0000036))
+Declaration(NamedIndividual(:LP_0000045))
+Declaration(NamedIndividual(:LP_0000046))
 Declaration(NamedIndividual(:LP_0000112))
 Declaration(NamedIndividual(:LP_0000114))
 Declaration(NamedIndividual(:LP_0000121))
@@ -330,6 +328,11 @@ ObjectPropertyRange(:LP_0000026 :LP_0000009)
 
 AnnotationAssertion(rdfs:label :LP_0000029 "von_bundesland"@de)
 ObjectPropertyRange(:LP_0000029 :LP_0000040)
+
+# Object Property: :LP_0000047 (hat schulstufe)
+
+AnnotationAssertion(rdfs:label :LP_0000047 "hat schulstufe"@de)
+SubObjectPropertyOf(:LP_0000047 owl:topObjectProperty)
 
 # Object Property: :LP_0000058 (endet mit Abschluss)
 
@@ -534,6 +537,10 @@ AnnotationAssertion(rdfs:label :LP_0000020 "Schulstufe"@de)
 AnnotationAssertion(rdfs:label :LP_0000028 "Bildungsgangniveau"@de)
 SubClassOf(:LP_0000028 :LP_0000037)
 
+# Class: :LP_0000033 (pls delete)
+
+AnnotationAssertion(rdfs:label :LP_0000033 "pls delete"@de)
+
 # Class: :LP_0000037 (Niveau)
 
 AnnotationAssertion(rdfs:comment :LP_0000037 "Niveau bezeichnet eine Kategorisierung des Ausmaß der
@@ -554,24 +561,6 @@ AnnotationAssertion(rdfs:label :LP_0000040 "Bundesland Bezeichnung"@de)
 AnnotationAssertion(rdfs:label :LP_0000040 "state designation"@en)
 EquivalentClasses(:LP_0000040 ObjectOneOf(:LP_3000031 :LP_3000043 :LP_3000044 :LP_3000045 :LP_3000046 :LP_3000047 :LP_3000048 :LP_3000049 :LP_3000050 :LP_3000051 :LP_3000052 :LP_3000053 :LP_3000054 :LP_3000055 :LP_3000056 :LP_3000057))
 DisjointClasses(:LP_0000040 :LP_0000811)
-
-# Class: :LP_0000041 (Primarbereich oBE/BB)
-
-AnnotationAssertion(rdfs:label :LP_0000041 "Primarbereich oBE/BB"@de)
-EquivalentClasses(:LP_0000041 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004)) ObjectSomeValuesFrom(:LP_0000029 :LP_0000054)))
-SubClassOf(:LP_0000041 :LP_0000062)
-
-# Class: :LP_0000042 (Sekundarbereich I oBB)
-
-AnnotationAssertion(rdfs:label :LP_0000042 "Sekundarbereich I oBB"@de)
-EquivalentClasses(:LP_0000042 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000005 :LP_2000006 :LP_2000007 :LP_2000008 :LP_2000009 :LP_2000010)) ObjectSomeValuesFrom(:LP_0000029 :LP_0000054)))
-SubClassOf(:LP_0000042 :LP_0000064)
-
-# Class: :LP_0000043 (Sekundarbereich II)
-
-AnnotationAssertion(rdfs:label :LP_0000043 "Sekundarbereich II"@de)
-EquivalentClasses(:LP_0000043 ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000011 :LP_2000012 :LP_2000013)))
-SubClassOf(:LP_0000043 :LP_0000020)
 
 # Class: :LP_0000053 (Berlin-Brandenburg)
 
@@ -595,30 +584,6 @@ SubClassOf(:LP_0000056 :LP_0000341)
 
 AnnotationAssertion(rdfs:label :LP_0000057 "Qualifikationsphase"@de)
 SubClassOf(:LP_0000057 :LP_0000341)
-
-# Class: :LP_0000061 (Primarbereich BE/BB)
-
-AnnotationAssertion(rdfs:label :LP_0000061 "Primarbereich BE/BB"@de)
-EquivalentClasses(:LP_0000061 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006)) ObjectSomeValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))))
-SubClassOf(:LP_0000061 :LP_0000062)
-
-# Class: :LP_0000062 (Primarbereich)
-
-AnnotationAssertion(rdfs:comment :LP_0000062 "Schulstufe der Grundschule. Mit dem Beginn der Schulpflicht treten die Schülerinnen und Schüler in die gemeinsame Grundschule ein, die von der ersten bis zur vierten, in Berlin und Brandenburg bis zur sechsten Jahrgangsstufe reicht."@de)
-AnnotationAssertion(rdfs:label :LP_0000062 "Primarbereich"@de)
-AnnotationAssertion(rdfs:seeAlso :LP_0000062 <https://www.kmk.org/themen/allgemeinbildende-schulen/bildungswege-und-abschluesse/primarbereich.html>)
-SubClassOf(:LP_0000062 :LP_0000020)
-
-# Class: :LP_0000063 (Sekundarbereich I BB)
-
-AnnotationAssertion(rdfs:label :LP_0000063 "Sekundarbereich I BB"@de)
-EquivalentClasses(:LP_0000063 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000007 :LP_2000008 :LP_2000009 :LP_2000010)) ObjectSomeValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))))
-SubClassOf(:LP_0000063 :LP_0000064)
-
-# Class: :LP_0000064 (Sekundarbereich I)
-
-AnnotationAssertion(rdfs:label :LP_0000064 "Sekundarbereich I"@de)
-SubClassOf(:LP_0000064 :LP_0000020)
 
 # Class: :LP_0000069 (Gymnasialniveau Sek I)
 
@@ -726,7 +691,7 @@ AnnotationAssertion(rdfs:label :LP_0000341 "Gymnasiale Oberstufe"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000341 "Axiom entfernt: 
 
 equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulreife')")
-SubClassOf(:LP_0000341 :LP_0000043)
+SubClassOf(:LP_0000341 :LP_0000033)
 
 # Class: :LP_0000438 (Lehrplan)
 
@@ -1359,6 +1324,21 @@ ClassAssertion(:LP_0000001 <http://w3id.org/kim/schulfaecher/s1047>)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s16> "Abendgymnasium"@de)
 
+# Individual: :LP_0000036 (Primarbereich)
+
+AnnotationAssertion(rdfs:label :LP_0000036 "Primarbereich"@de)
+ClassAssertion(:LP_0000020 :LP_0000036)
+
+# Individual: :LP_0000045 (Sekundarbereich I)
+
+AnnotationAssertion(rdfs:label :LP_0000045 "Sekundarbereich I"@de)
+ClassAssertion(:LP_0000020 :LP_0000045)
+
+# Individual: :LP_0000046 (Sekundarbereich II)
+
+AnnotationAssertion(rdfs:label :LP_0000046 "Sekundarbereich II"@de)
+ClassAssertion(:LP_0000020 :LP_0000046)
+
 # Individual: :LP_0000112 (Gemeinschaftsschule)
 
 AnnotationAssertion(rdfs:comment :LP_0000112 "Schulart, die schulstufenübergreifend ist. Sie umfasst die Jahrgangsstufen 1-10 oder 13, je nach angestrebtem Abschluss. Je nach Bundesland kann die Schulart auch erst beginnend ab Sekundarstufe I sein.
@@ -1579,7 +1559,7 @@ ObjectPropertyAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (Jahrgangsstufe 1)
+# Individual: :LP_2000001 (class level 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
@@ -1597,7 +1577,7 @@ AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
 ClassAssertion(:LP_0000009 :LP_2000003)
 
-# Individual: :LP_2000004 (class level 4)
+# Individual: :LP_2000004 (Jahrgangsstufe 4)
 
 AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
@@ -1615,13 +1595,13 @@ AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (class level 7)
+# Individual: :LP_2000007 (Jahrgangsstufe 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (class level 8)
+# Individual: :LP_2000008 (Jahrgangsstufe 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
@@ -1651,7 +1631,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)
@@ -1738,6 +1718,11 @@ AnnotationAssertion(rdfs:label :LP_3000057 "Brandenburg"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_3000057 "BB")
 
 
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004)) ObjectSomeValuesFrom(:LP_0000029 :LP_0000054)) ObjectHasValue(:LP_0000047 :LP_0000036))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006)) ObjectSomeValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))) ObjectHasValue(:LP_0000047 :LP_0000036))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000005 :LP_2000006 :LP_2000007 :LP_2000008 :LP_2000009 :LP_2000010)) ObjectSomeValuesFrom(:LP_0000029 :LP_0000054)) ObjectHasValue(:LP_0000047 :LP_0000045))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000007 :LP_2000008 :LP_2000009 :LP_2000010)) ObjectSomeValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))) ObjectHasValue(:LP_0000047 :LP_0000045))
+SubClassOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000011 :LP_2000012 :LP_2000013)) ObjectHasValue(:LP_0000047 :LP_0000046))
 DisjointClasses(:LP_0000001 :LP_0000006 :LP_0000007 :LP_0000009 :LP_0000010 :LP_0000011 :LP_0000012 :LP_0000013 :LP_0000019 :LP_0000037 :LP_0000111 :LP_0000261 :LP_0000438 :LP_0000478 :LP_0000540 :LP_0000571 :LP_0000808 :LP_0000816)
 DisjointClasses(:LP_0000001 :LP_0000009 :LP_0000020)
 DisjointClasses(:LP_0000002 :LP_0000004 :LP_0000005)

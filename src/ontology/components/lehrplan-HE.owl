@@ -19,10 +19,8 @@ Declaration(Class(ontology:LP_0000515))
 Declaration(Class(ontology:LP_0000516))
 Declaration(Class(ontology:LP_0001001))
 Declaration(Class(ontology:LP_0001002))
-Declaration(Class(ontology:LP_0001004))
 Declaration(Class(ontology:LP_0001005))
 Declaration(Class(ontology:LP_0001010))
-Declaration(Class(ontology:LP_0001012))
 Declaration(Class(ontology:LP_0002004))
 Declaration(Class(ontology:LP_0002006))
 Declaration(Class(ontology:LP_0002007))
@@ -41,6 +39,8 @@ Declaration(Class(ontology:LP_0002169))
 Declaration(Class(ontology:LP_0002170))
 Declaration(Class(ontology:LP_0002184))
 Declaration(Class(ontology:LP_0002228))
+Declaration(Class(ontology:LP_0030037))
+Declaration(Class(ontology:LP_0030038))
 Declaration(Class(ontology:LP_0030039))
 Declaration(NamedIndividual(ontology:LP_0000090))
 Declaration(NamedIndividual(ontology:LP_0000091))
@@ -90,30 +90,20 @@ SubClassOf(ontology:LP_0000516 ontology:LP_0002077)
 AnnotationAssertion(rdfs:label ontology:LP_0001001 "Lehrplanfragment (HE)"@de)
 SubClassOf(ontology:LP_0001001 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000627)))
 
-# Class: ontology:LP_0001002 (Inhaltsfelder (HE))
+# Class: ontology:LP_0001002 (Inhaltsfeld (HE))
 
-AnnotationAssertion(rdfs:label ontology:LP_0001002 "Inhaltsfelder (HE)"@de)
-SubClassOf(ontology:LP_0001002 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
-
-# Class: ontology:LP_0001004 (Teilinhaltsfelder (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001004 "Teilinhaltsfelder (HE)"@de)
-SubClassOf(ontology:LP_0001004 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+AnnotationAssertion(rdfs:label ontology:LP_0001002 "Inhaltsfeld (HE)"@de)
+SubClassOf(ontology:LP_0001002 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0001005 (Kompetenzbereich (HE))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001005 "Kompetenzbereich (HE)"@de)
 SubClassOf(ontology:LP_0001005 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
 
-# Class: ontology:LP_0001010 (Übergeordnete Themenfelder (HE))
+# Class: ontology:LP_0001010 (Übergeordnetes Themenfeld (HE))
 
-AnnotationAssertion(rdfs:label ontology:LP_0001010 "Übergeordnete Themenfelder (HE)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0001010 "Übergeordnetes Themenfeld (HE)"@de)
 SubClassOf(ontology:LP_0001010 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
-
-# Class: ontology:LP_0001012 (Bezüge zu den Kompetenzbereichen (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001012 "Bezüge zu den Kompetenzbereichen (HE)"@de)
-SubClassOf(ontology:LP_0001012 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 # Class: ontology:LP_0002004 (Hauptschule Sek I (HE))
 
@@ -186,14 +176,15 @@ EquivalentClasses(ontology:LP_0002076 ObjectIntersectionOf(ontology:LP_0000261 O
 AnnotationAssertion(rdfs:label ontology:LP_0002077 "Fachniveau Sek II (HE)"@de)
 SubClassOf(ontology:LP_0002077 ontology:LP_0002076)
 
-# Class: ontology:LP_0002169 (Bildungsstandards (HE))
+# Class: ontology:LP_0002169 (Bildungsstandard (HE))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002169 "Bildungsstandards (HE)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0002169 "Bildungsstandard (HE)"@de)
 SubClassOf(ontology:LP_0002169 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
-# Class: ontology:LP_0002170 (Lerninhalte (HE))
+# Class: ontology:LP_0002170 (Lerninhalt (HE))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002170 "Lerninhalte (HE)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0002170 "Lerninhalt (HE)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002170 "Wird im Lehrplan nicht \"Lerninhalt\" genannt (es gibt keine Bezeichung). Ist einem Themfeld untergeordnet bzw. könnte auch selbst als Themenfeld bezeichnet werden.")
 SubClassOf(ontology:LP_0002170 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
 # Class: ontology:LP_0002184 (Kerncurriculum (HE))
@@ -205,6 +196,16 @@ EquivalentClasses(ontology:LP_0002184 ObjectIntersectionOf(ontology:LP_0000438 O
 
 AnnotationAssertion(rdfs:label ontology:LP_0002228 "Lernzeitbezogene Kompetenzerwartung (HE)"@de)
 SubClassOf(ontology:LP_0002228 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030037 (Schwerpunktsetzung (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030037 "Schwerpunktsetzung (HE)"@de)
+SubClassOf(ontology:LP_0030037 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030038 (Themenfeld (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030038 "Themenfeld (HE)"@de)
+SubClassOf(ontology:LP_0030038 ObjectIntersectionOf(ontology:LP_0002076 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030039 (Bildungsgangniveau (HE))
 

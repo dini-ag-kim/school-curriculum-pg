@@ -558,7 +558,7 @@ DisjointClasses(:LP_0000040 :LP_0000811)
 # Class: :LP_0000041 (Primarbereich oBE/BB)
 
 AnnotationAssertion(rdfs:label :LP_0000041 "Primarbereich oBE/BB"@de)
-EquivalentClasses(:LP_0000041 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004)) ObjectAllValuesFrom(:LP_0000029 :LP_0000054)))
+EquivalentClasses(:LP_0000041 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004)) ObjectSomeValuesFrom(:LP_0000029 :LP_0000054)))
 SubClassOf(:LP_0000041 :LP_0000062)
 
 # Class: :LP_0000042 (Sekundarbereich I oBB)
@@ -570,7 +570,7 @@ SubClassOf(:LP_0000042 :LP_0000064)
 # Class: :LP_0000043 (Sekundarbereich II)
 
 AnnotationAssertion(rdfs:label :LP_0000043 "Sekundarbereich II"@de)
-EquivalentClasses(:LP_0000043 ObjectAllValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000011 :LP_2000012 :LP_2000013)))
+EquivalentClasses(:LP_0000043 ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000011 :LP_2000012 :LP_2000013)))
 SubClassOf(:LP_0000043 :LP_0000020)
 
 # Class: :LP_0000053 (Berlin-Brandenburg)
@@ -599,7 +599,7 @@ SubClassOf(:LP_0000057 :LP_0000341)
 # Class: :LP_0000061 (Primarbereich BE/BB)
 
 AnnotationAssertion(rdfs:label :LP_0000061 "Primarbereich BE/BB"@de)
-EquivalentClasses(:LP_0000061 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006)) ObjectAllValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))))
+EquivalentClasses(:LP_0000061 ObjectIntersectionOf(ObjectSomeValuesFrom(:LP_0000026 ObjectOneOf(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006)) ObjectSomeValuesFrom(:LP_0000029 ObjectOneOf(:LP_3000048 :LP_3000057))))
 SubClassOf(:LP_0000061 :LP_0000062)
 
 # Class: :LP_0000062 (Primarbereich)
@@ -1579,13 +1579,13 @@ ObjectPropertyAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (class level 1)
+# Individual: :LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (Jahrgangsstufe 2)
+# Individual: :LP_2000002 (class level 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
@@ -1603,13 +1603,13 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (Jahrgangsstufe 5)
+# Individual: :LP_2000005 (class level 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (class level 6)
+# Individual: :LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
@@ -1639,19 +1639,19 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
 ClassAssertion(:LP_0000009 :LP_2000011)
 
-# Individual: :LP_2000012 (class level 12)
+# Individual: :LP_2000012 (Jahrgangsstufe 12)
 
 AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (class level 13)
+# Individual: :LP_2000013 (Jahrgangsstufe 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)
@@ -1741,6 +1741,8 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_3000057 "
 DisjointClasses(:LP_0000001 :LP_0000006 :LP_0000007 :LP_0000009 :LP_0000010 :LP_0000011 :LP_0000012 :LP_0000013 :LP_0000019 :LP_0000037 :LP_0000111 :LP_0000261 :LP_0000438 :LP_0000478 :LP_0000540 :LP_0000571 :LP_0000808 :LP_0000816)
 DisjointClasses(:LP_0000001 :LP_0000009 :LP_0000020)
 DisjointClasses(:LP_0000002 :LP_0000004 :LP_0000005)
+DifferentIndividuals(:LP_0000464 :LP_0000465 :LP_0000466 :LP_0000467 :LP_0000468 :LP_0000469 :LP_0000470 :LP_0000616)
+DifferentIndividuals(:LP_2000001 :LP_2000002 :LP_2000003 :LP_2000004 :LP_2000005 :LP_2000006 :LP_2000007 :LP_2000008 :LP_2000009 :LP_2000010 :LP_2000011 :LP_2000012 :LP_2000013)
 SubObjectPropertyOf(ObjectPropertyChain(:LP_0000537 :LP_0000537) :LP_0000537)
 SubObjectPropertyOf(ObjectPropertyChain(:LP_0000578 :LP_0000840) :LP_0000840)
 )

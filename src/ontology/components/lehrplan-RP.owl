@@ -36,9 +36,6 @@ Declaration(Class(ontology:LP_0001018))
 Declaration(Class(ontology:LP_0001019))
 Declaration(Class(ontology:LP_0001020))
 Declaration(Class(ontology:LP_0001021))
-Declaration(Class(ontology:LP_0001022))
-Declaration(Class(ontology:LP_0001023))
-Declaration(Class(ontology:LP_0001024))
 Declaration(Class(ontology:LP_0002195))
 Declaration(Class(ontology:LP_0002196))
 Declaration(Class(ontology:LP_0002197))
@@ -67,6 +64,9 @@ Declaration(Class(ontology:LP_0030110))
 Declaration(Class(ontology:LP_0030111))
 Declaration(Class(ontology:LP_0030112))
 Declaration(Class(ontology:LP_0030113))
+Declaration(NamedIndividual(ontology:LP_0000143))
+Declaration(NamedIndividual(ontology:LP_0000147))
+Declaration(NamedIndividual(ontology:LP_0000151))
 Declaration(NamedIndividual(ontology:LP_0000280))
 Declaration(NamedIndividual(ontology:LP_0000281))
 Declaration(NamedIndividual(ontology:LP_0000282))
@@ -208,24 +208,6 @@ SubClassOf(ontology:LP_0001020 ontology:LP_0001018)
 AnnotationAssertion(rdfs:label ontology:LP_0001021 "Leistungskurs (RP)"@de)
 EquivalentClasses(ontology:LP_0001021 ObjectIntersectionOf(ontology:LP_0001018 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 SubClassOf(ontology:LP_0001021 ontology:LP_0001018)
-
-# Class: ontology:LP_0001022 (Grundlegendes Kompetenzniveau (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001022 "Grundlegendes Kompetenzniveau (RP)"@de)
-EquivalentClasses(ontology:LP_0001022 ObjectIntersectionOf(ontology:LP_0001019 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-SubClassOf(ontology:LP_0001022 ontology:LP_0001019)
-
-# Class: ontology:LP_0001023 (Mittleres Kompetenzniveau (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001023 "Mittleres Kompetenzniveau (RP)"@de)
-EquivalentClasses(ontology:LP_0001023 ObjectIntersectionOf(ontology:LP_0001019 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-SubClassOf(ontology:LP_0001023 ontology:LP_0001019)
-
-# Class: ontology:LP_0001024 (Erhöhtes Kompetenzniveau (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001024 "Erhöhtes Kompetenzniveau (RP)"@de)
-EquivalentClasses(ontology:LP_0001024 ObjectIntersectionOf(ontology:LP_0001019 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-SubClassOf(ontology:LP_0001024 ontology:LP_0001019)
 
 # Class: ontology:LP_0002195 (Inhalt zum Erwerb der Kompetenzen (RP))
 
@@ -407,6 +389,24 @@ SubClassOf(ontology:LP_0030113 ObjectIntersectionOf(ontology:LP_0000342 ObjectSo
 ############################
 #   Named Individuals
 ############################
+
+# Individual: ontology:LP_0000143 (Erhöhtes Kompetenzniveau (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000143 "Erhöhtes Kompetenzniveau (RP)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000143)
+ClassAssertion(ontology:LP_0001019 ontology:LP_0000143)
+
+# Individual: ontology:LP_0000147 (Grundlegendes Kompetenzniveau (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000147 "Grundlegendes Kompetenzniveau (RP)"@de)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000147)
+ClassAssertion(ontology:LP_0001019 ontology:LP_0000147)
+
+# Individual: ontology:LP_0000151 (Mittleres Kompetenzniveau (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000151 "Mittleres Kompetenzniveau (RP)"@de)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000151)
+ClassAssertion(ontology:LP_0001019 ontology:LP_0000151)
 
 # Individual: ontology:LP_0000280 (Allgemeinbildender Schulabschluss (RP))
 

@@ -33,9 +33,6 @@ Declaration(Class(ontology:LP_0000510))
 Declaration(Class(ontology:LP_0000511))
 Declaration(Class(ontology:LP_0000806))
 Declaration(Class(ontology:LP_0001101))
-Declaration(Class(ontology:LP_0001102))
-Declaration(Class(ontology:LP_0001103))
-Declaration(Class(ontology:LP_0001104))
 Declaration(Class(ontology:LP_0002003))
 Declaration(Class(ontology:LP_0002051))
 Declaration(Class(ontology:LP_0002052))
@@ -48,9 +45,11 @@ Declaration(Class(ontology:LP_0002064))
 Declaration(Class(ontology:LP_0030001))
 Declaration(Class(ontology:LP_0030002))
 Declaration(Class(ontology:LP_0030003))
-Declaration(Class(ontology:LP_0030049))
 Declaration(Class(ontology:LP_0030114))
-Declaration(NamedIndividual(ontology:LP_0000073))
+Declaration(NamedIndividual(ontology:LP_0000014))
+Declaration(NamedIndividual(ontology:LP_0000016))
+Declaration(NamedIndividual(ontology:LP_0000018))
+Declaration(NamedIndividual(ontology:LP_0000022))
 Declaration(NamedIndividual(ontology:LP_0000148))
 Declaration(NamedIndividual(ontology:LP_0000149))
 Declaration(NamedIndividual(ontology:LP_0000150))
@@ -171,23 +170,6 @@ EquivalentClasses(ontology:LP_0000806 ObjectIntersectionOf(ontology:LP_0000438 O
 AnnotationAssertion(rdfs:label ontology:LP_0001101 "Bildungsgangniveau (BW)"@de)
 EquivalentClasses(ontology:LP_0001101 ObjectIntersectionOf(ontology:LP_0000028 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
 
-# Class: ontology:LP_0001102 (E Niveau (BW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001102 "E Niveau (BW)"@de)
-SubClassOf(ontology:LP_0001102 ObjectIntersectionOf(ontology:LP_0001101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
-# Class: ontology:LP_0001103 (M Niveau (BW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001103 "M Niveau (BW)"@de)
-EquivalentClasses(ontology:LP_0001103 ObjectIntersectionOf(ontology:LP_0001101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-SubClassOf(ontology:LP_0001103 ontology:LP_0001101)
-
-# Class: ontology:LP_0001104 (G Niveau (BW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001104 "G Niveau (BW)"@de)
-EquivalentClasses(ontology:LP_0001104 ObjectIntersectionOf(ontology:LP_0001101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-SubClassOf(ontology:LP_0001104 ontology:LP_0001101)
-
 # Class: ontology:LP_0002003 (Hauptschule Sek I (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002003 "Hauptschule Sek I (BW)"@de)
@@ -250,11 +232,6 @@ SubClassOf(ontology:LP_0030002 ObjectIntersectionOf(ontology:LP_0002051 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030003 "Thema (BW)"@de)
 SubClassOf(ontology:LP_0030003 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
 
-# Class: ontology:LP_0030049 (Gymnasialniveau Sek I (BW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030049 "Gymnasialniveau Sek I (BW)"@de)
-SubClassOf(ontology:LP_0030049 ObjectIntersectionOf(ontology:LP_0001101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
 # Class: ontology:LP_0030114 (Experiment (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030114 "Experiment (BW)"@de)
@@ -266,9 +243,29 @@ SubClassOf(ontology:LP_0030114 ObjectIntersectionOf(ontology:LP_0002051 ObjectSo
 #   Named Individuals
 ############################
 
-# Individual: ontology:LP_0000073 (ex1)
+# Individual: ontology:LP_0000014 (E Niveau (BW))
 
-AnnotationAssertion(rdfs:label ontology:LP_0000073 "ex1"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000014 "E Niveau (BW)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000014)
+ClassAssertion(ontology:LP_0001101 ontology:LP_0000014)
+
+# Individual: ontology:LP_0000016 (G Niveau (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000016 "G Niveau (BW)"@de)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000016)
+ClassAssertion(ontology:LP_0001101 ontology:LP_0000016)
+
+# Individual: ontology:LP_0000018 (Gymnasialniveau Sek I (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000018 "Gymnasialniveau Sek I (BW)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000018)
+ClassAssertion(ontology:LP_0001101 ontology:LP_0000018)
+
+# Individual: ontology:LP_0000022 (M Niveau (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000022 "M Niveau (BW)"@de)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000022)
+ClassAssertion(ontology:LP_0001101 ontology:LP_0000022)
 
 # Individual: ontology:LP_0000148 (Allgemeinbildender Schulabschluss (BW))
 

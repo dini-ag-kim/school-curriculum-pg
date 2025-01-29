@@ -39,13 +39,13 @@ Declaration(Class(ontology:LP_0002218))
 Declaration(Class(ontology:LP_0002219))
 Declaration(Class(ontology:LP_0002220))
 Declaration(Class(ontology:LP_0002221))
-Declaration(Class(ontology:LP_0030052))
-Declaration(Class(ontology:LP_0030065))
-Declaration(Class(ontology:LP_0030066))
-Declaration(Class(ontology:LP_0030067))
-Declaration(Class(ontology:LP_0030068))
-Declaration(Class(ontology:LP_0030069))
 Declaration(NamedIndividual(ontology:LP_0000060))
+Declaration(NamedIndividual(ontology:LP_0000093))
+Declaration(NamedIndividual(ontology:LP_0000094))
+Declaration(NamedIndividual(ontology:LP_0000095))
+Declaration(NamedIndividual(ontology:LP_0000096))
+Declaration(NamedIndividual(ontology:LP_0000097))
+Declaration(NamedIndividual(ontology:LP_0000098))
 Declaration(NamedIndividual(ontology:LP_0000270))
 Declaration(NamedIndividual(ontology:LP_0000271))
 Declaration(NamedIndividual(ontology:LP_0000272))
@@ -203,41 +203,6 @@ SubClassOf(ontology:LP_0002220 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002221 "Kompetenz (HH)"@de)
 SubClassOf(ontology:LP_0002221 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
-# Class: ontology:LP_0030052 (Mindestanforderungen für den ersten allgemeinbildenden Schulabschluss (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030052 "Mindestanforderungen für den ersten allgemeinbildenden Schulabschluss (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030052 "gilt für die Jahrgangsstufen 7-9")
-SubClassOf(ontology:LP_0030052 ObjectIntersectionOf(ontology:LP_0001108 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0030065 (Mindestanforderungen für den mittleren Schulabschluss (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030065 "Mindestanforderungen für den mittleren Schulabschluss (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030065 "gilt für die Jahrgangsstufen 7-10")
-SubClassOf(ontology:LP_0030065 ObjectIntersectionOf(ontology:LP_0001108 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
-# Class: ontology:LP_0030066 (Mindestanforderungen für den Übergang in die Studienstufe (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030066 "Mindestanforderungen für den Übergang in die Studienstufe (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030066 "gilt für die Jahrgangsstufen 9-11")
-SubClassOf(ontology:LP_0030066 ObjectIntersectionOf(ontology:LP_0001108 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
-# Class: ontology:LP_0030067 (Gymnasialniveau Sek I (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030067 "Gymnasialniveau Sek I (HH)"@de)
-SubClassOf(ontology:LP_0030067 ObjectIntersectionOf(ontology:LP_0001108 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
-# Class: ontology:LP_0030068 (Mindestanforderungen (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030068 "Mindestanforderungen (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030068 "gilt nur für die Jahrgangstufen 5-6")
-SubClassOf(ontology:LP_0030068 ObjectIntersectionOf(ontology:LP_0001108 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0030069 (Erhöhte Anforderungen (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030069 "Erhöhte Anforderungen (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030069 "gilt nur für die Jahrgangstufen 5-6")
-SubClassOf(ontology:LP_0030069 ObjectIntersectionOf(ontology:LP_0001108 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
 
 ############################
 #   Named Individuals
@@ -247,6 +212,48 @@ SubClassOf(ontology:LP_0030069 ObjectIntersectionOf(ontology:LP_0001108 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0000060 "Allgemeinbildender Schulabschluss (HH)"@de)
 ClassAssertion(ontology:LP_0000163 ontology:LP_0000060)
+
+# Individual: ontology:LP_0000093 (Erhöhte Anforderungen (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000093 "Erhöhte Anforderungen (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000093 "gilt nur für die Jahrgangstufen 5-6")
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000093)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000093)
+ClassAssertion(ontology:LP_0001108 ontology:LP_0000093)
+
+# Individual: ontology:LP_0000094 (Gymnasialniveau Sek I (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000094 "Gymnasialniveau Sek I (HH)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000094)
+ClassAssertion(ontology:LP_0001108 ontology:LP_0000094)
+
+# Individual: ontology:LP_0000095 (Mindestanforderungen (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000095 "Mindestanforderungen (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000095 "gilt nur für die Jahrgangstufen 5-6")
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000095)
+ClassAssertion(ontology:LP_0001108 ontology:LP_0000095)
+
+# Individual: ontology:LP_0000096 (Mindestanforderungen für den ersten allgemeinbildenden Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000096 "Mindestanforderungen für den ersten allgemeinbildenden Schulabschluss (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000096 "gilt für die Jahrgangsstufen 7-9")
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000096)
+ClassAssertion(ontology:LP_0001108 ontology:LP_0000096)
+
+# Individual: ontology:LP_0000097 (Mindestanforderungen für den mittleren Schulabschluss (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000097 "Mindestanforderungen für den mittleren Schulabschluss (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000097 "gilt für die Jahrgangsstufen 7-10")
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000097)
+ClassAssertion(ontology:LP_0001108 ontology:LP_0000097)
+
+# Individual: ontology:LP_0000098 (Mindestanforderungen für den Übergang in die Studienstufe (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000098 "Mindestanforderungen für den Übergang in die Studienstufe (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000098 "gilt für die Jahrgangsstufen 9-11")
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000098)
+ClassAssertion(ontology:LP_0001108 ontology:LP_0000098)
 
 # Individual: ontology:LP_0000270 (Mittlerer Schulabschluss (HH))
 

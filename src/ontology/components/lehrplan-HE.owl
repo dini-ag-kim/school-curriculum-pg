@@ -42,9 +42,9 @@ Declaration(Class(ontology:LP_0002170))
 Declaration(Class(ontology:LP_0002184))
 Declaration(Class(ontology:LP_0002228))
 Declaration(Class(ontology:LP_0030039))
-Declaration(Class(ontology:LP_0030040))
-Declaration(Class(ontology:LP_0030042))
-Declaration(Class(ontology:LP_0030048))
+Declaration(NamedIndividual(ontology:LP_0000090))
+Declaration(NamedIndividual(ontology:LP_0000091))
+Declaration(NamedIndividual(ontology:LP_0000092))
 Declaration(NamedIndividual(ontology:LP_0002000))
 Declaration(NamedIndividual(ontology:LP_0002001))
 Declaration(NamedIndividual(ontology:LP_0002002))
@@ -211,27 +211,28 @@ SubClassOf(ontology:LP_0002228 ObjectIntersectionOf(ontology:LP_0002076 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030039 "Bildungsgangniveau (HE)"@de)
 SubClassOf(ontology:LP_0030039 ontology:LP_0000028)
 
-# Class: ontology:LP_0030040 (Hauptschulniveau (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030040 "Hauptschulniveau (HE)"@de)
-EquivalentClasses(ontology:LP_0030040 ObjectIntersectionOf(ontology:LP_0030039 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0030042 (Realschulniveau (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030042 "Realschulniveau (HE)"@de)
-EquivalentClasses(ontology:LP_0030042 ObjectIntersectionOf(ontology:LP_0030039 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-SubClassOf(ontology:LP_0030042 ontology:LP_0030039)
-
-# Class: ontology:LP_0030048 (Gymnasialniveau (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030048 "Gymnasialniveau (HE)"@de)
-EquivalentClasses(ontology:LP_0030048 ObjectIntersectionOf(ontology:LP_0030039 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-SubClassOf(ontology:LP_0030048 ontology:LP_0030039)
-
 
 ############################
 #   Named Individuals
 ############################
+
+# Individual: ontology:LP_0000090 (Gymnasialniveau (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000090 "Gymnasialniveau (HE)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000090)
+ClassAssertion(ontology:LP_0030039 ontology:LP_0000090)
+
+# Individual: ontology:LP_0000091 (Hauptschulniveau (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000091 "Hauptschulniveau (HE)"@de)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000091)
+ClassAssertion(ontology:LP_0030039 ontology:LP_0000091)
+
+# Individual: ontology:LP_0000092 (Realschulniveau (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000092 "Realschulniveau (HE)"@de)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000092)
+ClassAssertion(ontology:LP_0030039 ontology:LP_0000092)
 
 # Individual: ontology:LP_0002000 (Allgemeinbildender Schulabschluss (HE))
 

@@ -12,7 +12,6 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 Ontology(<https://w3id.org/lehrplan/ontology/components/lehrplan-HB.owl>
 Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
 
-Declaration(Class(ontology:LP_0000036))
 Declaration(Class(ontology:LP_0000174))
 Declaration(Class(ontology:LP_0000188))
 Declaration(Class(ontology:LP_0000212))
@@ -27,8 +26,6 @@ Declaration(Class(ontology:LP_0000258))
 Declaration(Class(ontology:LP_0000259))
 Declaration(Class(ontology:LP_0000821))
 Declaration(Class(ontology:LP_0001105))
-Declaration(Class(ontology:LP_0001106))
-Declaration(Class(ontology:LP_0001107))
 Declaration(Class(ontology:LP_0002118))
 Declaration(Class(ontology:LP_0002119))
 Declaration(Class(ontology:LP_0002120))
@@ -50,7 +47,10 @@ Declaration(Class(ontology:LP_0002135))
 Declaration(Class(ontology:LP_0002154))
 Declaration(Class(ontology:LP_0002172))
 Declaration(Class(ontology:LP_0002193))
-Declaration(Class(ontology:LP_0030038))
+Declaration(NamedIndividual(ontology:LP_0000034))
+Declaration(NamedIndividual(ontology:LP_0000035))
+Declaration(NamedIndividual(ontology:LP_0000038))
+Declaration(NamedIndividual(ontology:LP_0000044))
 Declaration(NamedIndividual(ontology:LP_0000245))
 Declaration(NamedIndividual(ontology:LP_0000246))
 Declaration(NamedIndividual(ontology:LP_0000247))
@@ -61,11 +61,6 @@ Declaration(NamedIndividual(ontology:LP_0000248))
 ############################
 #   Classes
 ############################
-
-# Class: ontology:LP_0000036 (Gymnasialniveau Sek I (HB))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000036 "Gymnasialniveau Sek I (HB)"@de)
-SubClassOf(ontology:LP_0000036 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
 
 # Class: ontology:LP_0000174 (Allgemeine Hochschulreife (HB))
 
@@ -140,18 +135,6 @@ EquivalentClasses(ontology:LP_0000821 ObjectIntersectionOf(ontology:LP_0000438 O
 
 AnnotationAssertion(rdfs:label ontology:LP_0001105 "Bildungsgangniveau (HB)"@de)
 SubClassOf(ontology:LP_0001105 ObjectIntersectionOf(ontology:LP_0000028 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000056)))
-
-# Class: ontology:LP_0001106 (Grundlegendes Anforderungsniveau (HB))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001106 "Grundlegendes Anforderungsniveau (HB)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0001106 "gilt für die Jahrgangsstufen 7-10")
-SubClassOf(ontology:LP_0001106 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0001107 (Erweitertes Anforderungsniveau (HB))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001107 "Erweitertes Anforderungsniveau (HB)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0001107 "gilt für die Jahrgangsstufen 7-10")
-SubClassOf(ontology:LP_0001107 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
 
 # Class: ontology:LP_0002118 (Element (HB))
 
@@ -274,16 +257,40 @@ AnnotationAssertion(rdfs:label ontology:LP_0002193 "Sachgebiet (HB)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002193 "in Mathe Sek II")
 SubClassOf(ontology:LP_0002193 ObjectIntersectionOf(ontology:LP_0002118 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
 
-# Class: ontology:LP_0030038 (Oberschulniveau (HB))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030038 "Oberschulniveau (HB)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030038 "gilt für die Jahrgangsstufen 5-6")
-SubClassOf(ontology:LP_0030038 ObjectIntersectionOf(ontology:LP_0001105 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
 
 ############################
 #   Named Individuals
 ############################
+
+# Individual: ontology:LP_0000034 (Erweitertes Anforderungsniveau (HB))
+
+AnnotationAssertion(rdfs:comment ontology:LP_0000034 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13).")
+AnnotationAssertion(rdfs:label ontology:LP_0000034 "Erweitertes Anforderungsniveau (HB)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000034)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000034)
+ClassAssertion(ontology:LP_0001105 ontology:LP_0000034)
+
+# Individual: ontology:LP_0000035 (Grundlegendes Anforderungsniveau (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000035 "Grundlegendes Anforderungsniveau (HB)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000035 "gilt für die Jahrgangsstufen 7-10")
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000035)
+ClassAssertion(ontology:LP_0001105 ontology:LP_0000035)
+
+# Individual: ontology:LP_0000038 (Gymnasialniveau Sek I (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000038 "Gymnasialniveau Sek I (HB)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000038)
+ClassAssertion(ontology:LP_0001105 ontology:LP_0000038)
+
+# Individual: ontology:LP_0000044 (Oberschulniveau (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000044 "Oberschulniveau (HB)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000044 "gilt für die Jahrgangsstufen 5-6")
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000044)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000044)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000044)
+ClassAssertion(ontology:LP_0001105 ontology:LP_0000044)
 
 # Individual: ontology:LP_0000245 (Allgemeinbildender Schulabschluss (HB))
 

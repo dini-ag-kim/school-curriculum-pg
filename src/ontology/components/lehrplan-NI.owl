@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/>)
+Prefix(:=<https://w3id.org/lehrplan/ontology/components/lehrplan-NI.owl/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -42,15 +42,15 @@ Declaration(Class(ontology:LP_0002207))
 Declaration(Class(ontology:LP_0002208))
 Declaration(Class(ontology:LP_0002209))
 Declaration(Class(ontology:LP_0030080))
-Declaration(Class(ontology:LP_0030081))
-Declaration(Class(ontology:LP_0030082))
-Declaration(Class(ontology:LP_0030083))
-Declaration(Class(ontology:LP_0030084))
-Declaration(Class(ontology:LP_0030085))
-Declaration(Class(ontology:LP_0030086))
-Declaration(Class(ontology:LP_0030087))
-Declaration(Class(ontology:LP_0030088))
-Declaration(Class(ontology:LP_0030089))
+Declaration(NamedIndividual(ontology:LP_0000103))
+Declaration(NamedIndividual(ontology:LP_0000104))
+Declaration(NamedIndividual(ontology:LP_0000107))
+Declaration(NamedIndividual(ontology:LP_0000108))
+Declaration(NamedIndividual(ontology:LP_0000110))
+Declaration(NamedIndividual(ontology:LP_0000116))
+Declaration(NamedIndividual(ontology:LP_0000117))
+Declaration(NamedIndividual(ontology:LP_0000118))
+Declaration(NamedIndividual(ontology:LP_0000129))
 Declaration(NamedIndividual(ontology:LP_0002020))
 Declaration(NamedIndividual(ontology:LP_0002021))
 Declaration(NamedIndividual(ontology:LP_0002022))
@@ -222,60 +222,72 @@ SubClassOf(ontology:LP_0002209 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030080 "Bildungsgangniveau (NI)"@de)
 SubClassOf(ontology:LP_0030080 ontology:LP_0000028)
 
-# Class: ontology:LP_0030081 (Gymnasialniveau Sek I (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030081 "Gymnasialniveau Sek I (NI)"@de)
-SubClassOf(ontology:LP_0030081 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
-# Class: ontology:LP_0030082 (Hauptschulniveau (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030082 "Hauptschulniveau (NI)"@de)
-SubClassOf(ontology:LP_0030082 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0030083 (Zusätzliche Voraussetzungen für den Erwerb des Mittleres Schulabschlusses (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030083 "Zusätzliche Voraussetzungen für den Erwerb des Mittleres Schulabschlusses (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030083 "für die Hauptschule")
-SubClassOf(ontology:LP_0030083 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
-# Class: ontology:LP_0030084 (Realschulniveau (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030084 "Realschulniveau (NI)"@de)
-SubClassOf(ontology:LP_0030084 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
-# Class: ontology:LP_0030085 (Oberschulniveau (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030085 "Oberschulniveau (NI)"@de)
-SubClassOf(ontology:LP_0030085 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0030086 (grundlegende Anforderungen (G-Kurs) (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030086 "grundlegende Anforderungen (G-Kurs) (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030086 "für die Gesamtschule")
-SubClassOf(ontology:LP_0030086 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
-# Class: ontology:LP_0030087 (erhöhte Anforderungen (E-Kurs) (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030087 "erhöhte Anforderungen (E-Kurs) (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030087 "für die Gesamtschule")
-SubClassOf(ontology:LP_0030087 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
-# Class: ontology:LP_0030088 (zusätzliche Anforderungen (Z-Kurs) (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030088 "zusätzliche Anforderungen (Z-Kurs) (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030088 "für die Gesamtschule")
-SubClassOf(ontology:LP_0030088 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
-# Class: ontology:LP_0030089 (vertiefendes Niveau (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030089 "vertiefendes Niveau (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030089 "für die Gesamtschule")
-SubClassOf(ontology:LP_0030089 ObjectIntersectionOf(ontology:LP_0030080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
 
 ############################
 #   Named Individuals
 ############################
+
+# Individual: ontology:LP_0000103 (erhöhte Anforderungen (E-Kurs) (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000103 "erhöhte Anforderungen (E-Kurs) (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000103 "für die Gesamtschule")
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000103)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000103)
+
+# Individual: ontology:LP_0000104 (grundlegende Anforderungen (G-Kurs) (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000104 "grundlegende Anforderungen (G-Kurs) (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000104 "für die Gesamtschule")
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000104)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000104)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000104)
+
+# Individual: ontology:LP_0000107 (Gymnasialniveau Sek I (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000107 "Gymnasialniveau Sek I (NI)"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000107)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000107)
+
+# Individual: ontology:LP_0000108 (Hauptschulniveau (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000108 "Hauptschulniveau (NI)"@de)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000108)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000108)
+
+# Individual: ontology:LP_0000110 (Oberschulniveau (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000110 "Oberschulniveau (NI)"@de)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000110)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000110)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000110)
+
+# Individual: ontology:LP_0000116 (Realschulniveau (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000116 "Realschulniveau (NI)"@de)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000116)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000116)
+
+# Individual: ontology:LP_0000117 (vertiefendes Niveau (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000117 "vertiefendes Niveau (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000117 "für die Gesamtschule")
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000117)
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000117)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000117)
+
+# Individual: ontology:LP_0000118 (zusätzliche Anforderungen (Z-Kurs) (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000118 "zusätzliche Anforderungen (Z-Kurs) (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000118 "für die Gesamtschule")
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000118)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000118)
+
+# Individual: ontology:LP_0000129 (Zusätzliche Voraussetzungen für den Erwerb des Mittleres Schulabschlusses (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000129 "Zusätzliche Voraussetzungen für den Erwerb des Mittleres Schulabschlusses (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000129 "für die Hauptschule")
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000129)
+ClassAssertion(ontology:LP_0030080 ontology:LP_0000129)
 
 # Individual: ontology:LP_0002020 (Allgemeinbildender Schulabschluss (NI))
 

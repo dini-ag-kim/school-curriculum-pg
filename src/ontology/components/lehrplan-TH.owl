@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/>)
+Prefix(:=<https://w3id.org/lehrplan/ontology/components/lehrplan-TH.owl/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -29,8 +29,6 @@ Declaration(Class(ontology:LP_0000528))
 Declaration(Class(ontology:LP_0000529))
 Declaration(Class(ontology:LP_0000820))
 Declaration(Class(ontology:LP_0001038))
-Declaration(Class(ontology:LP_0001039))
-Declaration(Class(ontology:LP_0001040))
 Declaration(Class(ontology:LP_0002097))
 Declaration(Class(ontology:LP_0002098))
 Declaration(Class(ontology:LP_0030024))
@@ -40,9 +38,11 @@ Declaration(Class(ontology:LP_0030028))
 Declaration(Class(ontology:LP_0030029))
 Declaration(Class(ontology:LP_0030031))
 Declaration(Class(ontology:LP_0030032))
-Declaration(Class(ontology:LP_0030078))
-Declaration(Class(ontology:LP_0030079))
 Declaration(Class(ontology:LP_0030097))
+Declaration(NamedIndividual(ontology:LP_0000308))
+Declaration(NamedIndividual(ontology:LP_0000309))
+Declaration(NamedIndividual(ontology:LP_0000310))
+Declaration(NamedIndividual(ontology:LP_0000311))
 Declaration(NamedIndividual(ontology:LP_0000312))
 Declaration(NamedIndividual(ontology:LP_0000313))
 Declaration(NamedIndividual(ontology:LP_0000314))
@@ -144,18 +144,6 @@ EquivalentClasses(ontology:LP_0000820 ObjectIntersectionOf(ontology:LP_0000438 O
 AnnotationAssertion(rdfs:label ontology:LP_0001038 "Bildungsgangniveau (TH)"@de)
 SubClassOf(ontology:LP_0001038 ontology:LP_0000028)
 
-# Class: ontology:LP_0001039 (Realschulabschlussbezogener Kurs (TH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001039 "Realschulabschlussbezogener Kurs (TH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0001039 "gilt für die Jahrgangsstufen 9-10")
-SubClassOf(ontology:LP_0001039 ObjectIntersectionOf(ontology:LP_0001038 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838)))
-
-# Class: ontology:LP_0001040 (Hauptschulabschlussbezogener Kurs (TH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001040 "Hauptschulabschlussbezogener Kurs (TH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0001040 "gilt für die Jahrgangsstufen 9-10")
-SubClassOf(ontology:LP_0001040 ObjectIntersectionOf(ontology:LP_0001038 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
 # Class: ontology:LP_0002097 (Element (TH))
 
 AnnotationAssertion(rdfs:comment ontology:LP_0002097 "Lehrplan Element bezogen auf den Lehrplan von Thüringen"@de)
@@ -204,17 +192,6 @@ SubClassOf(ontology:LP_0030031 ObjectIntersectionOf(ontology:LP_0002097 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030032 "Schwerpunkte (TH)"@de)
 SubClassOf(ontology:LP_0030032 ObjectIntersectionOf(ontology:LP_0002097 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0030078 (Gymnasialniveau Sek I (TH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030078 "Gymnasialniveau Sek I (TH)"@de)
-SubClassOf(ontology:LP_0030078 ObjectIntersectionOf(ontology:LP_0001038 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000068)))
-
-# Class: ontology:LP_0030079 (Hauptschul- und Realschulniveau (TH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030079 "Hauptschul- und Realschulniveau (TH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030079 "gilt für die Jahrgangsstufen 5-8")
-SubClassOf(ontology:LP_0030079 ObjectIntersectionOf(ontology:LP_0001038 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000838) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000839)))
-
 # Class: ontology:LP_0030097 (Ziel (TH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030097 "Ziel (TH)"@de)
@@ -225,6 +202,33 @@ SubClassOf(ontology:LP_0030097 ObjectIntersectionOf(ontology:LP_0002097 ObjectSo
 ############################
 #   Named Individuals
 ############################
+
+# Individual: ontology:LP_0000308 (Gymnasialniveau Sek I (TH)i)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000308 "Gymnasialniveau Sek I (TH)i"@de)
+ClassAssertion(ontology:LP_0000069 ontology:LP_0000308)
+
+# Individual: ontology:LP_0000309 (Hauptschul- und Realschulniveau (TH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000309 "Hauptschul- und Realschulniveau (TH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000309 "gilt für die Jahrgangsstufen 5-8")
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000309)
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000309)
+ClassAssertion(ontology:LP_0001038 ontology:LP_0000309)
+
+# Individual: ontology:LP_0000310 (Hauptschulabschlussbezogener Kurs (TH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000310 "Hauptschulabschlussbezogener Kurs (TH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000310 "gilt für die Jahrgangsstufen 9-10")
+ClassAssertion(ontology:LP_0000834 ontology:LP_0000310)
+ClassAssertion(ontology:LP_0001038 ontology:LP_0000310)
+
+# Individual: ontology:LP_0000311 (Realschulabschlussbezogener Kurs (TH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000311 "Realschulabschlussbezogener Kurs (TH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000311 "gilt für die Jahrgangsstufen 9-10")
+ClassAssertion(ontology:LP_0000832 ontology:LP_0000311)
+ClassAssertion(ontology:LP_0001038 ontology:LP_0000311)
 
 # Individual: ontology:LP_0000312 (Allgemeinbildender Schulabschluss (TH))
 

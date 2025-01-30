@@ -139,7 +139,6 @@ Declaration(ObjectProperty(:LP_0000021))
 Declaration(ObjectProperty(:LP_0000026))
 Declaration(ObjectProperty(:LP_0000029))
 Declaration(ObjectProperty(:LP_0000047))
-Declaration(ObjectProperty(:LP_0000058))
 Declaration(ObjectProperty(:LP_0000071))
 Declaration(ObjectProperty(:LP_0000072))
 Declaration(ObjectProperty(:LP_0000086))
@@ -317,9 +316,11 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000
 ObjectPropertyDomain(:LP_0000017 ObjectUnionOf(:LP_0000006 :LP_0000811 :LP_0000816))
 ObjectPropertyRange(:LP_0000017 :LP_0000438)
 
-# Object Property: :LP_0000021 (ermöglicht Abschluss)
+# Object Property: :LP_0000021 (endet mit Abschluss)
 
+AnnotationAssertion(rdfs:label :LP_0000021 "endet mit Abschluss"@de)
 AnnotationAssertion(rdfs:label :LP_0000021 "ermöglicht Abschluss"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000021 "Ein Bildungsgang (occurent) endet mit Abschluss.")
 ObjectPropertyRange(:LP_0000021 :LP_0000019)
 
 # Object Property: :LP_0000026 (hat Jahrgangsstufe)
@@ -335,12 +336,6 @@ ObjectPropertyRange(:LP_0000029 :LP_0000040)
 # Object Property: :LP_0000047 (hat Schulstufe)
 
 AnnotationAssertion(rdfs:label :LP_0000047 "hat Schulstufe"@de)
-
-# Object Property: :LP_0000058 (endet mit Abschluss)
-
-AnnotationAssertion(rdfs:label :LP_0000058 "endet mit Abschluss"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000058 "Ein Bildungsgang (occurent) endet mit Abschluss.")
-ObjectPropertyRange(:LP_0000058 :LP_0000019)
 
 # Object Property: :LP_0000071 (benötigt mindestens Niveau)
 

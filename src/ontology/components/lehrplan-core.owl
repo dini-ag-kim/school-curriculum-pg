@@ -122,10 +122,7 @@ Declaration(Class(:LP_0002008))
 Declaration(Class(:LP_0002012))
 Declaration(Class(:LP_0002106))
 Declaration(Class(:LP_0002158))
-Declaration(Class(:LP_0002159))
-Declaration(Class(:LP_0002160))
 Declaration(Class(:LP_0002161))
-Declaration(Class(:LP_0002166))
 Declaration(Class(:LP_0002167))
 Declaration(Class(:LP_0002171))
 Declaration(Class(:LP_0010001))
@@ -706,7 +703,11 @@ SubClassOf(:LP_0000251 :LP_0000111)
 
 # Class: :LP_0000261 (Curriculares Element)
 
-AnnotationAssertion(rdfs:comment :LP_0000261 "Curriculare Elemente sind Informationselemente die in einem Lehrplan oder Bildungsstandard zur Beschreibung verwendet werden. Curriculare Elemente können Funktionen inne haben, die deren Zweck oder Verwendung näher beschreiben."@de)
+AnnotationAssertion(rdfs:comment :LP_0000261 "Ein “Curriculares Element” ist eine Informationseinheit, die bei der Beschreibung der Bestandteile eines Lehrplans oder Bildungsstandards verwendet wird.
+
+In der Ontologie fungiert das “Curriculare Element\" als Superklasse, um die Elemente zu ordnen, aus denen sich Beschreibungen der zu erwerbenden Inhalte und Kompetenzen eines Lehrplans oder eines Bildungsstandards zusammensetzen.
+
+Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zweck innerhalb des Lehrplans näher definiert. Dadurch können die bundeslandspezifischen Bestandteile der Lehrpläne abgebildet werden, da ihnen gemeinsame Funktionen zugeordnet werden können."@de)
 AnnotationAssertion(rdfs:label :LP_0000261 "Curriculares Element"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000261 "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 
@@ -823,8 +824,16 @@ SubClassOf(:LP_0000382 :LP_0000111)
 
 # Class: :LP_0000438 (Lehrplan)
 
-AnnotationAssertion(rdfs:comment :LP_0000438 "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en)
-AnnotationAssertion(rdfs:comment :LP_0000438 "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de)
+AnnotationAssertion(rdfs:comment :LP_0000438 "A curriculum is an information content entity that comprises a systematic compilation of curricular elements. It bindingly defines the skills and learning content that students should acquire in a particular subject, grade, type of school or educational level in a federal state.
+
+A curriculum is always specific to the educational policy of a federal state and differs from the nationwide educational standards that are published by the Kultusministerkonferenz (KMK). They can serve as the basis for the development of specific curricula in the federal states.
+
+In addition to the binding requirements, the curriculum often also contains information on the didactic and methodological design of lessons as well as cross-references to related and interdisciplinary skills and content from other school subjects. Depending on the federal state, curricula can have different names."@en)
+AnnotationAssertion(rdfs:comment :LP_0000438 "Ein Lehrplan ist eine Informationseinheit, die eine systematische Zusammenstellung von curricularen Elementen umfasst. Er definiert verbindlich die Kompetenzen und Inhalte, die Schülerinnen und Schüler in einem bestimmten Fach, einer Jahrgangsstufe, einer Schulart oder einem Bildungsgang eines Bundeslandes erwerben sollen.
+
+Ein Lehrplan ist immer spezifisch auf die Bildungspolitik eines Bundeslandes bezogen und unterscheidet sich von bundeslandübergreifenden Bildungsstandards, die von der Kultusministerkonferenz (KMK) verabschiedet werden und als Grundlage für die Entwicklung konkreter Lehrpläne in den Ländern dienen können.
+
+Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur didaktisch-methodischen Gestaltung des Unterrichts sowie Querverweise zu verwandten und fachübergreifenden Kompetenzen und Inhalten aus anderen Schulfächern. Je nach Bundesland können Lehrpläne unterschiedliche Bezeichnungen tragen, wie z. B. Bildungsplan, Fachanforderungen, Kerncurriculum, Kernlehrplan, LehrplanPLUS, Rahmenlehrplan oder Rahmenplan."@de)
 AnnotationAssertion(rdfs:label :LP_0000438 "Lehrplan"@de)
 
 # Class: :LP_0000443 (Niveaustufe (BE/BB))
@@ -1013,7 +1022,7 @@ AnnotationAssertion(rdfs:label :LP_0000808 "Organisation"@de)
 # Class: :LP_0000809 (Schule)
 
 AnnotationAssertion(rdfs:label :LP_0000809 "Schule"@de)
-SubClassOf(:LP_0000809 :LP_0000808)
+SubClassOf(:LP_0000809 :LP_0000810)
 
 # Class: :LP_0000810 (Schulklasse)
 
@@ -1113,10 +1122,10 @@ EquivalentClasses(:LP_0000852 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesF
 AnnotationAssertion(rdfs:label :LP_0001014 "Hinweisbeschreibungsfunktion"@de)
 SubClassOf(:LP_0001014 :LP_0000493)
 
-# Class: :LP_0001015 (CE-Lehrplanfragment)
+# Class: :LP_0001015 (CE-Fragment)
 
-AnnotationAssertion(rdfs:comment :LP_0001015 "Element, das zur Strukturierung und zur Abgrenzung eines “Kontexts” innerhalb von einem Lehrplans dient. Mit jedem Lehrplanfragment beginnt ein neuer Kontext. Meistens handelt es sich hierbei um Überschriften.")
-AnnotationAssertion(rdfs:label :LP_0001015 "CE-Lehrplanfragment"@de)
+AnnotationAssertion(rdfs:comment :LP_0001015 "Ein “CE-Fragment” ist ein “Curriculares Element\" mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.")
+AnnotationAssertion(rdfs:label :LP_0001015 "CE-Fragment"@de)
 EquivalentClasses(:LP_0001015 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000627)))
 
 # Class: :LP_0002005 (Mittelstufenschule)
@@ -1150,35 +1159,11 @@ EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesF
 AnnotationAssertion(rdfs:label :LP_0002158 "Verknüpfungsbeschreibungsfunktion"@de)
 SubClassOf(:LP_0002158 :LP_0000493)
 
-# Class: :LP_0002159 (CE-Verknüpfung)
-
-AnnotationAssertion(rdfs:comment :LP_0002159 "Element, das einen Lerninhalt oder ein Thema mit einem Kompetenzbereich verknüpft bzw. einen Bezug zwischen beiden herstellt.")
-AnnotationAssertion(rdfs:label :LP_0002159 "CE-Verknüpfung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002159 "hierfür sollte es eigentich keine separate Klasse geben. 
-
-Dies scheint ein Hilfmittel für die Annotation zu sein. 
-
-ggf. sollten wir ein Beispiel nochmal genauer besprechen.")
-EquivalentClasses(:LP_0002159 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002158)))
-
-# Class: :LP_0002160 (CE-Erläuterung)
-
-AnnotationAssertion(rdfs:comment :LP_0002160 "Element, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Text."@de)
-AnnotationAssertion(rdfs:label :LP_0002160 "CE-Erläuterung")
-EquivalentClasses(:LP_0002160 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002161) ObjectSomeValuesFrom(ObjectInverseOf(:LP_0000008) ObjectUnionOf(:LP_0000262 :LP_0002106))))
-
 # Class: :LP_0002161 (Erläuterungsbeschreibungsfunktion)
 
 AnnotationAssertion(rdfs:label :LP_0002161 "Erläuterungsbeschreibungsfunktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002161 "was  ist der Unterschied zu Hinweis?")
 SubClassOf(:LP_0002161 :LP_0000493)
-
-# Class: :LP_0002166 (CE-Beispiel)
-
-AnnotationAssertion(rdfs:label :LP_0002166 "CE-Beispiel"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002166 "Beschreibung eines Beispiels mit konkretem inhaltlichen Bezug (im Gegensatz zum Hinweis)."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002166 "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV.")
-EquivalentClasses(:LP_0002166 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002167)))
 
 # Class: :LP_0002167 (Beispielbeschreibungsfunktion)
 
@@ -1581,7 +1566,7 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (Jahrgangsstufe 5)
+# Individual: :LP_2000005 (class level 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)

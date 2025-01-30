@@ -122,10 +122,7 @@ Declaration(Class(:LP_0002008))
 Declaration(Class(:LP_0002012))
 Declaration(Class(:LP_0002106))
 Declaration(Class(:LP_0002158))
-Declaration(Class(:LP_0002159))
-Declaration(Class(:LP_0002160))
 Declaration(Class(:LP_0002161))
-Declaration(Class(:LP_0002166))
 Declaration(Class(:LP_0002167))
 Declaration(Class(:LP_0002171))
 Declaration(Class(:LP_0010001))
@@ -227,9 +224,6 @@ Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s16>))
 Declaration(NamedIndividual(:LP_0000036))
 Declaration(NamedIndividual(:LP_0000045))
 Declaration(NamedIndividual(:LP_0000046))
-
-
-
 Declaration(NamedIndividual(:LP_0000340))
 Declaration(NamedIndividual(:LP_0000464))
 Declaration(NamedIndividual(:LP_0000465))
@@ -1165,35 +1159,11 @@ EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesF
 AnnotationAssertion(rdfs:label :LP_0002158 "Verknüpfungsbeschreibungsfunktion"@de)
 SubClassOf(:LP_0002158 :LP_0000493)
 
-# Class: :LP_0002159 (CE-Verknüpfung)
-
-AnnotationAssertion(rdfs:comment :LP_0002159 "Element, das einen Lerninhalt oder ein Thema mit einem Kompetenzbereich verknüpft bzw. einen Bezug zwischen beiden herstellt.")
-AnnotationAssertion(rdfs:label :LP_0002159 "CE-Verknüpfung"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002159 "hierfür sollte es eigentich keine separate Klasse geben. 
-
-Dies scheint ein Hilfmittel für die Annotation zu sein. 
-
-ggf. sollten wir ein Beispiel nochmal genauer besprechen.")
-EquivalentClasses(:LP_0002159 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002158)))
-
-# Class: :LP_0002160 (CE-Erläuterung)
-
-AnnotationAssertion(rdfs:comment :LP_0002160 "Element, das einen Kompetenzbereich oder ein Themenfeld erläutert. Hierbei handelt es sich meist um einen Text."@de)
-AnnotationAssertion(rdfs:label :LP_0002160 "CE-Erläuterung")
-EquivalentClasses(:LP_0002160 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002161) ObjectSomeValuesFrom(ObjectInverseOf(:LP_0000008) ObjectUnionOf(:LP_0000262 :LP_0002106))))
-
 # Class: :LP_0002161 (Erläuterungsbeschreibungsfunktion)
 
 AnnotationAssertion(rdfs:label :LP_0002161 "Erläuterungsbeschreibungsfunktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002161 "was  ist der Unterschied zu Hinweis?")
 SubClassOf(:LP_0002161 :LP_0000493)
-
-# Class: :LP_0002166 (CE-Beispiel)
-
-AnnotationAssertion(rdfs:label :LP_0002166 "CE-Beispiel"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002166 "Beschreibung eines Beispiels mit konkretem inhaltlichen Bezug (im Gegensatz zum Hinweis)."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002166 "Bisher nur in MV: Beispiel zur Verknüpfung von Inhalte und Kompetenzbereichen. Nennung eines konkreten Themas. -> nochmal überdenken, ob wir das überhaupt brauchen oder umbenennen, weil Besonderheit in MV.")
-EquivalentClasses(:LP_0002166 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002167)))
 
 # Class: :LP_0002167 (Beispielbeschreibungsfunktion)
 
@@ -1578,13 +1548,13 @@ AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (Jahrgangsstufe 2)
+# Individual: :LP_2000002 (class level 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (Jahrgangsstufe 3)
+# Individual: :LP_2000003 (class level 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
@@ -1596,7 +1566,7 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (Jahrgangsstufe 5)
+# Individual: :LP_2000005 (class level 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
@@ -1614,7 +1584,7 @@ AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (class level 8)
+# Individual: :LP_2000008 (Jahrgangsstufe 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
@@ -1644,7 +1614,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

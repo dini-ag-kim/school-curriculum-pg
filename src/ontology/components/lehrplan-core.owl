@@ -320,6 +320,7 @@ ObjectPropertyRange(:LP_0000017 :LP_0000438)
 # Object Property: :LP_0000021 (ermöglicht Abschluss)
 
 AnnotationAssertion(rdfs:label :LP_0000021 "ermöglicht Abschluss"@de)
+ObjectPropertyRange(:LP_0000021 :LP_0000019)
 
 # Object Property: :LP_0000026 (hat Jahrgangsstufe)
 
@@ -338,6 +339,7 @@ AnnotationAssertion(rdfs:label :LP_0000047 "hat Schulstufe"@de)
 # Object Property: :LP_0000058 (endet mit Abschluss)
 
 AnnotationAssertion(rdfs:label :LP_0000058 "endet mit Abschluss"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000058 "Ein Bildungsgang (occurent) endet mit Abschluss.")
 ObjectPropertyRange(:LP_0000058 :LP_0000019)
 
 # Object Property: :LP_0000071 (benötigt mindestens Niveau)
@@ -352,9 +354,9 @@ TransitiveObjectProperty(:LP_0000072)
 ObjectPropertyDomain(:LP_0000072 :LP_0000028)
 ObjectPropertyRange(:LP_0000072 :LP_0000028)
 
-# Object Property: :LP_0000086 (ist_niveau_von)
+# Object Property: :LP_0000086 (ist Niveau von)
 
-AnnotationAssertion(rdfs:label :LP_0000086 "ist_niveau_von"@de)
+AnnotationAssertion(rdfs:label :LP_0000086 "ist Niveau von"@de)
 SubObjectPropertyOf(:LP_0000086 owl:topObjectProperty)
 InverseObjectProperties(:LP_0000086 :LP_0000840)
 
@@ -1542,13 +1544,13 @@ ClassAssertion(:LP_0000802 :LP_0000805)
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (Jahrgangsstufe 1)
+# Individual: :LP_2000001 (class level 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (class level 2)
+# Individual: :LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
@@ -1578,7 +1580,7 @@ AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (Jahrgangsstufe 7)
+# Individual: :LP_2000007 (class level 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
@@ -1590,7 +1592,7 @@ AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1602,7 +1604,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
@@ -1614,7 +1616,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (class level 13)
+# Individual: :LP_2000013 (Jahrgangsstufe 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

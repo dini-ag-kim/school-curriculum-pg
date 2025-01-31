@@ -25,7 +25,6 @@ Declaration(Class(:LP_0000013))
 Declaration(Class(:LP_0000019))
 Declaration(Class(:LP_0000020))
 Declaration(Class(:LP_0000028))
-Declaration(Class(:LP_0000033))
 Declaration(Class(:LP_0000037))
 Declaration(Class(:LP_0000039))
 Declaration(Class(:LP_0000040))
@@ -142,6 +141,7 @@ Declaration(ObjectProperty(:LP_0000047))
 Declaration(ObjectProperty(:LP_0000071))
 Declaration(ObjectProperty(:LP_0000072))
 Declaration(ObjectProperty(:LP_0000086))
+Declaration(ObjectProperty(:LP_0000343))
 Declaration(ObjectProperty(:LP_0000440))
 Declaration(ObjectProperty(:LP_0000483))
 Declaration(ObjectProperty(:LP_0000495))
@@ -355,6 +355,10 @@ AnnotationAssertion(rdfs:label :LP_0000086 "ist Niveau von"@de)
 SubObjectPropertyOf(:LP_0000086 owl:topObjectProperty)
 InverseObjectProperties(:LP_0000086 :LP_0000840)
 
+# Object Property: :LP_0000343 (hat Schulart)
+
+AnnotationAssertion(rdfs:label :LP_0000343 "hat Schulart"@de)
+
 # Object Property: :LP_0000440 (für Bildungsgangabschnitt)
 
 AnnotationAssertion(rdfs:label :LP_0000440 "für Bildungsgangabschnitt"@de)
@@ -526,10 +530,6 @@ AnnotationAssertion(rdfs:label :LP_0000020 "Schulstufe"@de)
 AnnotationAssertion(rdfs:label :LP_0000028 "Bildungsgangniveau"@de)
 SubClassOf(:LP_0000028 :LP_0000037)
 
-# Class: :LP_0000033 (pls delete)
-
-AnnotationAssertion(rdfs:label :LP_0000033 "pls delete"@de)
-
 # Class: :LP_0000037 (Niveau)
 
 AnnotationAssertion(rdfs:comment :LP_0000037 "Niveau bezeichnet eine Kategorisierung des Ausmaß der
@@ -606,11 +606,28 @@ SubClassOf(:LP_0000079 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP
 AnnotationAssertion(rdfs:label :LP_0000081 "Förderschulabschluss"@de)
 SubClassOf(:LP_0000081 :LP_0000019)
 
-# Class: :LP_0000111 (Schulart)
+# Class: :LP_0000111 (Schulform)
 
 AnnotationAssertion(rdfs:comment :LP_0000111 "Beschreibt die Art und Weise wie eine Schule organisiert ist."@de)
 AnnotationAssertion(rdfs:comment :LP_0000111 "Describes the way a school is organized."@en)
-AnnotationAssertion(rdfs:label :LP_0000111 "Schulart"@de)
+AnnotationAssertion(rdfs:label :LP_0000111 "Schulform"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000111 "Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
+
+https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
+
+Bsp: 
+:schuleTrebur a :Schule .
+
+:schuleTreburSchulform1 a Realschule .
+:schuleTreburSchulform1 bfo:existsAt :someTimeIntervalUntilDateX .
+:schuleTreburSchulform2 a Hauptschule .
+:schuleTreburSchulform2 bfo:existsAt :someTimeIntervalUntilDateX .
+:schuleTrebur :hatSchulform :schuleTreburSchulform1 .
+:schuleTrebur :hatSchulform :schuleTreburSchulform2 .
+
+:schuleTreburSchulform3 a Hauptschule .
+:schuleTreburSchulform3 bfo:existsAt :someTimeIntervalFromDateX .
+:schuleTrebur :hatSchulform :schuleTreburSchulform3 .")
 
 # Class: :LP_0000112 (Gemeinschaftsschule)
 
@@ -692,20 +709,6 @@ Die Schulart Gesamtschule gibt es in BB und NW.")
 AnnotationAssertion(rdfs:label :LP_0000240 "Gesamtschule"@de)
 SubClassOf(:LP_0000240 :LP_0000111)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000261> "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
-
-In the ontology, the \"Curriculares Element\" serves as a superordinate category to structure the components that describe the content and competencies to be acquired within a curriculum or educational standard.
-
-A “Curriculares Element” can also have a function that defines its purpose within the curriculum in more detail. This allows the state-specific components of the curricula to be mapped, as common functions can be assigned to them."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0001015> "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0001015> "Mögliche Properties:
-- Titel
-- Ordnungsnummer
-- Schulfach
-- Schulart / Bildungsgang
-- Schulstufe")
-
-
 # Class: :LP_0000251 (Werkschule)
 
 AnnotationAssertion(rdfs:comment :LP_0000251 "Schulart in Bremen, die den Sekundarbereich I umfasst und den Ersten sowie Mittleren Schulabschluss ermöglicht.")
@@ -714,6 +717,11 @@ SubClassOf(:LP_0000251 :LP_0000111)
 
 # Class: :LP_0000261 (Curriculares Element)
 
+AnnotationAssertion(rdfs:comment :LP_0000261 "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
+
+In the ontology, the \"Curriculares Element\" serves as a superordinate category to structure the components that describe the content and competencies to be acquired within a curriculum or educational standard.
+
+A “Curriculares Element” can also have a function that defines its purpose within the curriculum in more detail. This allows the state-specific components of the curricula to be mapped, as common functions can be assigned to them."@en)
 AnnotationAssertion(rdfs:comment :LP_0000261 "Ein “Curriculares Element” ist eine Informationseinheit, die bei der Beschreibung der Bestandteile eines Lehrplans oder Bildungsstandards verwendet wird.
 
 In der Ontologie fungiert das “Curriculare Element\" als Superklasse, um die Elemente zu ordnen, aus denen sich Beschreibungen der zu erwerbenden Inhalte und Kompetenzen eines Lehrplans oder eines Bildungsstandards zusammensetzen.
@@ -811,14 +819,13 @@ AnnotationAssertion(rdfs:label :LP_0000341 "Gymnasiale Oberstufe"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000341 "Axiom entfernt: 
 
 equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulreife')")
-SubClassOf(:LP_0000341 :LP_0000033)
+SubClassOf(:LP_0000341 :LP_0000020)
 
 # Class: :LP_0000365 (Orientierungsstufe)
 
 AnnotationAssertion(rdfs:comment :LP_0000365 "In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.")
 AnnotationAssertion(rdfs:label :LP_0000365 "Orientierungsstufe"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000365 "Ist das wirklich eine \"Schulart\" ?")
-SubClassOf(:LP_0000365 :LP_0000111)
+SubClassOf(:LP_0000365 :LP_0000020)
 
 # Class: :LP_0000367 (Regionale Schule)
 
@@ -1137,6 +1144,13 @@ SubClassOf(:LP_0001014 :LP_0000493)
 
 AnnotationAssertion(rdfs:comment :LP_0001015 "Ein “CE-Fragment” ist ein “Curriculares Element\" mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.")
 AnnotationAssertion(rdfs:label :LP_0001015 "CE-Fragment"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0001015 "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0001015 "Mögliche Properties:
+- Titel
+- Ordnungsnummer
+- Schulfach
+- Schulart / Bildungsgang
+- Schulstufe")
 EquivalentClasses(:LP_0001015 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000627)))
 
 # Class: :LP_0002005 (Mittelstufenschule)
@@ -1553,7 +1567,7 @@ ClassAssertion(:LP_0000802 :LP_0000805)
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (Jahrgangsstufe 1)
+# Individual: :LP_2000001 (class level 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
@@ -1577,13 +1591,13 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (Jahrgangsstufe 5)
+# Individual: :LP_2000005 (class level 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (Jahrgangsstufe 6)
+# Individual: :LP_2000006 (class level 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
@@ -1625,7 +1639,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

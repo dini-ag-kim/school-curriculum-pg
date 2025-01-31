@@ -53,6 +53,7 @@ Declaration(NamedIndividual(ontology:LP_0000022))
 Declaration(NamedIndividual(ontology:LP_0000148))
 Declaration(NamedIndividual(ontology:LP_0000149))
 Declaration(NamedIndividual(ontology:LP_0000150))
+Declaration(NamedIndividual(ontology:LP_0000338))
 
 
 
@@ -151,13 +152,11 @@ SubClassOf(ontology:LP_0000230 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 # Class: ontology:LP_0000510 (Leistungsfach (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000510 "Leistungsfach (BW)"@de)
-EquivalentClasses(ontology:LP_0000510 ObjectIntersectionOf(ontology:LP_0002064 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 SubClassOf(ontology:LP_0000510 ontology:LP_0002064)
 
 # Class: ontology:LP_0000511 (Basisfach (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000511 "Basisfach (BW)"@de)
-EquivalentClasses(ontology:LP_0000511 ObjectIntersectionOf(ontology:LP_0002064 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
 SubClassOf(ontology:LP_0000511 ontology:LP_0002064)
 
 # Class: ontology:LP_0000806 (Bildungsplan (BW))
@@ -215,7 +214,7 @@ SubClassOf(ontology:LP_0002063 ObjectIntersectionOf(ontology:LP_0002051 ObjectSo
 # Class: ontology:LP_0002064 (Fach Niveau Sek II (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002064 "Fach Niveau Sek II (BW)"@de)
-SubClassOf(ontology:LP_0002064 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000335)))
+SubClassOf(ontology:LP_0002064 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000049)))
 
 # Class: ontology:LP_0030001 (Themenfeld (BW))
 
@@ -281,6 +280,11 @@ ClassAssertion(ontology:LP_0000144 ontology:LP_0000149)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000150 "Mittlerer Abschluss (BW)")
 ClassAssertion(ontology:LP_0000145 ontology:LP_0000150)
+
+# Individual: ontology:LP_0000338 (Basisfach (BW) i)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000338 "Basisfach (BW) i"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000338)
 
 
 )

@@ -66,6 +66,8 @@ Declaration(Class(:LP_0000336))
 Declaration(Class(:LP_0000337))
 Declaration(Class(:LP_0000339))
 Declaration(Class(:LP_0000341))
+Declaration(Class(:LP_0000346))
+Declaration(Class(:LP_0000347))
 Declaration(Class(:LP_0000367))
 Declaration(Class(:LP_0000382))
 Declaration(Class(:LP_0000438))
@@ -150,6 +152,7 @@ Declaration(ObjectProperty(:LP_0000580))
 Declaration(ObjectProperty(:LP_0000812))
 Declaration(ObjectProperty(:LP_0000833))
 Declaration(ObjectProperty(:LP_0000840))
+Declaration(DataProperty(:LP_0000344))
 Declaration(DataProperty(:LP_0000460))
 Declaration(DataProperty(:LP_0000463))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1000>))
@@ -311,7 +314,7 @@ AnnotationAssertion(rdfs:label :LP_0000015 "hat Prozessteil"@de)
 # Object Property: :LP_0000017 (realisiert Lehrplan)
 
 AnnotationAssertion(rdfs:label :LP_0000017 "realisiert Lehrplan"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000017 "subproperty of stato:executes")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000017 "subproperty of stato:executes or inverse of \"prescribes\"")
 ObjectPropertyDomain(:LP_0000017 ObjectUnionOf(:LP_0000006 :LP_0000811 :LP_0000816))
 ObjectPropertyRange(:LP_0000017 :LP_0000438)
 
@@ -433,9 +436,15 @@ ObjectPropertyRange(:LP_0000840 :LP_0000037)
 #   Data Properties
 ############################
 
-# Data Property: :LP_0000460 (hat_position)
+# Data Property: :LP_0000344 (has Value)
 
-AnnotationAssertion(rdfs:label :LP_0000460 "hat_position"@de)
+AnnotationAssertion(rdfs:label :LP_0000344 "has Value"@en)
+AnnotationAssertion(rdfs:label :LP_0000344 "hat Wert"@de)
+SubDataPropertyOf(:LP_0000344 owl:topDataProperty)
+
+# Data Property: :LP_0000460 (hat Position)
+
+AnnotationAssertion(rdfs:label :LP_0000460 "hat Position"@de)
 DataPropertyRange(:LP_0000460 xsd:int)
 
 # Data Property: :LP_0000463 (uri)
@@ -819,6 +828,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000
 
 equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulreife')")
 SubClassOf(:LP_0000341 :LP_0000020)
+
+# Class: :LP_0000346 (Titel)
+
+AnnotationAssertion(rdfs:label :LP_0000346 "Titel"@de)
+
+# Class: :LP_0000347 (Identifikationsnummer)
+
+AnnotationAssertion(rdfs:label :LP_0000347 "Identifikationsnummer"@de)
 
 # Class: :LP_0000367 (Regionale Schule)
 
@@ -1560,19 +1577,19 @@ ClassAssertion(:LP_0000802 :LP_0000805)
 
 AnnotationAssertion(rdfs:label :LP_0002068 "Vertiefungskurs"@de)
 
-# Individual: :LP_2000001 (class level 1)
+# Individual: :LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (class level 2)
+# Individual: :LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (class level 3)
+# Individual: :LP_2000003 (Jahrgangsstufe 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
@@ -1584,7 +1601,7 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (class level 5)
+# Individual: :LP_2000005 (Jahrgangsstufe 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
@@ -1596,7 +1613,7 @@ AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (class level 7)
+# Individual: :LP_2000007 (Jahrgangsstufe 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)

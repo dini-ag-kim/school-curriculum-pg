@@ -41,6 +41,7 @@ Declaration(Class(ontology:LP_0002206))
 Declaration(Class(ontology:LP_0002207))
 Declaration(Class(ontology:LP_0002208))
 Declaration(Class(ontology:LP_0002209))
+Declaration(Class(ontology:LP_0030055))
 Declaration(Class(ontology:LP_0030080))
 Declaration(NamedIndividual(ontology:LP_0000103))
 Declaration(NamedIndividual(ontology:LP_0000104))
@@ -118,12 +119,12 @@ SubClassOf(ontology:LP_0001009 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 # Class: ontology:LP_0001116 (Grundlegendes Anforderungsniveau (NI))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001116 "Grundlegendes Anforderungsniveau (NI)"@de)
-SubClassOf(ontology:LP_0001116 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
+SubClassOf(ontology:LP_0001116 ObjectIntersectionOf(ontology:LP_0030055 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
 
 # Class: ontology:LP_0001117 (Erhöhtes Anforderungsniveau (NI))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001117 "Erhöhtes Anforderungsniveau (NI)"@de)
-SubClassOf(ontology:LP_0001117 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
+SubClassOf(ontology:LP_0001117 ObjectIntersectionOf(ontology:LP_0030055 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 
 # Class: ontology:LP_0002019 (Grundschule (NI))
 
@@ -216,6 +217,11 @@ SubClassOf(ontology:LP_0002208 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002209 "Thema (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002209 "Kommt bisher nur in Sek I Integrierte Gesamtschule in Mathe vor.")
 SubClassOf(ontology:LP_0002209 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030055 (Fachniveau Sek II (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030055 "Fachniveau Sek II (NI)"@de)
+SubClassOf(ontology:LP_0030055 ontology:LP_0000265)
 
 # Class: ontology:LP_0030080 (Bildungsgangniveau (NI))
 

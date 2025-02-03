@@ -46,6 +46,15 @@ Declaration(Class(ontology:LP_0002155))
 Declaration(Class(ontology:LP_0002162))
 Declaration(Class(ontology:LP_0002163))
 Declaration(Class(ontology:LP_0002164))
+Declaration(Class(ontology:LP_0030042))
+Declaration(Class(ontology:LP_0030043))
+Declaration(Class(ontology:LP_0030044))
+Declaration(Class(ontology:LP_0030045))
+Declaration(Class(ontology:LP_0030047))
+Declaration(Class(ontology:LP_0030048))
+Declaration(Class(ontology:LP_0030049))
+Declaration(Class(ontology:LP_0030052))
+Declaration(Class(ontology:LP_0030054))
 Declaration(NamedIndividual(ontology:LP_0000032))
 Declaration(NamedIndividual(ontology:LP_0000099))
 Declaration(NamedIndividual(ontology:LP_0000100))
@@ -143,10 +152,10 @@ AnnotationAssertion(rdfs:comment ontology:LP_0002080 "Lehrplan Element bezogen a
 AnnotationAssertion(rdfs:label ontology:LP_0002080 "Element (MV)"@de)
 EquivalentClasses(ontology:LP_0002080 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
 
-# Class: ontology:LP_0002081 (Anforderungsniveau Sek II (MV))
+# Class: ontology:LP_0002081 (Fachniveau Sek II (MV))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002081 "Anforderungsniveau Sek II (MV)"@de)
-SubClassOf(ontology:LP_0002081 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000335)))
+AnnotationAssertion(rdfs:label ontology:LP_0002081 "Fachniveau Sek II (MV)"@de)
+SubClassOf(ontology:LP_0002081 ontology:LP_0000265)
 
 # Class: ontology:LP_0002107 (Gesamtschule Sek II (MV))
 
@@ -171,7 +180,7 @@ SubClassOf(ontology:LP_0002140 ObjectIntersectionOf(ontology:LP_0002080 ObjectSo
 # Class: ontology:LP_0002141 (Anforderungsbereich (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002141 "Anforderungsbereich (MV)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002141 "Kommen nur in dem Fach Mathematik vor")
+AnnotationAssertion(skos:editorialNote ontology:LP_0002141 "Kommen nur in dem Fach Mathematik Sek I und Sek II vor")
 SubClassOf(ontology:LP_0002141 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000829)))
 
 # Class: ontology:LP_0002143 (Themenbereich (MV))
@@ -180,14 +189,16 @@ AnnotationAssertion(rdfs:label ontology:LP_0002143 "Themenbereich (MV)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002143 "Gleichzusetzen mit Arbeitsbereich und Gegenstandsfeld in anderen Fächern.")
 SubClassOf(ontology:LP_0002143 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0002144 (Verbindliche Inhalte (MV))
+# Class: ontology:LP_0002144 (Verbindlicher Inhalt (MV))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002144 "Verbindliche Inhalte (MV)"@de)
-SubClassOf(ontology:LP_0002144 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+AnnotationAssertion(rdfs:label ontology:LP_0002144 "Verbindlicher Inhalt (MV)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0002144 "Mathe Primar")
+SubClassOf(ontology:LP_0002144 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0002145 (Hinweise und Anregungen (MV))
+# Class: ontology:LP_0002145 (Hinweis und Anregung (MV))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002145 "Hinweise und Anregungen (MV)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0002145 "Hinweis und Anregung (MV)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0002145 "Hinweis (MV)")
 SubClassOf(ontology:LP_0002145 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002147 (Thema (MV))
@@ -204,8 +215,8 @@ SubClassOf(ontology:LP_0002148 ObjectIntersectionOf(ontology:LP_0002080 ObjectSo
 # Class: ontology:LP_0002149 (Möglichkeit der Verknüpfung (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002149 "Möglichkeit der Verknüpfung (MV)"@de)
-AnnotationAssertion(skos:altLabel ontology:LP_0002149 "Methodische Hinweise und Verknüpfungshinweise (MV)")
-AnnotationAssertion(skos:altLabel ontology:LP_0002149 "Verknüpfungen (MV)")
+AnnotationAssertion(skos:altLabel ontology:LP_0002149 "Methodischer Hinweis und Verknüpfungshinweis (MV)")
+AnnotationAssertion(skos:altLabel ontology:LP_0002149 "Verknüpfung (MV)")
 SubClassOf(ontology:LP_0002149 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 # Class: ontology:LP_0002150 (Arbeitsbereich (MV))
@@ -239,17 +250,64 @@ SubClassOf(ontology:LP_0002155 ObjectIntersectionOf(ontology:LP_0002080 ObjectSo
 # Class: ontology:LP_0002162 (Erläuterung (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002162 "Erläuterung (MV)"@de)
-SubClassOf(ontology:LP_0002162 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002161)))
+SubClassOf(ontology:LP_0002162 ontology:LP_0002080)
 
 # Class: ontology:LP_0002163 (Beispiel Verknüpfung von Inhalt und Kompetenzbereich (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002163 "Beispiel Verknüpfung von Inhalt und Kompetenzbereich (MV)"@de)
-SubClassOf(ontology:LP_0002163 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002167)))
+SubClassOf(ontology:LP_0002163 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002164 (Rahmenplan (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002164 "Rahmenplan (MV)"@de)
 EquivalentClasses(ontology:LP_0002164 ObjectIntersectionOf(ontology:LP_0000438 ObjectSomeValuesFrom(ontology:LP_0000008 ontology:LP_0002080) ObjectAllValuesFrom(ontology:LP_0000008 ontology:LP_0002080) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
+
+# Class: ontology:LP_0030042 (Standard (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030042 "Standard (MV)"@de)
+SubClassOf(ontology:LP_0030042 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030043 (Sprachfunktion (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030043 "Sprachfunktion (MV)"@de)
+SubClassOf(ontology:LP_0030043 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030044 (Mögliches Sprachmittel (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030044 "Mögliches Sprachmittel (MV)"@de)
+SubClassOf(ontology:LP_0030044 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030045 (Inhalt (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030045 "Inhalt (MV)"@de)
+SubClassOf(ontology:LP_0030045 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030047 (Unterrichtsinhalt (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030047 "Unterrichtsinhalt (MV)"@de)
+SubClassOf(ontology:LP_0030047 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030048 (Verbindliches Ziel (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030048 "Verbindliches Ziel (MV)"@de)
+SubClassOf(ontology:LP_0030048 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494)))
+
+# Class: ontology:LP_0030049 (Abschlussbezogener Standard (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030049 "Abschlussbezogener Standard (MV)"@de)
+SubClassOf(ontology:LP_0030049 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030052 (Fachspezifische Kompetenz (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030052 "Fachspezifische Kompetenz (MV)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030052 "Mathe Primar")
+SubClassOf(ontology:LP_0030052 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030054 (Leitidee (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030054 "Leitidee (MV)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030054 "Mathe Primar")
+SubClassOf(ontology:LP_0030054 ObjectIntersectionOf(ontology:LP_0002080 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 
 ############################

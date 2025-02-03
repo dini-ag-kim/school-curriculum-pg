@@ -42,10 +42,10 @@ Declaration(Class(ontology:LP_0001451))
 Declaration(Class(ontology:LP_0001459))
 Declaration(Class(ontology:LP_0001516))
 Declaration(Class(ontology:LP_0001517))
-Declaration(Class(ontology:LP_0030003))
 Declaration(Class(ontology:LP_0030004))
 Declaration(Class(ontology:LP_0030005))
 Declaration(Class(ontology:LP_0030006))
+Declaration(Class(ontology:LP_0030068))
 Declaration(Class(ontology:LP_0030115))
 Declaration(Class(ontology:LP_0030116))
 Declaration(Class(ontology:LP_0030117))
@@ -137,10 +137,10 @@ AnnotationAssertion(rdfs:label ontology:LP_0000128 "Gymnasium Primar (BE)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000128 "Schnellerner ab Klasse 5"@de)
 SubClassOf(ontology:LP_0000128 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000005) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000048)))
 
-# Class: ontology:LP_0001169 (Fach Niveau Sek II (BE))
+# Class: ontology:LP_0001169 (Fachniveau Sek II (BE))
 
-AnnotationAssertion(rdfs:label ontology:LP_0001169 "Fach Niveau Sek II (BE)"@de)
-EquivalentClasses(ontology:LP_0001169 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000335)))
+AnnotationAssertion(rdfs:label ontology:LP_0001169 "Fachniveau Sek II (BE)"@de)
+SubClassOf(ontology:LP_0001169 ontology:LP_0000265)
 
 # Class: ontology:LP_0001223 (Lehrplanfragment (BE))
 
@@ -150,7 +150,7 @@ SubClassOf(ontology:LP_0001223 ObjectIntersectionOf(ontology:LP_0001441 ObjectSo
 # Class: ontology:LP_0001224 (Leitidee (BE))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001224 "Leitidee (BE)"@de)
-SubClassOf(ontology:LP_0001224 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
+SubClassOf(ontology:LP_0001224 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000494) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
 
 # Class: ontology:LP_0001226 (Eingangsvoraussetzung (BE))
 
@@ -255,11 +255,6 @@ EquivalentClasses(ontology:LP_0001516 ObjectIntersectionOf(ontology:LP_0001169 O
 AnnotationAssertion(rdfs:label ontology:LP_0001517 "Leistungskursfach (BE)"@de)
 EquivalentClasses(ontology:LP_0001517 ObjectIntersectionOf(ontology:LP_0001169 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 
-# Class: ontology:LP_0030003 (Vertiefungsmöglichkeit (BE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0030003 "Vertiefungsmöglichkeit (BE)"@de)
-SubClassOf(ontology:LP_0030003 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
-
 # Class: ontology:LP_0030004 (Teilkompetenz (BE))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030004 "Teilkompetenz (BE)"@de)
@@ -274,6 +269,11 @@ SubClassOf(ontology:LP_0030005 ObjectIntersectionOf(ontology:LP_0001441 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030006 "Kompetenzerwerb im Themenfeld (BE)"@de)
 SubClassOf(ontology:LP_0030006 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030068 (Vertiefungsmöglichkeit (BE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030068 "Vertiefungsmöglichkeit (BE)"@de)
+SubClassOf(ontology:LP_0030068 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0030115 (Bezug zu den Basiskonzepten (BE))
 

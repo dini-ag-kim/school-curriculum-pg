@@ -68,6 +68,7 @@ Declaration(Class(:LP_0000339))
 Declaration(Class(:LP_0000341))
 Declaration(Class(:LP_0000346))
 Declaration(Class(:LP_0000347))
+Declaration(Class(:LP_0000349))
 Declaration(Class(:LP_0000367))
 Declaration(Class(:LP_0000382))
 Declaration(Class(:LP_0000438))
@@ -132,9 +133,7 @@ Declaration(Class(:LP_0010004))
 Declaration(Class(:LP_0010005))
 Declaration(Class(:LP_0010006))
 Declaration(Class(:LP_0010007))
-Declaration(Class(:LP_0030056))
-Declaration(Class(:LP_0030057))
-Declaration(Class(:LP_0030065))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000178>))
 Declaration(ObjectProperty(:LP_0000008))
 Declaration(ObjectProperty(:LP_0000015))
 Declaration(ObjectProperty(:LP_0000017))
@@ -314,10 +313,9 @@ AnnotationAssertion(rdfs:label :LP_0000008 "hat Teil"@de)
 
 AnnotationAssertion(rdfs:label :LP_0000015 "hat Prozessteil"@de)
 
-# Object Property: :LP_0000017 (realisiert Lehrplan)
+# Object Property: :LP_0000017 (konkretisiert Lehrplan)
 
-AnnotationAssertion(rdfs:label :LP_0000017 "realisiert Lehrplan"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000017 "subproperty of stato:executes or inverse of \"prescribes\"")
+AnnotationAssertion(rdfs:label :LP_0000017 "konkretisiert Lehrplan"@de)
 ObjectPropertyDomain(:LP_0000017 ObjectUnionOf(:LP_0000006 :LP_0000811 :LP_0000816))
 ObjectPropertyRange(:LP_0000017 :LP_0000438)
 
@@ -342,9 +340,9 @@ ObjectPropertyRange(:LP_0000029 :LP_0000040)
 
 AnnotationAssertion(rdfs:label :LP_0000047 "hat Schulstufe"@de)
 
-# Object Property: :LP_0000071 (benötigt mindestens Niveau)
+# Object Property: :LP_0000071 (benötigt Niveau)
 
-AnnotationAssertion(rdfs:label :LP_0000071 "benötigt mindestens Niveau"@de)
+AnnotationAssertion(rdfs:label :LP_0000071 "benötigt Niveau"@de)
 
 # Object Property: :LP_0000072 (inkludiert)
 
@@ -357,7 +355,6 @@ ObjectPropertyRange(:LP_0000072 :LP_0000028)
 # Object Property: :LP_0000086 (ist Niveau von)
 
 AnnotationAssertion(rdfs:label :LP_0000086 "ist Niveau von"@de)
-SubObjectPropertyOf(:LP_0000086 owl:topObjectProperty)
 InverseObjectProperties(:LP_0000086 :LP_0000840)
 
 # Object Property: :LP_0000343 (hat Schulart)
@@ -745,7 +742,9 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000
 
 AnnotationAssertion(rdfs:comment :LP_0000262 "Strukturierendes Element, das einen Kompetenzbereich benennt.  Es kann einem anderen Kompetenzbereich über- oder untergeordnet sein. Es ist Kompetenzspezifikationen übergeordnet."@de)
 AnnotationAssertion(rdfs:label :LP_0000262 "CE-Kompetenzbereich"@de)
-EquivalentClasses(:LP_0000262 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000494)))
+EquivalentClasses(:LP_0000262 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000262 :LP_0000263)) ObjectAllValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000262 :LP_0000263))))
+EquivalentClasses(:LP_0000262 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000483 :LP_0000494)))
+SubClassOf(:LP_0000262 :LP_0000349)
 
 # Class: :LP_0000263 (CE-Kompetenzspezifikation)
 
@@ -840,6 +839,11 @@ AnnotationAssertion(rdfs:label :LP_0000346 "Titel"@de)
 
 AnnotationAssertion(rdfs:label :LP_0000347 "Identifikationsnummer"@de)
 
+# Class: :LP_0000349 (CE-Bereich)
+
+AnnotationAssertion(rdfs:label :LP_0000349 "CE-Bereich"@de)
+SubClassOf(:LP_0000349 :LP_0000261)
+
 # Class: :LP_0000367 (Regionale Schule)
 
 AnnotationAssertion(rdfs:comment :LP_0000367 "Schulart des Sekundarbereichs I in Mecklenburg-Vorpommern, an der der Erste sowie Mittlere Schulabschluss erworben werden können und die Jahrgangsstufen 5-10 umfasst.")
@@ -915,9 +919,9 @@ AnnotationAssertion(rdfs:comment :LP_0000494 "Ein Lehrplanelement, das diese Fun
 AnnotationAssertion(rdfs:label :LP_0000494 "Kompetenzbereichsfunktion"@de)
 SubClassOf(:LP_0000494 :LP_0000482)
 
-# Class: :LP_0000497 (Themenfeldfunktion)
+# Class: :LP_0000497 (Themenbereichsfunktion)
 
-AnnotationAssertion(rdfs:label :LP_0000497 "Themenfeldfunktion"@de)
+AnnotationAssertion(rdfs:label :LP_0000497 "Themenbereichsfunktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000497 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000497 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de)
 SubClassOf(:LP_0000497 :LP_0000482)
@@ -1186,11 +1190,12 @@ AnnotationAssertion(rdfs:label :LP_0002012 "Kooperative Gesamtschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0002012 :LP_0000111)
 
-# Class: :LP_0002106 (CE-Themenfeld)
+# Class: :LP_0002106 (CE-Themenbereich)
 
 AnnotationAssertion(rdfs:comment :LP_0002106 "Strukturierendes Element, das ein Thema benennt. Es kann einem anderen Themenfeld über- oder untergeordnet sein. Es ist Lerninhalten übergeordnet."@de)
-AnnotationAssertion(rdfs:label :LP_0002106 "CE-Themenfeld"@de)
-EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000497)))
+AnnotationAssertion(rdfs:label :LP_0002106 "CE-Themenbereich"@de)
+EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000332 :LP_0002106)) ObjectAllValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000332 :LP_0002106))))
+EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000483 :LP_0000497)))
 
 # Class: :LP_0002158 (Verknüpfungsbeschreibungsfunktion)
 
@@ -1253,24 +1258,6 @@ SubClassOf(:LP_0010006 :LP_0010001)
 AnnotationAssertion(rdfs:comment :LP_0010007 "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.")
 AnnotationAssertion(rdfs:label :LP_0010007 "C2 Annähernd muttersprachliche Kenntnisse"@de)
 SubClassOf(:LP_0010007 :LP_0010001)
-
-# Class: :LP_0030056 (Inhaltsbezogene Kompetenz)
-
-AnnotationAssertion(rdfs:label :LP_0030056 "Inhaltsbezogene Kompetenz"@de)
-EquivalentClasses(:LP_0030056 ObjectIntersectionOf(:LP_0000263 ObjectSomeValuesFrom(:LP_0000483 :LP_0000501)))
-SubClassOf(:LP_0030056 :LP_0000263)
-
-# Class: :LP_0030057 (Prozessbezogene Kompetenz)
-
-AnnotationAssertion(rdfs:label :LP_0030057 "Prozessbezogene Kompetenz"@de)
-EquivalentClasses(:LP_0030057 ObjectIntersectionOf(:LP_0000263 ObjectSomeValuesFrom(:LP_0000483 :LP_0000500)))
-SubClassOf(:LP_0030057 :LP_0000263)
-
-# Class: :LP_0030065 (Domänenspezifische Kompetenz)
-
-AnnotationAssertion(rdfs:label :LP_0030065 "Domänenspezifische Kompetenz"@de)
-EquivalentClasses(:LP_0030065 ObjectIntersectionOf(:LP_0000263 ObjectSomeValuesFrom(:LP_0000483 :LP_0002171)))
-SubClassOf(:LP_0030065 :LP_0000263)
 
 
 ############################
@@ -1604,13 +1591,13 @@ AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (class level 2)
+# Individual: :LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (class level 3)
+# Individual: :LP_2000003 (Jahrgangsstufe 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
@@ -1628,19 +1615,19 @@ AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (class level 6)
+# Individual: :LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (Jahrgangsstufe 7)
+# Individual: :LP_2000007 (class level 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (class level 8)
+# Individual: :LP_2000008 (Jahrgangsstufe 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
@@ -1664,7 +1651,7 @@ AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
 ClassAssertion(:LP_0000009 :LP_2000011)
 
-# Individual: :LP_2000012 (class level 12)
+# Individual: :LP_2000012 (Jahrgangsstufe 12)
 
 AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)

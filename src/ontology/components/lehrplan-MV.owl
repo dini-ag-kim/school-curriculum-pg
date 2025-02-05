@@ -23,8 +23,6 @@ Declaration(Class(ontology:LP_0000369))
 Declaration(Class(ontology:LP_0000370))
 Declaration(Class(ontology:LP_0000371))
 Declaration(Class(ontology:LP_0000372))
-Declaration(Class(ontology:LP_0000519))
-Declaration(Class(ontology:LP_0000520))
 Declaration(Class(ontology:LP_0001011))
 Declaration(Class(ontology:LP_0002080))
 Declaration(Class(ontology:LP_0002081))
@@ -63,6 +61,8 @@ Declaration(NamedIndividual(ontology:LP_0000102))
 Declaration(NamedIndividual(ontology:LP_0000361))
 Declaration(NamedIndividual(ontology:LP_0000362))
 Declaration(NamedIndividual(ontology:LP_0000363))
+Declaration(NamedIndividual(ontology:LP_0000519))
+Declaration(NamedIndividual(ontology:LP_0000520))
 
 
 
@@ -129,18 +129,6 @@ SubClassOf(ontology:LP_0000371 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0000372 "Gymnasium Sek II (MV)"@de)
 SubClassOf(ontology:LP_0000372 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000361) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
 
-# Class: ontology:LP_0000519 (Grundkurs (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000519 "Grundkurs (MV)"@de)
-EquivalentClasses(ontology:LP_0000519 ObjectIntersectionOf(ontology:LP_0002081 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0000519 ontology:LP_0002081)
-
-# Class: ontology:LP_0000520 (Leistungskurs (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000520 "Leistungskurs (MV)"@de)
-EquivalentClasses(ontology:LP_0000520 ObjectIntersectionOf(ontology:LP_0002081 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0000520 ontology:LP_0002081)
-
 # Class: ontology:LP_0001011 (Bildungsgangniveau (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001011 "Bildungsgangniveau (MV)"@de)
@@ -155,7 +143,7 @@ EquivalentClasses(ontology:LP_0002080 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0002081 (Fachniveau Sek II (MV))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002081 "Fachniveau Sek II (MV)"@de)
-SubClassOf(ontology:LP_0002081 ontology:LP_0000265)
+SubClassOf(ontology:LP_0002081 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
 
 # Class: ontology:LP_0002107 (Gesamtschule Sek II (MV))
 
@@ -360,6 +348,18 @@ ClassAssertion(ontology:LP_0000184 ontology:LP_0000362)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000363 "Mittlere Reife (MV)"@de)
 ClassAssertion(ontology:LP_0000208 ontology:LP_0000363)
+
+# Individual: ontology:LP_0000519 (Grundkurs (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000519 "Grundkurs (MV)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000519)
+ClassAssertion(ontology:LP_0002081 ontology:LP_0000519)
+
+# Individual: ontology:LP_0000520 (Leistungskurs (MV))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000520 "Leistungskurs (MV)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0000520)
+ClassAssertion(ontology:LP_0002081 ontology:LP_0000520)
 
 
 SubClassOf(ObjectSomeValuesFrom(ontology:LP_0000026 ObjectIntersectionOf(ObjectOneOf(ontology:LP_2000005 ontology:LP_2000006) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052))) ObjectHasValue(ontology:LP_0000047 ontology:LP_0000032))

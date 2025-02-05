@@ -25,8 +25,6 @@ Declaration(Class(ontology:LP_0000385))
 Declaration(Class(ontology:LP_0000386))
 Declaration(Class(ontology:LP_0000387))
 Declaration(Class(ontology:LP_0000388))
-Declaration(Class(ontology:LP_0000521))
-Declaration(Class(ontology:LP_0000522))
 Declaration(Class(ontology:LP_0001000))
 Declaration(Class(ontology:LP_0002085))
 Declaration(Class(ontology:LP_0002086))
@@ -48,6 +46,8 @@ Declaration(NamedIndividual(ontology:LP_0000374))
 Declaration(NamedIndividual(ontology:LP_0000375))
 Declaration(NamedIndividual(ontology:LP_0000376))
 Declaration(NamedIndividual(ontology:LP_0000377))
+Declaration(NamedIndividual(ontology:LP_0000521))
+Declaration(NamedIndividual(ontology:LP_0000522))
 
 
 
@@ -123,18 +123,6 @@ SubClassOf(ontology:LP_0000387 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0000388 "Gesamtschule Sek II (NW)"@de)
 SubClassOf(ontology:LP_0000388 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000240) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000373) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000044)))
 
-# Class: ontology:LP_0000521 (Grundkurs (NW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000521 "Grundkurs (NW)"@de)
-EquivalentClasses(ontology:LP_0000521 ObjectIntersectionOf(ontology:LP_0002086 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0000521 ontology:LP_0002086)
-
-# Class: ontology:LP_0000522 (Leistungskurs (NW))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000522 "Leistungskurs (NW)"@de)
-EquivalentClasses(ontology:LP_0000522 ObjectIntersectionOf(ontology:LP_0002086 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0000522 ontology:LP_0002086)
-
 # Class: ontology:LP_0001000 (Kernlehrplan (NW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001000 "Kernlehrplan (NW)"@de)
@@ -150,7 +138,7 @@ EquivalentClasses(ontology:LP_0002085 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0002086 (Fachniveau Sek II (NW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002086 "Fachniveau Sek II (NW)"@de)
-SubClassOf(ontology:LP_0002086 ontology:LP_0000265)
+SubClassOf(ontology:LP_0002086 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000044)))
 
 # Class: ontology:LP_0002186 (Lehrplanfragment (NW))
 
@@ -257,6 +245,18 @@ ClassAssertion(ontology:LP_0000202 ontology:LP_0000376)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000377 "Mittlerer Schulabschluss mit Berechtigung zur gymnasialen Oberstufe (NW)"@de)
 ClassAssertion(ontology:LP_0000202 ontology:LP_0000377)
+
+# Individual: ontology:LP_0000521 (Grundkurs (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000521 "Grundkurs (NW)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000521)
+ClassAssertion(ontology:LP_0002086 ontology:LP_0000521)
+
+# Individual: ontology:LP_0000522 (Leistungskurs (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000522 "Leistungskurs (NW)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0000522)
+ClassAssertion(ontology:LP_0002086 ontology:LP_0000522)
 
 
 )

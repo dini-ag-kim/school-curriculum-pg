@@ -22,8 +22,6 @@ Declaration(Class(ontology:LP_0000277))
 Declaration(Class(ontology:LP_0000278))
 Declaration(Class(ontology:LP_0000426))
 Declaration(Class(ontology:LP_0000428))
-Declaration(Class(ontology:LP_0000517))
-Declaration(Class(ontology:LP_0000518))
 Declaration(Class(ontology:LP_0000822))
 Declaration(Class(ontology:LP_0001108))
 Declaration(Class(ontology:LP_0002072))
@@ -48,6 +46,8 @@ Declaration(NamedIndividual(ontology:LP_0000098))
 Declaration(NamedIndividual(ontology:LP_0000270))
 Declaration(NamedIndividual(ontology:LP_0000271))
 Declaration(NamedIndividual(ontology:LP_0000272))
+Declaration(NamedIndividual(ontology:LP_0000517))
+Declaration(NamedIndividual(ontology:LP_0000518))
 
 
 
@@ -109,18 +109,6 @@ EquivalentClasses(ontology:LP_0000426 ObjectIntersectionOf(ontology:LP_0000261 O
 AnnotationAssertion(rdfs:label ontology:LP_0000428 "Inhalt (HH)"@de)
 SubClassOf(ontology:LP_0000428 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
-# Class: ontology:LP_0000517 (Erhöhtes Anforderungsniveau (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000517 "Erhöhtes Anforderungsniveau (HH)"@de)
-EquivalentClasses(ontology:LP_0000517 ObjectIntersectionOf(ontology:LP_0002072 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0000517 ontology:LP_0002072)
-
-# Class: ontology:LP_0000518 (Grundlegendes Anforderungsniveau (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000518 "Grundlegendes Anforderungsniveau (HH)"@de)
-EquivalentClasses(ontology:LP_0000518 ObjectIntersectionOf(ontology:LP_0002072 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0000518 ontology:LP_0002072)
-
 # Class: ontology:LP_0000822 (Bildungsplan (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000822 "Bildungsplan (HH)"@de)
@@ -134,7 +122,7 @@ EquivalentClasses(ontology:LP_0001108 ObjectIntersectionOf(ontology:LP_0000028 O
 # Class: ontology:LP_0002072 (Fachniveau Sek II (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002072 "Fachniveau Sek II (HH)"@de)
-SubClassOf(ontology:LP_0002072 ontology:LP_0000265)
+SubClassOf(ontology:LP_0002072 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000045)))
 
 # Class: ontology:LP_0002210 (Lehrplanfragment (HH))
 
@@ -262,6 +250,18 @@ ClassAssertion(ontology:LP_0000179 ontology:LP_0000271)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000272 "Erweiterter erste allgemeinbildender Schulabschluss (HH)"@de)
 ClassAssertion(ontology:LP_0000179 ontology:LP_0000272)
+
+# Individual: ontology:LP_0000517 (Erhöhtes Anforderungsniveau (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000517 "Erhöhtes Anforderungsniveau (HH)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0000517)
+ClassAssertion(ontology:LP_0002072 ontology:LP_0000517)
+
+# Individual: ontology:LP_0000518 (Grundlegendes Anforderungsniveau (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000518 "Grundlegendes Anforderungsniveau (HH)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000518)
+ClassAssertion(ontology:LP_0002072 ontology:LP_0000518)
 
 
 )

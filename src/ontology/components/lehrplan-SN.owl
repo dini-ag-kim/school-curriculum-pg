@@ -23,8 +23,6 @@ Declaration(Class(ontology:LP_0000397))
 Declaration(Class(ontology:LP_0000398))
 Declaration(Class(ontology:LP_0000399))
 Declaration(Class(ontology:LP_0000400))
-Declaration(Class(ontology:LP_0000523))
-Declaration(Class(ontology:LP_0000524))
 Declaration(Class(ontology:LP_0000818))
 Declaration(Class(ontology:LP_0001032))
 Declaration(Class(ontology:LP_0002089))
@@ -45,6 +43,8 @@ Declaration(NamedIndividual(ontology:LP_0000389))
 Declaration(NamedIndividual(ontology:LP_0000390))
 Declaration(NamedIndividual(ontology:LP_0000391))
 Declaration(NamedIndividual(ontology:LP_0000392))
+Declaration(NamedIndividual(ontology:LP_0000523))
+Declaration(NamedIndividual(ontology:LP_0000524))
 
 
 
@@ -111,18 +111,6 @@ SubClassOf(ontology:LP_0000399 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0000400 "Gymnasium Sek II (SN)"@de)
 SubClassOf(ontology:LP_0000400 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000389) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000047)))
 
-# Class: ontology:LP_0000523 (Grundkurs (SN))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000523 "Grundkurs (SN)"@de)
-EquivalentClasses(ontology:LP_0000523 ObjectIntersectionOf(ontology:LP_0002090 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0000523 ontology:LP_0002090)
-
-# Class: ontology:LP_0000524 (Leistungskurs (SN))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000524 "Leistungskurs (SN)"@de)
-EquivalentClasses(ontology:LP_0000524 ObjectIntersectionOf(ontology:LP_0002090 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0000524 ontology:LP_0002090)
-
 # Class: ontology:LP_0000818 (Lehrplan (SN))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000818 "Lehrplan (SN)"@de)
@@ -142,7 +130,7 @@ EquivalentClasses(ontology:LP_0002089 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0002090 (Fachniveau Sek II (SN))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002090 "Fachniveau Sek II (SN)"@de)
-SubClassOf(ontology:LP_0002090 ontology:LP_0000265)
+SubClassOf(ontology:LP_0002090 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000047)))
 
 # Class: ontology:LP_0002110 (Lehrplanfragment (SN))
 
@@ -243,6 +231,18 @@ ClassAssertion(ontology:LP_0000181 ontology:LP_0000391)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000392 "Realschulabschluss (SN)"@de)
 ClassAssertion(ontology:LP_0000205 ontology:LP_0000392)
+
+# Individual: ontology:LP_0000523 (Grundkurs (SN))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000523 "Grundkurs (SN)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000523)
+ClassAssertion(ontology:LP_0002090 ontology:LP_0000523)
+
+# Individual: ontology:LP_0000524 (Leistungskurs (SN))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000524 "Leistungskurs (SN)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0000524)
+ClassAssertion(ontology:LP_0002090 ontology:LP_0000524)
 
 
 )

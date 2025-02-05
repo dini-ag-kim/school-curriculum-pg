@@ -26,8 +26,6 @@ Declaration(Class(ontology:LP_0000414))
 Declaration(Class(ontology:LP_0000415))
 Declaration(Class(ontology:LP_0000416))
 Declaration(Class(ontology:LP_0000417))
-Declaration(Class(ontology:LP_0000526))
-Declaration(Class(ontology:LP_0000527))
 Declaration(Class(ontology:LP_0000826))
 Declaration(Class(ontology:LP_0001035))
 Declaration(Class(ontology:LP_0002093))
@@ -49,6 +47,8 @@ Declaration(NamedIndividual(ontology:LP_0000403))
 Declaration(NamedIndividual(ontology:LP_0000404))
 Declaration(NamedIndividual(ontology:LP_0000405))
 Declaration(NamedIndividual(ontology:LP_0000406))
+Declaration(NamedIndividual(ontology:LP_0000526))
+Declaration(NamedIndividual(ontology:LP_0000527))
 
 
 
@@ -129,18 +129,6 @@ SubClassOf(ontology:LP_0000416 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0000417 "Integrierte Gesamtschule Sek II (ST)"@de)
 SubClassOf(ontology:LP_0000417 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000292) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000402) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000013) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000053)))
 
-# Class: ontology:LP_0000526 (Grundlegendes Anforderungsniveau (ST))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000526 "Grundlegendes Anforderungsniveau (ST)"@de)
-EquivalentClasses(ontology:LP_0000526 ObjectIntersectionOf(ontology:LP_0002094 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0000526 ontology:LP_0002094)
-
-# Class: ontology:LP_0000527 (Erhöhte Anforderungsniveau (ST))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000527 "Erhöhte Anforderungsniveau (ST)"@de)
-EquivalentClasses(ontology:LP_0000527 ObjectIntersectionOf(ontology:LP_0002094 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0000527 ontology:LP_0002094)
-
 # Class: ontology:LP_0000826 (Lehrplan (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000826 "Lehrplan (ST)"@de)
@@ -160,7 +148,7 @@ EquivalentClasses(ontology:LP_0002093 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0002094 (Fachniveau Sek II (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002094 "Fachniveau Sek II (ST)"@de)
-SubClassOf(ontology:LP_0002094 ontology:LP_0000265)
+SubClassOf(ontology:LP_0002094 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000053)))
 
 # Class: ontology:LP_0002174 (Lehrplanfragment (ST))
 
@@ -261,6 +249,18 @@ ClassAssertion(ontology:LP_0000209 ontology:LP_0000405)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000406 "Erweiterter Realschulabschluss (ST)"@de)
 ClassAssertion(ontology:LP_0000209 ontology:LP_0000406)
+
+# Individual: ontology:LP_0000526 (Grundlegendes Anforderungsniveau (ST))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000526 "Grundlegendes Anforderungsniveau (ST)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000526)
+ClassAssertion(ontology:LP_0002094 ontology:LP_0000526)
+
+# Individual: ontology:LP_0000527 (Erhöhtes Anforderungsniveau (ST))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000527 "Erhöhtes Anforderungsniveau (ST)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0000527)
+ClassAssertion(ontology:LP_0002094 ontology:LP_0000527)
 
 
 )

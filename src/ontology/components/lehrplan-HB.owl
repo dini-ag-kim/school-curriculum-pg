@@ -28,8 +28,6 @@ Declaration(Class(ontology:LP_0000821))
 Declaration(Class(ontology:LP_0001105))
 Declaration(Class(ontology:LP_0002118))
 Declaration(Class(ontology:LP_0002119))
-Declaration(Class(ontology:LP_0002120))
-Declaration(Class(ontology:LP_0002121))
 Declaration(Class(ontology:LP_0002122))
 Declaration(Class(ontology:LP_0002123))
 Declaration(Class(ontology:LP_0002124))
@@ -55,6 +53,8 @@ Declaration(NamedIndividual(ontology:LP_0000245))
 Declaration(NamedIndividual(ontology:LP_0000246))
 Declaration(NamedIndividual(ontology:LP_0000247))
 Declaration(NamedIndividual(ontology:LP_0000248))
+Declaration(NamedIndividual(ontology:LP_0002120))
+Declaration(NamedIndividual(ontology:LP_0002121))
 
 
 
@@ -144,19 +144,7 @@ EquivalentClasses(ontology:LP_0002118 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0002119 (Fachniveau Sek II (HB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002119 "Fachniveau Sek II (HB)"@de)
-SubClassOf(ontology:LP_0002119 ontology:LP_0000265)
-
-# Class: ontology:LP_0002120 (Anforderungsniveau Grundkurs (HB))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002120 "Anforderungsniveau Grundkurs (HB)"@de)
-EquivalentClasses(ontology:LP_0002120 ObjectIntersectionOf(ontology:LP_0002119 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0002120 ontology:LP_0002119)
-
-# Class: ontology:LP_0002121 (Anforderungsniveau Leistungskurs (HB))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002121 "Anforderungsniveau Leistungskurs (HB)"@de)
-EquivalentClasses(ontology:LP_0002121 ObjectIntersectionOf(ontology:LP_0002119 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0002121 ontology:LP_0002119)
+SubClassOf(ontology:LP_0002119 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000056)))
 
 # Class: ontology:LP_0002122 (Lehrplanfragment (HB))
 
@@ -311,6 +299,18 @@ ClassAssertion(ontology:LP_0000188 ontology:LP_0000247)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000248 "Mittlerer Schulabschluss (HB)"@de)
 ClassAssertion(ontology:LP_0000212 ontology:LP_0000248)
+
+# Individual: ontology:LP_0002120 (Anforderungsniveau Grundkurs (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002120 "Anforderungsniveau Grundkurs (HB)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0002120)
+ClassAssertion(ontology:LP_0002119 ontology:LP_0002120)
+
+# Individual: ontology:LP_0002121 (Anforderungsniveau Leistungskurs (HB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0002121 "Anforderungsniveau Leistungskurs (HB)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0002121)
+ClassAssertion(ontology:LP_0002119 ontology:LP_0002121)
 
 
 )

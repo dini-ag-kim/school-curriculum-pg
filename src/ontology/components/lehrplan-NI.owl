@@ -21,8 +21,6 @@ Declaration(Class(ontology:LP_0001006))
 Declaration(Class(ontology:LP_0001007))
 Declaration(Class(ontology:LP_0001008))
 Declaration(Class(ontology:LP_0001009))
-Declaration(Class(ontology:LP_0001116))
-Declaration(Class(ontology:LP_0001117))
 Declaration(Class(ontology:LP_0002019))
 Declaration(Class(ontology:LP_0002024))
 Declaration(Class(ontology:LP_0002025))
@@ -52,6 +50,8 @@ Declaration(NamedIndividual(ontology:LP_0000116))
 Declaration(NamedIndividual(ontology:LP_0000117))
 Declaration(NamedIndividual(ontology:LP_0000118))
 Declaration(NamedIndividual(ontology:LP_0000129))
+Declaration(NamedIndividual(ontology:LP_0001116))
+Declaration(NamedIndividual(ontology:LP_0001117))
 Declaration(NamedIndividual(ontology:LP_0002020))
 Declaration(NamedIndividual(ontology:LP_0002021))
 Declaration(NamedIndividual(ontology:LP_0002022))
@@ -115,16 +115,6 @@ SubClassOf(ontology:LP_0001008 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0001009 "Ergänzender Hinweis (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0001009 "genaue Klärung ob Beispiel o Hinweis (Deutsch Primar Lehrplan)")
 SubClassOf(ontology:LP_0001009 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
-
-# Class: ontology:LP_0001116 (Grundlegendes Anforderungsniveau (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001116 "Grundlegendes Anforderungsniveau (NI)"@de)
-SubClassOf(ontology:LP_0001116 ObjectIntersectionOf(ontology:LP_0030055 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-
-# Class: ontology:LP_0001117 (Erhöhtes Anforderungsniveau (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001117 "Erhöhtes Anforderungsniveau (NI)"@de)
-SubClassOf(ontology:LP_0001117 ObjectIntersectionOf(ontology:LP_0030055 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
 
 # Class: ontology:LP_0002019 (Grundschule (NI))
 
@@ -221,7 +211,7 @@ SubClassOf(ontology:LP_0002209 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 # Class: ontology:LP_0030055 (Fachniveau Sek II (NI))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030055 "Fachniveau Sek II (NI)"@de)
-SubClassOf(ontology:LP_0030055 ontology:LP_0000265)
+SubClassOf(ontology:LP_0030055 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000043)))
 
 # Class: ontology:LP_0030080 (Bildungsgangniveau (NI))
 
@@ -233,16 +223,16 @@ EquivalentClasses(ontology:LP_0030080 ObjectIntersectionOf(ontology:LP_0000028 O
 #   Named Individuals
 ############################
 
-# Individual: ontology:LP_0000103 (erhöhte Anforderungen (E-Kurs) (NI))
+# Individual: ontology:LP_0000103 (Erhöhte Anforderungen (E-Kurs) (NI))
 
-AnnotationAssertion(rdfs:label ontology:LP_0000103 "erhöhte Anforderungen (E-Kurs) (NI)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000103 "Erhöhte Anforderungen (E-Kurs) (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000103 "für die Gesamtschule")
 ClassAssertion(ontology:LP_0000832 ontology:LP_0000103)
 ClassAssertion(ontology:LP_0030080 ontology:LP_0000103)
 
-# Individual: ontology:LP_0000104 (grundlegende Anforderungen (G-Kurs) (NI))
+# Individual: ontology:LP_0000104 (Grundlegende Anforderungen (G-Kurs) (NI))
 
-AnnotationAssertion(rdfs:label ontology:LP_0000104 "grundlegende Anforderungen (G-Kurs) (NI)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000104 "Grundlegende Anforderungen (G-Kurs) (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000104 "für die Gesamtschule")
 ClassAssertion(ontology:LP_0000832 ontology:LP_0000104)
 ClassAssertion(ontology:LP_0000834 ontology:LP_0000104)
@@ -273,9 +263,9 @@ AnnotationAssertion(rdfs:label ontology:LP_0000116 "Realschulniveau (NI)"@de)
 ClassAssertion(ontology:LP_0000832 ontology:LP_0000116)
 ClassAssertion(ontology:LP_0030080 ontology:LP_0000116)
 
-# Individual: ontology:LP_0000117 (vertiefendes Niveau (NI))
+# Individual: ontology:LP_0000117 (Vertiefendes Niveau (NI))
 
-AnnotationAssertion(rdfs:label ontology:LP_0000117 "vertiefendes Niveau (NI)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000117 "Vertiefendes Niveau (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000117 "für die Gesamtschule")
 ClassAssertion(ontology:LP_0000069 ontology:LP_0000117)
 ClassAssertion(ontology:LP_0000832 ontology:LP_0000117)
@@ -294,6 +284,18 @@ AnnotationAssertion(rdfs:label ontology:LP_0000129 "Zusätzliche Voraussetzungen
 AnnotationAssertion(skos:editorialNote ontology:LP_0000129 "für die Hauptschule")
 ClassAssertion(ontology:LP_0000832 ontology:LP_0000129)
 ClassAssertion(ontology:LP_0030080 ontology:LP_0000129)
+
+# Individual: ontology:LP_0001116 (Grundlegendes Anforderungsniveau (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001116 "Grundlegendes Anforderungsniveau (NI)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0001116)
+ClassAssertion(ontology:LP_0030055 ontology:LP_0001116)
+
+# Individual: ontology:LP_0001117 (Erhöhtes Anforderungsniveau (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001117 "Erhöhtes Anforderungsniveau (NI)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0001117)
+ClassAssertion(ontology:LP_0030055 ontology:LP_0001117)
 
 # Individual: ontology:LP_0002020 (Allgemeinbildender Schulabschluss (NI))
 

@@ -34,8 +34,6 @@ Declaration(Class(ontology:LP_0000432))
 Declaration(Class(ontology:LP_0000433))
 Declaration(Class(ontology:LP_0001018))
 Declaration(Class(ontology:LP_0001019))
-Declaration(Class(ontology:LP_0001020))
-Declaration(Class(ontology:LP_0001021))
 Declaration(Class(ontology:LP_0002195))
 Declaration(Class(ontology:LP_0002196))
 Declaration(Class(ontology:LP_0002197))
@@ -70,6 +68,8 @@ Declaration(NamedIndividual(ontology:LP_0000151))
 Declaration(NamedIndividual(ontology:LP_0000280))
 Declaration(NamedIndividual(ontology:LP_0000281))
 Declaration(NamedIndividual(ontology:LP_0000282))
+Declaration(NamedIndividual(ontology:LP_0001020))
+Declaration(NamedIndividual(ontology:LP_0001021))
 
 
 
@@ -190,24 +190,12 @@ EquivalentClasses(ontology:LP_0000433 ObjectIntersectionOf(ontology:LP_0000438 O
 # Class: ontology:LP_0001018 (Fachniveau Sek II (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001018 "Fachniveau Sek II (RP)"@de)
-SubClassOf(ontology:LP_0001018 ontology:LP_0000265)
+SubClassOf(ontology:LP_0001018 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000046)))
 
 # Class: ontology:LP_0001019 (Bildungsgangniveau (RP))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001019 "Bildungsgangniveau (RP)"@de)
 EquivalentClasses(ontology:LP_0001019 ObjectIntersectionOf(ontology:LP_0000028 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000046)))
-
-# Class: ontology:LP_0001020 (Grundkurs (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001020 "Grundkurs (RP)"@de)
-EquivalentClasses(ontology:LP_0001020 ObjectIntersectionOf(ontology:LP_0001018 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0001020 ontology:LP_0001018)
-
-# Class: ontology:LP_0001021 (Leistungskurs (RP))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001021 "Leistungskurs (RP)"@de)
-EquivalentClasses(ontology:LP_0001021 ObjectIntersectionOf(ontology:LP_0001018 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0001021 ontology:LP_0001018)
 
 # Class: ontology:LP_0002195 (Inhalt zum Erwerb der Kompetenzen (RP))
 
@@ -422,6 +410,18 @@ ClassAssertion(ontology:LP_0000204 ontology:LP_0000281)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000282 "Berufsreife (RP)"@de)
 ClassAssertion(ontology:LP_0000180 ontology:LP_0000282)
+
+# Individual: ontology:LP_0001020 (Grundkurs (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001020 "Grundkurs (RP)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0001020)
+ClassAssertion(ontology:LP_0001018 ontology:LP_0001020)
+
+# Individual: ontology:LP_0001021 (Leistungskurs (RP))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001021 "Leistungskurs (RP)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0001021)
+ClassAssertion(ontology:LP_0001018 ontology:LP_0001021)
 
 
 )

@@ -15,8 +15,6 @@ Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
 Declaration(Class(ontology:LP_0000168))
 Declaration(Class(ontology:LP_0000182))
 Declaration(Class(ontology:LP_0000206))
-Declaration(Class(ontology:LP_0000515))
-Declaration(Class(ontology:LP_0000516))
 Declaration(Class(ontology:LP_0001001))
 Declaration(Class(ontology:LP_0001002))
 Declaration(Class(ontology:LP_0001005))
@@ -45,6 +43,8 @@ Declaration(Class(ontology:LP_0030039))
 Declaration(NamedIndividual(ontology:LP_0000090))
 Declaration(NamedIndividual(ontology:LP_0000091))
 Declaration(NamedIndividual(ontology:LP_0000092))
+Declaration(NamedIndividual(ontology:LP_0000515))
+Declaration(NamedIndividual(ontology:LP_0000516))
 Declaration(NamedIndividual(ontology:LP_0002000))
 Declaration(NamedIndividual(ontology:LP_0002001))
 Declaration(NamedIndividual(ontology:LP_0002002))
@@ -72,18 +72,6 @@ SubClassOf(ontology:LP_0000182 ObjectIntersectionOf(ontology:LP_0000079 ObjectHa
 AnnotationAssertion(rdfs:label ontology:LP_0000206 "Mittlerer Abschluss (HE)"@de)
 EquivalentClasses(ontology:LP_0000206 ObjectOneOf(ontology:LP_0002002))
 SubClassOf(ontology:LP_0000206 ObjectIntersectionOf(ontology:LP_0000078 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000050)))
-
-# Class: ontology:LP_0000515 (Grundlegendes Anforderungsniveau (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000515 "Grundlegendes Anforderungsniveau (HE)"@de)
-EquivalentClasses(ontology:LP_0000515 ObjectIntersectionOf(ontology:LP_0002077 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0000515 ontology:LP_0002077)
-
-# Class: ontology:LP_0000516 (Erhöhtes Anforderungsniveau (HE))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000516 "Erhöhtes Anforderungsniveau (HE)"@de)
-EquivalentClasses(ontology:LP_0000516 ObjectIntersectionOf(ontology:LP_0002077 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0000516 ontology:LP_0002077)
 
 # Class: ontology:LP_0001001 (Lehrplanfragment (HE))
 
@@ -174,7 +162,7 @@ EquivalentClasses(ontology:LP_0002076 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0002077 (Fachniveau Sek II (HE))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002077 "Fachniveau Sek II (HE)"@de)
-SubClassOf(ontology:LP_0002077 ontology:LP_0000265)
+SubClassOf(ontology:LP_0002077 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000050)))
 
 # Class: ontology:LP_0002169 (Bildungsstandard (HE))
 
@@ -234,6 +222,18 @@ ClassAssertion(ontology:LP_0030039 ontology:LP_0000091)
 AnnotationAssertion(rdfs:label ontology:LP_0000092 "Realschulniveau (HE)"@de)
 ClassAssertion(ontology:LP_0000832 ontology:LP_0000092)
 ClassAssertion(ontology:LP_0030039 ontology:LP_0000092)
+
+# Individual: ontology:LP_0000515 (Grundlegendes Anforderungsniveau (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000515 "Grundlegendes Anforderungsniveau (HE)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0000515)
+ClassAssertion(ontology:LP_0002077 ontology:LP_0000515)
+
+# Individual: ontology:LP_0000516 (Erhöhtes Anforderungsniveau (HE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000516 "Erhöhtes Anforderungsniveau (HE)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0000516)
+ClassAssertion(ontology:LP_0002077 ontology:LP_0000516)
 
 # Individual: ontology:LP_0002000 (Allgemeinbildender Schulabschluss (HE))
 

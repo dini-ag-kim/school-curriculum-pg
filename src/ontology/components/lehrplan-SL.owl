@@ -22,8 +22,6 @@ Declaration(Class(ontology:LP_0000306))
 Declaration(Class(ontology:LP_0000307))
 Declaration(Class(ontology:LP_0000825))
 Declaration(Class(ontology:LP_0001025))
-Declaration(Class(ontology:LP_0001026))
-Declaration(Class(ontology:LP_0001027))
 Declaration(Class(ontology:LP_0001028))
 Declaration(Class(ontology:LP_0002102))
 Declaration(Class(ontology:LP_0002229))
@@ -53,6 +51,8 @@ Declaration(NamedIndividual(ontology:LP_0000269))
 Declaration(NamedIndividual(ontology:LP_0000300))
 Declaration(NamedIndividual(ontology:LP_0000301))
 Declaration(NamedIndividual(ontology:LP_0000302))
+Declaration(NamedIndividual(ontology:LP_0001026))
+Declaration(NamedIndividual(ontology:LP_0001027))
 
 
 
@@ -112,19 +112,7 @@ EquivalentClasses(ontology:LP_0000825 ObjectIntersectionOf(ontology:LP_0000438 O
 # Class: ontology:LP_0001025 (Fachniveau Sek II (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001025 "Fachniveau Sek II (SL)"@de)
-SubClassOf(ontology:LP_0001025 ontology:LP_0000265)
-
-# Class: ontology:LP_0001026 (Grundkurs (SL))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001026 "Grundkurs (SL)"@de)
-EquivalentClasses(ontology:LP_0001026 ObjectIntersectionOf(ontology:LP_0001025 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000508)))
-SubClassOf(ontology:LP_0001026 ontology:LP_0001025)
-
-# Class: ontology:LP_0001027 (Leistungskurs (SL))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001027 "Leistungskurs (SL)"@de)
-EquivalentClasses(ontology:LP_0001027 ObjectIntersectionOf(ontology:LP_0001025 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000509)))
-SubClassOf(ontology:LP_0001027 ontology:LP_0001025)
+SubClassOf(ontology:LP_0001025 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000055)))
 
 # Class: ontology:LP_0001028 (Bildungsgangniveau (SL))
 
@@ -299,6 +287,18 @@ ClassAssertion(ontology:LP_0000187 ontology:LP_0000301)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000302 "Mittlerer Bildungsabschluss (SL)"@de)
 ClassAssertion(ontology:LP_0000211 ontology:LP_0000302)
+
+# Individual: ontology:LP_0001026 (Grundkurs (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001026 "Grundkurs (SL)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0001026)
+ClassAssertion(ontology:LP_0001025 ontology:LP_0001026)
+
+# Individual: ontology:LP_0001027 (Leistungskurs (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0001027 "Leistungskurs (SL)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0001027)
+ClassAssertion(ontology:LP_0001025 ontology:LP_0001027)
 
 
 )

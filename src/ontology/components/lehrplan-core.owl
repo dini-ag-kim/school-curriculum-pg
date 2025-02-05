@@ -61,7 +61,6 @@ Declaration(Class(:LP_0000291))
 Declaration(Class(:LP_0000292))
 Declaration(Class(:LP_0000319))
 Declaration(Class(:LP_0000332))
-Declaration(Class(:LP_0000335))
 Declaration(Class(:LP_0000336))
 Declaration(Class(:LP_0000337))
 Declaration(Class(:LP_0000339))
@@ -86,8 +85,6 @@ Declaration(Class(:LP_0000500))
 Declaration(Class(:LP_0000501))
 Declaration(Class(:LP_0000502))
 Declaration(Class(:LP_0000504))
-Declaration(Class(:LP_0000508))
-Declaration(Class(:LP_0000509))
 Declaration(Class(:LP_0000530))
 Declaration(Class(:LP_0000531))
 Declaration(Class(:LP_0000536))
@@ -797,11 +794,6 @@ AnnotationAssertion(rdfs:comment :LP_0000332 "Element, das einen Lerninhalt besc
 AnnotationAssertion(rdfs:label :LP_0000332 "CE-Lerninhalt"@de)
 EquivalentClasses(:LP_0000332 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000480)))
 
-# Class: :LP_0000335 (Fachniveaufunktion)
-
-AnnotationAssertion(rdfs:label :LP_0000335 "Fachniveaufunktion"@de)
-SubClassOf(:LP_0000335 :LP_0000478)
-
 # Class: :LP_0000336 (Fachbezogene Kompetenz)
 
 AnnotationAssertion(rdfs:label :LP_0000336 "Fachbezogene Kompetenz"@de)
@@ -950,26 +942,14 @@ SubClassOf(:LP_0000502 :LP_0000499)
 AnnotationAssertion(rdfs:label :LP_0000504 "Lernbereichsbezugsfunktion"@de)
 SubClassOf(:LP_0000504 :LP_0000499)
 
-# Class: :LP_0000508 (Grundkursfunktion)
-
-AnnotationAssertion(rdfs:label :LP_0000508 "Grundkursfunktion"@de)
-SubClassOf(:LP_0000508 :LP_0000335)
-
-# Class: :LP_0000509 (Leistungskursfunktion)
-
-AnnotationAssertion(rdfs:label :LP_0000509 "Leistungskursfunktion"@de)
-SubClassOf(:LP_0000509 :LP_0000335)
-
 # Class: :LP_0000530 (Grundkurs)
 
 AnnotationAssertion(rdfs:label :LP_0000530 "Grundkurs"@de)
-EquivalentClasses(:LP_0000530 ObjectIntersectionOf(:LP_0000265 ObjectSomeValuesFrom(:LP_0000483 :LP_0000508)))
 SubClassOf(:LP_0000530 :LP_0000265)
 
 # Class: :LP_0000531 (Leistungskurs)
 
 AnnotationAssertion(rdfs:label :LP_0000531 "Leistungskurs"@de)
-EquivalentClasses(:LP_0000531 ObjectIntersectionOf(:LP_0000265 ObjectSomeValuesFrom(:LP_0000483 :LP_0000509)))
 SubClassOf(:LP_0000531 :LP_0000265)
 
 # Class: :LP_0000536 (Element (Bista))

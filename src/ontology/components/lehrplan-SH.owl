@@ -25,6 +25,7 @@ Declaration(Class(ontology:LP_0002041))
 Declaration(Class(ontology:LP_0002042))
 Declaration(Class(ontology:LP_0002103))
 Declaration(Class(ontology:LP_0030008))
+Declaration(Class(ontology:LP_0030010))
 Declaration(Class(ontology:LP_0030011))
 Declaration(Class(ontology:LP_0030012))
 Declaration(Class(ontology:LP_0030013))
@@ -49,6 +50,8 @@ Declaration(NamedIndividual(ontology:LP_0000249))
 Declaration(NamedIndividual(ontology:LP_0002033))
 Declaration(NamedIndividual(ontology:LP_0002034))
 Declaration(NamedIndividual(ontology:LP_0002035))
+Declaration(NamedIndividual(ontology:LP_0030040))
+Declaration(NamedIndividual(ontology:LP_0030046))
 
 
 
@@ -119,6 +122,11 @@ SubClassOf(ontology:LP_0002042 ObjectIntersectionOf(ontology:LP_0000811 ObjectSo
 AnnotationAssertion(rdfs:comment ontology:LP_0002103 "Lehrplan Element bezogen auf den Lehrplan von Schleswig-Holstein")
 AnnotationAssertion(rdfs:label ontology:LP_0002103 "Element (SH)"@de)
 EquivalentClasses(ontology:LP_0002103 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000054)))
+
+# Class: ontology:LP_0030010 (Fachniveau Sek II (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030010 "Fachniveau Sek II (SH)"@de)
+SubClassOf(ontology:LP_0030010 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000054)))
 
 # Class: ontology:LP_0030011 (Teilkompetenzbereich (SH))
 
@@ -251,6 +259,18 @@ ClassAssertion(ontology:LP_0000186 ontology:LP_0002034)
 
 AnnotationAssertion(rdfs:label ontology:LP_0002035 "Mittlerer Schulabschluss (SH)"@de)
 ClassAssertion(ontology:LP_0000210 ontology:LP_0002035)
+
+# Individual: ontology:LP_0030040 (Grundlegendes Niveau (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030040 "Grundlegendes Niveau (SH)"@de)
+ClassAssertion(ontology:LP_0000530 ontology:LP_0030040)
+ClassAssertion(ontology:LP_0030010 ontology:LP_0030040)
+
+# Individual: ontology:LP_0030046 (Erhöhtes Niveau (SH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030046 "Erhöhtes Niveau (SH)"@de)
+ClassAssertion(ontology:LP_0000531 ontology:LP_0030046)
+ClassAssertion(ontology:LP_0030010 ontology:LP_0030046)
 
 
 )

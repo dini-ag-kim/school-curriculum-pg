@@ -7,8 +7,27 @@ sh run.sh make clean
 
 sh run.sh make VERSION=$VERSION ONTBASE=$ONTBASE ANNOTATE_ONTOLOGY_VERSION="$ANNOTATE_ONTOLOGY_VERSION" prepare_release
 
+sh run.sh make release-land-BB
+sh run.sh make release-land-BE
+sh run.sh make release-land-BW
+sh run.sh make release-land-BY
+sh run.sh make release-land-HB
+sh run.sh make release-land-HE
+sh run.sh make release-land-HH
+sh run.sh make release-land-MV
+sh run.sh make release-land-NI
+sh run.sh make release-land-NW
+sh run.sh make release-land-RP
+sh run.sh make release-land-SH
+sh run.sh make release-land-SL
+sh run.sh make release-land-SN
+sh run.sh make release-land-ST
+sh run.sh make release-land-TH
+
 #sh run.sh make VERSION=$VERSION PRIOR_VERSION=$PRIOR_VERSION update-ontology-annotations
 sh run.sh make VERSION=$VERSION  update-ontology-annotations
+
+
 
 # finally refresh imports again, so that version IRIs are updated back to "normal". 
 #sh run.sh make no-mirror-refresh-imports

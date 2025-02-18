@@ -120,8 +120,6 @@ Declaration(Class(:LP_0002008))
 Declaration(Class(:LP_0002012))
 Declaration(Class(:LP_0002106))
 Declaration(Class(:LP_0002158))
-Declaration(Class(:LP_0002161))
-Declaration(Class(:LP_0002167))
 Declaration(Class(:LP_0002171))
 Declaration(Class(:LP_0010001))
 Declaration(Class(:LP_0010002))
@@ -595,14 +593,14 @@ SubClassOf(:LP_0000076 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP
 AnnotationAssertion(rdfs:label :LP_0000077 "Fachabitur"@de)
 SubClassOf(:LP_0000077 :LP_0000019)
 
-# Class: :LP_0000078 (Mittlerer Abschluss)
+# Class: :LP_0000078 (Mittlerer Schulabschluss)
 
-AnnotationAssertion(rdfs:label :LP_0000078 "Mittlerer Abschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000078 "Mittlerer Schulabschluss"@de)
 SubClassOf(:LP_0000078 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP_0000071 :LP_0000832)))
 
-# Class: :LP_0000079 (Erster Abschluss)
+# Class: :LP_0000079 (Erster Schulabschluss)
 
-AnnotationAssertion(rdfs:label :LP_0000079 "Erster Abschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000079 "Erster Schulabschluss"@de)
 SubClassOf(:LP_0000079 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP_0000071 :LP_0000834)))
 
 # Class: :LP_0000081 (Förderschulabschluss)
@@ -610,11 +608,12 @@ SubClassOf(:LP_0000079 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP
 AnnotationAssertion(rdfs:label :LP_0000081 "Förderschulabschluss"@de)
 SubClassOf(:LP_0000081 :LP_0000019)
 
-# Class: :LP_0000111 (Schulform)
+# Class: :LP_0000111 (Schulart)
 
 AnnotationAssertion(rdfs:comment :LP_0000111 "Beschreibt die Art und Weise wie eine Schule organisiert ist."@de)
 AnnotationAssertion(rdfs:comment :LP_0000111 "Describes the way a school is organized."@en)
-AnnotationAssertion(rdfs:label :LP_0000111 "Schulform"@de)
+AnnotationAssertion(rdfs:label :LP_0000111 "Schulart"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0000111 "Schulform")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000111 "Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
@@ -669,7 +668,6 @@ AnnotationAssertion(rdfs:comment :LP_0000140 "Schulart im Sekundarbereich I, die
 Die Schulart Hauptschule gibt es in BW, HE, NI und NW.")
 AnnotationAssertion(rdfs:label :LP_0000140 "Hauptschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000140 <https://w3id.org/kim/schularten/s03>)
-AnnotationAssertion(:LP_0000141 :LP_0000140 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0000140 :LP_0000111)
 
 # Class: :LP_0000159 (Mittelschule)
@@ -711,6 +709,7 @@ SubClassOf(:LP_0000238 :LP_0000111)
 AnnotationAssertion(rdfs:comment :LP_0000240 "Schulart des Sekundarbereichs I mit mehreren Bildungsgängen, die zu unterschiedlichen Abschlüssen führen (Erster Schulabschluss, Mittlerer Schulabschluss, Berechtigung zum Übergang in die gymnasiale Oberstufe). Gesamtschulen können auch den Sekundarbereich II in Form der gymnasialen Oberstufe umfassen. Die Gesamtschule gibt es zusätzlich als integrierte und kooperative Form.
 Die Schulart Gesamtschule gibt es in BB und NW.")
 AnnotationAssertion(rdfs:label :LP_0000240 "Gesamtschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000240 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0000240 :LP_0000111)
 
 # Class: :LP_0000251 (Werkschule)
@@ -758,6 +757,7 @@ SubClassOf(:LP_0000265 :LP_0000037)
 
 # Class: :LP_0000268 (Leitidee (Bista))
 
+AnnotationAssertion(rdfs:comment :LP_0000268 "Bezeichung in den Bildungsstandards für die inhaltsbezogenen Kompetenzbereiche im Fach Mathematik.")
 AnnotationAssertion(rdfs:label :LP_0000268 "Leitidee (Bista)"@de)
 SubClassOf(:LP_0000268 :LP_0000536)
 
@@ -794,15 +794,15 @@ AnnotationAssertion(rdfs:comment :LP_0000332 "Element, das einen Lerninhalt besc
 AnnotationAssertion(rdfs:label :LP_0000332 "CE-Lerninhalt"@de)
 EquivalentClasses(:LP_0000332 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000480)))
 
-# Class: :LP_0000336 (Fachbezogene Kompetenz)
+# Class: :LP_0000336 (Fachbezogene Kompetenzspezifikation)
 
-AnnotationAssertion(rdfs:label :LP_0000336 "Fachbezogene Kompetenz"@de)
+AnnotationAssertion(rdfs:label :LP_0000336 "Fachbezogene Kompetenzspezifikation"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000336 "Bezieht sich auf ein bestimmtes Fach")
 EquivalentClasses(:LP_0000336 ObjectIntersectionOf(:LP_0000263 ObjectSomeValuesFrom(:LP_0000483 :LP_0000502)))
 
-# Class: :LP_0000337 (Fach- und Lernbereichsübergreifende Kompetenz)
+# Class: :LP_0000337 (Fach- und Lernbereichsübergreifende Kompetenzspezifikation)
 
-AnnotationAssertion(rdfs:label :LP_0000337 "Fach- und Lernbereichsübergreifende Kompetenz"@de)
+AnnotationAssertion(rdfs:label :LP_0000337 "Fach- und Lernbereichsübergreifende Kompetenzspezifikation"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000337 "Bezüglich mehrere Fächer bzw. eines Fachverbund"@de)
 EquivalentClasses(:LP_0000337 ObjectIntersectionOf(:LP_0000263 ObjectSomeValuesFrom(:LP_0000483 :LP_0000504)))
 
@@ -1011,14 +1011,14 @@ AnnotationAssertion(rdfs:label :LP_0000571 "Bildungsstandard (KMK)"@de)
 AnnotationAssertion(rdfs:seeAlso :LP_0000571 <https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Konzeption-Entwicklung.pdf>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000571 "bitte Defintion verbessern")
 
-# Class: :LP_0000627 (Lehrplanfragmentfunktion)
+# Class: :LP_0000627 (Fragmentfunktion)
 
 AnnotationAssertion(rdfs:comment :LP_0000627 "Ist eine Stukturierungsfunktion, die ein Lehrplanelement inne haben kann. 
 Ein Lehrplanelement, das diese Funktion inne hat, identifiziert einen Teil des Lehrplan. Die Art des Lehrplanteils muss nicht näher spezifizert sein.
 
 Wenngleich diese Definition auch auf Kompetenzbereiche oder Themenfelder anwendbar ist, ist sie ihnen ausdrücklich nicht gleichzusetzen, über- oder unterzuordnen. 
 Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die anderen Strukturierungsfunktionen spezifiziert werden können."@de)
-AnnotationAssertion(rdfs:label :LP_0000627 "Lehrplanfragmentfunktion"@de)
+AnnotationAssertion(rdfs:label :LP_0000627 "Fragmentfunktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000627 "Funktion eines Lehrplanelements, das z.B. ein Kapitel, einen Absatz, oder bestimmte Seiten des Lehrplans identifiziert."@de)
 SubClassOf(:LP_0000627 :LP_0000482)
 
@@ -1181,25 +1181,14 @@ EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesF
 AnnotationAssertion(rdfs:label :LP_0002158 "Verknüpfungsbeschreibungsfunktion"@de)
 SubClassOf(:LP_0002158 :LP_0000493)
 
-# Class: :LP_0002161 (Erläuterungsbeschreibungsfunktion)
-
-AnnotationAssertion(rdfs:label :LP_0002161 "Erläuterungsbeschreibungsfunktion"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0002161 "was  ist der Unterschied zu Hinweis?")
-SubClassOf(:LP_0002161 :LP_0000493)
-
-# Class: :LP_0002167 (Beispielbeschreibungsfunktion)
-
-AnnotationAssertion(rdfs:label :LP_0002167 "Beispielbeschreibungsfunktion"@de)
-SubClassOf(:LP_0002167 :LP_0000493)
-
 # Class: :LP_0002171 (Domänenbezugsfunktion)
 
 AnnotationAssertion(rdfs:label :LP_0002171 "Domänenbezugsfunktion"@de)
 SubClassOf(:LP_0002171 :LP_0000499)
 
-# Class: :LP_0010001 (Femdsprachniveau)
+# Class: :LP_0010001 (Femdsprachenniveau)
 
-AnnotationAssertion(rdfs:label :LP_0010001 "Femdsprachniveau"@de)
+AnnotationAssertion(rdfs:label :LP_0010001 "Femdsprachenniveau"@de)
 SubClassOf(:LP_0010001 :LP_0000037)
 
 # Class: :LP_0010002 (A1 Anfänger)
@@ -1566,13 +1555,13 @@ AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (class level 2)
+# Individual: :LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (Jahrgangsstufe 3)
+# Individual: :LP_2000003 (class level 3)
 
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
@@ -1590,7 +1579,7 @@ AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (class level 6)
+# Individual: :LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
@@ -1602,13 +1591,13 @@ AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (Jahrgangsstufe 8)
+# Individual: :LP_2000008 (class level 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1620,7 +1609,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)

@@ -15,18 +15,10 @@ Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
 Declaration(Class(ontology:LP_0000170))
 Declaration(Class(ontology:LP_0000184))
 Declaration(Class(ontology:LP_0000208))
-Declaration(Class(ontology:LP_0000364))
 Declaration(Class(ontology:LP_0000365))
-Declaration(Class(ontology:LP_0000366))
-Declaration(Class(ontology:LP_0000368))
-Declaration(Class(ontology:LP_0000369))
-Declaration(Class(ontology:LP_0000370))
-Declaration(Class(ontology:LP_0000371))
-Declaration(Class(ontology:LP_0000372))
 Declaration(Class(ontology:LP_0001011))
 Declaration(Class(ontology:LP_0002080))
 Declaration(Class(ontology:LP_0002081))
-Declaration(Class(ontology:LP_0002107))
 Declaration(Class(ontology:LP_0002136))
 Declaration(Class(ontology:LP_0002139))
 Declaration(Class(ontology:LP_0002140))
@@ -88,46 +80,11 @@ AnnotationAssertion(rdfs:label ontology:LP_0000208 "Mittlerer Abschluss (MV)"@de
 EquivalentClasses(ontology:LP_0000208 ObjectOneOf(ontology:LP_0000363))
 SubClassOf(ontology:LP_0000208 ObjectIntersectionOf(ontology:LP_0000078 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
 
-# Class: ontology:LP_0000364 (Grundschule (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000364 "Grundschule (MV)"@de)
-SubClassOf(ontology:LP_0000364 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000114) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000001) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000002) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000003) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000004) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
 # Class: ontology:LP_0000365 (Orientierungsstufe)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000365 "In Mecklenburg-Vorpommern zählen die Jahrgangsstufen 5 u 6 zur Orientierungsstufe an der Reginalen Schule und beiden Formen der Gesamtschule, um sich für einen Bildungsgang und den dazugehörigen Abschluss zu orientieren.")
 AnnotationAssertion(rdfs:label ontology:LP_0000365 "Orientierungsstufe"@de)
 SubClassOf(ontology:LP_0000365 ontology:LP_0000020)
-
-# Class: ontology:LP_0000366 (Schulartunabhängige Orientierungsstufe (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000366 "Schulartunabhängige Orientierungsstufe (MV)"@de)
-SubClassOf(ontology:LP_0000366 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000026 ObjectOneOf(ontology:LP_2000005 ontology:LP_2000006)) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
-# Class: ontology:LP_0000368 (Regionale Schule Sek I (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000368 "Regionale Schule Sek I (MV)"@de)
-SubClassOf(ontology:LP_0000368 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000367) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
-# Class: ontology:LP_0000369 (Kooperative Gesamtschule Sek I (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000369 "Kooperative Gesamtschule Sek I (MV)"@de)
-SubClassOf(ontology:LP_0000369 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0002012) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000362) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000363) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
-# Class: ontology:LP_0000370 (Integrierte Gesamtschule Sek I (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000370 "Integrierte Gesamtschule Sek I (MV)"@de)
-SubClassOf(ontology:LP_0000370 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000292) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000362) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000363) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
-# Class: ontology:LP_0000371 (Gymnasium Sek I (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000371 "Gymnasium Sek I (MV)"@de)
-SubClassOf(ontology:LP_0000371 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000362) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000363) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000007) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000008) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000009) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000010) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
-# Class: ontology:LP_0000372 (Gymnasium Sek II (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000372 "Gymnasium Sek II (MV)"@de)
-SubClassOf(ontology:LP_0000372 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000122) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000361) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
 
 # Class: ontology:LP_0001011 (Bildungsgangniveau (MV))
 
@@ -144,11 +101,6 @@ EquivalentClasses(ontology:LP_0002080 ObjectIntersectionOf(ontology:LP_0000261 O
 
 AnnotationAssertion(rdfs:label ontology:LP_0002081 "Fachniveau Sek II (MV)"@de)
 SubClassOf(ontology:LP_0002081 ObjectIntersectionOf(ontology:LP_0000265 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
-
-# Class: ontology:LP_0002107 (Gesamtschule Sek II (MV))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002107 "Gesamtschule Sek II (MV)"@de)
-SubClassOf(ontology:LP_0002107 ObjectIntersectionOf(ontology:LP_0000811 ObjectSomeValuesFrom(ontology:LP_0000812 ontology:LP_0000240) ObjectHasValue(ontology:LP_0000021 ontology:LP_0000361) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000011) ObjectHasValue(ontology:LP_0000026 ontology:LP_2000012) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000052)))
 
 # Class: ontology:LP_0002136 (Lehrplanfragment (MV))
 

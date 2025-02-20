@@ -99,7 +99,6 @@ Declaration(Class(:LP_0000802))
 Declaration(Class(:LP_0000808))
 Declaration(Class(:LP_0000809))
 Declaration(Class(:LP_0000810))
-Declaration(Class(:LP_0000811))
 Declaration(Class(:LP_0000813))
 Declaration(Class(:LP_0000814))
 Declaration(Class(:LP_0000815))
@@ -307,7 +306,6 @@ AnnotationAssertion(rdfs:label :LP_0000015 "hat Prozessteil"@de)
 # Object Property: :LP_0000017 (konkretisiert Lehrplan)
 
 AnnotationAssertion(rdfs:label :LP_0000017 "konkretisiert Lehrplan"@de)
-ObjectPropertyDomain(:LP_0000017 ObjectUnionOf(:LP_0000006 :LP_0000811 :LP_0000816))
 ObjectPropertyRange(:LP_0000017 :LP_0000438)
 
 # Object Property: :LP_0000021 (endet mit Abschluss)
@@ -356,7 +354,6 @@ AnnotationAssertion(rdfs:label :LP_0000343 "hat Schulart"@de)
 
 AnnotationAssertion(rdfs:label :LP_0000440 "für Bildungsgangabschnitt"@de)
 ObjectPropertyDomain(:LP_0000440 :LP_0000438)
-ObjectPropertyRange(:LP_0000440 :LP_0000811)
 
 # Object Property: :LP_0000483 (hat Funktion)
 
@@ -548,7 +545,6 @@ AnnotationAssertion(rdfs:comment :LP_0000040 "Klasse der Bezeichnungen der deuts
 AnnotationAssertion(rdfs:label :LP_0000040 "Bundesland Bezeichnung"@de)
 AnnotationAssertion(rdfs:label :LP_0000040 "state designation"@en)
 EquivalentClasses(:LP_0000040 ObjectOneOf(:LP_3000031 :LP_3000043 :LP_3000044 :LP_3000045 :LP_3000046 :LP_3000047 :LP_3000048 :LP_3000049 :LP_3000050 :LP_3000051 :LP_3000052 :LP_3000053 :LP_3000054 :LP_3000055 :LP_3000056 :LP_3000057))
-DisjointClasses(:LP_0000040 :LP_0000811)
 
 # Class: :LP_0000053 (Berlin-Brandenburg)
 
@@ -1026,11 +1022,6 @@ SubClassOf(:LP_0000809 :LP_0000808)
 
 AnnotationAssertion(rdfs:label :LP_0000810 "Schulklasse"@de)
 SubClassOf(:LP_0000810 :LP_0000808)
-
-# Class: :LP_0000811 (Bildungsgangabschnitt)
-
-AnnotationAssertion(rdfs:label :LP_0000811 "Bildungsgangabschnitt"@de)
-SubClassOf(:LP_0000811 :LP_0000816)
 
 # Class: :LP_0000813 (Hauptschulbildungsgang)
 

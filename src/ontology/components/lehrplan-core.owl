@@ -52,7 +52,6 @@ Declaration(Class(:LP_0000238))
 Declaration(Class(:LP_0000240))
 Declaration(Class(:LP_0000251))
 Declaration(Class(:LP_0000261))
-Declaration(Class(:LP_0000262))
 Declaration(Class(:LP_0000263))
 Declaration(Class(:LP_0000265))
 Declaration(Class(:LP_0000268))
@@ -78,7 +77,6 @@ Declaration(Class(:LP_0000480))
 Declaration(Class(:LP_0000481))
 Declaration(Class(:LP_0000482))
 Declaration(Class(:LP_0000493))
-Declaration(Class(:LP_0000494))
 Declaration(Class(:LP_0000497))
 Declaration(Class(:LP_0000499))
 Declaration(Class(:LP_0000500))
@@ -118,7 +116,6 @@ Declaration(Class(:LP_0001015))
 Declaration(Class(:LP_0002005))
 Declaration(Class(:LP_0002008))
 Declaration(Class(:LP_0002012))
-Declaration(Class(:LP_0002106))
 Declaration(Class(:LP_0002158))
 Declaration(Class(:LP_0002171))
 Declaration(Class(:LP_0010001))
@@ -733,14 +730,6 @@ Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zwe
 AnnotationAssertion(rdfs:label :LP_0000261 "Curriculares Element"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000261 "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 
-# Class: :LP_0000262 (CE-Kompetenzbereich)
-
-AnnotationAssertion(rdfs:comment :LP_0000262 "Strukturierendes Element, das einen Kompetenzbereich benennt.  Es kann einem anderen Kompetenzbereich über- oder untergeordnet sein. Es ist Kompetenzspezifikationen übergeordnet."@de)
-AnnotationAssertion(rdfs:label :LP_0000262 "CE-Kompetenzbereich"@de)
-EquivalentClasses(:LP_0000262 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000262 :LP_0000263)) ObjectAllValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000262 :LP_0000263))))
-EquivalentClasses(:LP_0000262 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000483 :LP_0000494)))
-SubClassOf(:LP_0000262 :LP_0000349)
-
 # Class: :LP_0000263 (CE-Kompetenzspezifikation)
 
 AnnotationAssertion(rdfs:comment :LP_0000263 "Element, das eine Kompetenz beschreibt. Die kleinste Einheit der Beschreibung einer Fähigkeit die SuS haben sollen oder ihrer Ausführung. Enthält einen Operatoren.
@@ -833,7 +822,6 @@ AnnotationAssertion(rdfs:label :LP_0000347 "Identifikationsnummer"@de)
 # Class: :LP_0000349 (CE-Bereich)
 
 AnnotationAssertion(rdfs:label :LP_0000349 "CE-Bereich"@de)
-SubClassOf(:LP_0000349 :LP_0000261)
 
 # Class: :LP_0000367 (Regionale Schule)
 
@@ -903,16 +891,11 @@ AnnotationAssertion(rdfs:comment :LP_0000493 "Elemente, die diese Funktion inne 
 AnnotationAssertion(rdfs:label :LP_0000493 "Beschreibungsfunktion"@de)
 SubClassOf(:LP_0000493 :LP_0000478)
 
-# Class: :LP_0000494 (Kompetenzbereichsfunktion)
+# Class: :LP_0000497 (Bereichsfunktion)
 
-AnnotationAssertion(rdfs:comment :LP_0000494 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de)
-AnnotationAssertion(rdfs:comment :LP_0000494 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de)
-AnnotationAssertion(rdfs:label :LP_0000494 "Kompetenzbereichsfunktion"@de)
-SubClassOf(:LP_0000494 :LP_0000482)
-
-# Class: :LP_0000497 (Themenbereichsfunktion)
-
-AnnotationAssertion(rdfs:label :LP_0000497 "Themenbereichsfunktion"@de)
+AnnotationAssertion(rdfs:comment :LP_0000497 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Kompetenzbereich. Einem Kompetenzberich könne Teilkomptenzbereiche untergeordnet werden."@de)
+AnnotationAssertion(rdfs:comment :LP_0000497 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Teilkompetenzbereich. Teilkompetenzbereiche sind üblicherweise einem Kompetenzbereich oder anderen Teilkompetenzbereich untergeordnet."@de)
+AnnotationAssertion(rdfs:label :LP_0000497 "Bereichsfunktion"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000497 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Thema. Einem Thema kann einem Themenfeld oder anderen Themen untergeordnet werden."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000497 "Ein Lehrplanelement, das diese Funtion inne hat, beschreibt einen Themenfeld. Einem Themenfeld können Themen untergeordnet werden."@de)
 SubClassOf(:LP_0000497 :LP_0000482)
@@ -1168,13 +1151,6 @@ Die Schulart Kooperative Gesamtschule gibt es in HE, MV, NI, ST und TH.")
 AnnotationAssertion(rdfs:label :LP_0002012 "Kooperative Gesamtschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0002012 :LP_0000111)
-
-# Class: :LP_0002106 (CE-Themenbereich)
-
-AnnotationAssertion(rdfs:comment :LP_0002106 "Strukturierendes Element, das ein Thema benennt. Es kann einem anderen Themenfeld über- oder untergeordnet sein. Es ist Lerninhalten übergeordnet."@de)
-AnnotationAssertion(rdfs:label :LP_0002106 "CE-Themenbereich"@de)
-EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000332 :LP_0002106)) ObjectAllValuesFrom(:LP_0000008 ObjectUnionOf(:LP_0000332 :LP_0002106))))
-EquivalentClasses(:LP_0002106 ObjectIntersectionOf(:LP_0000349 ObjectSomeValuesFrom(:LP_0000483 :LP_0000497)))
 
 # Class: :LP_0002158 (Verknüpfungsbeschreibungsfunktion)
 
@@ -1573,13 +1549,13 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (class level 5)
+# Individual: :LP_2000005 (Jahrgangsstufe 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (Jahrgangsstufe 6)
+# Individual: :LP_2000006 (class level 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
@@ -1591,7 +1567,7 @@ AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (class level 8)
+# Individual: :LP_2000008 (Jahrgangsstufe 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
@@ -1609,7 +1585,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (class level 11)
+# Individual: :LP_2000011 (Jahrgangsstufe 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
@@ -1621,7 +1597,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

@@ -38,7 +38,61 @@ Annotation(dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(dcterms:title "Curriculum Ontology"@en)
 Annotation(dcterms:title "Lehrplan Ontologie"@de)
 
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030003>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030051>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030056>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030057>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030071>))
+Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0030072>))
 Declaration(AnnotationProperty(dcterms:license))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030051> (hat Beschreibung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030051> "hat Beschreibung"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030051> <http://purl.obolibrary.org/obo/IAO_0000136>)
+ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0030051> <https://w3id.org/lehrplan/ontology/LP_0000261>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0030051> <https://w3id.org/lehrplan/ontology/LP_0030003>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030056> (hat Titel)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030056> "hat Titel"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030056> <http://purl.obolibrary.org/obo/IAO_0000136>)
+ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0030056> <https://w3id.org/lehrplan/ontology/LP_0000261>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0030056> <https://w3id.org/lehrplan/ontology/LP_0000346>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030057> (hat Nummer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030057> "hat Nummer"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030057> <http://purl.obolibrary.org/obo/IAO_0000136>)
+ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0030057> <https://w3id.org/lehrplan/ontology/LP_0000261>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0030057> <https://w3id.org/lehrplan/ontology/LP_0000347>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030071> (hat Verweis)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030071> "hat Verweis"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030071> <http://purl.obolibrary.org/obo/IAO_0000136>)
+ObjectPropertyRange(<https://w3id.org/lehrplan/ontology/LP_0030071> <https://w3id.org/lehrplan/ontology/LP_0030065>)
+
+# Object Property: <https://w3id.org/lehrplan/ontology/LP_0030072> (verweist auf)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030072> "verweist auf"@de)
+SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030072> <http://purl.obolibrary.org/obo/IAO_0000136>)
+ObjectPropertyDomain(<https://w3id.org/lehrplan/ontology/LP_0030072> <https://w3id.org/lehrplan/ontology/LP_0030065>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030003> (Beschreibung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030003> "Beschreibung"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030003> <http://purl.obolibrary.org/obo/IAO_0000300>)
 
 
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-6378-2618> "Steffen Rörtgen")

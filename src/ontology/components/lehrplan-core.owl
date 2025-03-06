@@ -465,30 +465,37 @@ AnnotationAssertion(rdfs:label :LP_0000463 "uri"@de)
 
 # Class: :LP_0000001 (school subject)
 
-AnnotationAssertion(rdfs:comment :LP_0000001 "In der Bildungsinstitution Schule ist Fach der Ausdruck für die thematische Gliederung dessen, was jeweils unter Bildung verstanden wird."@de)
-AnnotationAssertion(rdfs:comment :LP_0000001 "In the educational institution of school, subject is the term for the thematic structure of what is understood by education."@en)
+AnnotationAssertion(rdfs:comment :LP_0000001 "Ein “Schulfach” ist eine “Informationseinheit”.
+Es handelt sich um die Bezeichnung eines an der Schule unterrichteten Fachs. 
+Es ist der Ausdruck für die thematische Gliederung dessen, was jeweils unter allgemeiner schulischer Bildung verstanden wird. Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Beispiele für Schulfächer sind “Deutsch”, “Mathematik”, “Geschichte” und “Biologie”."@de)
+AnnotationAssertion(rdfs:comment :LP_0000001 "In the educational institution of school, subject is the term for the thematic structure of what is understood by education.
+-> nicht aktuell"@en)
 AnnotationAssertion(rdfs:label :LP_0000001 "Schulfach"@de)
 AnnotationAssertion(rdfs:label :LP_0000001 "school subject"@en)
 AnnotationAssertion(rdfs:seeAlso :LP_0000001 <https://de.wikipedia.org/wiki/Unterrichtsfach>)
 
 # Class: :LP_0000002 (MINT-Fach)
 
+AnnotationAssertion(rdfs:comment :LP_0000002 "Ein “MINT-Fach” ist ein “Schulfach”, in dem sich die Lernenden mit einem der vier Bereiche Mathematik, Informatik, Naturwissenschaft und Technik auseinandersetzen."@de)
 AnnotationAssertion(rdfs:label :LP_0000002 "MINT-Fach"@de)
 SubClassOf(:LP_0000002 :LP_0000001)
 
 # Class: :LP_0000003 (Naturwissenschaftsfach)
 
+AnnotationAssertion(rdfs:comment :LP_0000003 "Ein “Naturwissenschaftsfach” ist ein “MINT-Fach”, das die belebte und unbelebte Materie als Gegenstand hat. Die drei Naturwissenschaftsfächer sind die Fächer Biologie, Chemie und Physik."@de)
 AnnotationAssertion(rdfs:label :LP_0000003 "Naturwissenschaftsfach"@de)
 EquivalentClasses(:LP_0000003 ObjectOneOf(<http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/kim/schulfaecher/s1022>))
 SubClassOf(:LP_0000003 :LP_0000002)
 
-# Class: :LP_0000004 (Fremdsprachfach)
+# Class: :LP_0000004 (Fremdsprachenfach)
 
-AnnotationAssertion(rdfs:label :LP_0000004 "Fremdsprachfach"@de)
+AnnotationAssertion(rdfs:comment :LP_0000004 "Ein “Fremsprachenfach” ist ein “Schulfach”, in dem die Lernenden eine Fremdsprache erlernen. In Deutschland übliche Fremdsprachenfächer sind zum Beispiel die Fächer Englisch und Französisch."@de)
+AnnotationAssertion(rdfs:label :LP_0000004 "Fremdsprachenfach"@de)
 SubClassOf(:LP_0000004 :LP_0000001)
 
 # Class: :LP_0000005 (Gesellschaftswissenschaftsfach)
 
+AnnotationAssertion(rdfs:comment :LP_0000005 "Ein “Gesellschaftswissenschaftsfach” ist ein “Schulfach”, in dem sich mit kulturellen, sozialen, ökonomischen und politischen Themen auseinandergesetzt wird. Zu den Gesellschaftswissenschaftsfächern gehören die Fächer Erziehungswissenschaften, Geographie, Geschichte, Sachunterricht, Sozialkunde, Politikwissenschaft und Wirtschaftskunde."@de)
 AnnotationAssertion(rdfs:label :LP_0000005 "Gesellschaftswissenschaftsfach"@de)
 SubClassOf(:LP_0000005 :LP_0000001)
 
@@ -506,8 +513,12 @@ AnnotationAssertion(rdfs:label :LP_0000007 "Lernprozess"@de)
 
 # Class: :LP_0000009 (Jahrgangsstufe)
 
-AnnotationAssertion(rdfs:comment :LP_0000009 "A year group, also known as a class level, or school level in Austria and Switzerland, refers to all the classes or courses that start school in the same year or belong to the same learning stage."@en)
-AnnotationAssertion(rdfs:comment :LP_0000009 "Eine Jahrgangsstufe, auch Klassenstufe, in Österreich und der Schweiz Schulstufe, bezeichnet die Gesamtheit der Klassen oder Kurse, die im selben Jahr eingeschult wurden oder demselben Lernabschnitt zugehörig sind."@de)
+AnnotationAssertion(rdfs:comment :LP_0000009 "A year group, also known as a class level, or school level in Austria and Switzerland, refers to all the classes or courses that start school in the same year or belong to the same learning stage.
+-> nicht aktuell"@en)
+AnnotationAssertion(rdfs:comment :LP_0000009 "Eine “Jahrgangsstufe” ist eine “Informationseinheit”.
+Sie umfasst die Gesamtheit der Klassen und Kurse, in denen Lernende gemeinsam einen bestimmten Abschnitt ihrer schulischen Laufbahn durchlaufen.
+Eine Jahrgangsstufe bezeichnet eine systematische Einteilung der Lernenden und gibt an, in welcher Phase ihres Bildungswegs sie sich befinden und legt die für sie vorgesehenen Kompetenzen und Lerninhalte fest. Nach Abschluss eines Schuljahres erfolgt der Übergang in die nächste Jahrgangsstufe.
+In den Lehrplänen dient die Jahrgangsstufe als organisatorisches Element, das den Unterrichtsinhalt altersgerecht strukturiert. Je nach Schulart und Bundesland können Jahrgangsstufen unterschiedlich benannt werden, wie zum Beispiel “Klassenstufen”, oder zusammengefasst werden, beispielsweise in Form von Doppeljahrgangsstufen."@de)
 AnnotationAssertion(rdfs:comment :LP_0000009 "class level"@en)
 AnnotationAssertion(rdfs:label :LP_0000009 "Jahrgangsstufe"@de)
 AnnotationAssertion(rdfs:seeAlso :LP_0000009 <https://de.wikipedia.org/wiki/Jahrgangsstufe>)
@@ -526,32 +537,59 @@ AnnotationAssertion(rdfs:label :LP_0000012 "Schüler Rolle"@de)
 
 # Class: :LP_0000013 (Kompetenz)
 
-AnnotationAssertion(rdfs:comment :LP_0000013 "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process")
+AnnotationAssertion(rdfs:comment :LP_0000013 "A “competence” is a characteristic that a person either already possesses or acquires in the course of a learning process.
+It is the ability of a learner to apply knowledge and skills to solve problems (cf. KMK).
+The ontology distinguishes between “competence” and “CE competence specification”:
+In contrast to the “CE competence specification”, which describes a “competence” within the framework of a curriculum or educational standard, the “competence” is anchored as an ability or skill in the learner himself."@en)
+AnnotationAssertion(rdfs:comment :LP_0000013 "Eine „Kompetenz“ ist eine Eigenschaft, die eine Person entweder bereits besitzt oder im Verlauf eines Lernprozesses erwirbt.
+Sie ist die Fähigkeit eines Lernenden, Wissen und Können zur Lösung von Problemen anzuwenden (vgl. KMK).
+Die Ontologie unterscheidet zwischen “Kompetenz” und “CE-Kompetenzspezifikation”:
+Im Unterschied zur “CE-Kompetenzspezifikation”, die eine “Kompetenz” im Rahmen eines Lehrplans oder Bildungsstandards beschreibt, ist die “Kompetenz” als Fähigkeit oder Fertigkeit im Lernenden selbst verankert."@de)
 AnnotationAssertion(rdfs:label :LP_0000013 "Kompetenz"@de)
 
 # Class: :LP_0000019 (Schulabschluss)
 
+AnnotationAssertion(rdfs:comment :LP_0000019 "Ein “Schulabschluss” ist ein “Prozessende”.
+Es ist ein offiziell anerkannter Bildungsabschluss, der am Ende eines bestimmten Bildungsgangs erworben wird. Er bestätigt den erfolgreichen Abschluss einer schulischen Laufbahn und dient als Qualifikationsnachweis für weiterführende Bildungswege oder den Eintritt in das Berufsleben.
+Schulabschlüsse unterscheiden sich je nach Schulart und Bundesland in ihren Anforderungen und Berechtigungen sowie der Bezeichnung.
+Zu den gängigen Schulabschlüssen im allgemeinbildenden Bereich in Deutschland gehören der “Erste Schulabschluss”, der “Mittlere Schulabschluss” sowie die “Allgemeine Hochschulreife” (Abitur). Weitere Abschlüsse können ebenfalls erworben werden, je nach Bundesland und Bildungsgang."@de)
 AnnotationAssertion(rdfs:label :LP_0000019 "Schulabschluss"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0000019 "Bildungsgang"@de)
 
 # Class: :LP_0000020 (Schulstufe)
 
-AnnotationAssertion(rdfs:comment :LP_0000020 "Spezifiziert eine Unterteilung der Jahrgangsstufen zur Beschreibung von Bildungsgängen und Schularten."@de)
+AnnotationAssertion(rdfs:comment :LP_0000020 "Die “Schulstufe” ist eine “Informationseinheit”.
+Sie bezeichnet eine bestimmte Phase der schulischen Laufbahn, in der Lernende bestimmte Ziele gemäß den Anforderungen des Bildungssystems erreichen sollen. 
+Schulstufen dienen dazu, den Lernenden einen strukturierten Lernweg zu bieten, in dem die pädagogischen und didaktischen Anforderungen an die jeweiligen Altersgruppen angepasst sind.
+Die Schulstufe umfasst je nach Bildungsgang bzw. Bundesland festgelegte Jahrgangsstufen.
+Sie unterscheidet sich von:  
+dem “Bildungsgang” (der sich auf die Art des Abschlusses bezieht, z. B. Gymnasialer Bildungsgang oder Realschulbildungsgang), 
+dem \"Bildungsgangniveau\" (welches das Niveau eines Bildungsgangs beschreibt) und 
+dem “Fachniveau” (das die Tiefe und den Umfang eines spezifischen Fachs der Sekundarstufe II beschreibt).
+Im Bereich der allgemeinbildenden Schulen wird unterschieden zwischen der “Primarstufe” (auch Grundschule genannt), der “Sekundarstufe I” und der “Sekundarstufe II” (auch gymnasiale Oberstufe genannt)."@de)
 AnnotationAssertion(rdfs:label :LP_0000020 "Schulstufe"@de)
 
 # Class: :LP_0000028 (Bildungsgangniveau)
 
+AnnotationAssertion(rdfs:comment :LP_0000028 "Das “Bildungsgangniveau” ist ein “Niveau”, das die Anforderungen innerhalb eines “Bildungsgangs” beschreibt und dabei den Unterschied in den Leistungsniveaus zwischen verschiedenen Bildungsgängen kennzeichnet.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden. 
+In der Ontologie wird unterschieden zwischen dem “Hauptschulniveau”, dem “Realschulniveau”, dem “Gymnasialniveau Sek I” und dem “Gymnasialniveau Sek II”.
+Diese entsprechen den grundlegenden, mittleren und erweiterten Anforderungen, die in einigen Lehrplänen der Sekundarstufe I zur Kategorisierung von Kompetenzspezifikationen verwendet werden.
+Während das „Fachniveau“ die spezifischen Anforderungen in einem einzelnen Fach innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II beschreibt, bezieht sich das „Bildungsgangniveau“ auf das Niveau eines gesamten Bildungsgangs, der auf einen bestimmten Abschluss abzielt."@de)
 AnnotationAssertion(rdfs:label :LP_0000028 "Bildungsgangniveau"@de)
 SubClassOf(:LP_0000028 :LP_0000037)
 
 # Class: :LP_0000037 (Niveau)
 
-AnnotationAssertion(rdfs:comment :LP_0000037 "Niveau bezeichnet eine Kategorisierung des Ausmaß der
-Ausprägung eines oder mehrerer bestimmten Merkmale.")
+AnnotationAssertion(rdfs:comment :LP_0000037 "Das “Niveau” ist eine “Informationseinheit”. 
+Sie bezeichnet eine Kategorisierung des Ausmaßes der Ausprägung eines oder mehrerer bestimmten Merkmale. Im Bildungskontext bezeichnet das Niveau das Level, die Komplexität, die Tiefe oder den Schwierigkeitsgrad eines Lerninhalts oder einer Kompetenzspezifikation, die in einem Lehrplan oder Bildungsstandard festgelegt ist.
+Das Niveau gibt an, welche Anforderungen in Bezug auf Wissen, Fähigkeiten und Fertigkeiten an Lernende gestellt werden und kann sich in Anforderungsbereiche, Bildungsgang-, Fach-  und Fremdsprachenniveau differenzieren. 
+Es drückt nicht aus, in welcher Jahrgangs- oder Schulstufe sich die Lernenden befinden."@de)
 AnnotationAssertion(rdfs:label :LP_0000037 "Niveau"@de)
 
 # Class: :LP_0000039 (BistaFach)
 
+AnnotationAssertion(rdfs:comment :LP_0000039 "Ein “Bistafach” ist ein “Schulfach”, zu dem es von der KMK veröffentlichte
+Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fremdsprache (Englisch oder Französisch) und die drei Naturwissenschaften Biologie, Chemie und Physik."@de)
 AnnotationAssertion(rdfs:label :LP_0000039 "BistaFach"@de)
 EquivalentClasses(:LP_0000039 ObjectOneOf(<http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/kim/schulfaecher/s1022>))
 SubClassOf(:LP_0000039 :LP_0000001)
@@ -589,14 +627,15 @@ SubClassOf(:LP_0000057 :LP_0000341)
 
 # Class: :LP_0000069 (Gymnasialniveau Sek I)
 
-AnnotationAssertion(rdfs:comment :LP_0000069 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de)
+AnnotationAssertion(rdfs:comment :LP_0000069 "Das \"Gymnasialniveau Sek I” ist ein “Bildungsgangniveau”, welches das Niveau des gymnasialen Bildungsgangs im Sekundarbereich I beschreibt und somit meistens die Jahrgangsstufen 5-10 umfasst.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
 AnnotationAssertion(rdfs:label :LP_0000069 "Gymnasialniveau Sek I"@de)
 SubClassOf(:LP_0000069 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000072 :LP_0000832)))
 
 # Class: :LP_0000076 (Allgemeine Hochschulreife)
 
 AnnotationAssertion(rdfs:label :LP_0000076 "Allgemeine Hochschulreife"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :LP_0000076 "Abitur ist ein Schulabschluss ....   der zur allgemeinen Hochschulreife führt."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :LP_0000076 "Die “Allgemeine Hochschulreife” ist ein “Schulabschluss” und der höchste allgemeinbildende Schulabschluss. Er wird je nach Bundesland und Schulart nach der Jahrgangsstufe 12 oder 13 verliehen und berechtigt zum Studium an einer Hochschule. Die “Allgemeine Hochschulreife” wird synonym zum Begriff Abitur verwendet."@de)
 SubClassOf(:LP_0000076 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP_0000071 :LP_0000835)))
 
 # Class: :LP_0000077 (Fachabitur)
@@ -606,11 +645,25 @@ SubClassOf(:LP_0000077 :LP_0000019)
 
 # Class: :LP_0000078 (Mittlerer Schulabschluss)
 
+AnnotationAssertion(rdfs:comment :LP_0000078 "Der “Mittlere Schulabschluss” ist ein “Schulabschluss” und ein allgemeinbildender Schulabschluss. Er wird nach der Jahrgangsstufe 10 verliehen. In den Bundesländern trägt der “Mittlere Schulabschluss” verschiedene Bezeichnungen:
+- Mittlerer Schulabschluss (BY, BE, HB, HH, SH, BW, NW)
+- Mittlere Reife (MV)
+- Mittlerer Bildungsabschluss (SL)
+- Realschulabschluss (HE, NI, SN, ST, TH)
+- Berechtigung zum Besuch der gymnasialen Oberstufe (BB, NW)
+- Fachoberschulreife (BB)
+- Qualifizierter Sekundarabschluss I (RP)"@de)
 AnnotationAssertion(rdfs:label :LP_0000078 "Mittlerer Schulabschluss"@de)
 SubClassOf(:LP_0000078 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP_0000071 :LP_0000832)))
 
 # Class: :LP_0000079 (Erster Schulabschluss)
 
+AnnotationAssertion(rdfs:comment :LP_0000079 "Der “Erste Schulabschluss” ist ein “Schulabschluss” und ist der erste allgemeinbildende Schulabschluss. Er wird je nach Bundesland und Schulart nach der Jahrgangsstufe 9 oder 10 verliehen. In den Bundesländern trägt der “Erste Schulabschluss” verschiedene Bezeichnungen:
+- Erster allgemeinbildender Schulabschluss (HH, NW, SH)
+- Hauptschulabschluss (BW, HE, NI, SL, SN, ST, TH)
+- Berufsbildungsreife (BB, BE, HB)
+- Berufsreife (MV, RP)
+- Erfolgreicher Abschluss der Mittelschule (BY)"@de)
 AnnotationAssertion(rdfs:label :LP_0000079 "Erster Schulabschluss"@de)
 SubClassOf(:LP_0000079 ObjectIntersectionOf(:LP_0000019 ObjectSomeValuesFrom(:LP_0000071 :LP_0000834)))
 
@@ -621,8 +674,11 @@ SubClassOf(:LP_0000081 :LP_0000019)
 
 # Class: :LP_0000111 (Schulart)
 
-AnnotationAssertion(rdfs:comment :LP_0000111 "Beschreibt die Art und Weise wie eine Schule organisiert ist."@de)
-AnnotationAssertion(rdfs:comment :LP_0000111 "Describes the way a school is organized."@en)
+AnnotationAssertion(rdfs:comment :LP_0000111 "Describes the way a school is organized.
+-> nicht aktuell"@en)
+AnnotationAssertion(rdfs:comment :LP_0000111 "Eine “Schulart” ist eine “Funktion”.
+Sie ist eine durch bestimmte Merkmale gekennzeichnete Form der Schule, die deren organisatorische Struktur, pädagogische Ausrichtung, die Dauer des Bildungsgangabschnitts sowie die angestrebten Schulabschlüsse festlegt. Sie kann je nach Bildungssystem und Bundesland unterschiedliche Bezeichnungen und Konzepte umfassen, wie Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, Berufsschule oder Förderschule.
+Im allgemeinen Sprachgebrauch werden “Schulart” und \"Schulform\" synonym verwendet."@de)
 AnnotationAssertion(rdfs:label :LP_0000111 "Schulart"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> :LP_0000111 "Schulform")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000111 "Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
@@ -645,87 +701,128 @@ Bsp:
 
 # Class: :LP_0000112 (Gemeinschaftsschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000112 "Schulart, die schulstufenübergreifend ist. Sie umfasst die Jahrgangsstufen 1-10 oder 13, je nach angestrebtem Abschluss. Je nach Bundesland kann die Schulart auch erst beginnend ab Sekundarstufe I sein.
-Die Schulart Gemeinschaftsschule gibt es in BW, BE, SL, SN, ST, SH und TH.")
+AnnotationAssertion(rdfs:comment :LP_0000112 "Eine “Gemeinschaftsschule” ist eine “Schulart” in BW, BE, SL, SN, ST, SH und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarstufe I, 
+in BE, SN, TH auch Primarbereich, 
+in BW, BE, SL, SN, ST, SH, TH auch Sekundarstufe II
+- Jahrgangsstufen: 5-10, 
+in BE, SN und TH 1-12/13
+in BW, SL und ST 5-12/13, 
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife"@de)
 AnnotationAssertion(rdfs:label :LP_0000112 "Gemeinschaftsschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000112 <https://w3id.org/kim/schularten/s09>)
 SubClassOf(:LP_0000112 :LP_0000111)
 
 # Class: :LP_0000114 (Grundschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000114 "Schulart, die die Jahrgangsstufen 1-4 in allen Bundesländern außer Berlin und Brandenburg abdeckt und die Primarstufe umfasst. In Berlin und Brandenburg umfasst die Grundschule die Jahrgangsstufen 1-6.")
+AnnotationAssertion(rdfs:comment :LP_0000114 "Eine “Grundschule” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Primar
+- Jahrgangsstufen: 1-4 in allen Bundesländern außer BE und BB, 1-6 in BE und BB"@de)
 AnnotationAssertion(rdfs:label :LP_0000114 "Grundschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000114 <https://w3id.org/kim/schularten/s02>)
 SubClassOf(:LP_0000114 :LP_0000111)
 
 # Class: :LP_0000121 (Integrierte Sekundarschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000121 "Schulart des Sekundarbereichs I mit mehreren Bildungsgängen in Berlin, die zu unterschiedlichen Abschlüssen führen (Hauptschulabschluss, Mittlerer Schulabschluss, Berechtigung zum Übergang in die gymnasiale Oberstufe, Abitur). Die Integrierte Sekundarschule umfasst den Sekundarbereich I und II.")
+AnnotationAssertion(rdfs:comment :LP_0000121 "Eine “Integrierte Sekundarschule\" ist eine “Schulart” in BE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I und II
+- Jahrgangsstufen: 7-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: ggf. Schnelllernerklassen ab 5"@de)
 AnnotationAssertion(rdfs:label :LP_0000121 "Integrierte Sekundarschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000121 <https://w3id.org/kim/schularten/s10>)
 SubClassOf(:LP_0000121 :LP_0000111)
 
 # Class: :LP_0000122 (Gymnasium)
 
-AnnotationAssertion(rdfs:comment :LP_0000122 "Schulart, die Sekundarbereich I und II umfasst (in der Regel mit den Jahrgangsstufen 5-12 oder 13, Ausnahme BB: beginnend ab 7) und eine vertiefte allgemeine Bildung mit dem Ziel der Allgemeinen Hochschulreife vermittelt.  Je nach Bundesland können auf dem Bildungsgang zum Abitur auch der Erste - und Mittlere Schulabschluss erworben werden.
-Die Schulart Gymnasium gibt es in allen Bundesländern.")
+AnnotationAssertion(rdfs:comment :LP_0000122 "Ein “Gymnasium” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I und II
+- Jahrgangsstufen: 5-12/13, in BE und BB 7-12/13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: in BE ggf. Schnelllernerklassen ab 5, in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_0000122 "Gymnasium"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000122 <https://w3id.org/kim/schularten/s08>)
 SubClassOf(:LP_0000122 :LP_0000111)
 
 # Class: :LP_0000140 (Hauptschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000140 "Schulart im Sekundarbereich I, die in der Regel die Jahrgangsstufen 5-9 bzw. 10 umfasst. Allgemeinbildender Bildungsgang der mit bestandener Prüfung zum Ersten Schulabschluss führt.
-Die Schulart Hauptschule gibt es in BW, HE, NI und NW.")
+AnnotationAssertion(rdfs:comment :LP_0000140 "Eine “Hauptschule” ist eine “Schulart” BW, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-9 bzw. 10
+- Abschlüsse: Erster Schulabschluss, in NI und NW auch Mittlerer Schulabschluss"@de)
 AnnotationAssertion(rdfs:label :LP_0000140 "Hauptschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000140 <https://w3id.org/kim/schularten/s03>)
 SubClassOf(:LP_0000140 :LP_0000111)
 
 # Class: :LP_0000159 (Mittelschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000159 "Schulart des Sekundarbereichs I in Bayern, an der die Bildungsgänge von Hauptschule und Realschule angeboten werden. Sie umfasst die Jahrgänge 5-10.")
+AnnotationAssertion(rdfs:comment :LP_0000159 "Eine “Mittelschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
 AnnotationAssertion(rdfs:label :LP_0000159 "Mittelschule"@de)
 SubClassOf(:LP_0000159 :LP_0000111)
 
 # Class: :LP_0000167 (Realschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000167 "Schulart im Sekundarbereich I, in der Regel mit den Jahrgangsstufen 5-10, die eine erweiterte allgemeine Bildung vermittelt und den Übergang in berufs- und studienqualifizierende Bildungsgänge des Sekundarbereichs II eröffnet. Mit bestandener Prüfung wird der Mittlere Schulabschluss erteilt.
-Die Schulart Realschule gibt es in BW, BY, HE, NI und NW.")
+AnnotationAssertion(rdfs:comment :LP_0000167 "Eine “Realschule” ist eine “Schulart” in BW, BY, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: ermöglicht Übergang in berufs- und studienqualifizierende Bildungsgänge des Sekundarbereichs II"@de)
 AnnotationAssertion(rdfs:label :LP_0000167 "Realschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000167 <https://w3id.org/kim/schularten/s04>)
 SubClassOf(:LP_0000167 :LP_0000111)
 
 # Class: :LP_0000197 (Wirtschaftsschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000197 "Schulart in Bayern, die eine berufliche Grundbildung im Berufsfeld Wirtschaft und Verwaltung vermittelt. Mit der Abschlussprüfung erhält man den Wirtschaftsschulabschluss, der den mittleren Schulabschluss darstellt. Sie umfasst die Jahrgangsstufen 6-11, wobei die 6. Jahrgangsstufe die Einführung ist.")
+AnnotationAssertion(rdfs:comment :LP_0000197 "Eine “Wirtschaftsschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 6-11 ( 6. Jahrgangsstufe ist die Einführung)
+- Abschlüsse: Wirtschaftsschulabschluss (stellt den mittleren Schulabschluss dar)
+- Besonderheiten: Sie vermittelt eine berufliche Grundbildung im Berufsfeld Wirtschaft und Verwaltung"@de)
 AnnotationAssertion(rdfs:label :LP_0000197 "Wirtschaftsschule"@de)
 SubClassOf(:LP_0000197 :LP_0000111)
 
 # Class: :LP_0000218 (Werkrealschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000218 "Schulart in Baden-Württemberg des Sekundarbereichs I mit den Jahrgangsstufen 5-10, die nach erfolgreicher Abschlussprüfung nach der 10.Klasse zum Mittleren Schulabschluss führt. Lernende können nach Jahrgangsstufe 9 die Schule auch mit dem Ersten Schulabschluss verlassen.")
+AnnotationAssertion(rdfs:comment :LP_0000218 "Eine “Werkrealschule” ist eine “Schulart” in BW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I 
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: Erster Schulabschluss nach Jahrgangsstufe 9 oder 10 möglich"@de)
 AnnotationAssertion(rdfs:label :LP_0000218 "Werkrealschule"@de)
 SubClassOf(:LP_0000218 :LP_0000111)
 
 # Class: :LP_0000238 (Oberschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000238 "Schulart des Sekundarbereichs I, an der die Bildungsgänge von Hauptschule und Realschule angeboten werden. Schulart in Bremen des Sekundarbereichs I und II mit mehreren Bildungsgängen, die zu unterschiedlichen Abschlüssen führen (Hauptschulabschluss, Mittlerer Schulabschluss, Abitur).
-Die Schulart Oberschule gibt es in BB, HB, NI und SN.")
+AnnotationAssertion(rdfs:comment :LP_0000238 "Eine “Oberschule” ist eine “Schulart” in  BB, HB, NI und SN, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I, in SN auch Primar, in HB auch Sekundarbereich II
+- Jahrgangsstufen: 5-10, in SN 1-10 (s. Besonderheiten), in HB 5-13 
+- Abschlüsse: Erster und Mittlerer Schulabschluss, in HB auch die Allgemeine Hochschulreife
+- Besonderheiten: Oberschule + in SN mit verbundener Grundschule"@de)
 AnnotationAssertion(rdfs:label :LP_0000238 "Oberschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000238 <https://w3id.org/kim/schularten/s07>)
 SubClassOf(:LP_0000238 :LP_0000111)
 
 # Class: :LP_0000240 (Gesamtschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000240 "Schulart des Sekundarbereichs I mit mehreren Bildungsgängen, die zu unterschiedlichen Abschlüssen führen (Erster Schulabschluss, Mittlerer Schulabschluss, Berechtigung zum Übergang in die gymnasiale Oberstufe). Gesamtschulen können auch den Sekundarbereich II in Form der gymnasialen Oberstufe umfassen. Die Gesamtschule gibt es zusätzlich als integrierte und kooperative Form.
-Die Schulart Gesamtschule gibt es in BB und NW.")
+AnnotationAssertion(rdfs:comment :LP_0000240 "Eine “Gesamtschule” ist eine “Schulart” in BB und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+Schulstufe: Sekundarbereich I und Sekundarbereich II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_0000240 "Gesamtschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000240 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0000240 :LP_0000111)
 
 # Class: :LP_0000251 (Werkschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000251 "Schulart in Bremen, die den Sekundarbereich I umfasst und den Ersten sowie Mittleren Schulabschluss ermöglicht.")
+AnnotationAssertion(rdfs:comment :LP_0000251 "Eine “Werkschule” ist eine “Schulart” in HB, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-11
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: Jede Werkschule hat sich auf bestimmte Dienstleistungen und Produktionen spezialisiert"@de)
 AnnotationAssertion(rdfs:label :LP_0000251 "Werkschule"@de)
 SubClassOf(:LP_0000251 :LP_0000111)
 
@@ -735,26 +832,44 @@ AnnotationAssertion(rdfs:comment :LP_0000261 "A “Curriculares Element” is an
 
 In the ontology, the \"Curriculares Element\" serves as a superordinate category to structure the components that describe the content and competencies to be acquired within a curriculum or educational standard.
 
-A “Curriculares Element” can also have a function that defines its purpose within the curriculum in more detail. This allows the state-specific components of the curricula to be mapped, as common functions can be assigned to them."@en)
+A “Curriculares Element” can also have a function that defines its purpose within the curriculum in more detail. This allows the state-specific components of the curricula to be mapped, as common functions can be assigned to them.
+
+Subclasses of the “Curriculares Element” that are not state-specific are labelled with the prefix ‘CE-’."@en)
 AnnotationAssertion(rdfs:comment :LP_0000261 "Ein “Curriculares Element” ist eine Informationseinheit, die bei der Beschreibung der Bestandteile eines Lehrplans oder Bildungsstandards verwendet wird.
 
 In der Ontologie fungiert das “Curriculare Element\" als Superklasse, um die Elemente zu ordnen, aus denen sich Beschreibungen der zu erwerbenden Inhalte und Kompetenzen eines Lehrplans oder eines Bildungsstandards zusammensetzen.
 
-Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zweck innerhalb des Lehrplans näher definiert. Dadurch können die bundeslandspezifischen Bestandteile der Lehrpläne abgebildet werden, da ihnen gemeinsame Funktionen zugeordnet werden können."@de)
+Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zweck innerhalb des Lehrplans näher definiert. Dadurch können die bundeslandspezifischen Bestandteile der Lehrpläne abgebildet werden, da ihnen gemeinsame Funktionen zugeordnet werden können.
+
+Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."@de)
 AnnotationAssertion(rdfs:label :LP_0000261 "Curriculares Element"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000261 "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 
 # Class: :LP_0000263 (CE-Kompetenzspezifikation)
 
-AnnotationAssertion(rdfs:comment :LP_0000263 "Element, das eine Kompetenz beschreibt. Die kleinste Einheit der Beschreibung einer Fähigkeit die SuS haben sollen oder ihrer Ausführung. Enthält einen Operatoren.
+AnnotationAssertion(rdfs:comment :LP_0000263 "A “CE-Kompetenzspezifikation” is a “Curriculares Element” that describes a competence.
+It usually contains an operator and begins with “The students [...]” or “The learners [...]” for example.
+The ontology distinguishes between “CE-Kompetenzspezifikation” and “Kompetenz”:
+A competence is understood as the ability of a learner to apply knowledge and skills to solve problems (cf. KMK). 
+In contrast to competence, which is anchored in the learner as an ability or skill, the “CE-Kompetenzspezifikation” is the description of this competence within the framework of a curriculum or educational standard."@en)
+AnnotationAssertion(rdfs:comment :LP_0000263 "Eine “CE-Kompetenzspezifikation” ist ein “Curriculares Element”, das eine Kompetenz beschreibt.
+Es enthält üblicherweise einen Operator und beginnt zum Beispiel mit “Die Schülerinnen und Schüler [...]” oder “Die Lernenden [...]”.
+Die Ontologie unterscheidet zwischen “CE-Kompetenzspezifikation” und “Kompetenz”:
+Unter einer Kompetenz wird die Fähigkeit eines Lernenden verstanden, Wissen und Können zur Lösung von Problemen anzuwenden (vgl. KMK). 
+Im Unterschied zur Kompetenz, die als Fähigkeit oder Fertigkeit im Lernenden selbst verankert ist, bildet die “CE-Kompetenzspezifikation” die Beschreibung dieser Kompetenz im Rahmen eines Lehrplans oder Bildungsstandards.
 
-Axiom: Wenn x eine Kompetenzspezifikation ist (ioa:objective specification), so existiert eine Kompetenz (bfo:disposition) y, die ein Schüler s (bfo:material entity) inne hat. y konkretisiert dann x (ro:concretizes)."@de)
+Beispiel:
+
+CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
+CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
 AnnotationAssertion(rdfs:label :LP_0000263 "CE-Kompetenzspezifikation"@de)
 EquivalentClasses(:LP_0000263 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000479)))
 
 # Class: :LP_0000265 (Fachniveau)
 
-AnnotationAssertion(rdfs:comment :LP_0000265 "Element, das zum Ausdruck bringt, ob sein \"Informationsträger\" (z.B. ein anderes Curriculares Element) einem Grundfach oder einem Leistungsfach zuzuordnen ist."@de)
+AnnotationAssertion(rdfs:comment :LP_0000265 "Das “Fachniveau” ist ein “Niveau”. Es bezeichnet das Anforderungsniveau eines bestimmten Fachs in der Sekundarstufe II und bringt zum Ausdruck, ob ein “Curriculares Element” einem “Grundkurs” oder einem “Leistungskurs” zugeordnet ist. 
+Die beiden Fachniveaus unterscheiden sich in der Komplexität und Tiefe des Unterrichts sowie im Umfang der Inhalte und der zu erbringenden Leistungen.
+Während das „Bildungsgangniveau“ das Niveau eines gesamten Bildungsgangs beschreibt, der auf einen bestimmten Abschluss abzielt, bezieht sich das „Fachniveau“ auf die spezifischen Anforderungen eines Fachs innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II."@de)
 AnnotationAssertion(rdfs:label :LP_0000265 "Fachniveau"@de)
 SubClassOf(:LP_0000265 :LP_0000037)
 
@@ -766,34 +881,54 @@ SubClassOf(:LP_0000268 :LP_0000536)
 
 # Class: :LP_0000274 (Stadteilschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000274 "Schulart des Sekundarbereichs I und II mit mehreren Bildungsgängen, die zu unterschiedlichen Abschlüssen führen (Hauptschulabschluss, Mittlerer Schulabschluss, Abitur). Sie umfasst die Jahrgangsstufen 5-13, je nach Bildungsgang.")
+AnnotationAssertion(rdfs:comment :LP_0000274 "Eine “Stadtteilschule” ist eine “Schulart” in HH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I und II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife"@de)
 AnnotationAssertion(rdfs:label :LP_0000274 "Stadteilschule"@de)
 SubClassOf(:LP_0000274 :LP_0000111)
 
 # Class: :LP_0000291 (Realschule plus)
 
-AnnotationAssertion(rdfs:comment :LP_0000291 "Schulart des Sekundarbereichs I in Rheinland-Pfalz, an der der Erste sowie der Mittlere Schulabschluss erworben werden und umfasst die Jahrgangsstufen 5-10.")
+AnnotationAssertion(rdfs:comment :LP_0000291 "Eine “Realschule plus” ist eine “Schulart” in RP, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
 AnnotationAssertion(rdfs:label :LP_0000291 "Realschule plus"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000291 <https://w3id.org/kim/schularten/s04>)
 SubClassOf(:LP_0000291 :LP_0000111)
 
 # Class: :LP_0000292 (Integrierte Gesamtschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000292 "Schulart des Sekundarbereichs I mit mehreren Bildungsgängen, die zu unterschiedlichen Abschlüssen führen (Erster Schulabschluss, Mittlerer Schulabschluss, Berechtigung zum Übergang in die gymnasiale Oberstufe). Bei der Form der Gesamtschule werden alle Lernenden, unabhängig vom angestrebten Abschluss, in einem Klassenverband unterrichtet.
-Die Schulart Integrierte Gesamtschule gibt es in HE, MV, NI, RP, ST und TH.")
+AnnotationAssertion(rdfs:comment :LP_0000292 "Eine \"Integrierte Gesamtschule” ist eine “Schulart” in HE, MV, NI, RP, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+Schulstufe: Sekundarbereich I und Sekundarbereich II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: unabhängig vom angestrebten Abschluss werden alle Lernenden in einem Klassenverband unterrichtet"@de)
 AnnotationAssertion(rdfs:label :LP_0000292 "Integrierte Gesamtschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0000292 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0000292 :LP_0000111)
 
 # Class: :LP_0000319 (Regelschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000319 "Schulart des Sekundarbereichs I in Thüringen, an der der Erste sowie Mittlere Schulabschluss erworben werden können und die Jahrgangsstufen 5-10 umfasst.")
+AnnotationAssertion(rdfs:comment :LP_0000319 "Eine “Regelschule” ist eine “Schulart” TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
 AnnotationAssertion(rdfs:label :LP_0000319 "Regelschule"@de)
 SubClassOf(:LP_0000319 :LP_0000111)
 
 # Class: :LP_0000332 (CE-Lerninhalt)
 
-AnnotationAssertion(rdfs:comment :LP_0000332 "Element, das einen Lerninhalt beschreibt. Die kleinste Einheit, die konkrete Themen oder Handlungsanweisungen zur Gestaltung des Unterrichts oder Mittel zum Erlangen von Kompetenzen beschreibt. Kann einer Kompetenz zugeordnet sein, kann aber auch alleine stehen.")
+AnnotationAssertion(rdfs:comment :LP_0000332 "A “CE-Lerninhalt” is a “curricular element” that describes a learning content in the form of specific topics. The “CE-Lerninhalt” provides the content basis for the preparation of school lessons.
+Competencies can be acquired on the basis of the “CE-Lerninhalt”."@en)
+AnnotationAssertion(rdfs:comment :LP_0000332 "Ein “CE-Lerninhalt” ist ein “Curriculares Element\", das einen Lerninhalt in Form konkreter Themen beschreibt. Der „CE-Lerninhalt“ liefert die inhaltliche Basis für die Gestaltung des Unterrichts.
+Anhand des \"CE-Lerninhalts\" können Kompetenzen erworben werden.
+
+Beispiel:
+
+CE-Kompetenzspezifikation: Die Schülerinnen und Schüler setzen sich auf der Grundlage ihrer Kenntnisse bewusst mit der englischen Sprache und den mit ihr verbundenen Kulturräumen auseinander.
+CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First People"@de)
 AnnotationAssertion(rdfs:label :LP_0000332 "CE-Lerninhalt"@de)
 EquivalentClasses(:LP_0000332 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000480)))
 
@@ -835,19 +970,38 @@ AnnotationAssertion(rdfs:label :LP_0000347 "Identifikationsnummer"@de)
 
 # Class: :LP_0000349 (CE-Bereich)
 
+AnnotationAssertion(rdfs:comment :LP_0000349 "A “CE-Bereich” is a “Curriculares Element”.
+A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
+The element serves to structure curricula and educational standards by grouping “CE-Kompetenzspezifikationen” and/or “CE-Lerninhalte” under a common content focus, which is defined by the “CE-Bereich”."@en)
+AnnotationAssertion(rdfs:comment :LP_0000349 "Ein “CE-Bereich” ist ein “Curriculares Element”.
+Ein “CE-Bereich” kann anderen “CE-Bereichen” über- oder untergeordnet sein.
+Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es “CE-Kompetenzspezifikationen” und/oder “CE-Lerninhalte” unter einem gemeinsamen inhaltlichen Fokus zusammenfasst, der durch den “CE-Bereich” definiert wird."@de)
 AnnotationAssertion(rdfs:label :LP_0000349 "CE-Bereich"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000349 "Mögliche Properties:
+- Titel
+- Ordnungsnummer
+- Beschreibung
+- Stundenzahl
+- Jahrgangsstufe")
 SubClassOf(:LP_0000349 :LP_0000261)
 
 # Class: :LP_0000367 (Regionale Schule)
 
-AnnotationAssertion(rdfs:comment :LP_0000367 "Schulart des Sekundarbereichs I in Mecklenburg-Vorpommern, an der der Erste sowie Mittlere Schulabschluss erworben werden können und die Jahrgangsstufen 5-10 umfasst.")
+AnnotationAssertion(rdfs:comment :LP_0000367 "Eine “Regionale Schule” ist eine “Schulart” in MV, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe:Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: schulartunabhängige Orientierungsstufe in Jahrgangsstufe 5 und 6"@de)
 AnnotationAssertion(rdfs:label :LP_0000367 "Regionale Schule"@de)
 SubClassOf(:LP_0000367 :LP_0000111)
 
 # Class: :LP_0000382 (Sekundarschule)
 
-AnnotationAssertion(rdfs:comment :LP_0000382 "Schulart des Sekundarbereichs I in Nordrhein-Westfalen und Sachsen-Anhalt , an der der Erste sowie Mittlere Schulabschluss erworben werden können und die Jahrgangsstufen 5-10 umfasst.
-Die Schulart Sekundarschule gibt es in NW und ST.")
+AnnotationAssertion(rdfs:comment :LP_0000382 "Eine “Sekundarschule” ist eine “Schulart” in NW und ST, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: in NW ggf. Berechtigung zum Besuch der gymnasialen Oberstufe"@de)
 AnnotationAssertion(rdfs:label :LP_0000382 "Sekundarschule"@de)
 SubClassOf(:LP_0000382 :LP_0000111)
 
@@ -940,14 +1094,18 @@ SubClassOf(:LP_0000502 :LP_0000499)
 AnnotationAssertion(rdfs:label :LP_0000504 "Lernbereichsbezugsfunktion"@de)
 SubClassOf(:LP_0000504 :LP_0000499)
 
-# Class: :LP_0000530 (Grundkurs)
+# Class: :LP_0000530 (Grundkursniveau)
 
-AnnotationAssertion(rdfs:label :LP_0000530 "Grundkurs"@de)
+AnnotationAssertion(rdfs:comment :LP_0000530 "Ein Grundkursniveau ist ein “Fachniveau” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem grundlegenden Anforderungsniveau vermittelt.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden."@de)
+AnnotationAssertion(rdfs:label :LP_0000530 "Grundkursniveau"@de)
 SubClassOf(:LP_0000530 :LP_0000265)
 
-# Class: :LP_0000531 (Leistungskurs)
+# Class: :LP_0000531 (Leistungskursniveau)
 
-AnnotationAssertion(rdfs:label :LP_0000531 "Leistungskurs"@de)
+AnnotationAssertion(rdfs:comment :LP_0000531 "Ein Leistungskursniveau ist ein “Fachniveau” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem vertieften Anforderungsniveau vermittelt.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden."@de)
+AnnotationAssertion(rdfs:label :LP_0000531 "Leistungskursniveau"@de)
 SubClassOf(:LP_0000531 :LP_0000265)
 
 # Class: :LP_0000536 (Element (Bista))
@@ -958,7 +1116,8 @@ SubClassOf(:LP_0000536 :LP_0000261)
 
 # Class: :LP_0000540 (Schulfachbezug)
 
-AnnotationAssertion(rdfs:comment :LP_0000540 "Ermöglicht den Bezug auf ein Schulfach in einen oder mehreren bestimmten Kontexten."@de)
+AnnotationAssertion(rdfs:comment :LP_0000540 "Ein “Schulfachbezug” ist eine “Informationseinheit” und gibt die Funktion und Spezifikation eines “Schulfachs”  in einem bestimmten Kontext an.
+Beispiele für “Schulfachbezug” sind “Erste Fremdsprache”, “Pflichtfach” oder “Wahlfach”."@de)
 AnnotationAssertion(rdfs:label :LP_0000540 "Schulfachbezug"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000540 "Die Bezeichnung Rolle war nicht günstig gewählt, da sie mit bfo:role verwechselt werden kann."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> :LP_0000540 "siehe Property https://w3id.org/lehrplan/ontology/LP_0000537")
@@ -1004,10 +1163,10 @@ SubClassOf(:LP_0000551 :LP_0000540)
 
 # Class: :LP_0000571 (Bildungsstandard (KMK))
 
-AnnotationAssertion(rdfs:comment :LP_0000571 "Bildungsstandard ist eine Spezifikation von fachlichen und fachübergreifenden Basisqualifikationen, die für die weitere schulische und berufliche Ausbildung von Bedeutung sind und die anschlussfähiges Lernen ermöglicht. Bildungsstandards ermöglichen den Schulen, ihren Unterricht an Standards zu orientieren."@de)
+AnnotationAssertion(rdfs:comment :LP_0000571 "Der “Bildungsstandard” ist eine Informationseinheit, die klar definierte, verbindliche Lernziele beschreibt, welche die Lernenden zu einem bestimmten Zeitpunkt erreichen sollen. Sie sorgt für eine einheitliche Qualität und Transparenz im Bildungssystem und ermöglicht eine objektive Messung der Leistungen.
+Die von der Kultusministerkonferenz verabschiedeten Bildungsstandards greifen allgemeine Bildungsziele auf und legen fest, welche Kompetenzen die Schülerinnen und Schüler bis zu einer bestimmten Jahrgangsstufe an wesentlichen Inhalten erworben haben sollen. Die Bildungsstandards konzentrieren sich auf Kernbereiche eines Fachs und beschreiben erwartete Lernergebnisse. Die Bildungsstandards der Kultusministerkonferenz stellen eine Mischung aus Inhalts- und Outputstandards dar. Sie beziehen sich auf das im Durchschnitt erwartete Niveau der Leistungen von Schülerinnen und Schülern am Ende der Jahrgangsstufe 4, beim Ersten Schulabschluss, beim Mittleren Schulabschluss und bei der Allgemeinen Hochschulreife und sind damit Regelstandards. (Vgl. KMK)"@de)
 AnnotationAssertion(rdfs:label :LP_0000571 "Bildungsstandard (KMK)"@de)
 AnnotationAssertion(rdfs:seeAlso :LP_0000571 <https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Konzeption-Entwicklung.pdf>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000571 "bitte Defintion verbessern")
 
 # Class: :LP_0000627 (Fragmentfunktion)
 
@@ -1043,7 +1202,9 @@ SubClassOf(:LP_0000810 :LP_0000808)
 
 # Class: :LP_0000813 (Hauptschulbildungsgang)
 
-AnnotationAssertion(rdfs:comment :LP_0000813 "Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de)
+AnnotationAssertion(rdfs:comment :LP_0000813 "ALT Der Hauptschulbildungsgang bereitet Schülerinnen in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Klasse mit dem Hauptschulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Schülerinnen erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der Hauptschulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen zu höheren Bildungswegen führen."@de)
+AnnotationAssertion(rdfs:comment :LP_0000813 "NEU Der “Hauptschulbildungsgang” ist ein “Bildungsgang”.
+Er bereitet Lernende in erster Linie auf eine berufliche Ausbildung und den direkten Einstieg ins Berufsleben vor. Er endet in der Regel nach der 9. oder 10. Jahrgangsstufe mit dem Ersten Schulabschluss. Der Fokus liegt auf einer grundlegenden Allgemeinbildung, verbunden mit praktischen und berufsvorbereitenden Elementen. Lernende erlernen neben den Kernfächern (Deutsch, Mathematik) auch technische oder handwerkliche Fähigkeiten. Der erste Schulabschluss ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen die Zulassung zu höheren Bildungsgängen (Realschulbildungsgang, Gymnasialer Bildungsgang) ermöglichen."@de)
 AnnotationAssertion(rdfs:comment :LP_0000813 "The Hauptschule track primarily prepares students for vocational training and direct entry into the workforce. It typically ends after the 9th or 10th grade with the Hauptschulabschluss (school-leaving certificate). The focus is on providing a basic general education combined with practical and vocational elements. In addition to core subjects (such as German and mathematics), students learn technical or manual skills. The Hauptschulabschluss enables access to apprenticeship programs but can also lead to higher education pathways with the appropriate performance."@en)
 AnnotationAssertion(rdfs:label :LP_0000813 "Hauptschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000813 "Hauptschule Track"@en)
@@ -1052,7 +1213,9 @@ SubClassOf(:LP_0000813 :LP_0000816)
 
 # Class: :LP_0000814 (Realschule Track)
 
-AnnotationAssertion(rdfs:comment :LP_0000814 "Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
+AnnotationAssertion(rdfs:comment :LP_0000814 "ALT Der Realschulbildungsgang vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zur Mittleren Reife (auch Realschulabschluss genannt), die den Zugang zu weiterführenden Schulen (z. B. Fachoberschulen) oder einer Berufsausbildung ermöglicht. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
+AnnotationAssertion(rdfs:comment :LP_0000814 "NEU Der “Realschulbildungsgang” ist ein “Bildungsgang”.
+Er vermittelt eine solide Allgemeinbildung mit einem Schwerpunkt auf praxisorientierten Inhalten. Er führt nach der 10. Klasse zum Mittleren Schulabschluss. Dieser ermöglicht den Zugang zu Ausbildungsberufen, kann aber auch mit entsprechenden Leistungen die Zulassung zum gymnasialen Bildungsgang befähigen. Der Unterricht ist weniger theorielastig als am Gymnasium, aber trotzdem anspruchsvoller als im Hauptschulbildungsgang."@de)
 AnnotationAssertion(rdfs:comment :LP_0000814 "The Realschule track provides a solid general education with a focus on practical content. It leads to the Mittlere Reife (intermediate school certificate or Realschulabschluss) after the 10th grade, which qualifies students to attend further education institutions (such as vocational schools) or start vocational training. The teaching is less theoretical than in the Gymnasium but still more demanding than in the Hauptschule track."@en)
 AnnotationAssertion(rdfs:label :LP_0000814 "Realschulbildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000814 "Realschule Track"@en)
@@ -1061,9 +1224,11 @@ SubClassOf(:LP_0000814 :LP_0000816)
 
 # Class: :LP_0000815 (Gymnasialer Bildungsgang)
 
-AnnotationAssertion(rdfs:comment :LP_0000815 "Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
+AnnotationAssertion(rdfs:comment :LP_0000815 "ALT Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
 
 Der gymnasiale Bildungsgang muss nicht zwangläufig vollständig am Gymnasium erfolgen. Auch in der Sekundarstufe I wird z.B. an Gesamt- oder Gemeinschaftsschulen auf Gymnasialniveau mit dem Ziel der allgemeinen Hochschulreife (Abitur) unterrichtet."@de)
+AnnotationAssertion(rdfs:comment :LP_0000815 "NEU Der “Gymnasiale Bildungsgang” ist ein “Bildungsgang”. Er zielt darauf ab, Lernende auf das Abitur und ein späteres Studium vorzubereiten. In der Regel erschreckt sich der Bildungsgang bis zur 12. oder 13. Jahrgangsstufe und endet mit dem Abschluss der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Die Lehrplaninhalte für den “Gymnasialen Bildungsgang” sind akademisch anspruchsvoller und theoretischer als die für den “Hauptschul-” oder “Realschulbildungsgang”.
+Der “Gymnasiale Bildungsgang” muss nicht zwangsläufig an der Schulart Gymnasium erfolgen, sondern kann auch an Gesamt- oder Gemeinschaftsschulen auf Gymnasialniveau mit dem Ziel der allgemeinen Hochschulreife (Abitur) unterrichtet werden."@de)
 AnnotationAssertion(rdfs:comment :LP_0000815 "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
 AnnotationAssertion(rdfs:label :LP_0000815 "Gymnasialer Bildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000815 "Gymnasium Track"@en)
@@ -1072,7 +1237,7 @@ SubClassOf(:LP_0000815 :LP_0000816)
 
 # Class: :LP_0000816 (Bildungsgang)
 
-AnnotationAssertion(rdfs:comment :LP_0000816 "Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
+AnnotationAssertion(rdfs:comment :LP_0000816 "ALT Bildungsgang beschreibt im deutschen Bildungssystem eine strukturierte Abfolge von Bildungsstufen und -inhalten, die zu einem bestimmten Schulabschluss führt. Ein Bildungsgang legt fest, welche Fächer, Lerninhalte und Kompetenzen während einer bestimmten Schulzeit vermittelt werden und wie lange diese Bildungsphase dauert. Er umfasst dabei die gesamte Schullaufbahn, die durch den jeweiligen Abschluss am Ende gekennzeichnet ist, wie z. B. das Abitur, die Mittlere Reife oder den Hauptschulabschluss.
 
 Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anforderungen und Zielen:
 
@@ -1081,6 +1246,11 @@ Je nach Schulform und Ziel unterscheiden sich die Bildungsgänge in ihren Anford
     Der Hauptschulbildungsgang endet mit dem Hauptschulabschluss.
 
 Ein Bildungsgang stellt somit den Rahmen dar, innerhalb dessen Schülerinnen und Schüler systematisch auf einen Abschluss oder eine weitere Bildungs- oder Berufslaufbahn vorbereitet werden."@de)
+AnnotationAssertion(rdfs:comment :LP_0000816 "NEU Ein Bildungsgang bezeichnet eine spezifische schulische Laufbahn, die zu einem bestimmten Abschluss oder einer Qualifikation führt. Innerhalb dieser Laufbahn werden mehrere Schulstufen durchlaufen, deren Dauer durch den Bildungsgang definiert ist. Er erfordert das Erreichen eines definierten Kompetenzprofils, welches durch verschiedene Arten der Leistungsfeststellung überprüft wird. Im Lehrplan werden die zu prüfenden Inhalte und Kompetenzen der jeweiligen Fächer festgelegt.  
+In der Ontologie unterscheiden wir im Bereich der allgemeinbildenden Schulen zwischen drei Bildungsgängen: 
+Der Hauptschulbildungsgang, der zum Ersten Schulabschluss führt;
+der Realschulbildungsgang, der zum Mittleren Schulabschluss führt;
+der gymnasiale Bildungsgang, der zur  Allgemeinen Hochschulreife führt."@de)
 AnnotationAssertion(rdfs:label :LP_0000816 "Bildungsgang"@de)
 AnnotationAssertion(rdfs:seeAlso :LP_0000816 <https://www.bildungsserver.de/onlineressource.html?onlineressourcen_id=48926>)
 AnnotationAssertion(rdfs:seeAlso :LP_0000816 <https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/Schema-Bildungsgaenge_und_Schularten-Stand_2021-02.pdf>)
@@ -1092,17 +1262,23 @@ SubClassOf(:LP_0000829 :LP_0000493)
 
 # Class: :LP_0000832 (Realschulniveau)
 
+AnnotationAssertion(rdfs:comment :LP_0000832 "Das “Realschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des
+Realschulbildungsgangs beschreibt. 
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
 AnnotationAssertion(rdfs:label :LP_0000832 "Realschulniveau"@de)
 SubClassOf(:LP_0000832 ObjectIntersectionOf(:LP_0000028 ObjectSomeValuesFrom(:LP_0000072 :LP_0000834)))
 
 # Class: :LP_0000834 (Hauptschulniveau)
 
+AnnotationAssertion(rdfs:comment :LP_0000834 "Das “Hauptschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des Hauptschulbildungsgangs beschreibt. 
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
 AnnotationAssertion(rdfs:label :LP_0000834 "Hauptschulniveau"@de)
 SubClassOf(:LP_0000834 :LP_0000028)
 
 # Class: :LP_0000835 (Gymnasialniveau Sek II)
 
-AnnotationAssertion(rdfs:comment :LP_0000835 "Bezeichnet das Niveau, das an Gesamt-, Regel-, Sekundar-, u.ä. Schulen sowie Gymnasien bzgl. der Klassenstufen kleiner 11 gilt und das einem gymnasialen Bildungsgang entspricht. D.h. die Schülerinnen und Schüler verfolgen einen Bildungsgang, der zum Abitur führt, sind aber noch nicht in der gymnasialen Oberstufe (Klassenstufe 11/12/13)."@de)
+AnnotationAssertion(rdfs:comment :LP_0000835 "Das “Gymnasialniveau Sek II” ist ein “Bildungsgangniveau”, welches das Niveau des gymnasialen Bildungsgangs im Sekundarbereich II beschreibt und somit meistens die Jahrgangsstufen 11-13 umfasst.
+Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."@de)
 AnnotationAssertion(rdfs:label :LP_0000835 "Gymnasialniveau Sek II"@de)
 SubClassOf(:LP_0000835 :LP_0000028)
 
@@ -1120,7 +1296,18 @@ SubClassOf(:LP_0000851 :LP_0000478)
 
 # Class: :LP_0000852 (CE-Hinweis)
 
-AnnotationAssertion(rdfs:comment :LP_0000852 "Spezifikation, Vertiefungsvorschlag oder Anwendungsvorschlag zu einem Lerninhalt."@de)
+AnnotationAssertion(rdfs:comment :LP_0000852 "A “CE-Hinweis”’ is a “Curriculares Element” that contains supplementary information or suggestions on a “CE-Bereich”, a “CE-Lerninhalt” or a “CE-Kompetenzspezifikation”. The “CE-Hinweis”’ is a recommendation. Examples:
+- practical or methodological recommendations
+- Recommendation on interdisciplinary connections
+- Suggestions or tips for implementation in the classroom
+- Suggestions for in-depth study
+- Differentiation suggestions"@en)
+AnnotationAssertion(rdfs:comment :LP_0000852 "Ein “CE-Hinweis” ist ein “Curriculares Element”, das ergänzende Informationen oder Anregungen zu einem “CE-Bereich”, einem “CE-Lerninhalt” oder einer “CE-Kompetenzspezifikation” beinhaltet. Der “CE-Hinweis” hat einen Empfehlungscharakter. Beispiele:
+- praktische oder methodische Empfehlungen
+- Empfehlung zu fachübergreifenden Verbindungen
+- Vorschläge oder Hinweise zur Umsetzung im Unterricht
+- Vertiefungsvorschläge
+- Differenzierungsvorschläge"@de)
 AnnotationAssertion(rdfs:label :LP_0000852 "CE-Hinweis"@de)
 EquivalentClasses(:LP_0000852 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0001014) ObjectSomeValuesFrom(ObjectInverseOf(:LP_0000008) ObjectUnionOf(:LP_0000263 :LP_0000332))))
 
@@ -1131,33 +1318,45 @@ SubClassOf(:LP_0001014 :LP_0000493)
 
 # Class: :LP_0001015 (CE-Fragment)
 
+AnnotationAssertion(rdfs:comment :LP_0001015 "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
 AnnotationAssertion(rdfs:comment :LP_0001015 "Ein “CE-Fragment” ist ein “Curriculares Element\" mit einer strukturierenden Funktion. Es dient zur Abgrenzung eines bestimmten Kontextes innerhalb eines Lehrplans oder Bildungsstandards, wie etwa Kapiteln oder thematischen Gliederungen.")
 AnnotationAssertion(rdfs:label :LP_0001015 "CE-Fragment"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0001015 "A \"CE-Fragment\" is a \"Curriculares Element\" with a structuring function. It is used to delineate a specific context within a curriculum or educational standard, such as chapters or thematic divisions."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0001015 "Mögliche Properties:
 - Titel
 - Ordnungsnummer
 - Schulfach
 - Schulart / Bildungsgang
-- Schulstufe")
+- Schulstufe
+
+Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen oder Bildungsstandards.")
 EquivalentClasses(:LP_0001015 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000627)))
 
 # Class: :LP_0002005 (Mittelstufenschule)
 
-AnnotationAssertion(rdfs:comment :LP_0002005 "Schulart in Hessen, bei der die Bildungsgänge der Haupt- und Realschule zusammengefasst werden. Sie umfasst die Jahrgänge 5 - 10, wobei 5-7 als Aufbaustufe zählt.")
+AnnotationAssertion(rdfs:comment :LP_0002005 "Eine “Mittelstufenschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: der praxisorientierte Bildungsgang führt zum Ersten Schulabschluss, der mittlere Bildungsgang führt zum Mittleren Schulabschluss; Jahrgangsstufen 5-7 sind Aufbaustufe"@de)
 AnnotationAssertion(rdfs:label :LP_0002005 "Mittelstufenschule"@de)
 SubClassOf(:LP_0002005 :LP_0000111)
 
 # Class: :LP_0002008 (Verbundene Haupt- und Realschule)
 
-AnnotationAssertion(rdfs:comment :LP_0002008 "Schulart des Sekundarbereichs I in Hessen, an der der Erste sowie Mittlere Schulabschluss erworben werden können und die Jahrgangsstufen 5-10 umfasst.")
+AnnotationAssertion(rdfs:comment :LP_0002008 "Eine “Verbundene Haupt- und Realschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlere Schulabschluss"@de)
 AnnotationAssertion(rdfs:label :LP_0002008 "Verbundene Haupt- und Realschule"@de)
 SubClassOf(:LP_0002008 :LP_0000111)
 
 # Class: :LP_0002012 (Kooperative Gesamtschule)
 
-AnnotationAssertion(rdfs:comment :LP_0002012 "Schulart des Sekundarbereichs I mit mehreren Bildungsgängen, die zu unterschiedlichen Abschlüssen führen (Erster Schulabschluss, Mittlerer Schulabschluss, Berechtigung zum Übergang in die gymnasiale Oberstufe). Die Form der Gesamtschule bedeutet, dass die verschiedenen Schulformen lediglich organisatorisch zu einer Schule verbunden sind, die Klassen also nach Bildungsgang aufgeteilt sind.
-Die Schulart Kooperative Gesamtschule gibt es in HE, MV, NI, ST und TH.")
+AnnotationAssertion(rdfs:comment :LP_0002012 "Eine \"Kooperative Gesamtschule” ist eine “Schulart” in HE, MV, NI, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+Schulstufe: Sekundarbereich I und Sekundarbereich II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: verschiedene Schularten sind organisatorisch zu einer Schule verbunden, Klassen sind nach Bildungsgängen getrennt"@de)
 AnnotationAssertion(rdfs:label :LP_0002012 "Kooperative Gesamtschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0002012 :LP_0000111)
@@ -1174,6 +1373,7 @@ SubClassOf(:LP_0002171 :LP_0000499)
 
 # Class: :LP_0010001 (Femdsprachenniveau)
 
+AnnotationAssertion(rdfs:comment :LP_0010001 "Das “Fremdsprachenniveau” ist ein “Niveau”. Es entspricht dem Gemeinsamen Europäischen Referenzrahmen für Sprachen (GER), der die Sprachbeherrschung einer Fremdsprache in sechs Stufen von A1 (Anfänger) bis C2 (annähernd muttersprachliches Niveau) systematisiert. Das Fremdsprachenniveau gibt an, in welchem Umfang Lernende die Sprache verstehen, sprechen, lesen und schreiben können, und dient als Vergleichsgrundlage innerhalb von Bildungsabschlüssen und internationalen Qualifikationen."@de)
 AnnotationAssertion(rdfs:label :LP_0010001 "Femdsprachenniveau"@de)
 SubClassOf(:LP_0010001 :LP_0000037)
 
@@ -1535,7 +1735,7 @@ ClassAssertion(:LP_0000802 :LP_0000804)
 AnnotationAssertion(rdfs:label :LP_0000805 "Anforderungsbereich 3: Reflexion und Problemlösung"@de)
 ClassAssertion(:LP_0000802 :LP_0000805)
 
-# Individual: :LP_2000001 (class level 1)
+# Individual: :LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
@@ -1559,7 +1759,7 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (class level 5)
+# Individual: :LP_2000005 (Jahrgangsstufe 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
@@ -1571,19 +1771,19 @@ AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (Jahrgangsstufe 7)
+# Individual: :LP_2000007 (class level 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (class level 8)
+# Individual: :LP_2000008 (Jahrgangsstufe 8)
 
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1595,7 +1795,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)
@@ -1607,7 +1807,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (Jahrgangsstufe 13)
+# Individual: :LP_2000013 (class level 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

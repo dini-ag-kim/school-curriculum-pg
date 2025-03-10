@@ -124,6 +124,7 @@ Declaration(Class(:LP_0010004))
 Declaration(Class(:LP_0010005))
 Declaration(Class(:LP_0010006))
 Declaration(Class(:LP_0010007))
+Declaration(Class(:LP_0030003))
 Declaration(Class(:LP_0030065))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000178>))
 Declaration(ObjectProperty(:LP_0000008))
@@ -149,6 +150,11 @@ Declaration(ObjectProperty(:LP_0000580))
 Declaration(ObjectProperty(:LP_0000812))
 Declaration(ObjectProperty(:LP_0000833))
 Declaration(ObjectProperty(:LP_0000840))
+Declaration(ObjectProperty(:LP_0030051))
+Declaration(ObjectProperty(:LP_0030056))
+Declaration(ObjectProperty(:LP_0030057))
+Declaration(ObjectProperty(:LP_0030071))
+Declaration(ObjectProperty(:LP_0030072))
 Declaration(DataProperty(:LP_0000344))
 Declaration(DataProperty(:LP_0000460))
 Declaration(DataProperty(:LP_0000463))
@@ -437,6 +443,39 @@ ObjectPropertyRange(:LP_0000833 :LP_0000028)
 AnnotationAssertion(rdfs:label :LP_0000840 "hat Niveau"@de)
 ObjectPropertyDomain(:LP_0000840 :LP_0000261)
 ObjectPropertyRange(:LP_0000840 :LP_0000037)
+
+# Object Property: :LP_0030051 (hat Beschreibung)
+
+AnnotationAssertion(rdfs:label :LP_0030051 "hat Beschreibung"@de)
+SubObjectPropertyOf(:LP_0030051 owl:topObjectProperty)
+ObjectPropertyDomain(:LP_0030051 :LP_0000261)
+ObjectPropertyRange(:LP_0030051 :LP_0030003)
+
+# Object Property: :LP_0030056 (hat Titel)
+
+AnnotationAssertion(rdfs:label :LP_0030056 "hat Titel"@de)
+SubObjectPropertyOf(:LP_0030056 owl:topObjectProperty)
+ObjectPropertyDomain(:LP_0030056 :LP_0000261)
+ObjectPropertyRange(:LP_0030056 :LP_0000346)
+
+# Object Property: :LP_0030057 (hat Nummer)
+
+AnnotationAssertion(rdfs:label :LP_0030057 "hat Nummer"@de)
+SubObjectPropertyOf(:LP_0030057 owl:topObjectProperty)
+ObjectPropertyDomain(:LP_0030057 :LP_0000261)
+ObjectPropertyRange(:LP_0030057 :LP_0000347)
+
+# Object Property: :LP_0030071 (hat Verweis)
+
+AnnotationAssertion(rdfs:label :LP_0030071 "hat Verweis"@de)
+SubObjectPropertyOf(:LP_0030071 owl:topObjectProperty)
+ObjectPropertyRange(:LP_0030071 :LP_0030065)
+
+# Object Property: :LP_0030072 (verweist auf)
+
+AnnotationAssertion(rdfs:label :LP_0030072 "verweist auf"@de)
+SubObjectPropertyOf(:LP_0030072 owl:topObjectProperty)
+ObjectPropertyDomain(:LP_0030072 :LP_0030065)
 
 
 ############################
@@ -1414,6 +1453,10 @@ AnnotationAssertion(rdfs:comment :LP_0010007 "Kann praktisch alles, was er/sie l
 AnnotationAssertion(rdfs:label :LP_0010007 "C2 Annähernd muttersprachliche Kenntnisse"@de)
 SubClassOf(:LP_0010007 :LP_0010001)
 
+# Class: :LP_0030003 (Beschreibung)
+
+AnnotationAssertion(rdfs:label :LP_0030003 "Beschreibung"@de)
+
 # Class: :LP_0030065 (CE-Verweis)
 
 AnnotationAssertion(rdfs:label :LP_0030065 "CE-Verweis"@de)
@@ -1765,7 +1808,7 @@ AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (class level 5)
+# Individual: :LP_2000005 (Jahrgangsstufe 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
@@ -1777,7 +1820,7 @@ AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (Jahrgangsstufe 7)
+# Individual: :LP_2000007 (class level 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
@@ -1789,7 +1832,7 @@ AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (class level 9)
+# Individual: :LP_2000009 (Jahrgangsstufe 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1813,7 +1856,7 @@ AnnotationAssertion(rdfs:label :LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label :LP_2000012 "class level 12"@en)
 ClassAssertion(:LP_0000009 :LP_2000012)
 
-# Individual: :LP_2000013 (class level 13)
+# Individual: :LP_2000013 (Jahrgangsstufe 13)
 
 AnnotationAssertion(rdfs:label :LP_2000013 "Jahrgangsstufe 13"@de)
 AnnotationAssertion(rdfs:label :LP_2000013 "class level 13"@en)

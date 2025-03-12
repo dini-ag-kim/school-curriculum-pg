@@ -25,6 +25,11 @@ Declaration(Class(ontology:LP_0002190))
 Declaration(Class(ontology:LP_0002191))
 Declaration(Class(ontology:LP_0002192))
 Declaration(Class(ontology:LP_0030041))
+Declaration(Class(ontology:LP_0030073))
+Declaration(Class(ontology:LP_0030074))
+Declaration(Class(ontology:LP_0030075))
+Declaration(Class(ontology:LP_0030076))
+Declaration(Class(ontology:LP_0030077))
 Declaration(NamedIndividual(ontology:LP_0000130))
 Declaration(NamedIndividual(ontology:LP_0000131))
 Declaration(NamedIndividual(ontology:LP_0000132))
@@ -95,9 +100,9 @@ SubClassOf(ontology:LP_0002187 ObjectIntersectionOf(ontology:LP_0002085 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002188 "Kompetenzerwartung (NW)"@de)
 SubClassOf(ontology:LP_0002188 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
-# Class: ontology:LP_0002190 (Teilkompetenzbereich (NW))
+# Class: ontology:LP_0002190 (Teilkompetenz (NW))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002190 "Teilkompetenzbereich (NW)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0002190 "Teilkompetenz (NW)"@de)
 SubClassOf(ontology:LP_0002190 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002191 (Inhaltsfeld (NW))
@@ -114,6 +119,36 @@ SubClassOf(ontology:LP_0002192 ObjectIntersectionOf(ontology:LP_0002085 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030041 "Bildungsgangniveau (NW)"@de)
 EquivalentClasses(ontology:LP_0030041 ObjectIntersectionOf(ontology:LP_0000028 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000044)))
+
+# Class: ontology:LP_0030073 (Bereich (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030073 "Bereich (NW)"@de)
+SubClassOf(ontology:LP_0030073 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030074 (Fachliche Konkretisierung (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030074 "Fachliche Konkretisierung (NW)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030074 "Fach Englisch")
+SubClassOf(ontology:LP_0030074 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030075 (Inhalt (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030075 "Inhalt (NW)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030075 "Fach Sachunterricht Primar. Inhalte stehen in Klammern hinter den Kompetenzerwartungen.")
+SubClassOf(ontology:LP_0030075 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030076 (Möglicher Kontext (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030076 "Möglicher Kontext (NW)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030076 "Vorschlag für mögliche Kontexte (NW)")
+SubClassOf(ontology:LP_0030076 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030077 (Basiskonzept (NW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030077 "Basiskonzept (NW)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030077 "Beitrag zu den Basiskonzepten (NW)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030077 "Fach Naturwissenschaften (Biologie, Chemie, Physik) -> noch offen, wie wir es definieren!")
+SubClassOf(ontology:LP_0030077 ontology:LP_0002085)
 
 
 ############################

@@ -1401,9 +1401,9 @@ AnnotationAssertion(rdfs:label :LP_0002012 "Kooperative Gesamtschule"@de)
 AnnotationAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten/s05>)
 SubClassOf(:LP_0002012 :LP_0000111)
 
-# Class: :LP_0002158 (Verknüpfungsbeschreibungsfunktion)
+# Class: :LP_0002158 (Verweisbeschreibungsfunktion)
 
-AnnotationAssertion(rdfs:label :LP_0002158 "Verknüpfungsbeschreibungsfunktion"@de)
+AnnotationAssertion(rdfs:label :LP_0002158 "Verweisbeschreibungsfunktion"@de)
 SubClassOf(:LP_0002158 :LP_0000493)
 
 # Class: :LP_0002171 (Domänenbezugsfunktion)
@@ -1460,7 +1460,7 @@ AnnotationAssertion(rdfs:label :LP_0030003 "Beschreibung"@de)
 # Class: :LP_0030065 (CE-Verweis)
 
 AnnotationAssertion(rdfs:label :LP_0030065 "CE-Verweis"@de)
-SubClassOf(:LP_0030065 :LP_0000261)
+EquivalentClasses(:LP_0030065 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0002158)))
 
 
 ############################
@@ -1790,7 +1790,7 @@ AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (Jahrgangsstufe 2)
+# Individual: :LP_2000002 (class level 2)
 
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
@@ -1802,25 +1802,25 @@ AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label :LP_2000003 "class level 3"@en)
 ClassAssertion(:LP_0000009 :LP_2000003)
 
-# Individual: :LP_2000004 (Jahrgangsstufe 4)
+# Individual: :LP_2000004 (class level 4)
 
 AnnotationAssertion(rdfs:label :LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label :LP_2000004 "class level 4"@en)
 ClassAssertion(:LP_0000009 :LP_2000004)
 
-# Individual: :LP_2000005 (Jahrgangsstufe 5)
+# Individual: :LP_2000005 (class level 5)
 
 AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (class level 6)
+# Individual: :LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (class level 7)
+# Individual: :LP_2000007 (Jahrgangsstufe 7)
 
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
@@ -1832,7 +1832,7 @@ AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
 AnnotationAssertion(rdfs:label :LP_2000009 "class level 9"@en)
@@ -1844,7 +1844,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label :LP_2000011 "class level 11"@en)

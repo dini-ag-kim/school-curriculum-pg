@@ -11,6 +11,9 @@ Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
 
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000009>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000081>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000423>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000424>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000425>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000443>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000572>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000573>))
@@ -39,6 +42,12 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000231>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000232>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000233>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000234>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000430>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000436>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000437>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000439>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000442>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000444>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000464>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000465>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000466>))
@@ -97,6 +106,21 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNot
 ############################
 #   Classes
 ############################
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000423> (Verweis auf Übung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000423> "Verweis auf Übung"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000423> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030065> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000053>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000424> (Verweis auf Inhalt)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000424> "Verweis auf Inhalt"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000424> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030065> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000053>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000425> (Verweis auf Material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000425> "Verweis auf Material"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000425> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0030065> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0000053>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000572> (Bildungsgangniveau (BB / BE))
 
@@ -186,6 +210,31 @@ SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/7> <https://w3
 
 AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/8> "H")
 SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/8> <https://w3id.org/lehrplan/ontology/LP_0000616>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000430> (Wirtschaft Arbeit Technik (Schulfach))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000430> "Wirtschaft Arbeit Technik (Schulfach)"@de)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000436> (BC Sprachbildung (Schulfach))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000436> "BC Sprachbildung (Schulfach)"@de)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000437> (Naturwissenschaften (Schulfach))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000437> "Naturwissenschaften (Schulfach)"@de)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000439> (Sowi / Wiwi (Schulfach))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000439> "Sowi / Wiwi (Schulfach)"@de)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000442> (Theater (Schulfach))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000442> "Theater (Schulfach)"@de)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0000444> (Wirtschaft Arbeit Technik (Schulfach))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000444> "Wirtschaft Arbeit Technik (Schulfach)"@de)
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_0000444>)
 
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0000583> (BOA A)
 

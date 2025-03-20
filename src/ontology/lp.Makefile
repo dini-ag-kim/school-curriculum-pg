@@ -34,6 +34,16 @@ lp-land-%-full.owl: $(EDIT_PREPROCESSED)
 release-land-%: lp-land-%-full.owl
 		cp lp-land-$*-full.owl $(RELEASEDIR)
 
+lp-ohne-land.owl: $(EDIT_PREPROCESSED)
+	$(ROBOT) remove --input $< --select imports --trim false \
+	merge --input components/bfo-edit.owl \
+	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@ ; \
+
+
+
 
 update-ontology-annotations: 
 	$(ROBOT) annotate --input ../../lp.owl $(ALL_ANNOTATIONS) --output ../../lp.owl && \

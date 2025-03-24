@@ -1,0 +1,23 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+#Verweis "ist verweis" von etwas und muss auf etwas verweisen.
+ex:VerweisShape
+    a sh:NodeShape ;
+    sh:targetClass <https://w3id.org/lehrplan/ontology/LP_0030065> ; # "Verweis"
+    sh:property [              
+        sh:path [ sh:inversePath <https://w3id.org/lehrplan/ontology/LP_0030071> ] ;       # hat verweis
+        sh:minCount 1 ;
+    ] ;
+    sh:property [              
+        sh:path <https://w3id.org/lehrplan/ontology/LP_0030072> ;       # verweist auf
+        sh:minCount 1;
+        
+    ] ;
+    
+    #sh:ignoredProperties ( rdf:type owl:topDataProperty owl:topObjectProperty ) ;
+    .

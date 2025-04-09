@@ -25,7 +25,6 @@ Declaration(Class(ontology:LP_0002232))
 Declaration(Class(ontology:LP_0002233))
 Declaration(Class(ontology:LP_0002234))
 Declaration(Class(ontology:LP_0002235))
-Declaration(Class(ontology:LP_0002237))
 Declaration(Class(ontology:LP_0002238))
 Declaration(Class(ontology:LP_0002239))
 Declaration(Class(ontology:LP_0002240))
@@ -38,6 +37,23 @@ Declaration(Class(ontology:LP_0030061))
 Declaration(Class(ontology:LP_0030062))
 Declaration(Class(ontology:LP_0030063))
 Declaration(Class(ontology:LP_0030064))
+Declaration(Class(ontology:LP_0030092))
+Declaration(Class(ontology:LP_0030093))
+Declaration(Class(ontology:LP_0030094))
+Declaration(Class(ontology:LP_0030095))
+Declaration(Class(ontology:LP_0030126))
+Declaration(Class(ontology:LP_0030127))
+Declaration(Class(ontology:LP_0030128))
+Declaration(Class(ontology:LP_0030129))
+Declaration(Class(ontology:LP_0030130))
+Declaration(Class(ontology:LP_0030131))
+Declaration(Class(ontology:LP_0030132))
+Declaration(Class(ontology:LP_0030133))
+Declaration(Class(ontology:LP_0030134))
+Declaration(Class(ontology:LP_0030135))
+Declaration(Class(ontology:LP_0030136))
+Declaration(Class(ontology:LP_0030137))
+Declaration(Class(ontology:LP_0030138))
 Declaration(NamedIndividual(ontology:LP_0000260))
 Declaration(NamedIndividual(ontology:LP_0000264))
 Declaration(NamedIndividual(ontology:LP_0000266))
@@ -108,7 +124,6 @@ SubClassOf(ontology:LP_0002230 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 # Class: ontology:LP_0002232 (Kompetenzerwartung (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002232 "Kompetenzerwartung (SL)"@de)
-AnnotationAssertion(skos:altLabel ontology:LP_0002232 "Kompetenz (SL)")
 AnnotationAssertion(skos:altLabel ontology:LP_0002232 "Verbindliche Kompetenzerwartung (SL)")
 SubClassOf(ontology:LP_0002232 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
@@ -117,7 +132,7 @@ SubClassOf(ontology:LP_0002232 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002233 "Hinweis zur Umsetzung (SL)")
 AnnotationAssertion(skos:altLabel ontology:LP_0002233 "Hinweis und Umsetzungsbeispiel (SL)")
 AnnotationAssertion(skos:altLabel ontology:LP_0002233 "Zur Umsetzung (SL)"@de)
-SubClassOf(ontology:LP_0002233 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+SubClassOf(ontology:LP_0002233 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002234 (Themenfeld (SL))
 
@@ -128,11 +143,6 @@ SubClassOf(ontology:LP_0002234 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0002235 "Verbindliches Fachwissen (SL)"@de)
 SubClassOf(ontology:LP_0002235 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
-
-# Class: ontology:LP_0002237 (Thema (SL))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002237 "Thema (SL)"@de)
-SubClassOf(ontology:LP_0002237 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002238 (Verbindlicher Kompetenzschwerpunkt (SL))
 
@@ -145,7 +155,9 @@ AnnotationAssertion(rdfs:label ontology:LP_0002239 "Vorschlag und Hinweis (SL)"@
 AnnotationAssertion(skos:altLabel ontology:LP_0002239 "Hinweis (SL)")
 AnnotationAssertion(skos:altLabel ontology:LP_0002239 "Vorschlag (SL)")
 AnnotationAssertion(skos:editorialNote ontology:LP_0002239 "Kommt vor im Fach Mathematik in der Gemeinschaftsschule und im Gymnasium in der Sek I und Sek II. Und im Fach Deutsch in der Primarstufe, in der Sek I in der Gemeinschaftsschule und in der Sek II in der gymasialen Oberstufe.
-Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: \"Zur Unterrichtsgestaltung\", \"\"Zu Methoden und Arbeitstechniken\", \"Zur Aufgabenstellung\", \"Zu Leistungsfeststellung\".")
+Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: \"Zur Unterrichtsgestaltung\", \"\"Zu Methoden und Arbeitstechniken\", \"Zur Aufgabenstellung\", \"Zu Leistungsfeststellung\".
+
+\"Hinweise\" kommt auch oft in den Fächern Englisch und Physik als Überschrift für weitere Kategorien vor (auf derselben ebene wi Kompetenzerwartungen).")
 SubClassOf(ontology:LP_0002239 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002240 (Basisbegriff (SL))
@@ -168,6 +180,8 @@ SubClassOf(ontology:LP_0002243 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030058 "Aufgabenstellung (SL)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030058 "Aufgabenarten (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030058 "Geeignete produktive Aufgaben (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030058 "Hinweis zu den Aufgabenformaten")
 AnnotationAssertion(skos:editorialNote ontology:LP_0030058 "kommt vor im Fach Deutsch Gemeinschaftsschule und Gymnasiale Oberstufe")
 SubClassOf(ontology:LP_0030058 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
@@ -184,7 +198,7 @@ SubClassOf(ontology:LP_0030060 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 # Class: ontology:LP_0030061 (Verbindliche Formen mündlicher Kommunikation (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030061 "Verbindliche Formen mündlicher Kommunikation (SL)"@de)
-SubClassOf(ontology:LP_0030061 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+SubClassOf(ontology:LP_0030061 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030062 (Verbindliche fachspezifische Fertigkeiten/Fähigkeiten und fachspezifische Methoden (SL))
 
@@ -195,12 +209,127 @@ SubClassOf(ontology:LP_0030062 ObjectIntersectionOf(ontology:LP_0002102 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030063 "Verbindlicher Lerngegenstand (SL)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030063 "Verbindlicher Gegenstand (SL)")
-SubClassOf(ontology:LP_0030063 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+SubClassOf(ontology:LP_0030063 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030064 (Vorschlag und Hinweis zu Inhalten und Methoden (SL))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030064 "Vorschlag und Hinweis zu Inhalten und Methoden (SL)"@de)
 SubClassOf(ontology:LP_0030064 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030092 (Themenbereich (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030092 "Themenbereich (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030092 "Französisch Primar")
+SubClassOf(ontology:LP_0030092 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030093 (Sprachanlässe (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030093 "Sprachanlässe (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030093 "Französisch Primar")
+SubClassOf(ontology:LP_0030093 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030094 (Redemittel (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030094 "Redemittel (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030094 "Französisch Primar")
+SubClassOf(ontology:LP_0030094 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030095 (Kompetenz (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030095 "Kompetenz (SL)"@de)
+SubClassOf(ontology:LP_0030095 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030126 (Verfügung über sprachliche Mittel (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030126 "Verfügung über sprachliche Mittel (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030126 "Englisch Sek I Gemeinschaftsschule")
+SubClassOf(ontology:LP_0030126 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030127 (Inhalt und Thema (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030127 "Inhalt und Thema (SL)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030127 "Inhalte")
+AnnotationAssertion(skos:altLabel ontology:LP_0030127 "Themen")
+AnnotationAssertion(skos:altLabel ontology:LP_0030127 "Themen und Inhalte")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030127 "Englisch Sek I Gymnasium")
+SubClassOf(ontology:LP_0030127 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030128 (Beispiel (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030128 "Beispiel (SL)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Hör-/Sehtexte (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Hörtexte (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Kommunikationsanlässe (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Lesetexte (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Mediationssituationen (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Schreibanlässe und Schreibprodukte (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030128 "Beispiele für Sprechanlässe (SL)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030128 "Englisch Sek I Gymnasium")
+SubClassOf(ontology:LP_0030128 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030129 (Methodenkompetenzen/Lern- und Kommunikationsstrategien (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030129 "Methodenkompetenzen/Lern- und Kommunikationsstrategien (SL)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030129 "Kommunikationsstrategien (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030129 "Kooperations- und Kommunikationsstrategien (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030129 "Lernstrategien (SL)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030129 "Methodenkompetenzen/Lernstrategien (SL)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030129 "Englisch Sek I Gymnasium")
+SubClassOf(ontology:LP_0030129 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030130 (Orientierungswissen (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030130 "Orientierungswissen (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030130 "Englisch Sek I und II Gymnasium")
+SubClassOf(ontology:LP_0030130 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030131 (Begegnungssituatonen (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030131 "Begegnungssituatonen (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030131 "Englisch Sek I und II Gymnasium")
+SubClassOf(ontology:LP_0030131 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030132 (Einstellungen (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030132 "Einstellungen (SL)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030132 "Einstellungen, Einsichten und Haltungen (SL)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030132 "Englisch Sek I und II Gymnasium")
+SubClassOf(ontology:LP_0030132 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030133 (Relevante Genres (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030133 "Relevante Genres (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030133 "Englisch Sek I Gymnasium")
+SubClassOf(ontology:LP_0030133 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030134 (Wortschatz (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030134 "Wortschatz (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030134 "Englisch Sek I Gymnasium")
+SubClassOf(ontology:LP_0030134 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030135 (Geeignete Methoden / Anlässe für das exemplarische Arbeiten (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030135 "Geeignete Methoden / Anlässe für das exemplarische Arbeiten (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030135 "Englisch Sek I und II Gymnasium")
+SubClassOf(ontology:LP_0030135 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030136 (Hinweise für die Konzeption von Lernaufgaben mit IK-Schwerpunkt  (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030136 "Hinweise für die Konzeption von Lernaufgaben mit IK-Schwerpunkt  (SL)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030136 "Englisch Sek I und II Gymnasium")
+SubClassOf(ontology:LP_0030136 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030137 (Mögliche Sprecharrangements und Genres (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030137 "Mögliche Sprecharrangements und Genres (SL)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030137 "Nur in Englisch Sek II Gymnaisum")
+SubClassOf(ontology:LP_0030137 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030138 (Literatur und Film im Unterricht der Hauptphase (SL))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030138 "Literatur und Film im Unterricht der Hauptphase (SL)"@de)
+SubClassOf(ontology:LP_0030138 ObjectIntersectionOf(ontology:LP_0002102 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 
 ############################

@@ -23,14 +23,23 @@ Declaration(Class(ontology:LP_0002072))
 Declaration(Class(ontology:LP_0002210))
 Declaration(Class(ontology:LP_0002211))
 Declaration(Class(ontology:LP_0002212))
-Declaration(Class(ontology:LP_0002213))
 Declaration(Class(ontology:LP_0002214))
 Declaration(Class(ontology:LP_0002215))
-Declaration(Class(ontology:LP_0002217))
 Declaration(Class(ontology:LP_0002218))
 Declaration(Class(ontology:LP_0002219))
 Declaration(Class(ontology:LP_0002220))
 Declaration(Class(ontology:LP_0002221))
+Declaration(Class(ontology:LP_0030009))
+Declaration(Class(ontology:LP_0030144))
+Declaration(Class(ontology:LP_0030165))
+Declaration(Class(ontology:LP_0030166))
+Declaration(Class(ontology:LP_0030167))
+Declaration(Class(ontology:LP_0030168))
+Declaration(Class(ontology:LP_0030169))
+Declaration(Class(ontology:LP_0030170))
+Declaration(Class(ontology:LP_0030171))
+Declaration(Class(ontology:LP_0030172))
+Declaration(Class(ontology:LP_0030173))
 Declaration(NamedIndividual(ontology:LP_0000060))
 Declaration(NamedIndividual(ontology:LP_0000093))
 Declaration(NamedIndividual(ontology:LP_0000094))
@@ -77,7 +86,7 @@ EquivalentClasses(ontology:LP_0000426 ObjectIntersectionOf(ontology:LP_0000261 O
 # Class: ontology:LP_0000428 (Inhalt (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000428 "Inhalt (HH)"@de)
-SubClassOf(ontology:LP_0000428 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+SubClassOf(ontology:LP_0000428 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0000822 (Bildungsplan (HH))
 
@@ -109,11 +118,6 @@ SubClassOf(ontology:LP_0002211 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002212 "Kompetenzbereich (HH)"@de)
 SubClassOf(ontology:LP_0002212 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0002213 (Teilkompetenzbereich (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002213 "Teilkompetenzbereich (HH)"@de)
-SubClassOf(ontology:LP_0002213 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
-
 # Class: ontology:LP_0002214 (Beobachtungskriterium (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002214 "Beobachtungskriterium (HH)"@de)
@@ -123,14 +127,8 @@ SubClassOf(ontology:LP_0002214 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 # Class: ontology:LP_0002215 (Regelanforderung (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002215 "Regelanforderung (HH)"@de)
-AnnotationAssertion(skos:altLabel ontology:LP_0002215 "Anforderungen (HH)")
 AnnotationAssertion(skos:editorialNote ontology:LP_0002215 "Kommt nur in der Primarstufe für die Jahrgänge 3-4 vor.")
 SubClassOf(ontology:LP_0002215 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
-
-# Class: ontology:LP_0002217 (Anforderungsbereich (HH))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002217 "Anforderungsbereich (HH)"@de)
-SubClassOf(ontology:LP_0002217 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000829)))
 
 # Class: ontology:LP_0002218 (Thema (HH))
 
@@ -140,7 +138,7 @@ SubClassOf(ontology:LP_0002218 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 # Class: ontology:LP_0002219 (Modul (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002219 "Modul (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002219 "In Sek II unter Inhalte.")
+AnnotationAssertion(skos:editorialNote ontology:LP_0002219 "In Mathematik Sek II unter Inhalte.")
 SubClassOf(ontology:LP_0002219 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002220 (Sachgebiet (HH))
@@ -152,7 +150,79 @@ SubClassOf(ontology:LP_0002220 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 # Class: ontology:LP_0002221 (Kompetenz (HH))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002221 "Kompetenz (HH)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0002221 "Fachliche Kompetenz (HH)")
 SubClassOf(ontology:LP_0002221 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030009 (Anforderung (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030009 "Anforderung (HH)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030009 "Mindestanforderung (HH)")
+SubClassOf(ontology:LP_0030009 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030144 (Themenbereich (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030144 "Themenbereich (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030144 "Themenfeld (HH)")
+SubClassOf(ontology:LP_0030144 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030165 (Leitgedanke (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030165 "Leitgedanke (HH)"@de)
+SubClassOf(ontology:LP_0030165 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030166 (Beitrag zur Leitperspektive (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030166 "Beitrag zur Leitperspektive (HH)"@de)
+SubClassOf(ontology:LP_0030166 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030167 (Übergreifend (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030167 "Übergreifend (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030167 "Bezüge zu (je nach Fach) :
+- Leitperspektiven
+- Aufgabengebiete
+- Sprachbildung
+- Fachübergreifende Bezüge")
+SubClassOf(ontology:LP_0030167 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030168 (Fachbezogen (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030168 "Fachbezogen (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030168 "Bezüge zu:
+- Kompetenzen
+- Fachbegriffe
+- Fachinterne Bezüge")
+SubClassOf(ontology:LP_0030168 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030169 (Redemittel und grammatische Grundlagen (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030169 "Redemittel und grammatische Grundlagen (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030169 "kommt nur in Englisch Primar vor")
+SubClassOf(ontology:LP_0030169 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030170 (Basisgrammatik (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030170 "Basisgrammatik (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030170 "kommt nur in Englisch Sek I vor")
+SubClassOf(ontology:LP_0030170 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030171 (Fachperspektive (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030171 "Fachperspektive (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030171 "nur in Sachunterricht Primar")
+SubClassOf(ontology:LP_0030171 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030172 (Bildungsstandard (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030172 "Bildungsstandard (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030172 "Sachunterricht Primar")
+SubClassOf(ontology:LP_0030172 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030173 (Basiskonzept (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030173 "Basiskonzept (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030173 "nur in den NaWis")
+SubClassOf(ontology:LP_0030173 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 
 ############################

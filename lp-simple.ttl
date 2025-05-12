@@ -673,7 +673,7 @@ ontology:LP_0000029 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000041
 ontology:LP_0000041 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:BFO_0000117 ;
+                    rdfs:subPropertyOf obo:BFO_0000178 ;
                     rdfs:label "has unit"@en ,
                                "hat Einheit"@de .
 
@@ -723,7 +723,7 @@ ontology:LP_0000086 rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000343
 ontology:LP_0000343 rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf obo:BFO_0000196 ;
-                    rdfs:label "hat Schulart"@de .
+                    rdfs:label "hat Schulartfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000440
@@ -731,6 +731,14 @@ ontology:LP_0000440 rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf obo:BFO_0000056 ;
                     rdfs:domain ontology:LP_0000438 ;
                     rdfs:label "für Bildungsgangabschnitt"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0000477
+ontology:LP_0000477 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf obo:BFO_0000059 ;
+                    rdfs:domain ontology:LP_0000475 ;
+                    rdfs:range ontology:LP_0000111 ;
+                    rdfs:label "konkretisiert Schulart"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000483
@@ -799,7 +807,7 @@ ontology:LP_0000580 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000812
 ontology:LP_0000812 rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf obo:BFO_0000059 ;
+                    rdfs:subPropertyOf obo:IAO_0000136 ;
                     rdfs:range ontology:LP_0000111 ;
                     rdfs:label "für Schulart"@de .
 
@@ -1194,29 +1202,36 @@ ontology:LP_0000109 rdf:type owl:Class ;
 ontology:LP_0000111 rdf:type owl:Class ;
                     rdfs:comment """Describes the way a school is organized.
 -> nicht aktuell"""@en ,
-                                 """Eine “Schulart” ist eine “Funktion”.
-Sie ist eine durch bestimmte Merkmale gekennzeichnete Form der Schule, die deren organisatorische Struktur, pädagogische Ausrichtung, die Dauer des Bildungsgangabschnitts sowie die angestrebten Schulabschlüsse festlegt. Sie kann je nach Bildungssystem und Bundesland unterschiedliche Bezeichnungen und Konzepte umfassen, wie Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, Berufsschule oder Förderschule.
+                                 """Eine “Schulart” ist eine “Informationseinheit”.
+Sie beschreibt eine durch bestimmte Merkmale gekennzeichnete Form der Schule, die deren organisatorische Struktur, pädagogische Ausrichtung, die Dauer des Bildungsgangabschnitts sowie die angestrebten Schulabschlüsse festlegt. Sie kann je nach Bildungssystem und Bundesland unterschiedliche Bezeichnungen und Konzepte umfassen, wie Grundschule, Gymnasium, Realschule, Hauptschule, Gesamtschule, Berufsschule oder Förderschule.
 Im allgemeinen Sprachgebrauch werden “Schulart” und \"Schulform\" synonym verwendet."""@de ;
                     rdfs:label "Schulart"@de ,
                                "school type"@en ;
                     skos:altLabel "Schulform" ;
-                    skos:example """Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
+                    skos:example """Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als \"Kategorie\" der Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
 
 Bsp: 
 :schuleTrebur a :Schule .
 
-:schuleTreburSchulform1 a Realschule .
+:schuleTreburSchulform1 a Schulartfunktion .
 :schuleTreburSchulform1 bfo:existsAt :someTimeIntervalUntilDateX .
-:schuleTreburSchulform2 a Hauptschule .
-:schuleTreburSchulform2 bfo:existsAt :someTimeIntervalUntilDateX .
-:schuleTrebur :hatSchulform :schuleTreburSchulform1 .
-:schuleTrebur :hatSchulform :schuleTreburSchulform2 .
+:schuleTreburSchulform1 :konkretisiertSchulform :Realschule .
 
-:schuleTreburSchulform3 a Hauptschule .
-:schuleTreburSchulform3 bfo:existsAt :someTimeIntervalFromDateX .
-:schuleTrebur :hatSchulform :schuleTreburSchulform3 .""" .
+:schuleTreburSchulform2 a Schulartfunktion .
+:schuleTreburSchulform2 bfo:existsAt :someTimeIntervalUntilDateX .
+:schuleTreburSchulform2 :konkretisiertSchulform :Hauptschule .
+
+:schuleTreburSchulform3 a Schulartfunktion .
+:schuleTreburSchulform3 :konkretisiertSchulform :Gesamtschule 
+:schuleTreburSchulform3 bfo:existsAt :someTimeIntervalFromDateY .
+
+:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform1 .
+:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform2 .
+:schuleTrebur :hatSchulformfunktion :schuleTreburSchulform3 .
+
+:someTimeIntervalUntilDateX  bfo:precedes :someTimeIntervalUntilDateY .""" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000144
@@ -2655,7 +2670,7 @@ ontology:LP_0000808 rdf:type owl:Class ;
 ontology:LP_0000809 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000808
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:BFO_0000196 ;
+                                                             owl:onProperty ontology:LP_0000343 ;
                                                              owl:someValuesFrom ontology:LP_0000475
                                                            ]
                                                          ) ;

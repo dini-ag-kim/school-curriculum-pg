@@ -39,26 +39,10 @@ Declaration(Class(:LP_0000078))
 Declaration(Class(:LP_0000079))
 Declaration(Class(:LP_0000081))
 Declaration(Class(:LP_0000111))
-Declaration(Class(:LP_0000112))
-Declaration(Class(:LP_0000114))
-Declaration(Class(:LP_0000121))
-Declaration(Class(:LP_0000122))
-Declaration(Class(:LP_0000140))
-Declaration(Class(:LP_0000159))
-Declaration(Class(:LP_0000167))
-Declaration(Class(:LP_0000197))
-Declaration(Class(:LP_0000218))
-Declaration(Class(:LP_0000238))
-Declaration(Class(:LP_0000240))
-Declaration(Class(:LP_0000251))
 Declaration(Class(:LP_0000261))
 Declaration(Class(:LP_0000263))
 Declaration(Class(:LP_0000265))
 Declaration(Class(:LP_0000268))
-Declaration(Class(:LP_0000274))
-Declaration(Class(:LP_0000291))
-Declaration(Class(:LP_0000292))
-Declaration(Class(:LP_0000319))
 Declaration(Class(:LP_0000332))
 Declaration(Class(:LP_0000336))
 Declaration(Class(:LP_0000337))
@@ -67,11 +51,10 @@ Declaration(Class(:LP_0000341))
 Declaration(Class(:LP_0000346))
 Declaration(Class(:LP_0000347))
 Declaration(Class(:LP_0000349))
-Declaration(Class(:LP_0000367))
-Declaration(Class(:LP_0000382))
 Declaration(Class(:LP_0000429))
 Declaration(Class(:LP_0000438))
 Declaration(Class(:LP_0000443))
+Declaration(Class(:LP_0000475))
 Declaration(Class(:LP_0000478))
 Declaration(Class(:LP_0000479))
 Declaration(Class(:LP_0000480))
@@ -113,9 +96,6 @@ Declaration(Class(:LP_0000851))
 Declaration(Class(:LP_0000852))
 Declaration(Class(:LP_0001014))
 Declaration(Class(:LP_0001015))
-Declaration(Class(:LP_0002005))
-Declaration(Class(:LP_0002008))
-Declaration(Class(:LP_0002012))
 Declaration(Class(:LP_0002158))
 Declaration(Class(:LP_0002171))
 Declaration(Class(:LP_0010001))
@@ -127,6 +107,7 @@ Declaration(Class(:LP_0010006))
 Declaration(Class(:LP_0010007))
 Declaration(Class(:LP_0030003))
 Declaration(Class(:LP_0030065))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000196>))
 Declaration(ObjectProperty(:LP_0000008))
 Declaration(ObjectProperty(:LP_0000015))
 Declaration(ObjectProperty(:LP_0000017))
@@ -229,7 +210,25 @@ Declaration(NamedIndividual(<https://w3id.org/kim/schularten/s16>))
 Declaration(NamedIndividual(:LP_0000036))
 Declaration(NamedIndividual(:LP_0000045))
 Declaration(NamedIndividual(:LP_0000046))
+Declaration(NamedIndividual(:LP_0000112))
+Declaration(NamedIndividual(:LP_0000114))
+Declaration(NamedIndividual(:LP_0000121))
+Declaration(NamedIndividual(:LP_0000122))
+Declaration(NamedIndividual(:LP_0000140))
+Declaration(NamedIndividual(:LP_0000159))
+Declaration(NamedIndividual(:LP_0000167))
+Declaration(NamedIndividual(:LP_0000197))
+Declaration(NamedIndividual(:LP_0000218))
+Declaration(NamedIndividual(:LP_0000238))
+Declaration(NamedIndividual(:LP_0000240))
+Declaration(NamedIndividual(:LP_0000251))
+Declaration(NamedIndividual(:LP_0000274))
+Declaration(NamedIndividual(:LP_0000291))
+Declaration(NamedIndividual(:LP_0000292))
+Declaration(NamedIndividual(:LP_0000319))
 Declaration(NamedIndividual(:LP_0000340))
+Declaration(NamedIndividual(:LP_0000367))
+Declaration(NamedIndividual(:LP_0000382))
 Declaration(NamedIndividual(:LP_0000464))
 Declaration(NamedIndividual(:LP_0000465))
 Declaration(NamedIndividual(:LP_0000466))
@@ -242,6 +241,9 @@ Declaration(NamedIndividual(:LP_0000616))
 Declaration(NamedIndividual(:LP_0000803))
 Declaration(NamedIndividual(:LP_0000804))
 Declaration(NamedIndividual(:LP_0000805))
+Declaration(NamedIndividual(:LP_0002005))
+Declaration(NamedIndividual(:LP_0002008))
+Declaration(NamedIndividual(:LP_0002012))
 Declaration(NamedIndividual(:LP_2000001))
 Declaration(NamedIndividual(:LP_2000002))
 Declaration(NamedIndividual(:LP_2000003))
@@ -740,133 +742,6 @@ Bsp:
 :schuleTreburSchulform3 bfo:existsAt :someTimeIntervalFromDateX .
 :schuleTrebur :hatSchulform :schuleTreburSchulform3 .")
 
-# Class: :LP_0000112 (Gemeinschaftsschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000112 "Eine “Gemeinschaftsschule” ist eine “Schulart” in BW, BE, SL, SN, ST, SH und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarstufe I, 
-in BE, SN, TH auch Primarbereich, 
-in BW, BE, SL, SN, ST, SH, TH auch Sekundarstufe II
-- Jahrgangsstufen: 5-10, 
-in BE, SN und TH 1-12/13
-in BW, SL und ST 5-12/13, 
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife"@de)
-AnnotationAssertion(rdfs:label :LP_0000112 "Gemeinschaftsschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000112 <https://w3id.org/kim/schularten/s09>)
-SubClassOf(:LP_0000112 :LP_0000111)
-
-# Class: :LP_0000114 (Grundschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000114 "Eine “Grundschule” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Primar
-- Jahrgangsstufen: 1-4 in allen Bundesländern außer BE und BB, 1-6 in BE und BB"@de)
-AnnotationAssertion(rdfs:label :LP_0000114 "Grundschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000114 <https://w3id.org/kim/schularten/s02>)
-SubClassOf(:LP_0000114 :LP_0000111)
-
-# Class: :LP_0000121 (Integrierte Sekundarschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000121 "Eine “Integrierte Sekundarschule\" ist eine “Schulart” in BE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I und II
-- Jahrgangsstufen: 7-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: ggf. Schnelllernerklassen ab 5"@de)
-AnnotationAssertion(rdfs:label :LP_0000121 "Integrierte Sekundarschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000121 <https://w3id.org/kim/schularten/s10>)
-SubClassOf(:LP_0000121 :LP_0000111)
-
-# Class: :LP_0000122 (Gymnasium)
-
-AnnotationAssertion(rdfs:comment :LP_0000122 "Ein “Gymnasium” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I und II
-- Jahrgangsstufen: 5-12/13, in BE und BB 7-12/13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: in BE ggf. Schnelllernerklassen ab 5, in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5"@de)
-AnnotationAssertion(rdfs:label :LP_0000122 "Gymnasium"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000122 <https://w3id.org/kim/schularten/s08>)
-SubClassOf(:LP_0000122 :LP_0000111)
-
-# Class: :LP_0000140 (Hauptschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000140 "Eine “Hauptschule” ist eine “Schulart” BW, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-9 bzw. 10
-- Abschlüsse: Erster Schulabschluss, in NI und NW auch Mittlerer Schulabschluss"@de)
-AnnotationAssertion(rdfs:label :LP_0000140 "Hauptschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000140 <https://w3id.org/kim/schularten/s03>)
-SubClassOf(:LP_0000140 :LP_0000111)
-
-# Class: :LP_0000159 (Mittelschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000159 "Eine “Mittelschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
-AnnotationAssertion(rdfs:label :LP_0000159 "Mittelschule"@de)
-SubClassOf(:LP_0000159 :LP_0000111)
-
-# Class: :LP_0000167 (Realschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000167 "Eine “Realschule” ist eine “Schulart” in BW, BY, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: ermöglicht Übergang in berufs- und studienqualifizierende Bildungsgänge des Sekundarbereichs II"@de)
-AnnotationAssertion(rdfs:label :LP_0000167 "Realschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000167 <https://w3id.org/kim/schularten/s04>)
-SubClassOf(:LP_0000167 :LP_0000111)
-
-# Class: :LP_0000197 (Wirtschaftsschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000197 "Eine “Wirtschaftsschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 6-11 ( 6. Jahrgangsstufe ist die Einführung)
-- Abschlüsse: Wirtschaftsschulabschluss (stellt den mittleren Schulabschluss dar)
-- Besonderheiten: Sie vermittelt eine berufliche Grundbildung im Berufsfeld Wirtschaft und Verwaltung"@de)
-AnnotationAssertion(rdfs:label :LP_0000197 "Wirtschaftsschule"@de)
-SubClassOf(:LP_0000197 :LP_0000111)
-
-# Class: :LP_0000218 (Werkrealschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000218 "Eine “Werkrealschule” ist eine “Schulart” in BW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I 
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: Erster Schulabschluss nach Jahrgangsstufe 9 oder 10 möglich"@de)
-AnnotationAssertion(rdfs:label :LP_0000218 "Werkrealschule"@de)
-SubClassOf(:LP_0000218 :LP_0000111)
-
-# Class: :LP_0000238 (Oberschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000238 "Eine “Oberschule” ist eine “Schulart” in  BB, HB, NI und SN, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I, in SN auch Primar, in HB auch Sekundarbereich II
-- Jahrgangsstufen: 5-10, in SN 1-10 (s. Besonderheiten), in HB 5-13 
-- Abschlüsse: Erster und Mittlerer Schulabschluss, in HB auch die Allgemeine Hochschulreife
-- Besonderheiten: Oberschule + in SN mit verbundener Grundschule"@de)
-AnnotationAssertion(rdfs:label :LP_0000238 "Oberschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000238 <https://w3id.org/kim/schularten/s07>)
-SubClassOf(:LP_0000238 :LP_0000111)
-
-# Class: :LP_0000240 (Gesamtschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000240 "Eine “Gesamtschule” ist eine “Schulart” in BB und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-Schulstufe: Sekundarbereich I und Sekundarbereich II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5"@de)
-AnnotationAssertion(rdfs:label :LP_0000240 "Gesamtschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000240 <https://w3id.org/kim/schularten/s05>)
-SubClassOf(:LP_0000240 :LP_0000111)
-
-# Class: :LP_0000251 (Werkschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000251 "Eine “Werkschule” ist eine “Schulart” in HB, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-11
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: Jede Werkschule hat sich auf bestimmte Dienstleistungen und Produktionen spezialisiert"@de)
-AnnotationAssertion(rdfs:label :LP_0000251 "Werkschule"@de)
-SubClassOf(:LP_0000251 :LP_0000111)
-
 # Class: :LP_0000261 (Curriculares Element)
 
 AnnotationAssertion(rdfs:comment :LP_0000261 "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
@@ -919,45 +794,6 @@ SubClassOf(:LP_0000265 :LP_0000037)
 AnnotationAssertion(rdfs:comment :LP_0000268 "Bezeichung in den Bildungsstandards für die inhaltsbezogenen Kompetenzbereiche im Fach Mathematik.")
 AnnotationAssertion(rdfs:label :LP_0000268 "Leitidee (Bista)"@de)
 SubClassOf(:LP_0000268 :LP_0000536)
-
-# Class: :LP_0000274 (Stadteilschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000274 "Eine “Stadtteilschule” ist eine “Schulart” in HH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I und II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife"@de)
-AnnotationAssertion(rdfs:label :LP_0000274 "Stadteilschule"@de)
-SubClassOf(:LP_0000274 :LP_0000111)
-
-# Class: :LP_0000291 (Realschule plus)
-
-AnnotationAssertion(rdfs:comment :LP_0000291 "Eine “Realschule plus” ist eine “Schulart” in RP, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
-AnnotationAssertion(rdfs:label :LP_0000291 "Realschule plus"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000291 <https://w3id.org/kim/schularten/s04>)
-SubClassOf(:LP_0000291 :LP_0000111)
-
-# Class: :LP_0000292 (Integrierte Gesamtschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000292 "Eine \"Integrierte Gesamtschule” ist eine “Schulart” in HE, MV, NI, RP, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-Schulstufe: Sekundarbereich I und Sekundarbereich II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: unabhängig vom angestrebten Abschluss werden alle Lernenden in einem Klassenverband unterrichtet"@de)
-AnnotationAssertion(rdfs:label :LP_0000292 "Integrierte Gesamtschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0000292 <https://w3id.org/kim/schularten/s05>)
-SubClassOf(:LP_0000292 :LP_0000111)
-
-# Class: :LP_0000319 (Regelschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000319 "Eine “Regelschule” ist eine “Schulart” TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
-AnnotationAssertion(rdfs:label :LP_0000319 "Regelschule"@de)
-SubClassOf(:LP_0000319 :LP_0000111)
 
 # Class: :LP_0000332 (CE-Lerninhalt)
 
@@ -1026,26 +862,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0000
 - Jahrgangsstufe")
 SubClassOf(:LP_0000349 :LP_0000261)
 
-# Class: :LP_0000367 (Regionale Schule)
-
-AnnotationAssertion(rdfs:comment :LP_0000367 "Eine “Regionale Schule” ist eine “Schulart” in MV, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe:Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: schulartunabhängige Orientierungsstufe in Jahrgangsstufe 5 und 6"@de)
-AnnotationAssertion(rdfs:label :LP_0000367 "Regionale Schule"@de)
-SubClassOf(:LP_0000367 :LP_0000111)
-
-# Class: :LP_0000382 (Sekundarschule)
-
-AnnotationAssertion(rdfs:comment :LP_0000382 "Eine “Sekundarschule” ist eine “Schulart” in NW und ST, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: in NW ggf. Berechtigung zum Besuch der gymnasialen Oberstufe"@de)
-AnnotationAssertion(rdfs:label :LP_0000382 "Sekundarschule"@de)
-SubClassOf(:LP_0000382 :LP_0000111)
-
 # Class: :LP_0000429 (Themenfeld)
 
 AnnotationAssertion(rdfs:label :LP_0000429 "Themenfeld"@en)
@@ -1068,6 +884,10 @@ AnnotationAssertion(rdfs:label :LP_0000438 "Lehrplan"@de)
 
 AnnotationAssertion(rdfs:label :LP_0000443 "Niveaustufe (BE/BB)"@de)
 SubClassOf(:LP_0000443 :LP_0000261)
+
+# Class: :LP_0000475 (Schulartfunktion)
+
+AnnotationAssertion(rdfs:label :LP_0000475 "Schulartfunktion"@de)
 
 # Class: :LP_0000478 (Funktionsspezifikation)
 
@@ -1238,7 +1058,7 @@ AnnotationAssertion(rdfs:label :LP_0000808 "Organisation"@de)
 # Class: :LP_0000809 (Schule)
 
 AnnotationAssertion(rdfs:label :LP_0000809 "Schule"@de)
-SubClassOf(:LP_0000809 :LP_0000808)
+SubClassOf(:LP_0000809 ObjectIntersectionOf(:LP_0000808 ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> :LP_0000475)))
 
 # Class: :LP_0000810 (Schulklasse)
 
@@ -1277,7 +1097,7 @@ Der “Gymnasiale Bildungsgang” muss nicht zwangsläufig an der Schulart Gymna
 AnnotationAssertion(rdfs:comment :LP_0000815 "The gymnasial track is designed to prepare students for the Abitur (university entrance qualification) and later studies at university. It typically lasts until the 12th or 13th grade and ends with the Abitur, which allows access to universities and higher education institutions. The curriculum is usually more academically demanding and theoretical compared to other school types."@en)
 AnnotationAssertion(rdfs:label :LP_0000815 "Gymnasialer Bildungsgang"@de)
 AnnotationAssertion(rdfs:label :LP_0000815 "Gymnasium Track"@en)
-EquivalentClasses(:LP_0000815 ObjectUnionOf(ObjectIntersectionOf(:LP_0000816 ObjectUnionOf(ObjectSomeValuesFrom(:LP_0000833 :LP_0000069) ObjectSomeValuesFrom(:LP_0000833 :LP_0000835))) ObjectSomeValuesFrom(:LP_0000812 :LP_0000122)))
+EquivalentClasses(:LP_0000815 ObjectUnionOf(ObjectIntersectionOf(:LP_0000816 ObjectUnionOf(ObjectSomeValuesFrom(:LP_0000833 :LP_0000069) ObjectSomeValuesFrom(:LP_0000833 :LP_0000835))) ObjectHasValue(:LP_0000812 :LP_0000122)))
 SubClassOf(:LP_0000815 :LP_0000816)
 
 # Class: :LP_0000816 (Bildungsgang)
@@ -1375,36 +1195,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> :LP_0001
 
 Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen oder Bildungsstandards.")
 EquivalentClasses(:LP_0001015 ObjectIntersectionOf(:LP_0000261 ObjectSomeValuesFrom(:LP_0000483 :LP_0000627)))
-
-# Class: :LP_0002005 (Mittelstufenschule)
-
-AnnotationAssertion(rdfs:comment :LP_0002005 "Eine “Mittelstufenschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: der praxisorientierte Bildungsgang führt zum Ersten Schulabschluss, der mittlere Bildungsgang führt zum Mittleren Schulabschluss; Jahrgangsstufen 5-7 sind Aufbaustufe"@de)
-AnnotationAssertion(rdfs:label :LP_0002005 "Mittelstufenschule"@de)
-SubClassOf(:LP_0002005 :LP_0000111)
-
-# Class: :LP_0002008 (Verbundene Haupt- und Realschule)
-
-AnnotationAssertion(rdfs:comment :LP_0002008 "Eine “Verbundene Haupt- und Realschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlere Schulabschluss"@de)
-AnnotationAssertion(rdfs:label :LP_0002008 "Verbundene Haupt- und Realschule"@de)
-SubClassOf(:LP_0002008 :LP_0000111)
-
-# Class: :LP_0002012 (Kooperative Gesamtschule)
-
-AnnotationAssertion(rdfs:comment :LP_0002012 "Eine \"Kooperative Gesamtschule” ist eine “Schulart” in HE, MV, NI, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-Schulstufe: Sekundarbereich I und Sekundarbereich II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: verschiedene Schularten sind organisatorisch zu einer Schule verbunden, Klassen sind nach Bildungsgängen getrennt"@de)
-AnnotationAssertion(rdfs:label :LP_0002012 "Kooperative Gesamtschule"@de)
-AnnotationAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten/s05>)
-SubClassOf(:LP_0002012 :LP_0000111)
 
 # Class: :LP_0002158 (Verweisbeschreibungsfunktion)
 
@@ -1723,10 +1513,196 @@ ClassAssertion(:LP_0000020 :LP_0000045)
 AnnotationAssertion(rdfs:label :LP_0000046 "Sekundarbereich II"@de)
 ClassAssertion(:LP_0000020 :LP_0000046)
 
+# Individual: :LP_0000112 (Gemeinschaftsschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000112 "Eine “Gemeinschaftsschule” ist eine “Schulart” in BW, BE, SL, SN, ST, SH und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarstufe I, 
+in BE, SN, TH auch Primarbereich, 
+in BW, BE, SL, SN, ST, SH, TH auch Sekundarstufe II
+- Jahrgangsstufen: 5-10, 
+in BE, SN und TH 1-12/13
+in BW, SL und ST 5-12/13, 
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife"@de)
+AnnotationAssertion(rdfs:label :LP_0000112 "Gemeinschaftsschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000112 <https://w3id.org/kim/schularten/s09>)
+ClassAssertion(:LP_0000111 :LP_0000112)
+
+# Individual: :LP_0000114 (Grundschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000114 "Eine “Grundschule” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Primar
+- Jahrgangsstufen: 1-4 in allen Bundesländern außer BE und BB, 1-6 in BE und BB"@de)
+AnnotationAssertion(rdfs:label :LP_0000114 "Grundschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000114 <https://w3id.org/kim/schularten/s02>)
+ClassAssertion(:LP_0000111 :LP_0000114)
+
+# Individual: :LP_0000121 (Integrierte Sekundarschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000121 "Eine “Integrierte Sekundarschule\" ist eine “Schulart” in BE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I und II
+- Jahrgangsstufen: 7-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: ggf. Schnelllernerklassen ab 5"@de)
+AnnotationAssertion(rdfs:label :LP_0000121 "Integrierte Sekundarschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000121 <https://w3id.org/kim/schularten/s10>)
+ClassAssertion(:LP_0000111 :LP_0000121)
+
+# Individual: :LP_0000122 (Gymnasium)
+
+AnnotationAssertion(rdfs:comment :LP_0000122 "Ein “Gymnasium” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I und II
+- Jahrgangsstufen: 5-12/13, in BE und BB 7-12/13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: in BE ggf. Schnelllernerklassen ab 5, in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5"@de)
+AnnotationAssertion(rdfs:label :LP_0000122 "Gymnasium"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000122 <https://w3id.org/kim/schularten/s08>)
+ClassAssertion(:LP_0000111 :LP_0000122)
+
+# Individual: :LP_0000140 (Hauptschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000140 "Eine “Hauptschule” ist eine “Schulart” BW, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-9 bzw. 10
+- Abschlüsse: Erster Schulabschluss, in NI und NW auch Mittlerer Schulabschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000140 "Hauptschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000140 <https://w3id.org/kim/schularten/s03>)
+ClassAssertion(:LP_0000111 :LP_0000140)
+
+# Individual: :LP_0000159 (Mittelschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000159 "Eine “Mittelschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000159 "Mittelschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000159)
+
+# Individual: :LP_0000167 (Realschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000167 "Eine “Realschule” ist eine “Schulart” in BW, BY, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: ermöglicht Übergang in berufs- und studienqualifizierende Bildungsgänge des Sekundarbereichs II"@de)
+AnnotationAssertion(rdfs:label :LP_0000167 "Realschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000167 <https://w3id.org/kim/schularten/s04>)
+ClassAssertion(:LP_0000111 :LP_0000167)
+
+# Individual: :LP_0000197 (Wirtschaftsschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000197 "Eine “Wirtschaftsschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 6-11 ( 6. Jahrgangsstufe ist die Einführung)
+- Abschlüsse: Wirtschaftsschulabschluss (stellt den mittleren Schulabschluss dar)
+- Besonderheiten: Sie vermittelt eine berufliche Grundbildung im Berufsfeld Wirtschaft und Verwaltung"@de)
+AnnotationAssertion(rdfs:label :LP_0000197 "Wirtschaftsschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000197)
+
+# Individual: :LP_0000218 (Werkrealschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000218 "Eine “Werkrealschule” ist eine “Schulart” in BW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I 
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: Erster Schulabschluss nach Jahrgangsstufe 9 oder 10 möglich"@de)
+AnnotationAssertion(rdfs:label :LP_0000218 "Werkrealschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000218)
+
+# Individual: :LP_0000238 (Oberschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000238 "Eine “Oberschule” ist eine “Schulart” in  BB, HB, NI und SN, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I, in SN auch Primar, in HB auch Sekundarbereich II
+- Jahrgangsstufen: 5-10, in SN 1-10 (s. Besonderheiten), in HB 5-13 
+- Abschlüsse: Erster und Mittlerer Schulabschluss, in HB auch die Allgemeine Hochschulreife
+- Besonderheiten: Oberschule + in SN mit verbundener Grundschule"@de)
+AnnotationAssertion(rdfs:label :LP_0000238 "Oberschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000238 <https://w3id.org/kim/schularten/s07>)
+ClassAssertion(:LP_0000111 :LP_0000238)
+
+# Individual: :LP_0000240 (Gesamtschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000240 "Eine “Gesamtschule” ist eine “Schulart” in BB und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+Schulstufe: Sekundarbereich I und Sekundarbereich II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5"@de)
+AnnotationAssertion(rdfs:label :LP_0000240 "Gesamtschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000240 <https://w3id.org/kim/schularten/s05>)
+ClassAssertion(:LP_0000111 :LP_0000240)
+
+# Individual: :LP_0000251 (Werkschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000251 "Eine “Werkschule” ist eine “Schulart” in HB, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-11
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: Jede Werkschule hat sich auf bestimmte Dienstleistungen und Produktionen spezialisiert"@de)
+AnnotationAssertion(rdfs:label :LP_0000251 "Werkschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000251)
+
+# Individual: :LP_0000274 (Stadteilschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000274 "Eine “Stadtteilschule” ist eine “Schulart” in HH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I und II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife"@de)
+AnnotationAssertion(rdfs:label :LP_0000274 "Stadteilschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000274)
+
+# Individual: :LP_0000291 (Realschule plus)
+
+AnnotationAssertion(rdfs:comment :LP_0000291 "Eine “Realschule plus” ist eine “Schulart” in RP, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000291 "Realschule plus"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000291 <https://w3id.org/kim/schularten/s04>)
+ClassAssertion(:LP_0000111 :LP_0000291)
+
+# Individual: :LP_0000292 (Integrierte Gesamtschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000292 "Eine \"Integrierte Gesamtschule” ist eine “Schulart” in HE, MV, NI, RP, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+Schulstufe: Sekundarbereich I und Sekundarbereich II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: unabhängig vom angestrebten Abschluss werden alle Lernenden in einem Klassenverband unterrichtet"@de)
+AnnotationAssertion(rdfs:label :LP_0000292 "Integrierte Gesamtschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0000292 <https://w3id.org/kim/schularten/s05>)
+ClassAssertion(:LP_0000111 :LP_0000292)
+
+# Individual: :LP_0000319 (Regelschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000319 "Eine “Regelschule” ist eine “Schulart” TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0000319 "Regelschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000319)
+
 # Individual: :LP_0000340 (Sozialkunde (Schulfach))
 
 AnnotationAssertion(rdfs:label :LP_0000340 "Sozialkunde (Schulfach)"@de)
 ClassAssertion(:LP_0000005 :LP_0000340)
+
+# Individual: :LP_0000367 (Regionale Schule)
+
+AnnotationAssertion(rdfs:comment :LP_0000367 "Eine “Regionale Schule” ist eine “Schulart” in MV, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe:Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: schulartunabhängige Orientierungsstufe in Jahrgangsstufe 5 und 6"@de)
+AnnotationAssertion(rdfs:label :LP_0000367 "Regionale Schule"@de)
+ClassAssertion(:LP_0000111 :LP_0000367)
+
+# Individual: :LP_0000382 (Sekundarschule)
+
+AnnotationAssertion(rdfs:comment :LP_0000382 "Eine “Sekundarschule” ist eine “Schulart” in NW und ST, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: in NW ggf. Berechtigung zum Besuch der gymnasialen Oberstufe"@de)
+AnnotationAssertion(rdfs:label :LP_0000382 "Sekundarschule"@de)
+ClassAssertion(:LP_0000111 :LP_0000382)
 
 # Individual: :LP_0000464 (Niveaustufe A)
 
@@ -1789,6 +1765,36 @@ ClassAssertion(:LP_0000802 :LP_0000804)
 AnnotationAssertion(rdfs:label :LP_0000805 "Anforderungsbereich 3: Reflexion und Problemlösung"@de)
 ClassAssertion(:LP_0000802 :LP_0000805)
 
+# Individual: :LP_0002005 (Mittelstufenschule)
+
+AnnotationAssertion(rdfs:comment :LP_0002005 "Eine “Mittelstufenschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlerer Schulabschluss
+- Besonderheiten: der praxisorientierte Bildungsgang führt zum Ersten Schulabschluss, der mittlere Bildungsgang führt zum Mittleren Schulabschluss; Jahrgangsstufen 5-7 sind Aufbaustufe"@de)
+AnnotationAssertion(rdfs:label :LP_0002005 "Mittelstufenschule"@de)
+ClassAssertion(:LP_0000111 :LP_0002005)
+
+# Individual: :LP_0002008 (Verbundene Haupt- und Realschule)
+
+AnnotationAssertion(rdfs:comment :LP_0002008 "Eine “Verbundene Haupt- und Realschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+- Schulstufe: Sekundarbereich I
+- Jahrgangsstufen: 5-10
+- Abschlüsse: Erster und Mittlere Schulabschluss"@de)
+AnnotationAssertion(rdfs:label :LP_0002008 "Verbundene Haupt- und Realschule"@de)
+ClassAssertion(:LP_0000111 :LP_0002008)
+
+# Individual: :LP_0002012 (Kooperative Gesamtschule)
+
+AnnotationAssertion(rdfs:comment :LP_0002012 "Eine \"Kooperative Gesamtschule” ist eine “Schulart” in HE, MV, NI, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
+Schulstufe: Sekundarbereich I und Sekundarbereich II
+- Jahrgangsstufen: 5-13
+- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
+- Besonderheiten: verschiedene Schularten sind organisatorisch zu einer Schule verbunden, Klassen sind nach Bildungsgängen getrennt"@de)
+AnnotationAssertion(rdfs:label :LP_0002012 "Kooperative Gesamtschule"@de)
+AnnotationAssertion(:LP_0000141 :LP_0002012 <https://w3id.org/kim/schularten/s05>)
+ClassAssertion(:LP_0000111 :LP_0002012)
+
 # Individual: :LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(terms:identifier :LP_2000001 "1"^^xsd:integer)
@@ -1796,14 +1802,14 @@ AnnotationAssertion(rdfs:label :LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label :LP_2000001 "class level 1"@en)
 ClassAssertion(:LP_0000009 :LP_2000001)
 
-# Individual: :LP_2000002 (Jahrgangsstufe 2)
+# Individual: :LP_2000002 (class level 2)
 
 AnnotationAssertion(terms:identifier :LP_2000002 "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label :LP_2000002 "class level 2"@en)
 ClassAssertion(:LP_0000009 :LP_2000002)
 
-# Individual: :LP_2000003 (class level 3)
+# Individual: :LP_2000003 (Jahrgangsstufe 3)
 
 AnnotationAssertion(terms:identifier :LP_2000003 "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000003 "Jahrgangsstufe 3"@de)
@@ -1824,28 +1830,28 @@ AnnotationAssertion(rdfs:label :LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label :LP_2000005 "class level 5"@en)
 ClassAssertion(:LP_0000009 :LP_2000005)
 
-# Individual: :LP_2000006 (Jahrgangsstufe 6)
+# Individual: :LP_2000006 (class level 6)
 
 AnnotationAssertion(terms:identifier :LP_2000006 "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000006 "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label :LP_2000006 "class level 6"@en)
 ClassAssertion(:LP_0000009 :LP_2000006)
 
-# Individual: :LP_2000007 (class level 7)
+# Individual: :LP_2000007 (Jahrgangsstufe 7)
 
 AnnotationAssertion(terms:identifier :LP_2000007 "7"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label :LP_2000007 "class level 7"@en)
 ClassAssertion(:LP_0000009 :LP_2000007)
 
-# Individual: :LP_2000008 (Jahrgangsstufe 8)
+# Individual: :LP_2000008 (class level 8)
 
 AnnotationAssertion(terms:identifier :LP_2000008 "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label :LP_2000008 "class level 8"@en)
 ClassAssertion(:LP_0000009 :LP_2000008)
 
-# Individual: :LP_2000009 (Jahrgangsstufe 9)
+# Individual: :LP_2000009 (class level 9)
 
 AnnotationAssertion(terms:identifier :LP_2000009 "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000009 "Jahrgangsstufe 9"@de)
@@ -1859,7 +1865,7 @@ AnnotationAssertion(rdfs:label :LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label :LP_2000010 "class level 10")
 ClassAssertion(:LP_0000009 :LP_2000010)
 
-# Individual: :LP_2000011 (Jahrgangsstufe 11)
+# Individual: :LP_2000011 (class level 11)
 
 AnnotationAssertion(terms:identifier :LP_2000011 "11"^^xsd:integer)
 AnnotationAssertion(rdfs:label :LP_2000011 "Jahrgangsstufe 11"@de)

@@ -30,6 +30,7 @@ Declaration(Class(ontology:LP_0001449))
 Declaration(Class(ontology:LP_0001450))
 Declaration(Class(ontology:LP_0001451))
 Declaration(Class(ontology:LP_0001459))
+Declaration(Class(ontology:LP_0030004))
 Declaration(Class(ontology:LP_0030005))
 Declaration(Class(ontology:LP_0030006))
 Declaration(Class(ontology:LP_0030068))
@@ -47,6 +48,7 @@ Declaration(Class(ontology:LP_0030125))
 Declaration(NamedIndividual(ontology:LP_0000133))
 Declaration(NamedIndividual(ontology:LP_0000135))
 Declaration(NamedIndividual(ontology:LP_0000136))
+Declaration(NamedIndividual(ontology:LP_0000137))
 Declaration(NamedIndividual(ontology:LP_0001516))
 Declaration(NamedIndividual(ontology:LP_0001517))
 
@@ -181,6 +183,12 @@ AnnotationAssertion(skos:example ontology:LP_0001459 "dealing with expertise"@en
 AnnotationAssertion(skos:example ontology:LP_0001459 "problem solving"@en)
 AnnotationAssertion(skos:example ontology:LP_0001459 "reading competencies"@en)
 SubClassOf(ontology:LP_0001459 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030004 (Rahmenlehrplan (BE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030004 "Rahmenlehrplan (BE)"@de)
+EquivalentClasses(ontology:LP_0030004 ObjectIntersectionOf(ontology:LP_0000438 ObjectSomeValuesFrom(ontology:LP_0000008 ontology:LP_0001441) ObjectAllValuesFrom(ontology:LP_0000008 ontology:LP_0001441) ObjectHasValue(ontology:LP_0000029 ontology:LP_3000048)))
+SubClassOf(ontology:LP_0030004 ontology:LP_0000438)
 
 # Class: ontology:LP_0030005 (Möglicher Inhalt (BE))
 

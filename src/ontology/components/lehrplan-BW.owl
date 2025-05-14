@@ -29,6 +29,12 @@ Declaration(Class(ontology:LP_0030001))
 Declaration(Class(ontology:LP_0030002))
 Declaration(Class(ontology:LP_0030069))
 Declaration(Class(ontology:LP_0030114))
+Declaration(Class(ontology:LP_0030174))
+Declaration(Class(ontology:LP_0030175))
+Declaration(Class(ontology:LP_0030176))
+Declaration(Class(ontology:LP_0030177))
+Declaration(Class(ontology:LP_0030178))
+Declaration(Class(ontology:LP_0030179))
 Declaration(NamedIndividual(ontology:LP_0000014))
 Declaration(NamedIndividual(ontology:LP_0000016))
 Declaration(NamedIndividual(ontology:LP_0000018))
@@ -88,12 +94,12 @@ SubClassOf(ontology:LP_0002052 ObjectIntersectionOf(ontology:LP_0002051 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0002057 "Prozessbezogene Kompetenz (BW)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002057 "Kompetenzberschreibungselement")
-SubClassOf(ontology:LP_0002057 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000500)))
+SubClassOf(ontology:LP_0002057 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000500)))
 
 # Class: ontology:LP_0002059 (Inhaltsbezogene Kompetenz (BW))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002059 "Inhaltsbezogene Kompetenz (BW)"@de)
-SubClassOf(ontology:LP_0002059 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
+SubClassOf(ontology:LP_0002059 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000501)))
 
 # Class: ontology:LP_0002060 (Denkanstoß (BW))
 
@@ -135,6 +141,37 @@ SubClassOf(ontology:LP_0030069 ObjectIntersectionOf(ontology:LP_0002051 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030114 "Experiment (BW)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030114 "Kommt vor in Sachunterrricht Primar.")
 SubClassOf(ontology:LP_0030114 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030174 (Kompetenzbereich (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030174 "Kompetenzbereich (BW)"@de)
+SubClassOf(ontology:LP_0030174 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030175 (Verweis auf die prozessbezogenen Kompetenzen (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030175 "Verweis auf die prozessbezogenen Kompetenzen (BW)"@de)
+SubClassOf(ontology:LP_0030175 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030176 (Verweis auf andere Standards für inhaltsbezogene Kompetenzen desselben Fachs (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030176 "Verweis auf andere Standards für inhaltsbezogene Kompetenzen desselben Fachs (BW)"@de)
+SubClassOf(ontology:LP_0030176 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030177 (Verweis auf Leitperspektiven (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030177 "Verweis auf Leitperspektiven (BW)"@de)
+SubClassOf(ontology:LP_0030177 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030178 (Verweis auf andere Fächer (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030178 "Verweis auf andere Fächer (BW)"@de)
+SubClassOf(ontology:LP_0030178 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030179 (Umsetzungshilfen (BW))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030179 "Umsetzungshilfen (BW)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030179 "Verlinkungen zu Dokumenten, Webseiten oder zur Sesam Mediathek")
+SubClassOf(ontology:LP_0030179 ObjectIntersectionOf(ontology:LP_0002051 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 
 ############################

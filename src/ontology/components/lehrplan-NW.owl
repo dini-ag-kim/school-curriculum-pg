@@ -101,9 +101,10 @@ SubClassOf(ontology:LP_0002187 ObjectIntersectionOf(ontology:LP_0002085 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0002188 "Kompetenzerwartung (NW)"@de)
 SubClassOf(ontology:LP_0002188 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
-# Class: ontology:LP_0002190 (Teilkompetenz (NW))
+# Class: ontology:LP_0002190 (Teilkompetenzbereich (NW))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002190 "Teilkompetenz (NW)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0002190 "Teilkompetenzbereich (NW)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0002190 "Teilkompetenz (NW)")
 SubClassOf(ontology:LP_0002190 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002191 (Inhaltsfeld (NW))
@@ -149,7 +150,7 @@ SubClassOf(ontology:LP_0030076 ObjectIntersectionOf(ontology:LP_0002085 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030077 "Basiskonzept (NW)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030077 "Beitrag zu den Basiskonzepten (NW)")
 AnnotationAssertion(skos:editorialNote ontology:LP_0030077 "Fach Naturwissenschaften (Biologie, Chemie, Physik) -> noch offen, wie wir es definieren!")
-SubClassOf(ontology:LP_0030077 ontology:LP_0002085)
+SubClassOf(ontology:LP_0030077 ObjectIntersectionOf(ontology:LP_0002085 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030187 (Verweis auf Kompetenzerwartung (NW))
 

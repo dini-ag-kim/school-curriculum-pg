@@ -40,6 +40,11 @@ Declaration(Class(ontology:LP_0030170))
 Declaration(Class(ontology:LP_0030171))
 Declaration(Class(ontology:LP_0030172))
 Declaration(Class(ontology:LP_0030173))
+Declaration(Class(ontology:LP_0030193))
+Declaration(Class(ontology:LP_0030194))
+Declaration(Class(ontology:LP_0030195))
+Declaration(Class(ontology:LP_0030196))
+Declaration(Class(ontology:LP_0030197))
 Declaration(NamedIndividual(ontology:LP_0000060))
 Declaration(NamedIndividual(ontology:LP_0000093))
 Declaration(NamedIndividual(ontology:LP_0000094))
@@ -122,8 +127,8 @@ SubClassOf(ontology:LP_0002212 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0002214 "Beobachtungskriterium (HH)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0002214 "Beobachtungsfrage (HH)")
-AnnotationAssertion(skos:editorialNote ontology:LP_0002214 "Kommt nur in der Primarstufe für die Jahrgänge 1-2 vor.")
 AnnotationAssertion(skos:editorialNote ontology:LP_0002214 "\"Beobachtungsfragen\" in Sachunterrricht Primar")
+AnnotationAssertion(skos:editorialNote ontology:LP_0002214 "Kommt nur in der Primarstufe für die Jahrgänge 1-2 vor.")
 SubClassOf(ontology:LP_0002214 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
 # Class: ontology:LP_0002215 (Regelanforderung (HH))
@@ -155,7 +160,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0002221 "Kompetenz (HH)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0002221 "Fachliche Kompetenz (HH)")
 SubClassOf(ontology:LP_0002221 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
 
-# Class: ontology:LP_0030009 (Anforderung (HH))
+# Class: ontology:LP_0030009 (Experiment/Untersuchung (BB))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030009 "Anforderung (HH)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030009 "Mindestanforderung (HH)")
@@ -179,23 +184,16 @@ AnnotationAssertion(rdfs:label ontology:LP_0030166 "Beitrag zur Leitperspektive 
 AnnotationAssertion(skos:editorialNote ontology:LP_0030166 "Ist auch CE-Verweis?")
 SubClassOf(ontology:LP_0030166 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
-# Class: ontology:LP_0030167 (Übergreifend (HH))
+# Class: ontology:LP_0030167 (Verweis auf Leitperspektiven (HH))
 
-AnnotationAssertion(rdfs:label ontology:LP_0030167 "Übergreifend (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030167 "Bezüge zu (je nach Fach) :
-- Leitperspektiven
-- Aufgabengebiete
-- Sprachbildung
-- Fachübergreifende Bezüge")
+AnnotationAssertion(rdfs:label ontology:LP_0030167 "Verweis auf Leitperspektiven (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030167 "Unter \"Übergreifend\"")
 SubClassOf(ontology:LP_0030167 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
-# Class: ontology:LP_0030168 (Fachbezogen (HH))
+# Class: ontology:LP_0030168 (Verweis auf Kompetenzen (HH))
 
-AnnotationAssertion(rdfs:label ontology:LP_0030168 "Fachbezogen (HH)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030168 "Bezüge zu:
-- Kompetenzen
-- Fachbegriffe
-- Fachinterne Bezüge")
+AnnotationAssertion(rdfs:label ontology:LP_0030168 "Verweis auf Kompetenzen (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030168 "Unter \"Fachbezogen\"")
 SubClassOf(ontology:LP_0030168 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 # Class: ontology:LP_0030169 (Redemittel und grammatische Grundlagen (HH))
@@ -227,6 +225,36 @@ SubClassOf(ontology:LP_0030172 ObjectIntersectionOf(ontology:LP_0000426 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030173 "Basiskonzept (HH)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030173 "nur in den NaWis")
 SubClassOf(ontology:LP_0030173 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030193 (Verweis auf Aufgabengebiete (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030193 "Verweis auf Aufgabengebiete (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030193 "Unter \"Übergreifend\"")
+SubClassOf(ontology:LP_0030193 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030194 (Verweis auf Sprachbildung (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030194 "Verweis auf Sprachbildung (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030194 "Unter \"Übergreifend\"")
+SubClassOf(ontology:LP_0030194 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030195 (Verweis auf fachübergreifende Bezüge (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030195 "Verweis auf fachübergreifende Bezüge (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030195 "Unter \"Übergreifend\"")
+SubClassOf(ontology:LP_0030195 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030196 (Verweis auf Fachbegriffe (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030196 "Verweis auf Fachbegriffe (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030196 "Unter \"Fachbezogen\"")
+SubClassOf(ontology:LP_0030196 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030197 (Verweis auf fachinterne Bezüge (HH))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030197 "Verweis auf fachinterne Bezüge (HH)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030197 "Unter \"Fachbezogen\"")
+SubClassOf(ontology:LP_0030197 ObjectIntersectionOf(ontology:LP_0000426 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 
 ############################

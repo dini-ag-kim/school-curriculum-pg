@@ -15,6 +15,9 @@ Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl>
 Declaration(Class(ontology:LP_0000105))
 Declaration(Class(ontology:LP_0000106))
 Declaration(Class(ontology:LP_0000109))
+Declaration(Class(ontology:LP_0000423))
+Declaration(Class(ontology:LP_0000424))
+Declaration(Class(ontology:LP_0000425))
 Declaration(Class(ontology:LP_0001169))
 Declaration(Class(ontology:LP_0001223))
 Declaration(Class(ontology:LP_0001224))
@@ -45,9 +48,6 @@ Declaration(Class(ontology:LP_0030122))
 Declaration(Class(ontology:LP_0030123))
 Declaration(Class(ontology:LP_0030124))
 Declaration(Class(ontology:LP_0030125))
-Declaration(Class(ontology:LP_0030184))
-Declaration(Class(ontology:LP_0030185))
-Declaration(Class(ontology:LP_0030186))
 Declaration(NamedIndividual(ontology:LP_0000133))
 Declaration(NamedIndividual(ontology:LP_0000135))
 Declaration(NamedIndividual(ontology:LP_0000136))
@@ -78,6 +78,27 @@ SubClassOf(ontology:LP_0000106 ObjectIntersectionOf(ontology:LP_0000079 ObjectHa
 AnnotationAssertion(rdfs:label ontology:LP_0000109 "Allgemeine Hochschulreife (BE)"@de)
 EquivalentClasses(ontology:LP_0000109 ObjectOneOf(ontology:LP_0000133))
 SubClassOf(ontology:LP_0000109 ObjectIntersectionOf(ontology:LP_0000076 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000048)))
+
+# Class: ontology:LP_0000423 (Verweis auf standardillustrierende Aufgaben (BE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000423 "Verweis auf standardillustrierende Aufgaben (BE)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0000423 "Verweis auf Übung"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000423 "Verlinkung zu Dokument")
+SubClassOf(ontology:LP_0000423 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0000424 (Verweise auf vernetzte Kompetenzen  (BE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000424 "Verweise auf vernetzte Kompetenzen  (BE)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0000424 "Verweis auf Inhalt"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000424 "Verlinkung zu Kompetenzen anderer Fächer (meist zu \"Medienbildung\")")
+SubClassOf(ontology:LP_0000424 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0000425 (Verweis auf Materialien (BE))
+
+AnnotationAssertion(rdfs:label ontology:LP_0000425 "Verweis auf Materialien (BE)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0000425 "Verweis auf Material"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000425 "Verlinkung zu Materialsammlung (=Dokumente)")
+SubClassOf(ontology:LP_0000425 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 # Class: ontology:LP_0001169 (Fachniveau Sek II (BE))
 
@@ -277,6 +298,7 @@ SubClassOf(ontology:LP_0030124 ObjectIntersectionOf(ontology:LP_0001441 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030125 "Weiterer Kontext (BE)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030125 "Kommt in den Naturwissenschaften vor.")
 SubClassOf(ontology:LP_0030125 ObjectIntersectionOf(ontology:LP_0001441 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
 
 # Class: ontology:LP_0030184 (Verweis auf Materialien (BE))
 

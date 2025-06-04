@@ -12,6 +12,9 @@ The latest version of the ontology can always be found at:
 
 [lp.ttl](lp.ttl)
 
+### Documentation
+
+Find the list of classes generated with Widoco here: https://dini-ag-kim.github.io/school-curriculum-pg/
 
 ### Editors' version
 

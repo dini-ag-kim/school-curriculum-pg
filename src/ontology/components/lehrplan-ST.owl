@@ -39,7 +39,11 @@ Declaration(Class(ontology:LP_0030088))
 Declaration(Class(ontology:LP_0030089))
 Declaration(Class(ontology:LP_0030090))
 Declaration(Class(ontology:LP_0030096))
+Declaration(Class(ontology:LP_0030184))
+Declaration(Class(ontology:LP_0030185))
+Declaration(Class(ontology:LP_0030186))
 Declaration(Class(ontology:LP_0030198))
+Declaration(Class(ontology:LP_0030200))
 Declaration(NamedIndividual(ontology:LP_0000296))
 Declaration(NamedIndividual(ontology:LP_0000297))
 Declaration(NamedIndividual(ontology:LP_0000298))
@@ -144,14 +148,14 @@ SubClassOf(ontology:LP_0030078 ObjectIntersectionOf(ontology:LP_0002093 ObjectSo
 # Class: ontology:LP_0030079 (Inhalt und Gegenstand der Kommunikation (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030079 "Inhalt und Gegenstand der Kommunikation (ST)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030079 "Fach Englisch Primar")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030079 "Kommt in dem Fach Englisch für die Primarstufe vor und ist einem Themenbereich untergeordnet (dem auch inhaltsbezogene Kompetenzen untergeordnet sind.)")
 SubClassOf(ontology:LP_0030079 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
-# Class: ontology:LP_0030081 (Flexibel anwendbares Grundwissen zu sprachlichen Mitteln (ST))
+# Class: ontology:LP_0030081 (Kommunikative Kompetenz (ST))
 
-AnnotationAssertion(rdfs:label ontology:LP_0030081 "Flexibel anwendbares Grundwissen zu sprachlichen Mitteln (ST)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030081 "Fach English Primar")
-SubClassOf(ontology:LP_0030081 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+AnnotationAssertion(rdfs:label ontology:LP_0030081 "Kommunikative Kompetenz (ST)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030081 "Englisch Primar")
+SubClassOf(ontology:LP_0030081 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030082 (Inhaltsbezogene Kompetenz (ST))
 
@@ -168,21 +172,23 @@ SubClassOf(ontology:LP_0030083 ObjectIntersectionOf(ontology:LP_0002093 ObjectSo
 # Class: ontology:LP_0030084 (Wissensbestand (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030084 "Wissensbestand (ST)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030084 "Englisch Sekundarschule")
-SubClassOf(ontology:LP_0030084 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+AnnotationAssertion(skos:editorialNote ontology:LP_0030084 "Englisch Sekundarschule (und Gymnasium?) Kommt in dem Fach Englisch für die Sekundarschule und das Gymnasium vor. Die Kommunikativen Inhalte werden den Wissensbeständen “Persönliches Umfeld”, “Soziales Umfeld”, “Alltagsleben” und “Natur” zugeordnet. ?")
+SubClassOf(ontology:LP_0030084 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030085 (Sprachliches Mittel (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030085 "Sprachliches Mittel (ST)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030085 "Verfügung über sprachliche Mittel (ST)")
-AnnotationAssertion(skos:editorialNote ontology:LP_0030085 "Englisch Sekundarschule und Gymnasium")
-SubClassOf(ontology:LP_0030085 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+AnnotationAssertion(skos:altLabel ontology:LP_0030085 "Flexibel anwendbares Grundwissen zu sprachlichen Mitteln (ST)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030085 "Englisch Gymnasium, Sekundarschule (Vergügung über ...) und Grundschule (Flexibel anwendbares Grundwissen zu ...)
+Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Kompetenzen” und in der Sekundarschule und im Gymnasium unter dem Kompetenzbereich “Funktional-kommunikative Kompetenzen”.")
+SubClassOf(ontology:LP_0030085 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030086 (Soziokulturelles Orientierungswissen (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030086 "Soziokulturelles Orientierungswissen (ST)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030086 "Verfügung über soziokulturelles Orientierungswissen (ST)")
-AnnotationAssertion(skos:editorialNote ontology:LP_0030086 "Englisch Sekundarschule und Gymnasium")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030086 "Kommt in dem Fach Englisch für die Sekundarschule und das Gymnasium vor unter dem Kompetenzbereich “Interkulturelle Kompetenzen”.")
 SubClassOf(ontology:LP_0030086 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030087 (Bereich (ST))
@@ -205,8 +211,8 @@ SubClassOf(ontology:LP_0030089 ObjectIntersectionOf(ontology:LP_0002093 ObjectSo
 # Class: ontology:LP_0030090 (Kommunikativer Inhalt (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030090 "Kommunikativer Inhalt (ST)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0030090 "Englisch Gymnasium")
-SubClassOf(ontology:LP_0030090 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+AnnotationAssertion(skos:editorialNote ontology:LP_0030090 "Kommt in dem Fach Englisch für die Sekundarschule und das Gymnasium vor. Die “kommunikativen Inhalte” werden den Wissensbeständen “Persönliches Umfeld”, “Soziales Umfeld”, “Alltagsleben” und “Natur” zugeordnet. ?")
+SubClassOf(ontology:LP_0030090 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
 
 # Class: ontology:LP_0030096 (Inhaltsbereich (ST))
 
@@ -214,11 +220,35 @@ AnnotationAssertion(rdfs:label ontology:LP_0030096 "Inhaltsbereich (ST)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030096 "Mathe Sek I")
 SubClassOf(ontology:LP_0030096 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
+# Class: ontology:LP_0030184 (Interkulturelle Kompetenz (ST))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030184 "Interkulturelle Kompetenz (ST)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030184 "Englisch Primar")
+SubClassOf(ontology:LP_0030184 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030185 (Sprachlernkompetenz (ST))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030185 "Sprachlernkompetenz (ST)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030185 "Englisch Primar")
+SubClassOf(ontology:LP_0030185 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
+# Class: ontology:LP_0030186 (Text- und Medienkompetenz (ST))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030186 "Text- und Medienkompetenz (ST)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030186 "Englisch Primar")
+SubClassOf(ontology:LP_0030186 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479)))
+
 # Class: ontology:LP_0030198 (Verweis auf allgemeine mathematische Kompetenzen (ST))
 
 AnnotationAssertion(rdfs:label ontology:LP_0030198 "Verweis auf allgemeine mathematische Kompetenzen (ST)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030198 "Kommt nur im Fach Mathematik vor")
 SubClassOf(ontology:LP_0030198 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030200 (Textsorte (ST))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030200 "Textsorte (ST)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030200 "Englisch Sekundarschule unter dem Kompetenzbereich “Funktional-kommunikative Kompetenzen” (und im Gymnasium unter dem Kompetenzbereich “Text- und Medienkompetenz” aufgeteilt in “Textsorten nur rezeptiv” und “Textsorten produktiv (rezeptive Beherrschung ist eingeschlossen)” als zwei von mehreren Unterbereichen.)")
+SubClassOf(ontology:LP_0030200 ObjectIntersectionOf(ontology:LP_0002093 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 
 ############################

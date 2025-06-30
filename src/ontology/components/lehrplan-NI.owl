@@ -19,11 +19,9 @@ Declaration(Class(ontology:LP_0000823))
 Declaration(Class(ontology:LP_0001003))
 Declaration(Class(ontology:LP_0001006))
 Declaration(Class(ontology:LP_0001007))
-Declaration(Class(ontology:LP_0001008))
 Declaration(Class(ontology:LP_0001009))
 Declaration(Class(ontology:LP_0002101))
 Declaration(Class(ontology:LP_0002203))
-Declaration(Class(ontology:LP_0002204))
 Declaration(Class(ontology:LP_0002205))
 Declaration(Class(ontology:LP_0002206))
 Declaration(Class(ontology:LP_0002207))
@@ -33,6 +31,7 @@ Declaration(Class(ontology:LP_0030055))
 Declaration(Class(ontology:LP_0030080))
 Declaration(Class(ontology:LP_0030201))
 Declaration(Class(ontology:LP_0030202))
+Declaration(Class(ontology:LP_0030203))
 Declaration(Class(ontology:LP_0030204))
 Declaration(Class(ontology:LP_0030205))
 Declaration(Class(ontology:LP_0030207))
@@ -52,6 +51,15 @@ Declaration(Class(ontology:LP_0030222))
 Declaration(Class(ontology:LP_0030223))
 Declaration(Class(ontology:LP_0030224))
 Declaration(Class(ontology:LP_0030225))
+Declaration(Class(ontology:LP_0030226))
+Declaration(Class(ontology:LP_0030227))
+Declaration(Class(ontology:LP_0030228))
+Declaration(Class(ontology:LP_0030229))
+Declaration(Class(ontology:LP_0030230))
+Declaration(Class(ontology:LP_0030231))
+Declaration(Class(ontology:LP_0030232))
+Declaration(Class(ontology:LP_0030233))
+Declaration(Class(ontology:LP_0030234))
 Declaration(NamedIndividual(ontology:LP_0000103))
 Declaration(NamedIndividual(ontology:LP_0000104))
 Declaration(NamedIndividual(ontology:LP_0000107))
@@ -117,12 +125,6 @@ AnnotationAssertion(skos:altLabel ontology:LP_0001007 "Kern (NI)")
 AnnotationAssertion(skos:editorialNote ontology:LP_0001007 "Mathe")
 SubClassOf(ontology:LP_0001007 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0001008 (Lerninhalt (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0001008 "Lerninhalt (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0001008 "relevant für Sek II")
-SubClassOf(ontology:LP_0001008 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
-
 # Class: ontology:LP_0001009 (Ergänzender Hinweis (NI))
 
 AnnotationAssertion(rdfs:label ontology:LP_0001009 "Ergänzender Hinweis (NI)"@de)
@@ -141,29 +143,23 @@ AnnotationAssertion(rdfs:label ontology:LP_0002203 "Kompetenzbereich (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002203 "Prozessbezogener Kompetenzbereich (NI)")
 SubClassOf(ontology:LP_0002203 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
-# Class: ontology:LP_0002204 (Teilkompetenzbereich (NI))
+# Class: ontology:LP_0002205 (Kernkompetenz (NI))
 
-AnnotationAssertion(rdfs:label ontology:LP_0002204 "Teilkompetenzbereich (NI)"@de)
-SubClassOf(ontology:LP_0002204 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
-
-# Class: ontology:LP_0002205 (Kernkompetenzen (NI))
-
-AnnotationAssertion(rdfs:label ontology:LP_0002205 "Kernkompetenzen (NI)"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0002205 "Kernkompetenz (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002205 "Mathe")
-SubClassOf(ontology:LP_0002205 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+SubClassOf(ontology:LP_0002205 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000479) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0002206 (Beispiel (NI))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002206 "Beispiel (NI)"@de)
-AnnotationAssertion(skos:editorialNote ontology:LP_0002206 "Mathe Primar
-Englisch Primar")
-SubClassOf(ontology:LP_0002206 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497) ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+AnnotationAssertion(skos:editorialNote ontology:LP_0002206 "Englisch Primar")
+SubClassOf(ontology:LP_0002206 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002207 (Umsetzung im Unterricht (NI))
 
 AnnotationAssertion(rdfs:label ontology:LP_0002207 "Umsetzung im Unterricht (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002207 "Mathe Primar")
-SubClassOf(ontology:LP_0002207 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+SubClassOf(ontology:LP_0002207 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
 
 # Class: ontology:LP_0002208 (Lernbereich (NI))
 
@@ -197,8 +193,16 @@ SubClassOf(ontology:LP_0030201 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 
 AnnotationAssertion(rdfs:label ontology:LP_0030202 "Sprachliches Mittel (NI)"@de)
 AnnotationAssertion(skos:altLabel ontology:LP_0030202 "Verfügen über sprachliche Mittel (NI)")
+AnnotationAssertion(skos:altLabel ontology:LP_0030202 "Verfügung über sprachliches Mittel (NI)")
 AnnotationAssertion(skos:editorialNote ontology:LP_0030202 "Englisch")
 SubClassOf(ontology:LP_0030202 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030203 (Leitidee (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030203 "Leitidee (NI)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030203 "Inhaltsbezogener Kompetenzbereich (NI)")
+AnnotationAssertion(skos:editorialNote ontology:LP_0030203 "Mathematik")
+SubClassOf(ontology:LP_0030203 ontology:LP_0002101)
 
 # Class: ontology:LP_0030204 (Methodenkompetenz (NI))
 
@@ -317,6 +321,60 @@ SubClassOf(ontology:LP_0030224 ObjectIntersectionOf(ontology:LP_0002101 ObjectSo
 AnnotationAssertion(rdfs:label ontology:LP_0030225 "Möglicher Unterrichtsaspekt (NI)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030225 "Deutsch Sek II")
 SubClassOf(ontology:LP_0030225 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0000480)))
+
+# Class: ontology:LP_0030226 (Sprachbildung (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030226 "Sprachbildung (NI)"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030226 "Mathe Primar")
+SubClassOf(ontology:LP_0030226 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030227 (Weiterführende Anforderung (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030227 "Weiterführende Anforderung (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030227 "Mathematik Oberschule, Hauptschule, Realschule")
+SubClassOf(ontology:LP_0030227 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030228 (Hinweis zum Einsatz digitaler Medien und Werkzeuge (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030228 "Hinweis zum Einsatz digitaler Medien und Werkzeuge (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030228 "Mathematik Oberschule, Hauptschule, Realschule")
+SubClassOf(ontology:LP_0030228 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030229 (Unterrichtsidee zur Handlungsorientierung online (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030229 "Unterrichtsidee zur Handlungsorientierung online (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030229 "Mathematik Integrierte Gesamtschule")
+SubClassOf(ontology:LP_0030229 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030230 (Fakultative Erweiterung (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030230 "Fakultative Erweiterung (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030230 "Mathematik Gymnasium, Oberstufe")
+SubClassOf(ontology:LP_0030230 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030231 (Hinweis zum Einsatz digitaler Mathematikwerkzeuge (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030231 "Hinweis zum Einsatz digitaler Mathematikwerkzeuge (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030231 "Mathematik Gymnasium, Oberstufe")
+SubClassOf(ontology:LP_0030231 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030232 (Online-Material (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030232 "Online-Material (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030232 "Mathematik Oberstufe")
+SubClassOf(ontology:LP_0030232 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0001014)))
+
+# Class: ontology:LP_0030233 (Verweis auf Inhaltsbezogene Kompetenzbereiche (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030233 "Verweis auf Inhaltsbezogene Kompetenzbereiche (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030233 "Mathematik Oberschule, Hauptschule, Realschule, Gymnasium, Oberstufe")
+SubClassOf(ontology:LP_0030233 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
+
+# Class: ontology:LP_0030234 (Verweis auf Prozessbezogene Kompetenzbereiche (NI))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030234 "Verweis auf Prozessbezogene Kompetenzbereiche (NI)"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030234 "Mathematik Oberschule, Hauptschule, Realschule")
+SubClassOf(ontology:LP_0030234 ObjectIntersectionOf(ontology:LP_0002101 ObjectSomeValuesFrom(ontology:LP_0000483 ontology:LP_0002158)))
 
 
 ############################

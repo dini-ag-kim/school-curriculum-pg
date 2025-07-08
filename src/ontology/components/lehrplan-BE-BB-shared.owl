@@ -1,500 +1,1008 @@
-Prefix(:=<https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-
-
-Ontology(<https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl>
-Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
-
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000009>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000081>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000443>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000572>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000573>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000574>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000575>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000576>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000577>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000851>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000008>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000021>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000026>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000086>))
-Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000483>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/1>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/2>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/3>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/4>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/5>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/6>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/7>))
-Declaration(NamedIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/8>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000430>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000436>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000437>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000439>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000442>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000452>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000453>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000464>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000465>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000466>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000467>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000468>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000469>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000470>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000583>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000584>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000585>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000586>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000587>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000588>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000589>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000590>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000591>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000592>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000593>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000594>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000595>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000596>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000597>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000598>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000599>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000600>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000601>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000602>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000603>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000604>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000605>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000606>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000607>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000608>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000609>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000610>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000611>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000612>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000613>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000614>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000615>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000616>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000001>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000002>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000003>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000004>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000005>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000006>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000007>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000008>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000009>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000010>))
-Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
-
-
-
-############################
-#   Classes
-############################
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000572> (Bildungsgangniveau (BB / BE))
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl#"
+     xml:base="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl"
+     xmlns:gnd="https://d-nb.info/standards/elementset/gnd#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ontology="https://w3id.org/lehrplan/ontology/">
+    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl">
+        <owl:imports rdf:resource="https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl"/>
+    </owl:Ontology>
+    
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000572> "Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000572> "Bildungsgangniveau (BB / BE)"@de)
-EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000572> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000028> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000573> (BOA)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000573> "Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000573> "BOA"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000572>)
+    
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000574> (BBR)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000574> "Abschluss Niveau, das zur Berufsbildungsreife befähigt."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000574> "BBR"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000574> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000834> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000575> (EBBR)
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000575> "Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000575> "EBBR"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000575> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000834> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000576> (MSA)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000576> "Abschluss Niveau, das zum mittlereren Schulabschluss befähigt."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000576> "MSA"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000576> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000832> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
+    
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000577> (QualiPhase)
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000577> "Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt."@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000577> "QualiPhase"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000577> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000069> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000008 -->
 
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+    
 
-############################
-#   Named Individuals
-############################
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/1> (A)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000021 -->
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/1> "A")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/1> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/1> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000021"/>
+    
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/2> (B)
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/2> "B")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/2> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/2> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000026 -->
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/3> (C)
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000026"/>
+    
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/3> "C")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/3> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/3> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/4> (D)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000086 -->
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/4> "D")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/4> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/4> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000086"/>
+    
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/5> (E)
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/5> "E")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/5> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/5> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000483 -->
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/6> (F)
+    <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+    
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/6> "F")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/6> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/6> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/7> (G)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/7> "G")
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://lehrplan.yovisto.com/resource/lp/bb/level/7> "we should remove these and use the  LP_0* ones.")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/7> <https://w3id.org/lehrplan/ontology/LP_0000470>)
+    
 
-# Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/8> (H)
 
-AnnotationAssertion(rdfs:label <https://lehrplan.yovisto.com/resource/lp/bb/level/8> "H")
-SameIndividual(<https://lehrplan.yovisto.com/resource/lp/bb/level/8> <https://w3id.org/lehrplan/ontology/LP_0000616>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000009 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000430> (Wirtschaft Arbeit Technik (Schulfach))
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000009"/>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000430> "Wirtschaft Arbeit Technik (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000005> <https://w3id.org/lehrplan/ontology/LP_0000430>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000436> (BC Sprachbildung (Schulfach))
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000081 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000436> "BC Sprachbildung (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_0000436>)
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000081"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000437> (Naturwissenschaften (Schulfach))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000437> "Naturwissenschaften (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000003> <https://w3id.org/lehrplan/ontology/LP_0000437>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000443 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000439> (Sowi / Wiwi (Schulfach))
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000572 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000572">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000028"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="de">Ein Lehrplanelement von Berlin mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Lehrplanelement von Berlin/Brandenburg mit dem ein zu erreichender Abschluss in Verbindung mit den Niveaustufe und Jahrgangsstufe zum Ausdruck gebracht wird. Unterklassen entprechen den konkreten Abschlussniveaus. Deren Instanzen enthalten die Verknüfung zu Niveaustufe und Jahrgangsstufe.</rdfs:comment>
+        <rdfs:label xml:lang="de">Bildungsgangniveau (BB / BE)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000573 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000573">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000572"/>
+        <rdfs:comment xml:lang="de">Abschluss Niveau, das zum berufsorientierenden Abschluss befähigt.</rdfs:comment>
+        <rdfs:label xml:lang="de">BOA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000574 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000574">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000834"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Abschluss Niveau, das zur Berufsbildungsreife befähigt.</rdfs:comment>
+        <rdfs:label xml:lang="de">BBR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000575 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000575">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000834"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Abschluss Niveau, dass zur erweiterten Berufsbildungsreife befähigt</rdfs:comment>
+        <rdfs:label xml:lang="de">EBBR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000576 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000576">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000832"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Abschluss Niveau, das zum mittlereren Schulabschluss befähigt.</rdfs:comment>
+        <rdfs:label xml:lang="de">MSA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000577 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000577">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000069"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000029"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Abschluss Niveau, das zum Übergang in die 2-jährige Qualifikationsphase (Abitur) befähigt.</rdfs:comment>
+        <rdfs:label xml:lang="de">QualiPhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000851 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000851"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000439> "Sowi / Wiwi (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000005> <https://w3id.org/lehrplan/ontology/LP_0000439>)
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000442> (Theater (Schulfach))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000442> "Theater (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000005> <https://w3id.org/lehrplan/ontology/LP_0000442>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/1 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000452> (Moderne Fremdsprachen (Schulfach))
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/1">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+        <rdfs:label>A</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000452> "Moderne Fremdsprachen (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000004> <https://w3id.org/lehrplan/ontology/LP_0000452>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000453> (Lebensgestaltung Ethik Religionskunde (Schulfach))
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000464 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000453> "Lebensgestaltung Ethik Religionskunde (Schulfach)"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000005> <https://w3id.org/lehrplan/ontology/LP_0000453>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000583> (BOA A)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000583> "BOA A"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000583>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/2 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000584> (BOA B)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/2">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+        <rdfs:label>B</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000584> "BOA B"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000584>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000585> (BOA C)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000465 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000585> "BOA C"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000585>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000586> (BOA D)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000586> "BOA D"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000586>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/3 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000587> (BOA E)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/3">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+        <rdfs:label>C</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000587> "BOA E"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000573> <https://w3id.org/lehrplan/ontology/LP_0000587>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000588> (BBR A)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000466 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000588> "BBR A"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000588>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000588> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000588> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000589> (BBR B)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000589> "BBR B"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000589>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/4 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000590> (BBR C)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/4">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+        <rdfs:label>D</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000590> "BBR C"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000590>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000591> (BBR D)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000467 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000591> "BBR D"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000591>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000592> (BBR E)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000592> "BBR E"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000592>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/5 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000593> (BBR F)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/5">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+        <rdfs:label>E</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000593> "BBR F"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000574> <https://w3id.org/lehrplan/ontology/LP_0000593>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000594> (EBBR A)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000468 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000594> "EBBR A"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000594>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000594> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000594> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000595> (EBBR B)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000595> "EBBR B"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000595>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/6 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000596> (EBBR C)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/6">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+        <rdfs:label>F</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000596> "EBBR C"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000596>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_0000466>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000597> (EBBR D)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000469 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000597> "EBBR D"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000597>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000598> (EBBR E)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000598> "EBBR E"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000598>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/7 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000599> (EBBR F)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/7">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000470"/>
+        <rdfs:label>G</rdfs:label>
+        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000599> "EBBR F"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000599>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_0000469>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000600> (EBBR G)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000470 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000600> "EBBR G"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000575> <https://w3id.org/lehrplan/ontology/LP_0000600>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000600> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000600> <https://w3id.org/lehrplan/ontology/LP_0000470>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000470"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000601> (MSA A)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000601> "MSA A"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000601>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000601> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000601> <https://w3id.org/lehrplan/ontology/LP_0000464>)
+    <!-- https://lehrplan.yovisto.com/resource/lp/bb/level/8 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000602> (MSA B)
+    <owl:NamedIndividual rdf:about="https://lehrplan.yovisto.com/resource/lp/bb/level/8">
+        <owl:sameAs rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000616"/>
+        <rdfs:label>H</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000602> "MSA B"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000602>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_0000465>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000603> (MSA C)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000616 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000603> "MSA C"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000603>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000616"/>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000604> (MSA D)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000604> "MSA D"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000604>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_0000467>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000430 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000605> (MSA E)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000430">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
+        <rdfs:label xml:lang="de">Wirtschaft Arbeit Technik (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000605> "MSA E"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000605>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_0000468>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000606> (MSA F)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000436 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000606> "MSA F"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000606>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_0000469>)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000436">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <rdfs:label xml:lang="de">BC Sprachbildung (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000607> (MSA G)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000607> "MSA G"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000576> <https://w3id.org/lehrplan/ontology/LP_0000607>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_0000470>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000437 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000608> (QualiPhase A)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000437">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000003"/>
+        <rdfs:label xml:lang="de">Naturwissenschaften (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000608> "QualiPhase A"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000608>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000608> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000608> <https://w3id.org/lehrplan/ontology/LP_0000464>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000609> (QualiPhase B)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000439 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000609> "QualiPhase B"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000609>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_2000001>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_0000465>)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000439">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
+        <rdfs:label xml:lang="de">Sowi / Wiwi (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000610> (QualiPhase C)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000610> "QualiPhase C"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000610>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_2000002>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_2000003>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_0000466>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000442 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000611> (QualiPhase D)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000442">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
+        <rdfs:label xml:lang="de">Theater (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000611> "QualiPhase D"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000611>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_2000004>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_2000005>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_0000467>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000612> (QualiPhase E)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000452 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000612> "QualiPhase E"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000612>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_2000006>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_2000007>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_0000468>)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000452">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
+        <rdfs:label xml:lang="de">Moderne Fremdsprachen (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000613> (QualiPhase F)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000613> "QualiPhase F"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000613>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000613> <https://w3id.org/lehrplan/ontology/LP_2000008>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000613> <https://w3id.org/lehrplan/ontology/LP_0000469>)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000453 -->
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000614> (QualiPhase G)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000453">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
+        <rdfs:label xml:lang="de">Lebensgestaltung Ethik Religionskunde (Schulfach)</rdfs:label>
+    </owl:NamedIndividual>
+    
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000614> "QualiPhase G"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000614>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000614> <https://w3id.org/lehrplan/ontology/LP_2000009>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000614> <https://w3id.org/lehrplan/ontology/LP_0000470>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000615> (QualiPhase H)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000464 -->
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000615> "QualiPhase H"@de)
-ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000577> <https://w3id.org/lehrplan/ontology/LP_0000615>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000026> <https://w3id.org/lehrplan/ontology/LP_0000615> <https://w3id.org/lehrplan/ontology/LP_2000010>)
-ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000086> <https://w3id.org/lehrplan/ontology/LP_0000615> <https://w3id.org/lehrplan/ontology/LP_0000616>)
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+    
 
 
-DifferentIndividuals(<https://w3id.org/lehrplan/ontology/LP_0000583> <https://w3id.org/lehrplan/ontology/LP_0000584> <https://w3id.org/lehrplan/ontology/LP_0000585> <https://w3id.org/lehrplan/ontology/LP_0000586> <https://w3id.org/lehrplan/ontology/LP_0000587> <https://w3id.org/lehrplan/ontology/LP_0000588> <https://w3id.org/lehrplan/ontology/LP_0000589> <https://w3id.org/lehrplan/ontology/LP_0000590> <https://w3id.org/lehrplan/ontology/LP_0000591> <https://w3id.org/lehrplan/ontology/LP_0000592> <https://w3id.org/lehrplan/ontology/LP_0000593> <https://w3id.org/lehrplan/ontology/LP_0000594> <https://w3id.org/lehrplan/ontology/LP_0000595> <https://w3id.org/lehrplan/ontology/LP_0000596> <https://w3id.org/lehrplan/ontology/LP_0000597> <https://w3id.org/lehrplan/ontology/LP_0000598> <https://w3id.org/lehrplan/ontology/LP_0000599> <https://w3id.org/lehrplan/ontology/LP_0000600> <https://w3id.org/lehrplan/ontology/LP_0000601> <https://w3id.org/lehrplan/ontology/LP_0000602> <https://w3id.org/lehrplan/ontology/LP_0000603> <https://w3id.org/lehrplan/ontology/LP_0000604> <https://w3id.org/lehrplan/ontology/LP_0000605> <https://w3id.org/lehrplan/ontology/LP_0000606> <https://w3id.org/lehrplan/ontology/LP_0000607> <https://w3id.org/lehrplan/ontology/LP_0000608> <https://w3id.org/lehrplan/ontology/LP_0000609> <https://w3id.org/lehrplan/ontology/LP_0000610> <https://w3id.org/lehrplan/ontology/LP_0000611> <https://w3id.org/lehrplan/ontology/LP_0000612> <https://w3id.org/lehrplan/ontology/LP_0000613> <https://w3id.org/lehrplan/ontology/LP_0000614> <https://w3id.org/lehrplan/ontology/LP_0000615>)
-)
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000465 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000466 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000467 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000468 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000469 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000470 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000470"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000583 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000583">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000573"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+        <rdfs:label xml:lang="de">BOA A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000584 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000584">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000573"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+        <rdfs:label xml:lang="de">BOA B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000585 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000585">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000573"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+        <rdfs:label xml:lang="de">BOA C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000586 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000586">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000573"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+        <rdfs:label xml:lang="de">BOA D</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000587 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000587">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000573"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+        <rdfs:label xml:lang="de">BOA E</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000588 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000588">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000574"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+        <rdfs:label xml:lang="de">BBR A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000589 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000589">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000574"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+        <rdfs:label xml:lang="de">BBR B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000590 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000590">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000574"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+        <rdfs:label xml:lang="de">BBR C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000591 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000591">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000574"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+        <rdfs:label xml:lang="de">BBR D</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000592 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000592">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000574"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+        <rdfs:label xml:lang="de">BBR E</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000593 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000593">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000574"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+        <rdfs:label xml:lang="de">BBR F</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000594 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000594">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+        <rdfs:label xml:lang="de">EBBR A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000595 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000595">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+        <rdfs:label xml:lang="de">EBBR B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000596 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000596">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+        <rdfs:label xml:lang="de">EBBR C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000597 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000597">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+        <rdfs:label xml:lang="de">EBBR D</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000598 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000598">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+        <rdfs:label xml:lang="de">EBBR E</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000599 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000599">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+        <rdfs:label xml:lang="de">EBBR F</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000600 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000600">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000575"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000470"/>
+        <rdfs:label xml:lang="de">EBBR G</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000601 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000601">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+        <rdfs:label xml:lang="de">MSA A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000602 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000602">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+        <rdfs:label xml:lang="de">MSA B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000603 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000603">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+        <rdfs:label xml:lang="de">MSA C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000604 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000604">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+        <rdfs:label xml:lang="de">MSA D</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000605 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000605">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+        <rdfs:label xml:lang="de">MSA E</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000606 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000606">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+        <rdfs:label xml:lang="de">MSA F</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000607 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000607">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000576"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000470"/>
+        <rdfs:label xml:lang="de">MSA G</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000608 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000608">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000464"/>
+        <rdfs:label xml:lang="de">QualiPhase A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000609 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000609">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000465"/>
+        <rdfs:label xml:lang="de">QualiPhase B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000610 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000610">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000466"/>
+        <rdfs:label xml:lang="de">QualiPhase C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000611 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000611">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000467"/>
+        <rdfs:label xml:lang="de">QualiPhase D</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000612 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000612">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000468"/>
+        <rdfs:label xml:lang="de">QualiPhase E</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000613 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000613">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000469"/>
+        <rdfs:label xml:lang="de">QualiPhase F</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000614 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000614">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000470"/>
+        <rdfs:label xml:lang="de">QualiPhase G</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000615 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000615">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000577"/>
+        <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+        <ontology:LP_0000086 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000616"/>
+        <rdfs:label xml:lang="de">QualiPhase H</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000616 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000616"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000001 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000001"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000002 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000002"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000003 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000003"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000004 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000004"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000005 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000005"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000006 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000006"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000007 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000007"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000008 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000008"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000009 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000009"/>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_2000010 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000010"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000583"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000584"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000585"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000586"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000587"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000588"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000589"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000590"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000591"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000592"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000593"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000594"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000595"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000596"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000597"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000598"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000599"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000600"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000601"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000602"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000603"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000604"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000605"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000606"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000607"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000608"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000609"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000610"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000611"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000612"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000613"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000614"/>
+            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000615"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

@@ -25,7 +25,9 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002228>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030037>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030038>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030039>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030076>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030192>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030245>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000090>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000091>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000092>))
@@ -72,7 +74,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001001> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001002> (Inhaltsfeld (HE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001002> "Inhaltsfeld (HE)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001002> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001002> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001005> (Kompetenzbereich (HE))
 
@@ -98,6 +100,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002077> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002169> (Bildungsstandard (HE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002169> "Bildungsstandard (HE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002169> "sollen erreicht werden bis zum Ende einer Schulstufe")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002169> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002170> (Lerninhalt (HE))
@@ -114,11 +117,15 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0002184> ObjectIntersec
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002228> (Lernzeitbezogene Kompetenzerwartung (HE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002228> "Lernzeitbezogene Kompetenzerwartung (HE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002228> "Sollen erreicht werden bis zum Ende einer Jahrgangsstufe (Zwischenstufe hinzum Abschlussprofil)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002228> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030037> (Schwerpunktsetzung (HE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030037> "Schwerpunktsetzung (HE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030037> "Inhaltlicher Schwerpunkt (HE)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030037> "\"Schwerpunktsetzung\" kommt z.B. vor in Mathematik Sek I.
+\"Inhaltlicher Schwerpunkt\" z.B. in Physik Sek I.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030037> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030038> (Themenfeld (HE))
@@ -131,10 +138,21 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030038> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030039> "Bildungsgangniveau (HE)"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030039> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000028> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000050>)))
 
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030076> (Inhalt zu einem Inhaltsfeld (HE))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030076> "Inhalt zu einem Inhaltsfeld (HE)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030076> "Hiermit sind die Fließtexte gemeint, die in der Tabelle zu den Inhaltsfeldern stehen")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030076> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030192> (Verweis auf Bezüge zu Kompetenzbereichen / Standards (HE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030192> "Verweis auf Bezüge zu Kompetenzbereichen / Standards (HE)"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030192> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030245> (Hinweis zu Bezüge zu Kompetenzbereichen / Standards (HE))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030245> "Hinweis zu Bezüge zu Kompetenzbereichen / Standards (HE)"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030245> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002076> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
 
 
 ############################

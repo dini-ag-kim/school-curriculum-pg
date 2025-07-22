@@ -31,7 +31,6 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001450>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001451>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001459>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030004>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030006>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030044>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030045>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030068>))
@@ -45,6 +44,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030122>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030123>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030124>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030125>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030248>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000133>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000135>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000136>))
@@ -146,8 +146,8 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001445> (learning content (BE))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001445> "learning content (BE)"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001445> "Inhalt (BE)")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001445> "learning content (BE)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0001445> "Lerninhalt (BE)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001445> "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0001445> "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de)
@@ -223,11 +223,6 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001459> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030004> "Rahmenlehrplan (BE)"@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030004> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000438> ObjectSomeValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0001441>) ObjectAllValuesFrom(<https://w3id.org/lehrplan/ontology/LP_0000008> <https://w3id.org/lehrplan/ontology/LP_0001441>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000048>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030004> <https://w3id.org/lehrplan/ontology/LP_0000438>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030006> (Kompetenzerwerb im Themenfeld (BE))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030006> "Kompetenzerwerb im Themenfeld (BE)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030006> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030044> (Beispiel zu einem Basiskonzept (BE))
 
@@ -307,6 +302,11 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030124> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030125> "Weiterer Kontext (BE)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030125> "Kommt in den Naturwissenschaften vor.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030125> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030248> (Kompetenzerwerb im Themenfeld (BE))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030248> "Kompetenzerwerb im Themenfeld (BE)"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030248> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0001441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 
 ############################

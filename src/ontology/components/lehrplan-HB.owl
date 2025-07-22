@@ -17,7 +17,6 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001105>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002118>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002119>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002122>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002123>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002126>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002128>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002129>))
@@ -26,19 +25,17 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002132>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002133>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002134>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002135>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002172>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002193>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030001>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030206>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030235>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030236>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030237>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030238>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030239>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030240>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030241>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030242>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030243>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030244>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000034>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000035>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000038>))
@@ -105,12 +102,6 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002119> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002122> "Lehrplanfragment (HB)"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002122> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000627>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0002123> (Fertigkeit (HB))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002123> "Fertigkeit (HB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002123> "Englisch Primar, Sek I")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002123> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
-
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002126> (Aufgabenbereich (HB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002126> "Aufgabenbereich (HB)"@de)
@@ -140,6 +131,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002129> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002130> "Themenbereich (HB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002130> "Deutsch Sek I und Sek II
+Mathe Sek I
 Englisch Primar, Sek I und Sek II")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002130> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
@@ -170,17 +162,17 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002135> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002135> "u.a. Mathe Sek I und Sek II")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002135> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0002172> (Beispielhaftes Unterrichtsvorhaben (HB))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002172> "Beispielhaftes Unterrichtsvorhaben (HB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002172> "Deutsch Sek I & Sek II")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002172> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
-
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002193> (Sachgebiet (HB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002193> "Sachgebiet (HB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002193> "in Mathe Sek II")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002193> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030001> (Schwerpunktthema (HB))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030001> "Schwerpunktthema (HB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030001> "ändern sich alle 3 Jahre (durch Abiprüfungen, alle SekII Fächer) → gibt Hefte für Schwerpunktsetzungen")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030001> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030206> (Standard (HB))
 
@@ -201,12 +193,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030236> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030236> "Sachunterrricht Primar")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030236> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030237> (Lernfeld (HB))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030237> "Lernfeld (HB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030237> "Sachunterricht Primar")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030237> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
-
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030238> (Rahmenthema (HB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030238> "Rahmenthema (HB)"@de)
@@ -217,18 +203,18 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030238> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030239> "Basiskonzept (HB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030239> "Naturwissenschaften Sek I")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030239> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030239> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030240> (Inhaltsbezogene Kompetenz (HB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030240> "Inhaltsbezogene Kompetenz (HB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030240> "Naturwissenschaften Sek I")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030240> "Naturwissenschaften Sek I und Mathe")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030240> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030241> (Prozessbezogene Kompetenz (HB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030241> "Prozessbezogene Kompetenz (HB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030241> "Naturwissenschaften Sek I")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030241> "Naturwissenschaften Sek I und Mathe")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030241> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030242> (Inhaltsbereich (HB))
@@ -243,12 +229,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030243> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030243> "Möglicher Zugangsweg/Anwendungsbereich/Vertiefung (HB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030243> "Physik Sek II")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030243> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030244> (Erwartungshorizont (HB))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030244> "Erwartungshorizont (HB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030244> "nur in Deutsch Sek I Gymnasium")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030244> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002118> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 
 ############################

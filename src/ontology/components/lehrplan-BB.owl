@@ -45,7 +45,6 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002226>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002227>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030001>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030002>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030005>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030006>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030007>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030008>))
@@ -57,6 +56,8 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030014>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030015>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030016>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030017>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030042>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030043>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030066>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030210>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030214>))
@@ -136,11 +137,11 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000441> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000441> "Die Unterschiede zw. Berlin und Brandenburg müssten evtl. noch mal genauer geprüft werden. Ggf. sind die Klassen hier noch zu trennen."@de)
 EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_3000057>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000445> (Lerninhalt (BB))
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000445> (Inhalt (BB))
 
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000445> "Lerninhalt (BB)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000445> "learning content (BB)"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000445> "Inhalt (BB)")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000445> "Inhalt (BB)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000445> "Lerninhalt (BB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000445> "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000445> "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000445> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
@@ -160,6 +161,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000447> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000447> "standard (BB)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000447> "Abschlussorientierter Standard (BB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000447> "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000447> "Inhaltsbezogener mathematischer Standard (BB)")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000447> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000448> (Thema (BB))
@@ -167,7 +169,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000447> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000448> "Thema (BB)"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000448> "topic (BB)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000448> "A concrete topic of school teaching that can be taught through particular learning content."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000448> "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000448> "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann. Ein Thema kann einem Themenfeld untergeordnet und einem Inhalt untergeordnet sein."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000448> "kommt u.a. in Englisch vor")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000448> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000449> (topic area (BB))
@@ -177,6 +180,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000449> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000449> "Themenbereich (BB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000449> "A topic area includes one or more topics that are subject of teaching."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000449> "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000449> "kommt u.a. in Englisch  und Physik vor. \"Themenbereich\" in Mathe")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000449> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000450> (Zusatzmaterial (BB))
@@ -199,6 +203,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000451> <https://w3id.org/leh
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000459> "Kompetenzbereich (BB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000459> "Kompetenz (BB)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000459> "Teilkompetenz (BB)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000459> "A competence area is a competence item, which groups specific competences together."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/lehrplan/ontology/LP_0000459> "Ein Kompetenzbereich ist zu verstehen als ein Kompetenzelement, das bestimmte Kompetenzen zu einer Gruppe zusammenfasst."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000459> "dealing with expertise"@en)
@@ -224,6 +229,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002223> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002224> (Leitidee (BB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002224> "Leitidee (BB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002224> "Kommt in den Lehrplänen der Sek II für das Fach Mathematik vor. (In den Lehrplänen der Primarstufe und der Sek I für das Fach Mathematik werden stattdessen die Begriffe “Inhaltsbezogene mathematische Standards” oder “Themenbereiche” verwendet.) Der Begriff kommt aus den Bildungsstandards und bezeichnet dort einen inhaltsbezogenen Kompetenzbereich im Fach Mathematik.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002224> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000501>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002225> (Eingangsvoraussetzung (BB))
@@ -245,10 +251,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002227> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030001> (Basiskonzept (BB))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030001> "Basiskonzept (BB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030001> "Kommt in den Naturwissenschaften vor.
-
-Was machen wir mit den Basiskonzepten in den Naturwissenschaften? Gleichsetzen mit Kompetenzbereich, Themenfeld oder Lerninhalt? Kommen aus den Bistas.")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030001> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030001> "Kommt in den Naturwissenschaften vor.")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030001> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030002> (Beispiel für Differenzierungsmöglichkeiten (BB))
 
@@ -256,15 +260,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030002> "
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030002> "Kommt in Physik Sek I vor.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030002> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030005> (Bezug zu den Basiskonzepten (BB))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030005> "Bezug zu den Basiskonzepten (BB)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030005> "Kommt in Physik Sek I vor.
-
-Was machen wir mit den Basiskonzepten in den Naturwissenschaften? Gleichsetzen mit Kompetenzbereich, Themenfeld oder Lerninhalt? Kommen aus den Bistas.")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030005> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0030006> (Experiment (BB))
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030006> (Kompetenzerwerb im Themenfeld (BE))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030006> "Experiment (BB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030006> "Kommt in den Naturwissenschaften vor.")
@@ -327,6 +323,20 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030016> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030017> "Weiterer Kontext (BB)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030017> "Kommt in den Naturwissenschaften vor.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030017> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030042> (Verweis auf Bezüge zu den Basiskonzepten (BB))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030042> "Verweis auf Bezüge zu den Basiskonzepten (BB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030042> "Verweis auf Basiskonzepte (BB)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030042> "NaWis")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030042> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030043> (Beispiel zu einem Basiskonzept (BB))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030043> "Beispiel zu einem Basiskonzept (BB)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030043> "Beispiel (BB)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030043> "NaWis")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030043> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000441> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030066> (Vertiefungsmöglichkeit (BB))
 

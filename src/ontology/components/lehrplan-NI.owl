@@ -24,6 +24,7 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002206>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002207>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002208>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002209>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030014>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030055>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030080>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030201>))
@@ -126,7 +127,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001006> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0001007> "Kerninhalt (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0001007> "Kern (NI)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0001007> "Mathe")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001007> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0001007> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0001009> (Ergänzender Hinweis (NI))
 
@@ -150,7 +151,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002203> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002205> "Kernkompetenz (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002205> "Mathe")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002205> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002205> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002206> (Beispiel (NI))
 
@@ -175,6 +176,12 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002208> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002209> "Thema (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002209> "Kommt bisher nur in Sek I Integrierte Gesamtschule in Mathe vor.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002209> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030014> (Ergänzung zur Kompetenz (NI))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030014> "Ergänzung zur Kompetenz (NI)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030014> "(Deutsch Oberschule, Bezeichnung kommt so nicht im Lehrplan vor")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030014> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030055> (Fachniveau Sek II (NI))
 
@@ -250,6 +257,8 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030211> ObjectIntersectionOf(
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030212> "Verweis auf Vernetzungsmöglichkeiten (NI)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030212> "Sachunterricht Primar")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030212> "= Verweis auf Perspektive
+Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für die Planung des Unterrichts ist es daher grundlegend, die fünf Perspektiven mit ihren erwarteten Kompetenzen und die fachübergreifenden Bildungsbereiche zu vernetzen. Beispiele für Vernetzungsmöglichkeiten werden durch Pfeile in den Tabellen aufgezeigt.”")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030212> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002101> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030213> (Prozessbezogene Kompetenz (NI))

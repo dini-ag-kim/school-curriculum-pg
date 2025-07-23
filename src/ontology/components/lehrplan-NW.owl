@@ -21,6 +21,9 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002188>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002190>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002191>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0002192>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030005>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030006>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030009>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030041>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030073>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030074>))
@@ -96,28 +99,50 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002186> ObjectIntersectionOf(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002187> (Kompetenzbereich (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002187> "Kompetenzbereich (NW)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002187> "Aus dem Kernlehrplan: “Kompetenzbereiche repräsentieren die Grunddimensionen des fachlichen Handelns. Sie dienen dazu, die einzelnen Teiloperationen entlang der fachlichen Kerne zu strukturieren und den Zugriff für die am Lehr-Lernprozess Beteiligten zu verdeutlichen.”")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002187> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002188> (Kompetenzerwartung (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002188> "Kompetenzerwartung (NW)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0002188> "Konkretisierte Kompetenzerwartung (NW)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0002188> "Übergeordnete Kompetenzerwartung (NW)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002188> "Aus dem Kernlehrplan: “Kompetenzerwartungen führen Prozesse und Gegenstände zusammen und beschreiben die fachlichen Anforderungen und intendierten Lernergebnisse..“")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002188> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000479>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002190> (Teilkompetenzbereich (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002190> "Teilkompetenzbereich (NW)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0002190> "Teilkompetenz (NW)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002190> "Fach Moderne Fremdsprachen - Englisch und Französisch")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002190> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002191> (Inhaltsfeld (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002191> "Inhaltsfeld (NW)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002191> "Aus dem Kernlehrplan: “Inhaltsfelder systematisieren mit ihren jeweiligen inhaltlichen Schwerpunkten die im Unterricht der Realschule verbindlichen und unverzichtbaren Gegenstände und liefern Hinweise für die inhaltliche Ausrichtung des Lehrens und Lernens.”")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002191> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002192> (Inhaltlicher Schwerpunkt (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002192> "Inhaltlicher Schwerpunkt (NW)"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002192> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030005> (Ergänzung zu einem Basiskonzept (NW))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030005> "Ergänzung zu einem Basiskonzept (NW)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030005> "Der Begriff kommt so nicht im Lehrplan vor. Kommt nur in den Naturwissenschaften vor. Ist eine Ergänzung zu den Bezügen zu den Basiskonzepten und ergänzt gleichzeitig die davor genannten inhaltlichen Schwerpunkte.")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030005> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030006> (Möglicher Kontext (NW))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030006> "Möglicher Kontext (NW)"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030006> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030009> (Verweis auf Basiskonzept (NW))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030009> "Verweis auf Basiskonzept (NW)"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030009> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030041> (Bildungsgangniveau (NW))
 
@@ -127,6 +152,7 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030041> ObjectIntersec
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030073> (Bereich (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030073> "Bereich (NW)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030073> "Fach Englisch, Primar")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030073> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030074> (Fachliche Konkretisierung (NW))
@@ -146,11 +172,12 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030075> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030077> "Basiskonzept (NW)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030077> "Beitrag zu den Basiskonzepten (NW)")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030077> "Fach Naturwissenschaften (Biologie, Chemie, Physik) -> noch offen, wie wir es definieren!")
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030077> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030077> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030187> (Verweis auf Kompetenzerwartung (NW))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030187> "Verweis auf Kompetenzerwartung (NW)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030187> "in Mathematik und den Naturwissenschaften. Diese treten in Form von Kürzeln in Klammern am Ende einer Kompetenzerwartung auf und verweisen auf (Prozessbezogene/Übergeordnete) Kompetenzerwartungen.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030187> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0002085> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 

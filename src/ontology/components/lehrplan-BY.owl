@@ -26,6 +26,19 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030180>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030181>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030182>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030183>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030299>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030300>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030301>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030302>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030303>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030304>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030305>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030306>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030307>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030308>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030309>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030310>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030311>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000023>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000025>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000027>))
@@ -91,7 +104,8 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000819> ObjectIntersec
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002043> (Fachlehrplan (BY))
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002043> "Fachlehrplan (BY)"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002043> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000627>)))
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0002043> "enthält Lernbereiche auf verschiedenen Ebenen, Kompetenzerwartungen und Inhalte")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0002043> <https://w3id.org/lehrplan/ontology/LP_0002044>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0002044> (Lehrplanfragment (BY))
 
@@ -125,20 +139,23 @@ EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030053> ObjectIntersec
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030180> (Verweis auf DaZ (BY))
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis auf DaZ (BY)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis zum Lehrplan Deutsch als Zweitsprache")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030180> "Verweis zum Lehrplan Deutsch als Zweitsprache -> also auf Lernbereiche eines anderen Lehrplans")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030180> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030181> (Verweis auf übergreifende Ziele (BY))
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweist auf Kap0 - Textabsatz FUEZ")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweis auf übergreifende Ziele (BY)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweis zu den Übergreifenden Zielen (\"Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie\")")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030181> "Verweis zu den Übergreifenden Zielen (\"Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie\") -> also auf Prosatextteil?")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030181> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030182> (Verweis auf Querverweise (BY))
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweist auf Kap4 - Lernbereiche")
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf Querverweise (BY)"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf die Fachlehrpläne anderer Fächer")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030182> "Verweis auf die Fachlehrpläne anderer Fächer -> also auf Lernbereiche eines anderen Lehrplans")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030182> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030183> (Verweis auf Servicematerialien (BY))
@@ -146,6 +163,88 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030182> ObjectIntersectionOf(
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030183> "Verweis auf Servicematerialien (BY)"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030183> "Verlinkung zu Dokumenten (Unterrichtsmaterial). Hierzu gibt manchmal noch \"Erläuterungen\" -> Frage, ob man diese als CE-Hinweis interpreteierne kann.")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030183> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0002158>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030299> (Verweis auf Aufgabe (BY))
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030299> "Besteht aus Text, Dateianhängen, Links")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030299> "Verweis auf Aufgabe (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030299> "z.B. PDF-Dokument zum Downloaden (Arbeitsblätter o.ä.)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030299> <https://w3id.org/lehrplan/ontology/LP_0030183>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030300> (Verweis auf Material (BY))
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030300> "Besteht aus Text, Dateianhängen, Links")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030300> "Verweis auf Material (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030300> "z.B. Verlinkung auf Mundo zu einem spzifischen Material da")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030300> <https://w3id.org/lehrplan/ontology/LP_0030183>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030301> (Verweis auf mebis (BY))
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030301> "Besteht aus Text, Links in die ByCS")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030301> "Verweis auf mebis (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030301> "Verlinkung zu mebis -> Einloggen über ByCS")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030301> <https://w3id.org/lehrplan/ontology/LP_0030183>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030302> (Verweis auf Erläuterung (BY))
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030302> "Erläutert Kompetenzerwartungen und Inhalte; besteht aus Text (inkl. HTML u TeX), Dateianhängen, Links")
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030302> "Verweis auf Erläuterung (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030302> "Verweist auf Erläuterungen -> Erläuterungen selbst sind CE-Hinweise")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030302> <https://w3id.org/lehrplan/ontology/LP_0030183>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030303> (Erläuterung (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030303> "Erläuterung (BY)"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030303> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0001014>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030304> (Bildungs- und Erziehungsauftrag (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030304> "Bildungs- und Erziehungsauftrag (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030304> "für jede Schulart einheitlich einen Bildungs- und Erziehungsauftrag")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030304> <https://w3id.org/lehrplan/ontology/LP_0002044>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030305> (Übergreifende Bildungs- und Erziehungsziele (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030305> "Übergreifende Bildungs- und Erziehungsziele (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030305> "Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie (BY)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030305> <https://w3id.org/lehrplan/ontology/LP_0002044>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030306> (Fachprofil (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030306> "Fachprofil (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030306> "für jede Schulart und jedes Fach ein Fachprofil")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030306> <https://w3id.org/lehrplan/ontology/LP_0002044>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030307> (Grundlegende Kompetenzen (Jahrgangsstufenprofil) (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030307> "Grundlegende Kompetenzen (Jahrgangsstufenprofil) (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0030307> "Jahrgangsstufenprofil (BY)")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030307> "für jede Schulart, jede JS ein Profil (alle Kompetenzen aufgelistet)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030307> <https://w3id.org/lehrplan/ontology/LP_0002044>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030308> (Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030308> "Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030308> "nur für Grundschule und Förderschule")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030308> <https://w3id.org/lehrplan/ontology/LP_0030304>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030309> (Kompetenzbereich (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030309> "Kompetenzbereich (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030309> "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (z.B. deutsch und Moderne Fremdsprache) (an die Bistas angelehnt)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030309> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030310> (Prozessbezogene Kompetenz (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030310> "Prozessbezogene Kompetenz (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030310> "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030310> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030311> (Gegenstandsbereich (BY))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030311> "Gegenstandsbereich (BY)"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030311> "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)")
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030311> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000434> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 
 
 ############################

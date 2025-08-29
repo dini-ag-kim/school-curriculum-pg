@@ -532,6 +532,7 @@ Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Be
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000001> "Schulfach"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000001> "school subject"@en)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000001> <https://de.wikipedia.org/wiki/Unterrichtsfach>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000001> "Fach")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000002> (MINT-Fach)
 
@@ -592,6 +593,7 @@ In den Lehrplänen dient die Jahrgangsstufe als organisatorisches Element, das d
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000009> "class level"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000009> "Jahrgangsstufe"@de)
 AnnotationAssertion(rdfs:seeAlso <https://w3id.org/lehrplan/ontology/LP_0000009> <https://de.wikipedia.org/wiki/Jahrgangsstufe>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000009> "Klassenstufe")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000010> (Person)
 
@@ -629,6 +631,7 @@ Es ist ein offiziell anerkannter Bildungsabschluss, der am Ende eines bestimmten
 Schulabschlüsse unterscheiden sich je nach Schulart und Bundesland in ihren Anforderungen und Berechtigungen sowie der Bezeichnung.
 Zu den gängigen Schulabschlüssen im allgemeinbildenden Bereich in Deutschland gehören der “Erste Schulabschluss”, der “Mittlere Schulabschluss” sowie die “Allgemeine Hochschulreife” (Abitur). Weitere Abschlüsse können ebenfalls erworben werden, je nach Bundesland und Bildungsgang."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000019> "Schulabschluss"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000019> "Abschluss")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000020> (Schulstufe)
 
@@ -653,6 +656,7 @@ In general education, we distinguish between the \"Primarstufe\" (also called Gr
 Note:
 The \"Primarbereich\", \"Sekundarbereich I\", and \"Sekundarbereich II\" are instances of the class \"Schulstufe\"."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000020> "Schulstufe"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000020> "Schulbereich")
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000028> (Bildungsgangniveau)
 
@@ -722,6 +726,7 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000056> <https://w3id.org/leh
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000057> (Qualifikationsphase)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000057> "Qualifikationsphase"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000057> "Hauptphase")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000057> <https://w3id.org/lehrplan/ontology/LP_0000341>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000069> (Gymnasialniveau Sek I)
@@ -805,6 +810,7 @@ Sie beschreibt eine durch bestimmte Merkmale gekennzeichnete Form der Schule, di
 Im allgemeinen Sprachgebrauch werden “Schulart” und \"Schulform\" synonym verwendet."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000111> "Schulart"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000111> "Schulform")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/lehrplan/ontology/LP_0000111> "Schultyp")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/lehrplan/ontology/LP_0000111> "Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als \"Kategorie\" der Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
@@ -2060,14 +2066,14 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002171> "Domänenbezugsfunktion"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000499> <https://w3id.org/lehrplan/ontology/LP_0002171>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000001> (Jahrgangsstufe 1)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000001> (class level 1)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000001> "1"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000001> "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000001> "class level 1"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (Jahrgangsstufe 2)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (class level 2)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000002> "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "Jahrgangsstufe 2"@de)
@@ -2081,7 +2087,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000003> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000003> "class level 3"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000003>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000004> (class level 4)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000004> (Jahrgangsstufe 4)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000004> "4"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000004> "Jahrgangsstufe 4"@de)
@@ -2109,14 +2115,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "class level 7"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000008> (Jahrgangsstufe 8)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000008> (class level 8)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000008> "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "class level 8"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000008>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000009> (class level 9)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000009> (Jahrgangsstufe 9)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000009> "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000009> "Jahrgangsstufe 9"@de)

@@ -1,0 +1,84 @@
+Prefix(:=<https://w3id.org/lehrplan/ontology/components/lehrplan-subjects.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://w3id.org/lehrplan/ontology/components/lehrplan-subjects.owl>
+<https://w3id.org/lehrplan/ontology/releases/2025-09-10/components/lehrplan-subjects.owl>
+Annotation(owl:versionInfo "2025-09-10")
+
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000001>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000001>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000002>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000003>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000004>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000014>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000015>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000016>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_1000017>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000001> (Schulfach)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000001> "Schulfach")
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000001> (Alt-Griechisch)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000001> "Alt-Griechisch")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000001>)
+SameIndividual(<https://w3id.org/lehrplan/ontology/LP_1000001> <https://w3id.org/lehrplan/ontology/LP_1000002>)
+SameIndividual(<https://w3id.org/lehrplan/ontology/LP_1000001> <https://w3id.org/lehrplan/ontology/LP_1000003>)
+SameIndividual(<https://w3id.org/lehrplan/ontology/LP_1000001> <https://w3id.org/lehrplan/ontology/LP_1000004>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000002> (alte Sprachen: Griechisch)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000002> "alte Sprachen: Griechisch")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000002>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000003> (Griechisch (Sek I nur gymnasialer Bildungsgang, Sek II))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000003> "Griechisch (Sek I nur gymnasialer Bildungsgang, Sek II)")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000003>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000004> (Griechisch)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000004> "Griechisch")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000004>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000014> (Darstellendes Spiel)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000014> "Darstellendes Spiel")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000014>)
+SameIndividual(<https://w3id.org/lehrplan/ontology/LP_1000014> <https://w3id.org/lehrplan/ontology/LP_1000015>)
+SameIndividual(<https://w3id.org/lehrplan/ontology/LP_1000014> <https://w3id.org/lehrplan/ontology/LP_1000016>)
+SameIndividual(<https://w3id.org/lehrplan/ontology/LP_1000014> <https://w3id.org/lehrplan/ontology/LP_1000017>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000015> (Literatur und Theater)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000015> "Literatur und Theater")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000015>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000016> (1-10 Theater)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000016> "1-10 Theater")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000016>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_1000017> (Darstellen und Gestalten)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_1000017> "Darstellen und Gestalten")
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000001> <https://w3id.org/lehrplan/ontology/LP_1000017>)
+
+
+)

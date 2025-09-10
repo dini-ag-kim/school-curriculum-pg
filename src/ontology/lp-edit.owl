@@ -1,57 +1,68 @@
-@prefix : <https://w3id.org/lehrplan/ontology/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/lehrplan/ontology/> .
-
-<https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:imports <https://w3id.org/lehrplan/ontology/components/bfo-edit.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-BB.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-BE.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-BW.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-BY.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-HB.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-HE.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-HH.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-MV.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-NI.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-NW.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-RP.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-SH.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-SL.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-SN.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-ST.owl> ,
-                                                   <https://w3id.org/lehrplan/ontology/components/lehrplan-TH.owl> ;
-                                       <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6378-2618> ,
-                                                                          <https://orcid.org/0000-0001-7192-7143> ,
-                                                                          "Almut Steinlein"@de ,
-                                                                          "Cindy Bloes"@de ,
-                                                                          "Johann Bergh"@de ,
-                                                                          "Laura Junghanns"@de ;
-                                       <http://purl.org/dc/terms/description> "Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst."@de ,
-                                                                              "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system."@en ;
-                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
-                                       <http://purl.org/dc/terms/title> "Curriculum Ontology"@en ,
-                                                                        "Lehrplan Ontologie"@de .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+Prefix(:=<https://w3id.org/lehrplan/ontology/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-#################################################################
-#    Annotations
-#################################################################
+Ontology(<https://w3id.org/lehrplan/ontology/>
+Import(<https://w3id.org/lehrplan/ontology/components/bfo-edit.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-BB.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-BE-BB-shared.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-BE.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-BW.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-BY.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-HB.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-HE.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-HH.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-MV.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-NI.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-NW.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-RP.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-SH.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-SL.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-SN.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-ST.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-TH.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
+Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-subjects.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/bfo_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/iao_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/qudt_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/ro_import.owl>)
+Annotation(<http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6378-2618>)
+Annotation(<http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-7192-7143>)
+Annotation(<http://purl.org/dc/terms/creator> "Almut Steinlein"@de)
+Annotation(<http://purl.org/dc/terms/creator> "Cindy Bloes"@de)
+Annotation(<http://purl.org/dc/terms/creator> "Johann Bergh"@de)
+Annotation(<http://purl.org/dc/terms/creator> "Laura Junghanns"@de)
+Annotation(<http://purl.org/dc/terms/description> "Diese Ontologie ist eine formale Repräsentation, die die grundlegenden Konzepte und ihre Beziehungen zueinander im Bereich der Lehrplangestaltung und -umsetzung im deutschen Schulsystem erfasst."@de)
+Annotation(<http://purl.org/dc/terms/description> "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation of the German school system."@en)
+Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/>)
+Annotation(<http://purl.org/dc/terms/title> "Curriculum Ontology"@en)
+Annotation(<http://purl.org/dc/terms/title> "Lehrplan Ontologie"@de)
 
-<https://orcid.org/0000-0001-6378-2618> rdfs:label "Steffen Rörtgen" .
+Declaration(Class(:LP_0000056))
+Declaration(Class(:LP_0000057))
+Declaration(Class(:LP_0000341))
+Declaration(NamedIndividual(:LP_0000046))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 
 
-<https://orcid.org/0000-0001-7192-7143> rdfs:label "Jörg Waitelonis" .
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :LP_0000046 (Sekundarbereich II)
+
+ClassAssertion(:LP_0000341 :LP_0000046)
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-6378-2618> "Steffen Rörtgen")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
+)

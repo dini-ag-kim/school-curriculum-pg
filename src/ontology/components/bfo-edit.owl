@@ -8,8 +8,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<https://w3id.org/lehrplan/ontology/components/bfo-edit.owl>
 Import(<https://w3id.org/lehrplan/ontology/components/lehrplan-core.owl>)
-Import(<https://w3id.org/lehrplan/ontology/lp/imports/bfo_import.owl>)
-Import(<https://w3id.org/lehrplan/ontology/lp/imports/iao_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/bfo_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/iao_import.owl>)
+Import(<https://w3id.org/lehrplan/ontology/imports/qudt_import.owl>)
 
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000024>))
 
@@ -148,6 +149,10 @@ SubObjectPropertyOf(<https://w3id.org/lehrplan/ontology/LP_0030072> <http://purl
 #   Classes
 ############################
 
+# Class: <http://qudt.org/schema/qudt/Unit> (Unit)
+
+SubClassOf(<http://qudt.org/schema/qudt/Unit> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000001> (school subject)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000001> <http://purl.obolibrary.org/obo/IAO_0000030>)
@@ -196,6 +201,10 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000037> <http://purl.obolibra
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000040> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000043> (Oberstufenphase)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000043> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000111> (Schulart)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000111> "school type"@en)
@@ -230,6 +239,10 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000478> (Funktionsspezifikation)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000478> <http://purl.obolibrary.org/obo/IAO_0000030>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000494> (Unterrichtseinheit)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000494> <http://qudt.org/schema/qudt/Unit>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000540> (Schulfachbezug)
 

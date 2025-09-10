@@ -1,0 +1,44 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <https://w3id.org/lehrplan/ontology/>
+
+##
+## 
+##
+
+PREFIX ontology: <https://w3id.org/lehrplan/ontology/>
+
+INSERT { ?r owl:hasValue ?class .} 
+WHERE  { 
+values ?class  { <https://w3id.org/lehrplan/ontology/LP_0000829> <https://w3id.org/lehrplan/ontology/LP_0001014> <https://w3id.org/lehrplan/ontology/LP_0000479> <https://w3id.org/lehrplan/ontology/LP_0000480> <https://w3id.org/lehrplan/ontology/LP_0000481>  <https://w3id.org/lehrplan/ontology/LP_0002158> <https://w3id.org/lehrplan/ontology/LP_0002171> <https://w3id.org/lehrplan/ontology/LP_0000502> <https://w3id.org/lehrplan/ontology/LP_0000501> <https://w3id.org/lehrplan/ontology/LP_0000504> <https://w3id.org/lehrplan/ontology/LP_0000500> <https://w3id.org/lehrplan/ontology/LP_0000497> <https://w3id.org/lehrplan/ontology/LP_0000627> } .
+?r owl:someValuesFrom ?class .};
+
+DELETE { ?r owl:someValuesFrom ?class .}
+WHERE  { 
+values ?class  {<https://w3id.org/lehrplan/ontology/LP_0000829> <https://w3id.org/lehrplan/ontology/LP_0001014> <https://w3id.org/lehrplan/ontology/LP_0000479> <https://w3id.org/lehrplan/ontology/LP_0000480> <https://w3id.org/lehrplan/ontology/LP_0000481>  <https://w3id.org/lehrplan/ontology/LP_0002158> <https://w3id.org/lehrplan/ontology/LP_0002171> <https://w3id.org/lehrplan/ontology/LP_0000502> <https://w3id.org/lehrplan/ontology/LP_0000501> <https://w3id.org/lehrplan/ontology/LP_0000504> <https://w3id.org/lehrplan/ontology/LP_0000500> <https://w3id.org/lehrplan/ontology/LP_0000497> <https://w3id.org/lehrplan/ontology/LP_0000627>} .
+?r owl:someValuesFrom ?class .};
+
+
+INSERT { ?class rdf:type owl:NamedIndividual .}
+WHERE  { 
+values ?class  {<https://w3id.org/lehrplan/ontology/LP_0000829> <https://w3id.org/lehrplan/ontology/LP_0001014> <https://w3id.org/lehrplan/ontology/LP_0000479> <https://w3id.org/lehrplan/ontology/LP_0000480> <https://w3id.org/lehrplan/ontology/LP_0000481>  <https://w3id.org/lehrplan/ontology/LP_0002158> <https://w3id.org/lehrplan/ontology/LP_0002171> <https://w3id.org/lehrplan/ontology/LP_0000502> <https://w3id.org/lehrplan/ontology/LP_0000501> <https://w3id.org/lehrplan/ontology/LP_0000504> <https://w3id.org/lehrplan/ontology/LP_0000500> <https://w3id.org/lehrplan/ontology/LP_0000497> <https://w3id.org/lehrplan/ontology/LP_0000627>} .
+?class rdf:type owl:Class .};
+
+DELETE { ?class rdf:type owl:Class . }
+WHERE  { 
+values ?class  {<https://w3id.org/lehrplan/ontology/LP_0000829> <https://w3id.org/lehrplan/ontology/LP_0001014> <https://w3id.org/lehrplan/ontology/LP_0000479> <https://w3id.org/lehrplan/ontology/LP_0000480> <https://w3id.org/lehrplan/ontology/LP_0000481>  <https://w3id.org/lehrplan/ontology/LP_0002158> <https://w3id.org/lehrplan/ontology/LP_0002171> <https://w3id.org/lehrplan/ontology/LP_0000502> <https://w3id.org/lehrplan/ontology/LP_0000501> <https://w3id.org/lehrplan/ontology/LP_0000504> <https://w3id.org/lehrplan/ontology/LP_0000500> <https://w3id.org/lehrplan/ontology/LP_0000497> <https://w3id.org/lehrplan/ontology/LP_0000627>} .
+?class rdf:type owl:Class . };
+
+
+INSERT { ?class rdf:type ?c .}
+WHERE  { 
+values ?class  {<https://w3id.org/lehrplan/ontology/LP_0000829> <https://w3id.org/lehrplan/ontology/LP_0001014> <https://w3id.org/lehrplan/ontology/LP_0000479> <https://w3id.org/lehrplan/ontology/LP_0000480> <https://w3id.org/lehrplan/ontology/LP_0000481>  <https://w3id.org/lehrplan/ontology/LP_0002158> <https://w3id.org/lehrplan/ontology/LP_0002171> <https://w3id.org/lehrplan/ontology/LP_0000502> <https://w3id.org/lehrplan/ontology/LP_0000501> <https://w3id.org/lehrplan/ontology/LP_0000504> <https://w3id.org/lehrplan/ontology/LP_0000500> <https://w3id.org/lehrplan/ontology/LP_0000497> <https://w3id.org/lehrplan/ontology/LP_0000627>} .
+?class rdfs:subClassOf ?c . };
+
+DELETE { ?class rdfs:subClassOf ?c . }
+WHERE  { 
+values ?class  {<https://w3id.org/lehrplan/ontology/LP_0000829> <https://w3id.org/lehrplan/ontology/LP_0001014> <https://w3id.org/lehrplan/ontology/LP_0000479> <https://w3id.org/lehrplan/ontology/LP_0000480> <https://w3id.org/lehrplan/ontology/LP_0000481>  <https://w3id.org/lehrplan/ontology/LP_0002158> <https://w3id.org/lehrplan/ontology/LP_0002171> <https://w3id.org/lehrplan/ontology/LP_0000502> <https://w3id.org/lehrplan/ontology/LP_0000501> <https://w3id.org/lehrplan/ontology/LP_0000504> <https://w3id.org/lehrplan/ontology/LP_0000500> <https://w3id.org/lehrplan/ontology/LP_0000497> <https://w3id.org/lehrplan/ontology/LP_0000627>} .
+?class rdfs:subClassOf ?c . };
+

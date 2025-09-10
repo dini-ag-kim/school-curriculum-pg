@@ -15,7 +15,6 @@ Import(<https://w3id.org/lehrplan/ontology/imports/qudt_import.owl>)
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000024>))
 Declaration(NamedIndividual(<http://qudt.org/vocab/unit/MIN>))
 Declaration(NamedIndividual(<https://qudt.org/vocab/unit/HR>))
-Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0000498>))
 
 ############################
 #   Object Properties
@@ -243,6 +242,14 @@ SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000475> ObjectSomeValuesFrom(
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000478> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000505> (Unterrichtseinheitspezifikation)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000505> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000508> (Zeitspezifikation)
+
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000508> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000540> (Schulfachbezug)
 
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000540> <http://purl.obolibrary.org/obo/IAO_0000030>)
@@ -277,13 +284,6 @@ ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/MI
 
 AnnotationAssertion(rdfs:label <https://qudt.org/vocab/unit/HR> "Stunde"@de)
 ClassAssertion(<http://qudt.org/schema/qudt/Unit> <https://qudt.org/vocab/unit/HR>)
-
-# Individual: <https://w3id.org/lehrplan/ontology/LP_0000498> (Unterichtseinheit)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000498> "Eine Einheit (Unit), die sich auf einen inhaltlich und zeitlich abgegrenzten Abschnitt des Unterrichts bezieht, in dem ein bestimmtes Thema, Problem oder Lernziel behandelt wird."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000498> "Unterichtseinheit"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000498> "Kann z.B., je nach Kontext für unterschiedlicihe Zeiten stehen. Z.B. für 45 Minuten, oder 90 Minuten.")
-ClassAssertion(<http://qudt.org/schema/qudt/Unit> <https://w3id.org/lehrplan/ontology/LP_0000498>)
 
 
 )

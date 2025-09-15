@@ -44,6 +44,17 @@ lp-ohne-land.owl: $(EDIT_PREPROCESSED)
 
 
 
+###### TEMPLATE for SUBJECTS
+$(COMPONENTSDIR)/lehrplan-subjects.owl: $(TEMPLATEDIR)/lehrplan-subjects.tsv $(TMPDIR)/stamp-component-lehrplan-subjects.owl
+	$(ROBOT) merge --input lp-edit.owl --input components/states.owl \
+		 template --template $(TEMPLATEDIR)/lehrplan-subjects.tsv \
+		 $(ANNOTATE_CONVERT_FILE)
+.PRECIOUS: $(COMPONENTSDIR)/lehrplan-subjects.owl
+
+$(TEMPLATEDIR)/lehrplan-subjects.tsv:
+	curl -L 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSzRNSKTRnjC2E2XnYSXuX17RtIoQ3ZW2qvZnRQjREtZdtkXdcrPtXXeb5m8MXIzz_uImm-2oS2m7Dj/pub?output=tsv' -o $(TEMPLATEDIR)/lehrplan-subjects.tsv
+
+
 
 update-ontology-annotations: 
 	$(ROBOT) annotate --input ../../lp.owl $(ALL_ANNOTATIONS) --output ../../lp.owl && \

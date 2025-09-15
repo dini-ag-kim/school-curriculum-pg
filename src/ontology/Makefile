@@ -552,7 +552,7 @@ $(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
 .PRECIOUS: $(TMPDIR)/stamp-component-%.owl
 
 $(COMPONENTSDIR)/lehrplan-subjects.owl: $(TEMPLATEDIR)/lehrplan-subjects.tsv $(TMPDIR)/stamp-component-lehrplan-subjects.owl
-	$(ROBOT) template --input components/lehrplan-core.ttl --input components/states.ttl \
+	$(ROBOT) template --input components/states.ttl --input components/lehrplan-core.ttl \
 		 --template $(TEMPLATEDIR)/lehrplan-subjects.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/lehrplan-subjects.owl

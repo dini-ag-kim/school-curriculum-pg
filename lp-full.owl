@@ -10,13 +10,15 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-5"/>
-        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-5, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
-        <terms:created>2025-08-18</terms:created>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/1.0.0-6"/>
+        <terms:bibliographicCitation>Lehrplan Ontology. Version 1.0.0-6, https://w3id.org/lehrplan/ontology</terms:bibliographicCitation>
+        <terms:created>2025-09-22</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -28,7 +30,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
-        <owl:versionInfo>1.0.0-5</owl:versionInfo>
+        <owl:versionInfo>1.0.0-6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -190,19 +192,26 @@
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:label>created</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:label>creator</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -220,13 +229,19 @@
 
     <!-- http://purl.org/dc/terms/subject -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:label>subject</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:label>title</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -250,41 +265,31 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
-        <rdfs:label>skos:altLabel</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
-        <rdfs:label>skos:closeMatch</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
-        <rdfs:label>skos:definition</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
-        <rdfs:label>skos:editorialNote</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
-        <rdfs:label>skos:exactMatch</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
     
 
 
@@ -296,9 +301,7 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
-        <rdfs:label>skos:narrowMatch</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
     
 
 
@@ -310,9 +313,7 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#related -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
-        <rdfs:label>skos:related</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#related"/>
     
 
 
@@ -324,25 +325,19 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
-        <rdfs:label>skos:topConceptOf</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
     
 
 
     <!-- https://d-nb.info/standards/elementset/gnd#broaderTermGeneral -->
 
-    <owl:AnnotationProperty rdf:about="https://d-nb.info/standards/elementset/gnd#broaderTermGeneral">
-        <rdfs:label>gnd:broaderTermGeneral</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://d-nb.info/standards/elementset/gnd#broaderTermGeneral"/>
     
 
 
     <!-- https://d-nb.info/standards/elementset/gnd#gndIdentifier -->
 
-    <owl:AnnotationProperty rdf:about="https://d-nb.info/standards/elementset/gnd#gndIdentifier">
-        <rdfs:label>gnd:gndIdentifier</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://d-nb.info/standards/elementset/gnd#gndIdentifier"/>
     
 
 
@@ -357,11 +352,69 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/LatexString -->
+
+    <rdfs:Datatype rdf:about="http://qudt.org/schema/qudt/LatexString"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this year has part this day (occurrent parthood)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a whole and its part</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -371,8 +424,18 @@
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000111 xml:lang="en">realized in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this disease is realized in this disease course</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this fragility is realized in this shattering</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigator role is realized in this investigation</obo:IAO_0000112>
+        <obo:IAO_0000118 xml:lang="en">is realized by</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">realized_in</obo:IAO_0000118>
+        <obo:IAO_0000600 xml:lang="en">[copied from inverse property &apos;realizes&apos;] to say that b realizes c at t is to assert that there is some material entity d &amp; b is a process which has participant d at t &amp; c is a disposition or role of which d is bearer_of at t&amp; the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])</obo:IAO_0000600>
         <dc:identifier>206-BFO</dc:identifier>
+        <rdfs:comment>Paraphrase of elucidation: a relation between a realizable entity and a process, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">has realization</rdfs:label>
+        <rdfs:label xml:lang="en">realized in</rdfs:label>
         <skos:altLabel xml:lang="en">realized in</skos:altLabel>
         <skos:definition xml:lang="en">b has realization c =Def c realizes b</skos:definition>
         <skos:example xml:lang="en">As for realizes</skos:example>
@@ -385,108 +448,17 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <obo:IAO_0000111 xml:lang="en">realizes</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this disease course realizes this disease</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigation realizes this investigator role</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this shattering realizes this fragility</obo:IAO_0000112>
+        <obo:IAO_0000600 xml:lang="en">to say that b realizes c at t is to assert that there is some material entity d &amp; b is a process which has participant d at t &amp; c is a disposition or role of which d is bearer_of at t&amp; the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])</obo:IAO_0000600>
         <dc:identifier>059-BFO</dc:identifier>
+        <rdfs:comment>Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">realizes</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
         <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000056 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000056">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <dc:identifier>250-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">participates in</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region &amp; some process p such that b participates in p some way</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000057 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000057">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                            <owl:Class>
-                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>248-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-        <skos:definition xml:lang="en">p has participant c =Def c participates in p</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000058">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000059"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>258-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">is concretized by</rdfs:label>
-        <skos:definition xml:lang="en">c is concretized by b =Def b concretizes c</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000059 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000059">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <dc:identifier>256-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">concretizes</rdfs:label>
-        <skos:definition xml:lang="en">b concretizes c =Def b is a process or a specifically dependent continuant &amp; c is a generically dependent continuant &amp; there is some time t such that c is the pattern or content which b shares at t with actual or potential copies</skos:definition>
         <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
     </owl:ObjectProperty>
     
@@ -526,7 +498,9 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000183"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -535,6 +509,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -543,7 +518,22 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        </owl:propertyChainAxiom>
+        <obo:IAO_0000111 xml:lang="en">occurs in</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">b occurs_in c =def b is a process and c is a material entity or immaterial entity&amp; there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.&amp; forall(t) if b exists_at t then c exists_at t &amp; there exist spatial regions s and s’ where &amp; b spatially_projects_onto s at t&amp; c is occupies_spatial_region s’ at t&amp; s is a proper_continuant_part_of s’ at t</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">occurs_in</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">unfolds in</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">unfolds_in</obo:IAO_0000118>
         <dc:identifier>143-BFO</dc:identifier>
+        <rdfs:comment>Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">occurs in</rdfs:label>
         <skos:definition xml:lang="en">b occurs in c =Def b is a process or a process boundary &amp; c is a material entity or site &amp; there exists a spatiotemporal region r &amp; b occupies spatiotemporal region r &amp; for all time t, if b exists at t then c exists at t &amp; there exist spatial regions s and s&apos; where b spatially projects onto s at t &amp; c occupies spatial region s&apos; at t &amp; s is a continuant part of s&apos; at t</skos:definition>
         <skos:example xml:lang="en">A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank</skos:example>
@@ -551,48 +541,14 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000084 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000067 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000084">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000101"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>252-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">generically depends on</rdfs:label>
-        <skos:altLabel xml:lang="en">g-depends on</skos:altLabel>
-        <skos:definition xml:lang="en">b generically depends on c =Def b is a generically dependent continuant &amp; c is an independent continuant that is not a spatial region &amp; at some time t there inheres in c a specifically dependent continuant which concretizes b at t</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000101 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000101">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <dc:identifier>254-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">is carrier of</rdfs:label>
-        <skos:definition xml:lang="en">b is carrier of c =Def there is some time t such that c generically depends on b at t</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000067">
+        <obo:IAO_0000111 xml:lang="en">site of</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">[copied from inverse property &apos;occurs in&apos;] b occurs_in c =def b is a process and c is a material entity or immaterial entity&amp; there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.&amp; forall(t) if b exists_at t then c exists_at t &amp; there exist spatial regions s and s’ where &amp; b spatially_projects_onto s at t&amp; c is occupies_spatial_region s’ at t&amp; s is a proper_continuant_part_of s’ at t</obo:IAO_0000115>
+        <rdfs:comment>Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">contains process</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -610,21 +566,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000115 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000115">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000129"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <dc:identifier>230-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has member part</rdfs:label>
-        <skos:definition xml:lang="en">b has member part c =Def c member part of b</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000117 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000117">
@@ -636,6 +577,22 @@
         <rdfs:label xml:lang="en">has occurrent part</rdfs:label>
         <skos:definition xml:lang="en">b has occurrent part c =Def c occurrent part of b</skos:definition>
         <skos:example xml:lang="en">Mary&apos;s life has occurrent part Mary&apos;s 5th birthday</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000118 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000118">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000138"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <dc:identifier>154-BFO</dc:identifier>
+        <rdfs:label xml:lang="en">has proper occurrent part</rdfs:label>
+        <skos:definition xml:lang="en">b has proper occurrent part c =Def b has occurrent part c &amp; b and c are not identical</skos:definition>
+        <skos:example xml:lang="en">As for has occurrent part.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -656,66 +613,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000124 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000124">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000171"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>236-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">location of</rdfs:label>
-        <skos:definition xml:lang="en">b location of c =Def c located in b</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000127 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000127">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000218"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <dc:identifier>244-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">material basis of</rdfs:label>
-        <skos:definition xml:lang="en">b material basis of c =Def c has material basis b</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000129 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000129">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <dc:identifier>228-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">member part of</rdfs:label>
-        <skos:definition xml:lang="en">b member part of c =Def b is an object &amp; c is a material entity &amp; there is some time t such that b continuant part of c at t &amp; there is a mutually exhaustive and pairwise disjoint partition of c into objects x1, ..., xn (for some n ≠ 1) with b = xi (for some 1 &lt;= i &lt;= n)</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000132 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000132">
@@ -726,6 +623,36 @@
         <rdfs:label xml:lang="en">occurrent part of</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c</skos:definition>
         <skos:example xml:lang="en">Mary&apos;s 5th birthday is an occurrent part of Mary&apos;s life; the first set of the tennis match is an occurrent part of the tennis match</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000136">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000139"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000181"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <dc:identifier>116-BFO</dc:identifier>
+        <rdfs:label xml:lang="en">proper temporal part of</rdfs:label>
+        <skos:definition xml:lang="en">b proper temporal part of c =Def b temporal part of c &amp; not (b = c)</skos:definition>
+        <skos:example xml:lang="en">As for temporal part of.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000138 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000138">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <dc:identifier>005-BFO</dc:identifier>
+        <rdfs:label xml:lang="en">proper occurrent part of</rdfs:label>
+        <skos:definition xml:lang="en">b proper occurrent part of c =Def b occurrent part of c &amp; b and c are not identical</skos:definition>
+        <skos:example xml:lang="en">As for occurrent part of.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -759,61 +686,16 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000171 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000181 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000171">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
-        <dc:identifier>234-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">located in</rdfs:label>
-        <skos:definition xml:lang="en">b located in c =Def b is an independent continuant &amp; c is an independent &amp; neither is a spatial region &amp; there is some time t such that the spatial region which b occupies at t is continuant part of the spatial region which c occupies at t</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000176 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000176">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <dc:identifier>221-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">continuant part of</rdfs:label>
-        <skos:definition xml:lang="en">b continuant part of c =Def b and c are continuants &amp; there is some time t such that b and c exist at t &amp; b continuant part of c at t</skos:definition>
-        <skos:example xml:lang="en">Milk teeth continuant part of human; surgically removed tumour continuant part of organism</skos:example>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000178 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <dc:identifier>271-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has continuant part</rdfs:label>
-        <skos:definition xml:lang="en">b has continuant part c =Def c continuant part of b</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000181">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000121"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <dc:identifier>212-BFO</dc:identifier>
+        <rdfs:label xml:lang="en">has proper temporal part</rdfs:label>
+        <skos:definition xml:lang="en">b has proper temporal part c =Def c proper temporal part of b</skos:definition>
+        <skos:example xml:lang="en">As for has temporal part.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1022,54 +904,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000210 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000210">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <dc:identifier>232-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">occupies spatial region</rdfs:label>
-        <skos:definition xml:lang="en">b occupies spatial region r =Def b is an independent continuant that is not a spatial region &amp; r is a spatial region &amp; there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000216 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000216">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <dc:identifier>246-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">spatially projects onto</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) spatially projects onto is a relation between some spatiotemporal region b and spatial region c such that at some time t, c is the spatial extent of b at t</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000218 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000218">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <dc:identifier>242-BFO</dc:identifier>
-        <rdfs:label xml:lang="en">has material basis</rdfs:label>
-        <skos:definition xml:lang="en">b has material basis c =Def b is a disposition &amp; c is a material entity &amp; there is some d bearer of b &amp; there is some time t such that c is a continuant part of d at t &amp; d has disposition b because c is a continuant part of d at t</skos:definition>
-        <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000221 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000221">
@@ -1146,11 +980,245 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
+        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this apple is bearer of this red color</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this vase is bearer of this fragility</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">Inverse of characteristic_of</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has characteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000056">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <obo:IAO_0000111 xml:lang="en">participates in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this blood clot participates in this blood coagulation</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this input material (or this output material) participates in this process</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigator participates in this investigation</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a continuant and a process, in which the continuant is somehow involved in the process</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">participates_in</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigation has participant this investigator</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this process has participant this input material (or this output material)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000058">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <obo:IAO_0000112 xml:lang="en">A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The journal article (a generically dependent continuant) is concretized as the quality (a specifically dependent continuant), and both depend on that copy of the printed journal (an independent continuant).</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process).</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">is concretized as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000059">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000112 xml:lang="en">A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant).</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process).</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">concretizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000079 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000079">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <obo:IAO_0000112 xml:lang="en">this catalysis function is a function of this enzyme</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">function_of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">is function of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:label xml:lang="en">function of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <obo:IAO_0000112 xml:lang="en">this red color is a quality of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A quality inheres in its bearer at all times for which the quality exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is quality of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">quality_of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:label xml:lang="en">quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000081 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000081">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+        <obo:IAO_0000112 xml:lang="en">this investigator role is a role of this person</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">is role of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">role_of</obo:IAO_0000118>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:label xml:lang="en">role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000085 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000085">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <obo:IAO_0000112 xml:lang="en">this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_function</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000086 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000086">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000112 xml:lang="en">this apple has quality this red color</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_quality</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000087 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000087">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <obo:IAO_0000112 xml:lang="en">this person has role this investigator role (more colloquially: this person has this role of investigator)</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists.</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">has_role</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000092"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has disposition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000092 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000092">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <rdfs:comment>This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020.</rdfs:comment>
+        <rdfs:label xml:lang="en">disposition of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
+        <rdfs:label>was derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000008 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000008">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <owl:inverseOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0020001"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="de">hat Teil</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1168,7 +1236,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000017 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000017">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000059"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000438"/>
         <rdfs:label xml:lang="de">konkretisiert Lehrplan</rdfs:label>
     </owl:ObjectProperty>
@@ -1218,7 +1286,8 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000041 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000041">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
         <rdfs:label xml:lang="en">has unit</rdfs:label>
         <rdfs:label xml:lang="de">hat Einheit</rdfs:label>
     </owl:ObjectProperty>
@@ -1237,7 +1306,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000048 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000048">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <rdfs:comment>has input</rdfs:comment>
         <rdfs:label xml:lang="de">hat Input</rdfs:label>
     </owl:ObjectProperty>
@@ -1247,7 +1316,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000049 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000049">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <rdfs:comment xml:lang="en">has output</rdfs:comment>
         <rdfs:label xml:lang="de">hat Output</rdfs:label>
     </owl:ObjectProperty>
@@ -1288,7 +1357,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000343 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000343">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000196"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
         <rdfs:label xml:lang="de">hat Schulartfunktion</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1297,7 +1366,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000440 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000440">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000438"/>
         <rdfs:label xml:lang="de">für Bildungsgangabschnitt</rdfs:label>
     </owl:ObjectProperty>
@@ -1307,7 +1376,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- https://w3id.org/lehrplan/ontology/LP_0000477 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000477">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000059"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
         <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000475"/>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
         <rdfs:label xml:lang="de">konkretisiert Schulart</rdfs:label>
@@ -1437,7 +1506,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     <!-- https://w3id.org/lehrplan/ontology/LP_0020001 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0020001">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <rdfs:label xml:lang="de">ist Teil von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1584,13 +1653,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+            </owl:Restriction>
+        </owl:disjointWith>
         <obo:BFO_0000179>continuant</obo:BFO_0000179>
         <obo:BFO_0000180>Continuant</obo:BFO_0000180>
         <obo:IAO_0000115 xml:lang="en">An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</obo:IAO_0000115>
@@ -1671,6 +1740,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+        <obo:IAO_0000115 xml:lang="en">An entity that has temporal parts and that happens, unfolds or develops through time.</obo:IAO_0000115>
         <dc:identifier>077-BFO</dc:identifier>
         <rdfs:label xml:lang="en">occurrent</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region</skos:definition>
@@ -1683,12 +1759,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <obo:BFO_0000179>ic</obo:BFO_0000179>
@@ -1710,6 +1780,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <obo:IAO_0000602>(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] </obo:IAO_0000602>
         <obo:IAO_0000602>(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] </obo:IAO_0000602>
         <dc:identifier>017-BFO</dc:identifier>
+        <rdfs:comment xml:lang="en">A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">independent continuant</rdfs:label>
         <skos:definition xml:lang="en">b is an independent continuant =Def b is a continuant &amp; there is no c such that b specifically depends on c or b generically depends on c</skos:definition>
@@ -1758,12 +1829,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>035-BFO</dc:identifier>
         <rdfs:label xml:lang="en">spatial region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time</skos:definition>
@@ -1800,20 +1865,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000009"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000018"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000026"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>039-BFO</dc:identifier>
         <rdfs:label xml:lang="en">two-dimensional spatial region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A two-dimensional spatial region is a spatial region that is a whole consisting of a surface together with zero or more surfaces which may have spatial regions of lower dimension as parts</skos:definition>
@@ -1876,7 +1927,9 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])</obo:IAO_0000115>
         <dc:identifier>083-BFO</dc:identifier>
+        <rdfs:comment xml:lang="en">An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.</rdfs:comment>
         <rdfs:label xml:lang="en">process</rdfs:label>
         <skos:altLabel xml:lang="en">event</skos:altLabel>
         <skos:definition xml:lang="en">(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant</skos:definition>
@@ -1989,12 +2042,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000018">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000018"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>037-BFO</dc:identifier>
         <rdfs:label xml:lang="en">zero-dimensional spatial region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A zero-dimensional spatial region is one or a collection of more than one spatially disjoint points in space</skos:definition>
@@ -2074,18 +2121,13 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <obo:IAO_0000116 xml:lang="en">Specifically dependent continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. We&apos;re not sure what else will develop here, but for example there are questions such as what are promises, obligation, etc.</obo:IAO_0000116>
         <obo:IAO_0000602>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </obo:IAO_0000602>
         <dc:identifier>050-BFO</dc:identifier>
+        <rdfs:comment xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
         <skos:definition xml:lang="en">b is a specifically dependent continuant =Def b is a continuant &amp; there is some independent continuant c which is not a spatial region &amp; which is such that b specifically depends on c</skos:definition>
         <skos:example xml:lang="en">(with multiple bearers) John&apos;s love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates</skos:example>
         <skos:example xml:lang="en">(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole</skos:example>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
@@ -2097,6 +2139,12 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
         <owl:annotatedTarget>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a specifically dependent continuant = Def. b is a continuant &amp; there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
     </owl:Axiom>
     
@@ -2157,19 +2205,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000026">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000018"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000026"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>038-BFO</dc:identifier>
         <rdfs:label xml:lang="en">one-dimensional spatial region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A one-dimensional spatial region is a whole consisting of a line together with zero or more lines which may have points as parts</skos:definition>
@@ -2196,12 +2231,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000028">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>040-BFO</dc:identifier>
         <rdfs:label xml:lang="en">three-dimensional spatial region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A three-dimensional spatial region is a whole consisting of a spatial volume together with zero or more spatial volumes which may have spatial regions of lower dimension as parts</skos:definition>
@@ -2214,38 +2243,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000210"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>034-BFO</dc:identifier>
         <rdfs:label xml:lang="en">site</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity</skos:definition>
@@ -2279,6 +2276,7 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
         <obo:IAO_0000115 xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</obo:IAO_0000115>
         <obo:IAO_0000602>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </obo:IAO_0000602>
         <dc:identifier>074-BFO</dc:identifier>
+        <rdfs:comment xml:lang="en">A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
         <skos:altLabel xml:lang="en">g-dependent continuant</skos:altLabel>
@@ -2419,27 +2417,8 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <obo:IAO_0000115 xml:lang="en">An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000115>
         <dc:identifier>019-BFO</dc:identifier>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part</skos:definition>
@@ -2452,18 +2431,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000124"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>029-BFO</dc:identifier>
         <rdfs:label xml:lang="en">continuant fiat boundary</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions &amp; such that there is no time t when b has a spatial region as continuant part &amp; whose location is determined in relation to some material entity</skos:definition>
@@ -2488,19 +2455,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000142">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000142"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000147"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>032-BFO</dc:identifier>
         <rdfs:label xml:lang="en">fiat line</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A fiat line is a one-dimensional continuant fiat boundary that is continuous</skos:definition>
@@ -2525,12 +2479,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000146">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>033-BFO</dc:identifier>
         <rdfs:label xml:lang="en">fiat surface</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A fiat surface is a two-dimensional continuant fiat boundary that is self-connected</skos:definition>
@@ -2543,12 +2491,6 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000147"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <dc:identifier>031-BFO</dc:identifier>
         <rdfs:label xml:lang="en">fiat point</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A fiat point is a zero-dimensional continuant fiat boundary that consists of a single point</skos:definition>
@@ -2795,6 +2737,22 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <terms:description rdf:datatype="http://qudt.org/schema/qudt/LatexString">
+  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). 
+  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). 
+  Any measurement of the length can be expressed as a number multiplied by the unit meter. 
+  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
+  </terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000001 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000001">
@@ -2811,6 +2769,7 @@ Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Be
         <rdfs:label xml:lang="de">Schulfach</rdfs:label>
         <rdfs:label xml:lang="en">school subject</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://de.wikipedia.org/wiki/Unterrichtsfach"/>
+        <skos:altLabel>Fach</skos:altLabel>
     </owl:Class>
     
 
@@ -2910,6 +2869,7 @@ In den Lehrplänen dient die Jahrgangsstufe als organisatorisches Element, das d
         <rdfs:comment xml:lang="en">class level</rdfs:comment>
         <rdfs:label xml:lang="de">Jahrgangsstufe</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://de.wikipedia.org/wiki/Jahrgangsstufe"/>
+        <skos:altLabel>Klassenstufe</skos:altLabel>
     </owl:Class>
     
 
@@ -2972,6 +2932,7 @@ Es ist ein offiziell anerkannter Bildungsabschluss, der am Ende eines bestimmten
 Schulabschlüsse unterscheiden sich je nach Schulart und Bundesland in ihren Anforderungen und Berechtigungen sowie der Bezeichnung.
 Zu den gängigen Schulabschlüssen im allgemeinbildenden Bereich in Deutschland gehören der “Erste Schulabschluss”, der “Mittlere Schulabschluss” sowie die “Allgemeine Hochschulreife” (Abitur). Weitere Abschlüsse können ebenfalls erworben werden, je nach Bundesland und Bildungsgang.</rdfs:comment>
         <rdfs:label xml:lang="de">Schulabschluss</rdfs:label>
+        <skos:altLabel>Abschluss</skos:altLabel>
     </owl:Class>
     
 
@@ -3001,6 +2962,7 @@ In general education, we distinguish between the &quot;Primarstufe&quot; (also c
 Note:
 The &quot;Primarbereich&quot;, &quot;Sekundarbereich I&quot;, and &quot;Sekundarbereich II&quot; are instances of the class &quot;Schulstufe&quot;.</rdfs:comment>
         <rdfs:label xml:lang="de">Schulstufe</rdfs:label>
+        <skos:altLabel>Schulbereich</skos:altLabel>
     </owl:Class>
     
 
@@ -3106,6 +3068,7 @@ Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fre
     <!-- https://w3id.org/lehrplan/ontology/LP_0000043 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:label xml:lang="de">Oberstufenphase</rdfs:label>
     </owl:Class>
     
@@ -3154,6 +3117,25 @@ Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fre
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000040"/>
         <rdfs:label xml:lang="de">Ohne-Berlin-Brandenburg</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000056 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000056">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000341"/>
+        <rdfs:label xml:lang="de">Einführungsphase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000057 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000057">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000341"/>
+        <rdfs:label xml:lang="de">Qualifikationsphase</rdfs:label>
+        <skos:altLabel>Hauptphase</skos:altLabel>
     </owl:Class>
     
 
@@ -3379,7 +3361,7 @@ In the federal states, the &quot;Erste Schulabschluss&quot; has various designat
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000058"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000058"/>
                         <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000475"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -3395,6 +3377,7 @@ Im allgemeinen Sprachgebrauch werden “Schulart” und &quot;Schulform&quot; sy
         <rdfs:label xml:lang="de">Schulart</rdfs:label>
         <rdfs:label xml:lang="en">school type</rdfs:label>
         <skos:altLabel>Schulform</skos:altLabel>
+        <skos:altLabel>Schultyp</skos:altLabel>
         <skos:example>Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als &quot;Kategorie&quot; der Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
@@ -5124,6 +5107,7 @@ Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
         <rdfs:label xml:lang="en">Themenfeld</rdfs:label>
+        <skos:editorialNote>Themenfeld wird im Datendump im Zusammenhang mit Übung verwendet</skos:editorialNote>
     </owl:Class>
     
 
@@ -5474,13 +5458,13 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000059"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000079"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000809"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -5524,6 +5508,89 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000499">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000478"/>
         <rdfs:label xml:lang="de">Bezugsfunktionen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000505 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000505">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000508"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000344"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000344"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Ein Data Item, dass die thematische und inhaltliche Einheit des Unterrichts ausdrückt. Es kann entweder feste Zeitspannen, die Unterrichtsstunden meinen (z.B. 45 Minuten), oder sie umfasst mehrere solcher Unterrichtsstunden, um ein zusammenhängendes Stoffgebiet zu behandeln.</rdfs:comment>
+        <rdfs:label xml:lang="de">Unterrichtseinheitspezifikation</rdfs:label>
+        <skos:example>Soll z.B. ausgedrückt werden, dass der Unterricht 6 Einheiten à 45 Minuten enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 &apos;mem:described by&apos; :ue_1 .
+ue_1 a mem:Unterrichtseinheitsspezifikation .
+ue_1 &apos;mem:hat Wert&apos; &quot;6&quot;^^xsd:decimal .
+ue_1 &apos;mem:hat Teil&apos; zs_1 .
+zs_1 a mem:Zeitpezifikation .
+zs_1 &apos;mem:hat Wert&apos; &quot;45&quot;^^xsd:decimal .
+zs_1 &apos;mem:hat Einheit&apos; qudt:Min .</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000508 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000508">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000041"/>
+                        <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000344"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0020001"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000505"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt.</rdfs:comment>
+        <rdfs:label xml:lang="de">Zeitspezifikation</rdfs:label>
     </owl:Class>
     
 
@@ -7269,19 +7336,9 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
     <!-- https://w3id.org/lehrplan/ontology/LP_0002043 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0002043">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0001015"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000627"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002044"/>
         <rdfs:label xml:lang="de">Fachlehrplan (BY)</rdfs:label>
+        <skos:editorialNote>enthält Lernbereiche auf verschiedenen Ebenen, Kompetenzerwartungen und Inhalte</skos:editorialNote>
     </owl:Class>
     
 
@@ -13265,8 +13322,9 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment>Verweist auf Kap4 - Lernbereiche</rdfs:comment>
         <rdfs:label xml:lang="de">Verweis auf DaZ (BY)</rdfs:label>
-        <skos:editorialNote>Verweis zum Lehrplan Deutsch als Zweitsprache</skos:editorialNote>
+        <skos:editorialNote>Verweis zum Lehrplan Deutsch als Zweitsprache -&gt; also auf Lernbereiche eines anderen Lehrplans</skos:editorialNote>
     </owl:Class>
     
 
@@ -13286,8 +13344,9 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment>Verweist auf Kap0 - Textabsatz FUEZ</rdfs:comment>
         <rdfs:label xml:lang="de">Verweis auf übergreifende Ziele (BY)</rdfs:label>
-        <skos:editorialNote>Verweis zu den Übergreifenden Zielen (&quot;Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie&quot;)</skos:editorialNote>
+        <skos:editorialNote>Verweis zu den Übergreifenden Zielen (&quot;Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie&quot;) -&gt; also auf Prosatextteil?</skos:editorialNote>
     </owl:Class>
     
 
@@ -13307,8 +13366,9 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe</skos:editorialNote>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment>Verweist auf Kap4 - Lernbereiche</rdfs:comment>
         <rdfs:label xml:lang="de">Verweis auf Querverweise (BY)</rdfs:label>
-        <skos:editorialNote>Verweis auf die Fachlehrpläne anderer Fächer</skos:editorialNote>
+        <skos:editorialNote>Verweis auf die Fachlehrpläne anderer Fächer -&gt; also auf Lernbereiche eines anderen Lehrplans</skos:editorialNote>
     </owl:Class>
     
 
@@ -15701,6 +15761,180 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030299 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030299">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030183"/>
+        <rdfs:comment>Besteht aus Text, Dateianhängen, Links</rdfs:comment>
+        <rdfs:label xml:lang="de">Verweis auf Aufgabe (BY)</rdfs:label>
+        <skos:editorialNote>z.B. PDF-Dokument zum Downloaden (Arbeitsblätter o.ä.)</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030300 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030300">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030183"/>
+        <rdfs:comment>Besteht aus Text, Dateianhängen, Links</rdfs:comment>
+        <rdfs:label xml:lang="de">Verweis auf Material (BY)</rdfs:label>
+        <skos:editorialNote>z.B. Verlinkung auf Mundo zu einem spzifischen Material da</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030301 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030301">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030183"/>
+        <rdfs:comment>Besteht aus Text, Links in die ByCS</rdfs:comment>
+        <rdfs:label xml:lang="de">Verweis auf mebis (BY)</rdfs:label>
+        <skos:editorialNote>Verlinkung zu mebis -&gt; Einloggen über ByCS</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030302 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030302">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030183"/>
+        <rdfs:comment>Erläutert Kompetenzerwartungen und Inhalte; besteht aus Text (inkl. HTML u TeX), Dateianhängen, Links</rdfs:comment>
+        <rdfs:label xml:lang="de">Verweis auf Erläuterung (BY)</rdfs:label>
+        <skos:editorialNote>Verweist auf Erläuterungen -&gt; Erläuterungen selbst sind CE-Hinweise</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030303 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030303">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0001014"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Erläuterung (BY)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030304 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030304">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002044"/>
+        <rdfs:label xml:lang="de">Bildungs- und Erziehungsauftrag (BY)</rdfs:label>
+        <skos:editorialNote>für jede Schulart einheitlich einen Bildungs- und Erziehungsauftrag</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030305 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030305">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002044"/>
+        <rdfs:label xml:lang="de">Übergreifende Bildungs- und Erziehungsziele (BY)</rdfs:label>
+        <skos:altLabel>Schulart- und fächerübergreifende Bildungs- und Erziehungsziele sowie Alltagskompetenz und Lebensökonomie (BY)</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030306 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030306">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002044"/>
+        <rdfs:label xml:lang="de">Fachprofil (BY)</rdfs:label>
+        <skos:editorialNote>für jede Schulart und jedes Fach ein Fachprofil</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030307 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030307">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0002044"/>
+        <rdfs:label xml:lang="de">Grundlegende Kompetenzen (Jahrgangsstufenprofil) (BY)</rdfs:label>
+        <skos:altLabel>Jahrgangsstufenprofil (BY)</skos:altLabel>
+        <skos:editorialNote>für jede Schulart, jede JS ein Profil (alle Kompetenzen aufgelistet)</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030308 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030308">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030304"/>
+        <rdfs:label xml:lang="de">Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)</rdfs:label>
+        <skos:editorialNote>nur für Grundschule und Förderschule</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030309 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030309">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000497"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Kompetenzbereich (BY)</rdfs:label>
+        <skos:editorialNote>Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (z.B. deutsch und Moderne Fremdsprache) (an die Bistas angelehnt)</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030310 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030310">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000497"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Prozessbezogene Kompetenz (BY)</rdfs:label>
+        <skos:editorialNote>Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030311 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030311">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000434"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000497"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Gegenstandsbereich (BY)</rdfs:label>
+        <skos:editorialNote>Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)</skos:editorialNote>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -15904,16 +16138,20 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     
 
 
+    <!-- http://qudt.org/vocab/unit/MIN -->
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/MIN">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label xml:lang="de">Minute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://w3id.org/kim/schulfaecher/s1000 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1000">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Alt-Griechisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Alt-Griechisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20003"/>
-        <skos:prefLabel xml:lang="de">Alt-Griechisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -15921,12 +16159,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     <!-- http://w3id.org/kim/schulfaecher/s1001 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1001">
-        <rdfs:label>Biologie (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Biologie (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/080"/>
-        <skos:prefLabel xml:lang="de">Biologie</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -15934,12 +16167,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     <!-- http://w3id.org/kim/schulfaecher/s1002 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1002">
-        <rdfs:label>Chemie (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Chemie (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/100"/>
-        <skos:prefLabel xml:lang="de">Chemie</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -15948,10 +16176,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1003">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Chinesisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Chinesisch (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Chinesisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -15960,13 +16185,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1004">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Darstellendes Spiel (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Darstellendes Spiel (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Theater</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12002"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/12002"/>
-        <skos:prefLabel xml:lang="de">Darstellendes Spiel</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -15975,13 +16194,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1005">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Deutsch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Deutsch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/120"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28001"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/120"/>
-        <skos:prefLabel xml:lang="de">Deutsch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -15990,14 +16203,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1006">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Deutsch als Zweitsprache (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Deutsch als Zweitsprache (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">DaZ</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28002"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/12005"/>
-        <skos:prefLabel xml:lang="de">Deutsch als Zweitsprache</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16006,13 +16212,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1007">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Englisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Englisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20001"/>
-        <skos:prefLabel xml:lang="de">Englisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16021,14 +16221,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1008">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Ethik (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Ethik (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Werte und Normen</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/160"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28004"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/160"/>
-        <skos:prefLabel xml:lang="de">Ethik</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16037,13 +16230,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1009">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Französisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Französisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20002"/>
-        <skos:prefLabel xml:lang="de">Französisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16052,14 +16239,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1010">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Geografie (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Geografie (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Erdkunde</skos:altLabel>
-        <skos:altLabel xml:lang="de">Geographie</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/220"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/220"/>
-        <skos:prefLabel xml:lang="de">Geografie</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16068,12 +16248,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1011">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Geschichte (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Geschichte (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20002"/>
-        <skos:prefLabel xml:lang="de">Geschichte</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16082,13 +16257,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1012">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Gesundheit (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Gesundheit (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Gesundheitserziehung</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/260"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/260"/>
-        <skos:prefLabel xml:lang="de">Gesundheit</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16097,13 +16266,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1013">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
-        <rdfs:label>Informatik (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Informatik (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Informations- und Kommunikationstechnologie</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/320"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/320"/>
-        <skos:prefLabel xml:lang="de">Informatik</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16112,13 +16275,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1014">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Italienisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Italienisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20004"/>
-        <skos:prefLabel xml:lang="de">Italienisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16127,14 +16284,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1015">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Kunst (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Kunst (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Bildende Kunst</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/060"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28006"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/060"/>
-        <skos:prefLabel xml:lang="de">Kunst</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16143,12 +16293,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1016">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Latein (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Latein (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20005"/>
-        <skos:prefLabel xml:lang="de">Latein</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16157,13 +16302,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1017">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
-        <rdfs:label>Mathematik (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Mathematik (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28007"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/380"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/380"/>
-        <skos:prefLabel xml:lang="de">Mathematik</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16172,17 +16311,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1019">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
-        <rdfs:label>MINT (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">MINT (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Chemie, Physik, Biologie</skos:altLabel>
-        <skos:altLabel xml:lang="de">Naturwissenschaften</skos:altLabel>
-        <skos:prefLabel xml:lang="de">MINT</skos:prefLabel>
-        <skos:related rdf:resource="http://w3id.org/kim/schulfaecher/s1001"/>
-        <skos:related rdf:resource="http://w3id.org/kim/schulfaecher/s1002"/>
-        <skos:related rdf:resource="http://w3id.org/kim/schulfaecher/s1013"/>
-        <skos:related rdf:resource="http://w3id.org/kim/schulfaecher/s1017"/>
-        <skos:related rdf:resource="http://w3id.org/kim/schulfaecher/s1022"/>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16191,13 +16320,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1020">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Musik (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Musik (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28008"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/420"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/420"/>
-        <skos:prefLabel xml:lang="de">Musik</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16206,12 +16329,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1021">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Philosophie (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Philosophie (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/450"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/450"/>
-        <skos:prefLabel xml:lang="de">Philosophie</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16219,12 +16337,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     <!-- http://w3id.org/kim/schulfaecher/s1022 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1022">
-        <rdfs:label>Physik (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Physik (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/460"/>
-        <skos:prefLabel xml:lang="de">Physik</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16233,14 +16346,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1023">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Politik (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Politik (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Politische Bildung</skos:altLabel>
-        <skos:altLabel xml:lang="de">Sozialkunde</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/480"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/480"/>
-        <skos:prefLabel xml:lang="de">Politik</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16249,14 +16355,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1024">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Religionslehre (evangelische) (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Religionslehre (evangelische) (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Evangelischer Religionsunterricht</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/520"/>
-        <skos:prefLabel xml:lang="de">Religionslehre (evangelische)</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16265,15 +16364,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1025">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Religionslehre (islamisch) (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Religionslehre (islamisch) (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Islamischer Religionsunterricht</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/520"/>
-        <skos:editorialNote xml:lang="de">EAF 28009 hat hauptsächlich christliche Themen, aber auch einen Abschnitt mit nicht-christlichen Religionen</skos:editorialNote>
-        <skos:prefLabel xml:lang="de">Religionslehre (islamisch)</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16282,14 +16373,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1026">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Religionslehre (katholische) (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Religionslehre (katholische) (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Katholischer Religionsunterricht</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/520"/>
-        <skos:prefLabel xml:lang="de">Religionslehre (katholische)</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16298,13 +16382,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1027">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Russisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Russisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20006"/>
-        <skos:prefLabel xml:lang="de">Russisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16313,14 +16391,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1028">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Sachunterricht (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Sachunterricht (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Heimatunterricht</skos:altLabel>
-        <skos:altLabel xml:lang="de">Sachkunde</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28010"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/28010"/>
-        <skos:prefLabel xml:lang="de">Sachunterricht</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16329,12 +16400,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1029">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Sexualerziehung (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Sexualerziehung (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/560"/>
-        <skos:prefLabel xml:lang="de">Sexualerziehung</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16343,13 +16409,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1030">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Spanisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Spanisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20007"/>
-        <skos:prefLabel xml:lang="de">Spanisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16358,13 +16418,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1031">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Sport (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Sport (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28011"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/600"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/600"/>
-        <skos:prefLabel xml:lang="de">Sport</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16373,13 +16427,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1032">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Türkisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Türkisch (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/20008"/>
-        <skos:prefLabel xml:lang="de">Türkisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16388,12 +16436,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1033">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Wirtschaftskunde (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Wirtschaftskunde (Schulfach)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/openeduhub/vocabs/discipline/700"/>
-        <skos:prefLabel xml:lang="de">Wirtschaftskunde</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16402,10 +16445,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1034">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Hebräisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Hebräisch (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Hebräisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16414,10 +16454,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1035">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Japanisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Japanisch (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Japanisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16426,10 +16463,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1036">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Neugriechisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Neugriechisch (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Neugriechisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16438,10 +16472,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1037">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Polnisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Polnisch (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Polnisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16450,10 +16481,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1038">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Portugiesisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Portugiesisch (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Portugiesisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16462,11 +16490,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1039">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label>Sorbisch (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Sorbisch (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Wendisch</skos:altLabel>
-        <skos:prefLabel xml:lang="de">Sorbisch</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16475,10 +16499,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1040">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Astronomie (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Astronomie (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Astronomie</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16487,10 +16508,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1041">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Deutsche Gebärdensprache (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Deutsche Gebärdensprache (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Deutsche Gebärdensprache</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16499,10 +16517,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1042">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Gesellschaftswissenschaften (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Gesellschaftswissenschaften (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Gesellschaftswissenschaften</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16511,10 +16526,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1043">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Psychologie (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Psychologie (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Psychologie</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16523,10 +16535,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1044">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Ernährung (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Ernährung (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Ernährung</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16535,11 +16544,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1045">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label>Erziehungswissenschaften (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Erziehungswissenschaften (Schulfach)</rdfs:label>
-        <skos:altLabel xml:lang="de">Pädagogik</skos:altLabel>
-        <skos:prefLabel xml:lang="de">Erziehungswissenschaften</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16548,10 +16553,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1046">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Medienbildung (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Medienbildung (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Medienbildung</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16560,10 +16562,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1047">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label>Hauswirtschaft (KIM)</rdfs:label>
         <rdfs:label xml:lang="de">Hauswirtschaft (Schulfach)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Hauswirtschaft</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="http://w3id.org/kim/schulfaecher/"/>
     </owl:NamedIndividual>
     
 
@@ -16695,312 +16694,126 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
     
 
 
+    <!-- https://qudt.org/vocab/unit/HR -->
+
+    <owl:NamedIndividual rdf:about="https://qudt.org/vocab/unit/HR">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:label xml:lang="de">Stunde</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a">
-        <rdfs:label>Fachgebundene Hochschulreife (KIM)</rdfs:label>
-        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q1391140"/>
-        <skos:prefLabel xml:lang="de">Fachgebundene Hochschulreife</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schulabschluesse/"/>
-        <gnd:broaderTermGeneral rdf:resource="https://d-nb.info/gnd/4160223-7"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a"/>
     
 
 
     <!-- https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4">
-        <rdfs:label>Mittlerer Schulabschluss (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Qualifizierter Sekundarabschluss I</skos:altLabel>
-        <skos:altLabel xml:lang="de">Realschulabschluss</skos:altLabel>
-        <skos:definition xml:lang="de">Mittlerer Schulabschluss wird nach 10 Jahren erreicht</skos:definition>
-        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q1345057"/>
-        <skos:exactMatch rdf:resource="https://d-nb.info/gnd/4170262-1"/>
-        <skos:prefLabel xml:lang="de">Mittlerer Schulabschluss</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schulabschluesse/"/>
-        <gnd:broaderTermGeneral rdf:resource="https://d-nb.info/gnd/4053444-3"/>
-        <gnd:gndIdentifier>4170262-1</gnd:gndIdentifier>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a">
-        <rdfs:label>Erster allgemeinbildender Schulabschluss (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Hauptschulabschluss</skos:altLabel>
-        <skos:definition xml:lang="de">Erster Allgemeinbildender Schulabschluss wird nach 9 Jahren erreicht</skos:definition>
-        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q884856"/>
-        <skos:exactMatch rdf:resource="https://d-nb.info/gnd/4130918-2"/>
-        <skos:prefLabel xml:lang="de">Erster allgemeinbildender Schulabschluss</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schulabschluesse/"/>
-        <gnd:broaderTermGeneral rdf:resource="https://d-nb.info/gnd/4053444-3"/>
-        <gnd:gndIdentifier>4130918-2</gnd:gndIdentifier>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4"/>
     
 
 
     <!-- https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0">
-        <rdfs:label>Ohne Schulabschluss (KIM)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Ohne Schulabschluss</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schulabschluesse/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0"/>
     
 
 
     <!-- https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a">
-        <rdfs:label>Fachhochschulreife (KIM)</rdfs:label>
-        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q1391297"/>
-        <skos:exactMatch rdf:resource="https://d-nb.info/gnd/4395719-5"/>
-        <skos:prefLabel xml:lang="de">Fachhochschulreife</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schulabschluesse/"/>
-        <gnd:broaderTermGeneral rdf:resource="https://d-nb.info/gnd/4053444-3"/>
-        <gnd:gndIdentifier>4395719-5</gnd:gndIdentifier>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a"/>
     
 
 
     <!-- https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d">
-        <rdfs:label>Allgemeine Hochschulreife (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Abitur</skos:altLabel>
-        <skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q708387"/>
-        <skos:exactMatch rdf:resource="https://d-nb.info/gnd/4049194-8"/>
-        <skos:prefLabel xml:lang="de">Allgemeine Hochschulreife</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schulabschluesse/"/>
-        <gnd:broaderTermGeneral rdf:resource="https://d-nb.info/gnd/4160223-7"/>
-        <gnd:gndIdentifier>4049194-8</gnd:gndIdentifier>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s02 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s02">
-        <rdfs:label>Grundschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_1"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level1"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level1"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/1"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/2"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/3"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/4"/>
-        <skos:prefLabel xml:lang="de">Grundschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s02"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s03 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s03">
-        <rdfs:label>Hauptschule (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Mittelschule</skos:altLabel>
-        <skos:altLabel xml:lang="de">Mittelstufenschule</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level2"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/10"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/5"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/6"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/7"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/8"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/9"/>
-        <skos:prefLabel xml:lang="de">Hauptschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s03"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s04 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s04">
-        <rdfs:label>Realschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level2"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/10"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/5"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/6"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/7"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/8"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/9"/>
-        <skos:prefLabel xml:lang="de">Realschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s04"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s05 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s05">
-        <rdfs:label>Gesamtschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_2"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/10"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/11"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/12"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/13"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/5"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/6"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/7"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/8"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/9"/>
-        <skos:prefLabel xml:lang="de">Gesamtschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s05"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s06 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s06">
-        <rdfs:label>Förderschule (KIM)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Förderschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s06"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s07 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s07">
-        <rdfs:label>Oberschule (KIM)</rdfs:label>
-        <skos:prefLabel xml:lang="de">Oberschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s07"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s08 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s08">
-        <rdfs:label>Gymnasium (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_2"/>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/10"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/11"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/12"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/13"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/5"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/6"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/7"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/8"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/9"/>
-        <skos:prefLabel xml:lang="de">Gymnasium</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s08"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s09 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s09">
-        <rdfs:label>Gemeinschaftsschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:prefLabel xml:lang="de">Gemeinschaftsschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s09"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s10 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s10">
-        <rdfs:label>Sekundarschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level2"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level2"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/10"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/5"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/6"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/7"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/8"/>
-        <skos:narrowMatch rdf:resource="http://w3id.org/openeduhub/vocabs/educationalLevel/9"/>
-        <skos:prefLabel xml:lang="de">Sekundarschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s10"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s11 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s11">
-        <rdfs:label>Berufsfachschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:prefLabel xml:lang="de">Berufsfachschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s11"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s12 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s12">
-        <rdfs:label>Berufsschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:prefLabel xml:lang="de">Berufsschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s12"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s13 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s13">
-        <rdfs:label>Fachoberschule (KIM)</rdfs:label>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:prefLabel xml:lang="de">Fachoberschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s13"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s14 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s14">
-        <rdfs:label>Berufliches Gymnasium (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Fachgymnasium</skos:altLabel>
-        <skos:closeMatch rdf:resource="http://w3id.org/kim/educationalLevel/level_3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-1997/level3"/>
-        <skos:closeMatch rdf:resource="https://w3id.org/kim/isced-2011/level3"/>
-        <skos:prefLabel xml:lang="de">Berufliches Gymnasium</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s14"/>
     
 
 
     <!-- https://w3id.org/kim/schularten/s15 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s15">
-        <rdfs:label>Privat- und Ersatzschule (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Ersatzschule</skos:altLabel>
-        <skos:altLabel xml:lang="de">Freie Schule</skos:altLabel>
-        <skos:altLabel xml:lang="de">Privatschule</skos:altLabel>
-        <skos:prefLabel xml:lang="de">Privat- und Ersatzschule</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s15"/>
     
 
 
@@ -17008,10 +16821,6 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s16">
         <rdfs:label xml:lang="de">Abendgymnasium</rdfs:label>
-        <rdfs:label>Abendgymnasium (KIM)</rdfs:label>
-        <skos:altLabel xml:lang="de">Kolleg</skos:altLabel>
-        <skos:prefLabel xml:lang="de">Abendgymnasium</skos:prefLabel>
-        <skos:topConceptOf rdf:resource="https://w3id.org/kim/schularten/"/>
     </owl:NamedIndividual>
     
 
@@ -17202,6 +17011,8 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000050">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
         <rdfs:label xml:lang="de">G8 Qualifikationsphase</rdfs:label>
     </owl:NamedIndividual>
     
@@ -17211,6 +17022,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000051">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
         <rdfs:label xml:lang="de">G8 Einführungsphase</rdfs:label>
     </owl:NamedIndividual>
     
@@ -17220,6 +17032,8 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000052">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
         <rdfs:label xml:lang="de">G9 Qualifikationsphase</rdfs:label>
     </owl:NamedIndividual>
     
@@ -17229,6 +17043,7 @@ kommt nur unter dem Punkt &quot;Grammatik&quot; vor</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000055">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
         <rdfs:label xml:lang="de">G9 Einführungsphase</rdfs:label>
     </owl:NamedIndividual>
     
@@ -19038,6 +18853,35 @@ gilt für die Jahrgangsstufen 7-9</skos:editorialNote>
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000532 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000532">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000478"/>
+        <rdfs:label xml:lang="de">Optional</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000533 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000533">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000478"/>
+        <rdfs:label xml:lang="de">Verbindlich</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0000535 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000535">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:comment xml:lang="de">Die Unterrichtsstunde ist ein festgelegter Zeitabschnitt für den Unterrichtsablauf.</rdfs:comment>
+        <rdfs:label xml:lang="de">Unterrichtsstunde</rdfs:label>
+        <skos:editorialNote xml:lang="de">Im Allgemeinen umfasst eine Schulstunde 45 Minuten.</skos:editorialNote>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_0000560 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000560">
@@ -19808,6 +19652,105 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     
 
 
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000001 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000001">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
+        <rdfs:label>Alt-Griechisch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000002 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000002">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
+        <rdfs:label>alte Sprachen: Griechisch</rdfs:label>
+        <skos:exactMatch rdf:resource="https://w3id.org/lehrplan/ontology/LP_1000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000003 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000003">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
+        <rdfs:label>Griechisch (Sek I nur gymnasialer Bildungsgang, Sek II)</rdfs:label>
+        <skos:exactMatch rdf:resource="https://w3id.org/lehrplan/ontology/LP_1000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000004 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000004">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000046"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000055"/>
+        <rdfs:label>Griechisch</rdfs:label>
+        <skos:exactMatch rdf:resource="https://w3id.org/lehrplan/ontology/LP_1000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000006 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000006">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000046"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000055"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
+        <rdfs:label>Darstellendes Spiel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000007 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000007">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
+        <rdfs:label>Literatur und Theater</rdfs:label>
+        <skos:closeMatch rdf:resource="http://w3id.org/kim/schulfaecher/s1004"/>
+        <skos:exactMatch rdf:resource="https://w3id.org/lehrplan/ontology/LP_1000006"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000008 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000008">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
+        <rdfs:label>1-10 Theater</rdfs:label>
+        <skos:exactMatch rdf:resource="https://w3id.org/lehrplan/ontology/LP_1000006"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_1000009 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_1000009">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
+        <LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
+        <rdfs:label>Darstellen und Gestalten</rdfs:label>
+        <skos:exactMatch rdf:resource="https://w3id.org/lehrplan/ontology/LP_1000006"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/lehrplan/ontology/LP_2000001 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_2000001">
@@ -20103,9 +20046,6 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <rdfs:label>prov:wasDerivedFrom</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="https://orcid.org/0000-0001-6378-2618">
         <rdfs:label>Steffen Rörtgen</rdfs:label>
     </rdf:Description>
@@ -20471,6 +20411,195 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000012"/>
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_2000013"/>
         </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 

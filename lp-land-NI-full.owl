@@ -14,9 +14,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/>
-<https://w3id.org/lehrplan/ontology/1.0.0-5>
-Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-5, https://w3id.org/lehrplan/ontology")
-Annotation(terms:created "2025-08-18")
+<https://w3id.org/lehrplan/ontology/1.0.0-6>
+Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-6, https://w3id.org/lehrplan/ontology")
+Annotation(terms:created "2025-09-22")
 Annotation(terms:creator <https://orcid.org/0000-0001-6378-2618>)
 Annotation(terms:creator <https://orcid.org/0000-0001-7192-7143>)
 Annotation(terms:creator "Almut Steinlein"@de)
@@ -29,7 +29,7 @@ Annotation(terms:license <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(terms:subject "Lehrplan Niedersachsen")
 Annotation(terms:title "Curriculum Ontology"@en)
 Annotation(terms:title "Lehrplan Ontologie"@de)
-Annotation(owl:versionInfo "2025-08-18")
+Annotation(owl:versionInfo "2025-09-22")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -75,6 +75,7 @@ Declaration(Class(obo:IAO_0000102))
 Declaration(Class(obo:IAO_0000225))
 Declaration(Class(obo:IAO_0000300))
 Declaration(Class(obo:IAO_0000409))
+Declaration(Class(<http://qudt.org/schema/qudt/Unit>))
 Declaration(Class(ontology:LP_0000001))
 Declaration(Class(ontology:LP_0000002))
 Declaration(Class(ontology:LP_0000003))
@@ -96,6 +97,8 @@ Declaration(Class(ontology:LP_0000040))
 Declaration(Class(ontology:LP_0000043))
 Declaration(Class(ontology:LP_0000053))
 Declaration(Class(ontology:LP_0000054))
+Declaration(Class(ontology:LP_0000056))
+Declaration(Class(ontology:LP_0000057))
 Declaration(Class(ontology:LP_0000069))
 Declaration(Class(ontology:LP_0000076))
 Declaration(Class(ontology:LP_0000077))
@@ -118,7 +121,6 @@ Declaration(Class(ontology:LP_0000341))
 Declaration(Class(ontology:LP_0000346))
 Declaration(Class(ontology:LP_0000347))
 Declaration(Class(ontology:LP_0000349))
-Declaration(Class(ontology:LP_0000429))
 Declaration(Class(ontology:LP_0000438))
 Declaration(Class(ontology:LP_0000443))
 Declaration(Class(ontology:LP_0000475))
@@ -126,6 +128,8 @@ Declaration(Class(ontology:LP_0000478))
 Declaration(Class(ontology:LP_0000482))
 Declaration(Class(ontology:LP_0000493))
 Declaration(Class(ontology:LP_0000499))
+Declaration(Class(ontology:LP_0000505))
+Declaration(Class(ontology:LP_0000508))
 Declaration(Class(ontology:LP_0000530))
 Declaration(Class(ontology:LP_0000531))
 Declaration(Class(ontology:LP_0000536))
@@ -214,30 +218,23 @@ Declaration(Class(ontology:LP_0030266))
 Declaration(Class(ontology:LP_0030267))
 Declaration(Class(ontology:LP_0030268))
 Declaration(Class(ontology:LP_0030269))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000054))
 Declaration(ObjectProperty(obo:BFO_0000055))
-Declaration(ObjectProperty(obo:BFO_0000056))
-Declaration(ObjectProperty(obo:BFO_0000057))
-Declaration(ObjectProperty(obo:BFO_0000058))
-Declaration(ObjectProperty(obo:BFO_0000059))
 Declaration(ObjectProperty(obo:BFO_0000062))
 Declaration(ObjectProperty(obo:BFO_0000063))
 Declaration(ObjectProperty(obo:BFO_0000066))
-Declaration(ObjectProperty(obo:BFO_0000084))
-Declaration(ObjectProperty(obo:BFO_0000101))
 Declaration(ObjectProperty(obo:BFO_0000108))
-Declaration(ObjectProperty(obo:BFO_0000115))
 Declaration(ObjectProperty(obo:BFO_0000117))
+Declaration(ObjectProperty(obo:BFO_0000118))
 Declaration(ObjectProperty(obo:BFO_0000121))
-Declaration(ObjectProperty(obo:BFO_0000124))
-Declaration(ObjectProperty(obo:BFO_0000127))
-Declaration(ObjectProperty(obo:BFO_0000129))
 Declaration(ObjectProperty(obo:BFO_0000132))
+Declaration(ObjectProperty(obo:BFO_0000136))
+Declaration(ObjectProperty(obo:BFO_0000138))
 Declaration(ObjectProperty(obo:BFO_0000139))
 Declaration(ObjectProperty(obo:BFO_0000153))
-Declaration(ObjectProperty(obo:BFO_0000171))
-Declaration(ObjectProperty(obo:BFO_0000176))
-Declaration(ObjectProperty(obo:BFO_0000178))
+Declaration(ObjectProperty(obo:BFO_0000181))
 Declaration(ObjectProperty(obo:BFO_0000183))
 Declaration(ObjectProperty(obo:BFO_0000184))
 Declaration(ObjectProperty(obo:BFO_0000185))
@@ -247,14 +244,18 @@ Declaration(ObjectProperty(obo:BFO_0000196))
 Declaration(ObjectProperty(obo:BFO_0000197))
 Declaration(ObjectProperty(obo:BFO_0000199))
 Declaration(ObjectProperty(obo:BFO_0000200))
-Declaration(ObjectProperty(obo:BFO_0000210))
-Declaration(ObjectProperty(obo:BFO_0000216))
-Declaration(ObjectProperty(obo:BFO_0000218))
 Declaration(ObjectProperty(obo:BFO_0000221))
 Declaration(ObjectProperty(obo:BFO_0000222))
 Declaration(ObjectProperty(obo:BFO_0000223))
 Declaration(ObjectProperty(obo:BFO_0000224))
 Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:RO_0000056))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0000058))
+Declaration(ObjectProperty(obo:RO_0000059))
+Declaration(ObjectProperty(obo:RO_0000079))
+Declaration(ObjectProperty(obo:RO_0000085))
+Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasDerivedFrom>))
 Declaration(ObjectProperty(ontology:LP_0000008))
 Declaration(ObjectProperty(ontology:LP_0000015))
 Declaration(ObjectProperty(ontology:LP_0000017))
@@ -307,6 +308,7 @@ Declaration(NamedIndividual(obo:IAO_0000421))
 Declaration(NamedIndividual(obo:IAO_0000423))
 Declaration(NamedIndividual(obo:IAO_0000428))
 Declaration(NamedIndividual(obo:OMO_0001000))
+Declaration(NamedIndividual(<http://qudt.org/vocab/unit/MIN>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1000>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1001>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1002>))
@@ -354,9 +356,9 @@ Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1044>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1045>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1046>))
 Declaration(NamedIndividual(<http://w3id.org/kim/schulfaecher/s1047>))
+Declaration(NamedIndividual(<https://qudt.org/vocab/unit/HR>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4>))
-Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a>))
 Declaration(NamedIndividual(<https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d>))
@@ -425,6 +427,9 @@ Declaration(NamedIndividual(ontology:LP_0000500))
 Declaration(NamedIndividual(ontology:LP_0000501))
 Declaration(NamedIndividual(ontology:LP_0000502))
 Declaration(NamedIndividual(ontology:LP_0000504))
+Declaration(NamedIndividual(ontology:LP_0000532))
+Declaration(NamedIndividual(ontology:LP_0000533))
+Declaration(NamedIndividual(ontology:LP_0000535))
 Declaration(NamedIndividual(ontology:LP_0000560))
 Declaration(NamedIndividual(ontology:LP_0000616))
 Declaration(NamedIndividual(ontology:LP_0000627))
@@ -522,49 +527,33 @@ Declaration(AnnotationProperty(skos:topConceptOf))
 Declaration(AnnotationProperty(gnd:broaderTermGeneral))
 Declaration(AnnotationProperty(gnd:gndIdentifier))
 Declaration(AnnotationProperty(ontology:LP_0000141))
+Declaration(Datatype(<http://qudt.org/schema/qudt/LatexString>))
 ############################
 #   Annotation Properties
 ############################
 
-# Annotation Property: skos:altLabel (skos:altLabel)
+# Annotation Property: terms:created (created)
 
-AnnotationAssertion(rdfs:label skos:altLabel "skos:altLabel")
+AnnotationAssertion(rdfs:label terms:created "created")
+AnnotationPropertyRange(terms:created xsd:date)
 
-# Annotation Property: skos:closeMatch (skos:closeMatch)
+# Annotation Property: terms:creator (creator)
 
-AnnotationAssertion(rdfs:label skos:closeMatch "skos:closeMatch")
+AnnotationAssertion(rdfs:label terms:creator "creator")
 
-# Annotation Property: skos:definition (skos:definition)
+# Annotation Property: terms:description (description)
 
-AnnotationAssertion(rdfs:label skos:definition "skos:definition")
+AnnotationAssertion(rdfs:label terms:description "description")
 
-# Annotation Property: skos:editorialNote (skos:editorialNote)
+# Annotation Property: terms:subject (subject)
 
-AnnotationAssertion(rdfs:label skos:editorialNote "skos:editorialNote")
+AnnotationAssertion(rdfs:label terms:subject "subject")
+AnnotationPropertyRange(terms:subject xsd:string)
 
-# Annotation Property: skos:exactMatch (skos:exactMatch)
+# Annotation Property: terms:title (title)
 
-AnnotationAssertion(rdfs:label skos:exactMatch "skos:exactMatch")
-
-# Annotation Property: skos:narrowMatch (skos:narrowMatch)
-
-AnnotationAssertion(rdfs:label skos:narrowMatch "skos:narrowMatch")
-
-# Annotation Property: skos:related (skos:related)
-
-AnnotationAssertion(rdfs:label skos:related "skos:related")
-
-# Annotation Property: skos:topConceptOf (skos:topConceptOf)
-
-AnnotationAssertion(rdfs:label skos:topConceptOf "skos:topConceptOf")
-
-# Annotation Property: gnd:broaderTermGeneral (gnd:broaderTermGeneral)
-
-AnnotationAssertion(rdfs:label gnd:broaderTermGeneral "gnd:broaderTermGeneral")
-
-# Annotation Property: gnd:gndIdentifier (gnd:gndIdentifier)
-
-AnnotationAssertion(rdfs:label gnd:gndIdentifier "gnd:gndIdentifier")
+AnnotationAssertion(rdfs:label terms:title "title")
+AnnotationPropertyRange(terms:title xsd:string)
 
 # Annotation Property: ontology:LP_0000141 (entspricht KIM Schulart)
 
@@ -595,44 +584,6 @@ AnnotationAssertion(skos:example obo:BFO_0000055 "A balding process realizes a d
 AnnotationAssertion(skos:scopeNote obo:BFO_0000055 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
 ObjectPropertyDomain(obo:BFO_0000055 obo:BFO_0000015)
 ObjectPropertyRange(obo:BFO_0000055 obo:BFO_0000017)
-
-# Object Property: obo:BFO_0000056 (participates in)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000056 "250-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000056 "participates in"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000056 "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000056 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-InverseObjectProperties(obo:BFO_0000056 obo:BFO_0000057)
-ObjectPropertyDomain(obo:BFO_0000056 ObjectUnionOf(obo:BFO_0000020 obo:BFO_0000031 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006))))
-ObjectPropertyRange(obo:BFO_0000056 obo:BFO_0000015)
-
-# Object Property: obo:BFO_0000057 (has participant)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000057 "248-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000057 "has participant"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000057 "p has participant c =Def c participates in p"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000057 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000057 obo:BFO_0000015)
-ObjectPropertyRange(obo:BFO_0000057 ObjectUnionOf(obo:BFO_0000020 obo:BFO_0000031 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006))))
-
-# Object Property: obo:BFO_0000058 (is concretized by)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000058 "258-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000058 "is concretized by"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000058 "c is concretized by b =Def b concretizes c"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000058 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-InverseObjectProperties(obo:BFO_0000058 obo:BFO_0000059)
-ObjectPropertyDomain(obo:BFO_0000058 obo:BFO_0000031)
-ObjectPropertyRange(obo:BFO_0000058 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000020))
-
-# Object Property: obo:BFO_0000059 (concretizes)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000059 "256-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000059 "concretizes"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000059 "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000059 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000059 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000020))
-ObjectPropertyRange(obo:BFO_0000059 obo:BFO_0000031)
 
 # Object Property: obo:BFO_0000062 (preceded by)
 
@@ -667,26 +618,6 @@ InverseObjectProperties(obo:BFO_0000066 obo:BFO_0000183)
 ObjectPropertyDomain(obo:BFO_0000066 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000035))
 ObjectPropertyRange(obo:BFO_0000066 ObjectUnionOf(obo:BFO_0000029 obo:BFO_0000040))
 
-# Object Property: obo:BFO_0000084 (generically depends on)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000084 "252-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000084 "generically depends on"@en)
-AnnotationAssertion(skos:altLabel obo:BFO_0000084 "g-depends on"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000084 "b generically depends on c =Def b is a generically dependent continuant & c is an independent continuant that is not a spatial region & at some time t there inheres in c a specifically dependent continuant which concretizes b at t"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000084 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-InverseObjectProperties(obo:BFO_0000084 obo:BFO_0000101)
-ObjectPropertyDomain(obo:BFO_0000084 obo:BFO_0000031)
-ObjectPropertyRange(obo:BFO_0000084 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-
-# Object Property: obo:BFO_0000101 (is carrier of)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000101 "254-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000101 "is carrier of"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000101 "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000101 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000101 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-ObjectPropertyRange(obo:BFO_0000101 obo:BFO_0000031)
-
 # Object Property: obo:BFO_0000108 (exists at)
 
 AnnotationAssertion(dc:identifier obo:BFO_0000108 "118-BFO")
@@ -695,17 +626,6 @@ AnnotationAssertion(skos:definition obo:BFO_0000108 "(Elucidation) exists at is 
 AnnotationAssertion(skos:example obo:BFO_0000108 "First World War exists at 1914-1916; Mexico exists at January 1, 2000"@en)
 ObjectPropertyDomain(obo:BFO_0000108 obo:BFO_0000001)
 ObjectPropertyRange(obo:BFO_0000108 obo:BFO_0000008)
-
-# Object Property: obo:BFO_0000115 (has member part)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000115 "230-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000115 "has member part"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000115 "b has member part c =Def c member part of b"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000115 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-SubObjectPropertyOf(obo:BFO_0000115 obo:BFO_0000178)
-InverseObjectProperties(obo:BFO_0000115 obo:BFO_0000129)
-ObjectPropertyDomain(obo:BFO_0000115 obo:BFO_0000040)
-ObjectPropertyRange(obo:BFO_0000115 obo:BFO_0000040)
 
 # Object Property: obo:BFO_0000117 (has occurrent part)
 
@@ -717,6 +637,18 @@ InverseObjectProperties(obo:BFO_0000117 obo:BFO_0000132)
 TransitiveObjectProperty(obo:BFO_0000117)
 ObjectPropertyDomain(obo:BFO_0000117 obo:BFO_0000003)
 ObjectPropertyRange(obo:BFO_0000117 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000118 (has proper occurrent part)
+
+AnnotationAssertion(dc:identifier obo:BFO_0000118 "154-BFO")
+AnnotationAssertion(rdfs:label obo:BFO_0000118 "has proper occurrent part"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000118 "b has proper occurrent part c =Def b has occurrent part c & b and c are not identical"@en)
+AnnotationAssertion(skos:example obo:BFO_0000118 "As for has occurrent part."@en)
+SubObjectPropertyOf(obo:BFO_0000118 obo:BFO_0000117)
+InverseObjectProperties(obo:BFO_0000118 obo:BFO_0000138)
+TransitiveObjectProperty(obo:BFO_0000118)
+ObjectPropertyDomain(obo:BFO_0000118 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000118 obo:BFO_0000003)
 
 # Object Property: obo:BFO_0000121 (has temporal part)
 
@@ -730,36 +662,6 @@ TransitiveObjectProperty(obo:BFO_0000121)
 ObjectPropertyDomain(obo:BFO_0000121 obo:BFO_0000003)
 ObjectPropertyRange(obo:BFO_0000121 obo:BFO_0000003)
 
-# Object Property: obo:BFO_0000124 (location of)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000124 "236-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000124 "location of"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000124 "b location of c =Def c located in b"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000124 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-InverseObjectProperties(obo:BFO_0000124 obo:BFO_0000171)
-ObjectPropertyDomain(obo:BFO_0000124 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-ObjectPropertyRange(obo:BFO_0000124 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-
-# Object Property: obo:BFO_0000127 (material basis of)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000127 "244-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000127 "material basis of"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000127 "b material basis of c =Def c has material basis b"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000127 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-InverseObjectProperties(obo:BFO_0000127 obo:BFO_0000218)
-ObjectPropertyDomain(obo:BFO_0000127 obo:BFO_0000040)
-ObjectPropertyRange(obo:BFO_0000127 obo:BFO_0000016)
-
-# Object Property: obo:BFO_0000129 (member part of)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000129 "228-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000129 "member part of"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000129 "b member part of c =Def b is an object & c is a material entity & there is some time t such that b continuant part of c at t & there is a mutually exhaustive and pairwise disjoint partition of c into objects x1, ..., xn (for some n ≠ 1) with b = xi (for some 1 <= i <= n)"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000129 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-SubObjectPropertyOf(obo:BFO_0000129 obo:BFO_0000176)
-ObjectPropertyDomain(obo:BFO_0000129 obo:BFO_0000040)
-ObjectPropertyRange(obo:BFO_0000129 obo:BFO_0000040)
-
 # Object Property: obo:BFO_0000132 (occurrent part of)
 
 AnnotationAssertion(dc:identifier obo:BFO_0000132 "003-BFO")
@@ -769,6 +671,28 @@ AnnotationAssertion(skos:example obo:BFO_0000132 "Mary's 5th birthday is an occu
 TransitiveObjectProperty(obo:BFO_0000132)
 ObjectPropertyDomain(obo:BFO_0000132 obo:BFO_0000003)
 ObjectPropertyRange(obo:BFO_0000132 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000136 (proper temporal part of)
+
+AnnotationAssertion(dc:identifier obo:BFO_0000136 "116-BFO")
+AnnotationAssertion(rdfs:label obo:BFO_0000136 "proper temporal part of"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000136 "b proper temporal part of c =Def b temporal part of c & not (b = c)"@en)
+AnnotationAssertion(skos:example obo:BFO_0000136 "As for temporal part of."@en)
+SubObjectPropertyOf(obo:BFO_0000136 obo:BFO_0000139)
+InverseObjectProperties(obo:BFO_0000136 obo:BFO_0000181)
+ObjectPropertyDomain(obo:BFO_0000136 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000136 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000138 (proper occurrent part of)
+
+AnnotationAssertion(dc:identifier obo:BFO_0000138 "005-BFO")
+AnnotationAssertion(rdfs:label obo:BFO_0000138 "proper occurrent part of"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000138 "b proper occurrent part of c =Def b occurrent part of c & b and c are not identical"@en)
+AnnotationAssertion(skos:example obo:BFO_0000138 "As for occurrent part of."@en)
+SubObjectPropertyOf(obo:BFO_0000138 obo:BFO_0000132)
+TransitiveObjectProperty(obo:BFO_0000138)
+ObjectPropertyDomain(obo:BFO_0000138 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000138 obo:BFO_0000003)
 
 # Object Property: obo:BFO_0000139 (temporal part of)
 
@@ -791,34 +715,15 @@ FunctionalObjectProperty(obo:BFO_0000153)
 ObjectPropertyDomain(obo:BFO_0000153 obo:BFO_0000011)
 ObjectPropertyRange(obo:BFO_0000153 obo:BFO_0000008)
 
-# Object Property: obo:BFO_0000171 (located in)
+# Object Property: obo:BFO_0000181 (has proper temporal part)
 
-AnnotationAssertion(dc:identifier obo:BFO_0000171 "234-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000171 "located in"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000171 "b located in c =Def b is an independent continuant & c is an independent & neither is a spatial region & there is some time t such that the spatial region which b occupies at t is continuant part of the spatial region which c occupies at t"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000171 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000171 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-ObjectPropertyRange(obo:BFO_0000171 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-
-# Object Property: obo:BFO_0000176 (continuant part of)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000176 "221-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000176 "continuant part of"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000176 "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en)
-AnnotationAssertion(skos:example obo:BFO_0000176 "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000176 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-InverseObjectProperties(obo:BFO_0000176 obo:BFO_0000178)
-ObjectPropertyDomain(obo:BFO_0000176 obo:BFO_0000002)
-ObjectPropertyRange(obo:BFO_0000176 obo:BFO_0000002)
-
-# Object Property: obo:BFO_0000178 (has continuant part)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000178 "271-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000178 "has continuant part"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000178 "b has continuant part c =Def c continuant part of b"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000178 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000178 obo:BFO_0000002)
-ObjectPropertyRange(obo:BFO_0000178 obo:BFO_0000002)
+AnnotationAssertion(dc:identifier obo:BFO_0000181 "212-BFO")
+AnnotationAssertion(rdfs:label obo:BFO_0000181 "has proper temporal part"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000181 "b has proper temporal part c =Def c proper temporal part of b"@en)
+AnnotationAssertion(skos:example obo:BFO_0000181 "As for has temporal part."@en)
+SubObjectPropertyOf(obo:BFO_0000181 obo:BFO_0000121)
+ObjectPropertyDomain(obo:BFO_0000181 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000181 obo:BFO_0000003)
 
 # Object Property: obo:BFO_0000183 (environs)
 
@@ -914,33 +819,6 @@ FunctionalObjectProperty(obo:BFO_0000200)
 ObjectPropertyDomain(obo:BFO_0000200 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000035))
 ObjectPropertyRange(obo:BFO_0000200 obo:BFO_0000011)
 
-# Object Property: obo:BFO_0000210 (occupies spatial region)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000210 "232-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000210 "occupies spatial region"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000210 "b occupies spatial region r =Def b is an independent continuant that is not a spatial region & r is a spatial region & there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000210 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000210 ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(obo:BFO_0000006)))
-ObjectPropertyRange(obo:BFO_0000210 obo:BFO_0000006)
-
-# Object Property: obo:BFO_0000216 (spatially projects onto)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000216 "246-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000216 "spatially projects onto"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000216 "(Elucidation) spatially projects onto is a relation between some spatiotemporal region b and spatial region c such that at some time t, c is the spatial extent of b at t"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000216 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000216 obo:BFO_0000011)
-ObjectPropertyRange(obo:BFO_0000216 obo:BFO_0000006)
-
-# Object Property: obo:BFO_0000218 (has material basis)
-
-AnnotationAssertion(dc:identifier obo:BFO_0000218 "242-BFO")
-AnnotationAssertion(rdfs:label obo:BFO_0000218 "has material basis"@en)
-AnnotationAssertion(skos:definition obo:BFO_0000218 "b has material basis c =Def b is a disposition & c is a material entity & there is some d bearer of b & there is some time t such that c is a continuant part of d at t & d has disposition b because c is a continuant part of d at t"@en)
-AnnotationAssertion(skos:scopeNote obo:BFO_0000218 "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <Link>"@en)
-ObjectPropertyDomain(obo:BFO_0000218 obo:BFO_0000016)
-ObjectPropertyRange(obo:BFO_0000218 obo:BFO_0000040)
-
 # Object Property: obo:BFO_0000221 (first instant of)
 
 AnnotationAssertion(dc:identifier obo:BFO_0000221 "268-BFO")
@@ -997,11 +875,17 @@ AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"@en)
 InverseObjectProperties(obo:IAO_0000136 ontology:LP_0000024)
 ObjectPropertyDomain(obo:IAO_0000136 obo:IAO_0000030)
 
+# Object Property: <http://www.w3.org/ns/prov#wasDerivedFrom> (was derived from)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/ns/prov>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/ns/prov#wasDerivedFrom> "was derived from")
+
 # Object Property: ontology:LP_0000008 (hat Teil)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000008 "hat Teil"@de)
-SubObjectPropertyOf(ontology:LP_0000008 obo:BFO_0000178)
+SubObjectPropertyOf(ontology:LP_0000008 obo:BFO_0000051)
 InverseObjectProperties(ontology:LP_0000008 ontology:LP_0020001)
+TransitiveObjectProperty(ontology:LP_0000008)
 
 # Object Property: ontology:LP_0000015 (hat Prozessteil)
 
@@ -1011,7 +895,7 @@ SubObjectPropertyOf(ontology:LP_0000015 obo:BFO_0000117)
 # Object Property: ontology:LP_0000017 (konkretisiert Lehrplan)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000017 "konkretisiert Lehrplan"@de)
-SubObjectPropertyOf(ontology:LP_0000017 obo:BFO_0000059)
+SubObjectPropertyOf(ontology:LP_0000017 obo:RO_0000059)
 ObjectPropertyRange(ontology:LP_0000017 ontology:LP_0000438)
 
 # Object Property: ontology:LP_0000021 (endet mit Abschluss)
@@ -1042,7 +926,8 @@ ObjectPropertyRange(ontology:LP_0000029 ontology:LP_0000040)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000041 "has unit"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000041 "hat Einheit"@de)
-SubObjectPropertyOf(ontology:LP_0000041 obo:BFO_0000178)
+SubObjectPropertyOf(ontology:LP_0000041 obo:BFO_0000051)
+SubObjectPropertyOf(ontology:LP_0000041 ontology:LP_0000008)
 
 # Object Property: ontology:LP_0000047 (hat Schulstufe)
 
@@ -1053,13 +938,13 @@ SubObjectPropertyOf(ontology:LP_0000047 ontology:LP_0000024)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000048 "has input")
 AnnotationAssertion(rdfs:label ontology:LP_0000048 "hat Input"@de)
-SubObjectPropertyOf(ontology:LP_0000048 obo:BFO_0000057)
+SubObjectPropertyOf(ontology:LP_0000048 obo:RO_0000057)
 
 # Object Property: ontology:LP_0000049 (hat Output)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000049 "has output"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000049 "hat Output"@de)
-SubObjectPropertyOf(ontology:LP_0000049 obo:BFO_0000057)
+SubObjectPropertyOf(ontology:LP_0000049 obo:RO_0000057)
 
 # Object Property: ontology:LP_0000071 (benötigt Niveau)
 
@@ -1083,18 +968,18 @@ InverseObjectProperties(ontology:LP_0000086 ontology:LP_0000840)
 # Object Property: ontology:LP_0000343 (hat Schulartfunktion)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000343 "hat Schulartfunktion"@de)
-SubObjectPropertyOf(ontology:LP_0000343 obo:BFO_0000196)
+SubObjectPropertyOf(ontology:LP_0000343 obo:RO_0000085)
 
 # Object Property: ontology:LP_0000440 (für Bildungsgangabschnitt)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000440 "für Bildungsgangabschnitt"@de)
-SubObjectPropertyOf(ontology:LP_0000440 obo:BFO_0000056)
+SubObjectPropertyOf(ontology:LP_0000440 obo:RO_0000056)
 ObjectPropertyDomain(ontology:LP_0000440 ontology:LP_0000438)
 
 # Object Property: ontology:LP_0000477 (konkretisiert Schulart)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000477 "konkretisiert Schulart"@de)
-SubObjectPropertyOf(ontology:LP_0000477 obo:BFO_0000059)
+SubObjectPropertyOf(ontology:LP_0000477 obo:RO_0000059)
 ObjectPropertyDomain(ontology:LP_0000477 ontology:LP_0000475)
 ObjectPropertyRange(ontology:LP_0000477 ontology:LP_0000111)
 
@@ -1173,7 +1058,7 @@ ObjectPropertyRange(ontology:LP_0000840 ontology:LP_0000037)
 # Object Property: ontology:LP_0020001 (ist Teil von)
 
 AnnotationAssertion(rdfs:label ontology:LP_0020001 "ist Teil von"@de)
-SubObjectPropertyOf(ontology:LP_0020001 obo:BFO_0000176)
+SubObjectPropertyOf(ontology:LP_0020001 obo:BFO_0000050)
 
 # Object Property: ontology:LP_0030051 (hat Beschreibung)
 
@@ -1272,7 +1157,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000002 "continuant"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000002 "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en)
 AnnotationAssertion(skos:example obo:BFO_0000002 "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en)
 SubClassOf(obo:BFO_0000002 obo:BFO_0000001)
-SubClassOf(obo:BFO_0000002 ObjectAllValuesFrom(obo:BFO_0000176 obo:BFO_0000002))
 DisjointClasses(obo:BFO_0000002 obo:BFO_0000003)
 
 # Class: obo:BFO_0000003 (occurrent)
@@ -1309,7 +1193,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000004 "independent continuant"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000004 "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en)
 AnnotationAssertion(skos:example obo:BFO_0000004 "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en)
 SubClassOf(obo:BFO_0000004 obo:BFO_0000002)
-SubClassOf(obo:BFO_0000004 ObjectAllValuesFrom(obo:BFO_0000176 obo:BFO_0000004))
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000020)
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000031)
 
@@ -1320,7 +1203,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000006 "spatial region"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000006 "(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time"@en)
 AnnotationAssertion(skos:example obo:BFO_0000006 "As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region"@en)
 SubClassOf(obo:BFO_0000006 obo:BFO_0000141)
-SubClassOf(obo:BFO_0000006 ObjectAllValuesFrom(obo:BFO_0000176 obo:BFO_0000006))
 
 # Class: obo:BFO_0000008 (temporal region)
 
@@ -1339,7 +1221,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000009 "two-dimensional spatial region"@
 AnnotationAssertion(skos:definition obo:BFO_0000009 "(Elucidation) A two-dimensional spatial region is a spatial region that is a whole consisting of a surface together with zero or more surfaces which may have spatial regions of lower dimension as parts"@en)
 AnnotationAssertion(skos:example obo:BFO_0000009 "The surface of a sphere-shaped part of space; an infinitely thin plane in space"@en)
 SubClassOf(obo:BFO_0000009 obo:BFO_0000006)
-SubClassOf(obo:BFO_0000009 ObjectAllValuesFrom(obo:BFO_0000178 ObjectUnionOf(obo:BFO_0000009 obo:BFO_0000018 obo:BFO_0000026)))
 
 # Class: obo:BFO_0000011 (spatiotemporal region)
 
@@ -1415,7 +1296,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000018 "zero-dimensional spatial region"
 AnnotationAssertion(skos:definition obo:BFO_0000018 "(Elucidation) A zero-dimensional spatial region is one or a collection of more than one spatially disjoint points in space"@en)
 AnnotationAssertion(skos:example obo:BFO_0000018 "The spatial region occupied at some time instant by the North Pole"@en)
 SubClassOf(obo:BFO_0000018 obo:BFO_0000006)
-SubClassOf(obo:BFO_0000018 ObjectAllValuesFrom(obo:BFO_0000178 obo:BFO_0000018))
 
 # Class: obo:BFO_0000019 (quality)
 
@@ -1503,7 +1383,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000026 "one-dimensional spatial region"@
 AnnotationAssertion(skos:definition obo:BFO_0000026 "(Elucidation) A one-dimensional spatial region is a whole consisting of a line together with zero or more lines which may have points as parts"@en)
 AnnotationAssertion(skos:example obo:BFO_0000026 "An edge of a cube-shaped portion of space; a line connecting two points; two parallel lines extended in space"@en)
 SubClassOf(obo:BFO_0000026 obo:BFO_0000006)
-SubClassOf(obo:BFO_0000026 ObjectAllValuesFrom(obo:BFO_0000178 ObjectUnionOf(obo:BFO_0000018 obo:BFO_0000026)))
 
 # Class: obo:BFO_0000027 (object aggregate)
 
@@ -1522,7 +1401,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000028 "three-dimensional spatial region
 AnnotationAssertion(skos:definition obo:BFO_0000028 "(Elucidation) A three-dimensional spatial region is a whole consisting of a spatial volume together with zero or more spatial volumes which may have spatial regions of lower dimension as parts"@en)
 AnnotationAssertion(skos:example obo:BFO_0000028 "A cube-shaped region of space; a sphere-shaped region of space; the region of space occupied by all and only the planets in the solar system at some point in time"@en)
 SubClassOf(obo:BFO_0000028 obo:BFO_0000006)
-SubClassOf(obo:BFO_0000028 ObjectAllValuesFrom(obo:BFO_0000178 obo:BFO_0000006))
 
 # Class: obo:BFO_0000029 (site)
 
@@ -1531,9 +1409,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000029 "site"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000029 "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en)
 AnnotationAssertion(skos:example obo:BFO_0000029 "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"@en)
 SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
-SubClassOf(obo:BFO_0000029 ObjectAllValuesFrom(obo:BFO_0000176 ObjectUnionOf(obo:BFO_0000029 obo:BFO_0000040)))
-SubClassOf(obo:BFO_0000029 ObjectAllValuesFrom(obo:BFO_0000178 ObjectUnionOf(obo:BFO_0000029 obo:BFO_0000140)))
-SubClassOf(obo:BFO_0000029 ObjectAllValuesFrom(obo:BFO_0000210 obo:BFO_0000028))
 
 # Class: obo:BFO_0000030 (object)
 
@@ -1608,8 +1483,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000040 "material entity"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000040 "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en)
 AnnotationAssertion(skos:example obo:BFO_0000040 "A human being; the undetached arm of a human being; an aggregate of human beings"@en)
 SubClassOf(obo:BFO_0000040 obo:BFO_0000004)
-SubClassOf(obo:BFO_0000040 ObjectAllValuesFrom(obo:BFO_0000176 obo:BFO_0000040))
-SubClassOf(obo:BFO_0000040 ObjectAllValuesFrom(obo:BFO_0000178 ObjectUnionOf(obo:BFO_0000029 obo:BFO_0000040 obo:BFO_0000140)))
 DisjointClasses(obo:BFO_0000040 obo:BFO_0000141)
 
 # Class: obo:BFO_0000140 (continuant fiat boundary)
@@ -1619,8 +1492,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000140 "continuant fiat boundary"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000140 "(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions & such that there is no time t when b has a spatial region as continuant part & whose location is determined in relation to some material entity"@en)
 AnnotationAssertion(skos:example obo:BFO_0000140 "As for fiat point, fiat line, fiat surface"@en)
 SubClassOf(obo:BFO_0000140 obo:BFO_0000141)
-SubClassOf(obo:BFO_0000140 ObjectAllValuesFrom(obo:BFO_0000124 obo:BFO_0000140))
-SubClassOf(obo:BFO_0000140 ObjectAllValuesFrom(obo:BFO_0000178 obo:BFO_0000140))
 
 # Class: obo:BFO_0000141 (immaterial entity)
 
@@ -1637,7 +1508,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000142 "fiat line"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000142 "(Elucidation) A fiat line is a one-dimensional continuant fiat boundary that is continuous"@en)
 AnnotationAssertion(skos:example obo:BFO_0000142 "The Equator; all geopolitical boundaries; all lines of latitude and longitude; the median sulcus of your tongue; the line separating the outer surface of the mucosa of the lower lip from the outer surface of the skin of the chin"@en)
 SubClassOf(obo:BFO_0000142 obo:BFO_0000140)
-SubClassOf(obo:BFO_0000142 ObjectAllValuesFrom(obo:BFO_0000178 ObjectUnionOf(obo:BFO_0000142 obo:BFO_0000147)))
 
 # Class: obo:BFO_0000145 (relational quality)
 
@@ -1654,7 +1524,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000146 "fiat surface"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000146 "(Elucidation) A fiat surface is a two-dimensional continuant fiat boundary that is self-connected"@en)
 AnnotationAssertion(skos:example obo:BFO_0000146 "The surface of the Earth; the plane separating the smoking from the non-smoking zone in a restaurant"@en)
 SubClassOf(obo:BFO_0000146 obo:BFO_0000140)
-SubClassOf(obo:BFO_0000146 ObjectAllValuesFrom(obo:BFO_0000178 obo:BFO_0000140))
 
 # Class: obo:BFO_0000147 (fiat point)
 
@@ -1663,7 +1532,6 @@ AnnotationAssertion(rdfs:label obo:BFO_0000147 "fiat point"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000147 "(Elucidation) A fiat point is a zero-dimensional continuant fiat boundary that consists of a single point"@en)
 AnnotationAssertion(skos:example obo:BFO_0000147 "The geographic North Pole; the quadripoint where the boundaries of Colorado, Utah, New Mexico and Arizona meet; the point of origin of some spatial coordinate system"@en)
 SubClassOf(obo:BFO_0000147 obo:BFO_0000140)
-SubClassOf(obo:BFO_0000147 ObjectAllValuesFrom(obo:BFO_0000178 obo:BFO_0000147))
 
 # Class: obo:BFO_0000148 (zero-dimensional temporal region)
 
@@ -1812,6 +1680,18 @@ AnnotationAssertion(rdfs:label obo:IAO_0000409 "denotator type"@en)
 EquivalentClasses(obo:IAO_0000409 ObjectOneOf(obo:IAO_0000410 obo:IAO_0000420 obo:IAO_0000421))
 SubClassOf(obo:IAO_0000409 obo:IAO_0000102)
 
+# Class: <http://qudt.org/schema/qudt/Unit> (Unit)
+
+AnnotationAssertion(terms:description <http://qudt.org/schema/qudt/Unit> "
+  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). 
+  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). 
+  Any measurement of the length can be expressed as a number multiplied by the unit meter. 
+  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
+  "^^<http://qudt.org/schema/qudt/LatexString>)
+AnnotationAssertion(rdfs:isDefinedBy <http://qudt.org/schema/qudt/Unit> <http://qudt.org/schema/qudt>)
+AnnotationAssertion(rdfs:label <http://qudt.org/schema/qudt/Unit> "Unit")
+SubClassOf(<http://qudt.org/schema/qudt/Unit> obo:IAO_0000030)
+
 # Class: ontology:LP_0000001 (school subject)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000001 "A \"Schulfach\" is an “information content entity”.
@@ -1826,6 +1706,7 @@ Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Be
 AnnotationAssertion(rdfs:label ontology:LP_0000001 "Schulfach"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000001 "school subject"@en)
 AnnotationAssertion(rdfs:seeAlso ontology:LP_0000001 <https://de.wikipedia.org/wiki/Unterrichtsfach>)
+AnnotationAssertion(skos:altLabel ontology:LP_0000001 "Fach")
 SubClassOf(ontology:LP_0000001 obo:IAO_0000030)
 
 # Class: ontology:LP_0000002 (MINT-Fach)
@@ -1889,6 +1770,7 @@ In den Lehrplänen dient die Jahrgangsstufe als organisatorisches Element, das d
 AnnotationAssertion(rdfs:comment ontology:LP_0000009 "class level"@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000009 "Jahrgangsstufe"@de)
 AnnotationAssertion(rdfs:seeAlso ontology:LP_0000009 <https://de.wikipedia.org/wiki/Jahrgangsstufe>)
+AnnotationAssertion(skos:altLabel ontology:LP_0000009 "Klassenstufe")
 SubClassOf(ontology:LP_0000009 obo:IAO_0000030)
 
 # Class: ontology:LP_0000010 (Person)
@@ -1931,6 +1813,7 @@ Es ist ein offiziell anerkannter Bildungsabschluss, der am Ende eines bestimmten
 Schulabschlüsse unterscheiden sich je nach Schulart und Bundesland in ihren Anforderungen und Berechtigungen sowie der Bezeichnung.
 Zu den gängigen Schulabschlüssen im allgemeinbildenden Bereich in Deutschland gehören der “Erste Schulabschluss”, der “Mittlere Schulabschluss” sowie die “Allgemeine Hochschulreife” (Abitur). Weitere Abschlüsse können ebenfalls erworben werden, je nach Bundesland und Bildungsgang."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000019 "Schulabschluss"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0000019 "Abschluss")
 SubClassOf(ontology:LP_0000019 obo:BFO_0000035)
 
 # Class: ontology:LP_0000020 (Schulstufe)
@@ -1956,6 +1839,7 @@ In general education, we distinguish between the \"Primarstufe\" (also called Gr
 Note:
 The \"Primarbereich\", \"Sekundarbereich I\", and \"Sekundarbereich II\" are instances of the class \"Schulstufe\"."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0000020 "Schulstufe"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0000020 "Schulbereich")
 SubClassOf(ontology:LP_0000020 obo:IAO_0000030)
 
 # Class: ontology:LP_0000028 (Bildungsgangniveau)
@@ -2010,6 +1894,7 @@ SubClassOf(ontology:LP_0000040 obo:IAO_0000030)
 # Class: ontology:LP_0000043 (Oberstufenphase)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000043 "Oberstufenphase"@de)
+SubClassOf(ontology:LP_0000043 obo:IAO_0000030)
 
 # Class: ontology:LP_0000053 (Berlin-Brandenburg)
 
@@ -2023,6 +1908,17 @@ DisjointClasses(ontology:LP_0000053 ontology:LP_0000054)
 AnnotationAssertion(rdfs:label ontology:LP_0000054 "Ohne-Berlin-Brandenburg"@de)
 EquivalentClasses(ontology:LP_0000054 ObjectOneOf(ontology:LP_3000031 ontology:LP_3000043 ontology:LP_3000044 ontology:LP_3000045 ontology:LP_3000046 ontology:LP_3000047 ontology:LP_3000049 ontology:LP_3000050 ontology:LP_3000051 ontology:LP_3000052 ontology:LP_3000053 ontology:LP_3000054 ontology:LP_3000055 ontology:LP_3000056))
 SubClassOf(ontology:LP_0000054 ontology:LP_0000040)
+
+# Class: ontology:LP_0000056 (Einführungsphase)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000056 "Einführungsphase"@de)
+SubClassOf(ontology:LP_0000056 ontology:LP_0000341)
+
+# Class: ontology:LP_0000057 (Qualifikationsphase)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000057 "Qualifikationsphase"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0000057 "Hauptphase")
+SubClassOf(ontology:LP_0000057 ontology:LP_0000341)
 
 # Class: ontology:LP_0000069 (Gymnasialniveau Sek I)
 
@@ -2106,6 +2002,7 @@ Im allgemeinen Sprachgebrauch werden “Schulart” und \"Schulform\" synonym ve
 AnnotationAssertion(rdfs:label ontology:LP_0000111 "Schulart"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000111 "school type"@en)
 AnnotationAssertion(skos:altLabel ontology:LP_0000111 "Schulform")
+AnnotationAssertion(skos:altLabel ontology:LP_0000111 "Schultyp")
 AnnotationAssertion(skos:example ontology:LP_0000111 "Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als \"Kategorie\" der Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
@@ -2130,7 +2027,7 @@ Bsp:
 :schuleTrebur :hatSchulformfunktion :schuleTreburSchulform3 .
 
 :someTimeIntervalUntilDateX  bfo:precedes :someTimeIntervalUntilDateY .")
-SubClassOf(ontology:LP_0000111 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:BFO_0000058 ontology:LP_0000475)))
+SubClassOf(ontology:LP_0000111 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:RO_0000058 ontology:LP_0000475)))
 
 # Class: ontology:LP_0000161 (Allgemeine Hochschulreife (NI))
 
@@ -2286,11 +2183,6 @@ AnnotationAssertion(skos:editorialNote ontology:LP_0000349 "Mögliche Properties
 - Jahrgangsstufe")
 SubClassOf(ontology:LP_0000349 ontology:LP_0000261)
 
-# Class: ontology:LP_0000429 (Themenfeld)
-
-AnnotationAssertion(rdfs:label ontology:LP_0000429 "Themenfeld"@en)
-SubClassOf(ontology:LP_0000429 obo:IAO_0000300)
-
 # Class: ontology:LP_0000438 (Lehrplan)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000438 "A curriculum is an information content entity that comprises a systematic compilation of curricular elements. It bindingly defines the skills and learning content that students should acquire in a particular subject, grade, type of school or educational level in a federal state.
@@ -2315,8 +2207,8 @@ SubClassOf(ontology:LP_0000443 ontology:LP_0000261)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000475 "Schulartfunktion"@de)
 SubClassOf(ontology:LP_0000475 obo:BFO_0000034)
-SubClassOf(ontology:LP_0000475 ObjectSomeValuesFrom(obo:BFO_0000059 ontology:LP_0000111))
-SubClassOf(ontology:LP_0000475 ObjectSomeValuesFrom(obo:BFO_0000197 ontology:LP_0000809))
+SubClassOf(ontology:LP_0000475 ObjectSomeValuesFrom(obo:RO_0000059 ontology:LP_0000111))
+SubClassOf(ontology:LP_0000475 ObjectSomeValuesFrom(obo:RO_0000079 ontology:LP_0000809))
 
 # Class: ontology:LP_0000478 (Funktionsspezifikation)
 
@@ -2340,6 +2232,31 @@ SubClassOf(ontology:LP_0000493 ontology:LP_0000478)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000499 "Bezugsfunktionen"@de)
 SubClassOf(ontology:LP_0000499 ontology:LP_0000478)
+
+# Class: ontology:LP_0000505 (Unterrichtseinheitspezifikation)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0000505 "Ein Data Item, dass die thematische und inhaltliche Einheit des Unterrichts ausdrückt. Es kann entweder feste Zeitspannen, die Unterrichtsstunden meinen (z.B. 45 Minuten), oder sie umfasst mehrere solcher Unterrichtsstunden, um ein zusammenhängendes Stoffgebiet zu behandeln."@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000505 "Unterrichtseinheitspezifikation"@de)
+AnnotationAssertion(skos:example ontology:LP_0000505 "Soll z.B. ausgedrückt werden, dass der Unterricht 6 Einheiten à 45 Minuten enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :ue_1 .
+ue_1 a mem:Unterrichtseinheitsspezifikation .
+ue_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+ue_1 'mem:hat Teil' zs_1 .
+zs_1 a mem:Zeitpezifikation .
+zs_1 'mem:hat Wert' \"45\"^^xsd:decimal .
+zs_1 'mem:hat Einheit' qudt:Min .")
+SubClassOf(ontology:LP_0000505 obo:IAO_0000027)
+SubClassOf(ontology:LP_0000505 ObjectUnionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000008 ontology:LP_0000508) DataSomeValuesFrom(ontology:LP_0000344 xsd:decimal)) DataSomeValuesFrom(ontology:LP_0000344 xsd:decimal)))
+SubClassOf(ontology:LP_0000505 ObjectSomeValuesFrom(obo:IAO_0000136 ontology:LP_0000261))
+
+# Class: ontology:LP_0000508 (Zeitspezifikation)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0000508 "Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt."@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000508 "Zeitspezifikation"@de)
+SubClassOf(ontology:LP_0000508 obo:IAO_0000027)
+SubClassOf(ontology:LP_0000508 ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000041 <http://qudt.org/schema/qudt/Unit>) DataSomeValuesFrom(ontology:LP_0000344 xsd:decimal)))
+SubClassOf(ontology:LP_0000508 ObjectSomeValuesFrom(ontology:LP_0020001 ontology:LP_0000505))
 
 # Class: ontology:LP_0000530 (Grundkursniveau)
 
@@ -3125,718 +3042,251 @@ AnnotationAssertion(obo:IAO_0000233 obo:OMO_0001000 "https://github.com/informat
 AnnotationAssertion(obo:IAO_0000234 obo:OMO_0001000 "https://orcid.org/0000-0001-5208-3432")
 AnnotationAssertion(rdfs:label obo:OMO_0001000 "out of scope")
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (KIM))
+# Individual: <http://qudt.org/vocab/unit/MIN> (Minute)
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch (KIM)")
+AnnotationAssertion(rdfs:label <http://qudt.org/vocab/unit/MIN> "Minute"@de)
+ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/MIN>)
+
+# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (Schulfach))
+
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1000> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1000> <http://w3id.org/openeduhub/vocabs/discipline/20003>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1000> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1000>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1001> "Biologie (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1001> "Biologie (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/openeduhub/vocabs/discipline/080>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1001> "Biologie"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1001> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1002> "Chemie (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1002> "Chemie (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/openeduhub/vocabs/discipline/100>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1002> "Chemie"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1002> <http://w3id.org/kim/schulfaecher/>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1003> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1003>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1004> "Theater"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1004> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12002>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1004> <http://w3id.org/openeduhub/vocabs/discipline/12002>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1004> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1004>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1005> "Deutsch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1005> "Deutsch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/120>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28001>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/openeduhub/vocabs/discipline/120>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1005> "Deutsch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1005> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1005>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1006> "DaZ"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28002>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/openeduhub/vocabs/discipline/12005>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1006> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1006>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1007> "Englisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1007> "Englisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/openeduhub/vocabs/discipline/20001>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1007> "Englisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1007> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1007>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1008> "Ethik (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1008> "Ethik (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1008> "Werte und Normen"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/160>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28004>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/openeduhub/vocabs/discipline/160>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1008> "Ethik"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1008> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1008>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1009> "Französisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1009> "Französisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/openeduhub/vocabs/discipline/20002>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1009> "Französisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1009> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1009>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1010> "Geografie (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1010> "Geografie (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1010> "Erdkunde"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1010> "Geographie"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/220>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/openeduhub/vocabs/discipline/220>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1010> "Geografie"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1010>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1011> "Geschichte (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1011> "Geschichte (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1011> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1011> <http://w3id.org/openeduhub/vocabs/discipline/20002>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1011> "Geschichte"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1011> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1011>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1012> "Gesundheitserziehung"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1012> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/260>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1012> <http://w3id.org/openeduhub/vocabs/discipline/260>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1012> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1012>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1013> "Informatik (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1013> "Informatik (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1013> "Informations- und Kommunikationstechnologie"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1013> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/320>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1013> <http://w3id.org/openeduhub/vocabs/discipline/320>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1013> "Informatik"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1013> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000002 <http://w3id.org/kim/schulfaecher/s1013>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1014> "Italienisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1014> "Italienisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/openeduhub/vocabs/discipline/20004>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1014> "Italienisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1014> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1014>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1015> "Kunst (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1015> "Kunst (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1015> "Bildende Kunst"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/060>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28006>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/openeduhub/vocabs/discipline/060>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1015> "Kunst"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1015> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1015>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1016> "Latein (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1016> "Latein (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1016> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1016> <http://w3id.org/openeduhub/vocabs/discipline/20005>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1016> "Latein"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1016> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1016>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1017> "Mathematik (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1017> "Mathematik (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28007>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/380>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/openeduhub/vocabs/discipline/380>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1017> "Mathematik"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1017> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000002 <http://w3id.org/kim/schulfaecher/s1017>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1019> "MINT (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1019> "MINT (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1019> "Chemie, Physik, Biologie"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1019> "Naturwissenschaften"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1019> "MINT"@de)
-AnnotationAssertion(skos:related <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1001>)
-AnnotationAssertion(skos:related <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1002>)
-AnnotationAssertion(skos:related <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1013>)
-AnnotationAssertion(skos:related <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1017>)
-AnnotationAssertion(skos:related <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/s1022>)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1019> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000002 <http://w3id.org/kim/schulfaecher/s1019>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1020> "Musik (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1020> "Musik (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28008>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/420>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/openeduhub/vocabs/discipline/420>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1020> "Musik"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1020> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1020>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1021> "Philosophie (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1021> "Philosophie (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1021> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/450>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1021> <http://w3id.org/openeduhub/vocabs/discipline/450>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1021> "Philosophie"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1021> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1021>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1022> "Physik (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1022> "Physik (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1022> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1022> <http://w3id.org/openeduhub/vocabs/discipline/460>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1022> "Physik"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1022> <http://w3id.org/kim/schulfaecher/>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1023> "Politik (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1023> "Politik (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1023> "Politische Bildung"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1023> "Sozialkunde"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1023> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/480>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1023> <http://w3id.org/openeduhub/vocabs/discipline/480>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1023> "Politik"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1023> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1023>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische) (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische) (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1024> "Evangelischer Religionsunterricht"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/openeduhub/vocabs/discipline/520>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische)"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1024> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1024>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch) (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch) (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1025> "Islamischer Religionsunterricht"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/openeduhub/vocabs/discipline/520>)
-AnnotationAssertion(skos:editorialNote <http://w3id.org/kim/schulfaecher/s1025> "EAF 28009 hat hauptsächlich christliche Themen, aber auch einen Abschnitt mit nicht-christlichen Religionen"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch)"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1025> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1025>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische) (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische) (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1026> "Katholischer Religionsunterricht"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/openeduhub/vocabs/discipline/520>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische)"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1026> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1026>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1027> "Russisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1027> "Russisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/openeduhub/vocabs/discipline/20006>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1027> "Russisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1027> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1027>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1028> "Heimatunterricht"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1028> "Sachkunde"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1028> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28010>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1028> <http://w3id.org/openeduhub/vocabs/discipline/28010>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1028> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1028>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1029> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1029> <http://w3id.org/openeduhub/vocabs/discipline/560>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1029> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1029>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1030> "Spanisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1030> "Spanisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/openeduhub/vocabs/discipline/20007>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1030> "Spanisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1030> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1030>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1031> "Sport (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1031> "Sport (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28011>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/600>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/openeduhub/vocabs/discipline/600>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1031> "Sport"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1031> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1031>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1032> "Türkisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1032> "Türkisch (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/openeduhub/vocabs/discipline/20008>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1032> "Türkisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1032> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1032>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde (Schulfach)"@de)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1033> <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700>)
-AnnotationAssertion(skos:closeMatch <http://w3id.org/kim/schulfaecher/s1033> <http://w3id.org/openeduhub/vocabs/discipline/700>)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1033> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1033>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1034> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1034>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1035> "Japanisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1035> "Japanisch (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1035> "Japanisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1035> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1035>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1036> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1036>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1037> "Polnisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1037> "Polnisch (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1037> "Polnisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1037> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1037>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1038> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1038>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1039> "Wendisch"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1039> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1039>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1040> "Astronomie (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1040> "Astronomie (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1040> "Astronomie"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1040> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1040>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1041> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1041>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1042> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1042>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1043> "Psychologie (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1043> "Psychologie (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1043> "Psychologie"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1043> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1043>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1044> "Ernährung (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1044> "Ernährung (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1044> "Ernährung"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1044> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1044>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften (Schulfach)"@de)
-AnnotationAssertion(skos:altLabel <http://w3id.org/kim/schulfaecher/s1045> "Pädagogik"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1045> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1045>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (KIM))
+# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1046> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1046>)
 
 # Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft (KIM)")
 AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft (Schulfach)"@de)
-AnnotationAssertion(skos:prefLabel <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft"@de)
-AnnotationAssertion(skos:topConceptOf <http://w3id.org/kim/schulfaecher/s1047> <http://w3id.org/kim/schulfaecher/>)
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1047>)
 
-# Individual: <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> (Fachgebundene Hochschulreife (KIM))
+# Individual: <https://qudt.org/vocab/unit/HR> (Stunde)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> "Fachgebundene Hochschulreife (KIM)")
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> <http://www.wikidata.org/entity/Q1391140>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> "Fachgebundene Hochschulreife"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(gnd:broaderTermGeneral <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> <https://d-nb.info/gnd/4160223-7>)
+AnnotationAssertion(rdfs:label <https://qudt.org/vocab/unit/HR> "Stunde"@de)
+ClassAssertion(<http://qudt.org/schema/qudt/Unit> <https://qudt.org/vocab/unit/HR>)
 
-# Individual: <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> (Mittlerer Schulabschluss (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Mittlerer Schulabschluss (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Qualifizierter Sekundarabschluss I"@de)
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Realschulabschluss"@de)
-AnnotationAssertion(skos:definition <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Mittlerer Schulabschluss wird nach 10 Jahren erreicht"@de)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <http://www.wikidata.org/entity/Q1345057>)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <https://d-nb.info/gnd/4170262-1>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "Mittlerer Schulabschluss"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(gnd:broaderTermGeneral <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> <https://d-nb.info/gnd/4053444-3>)
-AnnotationAssertion(gnd:gndIdentifier <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> "4170262-1")
-
-# Individual: <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> (Erster allgemeinbildender Schulabschluss (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Erster allgemeinbildender Schulabschluss (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Hauptschulabschluss"@de)
-AnnotationAssertion(skos:definition <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Erster Allgemeinbildender Schulabschluss wird nach 9 Jahren erreicht"@de)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <http://www.wikidata.org/entity/Q884856>)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <https://d-nb.info/gnd/4130918-2>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "Erster allgemeinbildender Schulabschluss"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(gnd:broaderTermGeneral <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> <https://d-nb.info/gnd/4053444-3>)
-AnnotationAssertion(gnd:gndIdentifier <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> "4130918-2")
-
-# Individual: <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> (Ohne Schulabschluss (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> "Ohne Schulabschluss (KIM)")
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> "Ohne Schulabschluss"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> <https://w3id.org/kim/schulabschluesse/>)
-
-# Individual: <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> (Fachhochschulreife (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> "Fachhochschulreife (KIM)")
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <http://www.wikidata.org/entity/Q1391297>)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <https://d-nb.info/gnd/4395719-5>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> "Fachhochschulreife"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(gnd:broaderTermGeneral <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> <https://d-nb.info/gnd/4053444-3>)
-AnnotationAssertion(gnd:gndIdentifier <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> "4395719-5")
-
-# Individual: <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> (Allgemeine Hochschulreife (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "Allgemeine Hochschulreife (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "Abitur"@de)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <http://www.wikidata.org/entity/Q708387>)
-AnnotationAssertion(skos:exactMatch <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <https://d-nb.info/gnd/4049194-8>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "Allgemeine Hochschulreife"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <https://w3id.org/kim/schulabschluesse/>)
-AnnotationAssertion(gnd:broaderTermGeneral <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> <https://d-nb.info/gnd/4160223-7>)
-AnnotationAssertion(gnd:gndIdentifier <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> "4049194-8")
-
-# Individual: <https://w3id.org/kim/schularten/s02> (Grundschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s02> "Grundschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s02> <http://w3id.org/kim/educationalLevel/level_1>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s02> <https://w3id.org/kim/isced-1997/level1>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s02> <https://w3id.org/kim/isced-2011/level1>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/1>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/2>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/3>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s02> <http://w3id.org/openeduhub/vocabs/educationalLevel/4>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s02> "Grundschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s02> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s03> (Hauptschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s03> "Hauptschule (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s03> "Mittelschule"@de)
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s03> "Mittelstufenschule"@de)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s03> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s03> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s03> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s03> "Hauptschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s03> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s04> (Realschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s04> "Realschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s04> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s04> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s04> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s04> "Realschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s04> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s05> (Gesamtschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s05> "Gesamtschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/11>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/12>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/13>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s05> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s05> "Gesamtschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s05> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s06> (Förderschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s06> "Förderschule (KIM)")
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s06> "Förderschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s06> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s07> (Oberschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s07> "Oberschule (KIM)")
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s07> "Oberschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s07> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s08> (Gymnasium (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s08> "Gymnasium (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/11>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/12>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/13>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s08> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s08> "Gymnasium"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s08> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s09> (Gemeinschaftsschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s09> "Gemeinschaftsschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s09> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s09> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s09> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s09> "Gemeinschaftsschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s09> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s10> (Sekundarschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s10> "Sekundarschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/kim/educationalLevel/level_2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s10> <https://w3id.org/kim/isced-1997/level2>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s10> <https://w3id.org/kim/isced-2011/level2>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/10>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/5>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/6>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/7>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/8>)
-AnnotationAssertion(skos:narrowMatch <https://w3id.org/kim/schularten/s10> <http://w3id.org/openeduhub/vocabs/educationalLevel/9>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s10> "Sekundarschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s10> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s11> (Berufsfachschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s11> "Berufsfachschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s11> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s11> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s11> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s11> "Berufsfachschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s11> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s12> (Berufsschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s12> "Berufsschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s12> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s12> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s12> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s12> "Berufsschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s12> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s13> (Fachoberschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s13> "Fachoberschule (KIM)")
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s13> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s13> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s13> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s13> "Fachoberschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s13> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s14> (Berufliches Gymnasium (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s14> "Berufliches Gymnasium (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s14> "Fachgymnasium"@de)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s14> <http://w3id.org/kim/educationalLevel/level_3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s14> <https://w3id.org/kim/isced-1997/level3>)
-AnnotationAssertion(skos:closeMatch <https://w3id.org/kim/schularten/s14> <https://w3id.org/kim/isced-2011/level3>)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s14> "Berufliches Gymnasium"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s14> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s15> (Privat- und Ersatzschule (KIM))
-
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s15> "Privat- und Ersatzschule (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s15> "Ersatzschule"@de)
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s15> "Freie Schule"@de)
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s15> "Privatschule"@de)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s15> "Privat- und Ersatzschule"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s15> <https://w3id.org/kim/schularten/>)
-
-# Individual: <https://w3id.org/kim/schularten/s16> (Abendgymnasium (KIM))
+# Individual: <https://w3id.org/kim/schularten/s16> (Abendgymnasium)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s16> "Abendgymnasium"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/kim/schularten/s16> "Abendgymnasium (KIM)")
-AnnotationAssertion(skos:altLabel <https://w3id.org/kim/schularten/s16> "Kolleg"@de)
-AnnotationAssertion(skos:prefLabel <https://w3id.org/kim/schularten/s16> "Abendgymnasium"@de)
-AnnotationAssertion(skos:topConceptOf <https://w3id.org/kim/schularten/s16> <https://w3id.org/kim/schularten/>)
 
 # Individual: ontology:LP_0000036 (Primarbereich)
 
@@ -3865,21 +3315,27 @@ ObjectPropertyAssertion(ontology:LP_0000008 ontology:LP_0000046 ontology:LP_0000
 
 AnnotationAssertion(rdfs:label ontology:LP_0000050 "G8 Qualifikationsphase"@de)
 ClassAssertion(ontology:LP_0000043 ontology:LP_0000050)
+ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000050 ontology:LP_2000011)
+ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000050 ontology:LP_2000012)
 
 # Individual: ontology:LP_0000051 (G8 Einführungsphase)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000051 "G8 Einführungsphase"@de)
 ClassAssertion(ontology:LP_0000043 ontology:LP_0000051)
+ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000051 ontology:LP_2000010)
 
 # Individual: ontology:LP_0000052 (G9 Qualifikationsphase)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000052 "G9 Qualifikationsphase"@de)
 ClassAssertion(ontology:LP_0000043 ontology:LP_0000052)
+ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000052 ontology:LP_2000012)
+ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000052 ontology:LP_2000013)
 
 # Individual: ontology:LP_0000055 (G9 Einführungsphase)
 
 AnnotationAssertion(rdfs:label ontology:LP_0000055 "G9 Einführungsphase"@de)
 ClassAssertion(ontology:LP_0000043 ontology:LP_0000055)
+ObjectPropertyAssertion(ontology:LP_0000026 ontology:LP_0000055 ontology:LP_2000011)
 
 # Individual: ontology:LP_0000103 (Erhöhte Anforderungen (E-Kurs) (NI))
 
@@ -4288,6 +3744,23 @@ ClassAssertion(ontology:LP_0000499 ontology:LP_0000502)
 AnnotationAssertion(rdfs:label ontology:LP_0000504 "Lernbereichsbezugsfunktion"@de)
 ClassAssertion(ontology:LP_0000499 ontology:LP_0000504)
 
+# Individual: ontology:LP_0000532 (Optional)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000532 "Optional"@de)
+ClassAssertion(ontology:LP_0000478 ontology:LP_0000532)
+
+# Individual: ontology:LP_0000533 (Verbindlich)
+
+AnnotationAssertion(rdfs:label ontology:LP_0000533 "Verbindlich"@de)
+ClassAssertion(ontology:LP_0000478 ontology:LP_0000533)
+
+# Individual: ontology:LP_0000535 (Unterrichtsstunde)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0000535 "Die Unterrichtsstunde ist ein festgelegter Zeitabschnitt für den Unterrichtsablauf."@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000535 "Unterrichtsstunde"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0000535 "Im Allgemeinen umfasst eine Schulstunde 45 Minuten."@de)
+ClassAssertion(<http://qudt.org/schema/qudt/Unit> ontology:LP_0000535)
+
 # Individual: ontology:LP_0000560 (Griechisch (Schulfach))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000560 "Griechisch (Schulfach)"@de)
@@ -4419,21 +3892,21 @@ ClassAssertion(ontology:LP_0000493 ontology:LP_0002158)
 AnnotationAssertion(rdfs:label ontology:LP_0002171 "Domänenbezugsfunktion"@de)
 ClassAssertion(ontology:LP_0000499 ontology:LP_0002171)
 
-# Individual: ontology:LP_2000001 (class level 1)
+# Individual: ontology:LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000001 "1"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000001 "class level 1"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000001)
 
-# Individual: ontology:LP_2000002 (class level 2)
+# Individual: ontology:LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000002 "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000002 "class level 2"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000002)
 
-# Individual: ontology:LP_2000003 (Jahrgangsstufe 3)
+# Individual: ontology:LP_2000003 (class level 3)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000003 "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000003 "Jahrgangsstufe 3"@de)
@@ -4454,7 +3927,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000005 "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000005 "class level 5"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000005)
 
-# Individual: ontology:LP_2000006 (class level 6)
+# Individual: ontology:LP_2000006 (Jahrgangsstufe 6)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000006 "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000006 "Jahrgangsstufe 6"@de)
@@ -4468,7 +3941,7 @@ AnnotationAssertion(rdfs:label ontology:LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000007 "class level 7"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000007)
 
-# Individual: ontology:LP_2000008 (Jahrgangsstufe 8)
+# Individual: ontology:LP_2000008 (class level 8)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000008 "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000008 "Jahrgangsstufe 8"@de)
@@ -4496,14 +3969,14 @@ AnnotationAssertion(rdfs:label ontology:LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000011 "class level 11"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000011)
 
-# Individual: ontology:LP_2000012 (Jahrgangsstufe 12)
+# Individual: ontology:LP_2000012 (class level 12)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000012 "12"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000012 "Jahrgangsstufe 12"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000012 "class level 12"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000012)
 
-# Individual: ontology:LP_2000013 (class level 13)
+# Individual: ontology:LP_2000013 (Jahrgangsstufe 13)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000013 "13"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000013 "Jahrgangsstufe 13"@de)
@@ -4611,7 +4084,6 @@ DifferentIndividuals(ontology:LP_0000464 ontology:LP_0000465 ontology:LP_0000466
 DifferentIndividuals(ontology:LP_2000001 ontology:LP_2000002 ontology:LP_2000003 ontology:LP_2000004 ontology:LP_2000005 ontology:LP_2000006 ontology:LP_2000007 ontology:LP_2000008 ontology:LP_2000009 ontology:LP_2000010 ontology:LP_2000011 ontology:LP_2000012 ontology:LP_2000013)
 SubObjectPropertyOf(ObjectPropertyChain(ontology:LP_0000537 ontology:LP_0000537) ontology:LP_0000537)
 SubObjectPropertyOf(ObjectPropertyChain(ontology:LP_0000578 ontology:LP_0000840) ontology:LP_0000840)
-AnnotationAssertion(rdfs:label <http://www.w3.org/ns/prov#wasDerivedFrom> "prov:wasDerivedFrom")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-6378-2618> "Steffen Rörtgen")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 )

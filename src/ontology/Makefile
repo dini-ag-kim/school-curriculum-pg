@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                71add17502928ef202e0bc90ac627e412d1cc3bebc8cd2d15d468124e925773e
+CONFIG_HASH=                5183057738b4c70d0a9e137d83bce51f9cc8ce017fe6d2d8d2d8ed2c26f1fbb5
 
 
 # ----------------------------------------
@@ -552,7 +552,7 @@ $(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
 .PRECIOUS: $(TMPDIR)/stamp-component-%.owl
 
 $(COMPONENTSDIR)/lehrplan-subjects.owl: $(TEMPLATEDIR)/lehrplan-subjects.tsv $(TMPDIR)/stamp-component-lehrplan-subjects.owl
-	$(ROBOT) template --input components/states.ttl --input components/lehrplan-core.ttl \
+	$(ROBOT) template  \
 		 --template $(TEMPLATEDIR)/lehrplan-subjects.tsv \
 		 $(ANNOTATE_CONVERT_FILE)
 .PRECIOUS: $(COMPONENTSDIR)/lehrplan-subjects.owl
@@ -577,7 +577,7 @@ mirror-iao: | $(TMPDIR)
 .PHONY: mirror-bfo
 .PRECIOUS: $(MIRRORDIR)/bfo.owl
 mirror-bfo: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.obolibrary.org/obo/bfo/2020/bfo.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/bfo/2020/notime/bfo.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ro

@@ -97,6 +97,8 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030266>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030267>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030268>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030269>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030325>))
+Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030335>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<https://w3id.org/lehrplan/ontology/LP_0000008>))
@@ -269,6 +271,7 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030321>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030322>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030323>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030324>))
+Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030326>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000001>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000002>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000003>))
@@ -986,6 +989,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https:/
 - Beschreibung
 - Stundenzahl
 - Jahrgangsstufe")
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0000349> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0000349> <https://w3id.org/lehrplan/ontology/LP_0000261>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000438> (Lehrplan)
@@ -1377,6 +1381,23 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https:/
 
 Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!")
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030269> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000536> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000480>) ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0000497>)))
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030325> (CE-Leitperspektive)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030325> "CE-Leitperspektive"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0030325> "Oder:
+- (Fach)übergreifendes Thema
+- (Fach)Übergreifendes Ziel
+- Bildungs- und Erziehungsziel
+- Querschnittsthema
+- Weiteres Thema")
+EquivalentClasses(<https://w3id.org/lehrplan/ontology/LP_0030325> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000261> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0030326>)))
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030325> <https://w3id.org/lehrplan/ontology/LP_0000261>)
+
+# Class: <https://w3id.org/lehrplan/ontology/LP_0030335> (Weiteres Thema (Bistas))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030335> "Weiteres Thema (Bistas)"@de)
+SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0030335> ObjectIntersectionOf(<https://w3id.org/lehrplan/ontology/LP_0000536> ObjectHasValue(<https://w3id.org/lehrplan/ontology/LP_0000483> <https://w3id.org/lehrplan/ontology/LP_0030326>)))
 
 
 ############################
@@ -2213,14 +2234,19 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000111> <https://w3id.org/lehrplan/ontology/LP_0030324>)
 ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000029> <https://w3id.org/lehrplan/ontology/LP_0030324> <https://w3id.org/lehrplan/ontology/LP_3000051>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000001> (Jahrgangsstufe 1)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_0030326> (Leitperspektivenbeschreibungsfunktion)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030326> "Leitperspektivenbeschreibungsfunktion"@de)
+ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org/lehrplan/ontology/LP_0030326>)
+
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000001> (class level 1)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000001> "1"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000001> "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000001> "class level 1"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000001>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (class level 2)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000002> (Jahrgangsstufe 2)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000002> "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "Jahrgangsstufe 2"@de)
@@ -2241,21 +2267,21 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000004> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000004> "class level 4"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000004>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000005> (class level 5)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000005> (Jahrgangsstufe 5)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000005> "5"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000005> "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000005> "class level 5"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000006> (class level 6)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000006> (Jahrgangsstufe 6)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000006> "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000006> "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000006> "class level 6"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000007> (class level 7)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000007> (Jahrgangsstufe 7)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000007> "7"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "Jahrgangsstufe 7"@de)
@@ -2269,7 +2295,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "class level 8"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000008>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000009> (class level 9)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000009> (Jahrgangsstufe 9)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000009> "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000009> "Jahrgangsstufe 9"@de)

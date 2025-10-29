@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                5183057738b4c70d0a9e137d83bce51f9cc8ce017fe6d2d8d2d8ed2c26f1fbb5
+CONFIG_HASH=                fe3daa4bedfe3bdafc493fee81002d6e12fe1610362242e4448343200cbf55fb
 
 
 # ----------------------------------------
@@ -58,7 +58,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(COMPONENTSDIR)/bfo-edit.owl $(COMPONENTSDIR)/lehrplan-core.owl $(COMPONENTSDIR)/lehrplan-BE-BB-shared.owl $(COMPONENTSDIR)/lehrplan-BB.owl $(COMPONENTSDIR)/lehrplan-BW.owl $(COMPONENTSDIR)/lehrplan-HB.owl $(COMPONENTSDIR)/lehrplan-HH.owl $(COMPONENTSDIR)/lehrplan-NI.owl $(COMPONENTSDIR)/lehrplan-RP.owl $(COMPONENTSDIR)/lehrplan-SL.owl $(COMPONENTSDIR)/lehrplan-ST.owl $(COMPONENTSDIR)/lehrplan-BE.owl $(COMPONENTSDIR)/lehrplan-BY.owl $(COMPONENTSDIR)/lehrplan-HE.owl $(COMPONENTSDIR)/lehrplan-MV.owl $(COMPONENTSDIR)/lehrplan-NW.owl $(COMPONENTSDIR)/lehrplan-SH.owl $(COMPONENTSDIR)/lehrplan-SN.owl $(COMPONENTSDIR)/lehrplan-TH.owl $(COMPONENTSDIR)/lehrplan-subjects.owl 
+OTHER_SRC =                 $(COMPONENTSDIR)/bfo-edit.owl $(COMPONENTSDIR)/lehrplan-core.owl $(COMPONENTSDIR)/lehrplan-BE-BB-shared.owl $(COMPONENTSDIR)/lehrplan-BB.owl $(COMPONENTSDIR)/lehrplan-BW.owl $(COMPONENTSDIR)/lehrplan-HB.owl $(COMPONENTSDIR)/lehrplan-HH.owl $(COMPONENTSDIR)/lehrplan-NI.owl $(COMPONENTSDIR)/lehrplan-RP.owl $(COMPONENTSDIR)/lehrplan-SL.owl $(COMPONENTSDIR)/lehrplan-ST.owl $(COMPONENTSDIR)/lehrplan-BE.owl $(COMPONENTSDIR)/lehrplan-BY.owl $(COMPONENTSDIR)/lehrplan-HE.owl $(COMPONENTSDIR)/lehrplan-MV.owl $(COMPONENTSDIR)/lehrplan-NW.owl $(COMPONENTSDIR)/lehrplan-SH.owl $(COMPONENTSDIR)/lehrplan-SN.owl $(COMPONENTSDIR)/lehrplan-TH.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -506,7 +506,6 @@ recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-lehrplan-SH.owl \
 		--assume-new=$(TMPDIR)/stamp-component-lehrplan-SN.owl \
 		--assume-new=$(TMPDIR)/stamp-component-lehrplan-TH.owl \
-		--assume-new=$(TMPDIR)/stamp-component-lehrplan-subjects.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
 .PHONY: no-mirror-recreate-components
@@ -530,7 +529,6 @@ no-mirror-recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-lehrplan-SH.owl \
 		--assume-new=$(TMPDIR)/stamp-component-lehrplan-SN.owl \
 		--assume-new=$(TMPDIR)/stamp-component-lehrplan-TH.owl \
-		--assume-new=$(TMPDIR)/stamp-component-lehrplan-subjects.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
 .PHONY: recreate-%
@@ -550,12 +548,6 @@ $(COMPONENTSDIR)/%.owl: $(TMPDIR)/stamp-component-%.owl | $(COMPONENTSDIR)
 $(TMPDIR)/stamp-component-%.owl: | $(TMPDIR)
 	touch $@
 .PRECIOUS: $(TMPDIR)/stamp-component-%.owl
-
-$(COMPONENTSDIR)/lehrplan-subjects.owl: $(TEMPLATEDIR)/lehrplan-subjects.tsv $(TMPDIR)/stamp-component-lehrplan-subjects.owl
-	$(ROBOT) template  \
-		 --template $(TEMPLATEDIR)/lehrplan-subjects.tsv \
-		 $(ANNOTATE_CONVERT_FILE)
-.PRECIOUS: $(COMPONENTSDIR)/lehrplan-subjects.owl
 
 endif # COMP=true
 # ----------------------------------------

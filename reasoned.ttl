@@ -7,9 +7,9 @@
 @base <https://w3id.org/lehrplan/ontology/> .
 
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0-6> ;
-                                       <http://purl.org/dc/terms/bibliographicCitation> "Lehrplan Ontology. Version 1.0.0-6, https://w3id.org/lehrplan/ontology" ;
-                                       <http://purl.org/dc/terms/created> "2025-09-22" ;
+                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0-7> ;
+                                       <http://purl.org/dc/terms/bibliographicCitation> "Lehrplan Ontology. Version 1.0.0-7, https://w3id.org/lehrplan/ontology" ;
+                                       <http://purl.org/dc/terms/created> "2025-11-03" ;
                                        <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6378-2618> ,
                                                                           <https://orcid.org/0000-0001-7192-7143> ,
                                                                           "Almut Steinlein"@de ,
@@ -21,7 +21,7 @@
                                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                        <http://purl.org/dc/terms/title> "Curriculum Ontology"@en ,
                                                                         "Lehrplan Ontologie"@de ;
-                                       owl:versionInfo "1.0.0-6" .
+                                       owl:versionInfo "1.0.0-7" .
 
 #################################################################
 #    Annotation properties
@@ -2387,19 +2387,14 @@ Previous. An information content entity is a non-realizable information entity t
 ###  https://w3id.org/lehrplan/ontology/LP_0000001
 :LP_0000001 rdf:type owl:Class ;
             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-            rdfs:comment """A \"Schulfach\" is an “information content entity”.
-It refers to the designation of a subject taught at school.
-It represents the thematic structure of what is considered general school education.
-A \"Schulfach\" is a subject area that organizes teaching lessons by content.
-Examples of \"Schulfächer\" include German, mathematics, history, and biology."""@en ,
-                         """Ein “Schulfach” ist eine “Informationseinheit”.
-Es handelt sich um die Bezeichnung eines an der Schule unterrichteten Fachs. 
-Es ist der Ausdruck für die thematische Gliederung dessen, was jeweils unter allgemeiner schulischer Bildung verstanden wird. 
-Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Beispiele für Schulfächer sind Deutsch, Mathematik, Geschichte und Biologie."""@de ;
+            rdfs:comment "A school subject is an information content entity that designates and organizes the thematic areas of knowledge constituting general school education, serving as the conceptual framework for structuring teaching and learning activities."@en ,
+                         "Ein Schulfach ist eine Informationseinheit, die die Bezeichnung eines an Schulen unterrichteten Fachgebiets darstellt, welches die thematische Gliederung der allgemeinen schulischen Bildung widerspiegelt und der inhaltlichen Strukturierung des Unterrichts dient."@de ;
             rdfs:label "Schulfach"@de ,
                        "school subject"@en ;
-            rdfs:seeAlso <https://de.wikipedia.org/wiki/Unterrichtsfach> ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "Fach" .
+            rdfs:seeAlso <https://de.wikipedia.org/wiki/Unterrichtsfach> ,
+                         <https://github.com/FWU-DE/schulfach-ontologie> ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Fach" ;
+            <http://www.w3.org/2004/02/skos/core#example> "Examples of school subjects include German, mathematics, history, and biology."@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000002
@@ -3688,7 +3683,8 @@ In der Ontologie fungiert das “Curriculare Element\" als Superklasse, um die E
 Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zweck innerhalb des Lehrplans näher definiert. Dadurch können die bundeslandspezifischen Bestandteile der Lehrpläne abgebildet werden, da ihnen gemeinsame Funktionen zugeordnet werden können.
 
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."""@de ;
-            rdfs:label "Curriculares Element"@de ;
+            rdfs:label "Curriculares Element"@de ,
+                       "curricular element"@en ;
             <http://www.w3.org/2004/02/skos/core#editorialNote> "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de .
 
 
@@ -3753,7 +3749,8 @@ While the \"Bildungsgangniveau\" describes the level of an entire educational tr
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000328
 :LP_0000328 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -3842,12 +3839,6 @@ CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First Peo
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000339
 :LP_0000339 rdf:type owl:Class ;
-            owl:equivalentClass [ rdf:type owl:Class ;
-                                  owl:oneOf ( <http://w3id.org/kim/schulfaecher/s1010>
-                                              <http://w3id.org/kim/schulfaecher/s1011>
-                                              :LP_0000340
-                                            )
-                                ] ;
             rdfs:subClassOf :LP_0000005 ;
             rdfs:comment "RP" ;
             rdfs:label "Gemeinschaftskunde"@de .
@@ -3899,6 +3890,14 @@ equivalenClass: Schulart and (ermöglicht_abschluss some 'Allgemeine Hochschulre
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000349
 :LP_0000349 rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :LP_0000261
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :LP_0000483 ;
+                                                         owl:hasValue :LP_0000497
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
             rdfs:subClassOf :LP_0000261 ;
             rdfs:comment """A “CE-Bereich” is a “Curriculares Element”.
 A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
@@ -4028,7 +4027,8 @@ Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000428
 :LP_0000428 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -4052,7 +4052,8 @@ Das Element dient der Gliederung von Lehrplänen und Bildungsstandards, indem es
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000431
 :LP_0000431 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -4223,7 +4224,8 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000448
 :LP_0000448 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -4240,7 +4242,8 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000449
 :LP_0000449 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -4283,7 +4286,8 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000459
 :LP_0000459 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -4342,44 +4346,6 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
             rdfs:label "Bezugsfunktionen"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000505
-:LP_0000505 rdf:type owl:Class ;
-            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
-                            [ rdf:type owl:Class ;
-                              owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty :LP_0000008 ;
-                                                                     owl:someValuesFrom :LP_0000508
-                                                                   ]
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty :LP_0000344 ;
-                                                                     owl:someValuesFrom xsd:decimal
-                                                                   ]
-                                                                 ) ;
-                                              rdf:type owl:Class
-                                            ]
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :LP_0000344 ;
-                                              owl:someValuesFrom xsd:decimal
-                                            ]
-                                          )
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                              owl:someValuesFrom :LP_0000261
-                            ] ;
-            rdfs:comment "Ein Data Item, dass die thematische und inhaltliche Einheit des Unterrichts ausdrückt. Es kann entweder feste Zeitspannen, die Unterrichtsstunden meinen (z.B. 45 Minuten), oder sie umfasst mehrere solcher Unterrichtsstunden, um ein zusammenhängendes Stoffgebiet zu behandeln."@de ;
-            rdfs:label "Unterrichtseinheitspezifikation"@de ;
-            <http://www.w3.org/2004/02/skos/core#example> """Soll z.B. ausgedrückt werden, dass der Unterricht 6 Einheiten à 45 Minuten enhält kann folgendes Muster verwendet werden:
-
-:unterricht_1 'mem:described by' :ue_1 .
-ue_1 a mem:Unterrichtseinheitsspezifikation .
-ue_1 'mem:hat Wert' \"6\"^^xsd:decimal .
-ue_1 'mem:hat Teil' zs_1 .
-zs_1 a mem:Zeitpezifikation .
-zs_1 'mem:hat Wert' \"45\"^^xsd:decimal .
-zs_1 'mem:hat Einheit' qudt:Min .""" .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000508
 :LP_0000508 rdf:type owl:Class ;
             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
@@ -4397,13 +4363,22 @@ zs_1 'mem:hat Einheit' qudt:Min .""" .
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :LP_0000041 ;
                               owl:someValuesFrom <http://qudt.org/schema/qudt/Unit>
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :LP_0020001 ;
-                              owl:someValuesFrom :LP_0000505
                             ] ;
             rdfs:comment "Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt."@de ;
-            rdfs:label "Zeitspezifikation"@de .
+            rdfs:label "Zeitspezifikation"@de ;
+            <http://www.w3.org/2004/02/skos/core#example> """Soll z.B. ausgedrückt werden, dass der Unterricht 6 Unterrichtsstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+:zs_1 'mem:hat Einheit' 'mem:Unterrichtsstunde' .
+
+Soll ausgedrückt werden, dass der Unterricht 6 Zeitstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+:zs_1 'mem:hat Einheit' 'qudt:HR' .""" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000530
@@ -5205,7 +5180,8 @@ It describes the depth and level of demand with which learning content and compe
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001002
 :LP_0001002 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002076
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002076
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5232,7 +5208,8 @@ It describes the depth and level of demand with which learning content and compe
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001005
 :LP_0001005 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002076
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002076
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5491,7 +5468,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001224
 :LP_0001224 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0001441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0001441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5618,7 +5596,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001448
 :LP_0001448 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0001441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0001441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5635,7 +5614,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001449
 :LP_0001449 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0001441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0001441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5678,7 +5658,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001459
 :LP_0001459 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0001441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0001441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5719,7 +5700,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002046
 :LP_0002046 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000434
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000434
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -5800,7 +5782,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002057
 :LP_0002057 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000479
@@ -5822,7 +5805,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002059
 :LP_0002059 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000479
@@ -5869,7 +5853,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002063
 :LP_0002063 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6152,7 +6137,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002113
 :LP_0002113 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002089
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002089
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6165,7 +6151,8 @@ Meistens handelt es sich hierbei um Überschriften von Kapiteln in Lehrplänen o
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002114
 :LP_0002114 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002089
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002089
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6253,7 +6240,8 @@ Im Sinne der Vergleichbarkeit von Lernprozessen erfolgt die Beschreibung der Ler
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002126
 :LP_0002126 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6308,7 +6296,8 @@ Sachunterricht Primar
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002130
 :LP_0002130 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6324,7 +6313,8 @@ Englisch Primar, Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002133
 :LP_0002133 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6353,7 +6343,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002135
 :LP_0002135 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6381,7 +6372,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002139
 :LP_0002139 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002080
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002080
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6423,7 +6415,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002143
 :LP_0002143 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002080
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002080
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6474,7 +6467,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002147
 :LP_0002147 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002080
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002080
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6605,7 +6599,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002175
 :LP_0002175 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002093
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002093
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6659,7 +6654,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002181
 :LP_0002181 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002093
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002093
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6726,7 +6722,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002187
 :LP_0002187 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002085
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002085
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6756,7 +6753,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002190
 :LP_0002190 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002085
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002085
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6771,7 +6769,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002191
 :LP_0002191 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002085
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002085
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6798,7 +6797,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002193
 :LP_0002193 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6830,7 +6830,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002196
 :LP_0002196 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6912,7 +6913,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002202
 :LP_0002202 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6926,7 +6928,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002203
 :LP_0002203 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6940,7 +6943,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002205
 :LP_0002205 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6982,7 +6986,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002208
 :LP_0002208 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -6996,7 +7001,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002209
 :LP_0002209 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7024,7 +7030,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002211
 :LP_0002211 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7041,7 +7048,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002212
 :LP_0002212 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7084,7 +7092,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002218
 :LP_0002218 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7097,7 +7106,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002219
 :LP_0002219 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7111,7 +7121,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002220
 :LP_0002220 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7153,7 +7164,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002224
 :LP_0002224 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7241,7 +7253,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002230
 :LP_0002230 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7289,7 +7302,8 @@ s. außerdem Englisch Sek I (=Lernbeschreibungsfunktion?)""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002234
 :LP_0002234 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7365,7 +7379,8 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: \"Zur Unterrich
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002241
 :LP_0002241 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7379,7 +7394,8 @@ Ist oft nochmal untergliedert. In Deutsch untergliedert in z.B.: \"Zur Unterrich
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002243
 :LP_0002243 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7400,48 +7416,6 @@ The \"Fremdsprachenniveau\" indicates the extent to which learners can understan
             rdfs:label "Femdsprachenniveau"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0010002
-:LP_0010002 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0010001 ;
-            rdfs:comment "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen." ;
-            rdfs:label "A1 Anfänger"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010003
-:LP_0010003 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0010001 ;
-            rdfs:comment "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben." ;
-            rdfs:label "A2 Grundlegende Kenntnisse"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010004
-:LP_0010004 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0010001 ;
-            rdfs:comment "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben." ;
-            rdfs:label "B1 Fortgeschrittene Sprachverwendung"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010005
-:LP_0010005 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0010001 ;
-            rdfs:comment "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben." ;
-            rdfs:label "B2 Selbständige Sprachverwendung"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010006
-:LP_0010006 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0010001 ;
-            rdfs:comment "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden." ;
-            rdfs:label "C1 Fachkundige Sprachkenntnisse"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010007
-:LP_0010007 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0010001 ;
-            rdfs:comment "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen." ;
-            rdfs:label "C2 Annähernd muttersprachliche Kenntnisse"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0030001
 :LP_0030001 rdf:type owl:Class ;
             rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
@@ -7458,7 +7432,8 @@ The \"Fremdsprachenniveau\" indicates the extent to which learners can understan
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030002
 :LP_0030002 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002080
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002080
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7712,7 +7687,8 @@ The \"Fremdsprachenniveau\" indicates the extent to which learners can understan
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030020
 :LP_0030020 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7778,7 +7754,8 @@ sind entweder auf einen Bildungsstandard bezogen oder auf einen Inhalt und Wisse
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030024
 :LP_0030024 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7794,7 +7771,8 @@ Heimat- und Sachkunde Primar, Natur und Technik Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030025
 :LP_0030025 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7821,7 +7799,8 @@ Heimat- und Sachkunde Primar, Natur und Technik Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030027
 :LP_0030027 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7849,7 +7828,8 @@ Heimat- und Sachkunde Primar, Natur und Technik Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030029
 :LP_0030029 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -7867,7 +7847,8 @@ Heimat- und Sachkunde Primar, Natur und Technik Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030030
 :LP_0030030 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7895,7 +7876,8 @@ Heimat- und Sachkunde Primar, Natur und Technik Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030032
 :LP_0030032 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -7928,7 +7910,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030034
 :LP_0030034 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7942,7 +7925,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030035
 :LP_0030035 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -7990,7 +7974,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030038
 :LP_0030038 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002076
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002076
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8094,7 +8079,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030047
 :LP_0030047 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8121,7 +8107,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030049
 :LP_0030049 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8134,7 +8121,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030050
 :LP_0030050 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002089
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002089
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000479
@@ -8182,7 +8170,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030054
 :LP_0030054 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002080
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002080
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8354,7 +8343,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030067
 :LP_0030067 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8382,7 +8372,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030069
 :LP_0030069 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -8403,7 +8394,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030070
 :LP_0030070 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8418,7 +8410,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030073
 :LP_0030073 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002085
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002085
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8475,7 +8468,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030077
 :LP_0030077 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002085
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002085
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8490,7 +8484,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030078
 :LP_0030078 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002093
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002093
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8580,7 +8575,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030084
 :LP_0030084 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8595,7 +8591,8 @@ Englisch Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030085
 :LP_0030085 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002093
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002093
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8627,7 +8624,8 @@ Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Komp
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030087
 :LP_0030087 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002093
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002093
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8699,7 +8697,8 @@ Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Komp
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030092
 :LP_0030092 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8741,7 +8740,8 @@ Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Komp
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030095
 :LP_0030095 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8755,7 +8755,8 @@ Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Komp
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030096
 :LP_0030096 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002093
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002093
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8782,7 +8783,8 @@ Kommt in dem Fach Englisch vor: In der Grundschule unter “Inhaltsbezogene Komp
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030098
 :LP_0030098 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000342
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000342
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -8968,7 +8970,8 @@ Kommt in Sachunterricht Primar vor.""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030114
 :LP_0030114 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9097,7 +9100,8 @@ Kommt in Sachunterricht Primar vor.""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030123
 :LP_0030123 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0001441
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0001441
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9139,7 +9143,8 @@ Kommt in Sachunterricht Primar vor.""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030126
 :LP_0030126 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9360,7 +9365,8 @@ Kommt in Sachunterricht Primar vor.""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030139
 :LP_0030139 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9402,7 +9408,8 @@ Kommt in Sachunterricht Primar vor.""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030142
 :LP_0030142 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002102
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002102
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9430,7 +9437,8 @@ Kommt in Sachunterricht Primar vor.""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030144
 :LP_0030144 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9795,7 +9803,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030169
 :LP_0030169 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9809,7 +9818,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030170
 :LP_0030170 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9823,7 +9833,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030171
 :LP_0030171 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9851,7 +9862,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030173
 :LP_0030173 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000426
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000426
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -9869,7 +9881,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030174
 :LP_0030174 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002051
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002051
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -9969,8 +9982,20 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030181
 :LP_0030181 rdf:type owl:Class ;
-            rdfs:subClassOf :LP_0030065 ,
+            rdfs:subClassOf :LP_0000434 ,
+                            :LP_0030065 ,
                             [ owl:intersectionOf ( :LP_0000434
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0030072 ;
+                                                     owl:allValuesFrom [ owl:intersectionOf ( :LP_0030325
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty :LP_0000029 ;
+                                                                                                owl:hasValue :LP_3000051
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ]
+                                                   ]
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0002158
@@ -10261,7 +10286,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030201
 :LP_0030201 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10275,7 +10301,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030202
 :LP_0030202 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10343,7 +10370,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030207
 :LP_0030207 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10357,7 +10385,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030208
 :LP_0030208 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10371,7 +10400,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030209
 :LP_0030209 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10399,7 +10429,8 @@ Methodische und fachdidaktische Erläuterungen - Oberstufe""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030211
 :LP_0030211 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10489,7 +10520,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030217
 :LP_0030217 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10545,7 +10577,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030221
 :LP_0030221 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10559,7 +10592,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030222
 :LP_0030222 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10573,7 +10607,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030223
 :LP_0030223 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002101
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002101
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10789,7 +10824,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030238
 :LP_0030238 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10803,7 +10839,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030239
 :LP_0030239 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10846,7 +10883,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030242
 :LP_0030242 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002118
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002118
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10944,7 +10982,8 @@ Aus dem Lehrplan: “Der Sachunterricht ist vielperspektivisch angelegt. Für di
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030249
 :LP_0030249 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -10987,7 +11026,8 @@ Mathe Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030252
 :LP_0030252 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11082,7 +11122,8 @@ Deutsch Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030258
 :LP_0030258 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11156,7 +11197,8 @@ Deutsch Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030263
 :LP_0030263 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000536
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000536
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11212,7 +11254,8 @@ Deutsch Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030268
 :LP_0030268 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000536
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000536
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11232,7 +11275,8 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030269
 :LP_0030269 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000536
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000536
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11252,7 +11296,8 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030270
 :LP_0030270 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11296,7 +11341,8 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030273
 :LP_0030273 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002103
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002103
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11484,7 +11530,8 @@ Mathe Sek I und II?""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030285
 :LP_0030285 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11502,7 +11549,8 @@ Mathe Sek I und II?""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030286
 :LP_0030286 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11548,7 +11596,8 @@ Mathe Sek I und II?""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030289
 :LP_0030289 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11594,7 +11643,8 @@ Mathe Sek I und II?""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030292
 :LP_0030292 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11612,7 +11662,8 @@ Mathe Sek I und II?""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030293
 :LP_0030293 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000480
@@ -11631,7 +11682,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030294
 :LP_0030294 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11674,7 +11726,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030297
 :LP_0030297 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11688,7 +11741,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030298
 :LP_0030298 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0002097
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0002097
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11778,12 +11832,14 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 :LP_0030308 rdf:type owl:Class ;
             rdfs:subClassOf :LP_0030304 ;
             rdfs:label "Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Leitlinien (BY)" ;
             <http://www.w3.org/2004/02/skos/core#editorialNote> "nur für Grundschule und Förderschule" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030309
 :LP_0030309 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000434
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000434
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11797,7 +11853,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030310
 :LP_0030310 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000434
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000434
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11811,7 +11868,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030311
 :LP_0030311 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000434
+            rdfs:subClassOf :LP_0000349 ,
+                            [ owl:intersectionOf ( :LP_0000434
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :LP_0000483 ;
                                                      owl:hasValue :LP_0000497
@@ -11821,6 +11879,152 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                             ] ;
             rdfs:label "Gegenstandsbereich (BY)"@de ;
             <http://www.w3.org/2004/02/skos/core#editorialNote> "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030325
+:LP_0030325 rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :LP_0000261
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :LP_0000483 ;
+                                                         owl:hasValue :LP_0030326
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :LP_0000261 ;
+            rdfs:label "CE-Leitperspektive"@de ;
+            <http://www.w3.org/2004/02/skos/core#editorialNote> """Oder:
+- (Fach)übergreifendes Thema
+- (Fach)Übergreifendes Ziel
+- Bildungs- und Erziehungsziel
+- Querschnittsthema
+- Weiteres Thema""" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030327
+:LP_0030327 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0000426
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Leitperspektive (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030328
+:LP_0030328 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0002080
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Querschnittsthema (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030329
+:LP_0030329 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0002089
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Bildungs- und Erziehungsziel (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030330
+:LP_0030330 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0002093
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Fachübergreifendes Thema (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030331
+:LP_0030331 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0000434
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Übergreifendes Bildungs- und Erziehungsziel (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030332
+:LP_0030332 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0001441
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Fachübergreifendes Thema (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030333
+:LP_0030333 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0000441
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Fachübergreifendes Thema (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030334
+:LP_0030334 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0002051
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Leitperspektive (BW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030335
+:LP_0030335 rdf:type owl:Class ;
+            rdfs:subClassOf :LP_0030325 ,
+                            [ owl:intersectionOf ( :LP_0000536
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :LP_0000483 ;
+                                                     owl:hasValue :LP_0030326
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:label "Weiteres Thema (Bistas)"@de .
 
 
 #################################################################
@@ -12109,7 +12313,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Alt-Griechisch (Schulfach)"@de .
+                                         rdfs:label "Alt-Griechisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1001
@@ -12122,7 +12326,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   :LP_0000002 ,
                                                   :LP_0000003 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Biologie (Schulfach)"@de .
+                                         rdfs:label "Biologie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1002
@@ -12135,7 +12339,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   :LP_0000002 ,
                                                   :LP_0000003 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Chemie (Schulfach)"@de .
+                                         rdfs:label "Chemie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1003
@@ -12146,7 +12350,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Chinesisch (Schulfach)"@de .
+                                         rdfs:label "Chinesisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1004
@@ -12156,7 +12360,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Darstellendes Spiel (Schulfach)"@de .
+                                         rdfs:label "Darstellendes Spiel (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1005
@@ -12167,7 +12371,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Deutsch (Schulfach)"@de .
+                                         rdfs:label "Deutsch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1006
@@ -12178,7 +12382,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Deutsch als Zweitsprache (Schulfach)"@de .
+                                         rdfs:label "Deutsch als Zweitsprache (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1007
@@ -12190,7 +12394,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   :LP_0000001 ,
                                                   :LP_0000004 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Englisch (Schulfach)"@de .
+                                         rdfs:label "Englisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1008
@@ -12200,7 +12404,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Ethik (Schulfach)"@de .
+                                         rdfs:label "Ethik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1009
@@ -12212,7 +12416,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   :LP_0000001 ,
                                                   :LP_0000004 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Französisch (Schulfach)"@de .
+                                         rdfs:label "Französisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1010
@@ -12222,9 +12426,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
-                                                  :LP_0000005 ,
-                                                  :LP_0000339 ;
-                                         rdfs:label "Geografie (Schulfach)"@de .
+                                                  :LP_0000005 ;
+                                         rdfs:label "Geografie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1011
@@ -12234,9 +12437,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
-                                                  :LP_0000005 ,
-                                                  :LP_0000339 ;
-                                         rdfs:label "Geschichte (Schulfach)"@de .
+                                                  :LP_0000005 ;
+                                         rdfs:label "Geschichte (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1012
@@ -12246,7 +12448,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Gesundheit (Schulfach)"@de .
+                                         rdfs:label "Gesundheit (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1013
@@ -12257,7 +12459,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000002 ;
-                                         rdfs:label "Informatik (Schulfach)"@de .
+                                         rdfs:label "Informatik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1014
@@ -12268,7 +12470,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Italienisch (Schulfach)"@de .
+                                         rdfs:label "Italienisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1015
@@ -12278,7 +12480,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Kunst (Schulfach)"@de .
+                                         rdfs:label "Kunst (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1016
@@ -12289,7 +12491,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Latein (Schulfach)"@de .
+                                         rdfs:label "Latein (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1017
@@ -12301,7 +12503,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   :LP_0000001 ,
                                                   :LP_0000002 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Mathematik (Schulfach)"@de .
+                                         rdfs:label "Mathematik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1019
@@ -12312,7 +12514,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000002 ;
-                                         rdfs:label "MINT (Schulfach)"@de .
+                                         rdfs:label "MINT (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1020
@@ -12322,7 +12524,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Musik (Schulfach)"@de .
+                                         rdfs:label "Musik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1021
@@ -12332,7 +12534,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Philosophie (Schulfach)"@de .
+                                         rdfs:label "Philosophie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1022
@@ -12345,7 +12547,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   :LP_0000002 ,
                                                   :LP_0000003 ,
                                                   :LP_0000039 ;
-                                         rdfs:label "Physik (Schulfach)"@de .
+                                         rdfs:label "Physik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1023
@@ -12356,7 +12558,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000005 ;
-                                         rdfs:label "Politik (Schulfach)"@de .
+                                         rdfs:label "Politik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1024
@@ -12366,7 +12568,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Religionslehre (evangelische) (Schulfach)"@de .
+                                         rdfs:label "Religionslehre (evangelische) (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1025
@@ -12376,7 +12578,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Religionslehre (islamisch) (Schulfach)"@de .
+                                         rdfs:label "Religionslehre (islamisch) (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1026
@@ -12386,7 +12588,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Religionslehre (katholische) (Schulfach)"@de .
+                                         rdfs:label "Religionslehre (katholische) (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1027
@@ -12397,7 +12599,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Russisch (Schulfach)"@de .
+                                         rdfs:label "Russisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1028
@@ -12408,7 +12610,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000005 ;
-                                         rdfs:label "Sachunterricht (Schulfach)"@de .
+                                         rdfs:label "Sachunterricht (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1029
@@ -12419,7 +12621,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000005 ;
-                                         rdfs:label "Sexualerziehung (Schulfach)"@de .
+                                         rdfs:label "Sexualerziehung (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1030
@@ -12430,7 +12632,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Spanisch (Schulfach)"@de .
+                                         rdfs:label "Spanisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1031
@@ -12440,7 +12642,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Sport (Schulfach)"@de .
+                                         rdfs:label "Sport (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1032
@@ -12451,7 +12653,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Türkisch (Schulfach)"@de .
+                                         rdfs:label "Türkisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1033
@@ -12462,7 +12664,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000005 ;
-                                         rdfs:label "Wirtschaftskunde (Schulfach)"@de .
+                                         rdfs:label "Wirtschaftskunde (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1034
@@ -12473,7 +12675,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Hebräisch (Schulfach)"@de .
+                                         rdfs:label "Hebräisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1035
@@ -12484,7 +12686,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Japanisch (Schulfach)"@de .
+                                         rdfs:label "Japanisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1036
@@ -12495,7 +12697,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Neugriechisch (Schulfach)"@de .
+                                         rdfs:label "Neugriechisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1037
@@ -12506,7 +12708,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Polnisch (Schulfach)"@de .
+                                         rdfs:label "Polnisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1038
@@ -12517,7 +12719,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Portugiesisch (Schulfach)"@de .
+                                         rdfs:label "Portugiesisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1039
@@ -12528,7 +12730,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000004 ;
-                                         rdfs:label "Sorbisch (Schulfach)"@de .
+                                         rdfs:label "Sorbisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1040
@@ -12538,7 +12740,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Astronomie (Schulfach)"@de .
+                                         rdfs:label "Astronomie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1041
@@ -12548,7 +12750,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Deutsche Gebärdensprache (Schulfach)"@de .
+                                         rdfs:label "Deutsche Gebärdensprache (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1042
@@ -12559,7 +12761,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000005 ;
-                                         rdfs:label "Gesellschaftswissenschaften (Schulfach)"@de .
+                                         rdfs:label "Gesellschaftswissenschaften (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1043
@@ -12569,7 +12771,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Psychologie (Schulfach)"@de .
+                                         rdfs:label "Psychologie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1044
@@ -12579,7 +12781,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Ernährung (Schulfach)"@de .
+                                         rdfs:label "Ernährung (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1045
@@ -12590,7 +12792,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ,
                                                   :LP_0000005 ;
-                                         rdfs:label "Erziehungswissenschaften (Schulfach)"@de .
+                                         rdfs:label "Erziehungswissenschaften (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1046
@@ -12600,7 +12802,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Medienbildung (Schulfach)"@de .
+                                         rdfs:label "Medienbildung (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1047
@@ -12610,7 +12812,7 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
                                                   <http://purl.obolibrary.org/obo/BFO_0000031> ,
                                                   <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                   :LP_0000001 ;
-                                         rdfs:label "Hauswirtschaft (Schulfach)"@de .
+                                         rdfs:label "Hauswirtschaft (KIM-Schulfach)" .
 
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/1
@@ -14936,18 +15138,6 @@ gilt für die Jahrgangsstufen 7-9""" .
             rdfs:label "Regelschule"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000340
-:LP_0000340 rdf:type owl:NamedIndividual ,
-                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ,
-                     :LP_0000005 ,
-                     :LP_0000339 ;
-            rdfs:label "Sozialkunde (Schulfach)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000361
 :LP_0000361 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
@@ -15206,27 +15396,6 @@ gilt für die Jahrgangsstufen 7-9""" .
             rdfs:label "Erweiterter Realschulabschluss (ST)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000430
-:LP_0000430 rdf:type owl:NamedIndividual ,
-                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ,
-                     :LP_0000005 ;
-            rdfs:label "Wirtschaft Arbeit Technik (Schulfach)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000436
-:LP_0000436 rdf:type owl:NamedIndividual ,
-                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            rdfs:label "BC Sprachbildung (Schulfach)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000437
 :LP_0000437 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
@@ -15238,28 +15407,6 @@ gilt für die Jahrgangsstufen 7-9""" .
                      :LP_0000003 ,
                      :LP_0000039 ;
             rdfs:label "Naturwissenschaften (Schulfach)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000439
-:LP_0000439 rdf:type owl:NamedIndividual ,
-                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ,
-                     :LP_0000005 ;
-            rdfs:label "Sowi / Wiwi (Schulfach)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000442
-:LP_0000442 rdf:type owl:NamedIndividual ,
-                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ,
-                     :LP_0000005 ;
-            rdfs:label "Theater (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000452
@@ -15867,17 +16014,6 @@ gilt für die Jahrgangsstufen 7-9""" .
             rdfs:comment "Die Unterrichtsstunde ist ein festgelegter Zeitabschnitt für den Unterrichtsablauf."@de ;
             rdfs:label "Unterrichtsstunde"@de ;
             <http://www.w3.org/2004/02/skos/core#editorialNote> "Im Allgemeinen umfasst eine Schulstunde 45 Minuten."@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000560
-:LP_0000560 rdf:type owl:NamedIndividual ,
-                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
-                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
-                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ,
-                     :LP_0000004 ;
-            rdfs:label "Griechisch (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000583
@@ -17329,131 +17465,178 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
             rdfs:label "Erhöhtes Niveau (SH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000001
-:LP_1000001 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030312
+:LP_0030312 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000048 ,
-                        :LP_3000049 ,
-                        :LP_3000052 ,
-                        :LP_3000056 ,
-                        :LP_3000057 ;
-            :LP_0000029 :LP_3000048 ,
-                        :LP_3000049 ,
-                        :LP_3000052 ,
-                        :LP_3000056 ,
-                        :LP_3000057 ;
-            rdfs:label "Alt-Griechisch" .
+                     :LP_0000037 ,
+                     :LP_0010001 ;
+            rdfs:comment "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden." ;
+            rdfs:label "C1 Fachkundige Sprachkenntnisse"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000002
-:LP_1000002 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030313
+:LP_0030313 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000045 ;
-            :LP_0000029 :LP_3000045 ;
-            rdfs:label "alte Sprachen: Griechisch" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> :LP_1000001 .
+                     :LP_0000037 ,
+                     :LP_0010001 ;
+            rdfs:comment "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen." ;
+            rdfs:label "C2 Annähernd muttersprachliche Kenntnisse"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000003
-:LP_1000003 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030314
+:LP_0030314 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000050 ;
-            :LP_0000029 :LP_3000050 ;
-            rdfs:label "Griechisch (Sek I nur gymnasialer Bildungsgang, Sek II)" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> :LP_1000001 .
+                     :LP_0000037 ,
+                     :LP_0010001 ;
+            rdfs:comment "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben." ;
+            rdfs:label "B2 Selbständige Sprachverwendung"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000004
-:LP_1000004 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030315
+:LP_0030315 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000043 ,
-                        :LP_3000046 ,
-                        :LP_3000053 ,
-                        :LP_3000055 ;
-            :LP_0000029 :LP_3000043 ,
-                        :LP_3000046 ,
-                        :LP_3000053 ,
-                        :LP_3000055 ;
-            rdfs:label "Griechisch" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> :LP_1000001 .
+                     :LP_0000037 ,
+                     :LP_0010001 ;
+            rdfs:comment "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben." ;
+            rdfs:label "B1 Fortgeschrittene Sprachverwendung"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000006
-:LP_1000006 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030316
+:LP_0030316 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000043 ,
-                        :LP_3000046 ,
-                        :LP_3000050 ,
-                        :LP_3000052 ,
-                        :LP_3000055 ,
-                        :LP_3000056 ;
-            :LP_0000029 :LP_3000043 ,
-                        :LP_3000046 ,
-                        :LP_3000050 ,
-                        :LP_3000052 ,
-                        :LP_3000055 ,
-                        :LP_3000056 ;
-            rdfs:label "Darstellendes Spiel" .
+                     :LP_0000037 ,
+                     :LP_0010001 ;
+            rdfs:comment "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben." ;
+            rdfs:label "A2 Grundlegende Kenntnisse"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000007
-:LP_1000007 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030317
+:LP_0030317 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000049 ;
-            :LP_0000029 :LP_3000049 ;
-            rdfs:label "Literatur und Theater" ;
-            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/kim/schulfaecher/s1004> ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> :LP_1000006 .
+                     :LP_0000037 ,
+                     :LP_0010001 ;
+            rdfs:comment "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen." ;
+            rdfs:label "A1 Anfänger"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000008
-:LP_1000008 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030318
+:LP_0030318 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000048 ;
-            :LP_0000029 :LP_3000048 ;
-            rdfs:label "1-10 Theater" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> :LP_1000006 .
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Berufsfachschule"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "BFS" .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000009
-:LP_1000009 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/lehrplan/ontology/LP_0030319
+:LP_0030319 rdf:type owl:NamedIndividual ,
                      <http://purl.obolibrary.org/obo/BFO_0000001> ,
                      <http://purl.obolibrary.org/obo/BFO_0000002> ,
                      <http://purl.obolibrary.org/obo/BFO_0000031> ,
                      <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                     :LP_0000001 ;
-            :LP_0000024 :LP_3000044 ;
-            :LP_0000029 :LP_3000044 ;
-            rdfs:label "Darstellen und Gestalten" ;
-            <http://www.w3.org/2004/02/skos/core#exactMatch> :LP_1000006 .
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Berufsoberschule"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "BOS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030320
+:LP_0030320 rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Fachoberschule"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "FOS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030321
+:LP_0030321 rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Berufsschule"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "BS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030322
+:LP_0030322 rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Fachakademie"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "FAK" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030323
+:LP_0030323 rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Fachschule"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "FS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030324
+:LP_0030324 rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                     :LP_0000111 ;
+            :LP_0000024 :LP_3000051 ;
+            :LP_0000029 :LP_3000051 ;
+            rdfs:label "Förderschule"@de ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "FÖS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030326
+:LP_0030326 rdf:type owl:NamedIndividual ,
+                     <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                     <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                     <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                     :LP_0000478 ,
+                     :LP_0000493 ;
+            rdfs:label "Leitperspektivenbeschreibungsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000001
@@ -17750,9 +17933,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0002021 ,
                                                          :LP_0002022 ,
                                                          :LP_0002023 ,
-                                                         :LP_0002109 ,
-                                                         :LP_1000004 ,
-                                                         :LP_1000006 ;
+                                                         :LP_0002109 ;
             rdfs:label "Niedersachsen"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "NI" .
 
@@ -17783,8 +17964,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000377 ,
                                                          :LP_0000382 ,
                                                          :LP_0000521 ,
-                                                         :LP_0000522 ,
-                                                         :LP_1000009 ;
+                                                         :LP_0000522 ;
             rdfs:label "Nordrhein-Westfalen"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "NW" .
 
@@ -17811,8 +17991,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000272 ,
                                                          :LP_0000274 ,
                                                          :LP_0000517 ,
-                                                         :LP_0000518 ,
-                                                         :LP_1000002 ;
+                                                         :LP_0000518 ;
             rdfs:label "Hamburg"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "HH" .
 
@@ -17836,9 +18015,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000291 ,
                                                          :LP_0000292 ,
                                                          :LP_0001020 ,
-                                                         :LP_0001021 ,
-                                                         :LP_1000004 ,
-                                                         :LP_1000006 ;
+                                                         :LP_0001021 ;
             rdfs:label "Rheinland-Pfalz"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "RP" .
 
@@ -17919,9 +18096,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000614 ,
                                                          :LP_0000615 ,
                                                          :LP_0001516 ,
-                                                         :LP_0001517 ,
-                                                         :LP_1000001 ,
-                                                         :LP_1000008 ;
+                                                         :LP_0001517 ;
             rdfs:label "Berlin"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "BE" .
 
@@ -17948,9 +18123,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000167 ,
                                                          :LP_0000218 ,
                                                          :LP_0000510 ,
-                                                         :LP_0000511 ,
-                                                         :LP_1000001 ,
-                                                         :LP_1000007 ;
+                                                         :LP_0000511 ;
             rdfs:label "Baden-Württemberg"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "BW" .
 
@@ -17978,9 +18151,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0002002 ,
                                                          :LP_0002005 ,
                                                          :LP_0002008 ,
-                                                         :LP_0002012 ,
-                                                         :LP_1000003 ,
-                                                         :LP_1000006 ;
+                                                         :LP_0002012 ;
             rdfs:label "Hessen"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "HE" .
 
@@ -18012,7 +18183,14 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000197 ,
                                                          :LP_0000512 ,
                                                          :LP_0000513 ,
-                                                         :LP_0000525 ;
+                                                         :LP_0000525 ,
+                                                         :LP_0030318 ,
+                                                         :LP_0030319 ,
+                                                         :LP_0030320 ,
+                                                         :LP_0030321 ,
+                                                         :LP_0030322 ,
+                                                         :LP_0030323 ,
+                                                         :LP_0030324 ;
             rdfs:label "Bayern"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "BY" .
 
@@ -18038,9 +18216,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000367 ,
                                                          :LP_0000519 ,
                                                          :LP_0000520 ,
-                                                         :LP_0002012 ,
-                                                         :LP_1000001 ,
-                                                         :LP_1000006 ;
+                                                         :LP_0002012 ;
             rdfs:label "Mecklenburg-Vorpommern"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "MV" .
 
@@ -18069,8 +18245,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000406 ,
                                                          :LP_0000526 ,
                                                          :LP_0000527 ,
-                                                         :LP_0002012 ,
-                                                         :LP_1000004 ;
+                                                         :LP_0002012 ;
             rdfs:label "Sachsen-Anhalt"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "ST" .
 
@@ -18119,9 +18294,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000301 ,
                                                          :LP_0000302 ,
                                                          :LP_0001026 ,
-                                                         :LP_0001027 ,
-                                                         :LP_1000004 ,
-                                                         :LP_1000006 ;
+                                                         :LP_0001027 ;
             rdfs:label "Saarland"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "SL" .
 
@@ -18147,9 +18320,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000248 ,
                                                          :LP_0000251 ,
                                                          :LP_0002120 ,
-                                                         :LP_0002121 ,
-                                                         :LP_1000001 ,
-                                                         :LP_1000006 ;
+                                                         :LP_0002121 ;
             rdfs:label "Bremen"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "HB" .
 
@@ -18205,8 +18376,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
                                                          :LP_0000612 ,
                                                          :LP_0000613 ,
                                                          :LP_0000614 ,
-                                                         :LP_0000615 ,
-                                                         :LP_1000001 ;
+                                                         :LP_0000615 ;
             rdfs:label "Brandenburg"@de ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "BB" .
 

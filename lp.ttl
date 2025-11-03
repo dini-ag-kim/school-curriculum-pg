@@ -16,9 +16,9 @@
 @base <https://w3id.org/lehrplan/ontology/> .
 
 <https://w3id.org/lehrplan/ontology/> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0-6> ;
-                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-6, https://w3id.org/lehrplan/ontology" ;
-                                       terms:created "2025-09-22" ;
+                                       owl:versionIRI <https://w3id.org/lehrplan/ontology/1.0.0-7> ;
+                                       terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-7, https://w3id.org/lehrplan/ontology" ;
+                                       terms:created "2025-11-03" ;
                                        terms:creator <https://orcid.org/0000-0001-6378-2618> ,
                                                      <https://orcid.org/0000-0001-7192-7143> ,
                                                      "Almut Steinlein"@de ,
@@ -30,7 +30,7 @@
                                        terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                        terms:title "Curriculum Ontology"@en ,
                                                    "Lehrplan Ontologie"@de ;
-                                       owl:versionInfo "1.0.0-6" .
+                                       owl:versionInfo "1.0.0-7" .
 
 #################################################################
 #    Annotation properties
@@ -2174,19 +2174,14 @@ obo:IAO_0000409 rdf:type owl:Class ;
 ###  https://w3id.org/lehrplan/ontology/LP_0000001
 ontology:LP_0000001 rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000030 ;
-                    rdfs:comment """A \"Schulfach\" is an “information content entity”.
-It refers to the designation of a subject taught at school.
-It represents the thematic structure of what is considered general school education.
-A \"Schulfach\" is a subject area that organizes teaching lessons by content.
-Examples of \"Schulfächer\" include German, mathematics, history, and biology."""@en ,
-                                 """Ein “Schulfach” ist eine “Informationseinheit”.
-Es handelt sich um die Bezeichnung eines an der Schule unterrichteten Fachs. 
-Es ist der Ausdruck für die thematische Gliederung dessen, was jeweils unter allgemeiner schulischer Bildung verstanden wird. 
-Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Beispiele für Schulfächer sind Deutsch, Mathematik, Geschichte und Biologie."""@de ;
+                    rdfs:comment "A school subject is an information content entity that designates and organizes the thematic areas of knowledge constituting general school education, serving as the conceptual framework for structuring teaching and learning activities."@en ,
+                                 "Ein Schulfach ist eine Informationseinheit, die die Bezeichnung eines an Schulen unterrichteten Fachgebiets darstellt, welches die thematische Gliederung der allgemeinen schulischen Bildung widerspiegelt und der inhaltlichen Strukturierung des Unterrichts dient."@de ;
                     rdfs:label "Schulfach"@de ,
                                "school subject"@en ;
-                    rdfs:seeAlso <https://de.wikipedia.org/wiki/Unterrichtsfach> ;
-                    skos:altLabel "Fach" .
+                    rdfs:seeAlso <https://de.wikipedia.org/wiki/Unterrichtsfach> ,
+                                 <https://github.com/FWU-DE/schulfach-ontologie> ;
+                    skos:altLabel "Fach" ;
+                    skos:example "Examples of school subjects include German, mathematics, history, and biology."@en .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000002
@@ -3474,7 +3469,8 @@ In der Ontologie fungiert das “Curriculare Element\" als Superklasse, um die E
 Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zweck innerhalb des Lehrplans näher definiert. Dadurch können die bundeslandspezifischen Bestandteile der Lehrpläne abgebildet werden, da ihnen gemeinsame Funktionen zugeordnet werden können.
 
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."""@de ;
-                    rdfs:label "Curriculares Element"@de ;
+                    rdfs:label "Curriculares Element"@de ,
+                               "curricular element"@en ;
                     skos:editorialNote "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de .
 
 
@@ -3539,7 +3535,8 @@ ontology:LP_0000268 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000328
 ontology:LP_0000328 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -3628,12 +3625,6 @@ ontology:LP_0000337 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000339
 ontology:LP_0000339 rdf:type owl:Class ;
-                    owl:equivalentClass [ rdf:type owl:Class ;
-                                          owl:oneOf ( <http://w3id.org/kim/schulfaecher/s1010>
-                                                      <http://w3id.org/kim/schulfaecher/s1011>
-                                                      ontology:LP_0000340
-                                                    )
-                                        ] ;
                     rdfs:subClassOf ontology:LP_0000005 ;
                     rdfs:comment "RP" ;
                     rdfs:label "Gemeinschaftskunde"@de .
@@ -3685,6 +3676,14 @@ ontology:LP_0000347 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000349
 ontology:LP_0000349 rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000261
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty ontology:LP_0000483 ;
+                                                                 owl:hasValue ontology:LP_0000497
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
                     rdfs:subClassOf ontology:LP_0000261 ;
                     rdfs:comment """A “CE-Bereich” is a “Curriculares Element”.
 A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
@@ -3814,7 +3813,8 @@ ontology:LP_0000426 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000428
 ontology:LP_0000428 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -3838,7 +3838,8 @@ ontology:LP_0000429 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000431
 ontology:LP_0000431 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -4009,7 +4010,8 @@ ontology:LP_0000447 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000448
 ontology:LP_0000448 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -4026,7 +4028,8 @@ ontology:LP_0000448 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000449
 ontology:LP_0000449 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -4069,7 +4072,8 @@ ontology:LP_0000451 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000459
 ontology:LP_0000459 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -4128,44 +4132,6 @@ ontology:LP_0000499 rdf:type owl:Class ;
                     rdfs:label "Bezugsfunktionen"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000505
-ontology:LP_0000505 rdf:type owl:Class ;
-                    rdfs:subClassOf obo:IAO_0000027 ,
-                                    [ rdf:type owl:Class ;
-                                      owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty ontology:LP_0000008 ;
-                                                                             owl:someValuesFrom ontology:LP_0000508
-                                                                           ]
-                                                                           [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty ontology:LP_0000344 ;
-                                                                             owl:someValuesFrom xsd:decimal
-                                                                           ]
-                                                                         ) ;
-                                                      rdf:type owl:Class
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty ontology:LP_0000344 ;
-                                                      owl:someValuesFrom xsd:decimal
-                                                    ]
-                                                  )
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty obo:IAO_0000136 ;
-                                      owl:someValuesFrom ontology:LP_0000261
-                                    ] ;
-                    rdfs:comment "Ein Data Item, dass die thematische und inhaltliche Einheit des Unterrichts ausdrückt. Es kann entweder feste Zeitspannen, die Unterrichtsstunden meinen (z.B. 45 Minuten), oder sie umfasst mehrere solcher Unterrichtsstunden, um ein zusammenhängendes Stoffgebiet zu behandeln."@de ;
-                    rdfs:label "Unterrichtseinheitspezifikation"@de ;
-                    skos:example """Soll z.B. ausgedrückt werden, dass der Unterricht 6 Einheiten à 45 Minuten enhält kann folgendes Muster verwendet werden:
-
-:unterricht_1 'mem:described by' :ue_1 .
-ue_1 a mem:Unterrichtseinheitsspezifikation .
-ue_1 'mem:hat Wert' \"6\"^^xsd:decimal .
-ue_1 'mem:hat Teil' zs_1 .
-zs_1 a mem:Zeitpezifikation .
-zs_1 'mem:hat Wert' \"45\"^^xsd:decimal .
-zs_1 'mem:hat Einheit' qudt:Min .""" .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000508
 ontology:LP_0000508 rdf:type owl:Class ;
                     rdfs:subClassOf obo:IAO_0000027 ,
@@ -4183,13 +4149,22 @@ ontology:LP_0000508 rdf:type owl:Class ;
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty ontology:LP_0000041 ;
                                       owl:someValuesFrom <http://qudt.org/schema/qudt/Unit>
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty ontology:LP_0020001 ;
-                                      owl:someValuesFrom ontology:LP_0000505
                                     ] ;
                     rdfs:comment "Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt."@de ;
-                    rdfs:label "Zeitspezifikation"@de .
+                    rdfs:label "Zeitspezifikation"@de ;
+                    skos:example """Soll z.B. ausgedrückt werden, dass der Unterricht 6 Unterrichtsstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+:zs_1 'mem:hat Einheit' 'mem:Unterrichtsstunde' .
+
+Soll ausgedrückt werden, dass der Unterricht 6 Zeitstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+:zs_1 'mem:hat Einheit' 'qudt:HR' .""" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000530
@@ -4991,7 +4966,8 @@ ontology:LP_0001001 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001002
 ontology:LP_0001002 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002076
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002076
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5018,7 +4994,8 @@ ontology:LP_0001003 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001005
 ontology:LP_0001005 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002076
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002076
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5277,7 +5254,8 @@ ontology:LP_0001223 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001224
 ontology:LP_0001224 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0001441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0001441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5404,7 +5382,8 @@ ontology:LP_0001447 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001448
 ontology:LP_0001448 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0001441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0001441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5421,7 +5400,8 @@ ontology:LP_0001448 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001449
 ontology:LP_0001449 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0001441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0001441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5464,7 +5444,8 @@ ontology:LP_0001451 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0001459
 ontology:LP_0001459 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0001441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0001441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5505,7 +5486,8 @@ ontology:LP_0002044 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002046
 ontology:LP_0002046 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000434
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000434
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5586,7 +5568,8 @@ ontology:LP_0002052 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002057
 ontology:LP_0002057 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
@@ -5608,7 +5591,8 @@ ontology:LP_0002057 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002059
 ontology:LP_0002059 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
@@ -5655,7 +5639,8 @@ ontology:LP_0002061 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002063
 ontology:LP_0002063 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5938,7 +5923,8 @@ ontology:LP_0002110 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002113
 ontology:LP_0002113 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002089
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002089
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -5951,7 +5937,8 @@ ontology:LP_0002113 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002114
 ontology:LP_0002114 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002089
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002089
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6039,7 +6026,8 @@ ontology:LP_0002122 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002126
 ontology:LP_0002126 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6094,7 +6082,8 @@ Sachunterricht Primar
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002130
 ontology:LP_0002130 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6110,7 +6099,8 @@ Englisch Primar, Sek I und Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002133
 ontology:LP_0002133 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6139,7 +6129,8 @@ Physik Sek II""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002135
 ontology:LP_0002135 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6167,7 +6158,8 @@ ontology:LP_0002136 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002139
 ontology:LP_0002139 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002080
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002080
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6209,7 +6201,8 @@ ontology:LP_0002141 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002143
 ontology:LP_0002143 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002080
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002080
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6260,7 +6253,8 @@ ontology:LP_0002145 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002147
 ontology:LP_0002147 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002080
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002080
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6391,7 +6385,8 @@ ontology:LP_0002174 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002175
 ontology:LP_0002175 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002093
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6445,7 +6440,8 @@ ontology:LP_0002179 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002181
 ontology:LP_0002181 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002093
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6512,7 +6508,8 @@ ontology:LP_0002186 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002187
 ontology:LP_0002187 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002085
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002085
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6542,7 +6539,8 @@ ontology:LP_0002188 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002190
 ontology:LP_0002190 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002085
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002085
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6557,7 +6555,8 @@ ontology:LP_0002190 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002191
 ontology:LP_0002191 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002085
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002085
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6584,7 +6583,8 @@ ontology:LP_0002192 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002193
 ontology:LP_0002193 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6616,7 +6616,8 @@ ontology:LP_0002195 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002196
 ontology:LP_0002196 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6698,7 +6699,8 @@ ontology:LP_0002201 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002202
 ontology:LP_0002202 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6712,7 +6714,8 @@ ontology:LP_0002202 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002203
 ontology:LP_0002203 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6726,7 +6729,8 @@ ontology:LP_0002203 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002205
 ontology:LP_0002205 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6768,7 +6772,8 @@ ontology:LP_0002207 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002208
 ontology:LP_0002208 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6782,7 +6787,8 @@ ontology:LP_0002208 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002209
 ontology:LP_0002209 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6810,7 +6816,8 @@ ontology:LP_0002210 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002211
 ontology:LP_0002211 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6827,7 +6834,8 @@ ontology:LP_0002211 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002212
 ontology:LP_0002212 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6870,7 +6878,8 @@ ontology:LP_0002215 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002218
 ontology:LP_0002218 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6883,7 +6892,8 @@ ontology:LP_0002218 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002219
 ontology:LP_0002219 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6897,7 +6907,8 @@ ontology:LP_0002219 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002220
 ontology:LP_0002220 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -6939,7 +6950,8 @@ ontology:LP_0002223 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002224
 ontology:LP_0002224 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7027,7 +7039,8 @@ ontology:LP_0002229 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002230
 ontology:LP_0002230 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7075,7 +7088,8 @@ ontology:LP_0002233 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002234
 ontology:LP_0002234 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7151,7 +7165,8 @@ ontology:LP_0002240 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002241
 ontology:LP_0002241 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7165,7 +7180,8 @@ ontology:LP_0002241 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0002243
 ontology:LP_0002243 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7186,48 +7202,6 @@ The \"Fremdsprachenniveau\" indicates the extent to which learners can understan
                     rdfs:label "Femdsprachenniveau"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0010002
-ontology:LP_0010002 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0010001 ;
-                    rdfs:comment "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen." ;
-                    rdfs:label "A1 Anfänger"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010003
-ontology:LP_0010003 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0010001 ;
-                    rdfs:comment "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben." ;
-                    rdfs:label "A2 Grundlegende Kenntnisse"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010004
-ontology:LP_0010004 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0010001 ;
-                    rdfs:comment "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben." ;
-                    rdfs:label "B1 Fortgeschrittene Sprachverwendung"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010005
-ontology:LP_0010005 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0010001 ;
-                    rdfs:comment "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben." ;
-                    rdfs:label "B2 Selbständige Sprachverwendung"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010006
-ontology:LP_0010006 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0010001 ;
-                    rdfs:comment "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden." ;
-                    rdfs:label "C1 Fachkundige Sprachkenntnisse"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0010007
-ontology:LP_0010007 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0010001 ;
-                    rdfs:comment "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen." ;
-                    rdfs:label "C2 Annähernd muttersprachliche Kenntnisse"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0030001
 ontology:LP_0030001 rdf:type owl:Class ;
                     rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
@@ -7244,7 +7218,8 @@ ontology:LP_0030001 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030002
 ontology:LP_0030002 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002080
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002080
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7498,7 +7473,8 @@ ontology:LP_0030019 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030020
 ontology:LP_0030020 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7564,7 +7540,8 @@ ontology:LP_0030023 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030024
 ontology:LP_0030024 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7580,7 +7557,8 @@ Heimat- und Sachkunde Primar, Natur und Technik Sek I""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030025
 ontology:LP_0030025 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7607,7 +7585,8 @@ ontology:LP_0030026 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030027
 ontology:LP_0030027 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7635,7 +7614,8 @@ ontology:LP_0030028 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030029
 ontology:LP_0030029 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -7653,7 +7633,8 @@ ontology:LP_0030029 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030030
 ontology:LP_0030030 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7681,7 +7662,8 @@ ontology:LP_0030031 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030032
 ontology:LP_0030032 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -7714,7 +7696,8 @@ ontology:LP_0030033 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030034
 ontology:LP_0030034 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7728,7 +7711,8 @@ ontology:LP_0030034 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030035
 ontology:LP_0030035 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7776,7 +7760,8 @@ ontology:LP_0030037 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030038
 ontology:LP_0030038 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002076
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002076
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7880,7 +7865,8 @@ ontology:LP_0030045 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030047
 ontology:LP_0030047 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7907,7 +7893,8 @@ ontology:LP_0030048 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030049
 ontology:LP_0030049 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -7920,7 +7907,8 @@ ontology:LP_0030049 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030050
 ontology:LP_0030050 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002089
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002089
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000479
@@ -7968,7 +7956,8 @@ ontology:LP_0030053 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030054
 ontology:LP_0030054 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002080
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002080
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8140,7 +8129,8 @@ ontology:LP_0030066 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030067
 ontology:LP_0030067 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8168,7 +8158,8 @@ ontology:LP_0030068 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030069
 ontology:LP_0030069 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -8189,7 +8180,8 @@ ontology:LP_0030069 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030070
 ontology:LP_0030070 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8204,7 +8196,8 @@ ontology:LP_0030070 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030073
 ontology:LP_0030073 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002085
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002085
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8261,7 +8254,8 @@ ontology:LP_0030076 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030077
 ontology:LP_0030077 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002085
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002085
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8276,7 +8270,8 @@ ontology:LP_0030077 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030078
 ontology:LP_0030078 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002093
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8366,7 +8361,8 @@ ontology:LP_0030083 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030084
 ontology:LP_0030084 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8381,7 +8377,8 @@ ontology:LP_0030084 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030085
 ontology:LP_0030085 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002093
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8413,7 +8410,8 @@ ontology:LP_0030086 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030087
 ontology:LP_0030087 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002093
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8485,7 +8483,8 @@ ontology:LP_0030091 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030092
 ontology:LP_0030092 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8527,7 +8526,8 @@ ontology:LP_0030094 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030095
 ontology:LP_0030095 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8541,7 +8541,8 @@ ontology:LP_0030095 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030096
 ontology:LP_0030096 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002093
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8568,7 +8569,8 @@ ontology:LP_0030097 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030098
 ontology:LP_0030098 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000342
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000342
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8754,7 +8756,8 @@ ontology:LP_0030113 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030114
 ontology:LP_0030114 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8883,7 +8886,8 @@ ontology:LP_0030122 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030123
 ontology:LP_0030123 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0001441
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0001441
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -8925,7 +8929,8 @@ ontology:LP_0030125 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030126
 ontology:LP_0030126 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9146,7 +9151,8 @@ ontology:LP_0030138 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030139
 ontology:LP_0030139 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9188,7 +9194,8 @@ ontology:LP_0030141 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030142
 ontology:LP_0030142 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002102
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002102
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9216,7 +9223,8 @@ ontology:LP_0030143 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030144
 ontology:LP_0030144 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9581,7 +9589,8 @@ ontology:LP_0030168 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030169
 ontology:LP_0030169 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9595,7 +9604,8 @@ ontology:LP_0030169 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030170
 ontology:LP_0030170 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9609,7 +9619,8 @@ ontology:LP_0030170 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030171
 ontology:LP_0030171 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9637,7 +9648,8 @@ ontology:LP_0030172 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030173
 ontology:LP_0030173 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000426
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -9655,7 +9667,8 @@ ontology:LP_0030173 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030174
 ontology:LP_0030174 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002051
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -9755,8 +9768,19 @@ ontology:LP_0030180 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030181
 ontology:LP_0030181 rdf:type owl:Class ;
-                    rdfs:subClassOf ontology:LP_0030065 ,
+                    rdfs:subClassOf ontology:LP_0000434 ,
                                     [ owl:intersectionOf ( ontology:LP_0000434
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0030072 ;
+                                                             owl:allValuesFrom [ owl:intersectionOf ( ontology:LP_0030325
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty ontology:LP_0000029 ;
+                                                                                                        owl:hasValue ontology:LP_3000051
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                           ]
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0002158
@@ -10047,7 +10071,8 @@ ontology:LP_0030200 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030201
 ontology:LP_0030201 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10061,7 +10086,8 @@ ontology:LP_0030201 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030202
 ontology:LP_0030202 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10129,7 +10155,8 @@ ontology:LP_0030206 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030207
 ontology:LP_0030207 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10143,7 +10170,8 @@ ontology:LP_0030207 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030208
 ontology:LP_0030208 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10157,7 +10185,8 @@ ontology:LP_0030208 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030209
 ontology:LP_0030209 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10185,7 +10214,8 @@ ontology:LP_0030210 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030211
 ontology:LP_0030211 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10275,7 +10305,8 @@ ontology:LP_0030216 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030217
 ontology:LP_0030217 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10331,7 +10362,8 @@ ontology:LP_0030220 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030221
 ontology:LP_0030221 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10345,7 +10377,8 @@ ontology:LP_0030221 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030222
 ontology:LP_0030222 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10359,7 +10392,8 @@ ontology:LP_0030222 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030223
 ontology:LP_0030223 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002101
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002101
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10575,7 +10609,8 @@ ontology:LP_0030237 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030238
 ontology:LP_0030238 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10589,7 +10624,8 @@ ontology:LP_0030238 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030239
 ontology:LP_0030239 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10632,7 +10668,8 @@ ontology:LP_0030241 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030242
 ontology:LP_0030242 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002118
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002118
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10730,7 +10767,8 @@ ontology:LP_0030248 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030249
 ontology:LP_0030249 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10773,7 +10811,8 @@ ontology:LP_0030251 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030252
 ontology:LP_0030252 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -10868,7 +10907,8 @@ ontology:LP_0030257 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030258
 ontology:LP_0030258 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10942,7 +10982,8 @@ ontology:LP_0030262 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030263
 ontology:LP_0030263 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000536
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000536
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -10998,7 +11039,8 @@ ontology:LP_0030267 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030268
 ontology:LP_0030268 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000536
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000536
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11018,7 +11060,8 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030269
 ontology:LP_0030269 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000536
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000536
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11038,7 +11081,8 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030270
 ontology:LP_0030270 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11082,7 +11126,8 @@ ontology:LP_0030272 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030273
 ontology:LP_0030273 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002103
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002103
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11270,7 +11315,8 @@ ontology:LP_0030284 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030285
 ontology:LP_0030285 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11288,7 +11334,8 @@ ontology:LP_0030285 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030286
 ontology:LP_0030286 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11334,7 +11381,8 @@ ontology:LP_0030288 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030289
 ontology:LP_0030289 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11380,7 +11428,8 @@ ontology:LP_0030291 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030292
 ontology:LP_0030292 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11398,7 +11447,8 @@ ontology:LP_0030292 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030293
 ontology:LP_0030293 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000480
@@ -11417,7 +11467,8 @@ kommt nur unter dem Punkt \"Grammatik\" vor""" .
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030294
 ontology:LP_0030294 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11460,7 +11511,8 @@ ontology:LP_0030296 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030297
 ontology:LP_0030297 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11474,7 +11526,8 @@ ontology:LP_0030297 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030298
 ontology:LP_0030298 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0002097
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002097
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11564,12 +11617,14 @@ ontology:LP_0030307 rdf:type owl:Class ;
 ontology:LP_0030308 rdf:type owl:Class ;
                     rdfs:subClassOf ontology:LP_0030304 ;
                     rdfs:label "Bayrische Leitlinie für die Bildung und Erziehung von Kindern bis zum Ender der Grundschulzeit (BY)"@de ;
+                    skos:altLabel "Leitlinien (BY)" ;
                     skos:editorialNote "nur für Grundschule und Förderschule" .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030309
 ontology:LP_0030309 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000434
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000434
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11583,7 +11638,8 @@ ontology:LP_0030309 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030310
 ontology:LP_0030310 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000434
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000434
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11597,7 +11653,8 @@ ontology:LP_0030310 rdf:type owl:Class ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0030311
 ontology:LP_0030311 rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( ontology:LP_0000434
+                    rdfs:subClassOf ontology:LP_0000349 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000434
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty ontology:LP_0000483 ;
                                                              owl:hasValue ontology:LP_0000497
@@ -11607,6 +11664,152 @@ ontology:LP_0030311 rdf:type owl:Class ;
                                     ] ;
                     rdfs:label "Gegenstandsbereich (BY)"@de ;
                     skos:editorialNote "Begriff kommt nicht in den Fachlehrplänen vor! (da gibt es nur Lernbereiche) Sondern in den Kompetenzstrukturmodellen der jeweiligen Fächer (Mathematik udn Nawis) (an die Bistas angelehnt)" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030325
+ontology:LP_0030325 rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( ontology:LP_0000261
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty ontology:LP_0000483 ;
+                                                                 owl:hasValue ontology:LP_0030326
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf ontology:LP_0000261 ;
+                    rdfs:label "CE-Leitperspektive"@de ;
+                    skos:editorialNote """Oder:
+- (Fach)übergreifendes Thema
+- (Fach)Übergreifendes Ziel
+- Bildungs- und Erziehungsziel
+- Querschnittsthema
+- Weiteres Thema""" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030327
+ontology:LP_0030327 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000426
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Leitperspektive (HH)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030328
+ontology:LP_0030328 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002080
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Querschnittsthema (MV)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030329
+ontology:LP_0030329 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002089
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Bildungs- und Erziehungsziel (SN)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030330
+ontology:LP_0030330 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002093
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Fachübergreifendes Thema (ST)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030331
+ontology:LP_0030331 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000434
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Übergreifendes Bildungs- und Erziehungsziel (BY)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030332
+ontology:LP_0030332 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0001441
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Fachübergreifendes Thema (BE)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030333
+ontology:LP_0030333 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000441
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Fachübergreifendes Thema (BB)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030334
+ontology:LP_0030334 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0002051
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Leitperspektive (BW)"@de .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030335
+ontology:LP_0030335 rdf:type owl:Class ;
+                    rdfs:subClassOf ontology:LP_0030325 ,
+                                    [ owl:intersectionOf ( ontology:LP_0000536
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty ontology:LP_0000483 ;
+                                                             owl:hasValue ontology:LP_0030326
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                    rdfs:label "Weiteres Thema (Bistas)"@de .
 
 
 #################################################################
@@ -11760,280 +11963,280 @@ obo:OMO_0001000 rdf:type owl:NamedIndividual ;
 ###  http://w3id.org/kim/schulfaecher/s1000
 <http://w3id.org/kim/schulfaecher/s1000> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Alt-Griechisch (Schulfach)"@de .
+                                         rdfs:label "Alt-Griechisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1001
 <http://w3id.org/kim/schulfaecher/s1001> rdf:type owl:NamedIndividual ;
-                                         rdfs:label "Biologie (Schulfach)"@de .
+                                         rdfs:label "Biologie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1002
 <http://w3id.org/kim/schulfaecher/s1002> rdf:type owl:NamedIndividual ;
-                                         rdfs:label "Chemie (Schulfach)"@de .
+                                         rdfs:label "Chemie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1003
 <http://w3id.org/kim/schulfaecher/s1003> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Chinesisch (Schulfach)"@de .
+                                         rdfs:label "Chinesisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1004
 <http://w3id.org/kim/schulfaecher/s1004> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Darstellendes Spiel (Schulfach)"@de .
+                                         rdfs:label "Darstellendes Spiel (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1005
 <http://w3id.org/kim/schulfaecher/s1005> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Deutsch (Schulfach)"@de .
+                                         rdfs:label "Deutsch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1006
 <http://w3id.org/kim/schulfaecher/s1006> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Deutsch als Zweitsprache (Schulfach)"@de .
+                                         rdfs:label "Deutsch als Zweitsprache (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1007
 <http://w3id.org/kim/schulfaecher/s1007> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Englisch (Schulfach)"@de .
+                                         rdfs:label "Englisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1008
 <http://w3id.org/kim/schulfaecher/s1008> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Ethik (Schulfach)"@de .
+                                         rdfs:label "Ethik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1009
 <http://w3id.org/kim/schulfaecher/s1009> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Französisch (Schulfach)"@de .
+                                         rdfs:label "Französisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1010
 <http://w3id.org/kim/schulfaecher/s1010> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Geografie (Schulfach)"@de .
+                                         rdfs:label "Geografie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1011
 <http://w3id.org/kim/schulfaecher/s1011> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Geschichte (Schulfach)"@de .
+                                         rdfs:label "Geschichte (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1012
 <http://w3id.org/kim/schulfaecher/s1012> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Gesundheit (Schulfach)"@de .
+                                         rdfs:label "Gesundheit (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1013
 <http://w3id.org/kim/schulfaecher/s1013> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000002 ;
-                                         rdfs:label "Informatik (Schulfach)"@de .
+                                         rdfs:label "Informatik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1014
 <http://w3id.org/kim/schulfaecher/s1014> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Italienisch (Schulfach)"@de .
+                                         rdfs:label "Italienisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1015
 <http://w3id.org/kim/schulfaecher/s1015> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Kunst (Schulfach)"@de .
+                                         rdfs:label "Kunst (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1016
 <http://w3id.org/kim/schulfaecher/s1016> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Latein (Schulfach)"@de .
+                                         rdfs:label "Latein (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1017
 <http://w3id.org/kim/schulfaecher/s1017> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000002 ;
-                                         rdfs:label "Mathematik (Schulfach)"@de .
+                                         rdfs:label "Mathematik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1019
 <http://w3id.org/kim/schulfaecher/s1019> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000002 ;
-                                         rdfs:label "MINT (Schulfach)"@de .
+                                         rdfs:label "MINT (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1020
 <http://w3id.org/kim/schulfaecher/s1020> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Musik (Schulfach)"@de .
+                                         rdfs:label "Musik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1021
 <http://w3id.org/kim/schulfaecher/s1021> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Philosophie (Schulfach)"@de .
+                                         rdfs:label "Philosophie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1022
 <http://w3id.org/kim/schulfaecher/s1022> rdf:type owl:NamedIndividual ;
-                                         rdfs:label "Physik (Schulfach)"@de .
+                                         rdfs:label "Physik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1023
 <http://w3id.org/kim/schulfaecher/s1023> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Politik (Schulfach)"@de .
+                                         rdfs:label "Politik (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1024
 <http://w3id.org/kim/schulfaecher/s1024> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Religionslehre (evangelische) (Schulfach)"@de .
+                                         rdfs:label "Religionslehre (evangelische) (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1025
 <http://w3id.org/kim/schulfaecher/s1025> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Religionslehre (islamisch) (Schulfach)"@de .
+                                         rdfs:label "Religionslehre (islamisch) (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1026
 <http://w3id.org/kim/schulfaecher/s1026> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Religionslehre (katholische) (Schulfach)"@de .
+                                         rdfs:label "Religionslehre (katholische) (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1027
 <http://w3id.org/kim/schulfaecher/s1027> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Russisch (Schulfach)"@de .
+                                         rdfs:label "Russisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1028
 <http://w3id.org/kim/schulfaecher/s1028> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Sachunterricht (Schulfach)"@de .
+                                         rdfs:label "Sachunterricht (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1029
 <http://w3id.org/kim/schulfaecher/s1029> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Sexualerziehung (Schulfach)"@de .
+                                         rdfs:label "Sexualerziehung (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1030
 <http://w3id.org/kim/schulfaecher/s1030> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Spanisch (Schulfach)"@de .
+                                         rdfs:label "Spanisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1031
 <http://w3id.org/kim/schulfaecher/s1031> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Sport (Schulfach)"@de .
+                                         rdfs:label "Sport (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1032
 <http://w3id.org/kim/schulfaecher/s1032> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Türkisch (Schulfach)"@de .
+                                         rdfs:label "Türkisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1033
 <http://w3id.org/kim/schulfaecher/s1033> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Wirtschaftskunde (Schulfach)"@de .
+                                         rdfs:label "Wirtschaftskunde (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1034
 <http://w3id.org/kim/schulfaecher/s1034> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Hebräisch (Schulfach)"@de .
+                                         rdfs:label "Hebräisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1035
 <http://w3id.org/kim/schulfaecher/s1035> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Japanisch (Schulfach)"@de .
+                                         rdfs:label "Japanisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1036
 <http://w3id.org/kim/schulfaecher/s1036> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Neugriechisch (Schulfach)"@de .
+                                         rdfs:label "Neugriechisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1037
 <http://w3id.org/kim/schulfaecher/s1037> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Polnisch (Schulfach)"@de .
+                                         rdfs:label "Polnisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1038
 <http://w3id.org/kim/schulfaecher/s1038> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Portugiesisch (Schulfach)"@de .
+                                         rdfs:label "Portugiesisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1039
 <http://w3id.org/kim/schulfaecher/s1039> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000004 ;
-                                         rdfs:label "Sorbisch (Schulfach)"@de .
+                                         rdfs:label "Sorbisch (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1040
 <http://w3id.org/kim/schulfaecher/s1040> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Astronomie (Schulfach)"@de .
+                                         rdfs:label "Astronomie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1041
 <http://w3id.org/kim/schulfaecher/s1041> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Deutsche Gebärdensprache (Schulfach)"@de .
+                                         rdfs:label "Deutsche Gebärdensprache (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1042
 <http://w3id.org/kim/schulfaecher/s1042> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Gesellschaftswissenschaften (Schulfach)"@de .
+                                         rdfs:label "Gesellschaftswissenschaften (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1043
 <http://w3id.org/kim/schulfaecher/s1043> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Psychologie (Schulfach)"@de .
+                                         rdfs:label "Psychologie (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1044
 <http://w3id.org/kim/schulfaecher/s1044> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Ernährung (Schulfach)"@de .
+                                         rdfs:label "Ernährung (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1045
 <http://w3id.org/kim/schulfaecher/s1045> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000005 ;
-                                         rdfs:label "Erziehungswissenschaften (Schulfach)"@de .
+                                         rdfs:label "Erziehungswissenschaften (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1046
 <http://w3id.org/kim/schulfaecher/s1046> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Medienbildung (Schulfach)"@de .
+                                         rdfs:label "Medienbildung (KIM-Schulfach)" .
 
 
 ###  http://w3id.org/kim/schulfaecher/s1047
 <http://w3id.org/kim/schulfaecher/s1047> rdf:type owl:NamedIndividual ,
                                                   ontology:LP_0000001 ;
-                                         rdfs:label "Hauswirtschaft (Schulfach)"@de .
+                                         rdfs:label "Hauswirtschaft (KIM-Schulfach)" .
 
 
 ###  https://lehrplan.yovisto.com/resource/lp/bb/level/1
@@ -13233,12 +13436,6 @@ ontology:LP_0000319 rdf:type owl:NamedIndividual ,
                     rdfs:label "Regelschule"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000340
-ontology:LP_0000340 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000005 ;
-                    rdfs:label "Sozialkunde (Schulfach)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000361
 ontology:LP_0000361 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000170 ;
@@ -13367,34 +13564,10 @@ ontology:LP_0000406 rdf:type owl:NamedIndividual ,
                     rdfs:label "Erweiterter Realschulabschluss (ST)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_0000430
-ontology:LP_0000430 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000005 ;
-                    rdfs:label "Wirtschaft Arbeit Technik (Schulfach)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000436
-ontology:LP_0000436 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    rdfs:label "BC Sprachbildung (Schulfach)"@de .
-
-
 ###  https://w3id.org/lehrplan/ontology/LP_0000437
 ontology:LP_0000437 rdf:type owl:NamedIndividual ,
                              ontology:LP_0000003 ;
                     rdfs:label "Naturwissenschaften (Schulfach)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000439
-ontology:LP_0000439 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000005 ;
-                    rdfs:label "Sowi / Wiwi (Schulfach)"@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000442
-ontology:LP_0000442 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000005 ;
-                    rdfs:label "Theater (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000452
@@ -13673,12 +13846,6 @@ ontology:LP_0000535 rdf:type owl:NamedIndividual ,
                     rdfs:comment "Die Unterrichtsstunde ist ein festgelegter Zeitabschnitt für den Unterrichtsablauf."@de ;
                     rdfs:label "Unterrichtsstunde"@de ;
                     skos:editorialNote "Im Allgemeinen umfasst eine Schulstunde 45 Minuten."@de .
-
-
-###  https://w3id.org/lehrplan/ontology/LP_0000560
-ontology:LP_0000560 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000004 ;
-                    rdfs:label "Griechisch (Schulfach)"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000583
@@ -14238,79 +14405,108 @@ ontology:LP_0030046 rdf:type owl:NamedIndividual ,
                     rdfs:label "Erhöhtes Niveau (SH)"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000001
-ontology:LP_1000001 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000048 ,
-                                        ontology:LP_3000049 ,
-                                        ontology:LP_3000052 ,
-                                        ontology:LP_3000056 ,
-                                        ontology:LP_3000057 ;
-                    rdfs:label "Alt-Griechisch" .
+###  https://w3id.org/lehrplan/ontology/LP_0030312
+ontology:LP_0030312 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0010001 ;
+                    rdfs:comment "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden." ;
+                    rdfs:label "C1 Fachkundige Sprachkenntnisse"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000002
-ontology:LP_1000002 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000045 ;
-                    rdfs:label "alte Sprachen: Griechisch" ;
-                    skos:exactMatch ontology:LP_1000001 .
+###  https://w3id.org/lehrplan/ontology/LP_0030313
+ontology:LP_0030313 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0010001 ;
+                    rdfs:comment "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen." ;
+                    rdfs:label "C2 Annähernd muttersprachliche Kenntnisse"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000003
-ontology:LP_1000003 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000050 ;
-                    rdfs:label "Griechisch (Sek I nur gymnasialer Bildungsgang, Sek II)" ;
-                    skos:exactMatch ontology:LP_1000001 .
+###  https://w3id.org/lehrplan/ontology/LP_0030314
+ontology:LP_0030314 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0010001 ;
+                    rdfs:comment "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben." ;
+                    rdfs:label "B2 Selbständige Sprachverwendung"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000004
-ontology:LP_1000004 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000043 ,
-                                        ontology:LP_3000046 ,
-                                        ontology:LP_3000053 ,
-                                        ontology:LP_3000055 ;
-                    rdfs:label "Griechisch" ;
-                    skos:exactMatch ontology:LP_1000001 .
+###  https://w3id.org/lehrplan/ontology/LP_0030315
+ontology:LP_0030315 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0010001 ;
+                    rdfs:comment "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben." ;
+                    rdfs:label "B1 Fortgeschrittene Sprachverwendung"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000006
-ontology:LP_1000006 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000043 ,
-                                        ontology:LP_3000046 ,
-                                        ontology:LP_3000050 ,
-                                        ontology:LP_3000052 ,
-                                        ontology:LP_3000055 ,
-                                        ontology:LP_3000056 ;
-                    rdfs:label "Darstellendes Spiel" .
+###  https://w3id.org/lehrplan/ontology/LP_0030316
+ontology:LP_0030316 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0010001 ;
+                    rdfs:comment "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben." ;
+                    rdfs:label "A2 Grundlegende Kenntnisse"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000007
-ontology:LP_1000007 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000049 ;
-                    rdfs:label "Literatur und Theater" ;
-                    skos:closeMatch <http://w3id.org/kim/schulfaecher/s1004> ;
-                    skos:exactMatch ontology:LP_1000006 .
+###  https://w3id.org/lehrplan/ontology/LP_0030317
+ontology:LP_0030317 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0010001 ;
+                    rdfs:comment "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen." ;
+                    rdfs:label "A1 Anfänger"@de .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000008
-ontology:LP_1000008 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000048 ;
-                    rdfs:label "1-10 Theater" ;
-                    skos:exactMatch ontology:LP_1000006 .
+###  https://w3id.org/lehrplan/ontology/LP_0030318
+ontology:LP_0030318 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Berufsfachschule"@de ;
+                    skos:altLabel "BFS" .
 
 
-###  https://w3id.org/lehrplan/ontology/LP_1000009
-ontology:LP_1000009 rdf:type owl:NamedIndividual ,
-                             ontology:LP_0000001 ;
-                    ontology:LP_0000029 ontology:LP_3000044 ;
-                    rdfs:label "Darstellen und Gestalten" ;
-                    skos:exactMatch ontology:LP_1000006 .
+###  https://w3id.org/lehrplan/ontology/LP_0030319
+ontology:LP_0030319 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Berufsoberschule"@de ;
+                    skos:altLabel "BOS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030320
+ontology:LP_0030320 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Fachoberschule"@de ;
+                    skos:altLabel "FOS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030321
+ontology:LP_0030321 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Berufsschule"@de ;
+                    skos:altLabel "BS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030322
+ontology:LP_0030322 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Fachakademie"@de ;
+                    skos:altLabel "FAK" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030323
+ontology:LP_0030323 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Fachschule"@de ;
+                    skos:altLabel "FS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030324
+ontology:LP_0030324 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000111 ;
+                    ontology:LP_0000029 ontology:LP_3000051 ;
+                    rdfs:label "Förderschule"@de ;
+                    skos:altLabel "FÖS" .
+
+
+###  https://w3id.org/lehrplan/ontology/LP_0030326
+ontology:LP_0030326 rdf:type owl:NamedIndividual ,
+                             ontology:LP_0000493 ;
+                    rdfs:label "Leitperspektivenbeschreibungsfunktion"@de .
 
 
 ###  https://w3id.org/lehrplan/ontology/LP_2000001

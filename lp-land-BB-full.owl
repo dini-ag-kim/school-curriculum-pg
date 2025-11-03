@@ -14,9 +14,9 @@ Prefix(ontology:=<https://w3id.org/lehrplan/ontology/>)
 
 
 Ontology(<https://w3id.org/lehrplan/ontology/>
-<https://w3id.org/lehrplan/ontology/1.0.0-6>
-Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-6, https://w3id.org/lehrplan/ontology")
-Annotation(terms:created "2025-09-22")
+<https://w3id.org/lehrplan/ontology/1.0.0-7>
+Annotation(terms:bibliographicCitation "Lehrplan Ontology. Version 1.0.0-7, https://w3id.org/lehrplan/ontology")
+Annotation(terms:created "2025-11-03")
 Annotation(terms:creator <https://orcid.org/0000-0001-6378-2618>)
 Annotation(terms:creator <https://orcid.org/0000-0001-7192-7143>)
 Annotation(terms:creator "Almut Steinlein"@de)
@@ -29,7 +29,7 @@ Annotation(terms:license <https://creativecommons.org/licenses/by-sa/4.0/>)
 Annotation(terms:subject "Lehrplan Brandenburg")
 Annotation(terms:title "Curriculum Ontology"@en)
 Annotation(terms:title "Lehrplan Ontologie"@de)
-Annotation(owl:versionInfo "2025-09-22")
+Annotation(owl:versionInfo "1.0.0-7")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -138,7 +138,6 @@ Declaration(Class(ontology:LP_0000478))
 Declaration(Class(ontology:LP_0000482))
 Declaration(Class(ontology:LP_0000493))
 Declaration(Class(ontology:LP_0000499))
-Declaration(Class(ontology:LP_0000505))
 Declaration(Class(ontology:LP_0000508))
 Declaration(Class(ontology:LP_0000530))
 Declaration(Class(ontology:LP_0000531))
@@ -181,12 +180,6 @@ Declaration(Class(ontology:LP_0002225))
 Declaration(Class(ontology:LP_0002226))
 Declaration(Class(ontology:LP_0002227))
 Declaration(Class(ontology:LP_0010001))
-Declaration(Class(ontology:LP_0010002))
-Declaration(Class(ontology:LP_0010003))
-Declaration(Class(ontology:LP_0010004))
-Declaration(Class(ontology:LP_0010005))
-Declaration(Class(ontology:LP_0010006))
-Declaration(Class(ontology:LP_0010007))
 Declaration(Class(ontology:LP_0030003))
 Declaration(Class(ontology:LP_0030007))
 Declaration(Class(ontology:LP_0030008))
@@ -212,6 +205,9 @@ Declaration(Class(ontology:LP_0030266))
 Declaration(Class(ontology:LP_0030267))
 Declaration(Class(ontology:LP_0030268))
 Declaration(Class(ontology:LP_0030269))
+Declaration(Class(ontology:LP_0030325))
+Declaration(Class(ontology:LP_0030333))
+Declaration(Class(ontology:LP_0030335))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000054))
@@ -407,14 +403,9 @@ Declaration(NamedIndividual(ontology:LP_0000274))
 Declaration(NamedIndividual(ontology:LP_0000291))
 Declaration(NamedIndividual(ontology:LP_0000292))
 Declaration(NamedIndividual(ontology:LP_0000319))
-Declaration(NamedIndividual(ontology:LP_0000340))
 Declaration(NamedIndividual(ontology:LP_0000367))
 Declaration(NamedIndividual(ontology:LP_0000382))
-Declaration(NamedIndividual(ontology:LP_0000430))
-Declaration(NamedIndividual(ontology:LP_0000436))
 Declaration(NamedIndividual(ontology:LP_0000437))
-Declaration(NamedIndividual(ontology:LP_0000439))
-Declaration(NamedIndividual(ontology:LP_0000442))
 Declaration(NamedIndividual(ontology:LP_0000452))
 Declaration(NamedIndividual(ontology:LP_0000453))
 Declaration(NamedIndividual(ontology:LP_0000464))
@@ -437,7 +428,6 @@ Declaration(NamedIndividual(ontology:LP_0000507))
 Declaration(NamedIndividual(ontology:LP_0000532))
 Declaration(NamedIndividual(ontology:LP_0000533))
 Declaration(NamedIndividual(ontology:LP_0000535))
-Declaration(NamedIndividual(ontology:LP_0000560))
 Declaration(NamedIndividual(ontology:LP_0000583))
 Declaration(NamedIndividual(ontology:LP_0000584))
 Declaration(NamedIndividual(ontology:LP_0000585))
@@ -483,6 +473,20 @@ Declaration(NamedIndividual(ontology:LP_0002008))
 Declaration(NamedIndividual(ontology:LP_0002012))
 Declaration(NamedIndividual(ontology:LP_0002158))
 Declaration(NamedIndividual(ontology:LP_0002171))
+Declaration(NamedIndividual(ontology:LP_0030312))
+Declaration(NamedIndividual(ontology:LP_0030313))
+Declaration(NamedIndividual(ontology:LP_0030314))
+Declaration(NamedIndividual(ontology:LP_0030315))
+Declaration(NamedIndividual(ontology:LP_0030316))
+Declaration(NamedIndividual(ontology:LP_0030317))
+Declaration(NamedIndividual(ontology:LP_0030318))
+Declaration(NamedIndividual(ontology:LP_0030319))
+Declaration(NamedIndividual(ontology:LP_0030320))
+Declaration(NamedIndividual(ontology:LP_0030321))
+Declaration(NamedIndividual(ontology:LP_0030322))
+Declaration(NamedIndividual(ontology:LP_0030323))
+Declaration(NamedIndividual(ontology:LP_0030324))
+Declaration(NamedIndividual(ontology:LP_0030326))
 Declaration(NamedIndividual(ontology:LP_2000001))
 Declaration(NamedIndividual(ontology:LP_2000002))
 Declaration(NamedIndividual(ontology:LP_2000003))
@@ -1727,19 +1731,14 @@ SubClassOf(<http://qudt.org/schema/qudt/Unit> obo:IAO_0000030)
 
 # Class: ontology:LP_0000001 (school subject)
 
-AnnotationAssertion(rdfs:comment ontology:LP_0000001 "A \"Schulfach\" is an “information content entity”.
-It refers to the designation of a subject taught at school.
-It represents the thematic structure of what is considered general school education.
-A \"Schulfach\" is a subject area that organizes teaching lessons by content.
-Examples of \"Schulfächer\" include German, mathematics, history, and biology."@en)
-AnnotationAssertion(rdfs:comment ontology:LP_0000001 "Ein “Schulfach” ist eine “Informationseinheit”.
-Es handelt sich um die Bezeichnung eines an der Schule unterrichteten Fachs. 
-Es ist der Ausdruck für die thematische Gliederung dessen, was jeweils unter allgemeiner schulischer Bildung verstanden wird. 
-Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Beispiele für Schulfächer sind Deutsch, Mathematik, Geschichte und Biologie."@de)
+AnnotationAssertion(rdfs:comment ontology:LP_0000001 "A school subject is an information content entity that designates and organizes the thematic areas of knowledge constituting general school education, serving as the conceptual framework for structuring teaching and learning activities."@en)
+AnnotationAssertion(rdfs:comment ontology:LP_0000001 "Ein Schulfach ist eine Informationseinheit, die die Bezeichnung eines an Schulen unterrichteten Fachgebiets darstellt, welches die thematische Gliederung der allgemeinen schulischen Bildung widerspiegelt und der inhaltlichen Strukturierung des Unterrichts dient."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000001 "Schulfach"@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000001 "school subject"@en)
 AnnotationAssertion(rdfs:seeAlso ontology:LP_0000001 <https://de.wikipedia.org/wiki/Unterrichtsfach>)
+AnnotationAssertion(rdfs:seeAlso ontology:LP_0000001 <https://github.com/FWU-DE/schulfach-ontologie>)
 AnnotationAssertion(skos:altLabel ontology:LP_0000001 "Fach")
+AnnotationAssertion(skos:example ontology:LP_0000001 "Examples of school subjects include German, mathematics, history, and biology."@en)
 SubClassOf(ontology:LP_0000001 obo:IAO_0000030)
 
 # Class: ontology:LP_0000002 (MINT-Fach)
@@ -2080,7 +2079,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000213 "Mittlerer Abschluss (BB)"@de
 EquivalentClasses(ontology:LP_0000213 ObjectOneOf(ontology:LP_0000233 ontology:LP_0000234))
 SubClassOf(ontology:LP_0000213 ObjectIntersectionOf(ontology:LP_0000078 ObjectHasValue(ontology:LP_0000029 ontology:LP_3000057)))
 
-# Class: ontology:LP_0000261 (Curriculares Element)
+# Class: ontology:LP_0000261 (curricular element)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000261 "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
 
@@ -2097,6 +2096,7 @@ Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zwe
 
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000261 "Curriculares Element"@de)
+AnnotationAssertion(rdfs:label ontology:LP_0000261 "curricular element"@en)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000261 "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 SubClassOf(ontology:LP_0000261 obo:IAO_0000030)
 
@@ -2177,7 +2177,6 @@ SubClassOf(ontology:LP_0000337 ontology:LP_0000263)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000339 "RP")
 AnnotationAssertion(rdfs:label ontology:LP_0000339 "Gemeinschaftskunde"@de)
-EquivalentClasses(ontology:LP_0000339 ObjectOneOf(<http://w3id.org/kim/schulfaecher/s1010> <http://w3id.org/kim/schulfaecher/s1011> ontology:LP_0000340))
 SubClassOf(ontology:LP_0000339 ontology:LP_0000005)
 
 # Class: ontology:LP_0000341 (Gymnasiale Oberstufe)
@@ -2214,6 +2213,7 @@ AnnotationAssertion(skos:editorialNote ontology:LP_0000349 "Mögliche Properties
 - Beschreibung
 - Stundenzahl
 - Jahrgangsstufe")
+EquivalentClasses(ontology:LP_0000349 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 SubClassOf(ontology:LP_0000349 ontology:LP_0000261)
 
 # Class: ontology:LP_0000429 (Themenfeld)
@@ -2284,6 +2284,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0000448 "topic (BB)"@en)
 AnnotationAssertion(skos:definition ontology:LP_0000448 "A concrete topic of school teaching that can be taught through particular learning content."@en)
 AnnotationAssertion(skos:definition ontology:LP_0000448 "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann. Ein Thema kann einem Themenfeld untergeordnet und einem Inhalt untergeordnet sein."@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000448 "kommt u.a. in Englisch vor")
+SubClassOf(ontology:LP_0000448 ontology:LP_0000349)
 SubClassOf(ontology:LP_0000448 ObjectIntersectionOf(ontology:LP_0000441 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0000449 (topic area (BB))
@@ -2294,6 +2295,7 @@ AnnotationAssertion(skos:altLabel ontology:LP_0000449 "Themenbereich (BB)")
 AnnotationAssertion(skos:definition ontology:LP_0000449 "A topic area includes one or more topics that are subject of teaching."@en)
 AnnotationAssertion(skos:definition ontology:LP_0000449 "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000449 "kommt u.a. in Englisch  und Physik vor. \"Themenbereich\" in Mathe")
+SubClassOf(ontology:LP_0000449 ontology:LP_0000349)
 SubClassOf(ontology:LP_0000449 ObjectIntersectionOf(ontology:LP_0000441 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0000450 (Zusatzmaterial (BB))
@@ -2322,6 +2324,7 @@ AnnotationAssertion(skos:definition ontology:LP_0000459 "Ein Kompetenzbereich is
 AnnotationAssertion(skos:example ontology:LP_0000459 "dealing with expertise"@en)
 AnnotationAssertion(skos:example ontology:LP_0000459 "problem solving"@en)
 AnnotationAssertion(skos:example ontology:LP_0000459 "reading competencies"@en)
+SubClassOf(ontology:LP_0000459 ontology:LP_0000349)
 SubClassOf(ontology:LP_0000459 ObjectIntersectionOf(ontology:LP_0000441 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0000475 (Schulartfunktion)
@@ -2354,30 +2357,25 @@ SubClassOf(ontology:LP_0000493 ontology:LP_0000478)
 AnnotationAssertion(rdfs:label ontology:LP_0000499 "Bezugsfunktionen"@de)
 SubClassOf(ontology:LP_0000499 ontology:LP_0000478)
 
-# Class: ontology:LP_0000505 (Unterrichtseinheitspezifikation)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0000505 "Ein Data Item, dass die thematische und inhaltliche Einheit des Unterrichts ausdrückt. Es kann entweder feste Zeitspannen, die Unterrichtsstunden meinen (z.B. 45 Minuten), oder sie umfasst mehrere solcher Unterrichtsstunden, um ein zusammenhängendes Stoffgebiet zu behandeln."@de)
-AnnotationAssertion(rdfs:label ontology:LP_0000505 "Unterrichtseinheitspezifikation"@de)
-AnnotationAssertion(skos:example ontology:LP_0000505 "Soll z.B. ausgedrückt werden, dass der Unterricht 6 Einheiten à 45 Minuten enhält kann folgendes Muster verwendet werden:
-
-:unterricht_1 'mem:described by' :ue_1 .
-ue_1 a mem:Unterrichtseinheitsspezifikation .
-ue_1 'mem:hat Wert' \"6\"^^xsd:decimal .
-ue_1 'mem:hat Teil' zs_1 .
-zs_1 a mem:Zeitpezifikation .
-zs_1 'mem:hat Wert' \"45\"^^xsd:decimal .
-zs_1 'mem:hat Einheit' qudt:Min .")
-SubClassOf(ontology:LP_0000505 obo:IAO_0000027)
-SubClassOf(ontology:LP_0000505 ObjectUnionOf(ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000008 ontology:LP_0000508) DataSomeValuesFrom(ontology:LP_0000344 xsd:decimal)) DataSomeValuesFrom(ontology:LP_0000344 xsd:decimal)))
-SubClassOf(ontology:LP_0000505 ObjectSomeValuesFrom(obo:IAO_0000136 ontology:LP_0000261))
-
 # Class: ontology:LP_0000508 (Zeitspezifikation)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000508 "Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt."@de)
 AnnotationAssertion(rdfs:label ontology:LP_0000508 "Zeitspezifikation"@de)
+AnnotationAssertion(skos:example ontology:LP_0000508 "Soll z.B. ausgedrückt werden, dass der Unterricht 6 Unterrichtsstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+:zs_1 'mem:hat Einheit' 'mem:Unterrichtsstunde' .
+
+Soll ausgedrückt werden, dass der Unterricht 6 Zeitstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 'mem:described by' :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 'mem:hat Wert' \"6\"^^xsd:decimal .
+:zs_1 'mem:hat Einheit' 'qudt:HR' .")
 SubClassOf(ontology:LP_0000508 obo:IAO_0000027)
 SubClassOf(ontology:LP_0000508 ObjectIntersectionOf(ObjectSomeValuesFrom(ontology:LP_0000041 <http://qudt.org/schema/qudt/Unit>) DataSomeValuesFrom(ontology:LP_0000344 xsd:decimal)))
-SubClassOf(ontology:LP_0000508 ObjectSomeValuesFrom(ontology:LP_0020001 ontology:LP_0000505))
 
 # Class: ontology:LP_0000530 (Grundkursniveau)
 
@@ -2707,6 +2705,7 @@ SubClassOf(ontology:LP_0002223 ObjectIntersectionOf(ontology:LP_0000441 ObjectHa
 
 AnnotationAssertion(rdfs:label ontology:LP_0002224 "Leitidee (BB)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0002224 "Kommt in den Lehrplänen der Sek II für das Fach Mathematik vor. (In den Lehrplänen der Primarstufe und der Sek I für das Fach Mathematik werden stattdessen die Begriffe “Inhaltsbezogene mathematische Standards” oder “Themenbereiche” verwendet.) Der Begriff kommt aus den Bildungsstandards und bezeichnet dort einen inhaltsbezogenen Kompetenzbereich im Fach Mathematik.")
+SubClassOf(ontology:LP_0002224 ontology:LP_0000349)
 SubClassOf(ontology:LP_0002224 ObjectIntersectionOf(ontology:LP_0000441 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000501)))
 
 # Class: ontology:LP_0002225 (Eingangsvoraussetzung (BB))
@@ -2735,42 +2734,6 @@ It corresponds to the Common European Framework of Reference for Languages (CEFR
 The \"Fremdsprachenniveau\" indicates the extent to which learners can understand, speak, read, and write the language, and serves as a basis for comparison within educational qualifications and international certifications."@en)
 AnnotationAssertion(rdfs:label ontology:LP_0010001 "Femdsprachenniveau"@de)
 SubClassOf(ontology:LP_0010001 ontology:LP_0000037)
-
-# Class: ontology:LP_0010002 (A1 Anfänger)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0010002 "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.")
-AnnotationAssertion(rdfs:label ontology:LP_0010002 "A1 Anfänger"@de)
-SubClassOf(ontology:LP_0010002 ontology:LP_0010001)
-
-# Class: ontology:LP_0010003 (A2 Grundlegende Kenntnisse)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0010003 "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.")
-AnnotationAssertion(rdfs:label ontology:LP_0010003 "A2 Grundlegende Kenntnisse"@de)
-SubClassOf(ontology:LP_0010003 ontology:LP_0010001)
-
-# Class: ontology:LP_0010004 (B1 Fortgeschrittene Sprachverwendung)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0010004 "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.")
-AnnotationAssertion(rdfs:label ontology:LP_0010004 "B1 Fortgeschrittene Sprachverwendung"@de)
-SubClassOf(ontology:LP_0010004 ontology:LP_0010001)
-
-# Class: ontology:LP_0010005 (B2 Selbständige Sprachverwendung)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0010005 "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.")
-AnnotationAssertion(rdfs:label ontology:LP_0010005 "B2 Selbständige Sprachverwendung"@de)
-SubClassOf(ontology:LP_0010005 ontology:LP_0010001)
-
-# Class: ontology:LP_0010006 (C1 Fachkundige Sprachkenntnisse)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0010006 "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.")
-AnnotationAssertion(rdfs:label ontology:LP_0010006 "C1 Fachkundige Sprachkenntnisse"@de)
-SubClassOf(ontology:LP_0010006 ontology:LP_0010001)
-
-# Class: ontology:LP_0010007 (C2 Annähernd muttersprachliche Kenntnisse)
-
-AnnotationAssertion(rdfs:comment ontology:LP_0010007 "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.")
-AnnotationAssertion(rdfs:label ontology:LP_0010007 "C2 Annähernd muttersprachliche Kenntnisse"@de)
-SubClassOf(ontology:LP_0010007 ontology:LP_0010001)
 
 # Class: ontology:LP_0030003 (Beschreibung)
 
@@ -2807,6 +2770,7 @@ SubClassOf(ontology:LP_0030043 ObjectIntersectionOf(ontology:LP_0000441 ObjectHa
 
 AnnotationAssertion(rdfs:label ontology:LP_0030047 "Basiskonzept (BB)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030047 "NaWis")
+SubClassOf(ontology:LP_0030047 ontology:LP_0000349)
 SubClassOf(ontology:LP_0030047 ObjectIntersectionOf(ontology:LP_0000441 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030052 (Experiment/Untersuchung (BB))
@@ -2893,6 +2857,7 @@ SubClassOf(ontology:LP_0030259 ObjectIntersectionOf(ontology:LP_0000441 ObjectHa
 
 AnnotationAssertion(rdfs:label ontology:LP_0030263 "Kompetenzbereich (Bistas)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030263 "Kommt vor in den Bildungsstandards für die Fächer Deutsch, Mathematik, die erste Fremdsprache (Englisch/Französisch), Biologie, Chemie und Physik.")
+SubClassOf(ontology:LP_0030263 ontology:LP_0000349)
 SubClassOf(ontology:LP_0030263 ObjectIntersectionOf(ontology:LP_0000536 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030264 (Domänenspezifischer Kompetenzbereich (Bistas))
@@ -2925,6 +2890,7 @@ AnnotationAssertion(rdfs:label ontology:LP_0030268 "Basiskonzept (Bistas)"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0030268 "Kommt vor in den Bildungsstandards für die Fächer Biologie, Chemie und Physik.
 
 Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!")
+SubClassOf(ontology:LP_0030268 ontology:LP_0000349)
 SubClassOf(ontology:LP_0030268 ObjectIntersectionOf(ontology:LP_0000536 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000480) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
 
 # Class: ontology:LP_0030269 (Verbindlicher inhaltlicher Aspekt (Bistas))
@@ -2933,7 +2899,32 @@ AnnotationAssertion(rdfs:label ontology:LP_0030269 "Verbindlicher inhaltlicher A
 AnnotationAssertion(skos:editorialNote ontology:LP_0030269 "Kommt vor in den Bildungsstandards für die Fächer Biologie, Chemie und Physik.
 
 Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!")
+SubClassOf(ontology:LP_0030269 ontology:LP_0000349)
 SubClassOf(ontology:LP_0030269 ObjectIntersectionOf(ontology:LP_0000536 ObjectHasValue(ontology:LP_0000483 ontology:LP_0000480) ObjectHasValue(ontology:LP_0000483 ontology:LP_0000497)))
+
+# Class: ontology:LP_0030325 (CE-Leitperspektive)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030325 "CE-Leitperspektive"@de)
+AnnotationAssertion(skos:editorialNote ontology:LP_0030325 "Oder:
+- (Fach)übergreifendes Thema
+- (Fach)Übergreifendes Ziel
+- Bildungs- und Erziehungsziel
+- Querschnittsthema
+- Weiteres Thema")
+EquivalentClasses(ontology:LP_0030325 ObjectIntersectionOf(ontology:LP_0000261 ObjectHasValue(ontology:LP_0000483 ontology:LP_0030326)))
+SubClassOf(ontology:LP_0030325 ontology:LP_0000261)
+
+# Class: ontology:LP_0030333 (Fachübergreifendes Thema (BB))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030333 "Fachübergreifendes Thema (BB)"@de)
+SubClassOf(ontology:LP_0030333 ontology:LP_0030325)
+SubClassOf(ontology:LP_0030333 ObjectIntersectionOf(ontology:LP_0000441 ObjectHasValue(ontology:LP_0000483 ontology:LP_0030326)))
+
+# Class: ontology:LP_0030335 (Weiteres Thema (Bistas))
+
+AnnotationAssertion(rdfs:label ontology:LP_0030335 "Weiteres Thema (Bistas)"@de)
+SubClassOf(ontology:LP_0030335 ontology:LP_0030325)
+SubClassOf(ontology:LP_0030335 ObjectIntersectionOf(ontology:LP_0000536 ObjectHasValue(ontology:LP_0000483 ontology:LP_0030326)))
 
 
 ############################
@@ -3065,236 +3056,236 @@ AnnotationAssertion(rdfs:label obo:OMO_0001000 "out of scope")
 AnnotationAssertion(rdfs:label <http://qudt.org/vocab/unit/MIN> "Minute"@de)
 ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/MIN>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1000> (Alt-Griechisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1000> "Alt-Griechisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1000>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1001> (Biologie (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1001> "Biologie (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1001> "Biologie (KIM-Schulfach)")
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1002> (Chemie (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1002> "Chemie (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1002> "Chemie (KIM-Schulfach)")
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1003> (Chinesisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1003> "Chinesisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1003>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1004> (Darstellendes Spiel (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1004> "Darstellendes Spiel (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1004>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1005> (Deutsch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1005> "Deutsch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1005> "Deutsch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1005>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1006> (Deutsch als Zweitsprache (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1006> "Deutsch als Zweitsprache (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1006>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1007> (Englisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1007> "Englisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1007> "Englisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1007>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1008> (Ethik (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1008> "Ethik (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1008> "Ethik (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1008>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1009> (Französisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1009> "Französisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1009> "Französisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1009>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1010> (Geografie (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1010> "Geografie (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1010> "Geografie (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1010>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1011> (Geschichte (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1011> "Geschichte (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1011> "Geschichte (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1011>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1012> (Gesundheit (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1012> "Gesundheit (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1012>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1013> (Informatik (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1013> "Informatik (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1013> "Informatik (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000002 <http://w3id.org/kim/schulfaecher/s1013>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1014> (Italienisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1014> "Italienisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1014> "Italienisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1014>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1015> (Kunst (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1015> "Kunst (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1015> "Kunst (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1015>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1016> (Latein (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1016> "Latein (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1016> "Latein (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1016>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1017> (Mathematik (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1017> "Mathematik (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1017> "Mathematik (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000002 <http://w3id.org/kim/schulfaecher/s1017>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1019> (MINT (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1019> "MINT (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1019> "MINT (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000002 <http://w3id.org/kim/schulfaecher/s1019>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1020> (Musik (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1020> "Musik (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1020> "Musik (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1020>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1021> (Philosophie (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1021> "Philosophie (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1021> "Philosophie (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1021>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1022> (Physik (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1022> "Physik (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1022> "Physik (KIM-Schulfach)")
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1023> (Politik (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1023> "Politik (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1023> "Politik (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1023>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1024> (Religionslehre (evangelische) (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische) (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1024> "Religionslehre (evangelische) (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1024>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1025> (Religionslehre (islamisch) (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch) (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1025> "Religionslehre (islamisch) (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1025>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1026> (Religionslehre (katholische) (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische) (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1026> "Religionslehre (katholische) (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1026>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1027> (Russisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1027> "Russisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1027> "Russisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1027>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1028> (Sachunterricht (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1028> "Sachunterricht (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1028>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1029> (Sexualerziehung (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1029> "Sexualerziehung (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1029>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1030> (Spanisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1030> "Spanisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1030> "Spanisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1030>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1031> (Sport (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1031> "Sport (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1031> "Sport (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1031>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1032> (Türkisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1032> "Türkisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1032> "Türkisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1032>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1033> (Wirtschaftskunde (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1033> "Wirtschaftskunde (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1033>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1034> (Hebräisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1034> "Hebräisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1034>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1035> (Japanisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1035> "Japanisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1035> "Japanisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1035>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1036> (Neugriechisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1036> "Neugriechisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1036>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1037> (Polnisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1037> "Polnisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1037> "Polnisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1037>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1038> (Portugiesisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1038> "Portugiesisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1038>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1039> (Sorbisch (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1039> "Sorbisch (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000004 <http://w3id.org/kim/schulfaecher/s1039>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1040> (Astronomie (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1040> "Astronomie (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1040> "Astronomie (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1040>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1041> (Deutsche Gebärdensprache (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1041> "Deutsche Gebärdensprache (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1041>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1042> (Gesellschaftswissenschaften (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1042> "Gesellschaftswissenschaften (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1042>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1043> (Psychologie (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1043> "Psychologie (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1043> "Psychologie (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1043>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1044> (Ernährung (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1044> "Ernährung (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1044> "Ernährung (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1044>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1045> (Erziehungswissenschaften (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1045> "Erziehungswissenschaften (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000005 <http://w3id.org/kim/schulfaecher/s1045>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1046> (Medienbildung (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1046> "Medienbildung (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1046>)
 
-# Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (Schulfach))
+# Individual: <http://w3id.org/kim/schulfaecher/s1047> (Hauswirtschaft (KIM-Schulfach))
 
-AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft (Schulfach)"@de)
+AnnotationAssertion(rdfs:label <http://w3id.org/kim/schulfaecher/s1047> "Hauswirtschaft (KIM-Schulfach)")
 ClassAssertion(ontology:LP_0000001 <http://w3id.org/kim/schulfaecher/s1047>)
 
 # Individual: <https://lehrplan.yovisto.com/resource/lp/bb/level/1> (A)
@@ -3661,11 +3652,6 @@ AnnotationAssertion(rdfs:label ontology:LP_0000319 "Regelschule"@de)
 ClassAssertion(ontology:LP_0000111 ontology:LP_0000319)
 ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0000319 ontology:LP_3000031)
 
-# Individual: ontology:LP_0000340 (Sozialkunde (Schulfach))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000340 "Sozialkunde (Schulfach)"@de)
-ClassAssertion(ontology:LP_0000005 ontology:LP_0000340)
-
 # Individual: ontology:LP_0000367 (Regionale Schule)
 
 AnnotationAssertion(rdfs:comment ontology:LP_0000367 "Eine “Regionale Schule” ist eine “Schulart” in MV, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
@@ -3689,30 +3675,10 @@ ClassAssertion(ontology:LP_0000111 ontology:LP_0000382)
 ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0000382 ontology:LP_3000044)
 ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0000382 ontology:LP_3000053)
 
-# Individual: ontology:LP_0000430 (Wirtschaft Arbeit Technik (Schulfach))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000430 "Wirtschaft Arbeit Technik (Schulfach)"@de)
-ClassAssertion(ontology:LP_0000005 ontology:LP_0000430)
-
-# Individual: ontology:LP_0000436 (BC Sprachbildung (Schulfach))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000436 "BC Sprachbildung (Schulfach)"@de)
-ClassAssertion(ontology:LP_0000001 ontology:LP_0000436)
-
 # Individual: ontology:LP_0000437 (Naturwissenschaften (Schulfach))
 
 AnnotationAssertion(rdfs:label ontology:LP_0000437 "Naturwissenschaften (Schulfach)"@de)
 ClassAssertion(ontology:LP_0000003 ontology:LP_0000437)
-
-# Individual: ontology:LP_0000439 (Sowi / Wiwi (Schulfach))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000439 "Sowi / Wiwi (Schulfach)"@de)
-ClassAssertion(ontology:LP_0000005 ontology:LP_0000439)
-
-# Individual: ontology:LP_0000442 (Theater (Schulfach))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000442 "Theater (Schulfach)"@de)
-ClassAssertion(ontology:LP_0000005 ontology:LP_0000442)
 
 # Individual: ontology:LP_0000452 (Moderne Fremdsprachen (Schulfach))
 
@@ -3835,11 +3801,6 @@ AnnotationAssertion(rdfs:comment ontology:LP_0000535 "Die Unterrichtsstunde ist 
 AnnotationAssertion(rdfs:label ontology:LP_0000535 "Unterrichtsstunde"@de)
 AnnotationAssertion(skos:editorialNote ontology:LP_0000535 "Im Allgemeinen umfasst eine Schulstunde 45 Minuten."@de)
 ClassAssertion(<http://qudt.org/schema/qudt/Unit> ontology:LP_0000535)
-
-# Individual: ontology:LP_0000560 (Griechisch (Schulfach))
-
-AnnotationAssertion(rdfs:label ontology:LP_0000560 "Griechisch (Schulfach)"@de)
-ClassAssertion(ontology:LP_0000004 ontology:LP_0000560)
 
 # Individual: ontology:LP_0000583 (BOA A)
 
@@ -4203,6 +4164,96 @@ ClassAssertion(ontology:LP_0000493 ontology:LP_0002158)
 AnnotationAssertion(rdfs:label ontology:LP_0002171 "Domänenbezugsfunktion"@de)
 ClassAssertion(ontology:LP_0000499 ontology:LP_0002171)
 
+# Individual: ontology:LP_0030312 (C1 Fachkundige Sprachkenntnisse)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0030312 "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.")
+AnnotationAssertion(rdfs:label ontology:LP_0030312 "C1 Fachkundige Sprachkenntnisse"@de)
+ClassAssertion(ontology:LP_0010001 ontology:LP_0030312)
+
+# Individual: ontology:LP_0030313 (C2 Annähernd muttersprachliche Kenntnisse)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0030313 "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.")
+AnnotationAssertion(rdfs:label ontology:LP_0030313 "C2 Annähernd muttersprachliche Kenntnisse"@de)
+ClassAssertion(ontology:LP_0010001 ontology:LP_0030313)
+
+# Individual: ontology:LP_0030314 (B2 Selbständige Sprachverwendung)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0030314 "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.")
+AnnotationAssertion(rdfs:label ontology:LP_0030314 "B2 Selbständige Sprachverwendung"@de)
+ClassAssertion(ontology:LP_0010001 ontology:LP_0030314)
+
+# Individual: ontology:LP_0030315 (B1 Fortgeschrittene Sprachverwendung)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0030315 "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.")
+AnnotationAssertion(rdfs:label ontology:LP_0030315 "B1 Fortgeschrittene Sprachverwendung"@de)
+ClassAssertion(ontology:LP_0010001 ontology:LP_0030315)
+
+# Individual: ontology:LP_0030316 (A2 Grundlegende Kenntnisse)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0030316 "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.")
+AnnotationAssertion(rdfs:label ontology:LP_0030316 "A2 Grundlegende Kenntnisse"@de)
+ClassAssertion(ontology:LP_0010001 ontology:LP_0030316)
+
+# Individual: ontology:LP_0030317 (A1 Anfänger)
+
+AnnotationAssertion(rdfs:comment ontology:LP_0030317 "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.")
+AnnotationAssertion(rdfs:label ontology:LP_0030317 "A1 Anfänger"@de)
+ClassAssertion(ontology:LP_0010001 ontology:LP_0030317)
+
+# Individual: ontology:LP_0030318 (Berufsfachschule)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030318 "Berufsfachschule"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030318 "BFS")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030318)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030318 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030319 (Berufsoberschule)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030319 "Berufsoberschule"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030319 "BOS")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030319)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030319 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030320 (Fachoberschule)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030320 "Fachoberschule"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030320 "FOS")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030320)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030320 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030321 (Berufsschule)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030321 "Berufsschule"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030321 "BS")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030321)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030321 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030322 (Fachakademie)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030322 "Fachakademie"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030322 "FAK")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030322)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030322 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030323 (Fachschule)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030323 "Fachschule"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030323 "FS")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030323)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030323 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030324 (Förderschule)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030324 "Förderschule"@de)
+AnnotationAssertion(skos:altLabel ontology:LP_0030324 "FÖS")
+ClassAssertion(ontology:LP_0000111 ontology:LP_0030324)
+ObjectPropertyAssertion(ontology:LP_0000029 ontology:LP_0030324 ontology:LP_3000051)
+
+# Individual: ontology:LP_0030326 (Leitperspektivenbeschreibungsfunktion)
+
+AnnotationAssertion(rdfs:label ontology:LP_0030326 "Leitperspektivenbeschreibungsfunktion"@de)
+ClassAssertion(ontology:LP_0000493 ontology:LP_0030326)
+
 # Individual: ontology:LP_2000001 (Jahrgangsstufe 1)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000001 "1"^^xsd:integer)
@@ -4210,28 +4261,28 @@ AnnotationAssertion(rdfs:label ontology:LP_2000001 "Jahrgangsstufe 1"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000001 "class level 1"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000001)
 
-# Individual: ontology:LP_2000002 (class level 2)
+# Individual: ontology:LP_2000002 (Jahrgangsstufe 2)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000002 "2"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000002 "Jahrgangsstufe 2"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000002 "class level 2"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000002)
 
-# Individual: ontology:LP_2000003 (class level 3)
+# Individual: ontology:LP_2000003 (Jahrgangsstufe 3)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000003 "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000003 "Jahrgangsstufe 3"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000003 "class level 3"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000003)
 
-# Individual: ontology:LP_2000004 (Jahrgangsstufe 4)
+# Individual: ontology:LP_2000004 (class level 4)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000004 "4"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000004 "Jahrgangsstufe 4"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000004 "class level 4"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000004)
 
-# Individual: ontology:LP_2000005 (class level 5)
+# Individual: ontology:LP_2000005 (Jahrgangsstufe 5)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000005 "5"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000005 "Jahrgangsstufe 5"@de)
@@ -4252,14 +4303,14 @@ AnnotationAssertion(rdfs:label ontology:LP_2000007 "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000007 "class level 7"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000007)
 
-# Individual: ontology:LP_2000008 (Jahrgangsstufe 8)
+# Individual: ontology:LP_2000008 (class level 8)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000008 "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000008 "Jahrgangsstufe 8"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000008 "class level 8"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000008)
 
-# Individual: ontology:LP_2000009 (class level 9)
+# Individual: ontology:LP_2000009 (Jahrgangsstufe 9)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000009 "9"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000009 "Jahrgangsstufe 9"@de)
@@ -4273,14 +4324,14 @@ AnnotationAssertion(rdfs:label ontology:LP_2000010 "Jahrgangsstufe 10"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000010 "class level 10")
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000010)
 
-# Individual: ontology:LP_2000011 (Jahrgangsstufe 11)
+# Individual: ontology:LP_2000011 (class level 11)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000011 "11"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000011 "Jahrgangsstufe 11"@de)
 AnnotationAssertion(rdfs:label ontology:LP_2000011 "class level 11"@en)
 ClassAssertion(ontology:LP_0000009 ontology:LP_2000011)
 
-# Individual: ontology:LP_2000012 (class level 12)
+# Individual: ontology:LP_2000012 (Jahrgangsstufe 12)
 
 AnnotationAssertion(terms:identifier ontology:LP_2000012 "12"^^xsd:integer)
 AnnotationAssertion(rdfs:label ontology:LP_2000012 "Jahrgangsstufe 12"@de)

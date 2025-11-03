@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/lehrplan/ontology/lp-ohne-land.owl#"
-     xml:base="https://w3id.org/lehrplan/ontology/lp-ohne-land.owl"
+<rdf:RDF xmlns="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl#"
+     xml:base="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gnd="https://d-nb.info/standards/elementset/gnd#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -13,8 +13,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
-    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology/lp-ohne-land.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology/releases/2025-09-22/lp-ohne-land.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl">
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//1.0.0-7/lp-ohne-land.owl"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -26,7 +26,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
-        <owl:versionInfo>2025-09-22</owl:versionInfo>
+        <owl:versionInfo>1.0.0-7</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2464,19 +2464,14 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:comment xml:lang="en">A &quot;Schulfach&quot; is an “information content entity”.
-It refers to the designation of a subject taught at school.
-It represents the thematic structure of what is considered general school education.
-A &quot;Schulfach&quot; is a subject area that organizes teaching lessons by content.
-Examples of &quot;Schulfächer&quot; include German, mathematics, history, and biology.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein “Schulfach” ist eine “Informationseinheit”.
-Es handelt sich um die Bezeichnung eines an der Schule unterrichteten Fachs. 
-Es ist der Ausdruck für die thematische Gliederung dessen, was jeweils unter allgemeiner schulischer Bildung verstanden wird. 
-Das Schulfach ist ein Themengebiet, das den Unterricht inhaltlich unterteilt. Beispiele für Schulfächer sind Deutsch, Mathematik, Geschichte und Biologie.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A school subject is an information content entity that designates and organizes the thematic areas of knowledge constituting general school education, serving as the conceptual framework for structuring teaching and learning activities.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Schulfach ist eine Informationseinheit, die die Bezeichnung eines an Schulen unterrichteten Fachgebiets darstellt, welches die thematische Gliederung der allgemeinen schulischen Bildung widerspiegelt und der inhaltlichen Strukturierung des Unterrichts dient.</rdfs:comment>
         <rdfs:label xml:lang="de">Schulfach</rdfs:label>
         <rdfs:label xml:lang="en">school subject</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://de.wikipedia.org/wiki/Unterrichtsfach"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/FWU-DE/schulfach-ontologie"/>
         <skos:altLabel>Fach</skos:altLabel>
+        <skos:example xml:lang="en">Examples of school subjects include German, mathematics, history, and biology.</skos:example>
     </owl:Class>
     
 
@@ -3053,6 +3048,7 @@ Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zwe
 
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet.</rdfs:comment>
         <rdfs:label xml:lang="de">Curriculares Element</rdfs:label>
+        <rdfs:label xml:lang="en">curricular element</rdfs:label>
         <skos:editorialNote xml:lang="de">Wir haben &apos;Curriculares Element&apos; als Bezeichnung gewählt, weil die vorherige Bezeichnung &apos;Lehrplan Element&apos; zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde &apos;Lehrplan Element&apos; nicht gut passen.</skos:editorialNote>
     </owl:Class>
     
@@ -3246,15 +3242,6 @@ CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First Peo
     <!-- https://w3id.org/lehrplan/ontology/LP_0000339 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000339">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1010"/>
-                    <rdf:Description rdf:about="http://w3id.org/kim/schulfaecher/s1011"/>
-                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000340"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
         <rdfs:comment>RP</rdfs:comment>
         <rdfs:label xml:lang="de">Gemeinschaftskunde</rdfs:label>
@@ -3296,6 +3283,17 @@ equivalenClass: Schulart and (ermöglicht_abschluss some &apos;Allgemeine Hochsc
     <!-- https://w3id.org/lehrplan/ontology/LP_0000349 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000349">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000497"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
         <rdfs:comment xml:lang="en">A “CE-Bereich” is a “Curriculares Element”.
 A “CE-Bereich” can be superordinate or subordinate to other “CE-Bereichen”.
@@ -3402,53 +3400,6 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000505 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000505">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000008"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000508"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000344"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000344"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="de">Ein Data Item, dass die thematische und inhaltliche Einheit des Unterrichts ausdrückt. Es kann entweder feste Zeitspannen, die Unterrichtsstunden meinen (z.B. 45 Minuten), oder sie umfasst mehrere solcher Unterrichtsstunden, um ein zusammenhängendes Stoffgebiet zu behandeln.</rdfs:comment>
-        <rdfs:label xml:lang="de">Unterrichtseinheitspezifikation</rdfs:label>
-        <skos:example>Soll z.B. ausgedrückt werden, dass der Unterricht 6 Einheiten à 45 Minuten enhält kann folgendes Muster verwendet werden:
-
-:unterricht_1 &apos;mem:described by&apos; :ue_1 .
-ue_1 a mem:Unterrichtseinheitsspezifikation .
-ue_1 &apos;mem:hat Wert&apos; &quot;6&quot;^^xsd:decimal .
-ue_1 &apos;mem:hat Teil&apos; zs_1 .
-zs_1 a mem:Zeitpezifikation .
-zs_1 &apos;mem:hat Wert&apos; &quot;45&quot;^^xsd:decimal .
-zs_1 &apos;mem:hat Einheit&apos; qudt:Min .</skos:example>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000508 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000508">
@@ -3467,14 +3418,21 @@ zs_1 &apos;mem:hat Einheit&apos; qudt:Min .</skos:example>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0020001"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000505"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="de">Ein Data Item, dass für eine Unterrichtseinheit einen Wert für Zeitdauer und die dazugehörige Einheit beschreibt.</rdfs:comment>
         <rdfs:label xml:lang="de">Zeitspezifikation</rdfs:label>
+        <skos:example>Soll z.B. ausgedrückt werden, dass der Unterricht 6 Unterrichtsstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 &apos;mem:described by&apos; :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 &apos;mem:hat Wert&apos; &quot;6&quot;^^xsd:decimal .
+:zs_1 &apos;mem:hat Einheit&apos; &apos;mem:Unterrichtsstunde&apos; .
+
+Soll ausgedrückt werden, dass der Unterricht 6 Zeitstunden enhält kann folgendes Muster verwendet werden:
+
+:unterricht_1 &apos;mem:described by&apos; :zs_1 .
+:zs_1 a mem:Zeitpezifikation .
+:zs_1 &apos;mem:hat Wert&apos; &quot;6&quot;^^xsd:decimal .
+:zs_1 &apos;mem:hat Einheit&apos; &apos;qudt:HR&apos; .</skos:example>
     </owl:Class>
     
 
@@ -4004,66 +3962,6 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0010002 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0010002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
-        <rdfs:comment>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.</rdfs:comment>
-        <rdfs:label xml:lang="de">A1 Anfänger</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0010003 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0010003">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
-        <rdfs:comment>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.</rdfs:comment>
-        <rdfs:label xml:lang="de">A2 Grundlegende Kenntnisse</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0010004 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0010004">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
-        <rdfs:comment>Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</rdfs:comment>
-        <rdfs:label xml:lang="de">B1 Fortgeschrittene Sprachverwendung</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0010005 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0010005">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
-        <rdfs:comment>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.</rdfs:comment>
-        <rdfs:label xml:lang="de">B2 Selbständige Sprachverwendung</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0010006 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0010006">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
-        <rdfs:comment>Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.</rdfs:comment>
-        <rdfs:label xml:lang="de">C1 Fachkundige Sprachkenntnisse</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0010007 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0010007">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
-        <rdfs:comment>Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.</rdfs:comment>
-        <rdfs:label xml:lang="de">C2 Annähernd muttersprachliche Kenntnisse</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0030003 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030003">
@@ -4098,6 +3996,7 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     <!-- https://w3id.org/lehrplan/ontology/LP_0030263 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030263">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000349"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4178,6 +4077,7 @@ The &quot;Fremdsprachenniveau&quot; indicates the extent to which learners can u
     <!-- https://w3id.org/lehrplan/ontology/LP_0030268 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030268">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000349"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4204,6 +4104,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <!-- https://w3id.org/lehrplan/ontology/LP_0030269 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030269">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000349"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4223,6 +4124,52 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
         <skos:editorialNote>Kommt vor in den Bildungsstandards für die Fächer Biologie, Chemie und Physik.
 
 Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030325 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030325">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030326"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+        <rdfs:label xml:lang="de">CE-Leitperspektive</rdfs:label>
+        <skos:editorialNote>Oder:
+- (Fach)übergreifendes Thema
+- (Fach)Übergreifendes Ziel
+- Bildungs- und Erziehungsziel
+- Querschnittsthema
+- Weiteres Thema</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030335 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030335">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030325"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000536"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000483"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0030326"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Weiteres Thema (Bistas)</rdfs:label>
     </owl:Class>
     
 
@@ -4443,7 +4390,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1000">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Alt-Griechisch (Schulfach)</rdfs:label>
+        <rdfs:label>Alt-Griechisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4451,7 +4398,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <!-- http://w3id.org/kim/schulfaecher/s1001 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1001">
-        <rdfs:label xml:lang="de">Biologie (Schulfach)</rdfs:label>
+        <rdfs:label>Biologie (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4459,7 +4406,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <!-- http://w3id.org/kim/schulfaecher/s1002 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1002">
-        <rdfs:label xml:lang="de">Chemie (Schulfach)</rdfs:label>
+        <rdfs:label>Chemie (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4468,7 +4415,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1003">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Chinesisch (Schulfach)</rdfs:label>
+        <rdfs:label>Chinesisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4477,7 +4424,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1004">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Darstellendes Spiel (Schulfach)</rdfs:label>
+        <rdfs:label>Darstellendes Spiel (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4486,7 +4433,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1005">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Deutsch (Schulfach)</rdfs:label>
+        <rdfs:label>Deutsch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4495,7 +4442,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1006">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Deutsch als Zweitsprache (Schulfach)</rdfs:label>
+        <rdfs:label>Deutsch als Zweitsprache (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4504,7 +4451,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1007">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Englisch (Schulfach)</rdfs:label>
+        <rdfs:label>Englisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4513,7 +4460,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1008">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Ethik (Schulfach)</rdfs:label>
+        <rdfs:label>Ethik (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4522,7 +4469,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1009">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Französisch (Schulfach)</rdfs:label>
+        <rdfs:label>Französisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4531,7 +4478,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1010">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Geografie (Schulfach)</rdfs:label>
+        <rdfs:label>Geografie (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4540,7 +4487,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1011">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Geschichte (Schulfach)</rdfs:label>
+        <rdfs:label>Geschichte (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4549,7 +4496,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1012">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Gesundheit (Schulfach)</rdfs:label>
+        <rdfs:label>Gesundheit (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4558,7 +4505,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1013">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
-        <rdfs:label xml:lang="de">Informatik (Schulfach)</rdfs:label>
+        <rdfs:label>Informatik (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4567,7 +4514,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1014">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Italienisch (Schulfach)</rdfs:label>
+        <rdfs:label>Italienisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4576,7 +4523,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1015">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Kunst (Schulfach)</rdfs:label>
+        <rdfs:label>Kunst (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4585,7 +4532,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1016">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Latein (Schulfach)</rdfs:label>
+        <rdfs:label>Latein (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4594,7 +4541,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1017">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
-        <rdfs:label xml:lang="de">Mathematik (Schulfach)</rdfs:label>
+        <rdfs:label>Mathematik (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4603,7 +4550,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1019">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000002"/>
-        <rdfs:label xml:lang="de">MINT (Schulfach)</rdfs:label>
+        <rdfs:label>MINT (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4612,7 +4559,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1020">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Musik (Schulfach)</rdfs:label>
+        <rdfs:label>Musik (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4621,7 +4568,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1021">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Philosophie (Schulfach)</rdfs:label>
+        <rdfs:label>Philosophie (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4629,7 +4576,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <!-- http://w3id.org/kim/schulfaecher/s1022 -->
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1022">
-        <rdfs:label xml:lang="de">Physik (Schulfach)</rdfs:label>
+        <rdfs:label>Physik (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4638,7 +4585,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1023">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Politik (Schulfach)</rdfs:label>
+        <rdfs:label>Politik (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4647,7 +4594,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1024">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Religionslehre (evangelische) (Schulfach)</rdfs:label>
+        <rdfs:label>Religionslehre (evangelische) (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4656,7 +4603,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1025">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Religionslehre (islamisch) (Schulfach)</rdfs:label>
+        <rdfs:label>Religionslehre (islamisch) (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4665,7 +4612,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1026">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Religionslehre (katholische) (Schulfach)</rdfs:label>
+        <rdfs:label>Religionslehre (katholische) (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4674,7 +4621,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1027">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Russisch (Schulfach)</rdfs:label>
+        <rdfs:label>Russisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4683,7 +4630,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1028">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Sachunterricht (Schulfach)</rdfs:label>
+        <rdfs:label>Sachunterricht (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4692,7 +4639,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1029">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Sexualerziehung (Schulfach)</rdfs:label>
+        <rdfs:label>Sexualerziehung (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4701,7 +4648,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1030">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Spanisch (Schulfach)</rdfs:label>
+        <rdfs:label>Spanisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4710,7 +4657,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1031">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Sport (Schulfach)</rdfs:label>
+        <rdfs:label>Sport (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4719,7 +4666,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1032">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Türkisch (Schulfach)</rdfs:label>
+        <rdfs:label>Türkisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4728,7 +4675,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1033">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Wirtschaftskunde (Schulfach)</rdfs:label>
+        <rdfs:label>Wirtschaftskunde (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4737,7 +4684,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1034">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Hebräisch (Schulfach)</rdfs:label>
+        <rdfs:label>Hebräisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4746,7 +4693,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1035">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Japanisch (Schulfach)</rdfs:label>
+        <rdfs:label>Japanisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4755,7 +4702,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1036">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Neugriechisch (Schulfach)</rdfs:label>
+        <rdfs:label>Neugriechisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4764,7 +4711,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1037">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Polnisch (Schulfach)</rdfs:label>
+        <rdfs:label>Polnisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4773,7 +4720,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1038">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Portugiesisch (Schulfach)</rdfs:label>
+        <rdfs:label>Portugiesisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4782,7 +4729,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1039">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Sorbisch (Schulfach)</rdfs:label>
+        <rdfs:label>Sorbisch (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4791,7 +4738,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1040">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Astronomie (Schulfach)</rdfs:label>
+        <rdfs:label>Astronomie (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4800,7 +4747,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1041">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Deutsche Gebärdensprache (Schulfach)</rdfs:label>
+        <rdfs:label>Deutsche Gebärdensprache (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4809,7 +4756,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1042">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Gesellschaftswissenschaften (Schulfach)</rdfs:label>
+        <rdfs:label>Gesellschaftswissenschaften (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4818,7 +4765,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1043">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Psychologie (Schulfach)</rdfs:label>
+        <rdfs:label>Psychologie (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4827,7 +4774,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1044">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Ernährung (Schulfach)</rdfs:label>
+        <rdfs:label>Ernährung (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4836,7 +4783,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1045">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Erziehungswissenschaften (Schulfach)</rdfs:label>
+        <rdfs:label>Erziehungswissenschaften (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4845,7 +4792,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1046">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Medienbildung (Schulfach)</rdfs:label>
+        <rdfs:label>Medienbildung (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4854,7 +4801,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="http://w3id.org/kim/schulfaecher/s1047">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000001"/>
-        <rdfs:label xml:lang="de">Hauswirtschaft (Schulfach)</rdfs:label>
+        <rdfs:label>Hauswirtschaft (KIM-Schulfach)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5365,15 +5312,6 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000340 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000340">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:label xml:lang="de">Sozialkunde (Schulfach)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000367 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000367">
@@ -5577,15 +5515,6 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000560 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000560">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000004"/>
-        <rdfs:label xml:lang="de">Griechisch (Schulfach)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000616 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000616">
@@ -5719,6 +5648,152 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0002171">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000499"/>
         <rdfs:label xml:lang="de">Domänenbezugsfunktion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030312 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030312">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
+        <rdfs:comment>Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.</rdfs:comment>
+        <rdfs:label xml:lang="de">C1 Fachkundige Sprachkenntnisse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030313 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030313">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
+        <rdfs:comment>Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.</rdfs:comment>
+        <rdfs:label xml:lang="de">C2 Annähernd muttersprachliche Kenntnisse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030314 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030314">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
+        <rdfs:comment>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.</rdfs:comment>
+        <rdfs:label xml:lang="de">B2 Selbständige Sprachverwendung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030315 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030315">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
+        <rdfs:comment>Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</rdfs:comment>
+        <rdfs:label xml:lang="de">B1 Fortgeschrittene Sprachverwendung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030316 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030316">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
+        <rdfs:comment>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.</rdfs:comment>
+        <rdfs:label xml:lang="de">A2 Grundlegende Kenntnisse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030317 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030317">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0010001"/>
+        <rdfs:comment>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.</rdfs:comment>
+        <rdfs:label xml:lang="de">A1 Anfänger</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030318 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030318">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Berufsfachschule</rdfs:label>
+        <skos:altLabel>BFS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030319 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030319">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Berufsoberschule</rdfs:label>
+        <skos:altLabel>BOS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030320 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030320">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Fachoberschule</rdfs:label>
+        <skos:altLabel>FOS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030321 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030321">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Berufsschule</rdfs:label>
+        <skos:altLabel>BS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030322 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030322">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Fachakademie</rdfs:label>
+        <skos:altLabel>FAK</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030323 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030323">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Fachschule</rdfs:label>
+        <skos:altLabel>FS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030324 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030324">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
+        <rdfs:label xml:lang="de">Förderschule</rdfs:label>
+        <skos:altLabel>FÖS</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030326 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030326">
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000493"/>
+        <rdfs:label xml:lang="de">Leitperspektivenbeschreibungsfunktion</rdfs:label>
     </owl:NamedIndividual>
     
 

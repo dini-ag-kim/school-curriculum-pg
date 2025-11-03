@@ -87,12 +87,6 @@ Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000851>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0000852>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0001015>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010001>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010002>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010003>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010004>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010005>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010006>))
-Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0010007>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030003>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030065>))
 Declaration(Class(<https://w3id.org/lehrplan/ontology/LP_0030263>))
@@ -261,7 +255,6 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0002008>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0002012>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0002158>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0002171>))
-
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030312>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030313>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030314>))
@@ -276,8 +269,6 @@ Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030322>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030323>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030324>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_0030326>))
-
-
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000001>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000002>))
 Declaration(NamedIndividual(<https://w3id.org/lehrplan/ontology/LP_2000003>))
@@ -865,7 +856,7 @@ Bsp:
 
 :someTimeIntervalUntilDateX  bfo:precedes :someTimeIntervalUntilDateY .")
 
-# Class: <https://w3id.org/lehrplan/ontology/LP_0000261> (Curriculares Element)
+# Class: <https://w3id.org/lehrplan/ontology/LP_0000261> (curricular element)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0000261> "A “Curriculares Element” is an information content entity used to describe the components of a curriculum or educational standard.
 
@@ -882,6 +873,7 @@ Ein “Curriculares Element” kann zudem eine Funktion besitzen, die seinen Zwe
 
 Unterklassen des “Curricularen Elements”, die nicht bundeslandspezifisch sind, sind durch das Präfix “CE-” gekennzeichnet."@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000261> "Curriculares Element"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0000261> "curricular element"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#editorialNote> <https://w3id.org/lehrplan/ontology/LP_0000261> "Wir haben 'Curriculares Element' als Bezeichnung gewählt, weil die vorherige Bezeichnung 'Lehrplan Element' zu sehr auf Lehrpläne einschränkt. Es sollen auch Bindungsstandards beschrieben werden, daher würde 'Lehrplan Element' nicht gut passen."@de)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0000263> (CE-Kompetenzspezifikation)
@@ -1319,42 +1311,6 @@ It corresponds to the Common European Framework of Reference for Languages (CEFR
 The \"Fremdsprachenniveau\" indicates the extent to which learners can understand, speak, read, and write the language, and serves as a basis for comparison within educational qualifications and international certifications."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010001> "Femdsprachenniveau"@de)
 SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010001> <https://w3id.org/lehrplan/ontology/LP_0000037>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0010002> (A1 Anfänger)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010002> "Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen. Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf Fragen dieser Art Antwort geben. Kann sich auf einfache Art verständigen, wenn die Gesprächspartnerinnen oder Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010002> "A1 Anfänger"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010002> <https://w3id.org/lehrplan/ontology/LP_0010001>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0010003> (A2 Grundlegende Kenntnisse)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010003> "Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung). Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht. Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010003> "A2 Grundlegende Kenntnisse"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010003> <https://w3id.org/lehrplan/ontology/LP_0010001>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0010004> (B1 Fortgeschrittene Sprachverwendung)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010004> "Kann die Hauptpunkte verstehen, wenn klare Standardsprache verwendet wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht. Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet. Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern. Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010004> "B1 Fortgeschrittene Sprachverwendung"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010004> <https://w3id.org/lehrplan/ontology/LP_0010001>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0010005> (B2 Selbständige Sprachverwendung)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010005> "Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Spezialgebiet auch Fachdiskussionen. Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten gut möglich ist. Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010005> "B2 Selbständige Sprachverwendung"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010005> <https://w3id.org/lehrplan/ontology/LP_0010001>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0010006> (C1 Fachkundige Sprachkenntnisse)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010006> "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010006> "C1 Fachkundige Sprachkenntnisse"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010006> <https://w3id.org/lehrplan/ontology/LP_0010001>)
-
-# Class: <https://w3id.org/lehrplan/ontology/LP_0010007> (C2 Annähernd muttersprachliche Kenntnisse)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0010007> "Kann praktisch alles, was er/sie liest oder hört, mühelos verstehen. Kann Informationen aus verschiedenen schriftlichen und mündlichen Quellen zusammenfassen und dabei Begründungen und Erklärungen in einer zusammenhängenden Darstellung wiedergeben. Kann sich spontan, sehr flüssig und genau ausdrücken und auch bei komplexeren Sachverhalten feinere Bedeutungsnuancen deutlich machen.")
-AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0010007> "C2 Annähernd muttersprachliche Kenntnisse"@de)
-SubClassOf(<https://w3id.org/lehrplan/ontology/LP_0010007> <https://w3id.org/lehrplan/ontology/LP_0010001>)
 
 # Class: <https://w3id.org/lehrplan/ontology/LP_0030003> (Beschreibung)
 
@@ -2166,7 +2122,6 @@ ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0002171> "Domänenbezugsfunktion"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000499> <https://w3id.org/lehrplan/ontology/LP_0002171>)
 
-
 # Individual: <https://w3id.org/lehrplan/ontology/LP_0030312> (C1 Fachkundige Sprachkenntnisse)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/lehrplan/ontology/LP_0030312> "Kann ein breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutungen erfassen. Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen. Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen. Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zur Textverknüpfung angemessen verwenden.")
@@ -2257,7 +2212,6 @@ ObjectPropertyAssertion(<https://w3id.org/lehrplan/ontology/LP_0000029> <https:/
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_0030326> "Leitperspektivenbeschreibungsfunktion"@de)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000493> <https://w3id.org/lehrplan/ontology/LP_0030326>)
 
-
 # Individual: <https://w3id.org/lehrplan/ontology/LP_2000001> (Jahrgangsstufe 1)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000001> "1"^^xsd:integer)
@@ -2272,7 +2226,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000002> "class level 2"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000002>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000003> (class level 3)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000003> (Jahrgangsstufe 3)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000003> "3"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000003> "Jahrgangsstufe 3"@de)
@@ -2286,28 +2240,28 @@ AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000004> "
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000004> "class level 4"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000004>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000005> (class level 5)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000005> (Jahrgangsstufe 5)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000005> "5"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000005> "Jahrgangsstufe 5"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000005> "class level 5"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000005>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000006> (class level 6)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000006> (Jahrgangsstufe 6)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000006> "6"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000006> "Jahrgangsstufe 6"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000006> "class level 6"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000006>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000007> (Jahrgangsstufe 7)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000007> (class level 7)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000007> "7"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "Jahrgangsstufe 7"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000007> "class level 7"@en)
 ClassAssertion(<https://w3id.org/lehrplan/ontology/LP_0000009> <https://w3id.org/lehrplan/ontology/LP_2000007>)
 
-# Individual: <https://w3id.org/lehrplan/ontology/LP_2000008> (class level 8)
+# Individual: <https://w3id.org/lehrplan/ontology/LP_2000008> (Jahrgangsstufe 8)
 
 AnnotationAssertion(<http://purl.org/dc/terms/identifier> <https://w3id.org/lehrplan/ontology/LP_2000008> "8"^^xsd:integer)
 AnnotationAssertion(rdfs:label <https://w3id.org/lehrplan/ontology/LP_2000008> "Jahrgangsstufe 8"@de)

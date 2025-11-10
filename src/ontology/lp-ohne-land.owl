@@ -1253,7 +1253,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0030056">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000438"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000346"/>
         <rdfs:label xml:lang="de">hat Titel</rdfs:label>
     </owl:ObjectProperty>

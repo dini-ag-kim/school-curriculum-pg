@@ -2701,14 +2701,7 @@ Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fre
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000069
 :LP_0000069 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000028
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :LP_0000072 ;
-                                                     owl:someValuesFrom :LP_0000832
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] ;
+            rdfs:subClassOf :LP_0000028 ;
             rdfs:comment """Das \"Gymnasialniveau Sek I” ist ein “Bildungsgangniveau”, welches das Niveau des \"gymnasialen Bildungsgangs\" im Sekundarbereich I beschreibt und somit meistens die Jahrgangsstufen 5-10 umfasst.
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."""@de ,
                          """The \"Gymnasialniveau Sek I\" is a \"Bildungsgangniveau\" that describes the level of the “Gymnasialer Bildungsgang” in lower secondary education, usually covering grades 5 to 10.
@@ -5022,14 +5015,7 @@ der gymnasiale Bildungsgang, der zur  Allgemeinen Hochschulreife führt."""@de ;
 
 ###  https://w3id.org/lehrplan/ontology/LP_0000832
 :LP_0000832 rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :LP_0000028
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :LP_0000072 ;
-                                                     owl:someValuesFrom :LP_0000834
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] ;
+            rdfs:subClassOf :LP_0000028 ;
             rdfs:comment """Das “Realschulniveu” ist ein “Bildungsgangniveau”, welches das Niveau des
 \"Realschulbildungsgangs\" beschreibt. 
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden."""@de ,

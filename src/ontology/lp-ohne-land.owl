@@ -14,7 +14,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:ontology="https://w3id.org/lehrplan/ontology/">
     <owl:Ontology rdf:about="https://w3id.org/lehrplan/ontology//lp-ohne-land.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//1.0.0-7/lp-ohne-land.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/lehrplan/ontology//1.0.0-8/lp-ohne-land.owl"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-6378-2618"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0001-7192-7143"/>
         <terms:creator xml:lang="de">Almut Steinlein</terms:creator>
@@ -26,7 +26,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Curriculum Ontology</terms:title>
         <terms:title xml:lang="de">Lehrplan Ontologie</terms:title>
-        <owl:versionInfo>1.0.0-7</owl:versionInfo>
+        <owl:versionInfo>1.0.0-8</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1218,7 +1218,15 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
 
     <owl:ObjectProperty rdf:about="https://w3id.org/lehrplan/ontology/LP_0000840">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000024"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000111"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000261"/>
+                    <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000037"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000578"/>
@@ -2000,14 +2008,14 @@ Anmerkung: Durch die Property Chain wird in Beispiel 2 durch den Reasoner das fo
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
     </owl:Axiom>
     
@@ -2578,7 +2586,7 @@ In den Lehrplänen dient die Jahrgangsstufe als organisatorisches Element, das d
         <rdfs:comment xml:lang="en">class level</rdfs:comment>
         <rdfs:label xml:lang="de">Jahrgangsstufe</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://de.wikipedia.org/wiki/Jahrgangsstufe"/>
-        <skos:altLabel>Klassenstufe</skos:altLabel>
+        <skos:altLabel xml:lang="de">Klassenstufe</skos:altLabel>
     </owl:Class>
     
 
@@ -2671,7 +2679,9 @@ In general education, we distinguish between the &quot;Primarstufe&quot; (also c
 Note:
 The &quot;Primarbereich&quot;, &quot;Sekundarbereich I&quot;, and &quot;Sekundarbereich II&quot; are instances of the class &quot;Schulstufe&quot;.</rdfs:comment>
         <rdfs:label xml:lang="de">Schulstufe</rdfs:label>
-        <skos:altLabel>Schulbereich</skos:altLabel>
+        <skos:altLabel xml:lang="de">Bildungsbereich</skos:altLabel>
+        <skos:altLabel xml:lang="en">Educational level</skos:altLabel>
+        <skos:altLabel xml:lang="de">Schulbereich</skos:altLabel>
     </owl:Class>
     
 
@@ -2684,12 +2694,12 @@ The &quot;Primarbereich&quot;, &quot;Sekundarbereich I&quot;, and &quot;Sekundar
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb dieses Bildungsgangs behandelt werden. 
 In der Ontologie wird unterschieden zwischen dem “Hauptschulniveau”, dem “Realschulniveau”, dem “Gymnasialniveau Sek I” und dem “Gymnasialniveau Sek II”.
 Diese entsprechen den grundlegenden, mittleren und erweiterten Anforderungen, die in einigen Lehrplänen der Sekundarstufe I zur Kategorisierung von Kompetenzspezifikationen verwendet werden.
-Während das „Fachniveau“ die spezifischen Anforderungen in einem einzelnen Fach innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II beschreibt, bezieht sich das „Bildungsgangniveau“ auf das Niveau eines gesamten Bildungsgangs, der auf einen bestimmten Abschluss abzielt.</rdfs:comment>
+Während das „Fachniveau Sek II“ die spezifischen Anforderungen in einem einzelnen Fach innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II beschreibt, bezieht sich das „Bildungsgangniveau“ auf das Niveau eines gesamten Bildungsgangs, der auf einen bestimmten Abschluss abzielt.</rdfs:comment>
         <rdfs:comment xml:lang="en">The &quot;Bildungsgangniveau&quot; is a &quot;Niveau&quot; that describes the requirements within an &quot;Bildungsgang&quot; and characterizes the differences in performance levels between various educational tracks.
 It describes the depth and level of demand with which learning content and competencies are addressed within this educational track.
 In the ontology, a distinction is made between &quot;Hauptschulniveau&quot;, &quot;Realschulniveau&quot;, &quot;Gymnasialniveau Sek I&quot;, and &quot;Gymnasialniveau Sek II&quot;.
 These correspond to the basic, intermediate, and advanced requirements used in some lower secondary curricula to categorize competences.
-While the &quot;Fachniveau&quot; describes the specific requirements in a single subject within the upper secondary level of the Gymnasium track, the &quot;Bildungsgangniveau&quot; refers to the level of an entire educational track aimed at a specific qualification.</rdfs:comment>
+While the &quot;Fachniveau Sek II&quot; describes the specific requirements in a single subject within the upper secondary level of the Gymnasium track, the &quot;Bildungsgangniveau&quot; refers to the level of an entire educational track aimed at a specific qualification.</rdfs:comment>
         <rdfs:label xml:lang="de">Bildungsgangniveau</rdfs:label>
     </owl:Class>
     
@@ -2833,7 +2843,7 @@ Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fre
     <!-- https://w3id.org/lehrplan/ontology/LP_0000056 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000056">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000341"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdfs:label xml:lang="de">Einführungsphase</rdfs:label>
     </owl:Class>
     
@@ -2842,7 +2852,7 @@ Bildungsstandards gibt. Die Bistafächer sind Deutsch, Mathematik, die erste Fre
     <!-- https://w3id.org/lehrplan/ontology/LP_0000057 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000057">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000341"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
         <rdfs:label xml:lang="de">Qualifikationsphase</rdfs:label>
         <skos:altLabel>Hauptphase</skos:altLabel>
     </owl:Class>
@@ -3006,8 +3016,9 @@ Sie beschreibt eine durch bestimmte Merkmale gekennzeichnete Form der Schule, di
 Im allgemeinen Sprachgebrauch werden “Schulart” und &quot;Schulform&quot; synonym verwendet.</rdfs:comment>
         <rdfs:label xml:lang="de">Schulart</rdfs:label>
         <rdfs:label xml:lang="en">school type</rdfs:label>
-        <skos:altLabel>Schulform</skos:altLabel>
-        <skos:altLabel>Schultyp</skos:altLabel>
+        <skos:altLabel xml:lang="de">Schulform</skos:altLabel>
+        <skos:altLabel xml:lang="de">Schultyp</skos:altLabel>
+        <skos:altLabel xml:lang="en">Type of school</skos:altLabel>
         <skos:example>Die Schulform einer Schule kann sich ändern. Deshalb werden die Schulformen als &quot;Kategorie&quot; der Funktionen einer Schule definiert. So  ist es möglich, dass einer konkreten Schule mehrere Schulformen zugeordnet werden können, und sodass jede Schulform an einen Zeitpunkt geknüpft werden kann.
 
 https://www.echo-online.de/lokales/kreis-gross-gerau/landkreis-gross-gerau/aenderung-der-schulform-war-ueberfaellig-4054079
@@ -3118,13 +3129,13 @@ CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First Peo
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000265">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000037"/>
-        <rdfs:comment xml:lang="de">Das “Fachniveau” ist ein “Niveau”. Es bezeichnet das Anforderungsniveau eines bestimmten Fachs in der Sekundarstufe II und bringt zum Ausdruck, ob ein “Curriculares Element” einem “Grundkurs” oder einem “Leistungskurs” zugeordnet ist. 
-Die beiden &quot;Fachniveaus&quot; unterscheiden sich in der Komplexität und Tiefe des Unterrichts sowie im Umfang der Inhalte und der zu erbringenden Leistungen.
-Während das „Bildungsgangniveau“ das Niveau eines gesamten Bildungsgangs beschreibt, der auf einen bestimmten Abschluss abzielt, bezieht sich das „Fachniveau“ auf die spezifischen Anforderungen eines Fachs innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The &quot;Fachniveau&quot; is a &quot;Niveau&quot;. It refers to the level of requirements for a specific subject in upper secondary education (&quot;Sekundarstufe II&quot;) and indicates whether a &quot;Curriculares Element&quot; is assigned to a &quot;Grundkurs&quot; or a &quot;Leistungskurs&quot;.
+        <rdfs:comment xml:lang="de">Das “Fachniveau Sek II” ist ein “Niveau”. Es bezeichnet das Anforderungsniveau eines bestimmten Fachs in der Sekundarstufe II und bringt zum Ausdruck, ob ein “Curriculares Element” einem “Grundkurs” oder einem “Leistungskurs” zugeordnet ist. 
+Die beiden Fachniveaus unterscheiden sich in der Komplexität und Tiefe des Unterrichts sowie im Umfang der Inhalte und der zu erbringenden Leistungen.
+Während das „Bildungsgangniveau“ das Niveau eines gesamten Bildungsgangs beschreibt, der auf einen bestimmten Abschluss abzielt, bezieht sich das „Fachniveau Sek II“ auf die spezifischen Anforderungen eines Fachs innerhalb des Gymnasialen Bildungsganges der Sekundarstufe II.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The &quot;Fachniveau Sek II&quot; is a &quot;Niveau&quot;. It refers to the level of requirements for a specific subject in upper secondary education (&quot;Sekundarstufe II&quot;) and indicates whether a &quot;Curriculares Element&quot; is assigned to a &quot;Grundkurs&quot; or a &quot;Leistungskurs&quot;.
 The two “Fachniveaus” differ in the complexity and depth of instruction, as well as in the scope of content and the performance expectations.
-While the &quot;Bildungsgangniveau&quot; describes the level of an entire educational track aimed at a specific qualification, the &quot;Fachniveau&quot; refers to the specific requirements of a subject within the Gymnasium track of upper secondary education.</rdfs:comment>
-        <rdfs:label xml:lang="de">Fachniveau</rdfs:label>
+While the &quot;Bildungsgangniveau&quot; describes the level of an entire educational track aimed at a specific qualification, the &quot;Fachniveau Sek II&quot; refers to the specific requirements of a subject within the Gymnasium track of upper secondary education.</rdfs:comment>
+        <rdfs:label xml:lang="de">Fachniveau Sek II</rdfs:label>
     </owl:Class>
     
 
@@ -3246,29 +3257,6 @@ CE-Lerninhalt: Kanada: Einblicke in Geographie und Gesellschaft; Inuit/First Peo
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000339 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000339">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000005"/>
-        <rdfs:comment>RP</rdfs:comment>
-        <rdfs:label xml:lang="de">Gemeinschaftskunde</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000341 -->
-
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000341">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
-        <rdfs:comment>Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie umfasst die Sekundarstufe II. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)</rdfs:comment>
-        <rdfs:label xml:lang="de">Gymnasiale Oberstufe</rdfs:label>
-        <skos:editorialNote>Axiom entfernt: 
-
-equivalenClass: Schulart and (ermöglicht_abschluss some &apos;Allgemeine Hochschulreife&apos;)</skos:editorialNote>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000346 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000346">
@@ -3340,10 +3328,7 @@ Neben den verbindlichen Vorgaben enthält der Lehrplan häufig auch Hinweise zur
 
     <!-- https://w3id.org/lehrplan/ontology/LP_0000443 -->
 
-    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000261"/>
-        <rdfs:label xml:lang="de">Niveaustufe (BE/BB)</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000443"/>
     
 
 
@@ -3448,9 +3433,9 @@ Soll ausgedrückt werden, dass der Unterricht 6 Zeitstunden enhält kann folgend
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000530">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000265"/>
-        <rdfs:comment xml:lang="en">A &quot;Grundkursniveau&quot; is a &quot;Fachniveau&quot; within the Gymnasium track of upper secondary education (&quot;Sekundarstufe II&quot;) that conveys content and competencies at a basic level of requirements.
+        <rdfs:comment xml:lang="en">A &quot;Grundkursniveau&quot; is a &quot;Fachniveau Sek II&quot; within the Gymnasium track of upper secondary education (&quot;Sekundarstufe II&quot;) that conveys content and competencies at a basic level of requirements.
 It describes the depth and level of demand with which learning content and competencies are addressed within a subject.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein &quot;Grundkursniveau&quot; ist ein “Fachniveau” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem grundlegenden Anforderungsniveau vermittelt.
+        <rdfs:comment xml:lang="de">Ein &quot;Grundkursniveau&quot; ist ein “Fachniveau Sek II” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem grundlegenden Anforderungsniveau vermittelt.
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden.</rdfs:comment>
         <rdfs:label xml:lang="de">Grundkursniveau</rdfs:label>
     </owl:Class>
@@ -3461,9 +3446,9 @@ Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Komp
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000531">
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000265"/>
-        <rdfs:comment xml:lang="en">A &quot;Leistungskursniveau&quot; is a &quot;Fachniveau&quot; within the Gymnasium track of upper secondary education (&quot;Sekundarstufe II&quot;) that conveys content and competencies at an advanced level of requirements.
+        <rdfs:comment xml:lang="en">A &quot;Leistungskursniveau&quot; is a &quot;Fachniveau Sek II&quot; within the Gymnasium track of upper secondary education (&quot;Sekundarstufe II&quot;) that conveys content and competencies at an advanced level of requirements.
 It describes the depth and level of demand with which learning content and competencies are addressed within a subject.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein &quot;Leistungskursniveau&quot; ist ein “Fachniveau” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem vertieften Anforderungsniveau vermittelt.
+        <rdfs:comment xml:lang="de">Ein &quot;Leistungskursniveau&quot; ist ein “Fachniveau Sek II” im gymnasialen Bildungsgang der Sekundarstufe II, das Inhalte und Kompetenzen auf einem vertieften Anforderungsniveau vermittelt.
 Es beschreibt in welcher Tiefe und mit welchem Anspruch die Lerninhalte und Kompetenzen innerhalb eines Fachs behandelt werden.</rdfs:comment>
         <rdfs:label xml:lang="de">Leistungskursniveau</rdfs:label>
     </owl:Class>
@@ -3714,33 +3699,6 @@ Instruction is less theoretical than at the Gymnasium but more demanding than in
     <!-- https://w3id.org/lehrplan/ontology/LP_0000815 -->
 
     <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0000815">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000816"/>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000069"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000833"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000835"/>
-                                    </owl:Restriction>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000812"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000122"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000816"/>
         <rdfs:comment xml:lang="de">ALT Der gymnasiale Bildungsgang zielt darauf ab, Schüler*innen auf das Abitur und ein späteres Studium vorzubereiten. Er dauert in der Regel bis zur 12. oder 13. Klasse und endet mit der allgemeinen Hochschulreife (Abitur), die den Zugang zu Universitäten und Hochschulen ermöglicht. Der Lehrplan ist meist akademisch anspruchsvoller und theoretischer im Vergleich zu anderen Schulformen. 
 
@@ -4177,6 +4135,15 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="de">Weiteres Thema (Bistas)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lehrplan/ontology/LP_0030361 -->
+
+    <owl:Class rdf:about="https://w3id.org/lehrplan/ontology/LP_0030361">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000028"/>
+        <rdfs:label xml:lang="de">Grundschulniveau</rdfs:label>
     </owl:Class>
     
 
@@ -4938,9 +4905,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <!-- https://w3id.org/kim/schularten/s16 -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s16">
-        <rdfs:label xml:lang="de">Abendgymnasium</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/kim/schularten/s16"/>
     
 
 
@@ -4949,7 +4914,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000036">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
         <rdfs:label xml:lang="de">Primarbereich</rdfs:label>
-        <skos:altLabel>Primarstufe</skos:altLabel>
+        <skos:altLabel xml:lang="de">Primarstufe</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -4959,7 +4924,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000045">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
         <rdfs:label xml:lang="de">Sekundarbereich I</rdfs:label>
-        <skos:altLabel>Sekundarstufe I</skos:altLabel>
+        <skos:altLabel xml:lang="de">Sekundarstufe I</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -4968,13 +4933,14 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000046">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000020"/>
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000341"/>
         <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000050"/>
         <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000051"/>
         <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000052"/>
         <ontology:LP_0000008 rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000055"/>
+        <rdfs:comment>Ist eine Schulstufe des Gymnasiums, die aber auch an anderen Schularten eingerichtet werden kann. Sie deckt die Jahrgangsstufen 11-13 oder 10-12 ab, je nach Land und Schulart. (Allgemeinbildender Bildungsgang mit Abiturprüfung als Abschluss, der zur Allgemeinen Hochschulreife führt.)</rdfs:comment>
         <rdfs:label xml:lang="de">Sekundarbereich II</rdfs:label>
-        <skos:altLabel>Sekundarstufe II</skos:altLabel>
+        <skos:altLabel xml:lang="de">Gymnasiale Oberstufe</skos:altLabel>
+        <skos:altLabel xml:lang="de">Sekundarstufe II</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -4983,9 +4949,11 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000050">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000057"/>
         <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
         <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
         <rdfs:label xml:lang="de">G8 Qualifikationsphase</rdfs:label>
+        <skos:altLabel xml:lang="de">G8 Hauptphase</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -4994,6 +4962,7 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000051">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000056"/>
         <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000010"/>
         <rdfs:label xml:lang="de">G8 Einführungsphase</rdfs:label>
     </owl:NamedIndividual>
@@ -5004,9 +4973,11 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000052">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000057"/>
         <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000012"/>
         <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000013"/>
         <rdfs:label xml:lang="de">G9 Qualifikationsphase</rdfs:label>
+        <skos:altLabel xml:lang="de">G9 Hauptphase</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5015,400 +4986,9 @@ Noch zu klären, ob CE-Bereich oder CE-Lerninhalt!</skos:editorialNote>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000055">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000043"/>
+        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000056"/>
         <ontology:LP_0000026 rdf:resource="https://w3id.org/lehrplan/ontology/LP_2000011"/>
         <rdfs:label xml:lang="de">G9 Einführungsphase</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000112 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000112">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000031"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000054"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000055"/>
-        <rdfs:comment xml:lang="de">Eine “Gemeinschaftsschule” ist eine “Schulart” in BW, BE, SL, SN, ST, SH und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarstufe I, 
-in BE, SN, TH auch Primarbereich, 
-in BW, BE, SL, SN, ST, SH, TH auch Sekundarstufe II
-- Jahrgangsstufen: 5-10, 
-in BE, SN und TH 1-12/13
-in BW, SL und ST 5-12/13, 
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife</rdfs:comment>
-        <rdfs:label xml:lang="de">Gemeinschaftsschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s09"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000114 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000114">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000031"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000046"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000054"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000055"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
-        <rdfs:comment xml:lang="de">Eine “Grundschule” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Primar
-- Jahrgangsstufen: 1-4 in allen Bundesländern außer BE und BB, 1-6 in BE und BB</rdfs:comment>
-        <rdfs:label xml:lang="de">Grundschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s02"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000121 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000121">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-        <rdfs:comment xml:lang="de">Eine “Integrierte Sekundarschule&quot; ist eine “Schulart” in BE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I und II
-- Jahrgangsstufen: 7-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: ggf. Schnelllernerklassen ab 5</rdfs:comment>
-        <rdfs:label xml:lang="de">Integrierte Sekundarschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s10"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000122 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000122">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000031"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000046"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000048"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000054"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000055"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
-        <rdfs:comment xml:lang="de">Ein “Gymnasium” ist eine “Schulart” in allen Bundesländern, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I und II
-- Jahrgangsstufen: 5-12/13, in BE und BB 7-12/13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: in BE ggf. Schnelllernerklassen ab 5, in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5</rdfs:comment>
-        <rdfs:label xml:lang="de">Gymnasium</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s08"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000140 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000140">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <rdfs:comment xml:lang="de">Eine “Hauptschule” ist eine “Schulart” BW, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-9 bzw. 10
-- Abschlüsse: Erster Schulabschluss, in NI und NW auch Mittlerer Schulabschluss</rdfs:comment>
-        <rdfs:label xml:lang="de">Hauptschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s03"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000159 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000159">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:comment xml:lang="de">Eine “Mittelschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss</rdfs:comment>
-        <rdfs:label xml:lang="de">Mittelschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000167 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000167">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:comment xml:lang="de">Eine “Realschule” ist eine “Schulart” in BW, BY, HE, NI und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: ermöglicht Übergang in berufs- und studienqualifizierende Bildungsgänge des Sekundarbereichs II</rdfs:comment>
-        <rdfs:label xml:lang="de">Realschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s04"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000197 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000197">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:comment xml:lang="de">Eine “Wirtschaftsschule” ist eine “Schulart” in BY, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 6-11 ( 6. Jahrgangsstufe ist die Einführung)
-- Abschlüsse: Wirtschaftsschulabschluss (stellt den mittleren Schulabschluss dar)
-- Besonderheiten: Sie vermittelt eine berufliche Grundbildung im Berufsfeld Wirtschaft und Verwaltung</rdfs:comment>
-        <rdfs:label xml:lang="de">Wirtschaftsschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000218 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000218">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000049"/>
-        <rdfs:comment xml:lang="de">Eine “Werkrealschule” ist eine “Schulart” in BW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I 
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: Erster Schulabschluss nach Jahrgangsstufe 9 oder 10 möglich</rdfs:comment>
-        <rdfs:label xml:lang="de">Werkrealschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000238 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000238">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000047"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
-        <rdfs:comment xml:lang="de">Eine “Oberschule” ist eine “Schulart” in  BB, HB, NI und SN, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I, in SN auch Primar, in HB auch Sekundarbereich II
-- Jahrgangsstufen: 5-10, in SN 1-10 (s. Besonderheiten), in HB 5-13 
-- Abschlüsse: Erster und Mittlerer Schulabschluss, in HB auch die Allgemeine Hochschulreife
-- Besonderheiten: Oberschule + in SN mit verbundener Grundschule</rdfs:comment>
-        <rdfs:label xml:lang="de">Oberschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s07"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000240 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000240">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000057"/>
-        <rdfs:comment xml:lang="de">Eine “Gesamtschule” ist eine “Schulart” in BB und NW, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-Schulstufe: Sekundarbereich I und Sekundarbereich II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: in BB ggf. Leistungs- und Begabungsklasse ab Jahrgangsstufe 5</rdfs:comment>
-        <rdfs:label xml:lang="de">Gesamtschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s05"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000251 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000251">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000056"/>
-        <rdfs:comment xml:lang="de">Eine “Werkschule” ist eine “Schulart” in HB, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-11
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: Jede Werkschule hat sich auf bestimmte Dienstleistungen und Produktionen spezialisiert</rdfs:comment>
-        <rdfs:label xml:lang="de">Werkschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000274 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000274">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000045"/>
-        <rdfs:comment xml:lang="de">Eine “Stadtteilschule” ist eine “Schulart” in HH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I und II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife</rdfs:comment>
-        <rdfs:label xml:lang="de">Stadteilschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000291 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000291">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000046"/>
-        <rdfs:comment xml:lang="de">Eine “Realschule plus” ist eine “Schulart” in RP, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss</rdfs:comment>
-        <rdfs:label xml:lang="de">Realschule plus</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s04"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000292 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000292">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000031"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000046"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
-        <rdfs:comment xml:lang="de">Eine &quot;Integrierte Gesamtschule” ist eine “Schulart” in HE, MV, NI, RP, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-Schulstufe: Sekundarbereich I und Sekundarbereich II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: unabhängig vom angestrebten Abschluss werden alle Lernenden in einem Klassenverband unterrichtet</rdfs:comment>
-        <rdfs:label xml:lang="de">Integrierte Gesamtschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s05"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000319 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000319">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000031"/>
-        <rdfs:comment xml:lang="de">Eine “Regelschule” ist eine “Schulart” TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss</rdfs:comment>
-        <rdfs:label xml:lang="de">Regelschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000367 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000367">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
-        <rdfs:comment xml:lang="de">Eine “Regionale Schule” ist eine “Schulart” in MV, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe:Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: schulartunabhängige Orientierungsstufe in Jahrgangsstufe 5 und 6</rdfs:comment>
-        <rdfs:label xml:lang="de">Regionale Schule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000382 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000382">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000044"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
-        <rdfs:comment xml:lang="de">Eine “Sekundarschule” ist eine “Schulart” in NW und ST, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: in NW ggf. Berechtigung zum Besuch der gymnasialen Oberstufe</rdfs:comment>
-        <rdfs:label xml:lang="de">Sekundarschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000464 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000464">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe A</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000465 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000465">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe B</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000466 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000466">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe C</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000467 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000467">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe D</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000468 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000468">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe E</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000469 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000469">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe F</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000470 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000470">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe G</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5522,16 +5102,6 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0000616 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000616">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000443"/>
-        <rdfs:label xml:lang="de">Niveaustufe H</rdfs:label>
-        <skos:editorialNote>we should remove these and use the  LP_0* ones.</skos:editorialNote>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0000627 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0000627">
@@ -5588,55 +5158,6 @@ Die Funktion soll also nur verwendet werden, für Elemente, die nicht über die 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0001014">
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000493"/>
         <rdfs:label xml:lang="de">Hinweisbeschreibungsfunktion</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0002005 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0002005">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <rdfs:comment xml:lang="de">Eine “Mittelstufenschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlerer Schulabschluss
-- Besonderheiten: der praxisorientierte Bildungsgang führt zum Ersten Schulabschluss, der mittlere Bildungsgang führt zum Mittleren Schulabschluss; Jahrgangsstufen 5-7 sind Aufbaustufe</rdfs:comment>
-        <rdfs:label xml:lang="de">Mittelstufenschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0002008 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0002008">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <rdfs:comment xml:lang="de">Eine “Verbundene Haupt- und Realschule” ist eine “Schulart” in HE, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-- Schulstufe: Sekundarbereich I
-- Jahrgangsstufen: 5-10
-- Abschlüsse: Erster und Mittlere Schulabschluss</rdfs:comment>
-        <rdfs:label xml:lang="de">Verbundene Haupt- und Realschule</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0002012 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0002012">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000031"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000043"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000050"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000052"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000053"/>
-        <rdfs:comment xml:lang="de">Eine &quot;Kooperative Gesamtschule” ist eine “Schulart” in HE, MV, NI, ST und TH, die sich durch folgende Merkmale von anderen Schularten unterscheidet:
-Schulstufe: Sekundarbereich I und Sekundarbereich II
-- Jahrgangsstufen: 5-13
-- Abschlüsse: Erster und Mittlerer Schulabschluss und die Allgemeine Hochschulreife
-- Besonderheiten: verschiedene Schularten sind organisatorisch zu einer Schule verbunden, Klassen sind nach Bildungsgängen getrennt</rdfs:comment>
-        <rdfs:label xml:lang="de">Kooperative Gesamtschule</rdfs:label>
-        <ontology:LP_0000141 rdf:resource="https://w3id.org/kim/schularten/s05"/>
     </owl:NamedIndividual>
     
 
@@ -5719,83 +5240,6 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
     
 
 
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030318 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030318">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Berufsfachschule</rdfs:label>
-        <skos:altLabel>BFS</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030319 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030319">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Berufsoberschule</rdfs:label>
-        <skos:altLabel>BOS</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030320 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030320">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Fachoberschule</rdfs:label>
-        <skos:altLabel>FOS</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030321 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030321">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Berufsschule</rdfs:label>
-        <skos:altLabel>BS</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030322 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030322">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Fachakademie</rdfs:label>
-        <skos:altLabel>FAK</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030323 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030323">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Fachschule</rdfs:label>
-        <skos:altLabel>FS</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/lehrplan/ontology/LP_0030324 -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030324">
-        <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000111"/>
-        <ontology:LP_0000029 rdf:resource="https://w3id.org/lehrplan/ontology/LP_3000051"/>
-        <rdfs:label xml:lang="de">Förderschule</rdfs:label>
-        <skos:altLabel>FÖS</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/lehrplan/ontology/LP_0030326 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/lehrplan/ontology/LP_0030326">
@@ -5812,6 +5256,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 1</rdfs:label>
         <rdfs:label xml:lang="en">class level 1</rdfs:label>
+        <skos:altLabel xml:lang="de">1.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5823,6 +5268,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 2</rdfs:label>
         <rdfs:label xml:lang="en">class level 2</rdfs:label>
+        <skos:altLabel xml:lang="de">2.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5834,6 +5280,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 3</rdfs:label>
         <rdfs:label xml:lang="en">class level 3</rdfs:label>
+        <skos:altLabel xml:lang="de">3.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5845,6 +5292,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 4</rdfs:label>
         <rdfs:label xml:lang="en">class level 4</rdfs:label>
+        <skos:altLabel xml:lang="de">4.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5856,6 +5304,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 5</rdfs:label>
         <rdfs:label xml:lang="en">class level 5</rdfs:label>
+        <skos:altLabel xml:lang="de">5.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5867,6 +5316,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 6</rdfs:label>
         <rdfs:label xml:lang="en">class level 6</rdfs:label>
+        <skos:altLabel xml:lang="de">6.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5878,6 +5328,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 7</rdfs:label>
         <rdfs:label xml:lang="en">class level 7</rdfs:label>
+        <skos:altLabel xml:lang="de">7.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5889,6 +5340,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 8</rdfs:label>
         <rdfs:label xml:lang="en">class level 8</rdfs:label>
+        <skos:altLabel xml:lang="de">8.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5900,6 +5352,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 9</rdfs:label>
         <rdfs:label xml:lang="en">class level 9</rdfs:label>
+        <skos:altLabel xml:lang="de">9.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5910,7 +5363,8 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <rdf:type rdf:resource="https://w3id.org/lehrplan/ontology/LP_0000009"/>
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 10</rdfs:label>
-        <rdfs:label>class level 10</rdfs:label>
+        <rdfs:label xml:lang="en">class level 10</rdfs:label>
+        <skos:altLabel xml:lang="de">10.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5922,6 +5376,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 11</rdfs:label>
         <rdfs:label xml:lang="en">class level 11</rdfs:label>
+        <skos:altLabel xml:lang="de">11.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5933,6 +5388,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 12</rdfs:label>
         <rdfs:label xml:lang="en">class level 12</rdfs:label>
+        <skos:altLabel xml:lang="de">12.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -5944,6 +5400,7 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
         <terms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</terms:identifier>
         <rdfs:label xml:lang="de">Jahrgangsstufe 13</rdfs:label>
         <rdfs:label xml:lang="en">class level 13</rdfs:label>
+        <skos:altLabel xml:lang="de">13.Klasse</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -6371,19 +5828,6 @@ Schulstufe: Sekundarbereich I und Sekundarbereich II
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000004"/>
             <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000005"/>
         </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000464"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000465"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000466"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000467"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000468"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000469"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000470"/>
-            <rdf:Description rdf:about="https://w3id.org/lehrplan/ontology/LP_0000616"/>
-        </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>

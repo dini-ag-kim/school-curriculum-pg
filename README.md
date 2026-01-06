@@ -1,4 +1,4 @@
-# This repo is outdates
+# This repo is outdated
 
 ## please go to 
 
